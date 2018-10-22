@@ -8,28 +8,39 @@
   <name>comparer Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
+   
   <properties>
 		<tycho.version>0.22.0</tycho.version>
 		<luna-repo.url>http://download.eclipse.org/releases/luna</luna-repo.url>
 		<epsilon-repo.url>http://archive.eclipse.org/epsilon/1.2/updates/</epsilon-repo.url>
 	</properties>
-     
+      
   <repositories>
+   
     <repository>
       <id>emf</id>
       <name>EMF Comparer</name>
       <url>https://repo.eclipse.org/content/repositories/emfcompare-snapshots</url>
     </repository>
+            
     <repository>
       <id>emfmaven</id>
       <name>EMF Comparer Maven</name>
       <url>http://maven.thingml.org/thirdparty</url>
     </repository>
+    
+    <repository>
+      <id>emfmaven2</id>
+      <name>EMF Comparer Maven2</name>
+      <url>http://www.jabylon.org/maven/</url>
+    </repository>
+    
     <repository>
       <id>emfreleases</id>
       <name>EMF Comparer Releases</name>
       <url>https://repo.eclipse.org/content/groups/releases</url>
-    </repository>  
+    </repository>
+    
     <repository>
 			<id>public</id>
 			<name>Archiva Managed Public Repository</name>
@@ -45,71 +56,72 @@
   
   
   <dependencies>
-	<!--   
-	<dependency>
-	    <groupId>org.eclipse.emf</groupId>
-	    <artifactId>org.eclipse.emf.ecore</artifactId>
-	    <version>2.15.0</version>
-	</dependency>  	
-	<dependency>
-	    <groupId>org.eclipse.emf</groupId>
-	    <artifactId>org.eclipse.emf.common</artifactId>
-	    <version>2.15.0</version>
-	</dependency>	
-	<dependency>
-	    <groupId>org.eclipse.emf</groupId>
-	    <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-	    <version>2.15.0</version>
-	</dependency>
-	 -->	
-	<!-- 
-	<dependency>
-	    <groupId>org.eclipse.emf.compare</groupId>
-	    <artifactId>org.eclipse.emf.compare</artifactId>
-	    <version>3.2.0-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.eclipse.emf.compare</groupId>
-	    <artifactId>emf.compare-bundle-parent</artifactId>
-	    <version>1.0.0-SNAPSHOT</version>
-	</dependency>
-	 -->
-	<!-- 	
-	<dependency>
-	    <groupId>org.eclipse.maven</groupId>
-	    <artifactId>org.eclipse.emf.compare.match</artifactId>
-	    <version>3.7.0</version>
-	</dependency>	
-	<dependency>
-	    <groupId>org.eclipse.maven</groupId>
-	    <artifactId>org.eclipse.emf.compare</artifactId>
-	    <version>3.0.0</version>
-	</dependency>	
-	<dependency>
-	    <groupId>org.eclipse.emf.compare</groupId>
-	    <artifactId>emf.compare-parent</artifactId>
-	    <version>3.1.1</version>	
-	    <type>pom</type>    
-	</dependency>
-	<dependency>
-	    <groupId>org.eclipse.emf.compare</groupId>
-	    <artifactId>emf.compare-bundle-parent</artifactId>
-	    <version>1.0.0</version>
-	    <type>pom</type>	    
-	</dependency>
-	 -->		
+	<!--  
 	<dependency>
 	    <groupId>com.google.guava</groupId>
 	    <artifactId>guava</artifactId>
 	    <version>18.0</version>
 	</dependency>		
 	
-	
-	<dependency>
+		<dependency>
 			<groupId>org.eclipse.emf</groupId>
 			<artifactId>compare</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>compare</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>common</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>ecore.xmi</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>ecore</artifactId>
+			<version>2.10.0</version>
+		</dependency>		
+				
+		<dependency>
+		    <groupId>org.eclipse.ocl</groupId>
+		    <artifactId>org.eclipse.ocl</artifactId>
+		    <version>3.3.0.v20130909-1552</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>org.eclipse.ocl</groupId>
+		    <artifactId>org.eclipse.ocl.ecore</artifactId>
+		    <version>3.3.0.v20130520-1222</version>
+		</dependency>		
+		-->
+		<!-- https://mvnrepository.com/artifact/org.eclipse.ui/workbench -->
+<dependency>
+    <groupId>org.eclipse.ui</groupId>
+    <artifactId>workbench</artifactId>
+    <version>3.3.0-I20070608-1100</version>
+    <scope>provided</scope>
+</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.swt/org.eclipse.swt.win32.win32.x86_64 -->
+<dependency>
+    <groupId>org.eclipse.swt</groupId>
+    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+    <version>4.3</version>
+</dependency>
+		
+		
+		
+		
+		
+		
 		<dependency>
 			<groupId>org.eclipse.emf</groupId>
 			<artifactId>common</artifactId>
@@ -138,6 +150,86 @@
 		    <version>3.3.0.v20130520-1222</version>
 		</dependency>
 		
+		<!--  -->
+		
+		<dependency>
+		    <groupId>com.google</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>15.0.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/com.google.guava_15.0.0.jar</systemPath>
+		</dependency>		
+		<dependency>
+		    <groupId>org.apache</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.15</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.apache.log4j_1.2.15.jar</systemPath>
+		</dependency>		
+		<dependency>
+		    <groupId>org.eclipse.emf</groupId>
+		    <artifactId>compare</artifactId>
+		    <version>3.2.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare_3.2.0.jar</systemPath>
+		</dependency>		
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>diagram</artifactId>
+		    <version>2.3.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.diagram_2.3.0.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>doc</artifactId>
+		    <version>3.2.1</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.doc_3.2.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>edit</artifactId>
+		    <version>4.1.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.edit_4.1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>ide</artifactId>
+		    <version>3.2.1</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.ide_3.2.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare.ide</groupId>
+		    <artifactId>ui</artifactId>
+		    <version>4.1.1</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.ide.ui_4.1.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>rpc</artifactId>
+		    <version>2.3.1</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.rcp_2.3.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare.rpc</groupId>
+		    <artifactId>ui</artifactId>
+		    <version>4.1.1</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.rcp.ui_4.1.1.jar</systemPath>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.emf.compare</groupId>
+		    <artifactId>uml</artifactId>
+		    <version>2.3.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.uml2_2.3.0.jar</systemPath>
+		</dependency>
+		<!-- -->
 		
     <dependency>
       <groupId>junit</groupId>

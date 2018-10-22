@@ -1,6 +1,6 @@
 package co.edu.uniandes.comparer;
 
-import java.io.File;
+import java.util.Iterator;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.compare.Comparison;
@@ -15,30 +15,63 @@ import org.eclipse.emf.compare.match.impl.MatchEngineFactoryImpl;
 import org.eclipse.emf.compare.match.impl.MatchEngineFactoryRegistryImpl;
 import org.eclipse.emf.compare.scope.IComparisonScope;
 import org.eclipse.emf.compare.utils.UseIdentifiers;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import core.OpenAPIPackage;
+import edu.uoc.som.openapi.OpenAPIPackage;
+import edu.uoc.som.openapi.Parameter;
 
 public class Comparer {
+		
+	private OpenAPIPackage openAPIPackage;
 	
-	public Comparison compare(File model1, File model2) {
+	public Comparer(){
+		registerOpenAPIMetamodel();
+	}
+	
+	public Comparison compare(String model1, String model2) {		
+		try{
+			ResourceSet resourceSet1 = loadModel(model1);
+			ResourceSet resourceSet2 = loadModel(model2);		
+	
+			EMFCompare comparator = getComparator();
+			IComparisonScope scope = createScope(resourceSet1, resourceSet2);
+			
+			return comparator.compare(scope);
+		}catch (Exception ex){
+			System.out.println(ex.getMessage() + " " + ex.getStackTrace());
+		}
 		
-		OpenAPIPackage openAPIPackage = OpenAPIPackage.eINSTANCE;
-		EPackage.Registry.INSTANCE.put(openAPIPackage.getNsURI(), openAPIPackage);
-		
-		// Load the two input models
-		ResourceSet resourceSet1 = new ResourceSetImpl();
-		ResourceSet resourceSet2 = new ResourceSetImpl();
-		String xmi1 = "ThingBoardV10.xmi";
-		String xmi2 = "ThingBoardV20.xmi";
-		load(xmi1, resourceSet1);
-		load(xmi2, resourceSet2);
+		return null;		
+	}
 
-		// Configure EMF Compare
+	public EObject getParameterObject(){		
+		for (Iterator<EObject> iterator = openAPIPackage.eAllContents(); iterator.hasNext();) {
+			EObject eo = iterator.next();
+			if (eo instanceof EClass) {
+				String name = ((EClass)eo).getName();
+				if ("parameter".equalsIgnoreCase(name))
+					return eo;
+			}
+		}
+		
+		return null;
+	}
+	
+	private OpenAPIPackage registerOpenAPIMetamodel() {
+		if (openAPIPackage == null){
+			openAPIPackage = OpenAPIPackage.eINSTANCE;
+			EPackage.Registry.INSTANCE.put(openAPIPackage.getNsURI(), openAPIPackage);
+		}
+		
+		return openAPIPackage;
+	}	
+
+	private EMFCompare getComparator() {
 		IEObjectMatcher matcher = DefaultMatchEngine.createDefaultEObjectMatcher(UseIdentifiers.NEVER);
 		IComparisonFactory comparisonFactory = new DefaultComparisonFactory(new DefaultEqualityHelperFactory());
 		IMatchEngine.Factory matchEngineFactory = new MatchEngineFactoryImpl(matcher, comparisonFactory);
@@ -46,18 +79,22 @@ public class Comparer {
 	        IMatchEngine.Factory.Registry matchEngineRegistry = new MatchEngineFactoryRegistryImpl();
 	        matchEngineRegistry.add(matchEngineFactory);
 		EMFCompare comparator = EMFCompare.builder().setMatchEngineFactoryRegistry(matchEngineRegistry).build();
-
-		// Compare the two models
-		IComparisonScope scope = EMFCompare.createDefaultScope(resourceSet1, resourceSet2);
-		return comparator.compare(scope);
+		return comparator;
 	}
 
-	private void load(String absolutePath, ResourceSet resourceSet) {
-	  URI uri = URI.createFileURI(absolutePath);
+	private ResourceSet loadModel(String absolutePath) {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		
+		URI uri = URI.createFileURI(absolutePath);
 
-	  resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
-
-	  // Resource will be loaded within the resource set
-	  resourceSet.getResource(uri, true);
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
+		resourceSet.getResource(uri, true);
+	  
+		return resourceSet;
 	}	
+	
+	@SuppressWarnings("deprecation")
+	private IComparisonScope createScope(ResourceSet resourceSet1, ResourceSet resourceSet2) {
+		return EMFCompare.createDefaultScope(resourceSet1, resourceSet2);		
+	}
 }
