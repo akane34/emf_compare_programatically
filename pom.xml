@@ -104,19 +104,20 @@
 		</dependency>		
 		-->
 		<!-- https://mvnrepository.com/artifact/org.eclipse.ui/workbench -->
+<!-- 
 <dependency>
     <groupId>org.eclipse.ui</groupId>
     <artifactId>workbench</artifactId>
     <version>3.3.0-I20070608-1100</version>
     <scope>provided</scope>
 </dependency>
-		<!-- https://mvnrepository.com/artifact/org.eclipse.swt/org.eclipse.swt.win32.win32.x86_64 -->
+		
 <dependency>
     <groupId>org.eclipse.swt</groupId>
     <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
     <version>4.3</version>
 </dependency>
-		
+		 
 		
 		
 		
@@ -150,7 +151,7 @@
 		    <version>3.3.0.v20130520-1222</version>
 		</dependency>
 		
-		<!--  -->
+		-->
 		
 		<dependency>
 		    <groupId>com.google</groupId>
@@ -158,7 +159,46 @@
 		    <version>15.0.0</version>
 		    <scope>system</scope>
 		    <systemPath>${project.basedir}/lib/com.google.guava_15.0.0.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>common</artifactId>
+			<version>2.11.1</version>
+			<scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.common_2.11.1.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>ecore.xmi</artifactId>
+			<version>2.11.1</version>
+			<scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.ecore.xmi_2.11.1.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>ecore</artifactId>
+			<version>2.11.2</version>
+			<scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.emf.ecore_2.11.2.jar</systemPath>
 		</dependency>		
+				
+		<dependency>
+		    <groupId>org.eclipse.ocl</groupId>
+		    <artifactId>org.eclipse.ocl</artifactId>
+		    <version>3.5.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.ocl_3.5.0.jar</systemPath>
+		</dependency>
+				
+		<dependency>
+		    <groupId>org.eclipse.ocl</groupId>
+		    <artifactId>org.eclipse.ocl.ecore</artifactId>
+		    <version>3.5.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/org.eclipse.ocl.ecore_3.5.0.jar</systemPath>
+		</dependency>
+				
 		<dependency>
 		    <groupId>org.apache</groupId>
 		    <artifactId>log4j</artifactId>
