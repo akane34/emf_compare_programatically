@@ -53,13 +53,13 @@ public class DiffMetamodel {
 		
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
         Map<String, Object> m = reg.getExtensionToFactoryMap();
-        m.put("website", new XMIResourceFactoryImpl());
+        m.put("xmi", new XMIResourceFactoryImpl());
         
         //Obtain a new resource set
         ResourceSet resSet = new ResourceSetImpl();
 
         // create a resource
-        Resource resource = resSet.createResource(URI.createFileURI("My2.xmi"));
+        Resource resource = resSet.createResource(URI.createFileURI("C:/temp/model.xmi"));
         // Get the first model element and cast it to the right type, in my
         // example everything is hierarchical included in this first node
         resource.getContents().add(rename);
