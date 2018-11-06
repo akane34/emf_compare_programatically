@@ -1,130 +1,60 @@
 package co.edu.uniandes;
 
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-//import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.compare.AttributeChange;
 import org.eclipse.emf.compare.Comparison;
 import org.eclipse.emf.compare.Diff;
-import org.eclipse.emf.compare.FeatureMapChange;
-import org.eclipse.emf.compare.Match;
 import org.eclipse.emf.compare.ReferenceChange;
-import org.eclipse.emf.compare.ResourceAttachmentChange;
-import org.eclipse.emf.compare.ResourceLocationChange;
-import org.eclipse.emf.compare.internal.spec.ReferenceChangeSpec;
 
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
-
-//import com.google.common.collect.ImmutableList;
-
-import org.eclipse.emf.compare.rcp.ui.internal.structuremergeviewer.groups.impl.ByResourceGroupProvider;
-import org.eclipse.emf.compare.rcp.ui.internal.structuremergeviewer.groups.impl.ByResourceGroupProvider.ResourceGroup;
-import org.eclipse.emf.compare.rcp.ui.structuremergeviewer.groups.IDifferenceGroup;
-
+import co.edu.uniandes.changes.ChangeParameter;
+import co.edu.uniandes.changes.ChangeResponse;
+import co.edu.uniandes.changes.ChangesProcessor;
 import co.edu.uniandes.comparer.Comparer;
 import co.edu.uniandes.diff.DiffMetamodel;
-import edu.uoc.som.openapi.Parameter;
-import edu.uoc.som.openapi.impl.OperationImpl;
-import edu.uoc.som.openapi.impl.ParameterImpl;
 
 public class Main {
 
+	static String oldVersion = "1.0";
+	static String newVersion = "2.0";
+	
 	public static void main(String[] args) {		
 		
-		Comparer comparer = new Comparer(); 
-		Comparison comparison = comparer.compare("ThingBoardV10.xmi", "ThingBoardV20.xmi");
 		
-		//ByResourceGroupAkane resourceComparisonGroup = new ByResourceGroupAkane();
-		
-		
-		
-		
-		/*
-		Set<Match> roots = new LinkedHashSet<Match>();
-		for (Match match : comparison.getMatches()) {
-			recursiveFindRoots(match);
-		}
-		super.buildSubTree();	
-*/
+		DiffMetamodel diffMetamodel = new DiffMetamodel();
+		Comparer comparer = new Comparer();
+		Comparison comparison = comparer.compare("v1.0.xmi", "v2.0.xmi");
 	
-	
-		//Collection<? extends IDifferenceGroup> groups = ImmutableList.of(group);
-		
-		//Collection<? extends IDifferenceGroup> groups = resourceComparisonGroup.getGroups(comparison);
-		/*
-		for (IDifferenceGroup dg : groups){
-			System.out.println(dg.getName());
-		}
-		*/
 		EList<Diff> diffs = comparison.getDifferences();
 		
-		//EObject parameter = comparer.getParameterObject();
-		//EList<Diff> diffsParameters = comparison.getDifferences(parameter);
+		List<ChangeParameter> deleteParameters = new ArrayList<ChangeParameter>();
+		List<ChangeParameter> addParameters = new ArrayList<ChangeParameter>();
+		List<ChangeParameter> changeParameters = new ArrayList<ChangeParameter>();
+		Map<String, List<ChangeParameter>> operations = new HashMap<String, List<ChangeParameter>>();
+		
+		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
+		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
 		
 		for (Diff diff : diffs){
 			
-			if (diff instanceof ReferenceChange){
-				if (((ReferenceChange)diff).getValue() instanceof OperationImpl){
-					OperationImpl operation = (OperationImpl)((ReferenceChange)diff).getValue();
-					EList<Parameter> parameters = operation.getParameters();
-					if (parameters != null){
-						for (Parameter parameter : parameters){							
-							System.out.println(parameter.getName() + "  " + operation.getFullPath());
-						}
-					}					
-				}
+			if (diff instanceof ReferenceChange){								
+				ChangesProcessor.getDeletedParameters(deleteParameters, operations, diff, oldVersion);				
+				ChangesProcessor.getAddedParameters(addParameters, operations, diff, newVersion);
+				ChangesProcessor.getChangedParameters(changeParameters, diff, oldVersion, newVersion);
+				ChangesProcessor.getDeletedResponse(deleteResponse, diff, oldVersion);				
+				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
 			}
-			/*
-			if (diff instanceof AttributeChange){
-				if (((AttributeChange)diff).getValue() instanceof OperationImpl){
-					OperationImpl operation = (OperationImpl)((AttributeChange)diff).getValue();
-					EList<Parameter> parameters = operation.getParameters();
-					if (parameters != null){
-						for (Parameter parameter : parameters){							
-							System.out.println(parameter.getName());
-						}
-					}					
-				}
-			}
-			if (diff instanceof FeatureMapChange){
-				if (((FeatureMapChange)diff).getValue() instanceof OperationImpl){
-					OperationImpl operation = (OperationImpl)((FeatureMapChange)diff).getValue();
-					EList<Parameter> parameters = operation.getParameters();
-					if (parameters != null){
-						for (Parameter parameter : parameters){							
-							System.out.println(parameter.getName());
-						}
-					}					
-				}	*/		
-				/*
-				if (((ResourceAttachmentChange)diff).getValue() instanceof OperationImpl){
-					OperationImpl operation = (OperationImpl)((ResourceAttachmentChange)diff).getValue();
-					EList<Parameter> parameters = operation.getParameters();
-					if (parameters != null){
-						for (Parameter parameter : parameters){							
-							System.out.println(parameter.getName());
-						}
-					}					
-				}
-				
-				if (((ResourceLocationChange)diff).getValue() instanceof OperationImpl){
-					OperationImpl operation = (OperationImpl)((ResourceLocationChange)diff).getValue();
-					EList<Parameter> parameters = operation.getParameters();
-					if (parameters != null){
-						for (Parameter parameter : parameters){							
-							System.out.println(parameter.getName());
-						}
-					}					
-				}	*/			
-			//}
 		}
+				
+		ChangesProcessor.processRelocateParameter(diffMetamodel, deleteParameters, addParameters);
+		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters);
+		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion);
+		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion);
+		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse);
 		
-		DiffMetamodel diffMetamodel = new DiffMetamodel();
-		diffMetamodel.createRenameParameterInstance("1.0.0", "2.0.0");
-	}
+		diffMetamodel.saveInstance();
+	}	
 }
