@@ -12,7 +12,7 @@ public class ChangeResponse {
 	private String path;
 	private String version;
 	private DifferenceKind differenceKind;
-	
+	private String uri;
 	
 	public Response getResponse() {
 		return response;
@@ -44,4 +44,11 @@ public class ChangeResponse {
 	public void setDifferenceKind(DifferenceKind differenceKind) {
 		this.differenceKind = differenceKind;
 	}
+	public String getUri() {
+		return uri;
+	}
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	
 }

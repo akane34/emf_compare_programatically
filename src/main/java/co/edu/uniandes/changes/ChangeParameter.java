@@ -12,7 +12,7 @@ public class ChangeParameter {
 	private String path;
 	private String version;
 	private DifferenceKind differenceKind;
-	
+	private String uri;
 	
 	public Parameter getParameter() {
 		return parameter;
@@ -44,4 +44,12 @@ public class ChangeParameter {
 	public void setDifferenceKind(DifferenceKind differenceKind) {
 		this.differenceKind = differenceKind;
 	}
+	public String getUri() {
+		return uri;
+	}
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	
 }
+

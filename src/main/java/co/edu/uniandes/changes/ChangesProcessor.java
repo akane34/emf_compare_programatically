@@ -7,6 +7,7 @@ import java.util.Map;
 import org.eclipse.emf.compare.DifferenceKind;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import co.edu.uniandes.diff.DiffMetamodel;
 import edu.uoc.som.openapi.Operation;
@@ -155,6 +156,7 @@ public class ChangesProcessor {
 				param.setVersion(newVersion);
 				param.setDifferenceKind(DifferenceKind.ADD);
 				param.setPath(path.getRelativePath());				
+				param.setUri(EcoreUtil.getURI(parameter).toString());
 				
 				setOperation(path, param);
 				
@@ -177,7 +179,7 @@ public class ChangesProcessor {
 				param.setVersion(newVersion);
 				param.setDifferenceKind(DifferenceKind.MOVE);
 				param.setPath(path.getRelativePath());
-								
+				param.setUri(EcoreUtil.getURI(parameter).toString());				
 				setOperation(path, param);				
 				
 				changeParameters.add(param);						
@@ -197,7 +199,7 @@ public class ChangesProcessor {
 				param.setVersion(oldVersion);
 				param.setDifferenceKind(DifferenceKind.DELETE);
 				param.setPath(path.getRelativePath());				
-				
+				param.setUri(EcoreUtil.getURI(parameter).toString());
 				setOperation(path, param);	
 				
 				addOperations(operations, path, param);		
@@ -219,7 +221,7 @@ public class ChangesProcessor {
 				param.setVersion(newVersion);
 				param.setDifferenceKind(DifferenceKind.ADD);
 				param.setPath(path.getRelativePath());				
-				
+				param.setUri(EcoreUtil.getURI(response).toString());
 				setOperation(path, param);			
 				
 				addResponses.add(param);
@@ -239,7 +241,7 @@ public class ChangesProcessor {
 				param.setVersion(oldVersion);
 				param.setDifferenceKind(DifferenceKind.DELETE);
 				param.setPath(path.getRelativePath());				
-				
+				param.setUri(EcoreUtil.getURI(response).toString());
 				setOperation(path, param);						
 				
 				deleteResponse.add(param);				
