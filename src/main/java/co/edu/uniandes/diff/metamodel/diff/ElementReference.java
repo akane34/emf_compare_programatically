@@ -39,7 +39,7 @@ public interface ElementReference extends EObject {
 	 * @model
 	 * @generated
 	 */
-	Object getEObject();
+	String getEObject();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference#getEObject <em>EObject</em>}' attribute.
@@ -49,7 +49,7 @@ public interface ElementReference extends EObject {
 	 * @see #getEObject()
 	 * @generated
 	 */
-	void setEObject(Object value);
+	void setEObject(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Line Number</b></em>' attribute.
@@ -91,7 +91,7 @@ public interface ElementReference extends EObject {
 	 * @model required="true"
 	 * @generated
 	 */
-	String getXpath();
+	String getValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference#getXpath <em>Xpath</em>}' attribute.
@@ -101,6 +101,6 @@ public interface ElementReference extends EObject {
 	 * @see #getXpath()
 	 * @generated
 	 */
-	void setXpath(String value);
+	void setValue(String value);
 
 } // ElementReference

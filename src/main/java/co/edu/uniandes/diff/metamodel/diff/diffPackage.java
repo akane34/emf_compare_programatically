@@ -1404,7 +1404,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_REFERENCE__XPATH = 2;
+	int ELEMENT_REFERENCE__VALUE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Element Reference</em>' class.

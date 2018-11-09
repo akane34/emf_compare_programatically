@@ -38,7 +38,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object EOBJECT_EDEFAULT = null;
+	protected static final String EOBJECT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEObject() <em>EObject</em>}' attribute.
@@ -48,7 +48,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected Object eObject = EOBJECT_EDEFAULT;
+	protected String eObject = EOBJECT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLineNumber() <em>Line Number</em>}' attribute.
@@ -78,17 +78,17 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String XPATH_EDEFAULT = null;
+	protected static final String VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getXpath() <em>Xpath</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getXpath()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected String xpath = XPATH_EDEFAULT;
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getEObject() {
+	public String getEObject() {
 		return eObject;
 	}
 
@@ -123,7 +123,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEObject(Object newEObject) {
+	public void setEObject(String newEObject) {
 		Object oldEObject = eObject;
 		eObject = newEObject;
 		if (eNotificationRequired())
@@ -156,8 +156,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getXpath() {
-		return xpath;
+	public String getValue() {
+		return value;
 	}
 
 	/**
@@ -165,11 +165,11 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setXpath(String newXpath) {
-		String oldXpath = xpath;
-		xpath = newXpath;
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, diffPackage.ELEMENT_REFERENCE__XPATH, oldXpath, xpath));
+			eNotify(new ENotificationImpl(this, Notification.SET, diffPackage.ELEMENT_REFERENCE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -184,8 +184,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 				return getEObject();
 			case diffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
 				return getLineNumber();
-			case diffPackage.ELEMENT_REFERENCE__XPATH:
-				return getXpath();
+			case diffPackage.ELEMENT_REFERENCE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,13 +199,13 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case diffPackage.ELEMENT_REFERENCE__EOBJECT:
-				setEObject(newValue);
+				setEObject((String)newValue);
 				return;
 			case diffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
 				setLineNumber((BigInteger)newValue);
 				return;
-			case diffPackage.ELEMENT_REFERENCE__XPATH:
-				setXpath((String)newValue);
+			case diffPackage.ELEMENT_REFERENCE__VALUE:
+				setValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,8 +225,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 			case diffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
 				setLineNumber(LINE_NUMBER_EDEFAULT);
 				return;
-			case diffPackage.ELEMENT_REFERENCE__XPATH:
-				setXpath(XPATH_EDEFAULT);
+			case diffPackage.ELEMENT_REFERENCE__VALUE:
+				setValue(VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -244,8 +244,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 				return EOBJECT_EDEFAULT == null ? eObject != null : !EOBJECT_EDEFAULT.equals(eObject);
 			case diffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
 				return LINE_NUMBER_EDEFAULT == null ? lineNumber != null : !LINE_NUMBER_EDEFAULT.equals(lineNumber);
-			case diffPackage.ELEMENT_REFERENCE__XPATH:
-				return XPATH_EDEFAULT == null ? xpath != null : !XPATH_EDEFAULT.equals(xpath);
+			case diffPackage.ELEMENT_REFERENCE__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,8 +264,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 		result.append(eObject);
 		result.append(", lineNumber: ");
 		result.append(lineNumber);
-		result.append(", xpath: ");
-		result.append(xpath);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}

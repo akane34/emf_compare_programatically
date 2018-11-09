@@ -894,7 +894,7 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		elementReferenceEClass = createEClass(ELEMENT_REFERENCE);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__EOBJECT);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__LINE_NUMBER);
-		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__XPATH);
+		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__VALUE);
 
 		complexEClass = createEClass(COMPLEX);
 		createEReference(complexEClass, COMPLEX__SIMPLE_DIFFS);
