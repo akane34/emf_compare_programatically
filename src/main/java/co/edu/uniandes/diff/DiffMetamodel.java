@@ -43,12 +43,12 @@ public class DiffMetamodel {
 	
 	public void createChangeTypeOfParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter){		
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
-		oldElementReference.setEObject(oldParameter.getParameter());
-		oldElementReference.setXpath(oldParameter.getPath());		
+		//oldElementReference.setEObject(oldParameter.getParameter());
+		//oldElementReference.setXpath(oldParameter.getPath());		
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
-		newElementReference.setEObject(newParameter.getParameter());
-		newElementReference.setXpath(newParameter.getPath());
+		//newElementReference.setEObject(newParameter.getParameter());
+		//newElementReference.setXpath(newParameter.getPath());
 
 		ElementDefinition oldDefinition = diffFactoryI.createElementDefinition();
 		oldDefinition.setType(ElementType.getByName(oldParameter.getParameter().getType().getName().toLowerCase()));		
@@ -84,8 +84,8 @@ public class DiffMetamodel {
 	
 	public void createIncreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
-		newElementReference.setEObject(newParameter.getParameter());
-		newElementReference.setXpath(newParameter.getPath());
+		//newElementReference.setEObject(newParameter.getParameter());
+		newElementReference.setValue(newParameter.getPath());
 
 		Add add = diffFactoryI.createAdd();
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -104,8 +104,8 @@ public class DiffMetamodel {
 	
 	public void createDecreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
-		newElementReference.setEObject(newParameter.getParameter());
-		newElementReference.setXpath(newParameter.getPath());
+		//newElementReference.setEObject(newParameter.getParameter());
+		//newElementReference.setXpath(newParameter.getPath());
 
 		Delete delete = diffFactoryI.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -132,12 +132,12 @@ public class DiffMetamodel {
 		
 	public void createChangeTypeOfReturnValueInstance(ChangeResponse oldResponse, ChangeResponse newResponse){
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
-		oldElementReference.setEObject(oldResponse.getResponse());
-		oldElementReference.setXpath(oldResponse.getPath());		
+		//oldElementReference.setEObject(oldResponse.getResponse());
+		//oldElementReference.setXpath(oldResponse.getPath());		
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
-		newElementReference.setEObject(newResponse.getResponse());
-		newElementReference.setXpath(newResponse.getPath());
+		//newElementReference.setEObject(newResponse.getResponse());
+		//newElementReference.setXpath(newResponse.getPath());
 
 		ElementDefinition oldDefinition = diffFactoryI.createElementDefinition();			
 		String schemaName = "";		
@@ -187,15 +187,15 @@ public class DiffMetamodel {
 	
 	public void createRelocateParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter){		
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
-		oldElementReference.setEObject(oldParameter.getParameter());
-		oldElementReference.setXpath(oldParameter.getPath());		
+		//oldElementReference.setEObject(oldParameter.getParameter());
+		//oldElementReference.setXpath(oldParameter.getPath());		
 		Delete delete = diffFactoryI.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
 		//delete.setOld(oldElementReference);
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
-		newElementReference.setEObject(newParameter.getParameter());
-		newElementReference.setXpath(newParameter.getPath());		
+		//newElementReference.setEObject(newParameter.getParameter());
+		//newElementReference.setXpath(newParameter.getPath());		
 		Add add = diffFactoryI.createAdd();	
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
 		//add.setNew(newElementReference);		
