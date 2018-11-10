@@ -2,6 +2,7 @@ package co.edu.uniandes.diff;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
@@ -41,7 +42,15 @@ public class DiffMetamodel {
         resource = resSet.createResource(URI.createFileURI("C:/temp/model.xmi"));        
 	}	
 	
-	public void createChangeTypeOfParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter){		
+	public Diff createDiff(String oldVersion, String newVersion) {
+		Diff diff = diffFactoryI.createDiff();
+		diff.setOldVersion(oldVersion);
+		diff.setNewVersion(newVersion);
+		resource.getContents().add(diff);
+		return diff;
+	}
+	
+	public void createChangeTypeOfParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter,List<Change> changes){		
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setEObject(oldParameter.getUri());
 		oldElementReference.setValue(oldParameter.getParameter().getName());
@@ -66,23 +75,16 @@ public class DiffMetamodel {
 		parameterType.setChangeElement(APIElementType.METHOD_PARAMETER);
 		parameterType.setOldDefinition(oldDefinition);
 		parameterType.setNewDefinition(newDefinition);
-						
-		Diff diff = diffFactoryI.createDiff();
-		diff.setOldVersion(oldParameter.getVersion());
-		diff.setNewVersion(newParameter.getVersion());
+								
+		changes.add(parameterType);
 		
-		EList<Change> change = diff.getChange();		
-		change.add(parameterType);
-		
-		resource.getContents().add(diff);		
-        resource.getContents().add(parameterType);       
+		//resource.getContents().add(parameterType);       
 	}	
 	
-	public void createRenameParameterInstance(String oldVersion, String newVersion){		
-		       
+	public void createRenameParameterInstance(String oldVersion, String newVersion){		       
 	}	
 	
-	public void createIncreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter){		
+	public void createIncreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter, List<Change> changes){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
 		newElementReference.setValue(newParameter.getParameter().getName());
@@ -90,19 +92,13 @@ public class DiffMetamodel {
 		Add add = diffFactoryI.createAdd();
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
 		add.setNew(newElementReference);
-						
-		Diff diff = diffFactoryI.createDiff();
-		diff.setOldVersion(oldVersion);
-		diff.setNewVersion(newParameter.getVersion());
+								
+		changes.add(add);		
 		
-		EList<Change> change = diff.getChange();		
-		change.add(add);		
-		
-		resource.getContents().add(diff);		
-        resource.getContents().add(add);
+        //resource.getContents().add(add);
 	}
 	
-	public void createDecreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter){		
+	public void createDecreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter,List<Change> changes){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
 		newElementReference.setValue(newParameter.getParameter().getName());
@@ -110,16 +106,10 @@ public class DiffMetamodel {
 		Delete delete = diffFactoryI.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
 		delete.setNew(newElementReference);
-						
-		Diff diff = diffFactoryI.createDiff();
-		diff.setOldVersion(oldVersion);
-		diff.setNewVersion(newParameter.getVersion());
+				
+		changes.add(delete);
 		
-		EList<Change> change = diff.getChange();		
-		change.add(delete);		
-		
-		resource.getContents().add(diff);		
-        resource.getContents().add(delete);
+		//resource.getContents().add(delete);
 	}
 	
 	public void createChangeFormatOfReturnValueInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -130,7 +120,7 @@ public class DiffMetamodel {
 		
 	}
 		
-	public void createChangeTypeOfReturnValueInstance(ChangeResponse oldResponse, ChangeResponse newResponse){
+	public void createChangeTypeOfReturnValueInstance(ChangeResponse oldResponse, ChangeResponse newResponse, List<Change> changes){
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setValue(oldResponse.getResponse().getSchema().getName());		
 		oldElementReference.setEObject(oldResponse.getUri());
@@ -157,16 +147,10 @@ public class DiffMetamodel {
 		returnType.setChangeElement(APIElementType.RETURN_TYPE);
 		returnType.setOldDefinition(oldDefinition);
 		returnType.setNewDefinition(newDefinition);
-						
-		Diff diff = diffFactoryI.createDiff();
-		diff.setOldVersion(oldResponse.getVersion());
-		diff.setNewVersion(newResponse.getVersion());
+								
+		changes.add(returnType);
 		
-		EList<Change> change = diff.getChange();		
-		change.add(returnType);
-		
-		resource.getContents().add(diff);		
-        resource.getContents().add(returnType);       
+		//resource.getContents().add(returnType);       
 	}
 	
 	public void createDeleteMethodInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -185,7 +169,7 @@ public class DiffMetamodel {
 		
 	}
 	
-	public void createRelocateParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter){		
+	public void createRelocateParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter, List<Change> changes){		
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setEObject(oldParameter.getUri());
 		oldElementReference.setValue(oldParameter.getParameter().getName());		
@@ -209,18 +193,12 @@ public class DiffMetamodel {
 		relocate.setOldLocation(oldLocationP);
 		relocate.getSimpleDiffs().add(delete);
 		relocate.getSimpleDiffs().add(add);		
+						
+		changes.add(relocate);
 				
-		Diff diff = diffFactoryI.createDiff();
-		diff.setOldVersion(oldParameter.getVersion());
-		diff.setNewVersion(newParameter.getVersion());		
-		
-		EList<Change> change = diff.getChange();		
-		change.add(relocate);
-				
-		resource.getContents().add(diff);
-		resource.getContents().add(delete);
-		resource.getContents().add(add);
-        resource.getContents().add(relocate);        
+		//resource.getContents().add(delete);
+		//resource.getContents().add(add);
+		//resource.getContents().add(relocate);        
 	}
 	
 	public void createChangeDefaultValueOfParameterInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){

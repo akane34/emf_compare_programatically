@@ -31,7 +31,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "diff";
+	String eNAME = "Diff";
 
 	/**
 	 * The package namespace URI.
@@ -47,7 +47,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "diff";
+	String eNS_PREFIX = "Diff";
 
 	/**
 	 * The singleton instance of the package.
@@ -1398,7 +1398,7 @@ public interface diffPackage extends EPackage {
 	int ELEMENT_REFERENCE__LINE_NUMBER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Xpath</b></em>' attribute.
+	 * The feature id for the '<em><b>value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2030,15 +2030,15 @@ public interface diffPackage extends EPackage {
 	EAttribute getElementReference_LineNumber();
 
 	/**
-	 * Returns the meta object for the attribute '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference#getXpath <em>Xpath</em>}'.
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Xpath</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ElementReference#getXpath()
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ElementReference#getValue()
 	 * @see #getElementReference()
 	 * @generated
 	 */
-	EAttribute getElementReference_Xpath();
+	EAttribute getElementReference_Value();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.Complex <em>Complex</em>}'.
@@ -2560,12 +2560,12 @@ public interface diffPackage extends EPackage {
 		EAttribute ELEMENT_REFERENCE__LINE_NUMBER = eINSTANCE.getElementReference_LineNumber();
 
 		/**
-		 * The meta object literal for the '<em><b>Xpath</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
+		 * @generated	
 		 */
-		EAttribute ELEMENT_REFERENCE__XPATH = eINSTANCE.getElementReference_Xpath();
+		EAttribute ELEMENT_REFERENCE__VALUE = eINSTANCE.getElementReference_Value();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ComplexImpl <em>Complex</em>}' class.

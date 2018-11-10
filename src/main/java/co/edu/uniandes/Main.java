@@ -38,8 +38,7 @@ public class Main {
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
 		
-		for (Diff diff : diffs){
-			
+		for (Diff diff : diffs){			
 			if (diff instanceof ReferenceChange){								
 				ChangesProcessor.getDeletedParameters(deleteParameters, operations, diff, oldVersion);				
 				ChangesProcessor.getAddedParameters(addParameters, operations, diff, newVersion);
@@ -48,12 +47,12 @@ public class Main {
 				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
 			}
 		}
-				
-		ChangesProcessor.processRelocateParameter(diffMetamodel, deleteParameters, addParameters);
-		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters);
-		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion);
-		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion);
-		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse);
+		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
+		ChangesProcessor.processRelocateParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
+		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
+		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
+		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
+		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
 		
 		diffMetamodel.saveInstance();
 	}	
