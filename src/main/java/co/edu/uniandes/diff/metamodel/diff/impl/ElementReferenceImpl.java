@@ -124,7 +124,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setEObject(String newEObject) {
-		Object oldEObject = eObject;
+		String oldEObject = eObject;
 		eObject = newEObject;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, diffPackage.ELEMENT_REFERENCE__EOBJECT, oldEObject, eObject));
