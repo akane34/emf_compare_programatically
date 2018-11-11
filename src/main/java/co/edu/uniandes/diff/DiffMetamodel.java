@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
+import co.edu.uniandes.changes.ChangeContentType;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.changes.ChangeSchema;
@@ -309,7 +310,43 @@ public class DiffMetamodel {
 		changes.add(returnType);
 	}
 
+	public void createReturnTypeUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
+		
+		ElementReference elementReference = diffFactoryI.createElementReference();
+		elementReference.setEObject(contentTypeUpdated.getUri());
+		elementReference.setPath(contentTypeUpdated.getPath());
+		elementReference.setValue(contentTypeUpdated.getValue());
+		ResultType resultType = diffFactoryI.createResultType();
+		
+		switch (contentTypeUpdated.getKind()) {
+		case ADD:
+			resultType.setNew(elementReference);
+			break;
+		case DELETE:
+			resultType.setOld(elementReference);
+			break;
+		}
+		changes.add(resultType);
+	}
 	
+	public void createConsumeTypeUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
+		ElementReference elementReference = diffFactoryI.createElementReference();
+		elementReference.setEObject(contentTypeUpdated.getUri());
+		elementReference.setPath(contentTypeUpdated.getPath());
+		elementReference.setValue(contentTypeUpdated.getValue());
+		ConsumeType consumeType = diffFactoryI.createConsumeType();
+		
+		switch (contentTypeUpdated.getKind()) {
+		case ADD:
+			consumeType.setNew(elementReference);
+			break;
+		case DELETE:
+			consumeType.setOld(elementReference);
+			break;
+		}
+		changes.add(consumeType);
+		
+	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/
 	

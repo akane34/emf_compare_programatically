@@ -1,6 +1,5 @@
 package co.edu.uniandes;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +12,7 @@ import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.compare.AttributeChange;
 
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
+import co.edu.uniandes.changes.ChangeContentType;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.changes.ChangeSchema;
@@ -30,7 +30,7 @@ public class Main {
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare("v1.2.xmi", "v1.1.xmi");
+		Comparison comparison = comparer.compare("v1.1.xmi", "v1.2.xmi");
 	
 		EList<Diff> diffs = comparison.getDifferences();
 		
@@ -42,6 +42,7 @@ public class Main {
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
 		List<ChangeSchema> schemasUpdated = new ArrayList<ChangeSchema>();
+		List<ChangeContentType> contentTypesUpdated = new ArrayList<ChangeContentType>();
 		
 		for (Diff diff : diffs){			
 			if (diff instanceof ReferenceChange){								
@@ -53,6 +54,7 @@ public class Main {
 				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
 			}else if (diff instanceof AttributeChange) {
 				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
+				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
 			}
 		}
 		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
@@ -65,6 +67,7 @@ public class Main {
 		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
 		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
 		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
+		ChangesProcessor.processContentTypesUpdaes(diffMetamodel,contentTypesUpdated, diff.getChange());
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");
 		

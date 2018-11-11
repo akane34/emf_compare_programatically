@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.compare.AttributeChange;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.EAttributeImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -17,6 +18,7 @@ import co.edu.uniandes.diff.DiffMetamodel;
 import co.edu.uniandes.diff.metamodel.diff.Change;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Schema;
+import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;
 import edu.uoc.som.openapi.impl.PathImpl;
 import edu.uoc.som.openapi.impl.ResponseImpl;
@@ -192,6 +194,16 @@ public class ChangesProcessor {
 		}
 	}
 	
+	public static void processContentTypesUpdaes(DiffMetamodel diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
+		for(ChangeContentType contentTypeUpdated : contentTypesUpdated) {
+			if (contentTypeUpdated.getAttr().getName().equals("produces")) {
+				diffMetamodel.createReturnTypeUpdate(contentTypeUpdated, changes);
+			}else if (contentTypeUpdated.getAttr().getName().equals("consumes")) {
+				diffMetamodel.createConsumeTypeUpdate(contentTypeUpdated, changes);
+			}
+		}
+		
+	}
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {
@@ -264,22 +276,26 @@ public class ChangesProcessor {
 		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && diff.getKind() == DifferenceKind.CHANGE){
 			att = (EAttributeImpl)((AttributeChange)diff).getAttribute();
 		}
-		ParameterImpl left = (ParameterImpl)(((AttributeChange)diff).getMatch().getLeft());
-		ParameterImpl right = (ParameterImpl)(((AttributeChange)diff).getMatch().getRight());
-		if (left != null && right != null && att != null) {
+		EObject left = ((AttributeChange)diff).getMatch().getLeft();
+		EObject right = ((AttributeChange)diff).getMatch().getRight();
+		if (left != null && left instanceof ParameterImpl && right != null && right instanceof ParameterImpl && att != null) {
 			ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
-			changeBoundaryParam.setOldParam(left);
-			changeBoundaryParam.setOldUri(EcoreUtil.getURI(left).toString());
+			changeBoundaryParam.setOldParam((ParameterImpl)left);
+			changeBoundaryParam.setOldUri(EcoreUtil.getURI((ParameterImpl)left).toString());
 			
-			changeBoundaryParam.setNewParam(right);
-			changeBoundaryParam.setNewUri(EcoreUtil.getURI(right).toString());
+			changeBoundaryParam.setNewParam((ParameterImpl)right);
+			changeBoundaryParam.setNewUri(EcoreUtil.getURI((ParameterImpl)right).toString());
 			
-			if(att.getName().equals("maximum"))
+			if(att.getName().equals("maximum")) {
 				changeBoundaryParam.setBoundary(Boundary.UPPER);
-			else if(att.getName().equals("minimum"))
+				changesBoundaryParameters.add(changeBoundaryParam);
+			}
+			else if(att.getName().equals("minimum")) {
 				changeBoundaryParam.setBoundary(Boundary.LOWER);
+				changesBoundaryParameters.add(changeBoundaryParam);
+			}
 			
-			changesBoundaryParameters.add(changeBoundaryParam);
+			
 		}
 		
 	}
@@ -341,8 +357,32 @@ public class ChangesProcessor {
 				addedSchemas.add(updated);
 			}
 		}
+	}
+	
+	public static void getContentTypesUpdated(List<ChangeContentType> contentTypesUpdated, Diff diff) {
+		EAttribute att = null;
+		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && (diff.getKind() == DifferenceKind.DELETE || diff.getKind() == DifferenceKind.ADD)){
+			att = (EAttributeImpl)((AttributeChange)diff).getAttribute();
 		
-		
+		EObject left = (((AttributeChange)diff).getMatch().getLeft());
+		EObject right = (((AttributeChange)diff).getMatch().getRight());
+		 if (left instanceof OperationImpl && right instanceof OperationImpl) {
+			 PathImpl pathRight = (PathImpl)(right.eContainer());
+			 PathImpl pathLeft = (PathImpl)(left.eContainer());
+			 if(pathRight.getRelativePath().equals(pathLeft.getRelativePath())){
+				 if(att.getName().equals("produces") || att.getName().equals("consumes")) {
+					ChangeContentType change = new ChangeContentType();
+					change.setAttr(att);
+					change.setPath(pathRight.getRelativePath());
+					change.setUri(EcoreUtil.getURI(right).toString());
+					change.setKind(diff.getKind());
+					change.setValue(((AttributeChange)diff).getValue().toString());
+					contentTypesUpdated.add(change);
+				 }
+					 
+			 }
+		 }
+		}
 	}
 	/************************************ PRIVATE METHODS ************************************************************/
 	
@@ -403,4 +443,5 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
+
 }
