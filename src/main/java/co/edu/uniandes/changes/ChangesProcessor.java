@@ -8,6 +8,8 @@ import org.eclipse.emf.compare.DifferenceKind;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
+import org.eclipse.emf.compare.AttributeChange;
+import org.eclipse.emf.ecore.impl.EAttributeImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import co.edu.uniandes.diff.DiffMetamodel;
@@ -160,6 +162,22 @@ public class ChangesProcessor {
 		}
 	}
 	
+	public static void processBoundariesParamsUpdated(DiffMetamodel diffMetamodel,
+			List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
+		for(ChangeBoundaryParameter boundaryUpdated: changesBoundaryParameters) {
+			switch (boundaryUpdated.getBoundary()) {
+			case LOWER:
+				diffMetamodel.createLowerBoundary(boundaryUpdated, changes);
+				break;
+				
+			case UPPER:
+				diffMetamodel.createUpperBoundary(boundaryUpdated, changes);
+				break;
+			}
+			
+		}
+	}
+	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {
@@ -226,7 +244,31 @@ public class ChangesProcessor {
 			}
 		}
 	}
-
+	
+	public static void getChangeBoundaryParameters(List<ChangeBoundaryParameter> changesBoundaryParameters,  Diff diff) {
+		EAttributeImpl att = null;
+		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && diff.getKind() == DifferenceKind.CHANGE){
+			att = (EAttributeImpl)((AttributeChange)diff).getAttribute();
+		}
+		ParameterImpl left = (ParameterImpl)(((AttributeChange)diff).getMatch().getLeft());
+		ParameterImpl right = (ParameterImpl)(((AttributeChange)diff).getMatch().getRight());
+		if (left != null && right != null && att != null) {
+			ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
+			changeBoundaryParam.setOldParam(left);
+			changeBoundaryParam.setOldUri(EcoreUtil.getURI(left).toString());
+			
+			changeBoundaryParam.setNewParam(right);
+			changeBoundaryParam.setNewUri(EcoreUtil.getURI(right).toString());
+			
+			if(att.getName().equals("maximum"))
+				changeBoundaryParam.setBoundary(Boundary.UPPER);
+			else if(att.getName().equals("minimum"))
+				changeBoundaryParam.setBoundary(Boundary.LOWER);
+			
+			changesBoundaryParameters.add(changeBoundaryParam);
+		}
+		
+	}
 	public static void getAddedResponse(List<ChangeResponse> addResponses, Diff diff, String newVersion) {
 		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
@@ -326,4 +368,5 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
+
 }

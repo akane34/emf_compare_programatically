@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.diff.metamodel.diff.*;
@@ -202,10 +203,6 @@ public class DiffMetamodel {
 		
 	}
 	
-	public void createChangeUpperBoundOfParameterInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}
-	
 	public void createRestricAccessToAPIInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
 		
 	}	
@@ -243,6 +240,39 @@ public class DiffMetamodel {
 		add.setNew(newElementReference);
 		
 		changes.add(add);
+	}
+
+	public void createLowerBoundary(ChangeBoundaryParameter boundaryUpdated, List<Change> changes) {
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(boundaryUpdated.getNewUri());
+		newElementReference.setValue(boundaryUpdated.getNewParam().getMinimum().toString());
+		
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(boundaryUpdated.getOldUri());
+		oldElementReference.setValue(boundaryUpdated.getOldParam().getMinimum().toString());
+		
+		LowerBondary lowerBoundary = diffFactoryI.createLowerBondary();
+		lowerBoundary.setChangeElement(APIElementType.METHOD_PARAMETER);
+		lowerBoundary.setNew(newElementReference);
+		lowerBoundary.setOld(oldElementReference);
+		changes.add(lowerBoundary);
+	}
+
+	public void createUpperBoundary(ChangeBoundaryParameter boundaryUpdated, List<Change> changes) {
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(boundaryUpdated.getNewUri());
+		newElementReference.setValue(boundaryUpdated.getNewParam().getMaximum().toString());
+		
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(boundaryUpdated.getOldUri());
+		oldElementReference.setValue(boundaryUpdated.getOldParam().getMaximum().toString());
+		
+		UpperBondary upperBoundary = diffFactoryI.createUpperBondary();
+		upperBoundary.setChangeElement(APIElementType.METHOD_PARAMETER);
+		upperBoundary.setNew(newElementReference);
+		upperBoundary.setOld(oldElementReference);
+		changes.add(upperBoundary);
+		
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/

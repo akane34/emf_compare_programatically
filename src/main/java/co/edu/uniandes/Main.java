@@ -10,7 +10,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Comparison;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
+import org.eclipse.emf.compare.AttributeChange;
 
+import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.changes.ChangesProcessor;
@@ -35,7 +37,7 @@ public class Main {
 		List<ChangeParameter> addParameters = new ArrayList<ChangeParameter>();
 		List<ChangeParameter> changeParameters = new ArrayList<ChangeParameter>();
 		Map<String, List<ChangeParameter>> operations = new HashMap<String, List<ChangeParameter>>();
-		
+		List<ChangeBoundaryParameter> changesBoundaryParameters = new ArrayList<ChangeBoundaryParameter>();
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
 		
@@ -46,6 +48,8 @@ public class Main {
 				ChangesProcessor.getChangedParameters(changeParameters, diff, oldVersion, newVersion);
 				ChangesProcessor.getDeletedResponse(deleteResponse, diff, oldVersion);				
 				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
+			}else if (diff instanceof AttributeChange) {
+				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 			}
 		}
 		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
@@ -56,6 +60,7 @@ public class Main {
 		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
 		ChangesProcessor.processDeletedResponses(diffMetamodel, deleteResponse, diff.getChange());
 		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
+		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");
 		
