@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0"
+      host="virtserver.swaggerhub.com"
+      basePath="/thingsboard/2.0.0">
+    <info title="Thingsboard API"
+        description="This is a thingsboard API"
+        version="1.0.0">
+      <contact
+          email="you@your-company.com"/>
+      <license
+          name="Apache 2.0"
+          url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+    </info>
+    <schemes>https</schemes>
+    <paths relativePath="/settings">
+      <post
+          summary="save a new setting"
+          description="save a new setting"
+          responses="//@responses.0 //@responses.1">
+        <tagReferences>admin</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+  </api>
+  <responses
+      description="OK"
+      code="200"/>
+  <responses
+      description="302 descp"
+      code="302"
+      referenceName="302 desc"/>
+  <responses
+      description="403 desc"
+      code="403"
+      referenceName="403"/>
+</openapi:Root>

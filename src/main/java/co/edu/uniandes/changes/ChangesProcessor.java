@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.compare.DifferenceKind;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -147,9 +148,15 @@ public class ChangesProcessor {
 		return diffMetamodel.createDiff(oldVersion, newVersion);
 	}
 	
-	public static void processDeleteResponses(DiffMetamodel diffMetamodel, List<ChangeResponse> deleteResponse,List<Change> changes) {
+	public static void processDeletedResponses(DiffMetamodel diffMetamodel, List<ChangeResponse> deleteResponse,List<Change> changes) {
 		for(ChangeResponse delRes: deleteResponse) {
 			diffMetamodel.createDeleteStatusCode(delRes, changes);
+		}
+	}
+	
+	public static void processAddedResponses(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
+		for(ChangeResponse addRes: addResponse) {
+			diffMetamodel.createAddedStatusCode(addRes, changes);
 		}
 	}
 	
@@ -319,5 +326,4 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
-	
 }

@@ -231,6 +231,19 @@ public class DiffMetamodel {
 		changes.add(delete);
 		
 	}
+
+	public void createAddedStatusCode(ChangeResponse addRes, List<Change> changes) {
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(addRes.getUri());
+		newElementReference.setValue(addRes.getResponse().getCode());
+		newElementReference.setPath(addRes.getPath());
+		
+		Add add = diffFactoryI.createAdd();
+		add.setChangeElement(APIElementType.RETURN_TYPE);
+		add.setNew(newElementReference);
+		
+		changes.add(add);
+	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/
 }

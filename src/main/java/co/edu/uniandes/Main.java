@@ -27,7 +27,7 @@ public class Main {
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare("v1.2.xmi", "v1.1.xmi");
+		Comparison comparison = comparer.compare("v1.1.xmi", "v1.2.xmi");
 	
 		EList<Diff> diffs = comparison.getDifferences();
 		
@@ -54,7 +54,8 @@ public class Main {
 		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
-		ChangesProcessor.processDeleteResponses(diffMetamodel, deleteResponse, diff.getChange());
+		ChangesProcessor.processDeletedResponses(diffMetamodel, deleteResponse, diff.getChange());
+		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");
 		
