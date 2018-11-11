@@ -9,6 +9,7 @@ public class ChangeContentType {
 	private DifferenceKind kind;
 	private String value;
 	
+	
 	public String getValue() {
 		return value;
 	}
