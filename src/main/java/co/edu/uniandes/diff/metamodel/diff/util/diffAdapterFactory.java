@@ -172,6 +172,14 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createComplexAdapter();
 			}
 			@Override
+			public Adapter caseRemoveRestriction(RemoveRestriction object) {
+				return createRemoveRestrictionAdapter();
+			}
+			@Override
+			public Adapter caseAddRestriction(AddRestriction object) {
+				return createAddRestrictionAdapter();
+			}
+			@Override
 			public Adapter caseParameterType(ParameterType object) {
 				return createParameterTypeAdapter();
 			}
@@ -564,6 +572,34 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComplexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveRestriction <em>Remove Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveRestriction
+	 * @generated
+	 */
+	public Adapter createRemoveRestrictionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.AddRestriction <em>Add Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddRestriction
+	 * @generated
+	 */
+	public Adapter createAddRestrictionAdapter() {
 		return null;
 	}
 

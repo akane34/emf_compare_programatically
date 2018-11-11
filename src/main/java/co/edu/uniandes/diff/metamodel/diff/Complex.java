@@ -32,7 +32,7 @@ public interface Complex extends Change {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Simple Diffs</em>' reference list.
 	 * @see co.edu.uniandes.diff.metamodel.diff.diffPackage#getComplex_SimpleDiffs()
-	 * @model lower="2"
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<Simple> getSimpleDiffs();

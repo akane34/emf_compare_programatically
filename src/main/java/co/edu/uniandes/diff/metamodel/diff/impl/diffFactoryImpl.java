@@ -83,6 +83,8 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 			case diffPackage.OTHER_MODIFIER: return createOtherModifier();
 			case diffPackage.ELEMENT_REFERENCE: return createElementReference();
 			case diffPackage.COMPLEX: return createComplex();
+			case diffPackage.REMOVE_RESTRICTION: return createRemoveRestriction();
+			case diffPackage.ADD_RESTRICTION: return createAddRestriction();
 			case diffPackage.PARAMETER_TYPE: return (EObject)createParameterType();
 			case diffPackage.ELEMENT_DEFINITION: return (EObject)createElementDefinition();
 			case diffPackage.RETURN_TYPE: return (EObject)createReturnType();
@@ -387,6 +389,26 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	public Complex createComplex() {
 		ComplexImpl complex = new ComplexImpl();
 		return complex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RemoveRestriction createRemoveRestriction() {
+		RemoveRestrictionImpl removeRestriction = new RemoveRestrictionImpl();
+		return removeRestriction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AddRestriction createAddRestriction() {
+		AddRestrictionImpl addRestriction = new AddRestrictionImpl();
+		return addRestriction;
 	}
 
 	/**

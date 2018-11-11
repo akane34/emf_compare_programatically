@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import edu.uoc.som.openapi.OpenAPIPackage;
-import edu.uoc.som.openapi.Parameter;
 
 public class Comparer {
 		

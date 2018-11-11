@@ -276,6 +276,22 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case diffPackage.REMOVE_RESTRICTION: {
+				RemoveRestriction removeRestriction = (RemoveRestriction)theEObject;
+				T result = caseRemoveRestriction(removeRestriction);
+				if (result == null) result = caseComplex(removeRestriction);
+				if (result == null) result = caseChange(removeRestriction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.ADD_RESTRICTION: {
+				AddRestriction addRestriction = (AddRestriction)theEObject;
+				T result = caseAddRestriction(addRestriction);
+				if (result == null) result = caseComplex(addRestriction);
+				if (result == null) result = caseChange(addRestriction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case diffPackage.PARAMETER_TYPE: {
 				ParameterType parameterType = (ParameterType)theEObject;
 				T result = caseParameterType(parameterType);
@@ -691,6 +707,36 @@ public class diffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComplex(Complex object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Remove Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Remove Restriction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRemoveRestriction(RemoveRestriction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Restriction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddRestriction(AddRestriction object) {
 		return null;
 	}
 

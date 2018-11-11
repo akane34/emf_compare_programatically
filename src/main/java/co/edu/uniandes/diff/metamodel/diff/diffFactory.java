@@ -256,6 +256,24 @@ public interface diffFactory extends EFactory {
 	Complex createComplex();
 
 	/**
+	 * Returns a new object of class '<em>Remove Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Remove Restriction</em>'.
+	 * @generated
+	 */
+	RemoveRestriction createRemoveRestriction();
+
+	/**
+	 * Returns a new object of class '<em>Add Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Restriction</em>'.
+	 * @generated
+	 */
+	AddRestriction createAddRestriction();
+
+	/**
 	 * Returns a new object of class '<em>Parameter Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

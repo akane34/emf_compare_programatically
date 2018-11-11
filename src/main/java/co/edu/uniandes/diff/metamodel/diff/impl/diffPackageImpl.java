@@ -5,6 +5,7 @@ package co.edu.uniandes.diff.metamodel.diff.impl;
 import co.edu.uniandes.diff.metamodel.diff.APIElementType;
 import co.edu.uniandes.diff.metamodel.diff.AccessModifier;
 import co.edu.uniandes.diff.metamodel.diff.Add;
+import co.edu.uniandes.diff.metamodel.diff.AddRestriction;
 import co.edu.uniandes.diff.metamodel.diff.Change;
 import co.edu.uniandes.diff.metamodel.diff.Complex;
 import co.edu.uniandes.diff.metamodel.diff.ConsumeType;
@@ -26,6 +27,7 @@ import co.edu.uniandes.diff.metamodel.diff.ParameterLocation;
 import co.edu.uniandes.diff.metamodel.diff.ParameterType;
 import co.edu.uniandes.diff.metamodel.diff.RefactoringType;
 import co.edu.uniandes.diff.metamodel.diff.RelocateParameter;
+import co.edu.uniandes.diff.metamodel.diff.RemoveRestriction;
 import co.edu.uniandes.diff.metamodel.diff.Rename;
 import co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters;
 import co.edu.uniandes.diff.metamodel.diff.ResultType;
@@ -233,6 +235,20 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * @generated
 	 */
 	private EClass complexEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass removeRestrictionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addRestrictionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -711,6 +727,24 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRemoveRestriction() {
+		return removeRestrictionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAddRestriction() {
+		return addRestrictionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParameterType() {
 		return parameterTypeEClass;
 	}
@@ -909,6 +943,10 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		complexEClass = createEClass(COMPLEX);
 		createEReference(complexEClass, COMPLEX__SIMPLE_DIFFS);
 
+		removeRestrictionEClass = createEClass(REMOVE_RESTRICTION);
+
+		addRestrictionEClass = createEClass(ADD_RESTRICTION);
+
 		parameterTypeEClass = createEClass(PARAMETER_TYPE);
 		createEReference(parameterTypeEClass, PARAMETER_TYPE__OLD_DEFINITION);
 		createEReference(parameterTypeEClass, PARAMETER_TYPE__NEW_DEFINITION);
@@ -977,6 +1015,8 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		typeAPIEClass.getESuperTypes().add(this.getModify());
 		otherModifierEClass.getESuperTypes().add(this.getModify());
 		complexEClass.getESuperTypes().add(this.getChange());
+		removeRestrictionEClass.getESuperTypes().add(this.getComplex());
+		addRestrictionEClass.getESuperTypes().add(this.getComplex());
 		parameterTypeEClass.getESuperTypes().add(this.getModify());
 		returnTypeEClass.getESuperTypes().add(this.getModify());
 
@@ -1046,7 +1086,11 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		initEAttribute(getElementReference_Path(), ecorePackage.getEString(), "path", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complexEClass, Complex.class, "Complex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComplex_SimpleDiffs(), this.getSimple(), null, "simpleDiffs", null, 2, -1, Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComplex_SimpleDiffs(), this.getSimple(), null, "simpleDiffs", null, 1, -1, Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(removeRestrictionEClass, RemoveRestriction.class, "RemoveRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addRestrictionEClass, AddRestriction.class, "AddRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(parameterTypeEClass, Object.class, "ParameterType", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getParameterType_OldDefinition(), this.getElementDefinition(), null, "oldDefinition", null, 1, 1, ParameterType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

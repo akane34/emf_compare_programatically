@@ -7,18 +7,20 @@ import edu.uoc.som.openapi.Parameter;
 
 public class ChangeParameter {
 
-	private Parameter parameter;
+	private Parameter oldParameter;
+	private Parameter newParameter;	
 	private Operation operation;
 	private String path;
 	private String version;
 	private DifferenceKind differenceKind;
-	private String uri;
+	private String oldParameterUri;	
+	private String newParameterUri;
 	
-	public Parameter getParameter() {
-		return parameter;
+	public Parameter getNewParameter() {
+		return newParameter;
 	}
-	public void setParameter(Parameter parameter) {
-		this.parameter = parameter;
+	public void setNewParameter(Parameter parameter) {
+		this.newParameter = parameter;
 	}
 	public Operation getOperation() {
 		return operation;
@@ -44,12 +46,23 @@ public class ChangeParameter {
 	public void setDifferenceKind(DifferenceKind differenceKind) {
 		this.differenceKind = differenceKind;
 	}
-	public String getUri() {
-		return uri;
+	public String getNewParameterUri() {
+		return newParameterUri;
 	}
-	public void setUri(String uri) {
-		this.uri = uri;
+	public void setNewParameterUri(String uri) {
+		this.newParameterUri = uri;
 	}
-	
+	public Parameter getOldParameter() {
+		return oldParameter;
+	}
+	public void setOldParameter(Parameter oldParameter) {
+		this.oldParameter = oldParameter;
+	}
+	public String getOldParameterUri() {
+		return oldParameterUri;
+	}
+	public void setOldParameterUri(String oldParameterUri) {
+		this.oldParameterUri = oldParameterUri;
+	}	
 }
 

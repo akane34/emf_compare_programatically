@@ -31,7 +31,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "Diff";
+	String eNAME = "diff";
 
 	/**
 	 * The package namespace URI.
@@ -47,7 +47,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "Diff";
+	String eNS_PREFIX = "diff";
 
 	/**
 	 * The singleton instance of the package.
@@ -1434,6 +1434,98 @@ public interface diffPackage extends EPackage {
 	int ELEMENT_REFERENCE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveRestrictionImpl <em>Remove Restriction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveRestrictionImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveRestriction()
+	 * @generated
+	 */
+	int REMOVE_RESTRICTION = 26;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_RESTRICTION__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_RESTRICTION__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Remove Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_RESTRICTION_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Remove Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_RESTRICTION_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl <em>Add Restriction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddRestriction()
+	 * @generated
+	 */
+	int ADD_RESTRICTION = 27;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_RESTRICTION__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_RESTRICTION__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Add Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_RESTRICTION_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Add Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_RESTRICTION_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1441,7 +1533,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 26;
+	int PARAMETER_TYPE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1514,7 +1606,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementDefinition()
 	 * @generated
 	 */
-	int ELEMENT_DEFINITION = 27;
+	int ELEMENT_DEFINITION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Schema Name</b></em>' attribute.
@@ -1560,7 +1652,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReturnType()
 	 * @generated
 	 */
-	int RETURN_TYPE = 28;
+	int RETURN_TYPE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1633,7 +1725,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAPIElementType()
 	 * @generated
 	 */
-	int API_ELEMENT_TYPE = 29;
+	int API_ELEMENT_TYPE = 31;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ParameterLocation <em>Parameter Location</em>}' enum.
@@ -1643,7 +1735,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterLocation()
 	 * @generated
 	 */
-	int PARAMETER_LOCATION = 30;
+	int PARAMETER_LOCATION = 32;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ElementType <em>Element Type</em>}' enum.
@@ -1653,7 +1745,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 31;
+	int ELEMENT_TYPE = 33;
 
 
 	/**
@@ -2080,6 +2172,26 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComplex_SimpleDiffs();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveRestriction <em>Remove Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Remove Restriction</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveRestriction
+	 * @generated
+	 */
+	EClass getRemoveRestriction();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.AddRestriction <em>Add Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Restriction</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddRestriction
+	 * @generated
+	 */
+	EClass getAddRestriction();
 
 	/**
 	 * Returns the meta object for class '{@link ParameterType <em>Parameter Type</em>}'.
@@ -2612,6 +2724,26 @@ public interface diffPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPLEX__SIMPLE_DIFFS = eINSTANCE.getComplex_SimpleDiffs();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveRestrictionImpl <em>Remove Restriction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveRestrictionImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveRestriction()
+		 * @generated
+		 */
+		EClass REMOVE_RESTRICTION = eINSTANCE.getRemoveRestriction();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl <em>Add Restriction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddRestriction()
+		 * @generated
+		 */
+		EClass ADD_RESTRICTION = eINSTANCE.getAddRestriction();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
