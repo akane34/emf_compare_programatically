@@ -684,6 +684,15 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getElementReference_Path() {
+		return (EAttribute)elementReferenceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComplex() {
 		return complexEClass;
 	}
@@ -895,6 +904,7 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__EOBJECT);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__LINE_NUMBER);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__VALUE);
+		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__PATH);
 
 		complexEClass = createEClass(COMPLEX);
 		createEReference(complexEClass, COMPLEX__SIMPLE_DIFFS);
@@ -1030,9 +1040,10 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		initEClass(otherModifierEClass, OtherModifier.class, "OtherModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(elementReferenceEClass, ElementReference.class, "ElementReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElementReference_EObject(), ecorePackage.getEJavaObject(), "EObject", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementReference_EObject(), ecorePackage.getEString(), "EObject", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElementReference_LineNumber(), ecorePackage.getEBigInteger(), "lineNumber", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElementReference_Value(), ecorePackage.getEString(), "value", null, 1, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementReference_Path(), ecorePackage.getEString(), "path", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complexEClass, Complex.class, "Complex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComplex_SimpleDiffs(), this.getSimple(), null, "simpleDiffs", null, 2, -1, Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

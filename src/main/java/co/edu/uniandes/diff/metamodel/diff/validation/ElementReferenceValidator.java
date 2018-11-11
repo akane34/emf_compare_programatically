@@ -15,7 +15,8 @@ import java.math.BigInteger;
 public interface ElementReferenceValidator {
 	boolean validate();
 
-	boolean validateEObject(Object value);
+	boolean validateEObject(String value);
 	boolean validateLineNumber(BigInteger value);
-	boolean validateXpath(String value);
+	boolean validateValue(String value);
+	boolean validatePath(String value);
 }

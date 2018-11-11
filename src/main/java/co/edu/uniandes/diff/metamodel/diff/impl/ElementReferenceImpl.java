@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl#getEObject <em>EObject</em>}</li>
  *   <li>{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl#getLineNumber <em>Line Number</em>}</li>
- *   <li>{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl#getXpath <em>Xpath</em>}</li>
+ *   <li>{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl#getPath <em>Path</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,10 +72,10 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	protected BigInteger lineNumber = LINE_NUMBER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getXpath() <em>Xpath</em>}' attribute.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getXpath()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
@@ -89,6 +90,26 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,7 +145,7 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setEObject(String newEObject) {
-		Object oldEObject = eObject;
+		String oldEObject = eObject;
 		eObject = newEObject;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, diffPackage.ELEMENT_REFERENCE__EOBJECT, oldEObject, eObject));
@@ -177,6 +198,27 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPath() {
+		return path;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPath(String newPath) {
+		String oldPath = path;
+		path = newPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, diffPackage.ELEMENT_REFERENCE__PATH, oldPath, path));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -186,6 +228,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 				return getLineNumber();
 			case diffPackage.ELEMENT_REFERENCE__VALUE:
 				return getValue();
+			case diffPackage.ELEMENT_REFERENCE__PATH:
+				return getPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +250,9 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case diffPackage.ELEMENT_REFERENCE__VALUE:
 				setValue((String)newValue);
+				return;
+			case diffPackage.ELEMENT_REFERENCE__PATH:
+				setPath((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,6 +275,9 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 			case diffPackage.ELEMENT_REFERENCE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case diffPackage.ELEMENT_REFERENCE__PATH:
+				setPath(PATH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +296,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 				return LINE_NUMBER_EDEFAULT == null ? lineNumber != null : !LINE_NUMBER_EDEFAULT.equals(lineNumber);
 			case diffPackage.ELEMENT_REFERENCE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case diffPackage.ELEMENT_REFERENCE__PATH:
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -266,6 +318,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 		result.append(lineNumber);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", path: ");
+		result.append(path);
 		result.append(')');
 		return result.toString();
 	}

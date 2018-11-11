@@ -31,7 +31,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "Diff";
+	String eNAME = "diff";
 
 	/**
 	 * The package namespace URI.
@@ -47,7 +47,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "Diff";
+	String eNS_PREFIX = "diff";
 
 	/**
 	 * The singleton instance of the package.
@@ -1398,7 +1398,7 @@ public interface diffPackage extends EPackage {
 	int ELEMENT_REFERENCE__LINE_NUMBER = 1;
 
 	/**
-	 * The feature id for the '<em><b>value</b></em>' attribute.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1407,13 +1407,22 @@ public interface diffPackage extends EPackage {
 	int ELEMENT_REFERENCE__VALUE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_REFERENCE__PATH = 3;
+
+	/**
 	 * The number of structural features of the '<em>Element Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_REFERENCE_FEATURE_COUNT = 3;
+	int ELEMENT_REFERENCE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Element Reference</em>' class.
@@ -2041,6 +2050,17 @@ public interface diffPackage extends EPackage {
 	EAttribute getElementReference_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Path</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ElementReference#getPath()
+	 * @see #getElementReference()
+	 * @generated
+	 */
+	EAttribute getElementReference_Path();
+
+	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.Complex <em>Complex</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2563,9 +2583,17 @@ public interface diffPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated	
+		 * @generated
 		 */
 		EAttribute ELEMENT_REFERENCE__VALUE = eINSTANCE.getElementReference_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT_REFERENCE__PATH = eINSTANCE.getElementReference_Path();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ComplexImpl <em>Complex</em>}' class.
