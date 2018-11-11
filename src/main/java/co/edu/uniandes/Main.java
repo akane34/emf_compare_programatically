@@ -15,6 +15,7 @@ import org.eclipse.emf.compare.AttributeChange;
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
+import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.changes.ChangesProcessor;
 import co.edu.uniandes.comparer.Comparer;
 import co.edu.uniandes.diff.DiffMetamodel;
@@ -29,7 +30,7 @@ public class Main {
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare("v1.1.xmi", "v1.2.xmi");
+		Comparison comparison = comparer.compare("v1.2.xmi", "v1.1.xmi");
 	
 		EList<Diff> diffs = comparison.getDifferences();
 		
@@ -40,6 +41,7 @@ public class Main {
 		List<ChangeBoundaryParameter> changesBoundaryParameters = new ArrayList<ChangeBoundaryParameter>();
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
+		List<ChangeSchema> schemasUpdated = new ArrayList<ChangeSchema>();
 		
 		for (Diff diff : diffs){			
 			if (diff instanceof ReferenceChange){								
@@ -48,6 +50,7 @@ public class Main {
 				ChangesProcessor.getChangedParameters(changeParameters, diff, oldVersion, newVersion);
 				ChangesProcessor.getDeletedResponse(deleteResponse, diff, oldVersion);				
 				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
+				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
 			}else if (diff instanceof AttributeChange) {
 				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 			}
@@ -61,6 +64,7 @@ public class Main {
 		ChangesProcessor.processDeletedResponses(diffMetamodel, deleteResponse, diff.getChange());
 		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
 		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
+		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");
 		

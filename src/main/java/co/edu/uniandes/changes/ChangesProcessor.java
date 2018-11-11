@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.compare.AttributeChange;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.EAttributeImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -162,8 +163,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processBoundariesParamsUpdated(DiffMetamodel diffMetamodel,
-			List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
+	public static void processBoundariesParamsUpdated(DiffMetamodel diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
 		for(ChangeBoundaryParameter boundaryUpdated: changesBoundaryParameters) {
 			switch (boundaryUpdated.getBoundary()) {
 			case LOWER:
@@ -175,6 +175,20 @@ public class ChangesProcessor {
 				break;
 			}
 			
+		}
+	}
+	
+	public static void processSchemasUpdated(DiffMetamodel diffMetamodel, List<ChangeSchema> schemasUpdated, List<Change> changes) {
+		for(ChangeSchema schemaUpdated : schemasUpdated) {
+			switch (schemaUpdated.getDifferenceKind()) {
+			case ADD:
+				diffMetamodel.createAddedSchemaProperty(schemaUpdated,changes);
+				break;
+
+			case DELETE:
+				diffMetamodel.createDeletedSchemaProperty(schemaUpdated, changes);
+				break;
+			}
 		}
 	}
 	
@@ -269,6 +283,7 @@ public class ChangesProcessor {
 		}
 		
 	}
+	
 	public static void getAddedResponse(List<ChangeResponse> addResponses, Diff diff, String newVersion) {
 		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
@@ -308,7 +323,27 @@ public class ChangesProcessor {
 			}
 		}
 	}
+	
+	public static void getChangesSchema(List<ChangeSchema> addedSchemas, Diff diff) {
+		Schema schemaAdded;
+		if ( ((ReferenceChange)diff).getValue() instanceof Schema && (diff.getKind() == DifferenceKind.ADD || diff.getKind() == DifferenceKind.DELETE)){
+			schemaAdded = (Schema)(((ReferenceChange)diff).getValue());
+	
+			EObject left = diff.getMatch().getLeft();
+			EObject right = diff.getMatch().getRight();
+			
+			if(left instanceof Schema && right instanceof Schema  && ((Schema)left).getName().equals(((Schema)right).getName())) {
+				ChangeSchema updated = new ChangeSchema();
+				
+				updated.setSchema(schemaAdded);
+				updated.setUri(EcoreUtil.getURI((Schema)right).toString());
+				updated.setDifferenceKind(diff.getKind());
+				addedSchemas.add(updated);
+			}
+		}
 		
+		
+	}
 	/************************************ PRIVATE METHODS ************************************************************/
 	
 	private static void addOperations(Map<String, List<ChangeParameter>> operations, PathImpl path,
@@ -368,5 +403,4 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
-
 }

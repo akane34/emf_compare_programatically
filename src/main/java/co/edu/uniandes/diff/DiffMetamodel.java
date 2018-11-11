@@ -17,8 +17,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeParameter;
 import co.edu.uniandes.changes.ChangeResponse;
+import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.diff.metamodel.diff.*;
 import co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl;
+import edu.uoc.som.openapi.JSONDataType;
 
 public class DiffMetamodel {
 
@@ -274,6 +276,71 @@ public class DiffMetamodel {
 		changes.add(upperBoundary);
 		
 	}
+
+	public void createAddedSchemaProperty(ChangeSchema schemaUpdated, List<Change> changes) {
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(schemaUpdated.getUri());
+		
+		ElementDefinition element = diffFactoryI.createElementDefinition();
+		element.setSchemaName(schemaUpdated.getSchema().getName());
+		element.setType(getType(schemaUpdated.getSchema().getType()));
+		
+		ReturnType returnType = diffFactoryI.createReturnType();
+		
+		returnType.setChangeElement(APIElementType.CLASS);
+		returnType.setNewDefinition(element);
+		returnType.setNew(newElementReference);
+		changes.add(returnType);
+	}
+	
+	public void createDeletedSchemaProperty(ChangeSchema schemaUpdated, List<Change> changes) {
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(schemaUpdated.getUri());
+		
+		ElementDefinition element = diffFactoryI.createElementDefinition();
+		element.setSchemaName(schemaUpdated.getSchema().getName());
+		element.setType(getType(schemaUpdated.getSchema().getType()));
+		
+		ReturnType returnType = diffFactoryI.createReturnType();
+		
+		returnType.setChangeElement(APIElementType.CLASS);
+		returnType.setOldDefinition(element);
+		returnType.setOld(oldElementReference);
+		changes.add(returnType);
+	}
+
+	
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/
+	
+	private ElementType getType(JSONDataType type) {
+		ElementType elementType = ElementType.UNSPECIFIED;
+		switch (type) {
+		case ARRAY:
+			elementType = ElementType.ARRAY;
+			break;
+		case BOOLEAN:
+			elementType = ElementType.BOOLEAN;
+			break;
+		case FILE:
+			elementType = ElementType.FILE;
+			break;
+		case INTEGER:
+			elementType = ElementType.INTEGER;
+			break;
+		case NULL:
+			elementType = ElementType.NULL;
+			break;
+		case NUMBER:
+			elementType = ElementType.NUMBER;
+			break;
+		case OBJECT:
+			elementType = ElementType.OBJECT;
+			break;
+		case STRING:
+			elementType = ElementType.STRING;
+			break;		
+		}
+		return elementType;
+	}
 }
