@@ -54,11 +54,13 @@ public class DiffMetamodel {
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setEObject(oldParameter.getUri());
 		oldElementReference.setValue(oldParameter.getParameter().getName());
+		oldElementReference.setPath(oldParameter.getPath());
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
 		newElementReference.setValue(newParameter.getParameter().getName());
-
+		newElementReference.setPath(newParameter.getPath());
+		
 		ElementDefinition oldDefinition = diffFactoryI.createElementDefinition();
 		oldDefinition.setType(ElementType.getByName(oldParameter.getParameter().getType().getName().toLowerCase()));		
 		if (oldParameter.getParameter().getSchema() != null)
@@ -77,8 +79,6 @@ public class DiffMetamodel {
 		parameterType.setNewDefinition(newDefinition);
 								
 		changes.add(parameterType);
-		
-		//resource.getContents().add(parameterType);       
 	}	
 	
 	public void createRenameParameterInstance(String oldVersion, String newVersion){		       
@@ -88,28 +88,27 @@ public class DiffMetamodel {
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
 		newElementReference.setValue(newParameter.getParameter().getName());
-
+		newElementReference.setPath(newParameter.getPath());
+		
 		Add add = diffFactoryI.createAdd();
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
 		add.setNew(newElementReference);
 								
-		changes.add(add);		
-		
-        //resource.getContents().add(add);
+		changes.add(add);
 	}
 	
 	public void createDecreaseNumberOfParametersInstance(String oldVersion, ChangeParameter newParameter,List<Change> changes){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
 		newElementReference.setValue(newParameter.getParameter().getName());
-
+		newElementReference.setPath(newParameter.getPath());
+		
 		Delete delete = diffFactoryI.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
 		delete.setNew(newElementReference);
 				
 		changes.add(delete);
 		
-		//resource.getContents().add(delete);
 	}
 	
 	public void createChangeFormatOfReturnValueInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -124,11 +123,13 @@ public class DiffMetamodel {
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setValue(oldResponse.getResponse().getSchema().getName());		
 		oldElementReference.setEObject(oldResponse.getUri());
+		oldElementReference.setPath(oldResponse.getPath());
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newResponse.getUri());
 		newElementReference.setValue(newResponse.getResponse().getSchema().getName());
-
+		newElementReference.setPath(newResponse.getPath());
+		
 		ElementDefinition oldDefinition = diffFactoryI.createElementDefinition();			
 		String schemaName = "";		
 		if (oldResponse.getResponse().getSchema() != null)
@@ -149,8 +150,6 @@ public class DiffMetamodel {
 		returnType.setNewDefinition(newDefinition);
 								
 		changes.add(returnType);
-		
-		//resource.getContents().add(returnType);       
 	}
 	
 	public void createDeleteMethodInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -172,14 +171,16 @@ public class DiffMetamodel {
 	public void createRelocateParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter, List<Change> changes){		
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setEObject(oldParameter.getUri());
-		oldElementReference.setValue(oldParameter.getParameter().getName());		
+		oldElementReference.setValue(oldParameter.getParameter().getName());
+		oldElementReference.setPath(oldParameter.getPath());
 		Delete delete = diffFactoryI.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
 		delete.setOld(oldElementReference);
 		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getUri());
-		newElementReference.setValue(newParameter.getParameter().getName());		
+		newElementReference.setValue(newParameter.getParameter().getName());	
+		newElementReference.setPath(newParameter.getPath());
 		Add add = diffFactoryI.createAdd();	
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
 		add.setNew(newElementReference);		
@@ -194,11 +195,7 @@ public class DiffMetamodel {
 		relocate.getSimpleDiffs().add(delete);
 		relocate.getSimpleDiffs().add(add);		
 						
-		changes.add(relocate);
-				
-		//resource.getContents().add(delete);
-		//resource.getContents().add(add);
-		//resource.getContents().add(relocate);        
+		changes.add(relocate);        
 	}
 	
 	public void createChangeDefaultValueOfParameterInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -219,6 +216,20 @@ public class DiffMetamodel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+	}
+
+	public void createDeleteStatusCode(ChangeResponse delRes, List<Change> changes) {
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(delRes.getUri());
+		oldElementReference.setValue(delRes.getResponse().getCode());
+		oldElementReference.setPath(delRes.getPath());
+		
+		Delete delete = diffFactoryI.createDelete();
+		delete.setChangeElement(APIElementType.RETURN_TYPE);
+		delete.setOld(oldElementReference);
+		
+		changes.add(delete);
+		
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/

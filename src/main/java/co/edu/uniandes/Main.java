@@ -1,5 +1,6 @@
 package co.edu.uniandes;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Main {
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare("v1.0.xmi", "v2.0.xmi");
+		Comparison comparison = comparer.compare("v1.2.xmi", "v1.1.xmi");
 	
 		EList<Diff> diffs = comparison.getDifferences();
 		
@@ -53,7 +54,9 @@ public class Main {
 		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
-		
+		ChangesProcessor.processDeleteResponses(diffMetamodel, deleteResponse, diff.getChange());
 		diffMetamodel.saveInstance();
+		System.out.println("Process done");
+		
 	}	
 }

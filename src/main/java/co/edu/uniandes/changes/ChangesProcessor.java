@@ -147,6 +147,12 @@ public class ChangesProcessor {
 		return diffMetamodel.createDiff(oldVersion, newVersion);
 	}
 	
+	public static void processDeleteResponses(DiffMetamodel diffMetamodel, List<ChangeResponse> deleteResponse,List<Change> changes) {
+		for(ChangeResponse delRes: deleteResponse) {
+			diffMetamodel.createDeleteStatusCode(delRes, changes);
+		}
+	}
+	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {
@@ -313,6 +319,5 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
-
 	
 }
