@@ -31,7 +31,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "diff";
+	String eNAME = "Diff";
 
 	/**
 	 * The package namespace URI.
@@ -47,7 +47,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "diff";
+	String eNS_PREFIX = "Diff";
 
 	/**
 	 * The singleton instance of the package.
