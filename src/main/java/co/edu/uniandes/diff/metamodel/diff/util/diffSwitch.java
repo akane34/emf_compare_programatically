@@ -100,6 +100,24 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case diffPackage.MULTIPLE_PARAMETERS_IN_ONE: {
+				MultipleParametersInOne multipleParametersInOne = (MultipleParametersInOne)theEObject;
+				T result = caseMultipleParametersInOne(multipleParametersInOne);
+				if (result == null) result = caseRelocateParameter(multipleParametersInOne);
+				if (result == null) result = caseComplex(multipleParametersInOne);
+				if (result == null) result = caseChange(multipleParametersInOne);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.SAME_PARAMETER: {
+				SameParameter sameParameter = (SameParameter)theEObject;
+				T result = caseSameParameter(sameParameter);
+				if (result == null) result = caseRelocateParameter(sameParameter);
+				if (result == null) result = caseComplex(sameParameter);
+				if (result == null) result = caseChange(sameParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case diffPackage.REORDER_TYPE_PARAMETERS: {
 				ReorderTypeParameters reorderTypeParameters = (ReorderTypeParameters)theEObject;
 				T result = caseReorderTypeParameters(reorderTypeParameters);
@@ -392,6 +410,36 @@ public class diffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRelocateParameter(RelocateParameter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Multiple Parameters In One</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multiple Parameters In One</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultipleParametersInOne(MultipleParametersInOne object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Same Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Same Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSameParameter(SameParameter object) {
 		return null;
 	}
 

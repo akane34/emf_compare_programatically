@@ -203,7 +203,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getComplex()
 	 * @generated
 	 */
-	int COMPLEX = 25;
+	int COMPLEX = 27;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -352,6 +352,134 @@ public interface diffPackage extends EPackage {
 	int RELOCATE_PARAMETER_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MultipleParametersInOneImpl <em>Multiple Parameters In One</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.MultipleParametersInOneImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMultipleParametersInOne()
+	 * @generated
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE__CHANGE_ELEMENT = RELOCATE_PARAMETER__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE__SIMPLE_DIFFS = RELOCATE_PARAMETER__SIMPLE_DIFFS;
+
+	/**
+	 * The feature id for the '<em><b>New Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE__NEW_LOCATION = RELOCATE_PARAMETER__NEW_LOCATION;
+
+	/**
+	 * The feature id for the '<em><b>Old Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE__OLD_LOCATION = RELOCATE_PARAMETER__OLD_LOCATION;
+
+	/**
+	 * The number of structural features of the '<em>Multiple Parameters In One</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE_FEATURE_COUNT = RELOCATE_PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Multiple Parameters In One</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_PARAMETERS_IN_ONE_OPERATION_COUNT = RELOCATE_PARAMETER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SameParameterImpl <em>Same Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.SameParameterImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSameParameter()
+	 * @generated
+	 */
+	int SAME_PARAMETER = 6;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER__CHANGE_ELEMENT = RELOCATE_PARAMETER__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER__SIMPLE_DIFFS = RELOCATE_PARAMETER__SIMPLE_DIFFS;
+
+	/**
+	 * The feature id for the '<em><b>New Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER__NEW_LOCATION = RELOCATE_PARAMETER__NEW_LOCATION;
+
+	/**
+	 * The feature id for the '<em><b>Old Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER__OLD_LOCATION = RELOCATE_PARAMETER__OLD_LOCATION;
+
+	/**
+	 * The number of structural features of the '<em>Same Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER_FEATURE_COUNT = RELOCATE_PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Same Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAME_PARAMETER_OPERATION_COUNT = RELOCATE_PARAMETER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl <em>Reorder Type Parameters</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,7 +487,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReorderTypeParameters()
 	 * @generated
 	 */
-	int REORDER_TYPE_PARAMETERS = 5;
+	int REORDER_TYPE_PARAMETERS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -405,7 +533,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getContractSuperSet()
 	 * @generated
 	 */
-	int CONTRACT_SUPER_SET = 6;
+	int CONTRACT_SUPER_SET = 8;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -451,7 +579,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMoveUpInHierarchy()
 	 * @generated
 	 */
-	int MOVE_UP_IN_HIERARCHY = 7;
+	int MOVE_UP_IN_HIERARCHY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -497,7 +625,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSimple()
 	 * @generated
 	 */
-	int SIMPLE = 8;
+	int SIMPLE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -552,7 +680,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAdd()
 	 * @generated
 	 */
-	int ADD = 9;
+	int ADD = 11;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -607,7 +735,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDelete()
 	 * @generated
 	 */
-	int DELETE = 10;
+	int DELETE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -662,7 +790,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDefaultClause()
 	 * @generated
 	 */
-	int DEFAULT_CLAUSE = 11;
+	int DEFAULT_CLAUSE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -717,7 +845,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getModify()
 	 * @generated
 	 */
-	int MODIFY = 12;
+	int MODIFY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -772,7 +900,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getUpperBondary()
 	 * @generated
 	 */
-	int UPPER_BONDARY = 13;
+	int UPPER_BONDARY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -827,7 +955,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getLowerBondary()
 	 * @generated
 	 */
-	int LOWER_BONDARY = 14;
+	int LOWER_BONDARY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -882,7 +1010,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDefaultValue()
 	 * @generated
 	 */
-	int DEFAULT_VALUE = 15;
+	int DEFAULT_VALUE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -937,7 +1065,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRename()
 	 * @generated
 	 */
-	int RENAME = 16;
+	int RENAME = 18;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -992,7 +1120,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAccessModifier()
 	 * @generated
 	 */
-	int ACCESS_MODIFIER = 17;
+	int ACCESS_MODIFIER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1047,7 +1175,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeBound()
 	 * @generated
 	 */
-	int TYPE_BOUND = 18;
+	int TYPE_BOUND = 20;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1102,7 +1230,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getResultType()
 	 * @generated
 	 */
-	int RESULT_TYPE = 19;
+	int RESULT_TYPE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1157,7 +1285,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getConsumeType()
 	 * @generated
 	 */
-	int CONSUME_TYPE = 20;
+	int CONSUME_TYPE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1212,7 +1340,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getFieldValue()
 	 * @generated
 	 */
-	int FIELD_VALUE = 21;
+	int FIELD_VALUE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1267,7 +1395,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeAPI()
 	 * @generated
 	 */
-	int TYPE_API = 22;
+	int TYPE_API = 24;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1322,7 +1450,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getOtherModifier()
 	 * @generated
 	 */
-	int OTHER_MODIFIER = 23;
+	int OTHER_MODIFIER = 25;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1377,7 +1505,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementReference()
 	 * @generated
 	 */
-	int ELEMENT_REFERENCE = 24;
+	int ELEMENT_REFERENCE = 26;
 
 	/**
 	 * The feature id for the '<em><b>EObject</b></em>' attribute.
@@ -1441,7 +1569,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveRestriction()
 	 * @generated
 	 */
-	int REMOVE_RESTRICTION = 26;
+	int REMOVE_RESTRICTION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1487,7 +1615,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddRestriction()
 	 * @generated
 	 */
-	int ADD_RESTRICTION = 27;
+	int ADD_RESTRICTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1533,7 +1661,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 28;
+	int PARAMETER_TYPE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1606,7 +1734,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementDefinition()
 	 * @generated
 	 */
-	int ELEMENT_DEFINITION = 29;
+	int ELEMENT_DEFINITION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Schema Name</b></em>' attribute.
@@ -1652,7 +1780,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReturnType()
 	 * @generated
 	 */
-	int RETURN_TYPE = 30;
+	int RETURN_TYPE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1725,7 +1853,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAPIElementType()
 	 * @generated
 	 */
-	int API_ELEMENT_TYPE = 31;
+	int API_ELEMENT_TYPE = 33;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ParameterLocation <em>Parameter Location</em>}' enum.
@@ -1735,7 +1863,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterLocation()
 	 * @generated
 	 */
-	int PARAMETER_LOCATION = 32;
+	int PARAMETER_LOCATION = 34;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ElementType <em>Element Type</em>}' enum.
@@ -1745,7 +1873,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 33;
+	int ELEMENT_TYPE = 35;
 
 
 	/**
@@ -1885,6 +2013,26 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRelocateParameter_OldLocation();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne <em>Multiple Parameters In One</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiple Parameters In One</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne
+	 * @generated
+	 */
+	EClass getMultipleParametersInOne();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.SameParameter <em>Same Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Same Parameter</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.SameParameter
+	 * @generated
+	 */
+	EClass getSameParameter();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters <em>Reorder Type Parameters</em>}'.
@@ -2458,6 +2606,26 @@ public interface diffPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RELOCATE_PARAMETER__OLD_LOCATION = eINSTANCE.getRelocateParameter_OldLocation();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MultipleParametersInOneImpl <em>Multiple Parameters In One</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.MultipleParametersInOneImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMultipleParametersInOne()
+		 * @generated
+		 */
+		EClass MULTIPLE_PARAMETERS_IN_ONE = eINSTANCE.getMultipleParametersInOne();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SameParameterImpl <em>Same Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.SameParameterImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSameParameter()
+		 * @generated
+		 */
+		EClass SAME_PARAMETER = eINSTANCE.getSameParameter();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl <em>Reorder Type Parameters</em>}' class.

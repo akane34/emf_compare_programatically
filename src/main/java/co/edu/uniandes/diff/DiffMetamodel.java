@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeContentType;
 import co.edu.uniandes.changes.ChangeParameter;
+import co.edu.uniandes.changes.ChangePath;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.diff.metamodel.diff.*;
@@ -171,7 +172,7 @@ public class DiffMetamodel {
 		changes.add(returnType);
 	}
 	
-	public void createDeleteMethodInstance(ChangeOperation operation, List<Change> changes){
+	public void createUnsupportRequestMethodInstance(ChangeOperation operation, List<Change> changes){
 		ElementReference oldElementReference = diffFactoryI.createElementReference();
 		oldElementReference.setEObject(operation.getOldOperationUri());
 		oldElementReference.setValue(operation.getOldOperation().getFullPath());		
@@ -196,7 +197,41 @@ public class DiffMetamodel {
 		
 	}
 	
-	public void createRelocateParameterInstance(ChangeParameter newParameter, List<ChangeParameter> oldParameters, List<Change> changes){		
+	public void createRelocateSameParameterInstance(ChangeParameter parameter, List<Change> changes){		
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(parameter.getOldParameterUri());
+		oldElementReference.setValue(parameter.getOldParameter().getName());		
+		oldElementReference.setPath(parameter.getPath());
+		
+		Delete delete = diffFactoryI.createDelete();
+		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
+		delete.setOld(oldElementReference);
+		
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(parameter.getNewParameterUri());
+		newElementReference.setValue(parameter.getNewParameter().getName());		
+		newElementReference.setPath(parameter.getPath());
+		
+		Add add = diffFactoryI.createAdd();	
+		add.setChangeElement(APIElementType.METHOD_PARAMETER);
+		add.setNew(newElementReference);		
+				
+		ParameterLocation oldLocationP = ParameterLocation.getByName(parameter.getOldParameter().getLocation().getName().toLowerCase());
+		ParameterLocation newLocationP = ParameterLocation.getByName(parameter.getNewParameter().getLocation().getName().toLowerCase());
+		
+		SameParameter relocate = diffFactoryI.createSameParameter();
+		relocate.setChangeElement(APIElementType.METHOD_PARAMETER);
+		relocate.setNewLocation(newLocationP);
+		relocate.setOldLocation(oldLocationP);		
+		relocate.getSimpleDiffs().add(add);		
+		relocate.getSimpleDiffs().add(delete);	
+			
+		changes.add(delete);		
+		changes.add(add);
+		changes.add(relocate);        
+	}
+	
+	public void createRelocateMultipleParametersInOneParameterInstance(ChangeParameter newParameter, List<ChangeParameter> oldParameters, List<Change> changes){		
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(newParameter.getNewParameterUri());
 		newElementReference.setValue(newParameter.getNewParameter().getName());		
@@ -209,7 +244,7 @@ public class DiffMetamodel {
 		ParameterLocation oldLocationP = ParameterLocation.getByName(oldParameters.get(0).getNewParameter().getLocation().getName().toLowerCase());
 		ParameterLocation newLocationP = ParameterLocation.getByName(newParameter.getNewParameter().getLocation().getName().toLowerCase());
 		
-		RelocateParameter relocate = diffFactoryI.createRelocateParameter();
+		MultipleParametersInOne relocate = diffFactoryI.createMultipleParametersInOne();
 		relocate.setChangeElement(APIElementType.METHOD_PARAMETER);
 		relocate.setNewLocation(newLocationP);
 		relocate.setOldLocation(oldLocationP);		
@@ -394,6 +429,19 @@ public class DiffMetamodel {
 		}
 		changes.add(consumeType);
 		
+	}
+	
+	public void createDeletedPathInstance(ChangePath path, List<Change> changes){
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(path.getOldPathUri());
+		oldElementReference.setValue(path.getOldPath().getRelativePath());		
+		oldElementReference.setPath(path.getPath());
+
+		Delete delete = diffFactoryI.createDelete();
+		delete.setChangeElement(APIElementType.INTERFACE);
+		delete.setOld(oldElementReference);
+						
+		changes.add(delete);      
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/

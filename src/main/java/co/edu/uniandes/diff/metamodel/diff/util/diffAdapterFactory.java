@@ -88,6 +88,14 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createRelocateParameterAdapter();
 			}
 			@Override
+			public Adapter caseMultipleParametersInOne(MultipleParametersInOne object) {
+				return createMultipleParametersInOneAdapter();
+			}
+			@Override
+			public Adapter caseSameParameter(SameParameter object) {
+				return createSameParameterAdapter();
+			}
+			@Override
 			public Adapter caseReorderTypeParameters(ReorderTypeParameters object) {
 				return createReorderTypeParametersAdapter();
 			}
@@ -278,6 +286,34 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRelocateParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne <em>Multiple Parameters In One</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne
+	 * @generated
+	 */
+	public Adapter createMultipleParametersInOneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.SameParameter <em>Same Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.SameParameter
+	 * @generated
+	 */
+	public Adapter createSameParameterAdapter() {
 		return null;
 	}
 

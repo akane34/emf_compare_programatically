@@ -14,6 +14,7 @@ import org.eclipse.emf.compare.ReferenceChange;
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
 import co.edu.uniandes.changes.ChangeContentType;
 import co.edu.uniandes.changes.ChangeParameter;
+import co.edu.uniandes.changes.ChangePath;
 import co.edu.uniandes.changes.ChangeResponse;
 import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.changes.ChangesProcessor;
@@ -46,6 +47,7 @@ public class Main {
 		List<ChangeSchema> schemasUpdated = new ArrayList<ChangeSchema>();
 		List<ChangeContentType> contentTypesUpdated = new ArrayList<ChangeContentType>();
 		List<ChangeOperation> deleteOperations = new ArrayList<ChangeOperation>();
+		List<ChangePath> deletePaths = new ArrayList<ChangePath>();
 		
 		for (Diff diff : diffs){			
 			if (diff instanceof ReferenceChange){								
@@ -55,7 +57,8 @@ public class Main {
 				ChangesProcessor.getDeletedResponse(deleteResponse, diff, oldVersion);				
 				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
 				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
-				ChangesProcessor.getDeletedOperations(deleteOperations, diff, newVersion);								
+				ChangesProcessor.getDeletedOperations(deleteOperations, diff, newVersion);		
+				ChangesProcessor.getDeletedPaths(deletePaths, diff, oldVersion, newVersion);
 			}else if (diff instanceof AttributeChange) {
 				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
@@ -63,7 +66,8 @@ public class Main {
 			}			
 		}
 		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
-		ChangesProcessor.processRelocateParameter(diffMetamodel, changeParameters, operations, diff.getChange());
+		ChangesProcessor.processRelocateSameParameter(diffMetamodel, changeParameters, diff.getChange());
+		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffMetamodel, changeParameters, operations, diff.getChange());
 		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
 		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
@@ -74,7 +78,7 @@ public class Main {
 		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
 		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
 		ChangesProcessor.processContentTypesUpdaes(diffMetamodel,contentTypesUpdated, diff.getChange());
-		ChangesProcessor.processDeleteMethods(diffMetamodel, deleteOperations, diff.getChange());
+		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
 		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());		
 		
 		diffMetamodel.saveInstance();

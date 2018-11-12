@@ -62,6 +62,8 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 			case diffPackage.CHANGE: return createChange();
 			case diffPackage.MOVE_DOWN_IN_HIERARCHY: return createMoveDownInHierarchy();
 			case diffPackage.RELOCATE_PARAMETER: return createRelocateParameter();
+			case diffPackage.MULTIPLE_PARAMETERS_IN_ONE: return createMultipleParametersInOne();
+			case diffPackage.SAME_PARAMETER: return createSameParameter();
 			case diffPackage.REORDER_TYPE_PARAMETERS: return createReorderTypeParameters();
 			case diffPackage.CONTRACT_SUPER_SET: return createContractSuperSet();
 			case diffPackage.MOVE_UP_IN_HIERARCHY: return createMoveUpInHierarchy();
@@ -179,6 +181,26 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	public RelocateParameter createRelocateParameter() {
 		RelocateParameterImpl relocateParameter = new RelocateParameterImpl();
 		return relocateParameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultipleParametersInOne createMultipleParametersInOne() {
+		MultipleParametersInOneImpl multipleParametersInOne = new MultipleParametersInOneImpl();
+		return multipleParametersInOne;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SameParameter createSameParameter() {
+		SameParameterImpl sameParameter = new SameParameterImpl();
+		return sameParameter;
 	}
 
 	/**

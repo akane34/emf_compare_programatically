@@ -67,6 +67,24 @@ public interface diffFactory extends EFactory {
 	RelocateParameter createRelocateParameter();
 
 	/**
+	 * Returns a new object of class '<em>Multiple Parameters In One</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiple Parameters In One</em>'.
+	 * @generated
+	 */
+	MultipleParametersInOne createMultipleParametersInOne();
+
+	/**
+	 * Returns a new object of class '<em>Same Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Same Parameter</em>'.
+	 * @generated
+	 */
+	SameParameter createSameParameter();
+
+	/**
 	 * Returns a new object of class '<em>Reorder Type Parameters</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

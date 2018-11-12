@@ -22,6 +22,7 @@ import co.edu.uniandes.diff.metamodel.diff.LowerBondary;
 import co.edu.uniandes.diff.metamodel.diff.Modify;
 import co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy;
 import co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy;
+import co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne;
 import co.edu.uniandes.diff.metamodel.diff.OtherModifier;
 import co.edu.uniandes.diff.metamodel.diff.ParameterLocation;
 import co.edu.uniandes.diff.metamodel.diff.ParameterType;
@@ -32,6 +33,7 @@ import co.edu.uniandes.diff.metamodel.diff.Rename;
 import co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters;
 import co.edu.uniandes.diff.metamodel.diff.ResultType;
 import co.edu.uniandes.diff.metamodel.diff.ReturnType;
+import co.edu.uniandes.diff.metamodel.diff.SameParameter;
 import co.edu.uniandes.diff.metamodel.diff.Simple;
 import co.edu.uniandes.diff.metamodel.diff.TypeAPI;
 import co.edu.uniandes.diff.metamodel.diff.TypeBound;
@@ -88,6 +90,20 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * @generated
 	 */
 	private EClass relocateParameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multipleParametersInOneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sameParameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -468,6 +484,24 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 */
 	public EAttribute getRelocateParameter_OldLocation() {
 		return (EAttribute)relocateParameterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultipleParametersInOne() {
+		return multipleParametersInOneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSameParameter() {
+		return sameParameterEClass;
 	}
 
 	/**
@@ -894,6 +928,10 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		createEAttribute(relocateParameterEClass, RELOCATE_PARAMETER__NEW_LOCATION);
 		createEAttribute(relocateParameterEClass, RELOCATE_PARAMETER__OLD_LOCATION);
 
+		multipleParametersInOneEClass = createEClass(MULTIPLE_PARAMETERS_IN_ONE);
+
+		sameParameterEClass = createEClass(SAME_PARAMETER);
+
 		reorderTypeParametersEClass = createEClass(REORDER_TYPE_PARAMETERS);
 
 		contractSuperSetEClass = createEClass(CONTRACT_SUPER_SET);
@@ -995,6 +1033,8 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		// Add supertypes to classes
 		moveDownInHierarchyEClass.getESuperTypes().add(this.getComplex());
 		relocateParameterEClass.getESuperTypes().add(this.getComplex());
+		multipleParametersInOneEClass.getESuperTypes().add(this.getRelocateParameter());
+		sameParameterEClass.getESuperTypes().add(this.getRelocateParameter());
 		reorderTypeParametersEClass.getESuperTypes().add(this.getComplex());
 		contractSuperSetEClass.getESuperTypes().add(this.getComplex());
 		moveUpInHierarchyEClass.getESuperTypes().add(this.getComplex());
@@ -1038,6 +1078,10 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		initEClass(relocateParameterEClass, RelocateParameter.class, "RelocateParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelocateParameter_NewLocation(), this.getParameterLocation(), "newLocation", null, 0, 1, RelocateParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelocateParameter_OldLocation(), this.getParameterLocation(), "oldLocation", null, 0, 1, RelocateParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multipleParametersInOneEClass, MultipleParametersInOne.class, "MultipleParametersInOne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sameParameterEClass, SameParameter.class, "SameParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(reorderTypeParametersEClass, ReorderTypeParameters.class, "ReorderTypeParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -29,62 +29,57 @@ public class ChangesProcessor {
 
 	/************************************ PROCESS METHODS ************************************************************/
 
-	public static void processRelocateParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
-		System.out.println("-------------------- processRelocateParameter");
+	public static void processRelocateSameParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+		System.out.println("-------------------- processRelocateSameParameter");
 		for (ChangeParameter p : changeParameters){			
 			if (p.getOldParameter() != null &&
 				p.getNewParameter() != null &&
 				!p.getNewParameter().getLocation().equals(p.getOldParameter().getLocation())){
 				
-				ChangeParameter oldParameter = new ChangeParameter();
-				oldParameter.clone(p);
-				oldParameter.setNewParameter(p.getOldParameter());
-				oldParameter.setOldParameter(p.getNewParameter());
-				
-				List<ChangeParameter> oldParameters = new ArrayList<ChangeParameter>();
-				oldParameters.add(oldParameter);
-				
 				System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " added");
 				System.out.println(p.getPath() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
 				System.out.println("\n ");
 				
-				diffMetamodel.createRelocateParameterInstance(p, oldParameters, changes);
+				diffMetamodel.createRelocateSameParameterInstance(p, changes);
 			}
-		}	
-		
+		}		
+	}
+	
+	public static void processRelocateMultipleParametersInOneParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
+		System.out.println("-------------------- processRelocateMultipleParametersInOneParameter");		
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
 		{			
-			int countDeleted = 0;
+			int countAdded = 0;
 			ChangeParameter newParameter = null;
-			List<ChangeParameter> oldParameters = new ArrayList<ChangeParameter>();
+			List<ChangeParameter> deletedParameters = new ArrayList<ChangeParameter>();
 			String locationAdd = "";
 			String locationDelete = "";
 		    for (ChangeParameter p : entry.getValue()){
-		    	if (p.getDifferenceKind() == DifferenceKind.ADD){		    		
+		    	if (p.getDifferenceKind() == DifferenceKind.DELETE){		    		
 		    		if (locationAdd.equals(""))
 		    			locationAdd = p.getNewParameter().getLocation().getName();
 		    		else if (!locationAdd.equals(p.getNewParameter().getLocation().getName())){		    			
-		    			oldParameters = new ArrayList<ChangeParameter>();
+		    			deletedParameters = new ArrayList<ChangeParameter>();
 		    			break;
 		    		}
 		    		
-		    		oldParameters.add(p);
+		    		deletedParameters.add(p);
 		    	}		    	
-		    	else if (p.getDifferenceKind() == DifferenceKind.DELETE){
-		    		countDeleted++;
+		    	else if (p.getDifferenceKind() == DifferenceKind.ADD){
+		    		countAdded++;
 		    		newParameter = p;
 		    		locationDelete = p.getNewParameter().getLocation().getName();
 		    	}		    	
 		    }
 		    
-		    if (oldParameters.size() >= 2 && countDeleted == 1 && !locationAdd.equals(locationDelete)){
+		    if (deletedParameters.size() >= 2 && countAdded == 1 && !locationAdd.equals(locationDelete)){
 		    	System.out.println(newParameter.getPath() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newParameter.getNewParameter().getLocation() + " added");
-		    	for (ChangeParameter p : oldParameters){
+		    	for (ChangeParameter p : deletedParameters){
 		    		System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " deleted");
 		    	}
 				System.out.println("\n ");
 				
-    			diffMetamodel.createRelocateParameterInstance(newParameter, oldParameters, changes);
+    			diffMetamodel.createRelocateMultipleParametersInOneParameterInstance(newParameter, deletedParameters, changes);
     		}
 		}	
 	}
@@ -254,13 +249,13 @@ public class ChangesProcessor {
 		}		
 	}
 	
-	public static void processDeleteMethods(DiffMetamodel diffMetamodel, List<ChangeOperation> deleteOperations, List<Change> changes) {
-		System.out.println("-------------------- processDeleteMethods");
+	public static void processUnsupportRequestMethods(DiffMetamodel diffMetamodel, List<ChangeOperation> deleteOperations, List<Change> changes) {
+		System.out.println("-------------------- processUnsupportRequestMethods");
 		for (ChangeOperation co : deleteOperations){						
-			System.out.println(co.getPath() + "  v2:" + co.getOldOperation().getDescription() + " deleted");			
+			System.out.println(co.getPath() + "  v2:" + co.getOldOperation().getDescription() + " unsupported");			
 			System.out.println("\n ");
 						
-			diffMetamodel.createDeleteMethodInstance(co, changes);			
+			diffMetamodel.createUnsupportRequestMethodInstance(co, changes);			
 		}
 	}
 	
@@ -287,11 +282,22 @@ public class ChangesProcessor {
 			}
 		}			
 	}	
+	
+	public static void processDeletePaths(DiffMetamodel diffMetamodel, List<ChangePath> deletePaths, List<Change> changes) {
+		System.out.println("-------------------- processDeletePaths");
+		
+		for (ChangePath path : deletePaths){
+			System.out.println(path.getPath() + "  deleted");			
+			System.out.println("\n ");
+			
+			diffMetamodel.createDeletedPathInstance(path, changes);			
+		}
+	}
 
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {		
-		if (((ReferenceChange)diff).getValue() instanceof ParameterImpl && diff.getKind() == DifferenceKind.ADD){
+		if (((ReferenceChange)diff).getValue() instanceof ParameterImpl && diff.getKind() == DifferenceKind.DELETE){
 			ParameterImpl parameter = (ParameterImpl)((ReferenceChange)diff).getValue();
 			
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
@@ -336,7 +342,7 @@ public class ChangesProcessor {
 	}
 
 	public static void getDeletedParameters(List<ChangeParameter> deleteParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String oldVersion) {
-		if (((ReferenceChange)diff).getValue() instanceof ParameterImpl && diff.getKind() == DifferenceKind.DELETE){
+		if (((ReferenceChange)diff).getValue() instanceof ParameterImpl && diff.getKind() == DifferenceKind.ADD){
 			ParameterImpl parameter = (ParameterImpl)((ReferenceChange)diff).getValue();
 			
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
@@ -413,7 +419,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void getAddedResponse(List<ChangeResponse> addResponses, Diff diff, String newVersion) {		
-		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
+		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.DELETE){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
 			
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
@@ -433,7 +439,7 @@ public class ChangesProcessor {
 	}	
 	
 	public static void getDeletedResponse(List<ChangeResponse> deleteResponse, Diff diff, String oldVersion) {
-		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.DELETE){
+		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
 			
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
@@ -496,6 +502,23 @@ public class ChangesProcessor {
 		 }
 		}
 	}
+	
+	public static void getDeletedPaths(List<ChangePath> deletePaths, Diff diff, String oldVersion, String newVersion) {
+		if (((ReferenceChange)diff).getValue() instanceof PathImpl && diff.getKind() == DifferenceKind.ADD){
+			PathImpl oldPath = (PathImpl)((ReferenceChange)diff).getValue();
+							
+			ChangePath path = new ChangePath();			
+			path.setVersion(newVersion);
+			path.setDifferenceKind(DifferenceKind.DELETE);
+			path.setPath(oldPath.getRelativePath());				
+			path.setOldPathUri(EcoreUtil.getURI(oldPath).toString());
+			path.setNewPath(null);
+			path.setNewPathUri(null);
+		
+			deletePaths.add(path);			
+		}
+	}
+	
 	/************************************ PRIVATE METHODS ************************************************************/
 	
 	private static void addOperations(Map<String, List<ChangeParameter>> operations, PathImpl path,
