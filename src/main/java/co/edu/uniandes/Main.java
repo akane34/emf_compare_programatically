@@ -20,6 +20,7 @@ import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.changes.ChangesProcessor;
 import co.edu.uniandes.comparer.Comparer;
 import co.edu.uniandes.diff.DiffMetamodel;
+import co.edu.uniandes.diff.metamodel.diff.Change;
 import co.edu.uniandes.changes.ChangeOperation;
 
 public class Main {
@@ -48,6 +49,7 @@ public class Main {
 		List<ChangeContentType> contentTypesUpdated = new ArrayList<ChangeContentType>();
 		List<ChangeOperation> deleteOperations = new ArrayList<ChangeOperation>();
 		List<ChangePath> deletePaths = new ArrayList<ChangePath>();
+		List<ChangeOperation> changeOperations = new ArrayList<ChangeOperation>();
 		
 		for (Diff diff : diffs){			
 			if (diff instanceof ReferenceChange){								
@@ -59,6 +61,7 @@ public class Main {
 				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
 				ChangesProcessor.getDeletedOperations(deleteOperations, diff, newVersion);		
 				ChangesProcessor.getDeletedPaths(deletePaths, diff, oldVersion, newVersion);
+				ChangesProcessor.getChangedOperations(changeOperations, diff, oldVersion, newVersion);
 			}else if (diff instanceof AttributeChange) {
 				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
@@ -68,7 +71,7 @@ public class Main {
 		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
 		ChangesProcessor.processRelocateSameParameter(diffMetamodel, changeParameters, diff.getChange());
 		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffMetamodel, changeParameters, operations, diff.getChange());
-		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
+		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, changeParameters, diff.getChange());
 		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
@@ -79,7 +82,8 @@ public class Main {
 		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
 		ChangesProcessor.processContentTypesUpdaes(diffMetamodel,contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
-		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());		
+		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());
+		ChangesProcessor.processExposeData(diffMetamodel, contentTypesUpdated, diff.getChange());
 		
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");

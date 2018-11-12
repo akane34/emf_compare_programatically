@@ -135,7 +135,7 @@ public class DiffMetamodel {
 		
 	}
 	
-	public void createExposeDataInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
+	public void createExposeDataInstance(List<ChangeContentType> deleted, List<ChangeContentType> added, List<Change> changes){
 		
 	}
 		
@@ -442,6 +442,23 @@ public class DiffMetamodel {
 		delete.setOld(oldElementReference);
 						
 		changes.add(delete);      
+	}
+
+	public void createModifyParameterSchemaTypeInstance(ChangeParameter parameter, List<Change> changes){
+		ElementReference oldElementReference = diffFactoryI.createElementReference();				
+		oldElementReference.setEObject(parameter.getOldParameterUri());
+		oldElementReference.setValue(parameter.getOldParameter().getSchema().getName());
+		
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(parameter.getNewParameterUri());
+		newElementReference.setValue(parameter.getNewParameter().getSchema().getName());
+
+		DefaultValue defaultValue = diffFactoryI.createDefaultValue();		
+		defaultValue.setChangeElement(APIElementType.METHOD_PARAMETER);
+		defaultValue.setOld(oldElementReference);
+		defaultValue.setNew(newElementReference);
+								
+		changes.add(defaultValue);
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/

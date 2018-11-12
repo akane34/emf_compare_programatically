@@ -1,6 +1,7 @@
 package co.edu.uniandes.changes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ import co.edu.uniandes.diff.DiffMetamodel;
 import co.edu.uniandes.diff.metamodel.diff.Change;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
+import edu.uoc.som.openapi.Response;
 import edu.uoc.som.openapi.Schema;
 import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;
@@ -85,7 +87,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void processChangeTypeParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> deleteParameters,
-			List<ChangeParameter> addParameters, List<Change> changes) {
+			List<ChangeParameter> addParameters, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- processChangeTypeParameter");
 		for (ChangeParameter dp : deleteParameters){
 			for (ChangeParameter ap : addParameters){
@@ -97,6 +99,35 @@ public class ChangesProcessor {
 						
 						diffMetamodel.createChangeTypeOfParameterInstance(dp, ap, changes);
 					}
+				}
+			}
+		}
+		
+		for (ChangeParameter p : changeParameters){
+			if (p.getOldParameter() != null &&	p.getNewParameter() != null){
+				String oldSchema = p.getOldParameter().getSchema() != null ? p.getOldParameter().getSchema().getName() : null;
+				String newSchema = p.getNewParameter().getSchema() != null ? p.getNewParameter().getSchema().getName() : null;				
+				
+				if (newSchema == null && oldSchema == null)
+					continue;
+				
+				if ((isNullOrEmpty(newSchema) && !isNullOrEmpty(oldSchema)) ||
+					(!isNullOrEmpty(newSchema) && isNullOrEmpty(oldSchema)) ||
+					(!newSchema.equals(oldSchema))){
+				
+					ChangeParameter oldParameter = new ChangeParameter();
+					oldParameter.clone(p);
+					oldParameter.setNewParameter(p.getOldParameter());
+					
+					ChangeParameter newParameter = new ChangeParameter();
+					newParameter.clone(p);
+					newParameter.setNewParameter(p.getNewParameter());
+					
+					System.out.println(oldParameter.getPath() + "  p:" + oldParameter.getNewParameter().getName() + " 1:" + oldSchema);
+					System.out.println(newParameter.getPath() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newSchema);
+					System.out.println("\n ");
+					
+					diffMetamodel.createChangeTypeOfParameterInstance(oldParameter, newParameter, changes);
 				}
 			}
 		}
@@ -294,6 +325,67 @@ public class ChangesProcessor {
 		}
 	}
 
+	public static void processModifyParameterSchemaType(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+		System.out.println("-------------------- processModifyParameterSchemaType");		
+		for (ChangeParameter p : changeParameters){
+			if (p.getOldParameter() != null &&	p.getNewParameter() != null){
+				String oldSchema = p.getOldParameter().getSchema() != null ? p.getOldParameter().getSchema().getName() : null;
+				String newSchema = p.getNewParameter().getSchema() != null ? p.getNewParameter().getSchema().getName() : null;				
+				
+				if (newSchema == null && oldSchema == null)
+					continue;
+				
+				if ((isNullOrEmpty(newSchema) && !isNullOrEmpty(oldSchema)) ||
+					(!isNullOrEmpty(newSchema) && isNullOrEmpty(oldSchema)) ||
+					(!newSchema.equals(oldSchema))){
+				
+					System.out.println(p.getPath() + "  v1 schema:" + oldSchema);
+					System.out.println(p.getPath() + "  v2 schema:" + newSchema);
+					System.out.println("\n ");
+					
+					diffMetamodel.createModifyParameterSchemaTypeInstance(p, changes);
+				}
+			}
+		}			
+	}
+	
+	public static void processExposeData(DiffMetamodel diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
+		System.out.println("-------------------- processExposeData");	
+		
+		Map<String, List<ChangeContentType>> operations = new HashMap<String, List<ChangeContentType>>();
+		for (ChangeContentType content : contentTypesUpdated){
+			if ("produces".equals(content.getAttr().getName())){
+				List<ChangeContentType> contentType = operations.get(content.getPath());
+				if (contentType == null)
+					contentType = new ArrayList<ChangeContentType>();										
+				
+				contentType.add(content);
+				operations.put(content.getPath(), contentType);	
+			}
+		}		
+		
+		if (operations.size() > 0){
+			List<ChangeContentType> deleted = new ArrayList<ChangeContentType>();
+			List<ChangeContentType> added = new ArrayList<ChangeContentType>();
+			for (Map.Entry<String, List<ChangeContentType>> entry : operations.entrySet())
+			{			
+			    for (ChangeContentType p : entry.getValue()){
+			    	if (p.getKind() == DifferenceKind.DELETE){		
+			    		added.add(p);
+			    		System.out.println(entry.getKey() + " " + p.getValue() + " Added");		    		
+			    	}
+			    	if (p.getKind() == DifferenceKind.ADD){		    
+			    		deleted.add(p);
+			    		System.out.println(entry.getKey() + " " + p.getValue() + " Deleted");		    		
+			    	}		    	
+			    }
+			}
+			
+			diffMetamodel.createExposeDataInstance(deleted, added, changes);
+			System.out.println("\n ");
+		}
+	}	
+	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {		
@@ -389,6 +481,28 @@ public class ChangesProcessor {
 		}
 	}
 	
+	public static void getChangedOperations(List<ChangeOperation> changeOperations, Diff diff, String oldVersion, String newVersion) {
+		if (diff.getKind() == DifferenceKind.CHANGE){			
+			if (diff.getMatch().getRight() != null && diff.getMatch().getRight() instanceof OperationImpl){						
+				Operation oldOperation = (Operation)diff.getMatch().getLeft();
+				Operation newOperation = (Operation)diff.getMatch().getRight();
+				
+				ChangeOperation operation = new ChangeOperation();
+				operation.setOldOperation(oldOperation);
+				operation.setNewOperation(newOperation);
+				operation.setVersion(newVersion);
+				operation.setDifferenceKind(DifferenceKind.CHANGE);
+				operation.setPath(null);				
+				operation.setNewOperationUri(EcoreUtil.getURI(newOperation).toString());
+				
+				if (oldOperation != null)
+					operation.setOldOperationUri(EcoreUtil.getURI(oldOperation).toString());
+				
+				changeOperations.add(operation);						
+			}			
+		}
+	}
+	
 	public static void getChangeBoundaryParameters(List<ChangeBoundaryParameter> changesBoundaryParameters,  Diff diff) {
 		EAttributeImpl att = null;
 		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && diff.getKind() == DifferenceKind.CHANGE){
@@ -411,11 +525,8 @@ public class ChangesProcessor {
 			else if(att.getName().equals("minimum")) {
 				changeBoundaryParam.setBoundary(Boundary.LOWER);
 				changesBoundaryParameters.add(changeBoundaryParam);
-			}
-			
-			
-		}
-		
+			}			
+		}		
 	}
 	
 	public static void getAddedResponse(List<ChangeResponse> addResponses, Diff diff, String newVersion) {		
@@ -496,8 +607,7 @@ public class ChangesProcessor {
 					change.setKind(diff.getKind());
 					change.setValue(((AttributeChange)diff).getValue().toString());
 					contentTypesUpdated.add(change);
-				 }
-					 
+				 }					 
 			 }
 		 }
 		}
@@ -517,7 +627,8 @@ public class ChangesProcessor {
 		
 			deletePaths.add(path);			
 		}
-	}
+	}				
+		
 	
 	/************************************ PRIVATE METHODS ************************************************************/
 	

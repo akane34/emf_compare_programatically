@@ -445,6 +445,7 @@
           description="save tenant"
           responses="//@responses.49">
         <tagReferences>tenant</tagReferences>
+        <consumes>application/json</consumes>
         <produces>application/json</produces>
       </post>
     </paths>

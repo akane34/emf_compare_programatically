@@ -1033,6 +1033,7 @@
           description="save tenant"
           responses="//@responses.121">
         <tagReferences>tenant</tagReferences>
+        <consumes>application/xml</consumes>
         <produces>application/json</produces>
       </post>
     </paths>
@@ -1069,7 +1070,7 @@
           description="save user"
           responses="//@responses.125">
         <tagReferences>user</tagReferences>
-        <produces>application/json</produces>
+        <produces>application/xml</produces>
       </post>
     </paths>
     <paths relativePath="/user/sendActivationMail">
@@ -2885,7 +2886,7 @@
       declaringContext="//@api"/>
   <schemas type="object"
       name="Customer"
-      properties="//@schemas.126 //@schemas.127"
+      properties="//@schemas.126 //@schemas.9"
       declaringContext="//@api"/>
   <schemas type="object"
       name="TextPageLink"
@@ -2959,7 +2960,7 @@
       declaringContext="//@api"/>
   <schemas type="object"
       name="Event"
-      properties="//@schemas.167 //@schemas.168 //@schemas.169 //@schemas.170 //@schemas.171"
+      properties="//@schemas.167 //@schemas.168 //@schemas.170 //@schemas.171"
       declaringContext="//@api"/>
   <schemas type="object"
       name="DeferredResult"
