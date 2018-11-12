@@ -75,6 +75,7 @@ public class Main {
 		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
 		ChangesProcessor.processContentTypesUpdaes(diffMetamodel,contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processDeleteMethods(diffMetamodel, deleteOperations, diff.getChange());
+		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());		
 		
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");

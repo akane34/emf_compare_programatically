@@ -228,8 +228,21 @@ public class DiffMetamodel {
 		changes.add(relocate);        
 	}
 	
-	public void createChangeDefaultValueOfParameterInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
+	public void createChangeDefaultValueOfParameterInstance(ChangeParameter parameter, List<Change> changes){
+		ElementReference oldElementReference = diffFactoryI.createElementReference();				
+		oldElementReference.setEObject(parameter.getOldParameterUri());
+		oldElementReference.setValue(parameter.getOldParameter().getDefault());
 		
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(parameter.getNewParameterUri());
+		newElementReference.setValue(parameter.getNewParameter().getDefault());
+
+		DefaultValue defaultValue = diffFactoryI.createDefaultValue();		
+		defaultValue.setChangeElement(APIElementType.METHOD_PARAMETER);
+		defaultValue.setOld(oldElementReference);
+		defaultValue.setNew(newElementReference);
+								
+		changes.add(defaultValue);
 	}
 	
 	public void createRestricAccessToAPIInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
@@ -351,6 +364,8 @@ public class DiffMetamodel {
 		case DELETE:
 			resultType.setOld(elementReference);
 			break;
+		default:
+			break;
 		}
 		changes.add(resultType);
 	}
@@ -368,6 +383,8 @@ public class DiffMetamodel {
 			break;
 		case DELETE:
 			consumeType.setOld(elementReference);
+			break;
+		default:
 			break;
 		}
 		changes.add(consumeType);

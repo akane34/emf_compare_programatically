@@ -1238,6 +1238,7 @@
   <paramters
       schema="//@schemas.0"
       description="the setting to add"
+      default="myDefault"
       name="adminSetting"
       location="body"/>
   <paramters

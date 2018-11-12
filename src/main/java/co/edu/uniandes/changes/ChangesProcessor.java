@@ -221,6 +221,30 @@ public class ChangesProcessor {
 			diffMetamodel.createDeleteMethodInstance(co, changes);			
 		}
 	}
+	
+	public static void processChangeDefaultValueOfParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+		System.out.println("-------------------- processChangeDefaultValueOfParameter");		
+		for (ChangeParameter p : changeParameters){
+			if (p.getOldParameter() != null &&	p.getNewParameter() != null){				
+				String newDefault = p.getNewParameter().getDefault();
+				String oldDefault = p.getOldParameter().getDefault();
+				
+				if (newDefault == null && oldDefault == null)
+					continue;
+				
+				if ((isNullOrEmpty(newDefault) && !isNullOrEmpty(oldDefault)) ||
+					(!isNullOrEmpty(newDefault) && isNullOrEmpty(oldDefault)) ||
+					(!newDefault.equals(oldDefault))){
+				
+					System.out.println(p.getPath() + "  p:" + p.getOldParameter().getDefault() + " 1:" + p.getOldParameter().getLocation());
+					System.out.println(p.getPath() + "  p:" + p.getNewParameter().getDefault() + " 2:" + p.getNewParameter().getLocation());
+					System.out.println("\n ");
+					
+					diffMetamodel.createChangeDefaultValueOfParameterInstance(p, changes);
+				}
+			}
+		}			
+	}	
 
 	/************************************ GET METHODS ************************************************************/
 	
@@ -490,4 +514,7 @@ public class ChangesProcessor {
 		}
 	}
 
+	private static boolean isNullOrEmpty(String value){
+		return value == null || value.trim().isEmpty();
+	}
 }
