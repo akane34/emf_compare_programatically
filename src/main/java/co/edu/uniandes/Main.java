@@ -63,7 +63,7 @@ public class Main {
 			}			
 		}
 		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
-		ChangesProcessor.processRelocateParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
+		ChangesProcessor.processRelocateParameter(diffMetamodel, changeParameters, operations, diff.getChange());
 		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, diff.getChange());
 		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());

@@ -64,5 +64,16 @@ public class ChangeParameter {
 	public void setOldParameterUri(String oldParameterUri) {
 		this.oldParameterUri = oldParameterUri;
 	}	
+	
+	public void clone(ChangeParameter p){
+		this.oldParameter = p.getOldParameter();
+		this.newParameter = p.getNewParameter();	
+		this.operation = p.getOperation();
+		this.path = p.getPath();
+		this.version = p.getVersion();
+		this.differenceKind = p.getDifferenceKind();
+		this.oldParameterUri = p.getOldParameterUri();	
+		this.newParameterUri = p.getNewParameterUri();
+	}
 }
 

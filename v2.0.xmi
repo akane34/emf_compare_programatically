@@ -1594,7 +1594,7 @@
   <paramters
       type="string"
       name="resetToken"
-      location="query"/>
+      location="body"/>
   <paramters
       schema="//@schemas.214"
       name="resetPasswordRequest"

@@ -28,23 +28,65 @@ import edu.uoc.som.openapi.impl.ResponseImpl;
 public class ChangesProcessor {
 
 	/************************************ PROCESS METHODS ************************************************************/
-	
-	public static void processRelocateParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> deleteParameters,
-			List<ChangeParameter> addParameters, List<Change> changes) {
+
+	public static void processRelocateParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
 		System.out.println("-------------------- processRelocateParameter");
-		for (ChangeParameter dp : deleteParameters){
-			for (ChangeParameter ap : addParameters){
-				if (dp.getPath().equals(ap.getPath()) && dp.getNewParameter().getName().equals(ap.getNewParameter().getName())){
-					if (!dp.getNewParameter().getLocation().equals(ap.getNewParameter().getLocation())){
-						System.out.println(dp.getPath() + "  p:" + dp.getNewParameter().getName() + " 1:" + dp.getNewParameter().getLocation());
-						System.out.println(ap.getPath() + "  p:" + ap.getNewParameter().getName() + " 2:" + ap.getNewParameter().getLocation());
-						System.out.println("\n ");
-						
-						diffMetamodel.createRelocateParameterInstance(dp, ap, changes);
-					}
-				}
+		for (ChangeParameter p : changeParameters){			
+			if (p.getOldParameter() != null &&
+				p.getNewParameter() != null &&
+				!p.getNewParameter().getLocation().equals(p.getOldParameter().getLocation())){
+				
+				ChangeParameter oldParameter = new ChangeParameter();
+				oldParameter.clone(p);
+				oldParameter.setNewParameter(p.getOldParameter());
+				oldParameter.setOldParameter(p.getNewParameter());
+				
+				List<ChangeParameter> oldParameters = new ArrayList<ChangeParameter>();
+				oldParameters.add(oldParameter);
+				
+				System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " added");
+				System.out.println(p.getPath() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
+				System.out.println("\n ");
+				
+				diffMetamodel.createRelocateParameterInstance(p, oldParameters, changes);
 			}
-		}
+		}	
+		
+		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
+		{			
+			int countDeleted = 0;
+			ChangeParameter newParameter = null;
+			List<ChangeParameter> oldParameters = new ArrayList<ChangeParameter>();
+			String locationAdd = "";
+			String locationDelete = "";
+		    for (ChangeParameter p : entry.getValue()){
+		    	if (p.getDifferenceKind() == DifferenceKind.ADD){		    		
+		    		if (locationAdd.equals(""))
+		    			locationAdd = p.getNewParameter().getLocation().getName();
+		    		else if (!locationAdd.equals(p.getNewParameter().getLocation().getName())){		    			
+		    			oldParameters = new ArrayList<ChangeParameter>();
+		    			break;
+		    		}
+		    		
+		    		oldParameters.add(p);
+		    	}		    	
+		    	else if (p.getDifferenceKind() == DifferenceKind.DELETE){
+		    		countDeleted++;
+		    		newParameter = p;
+		    		locationDelete = p.getNewParameter().getLocation().getName();
+		    	}		    	
+		    }
+		    
+		    if (oldParameters.size() >= 2 && countDeleted == 1 && !locationAdd.equals(locationDelete)){
+		    	System.out.println(newParameter.getPath() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newParameter.getNewParameter().getLocation() + " added");
+		    	for (ChangeParameter p : oldParameters){
+		    		System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " deleted");
+		    	}
+				System.out.println("\n ");
+				
+    			diffMetamodel.createRelocateParameterInstance(newParameter, oldParameters, changes);
+    		}
+		}	
 	}
 	
 	public static void processChangeTypeParameter(DiffMetamodel diffMetamodel, List<ChangeParameter> deleteParameters,
