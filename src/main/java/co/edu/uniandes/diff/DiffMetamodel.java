@@ -285,10 +285,6 @@ public class DiffMetamodel {
 		changes.add(defaultValue);
 	}
 	
-	public void createRestricAccessToAPIInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}	
-	
 	public void saveInstance() {
 		try {
             resource.save(Collections.EMPTY_MAP);
@@ -461,6 +457,24 @@ public class DiffMetamodel {
 		changes.add(defaultValue);
 	}
 	
+	public void createAddRestriction(ChangeResponse changeResponse, EList<Change> changes) {
+		ElementReference newElementReference = diffFactoryI.createElementReference();
+		newElementReference.setEObject(changeResponse.getUri());
+		newElementReference.setValue(changeResponse.getResponse().getCode());
+		newElementReference.setPath(changeResponse.getPath());
+		
+		Add add = diffFactoryI.createAdd();
+		add.setChangeElement(APIElementType.RETURN_TYPE);
+		add.setNew(newElementReference);
+		
+		AddRestriction addRestriction = diffFactoryI.createAddRestriction();
+		addRestriction.setChangeElement(APIElementType.RETURN_TYPE);
+		addRestriction.getSimpleDiffs().add(add);
+		
+		changes.add(add);
+		changes.add(addRestriction);
+	}
+	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/
 	
 	private ElementType getType(JSONDataType type) {
@@ -495,4 +509,6 @@ public class DiffMetamodel {
 		}
 		return elementType;
 	}
+
+	
 }

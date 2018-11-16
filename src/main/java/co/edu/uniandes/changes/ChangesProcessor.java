@@ -386,6 +386,15 @@ public class ChangesProcessor {
 		}
 	}	
 	
+	public static void processAddRestrictedAccess(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponses, EList<Change> changes) {
+		for(ChangeResponse changeResponse :  addResponses) {
+			if(changeResponse.getResponse().getCode().equals("403") || changeResponse.getResponse().getCode().equals("401")) {
+				diffMetamodel.createAddRestriction(changeResponse,changes);
+			}
+		}
+		
+	}
+	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {		
@@ -693,4 +702,6 @@ public class ChangesProcessor {
 	private static boolean isNullOrEmpty(String value){
 		return value == null || value.trim().isEmpty();
 	}
+
+	
 }
