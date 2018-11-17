@@ -299,8 +299,8 @@ public class DiffMetamodel {
 		oldElementReference.setValue(delRes.getResponse().getCode());
 		oldElementReference.setPath(delRes.getPath());
 		
-		Delete delete = diffFactoryI.createDelete();
-		delete.setChangeElement(APIElementType.RETURN_TYPE);
+		RemoveStatusCode delete = diffFactoryI.createRemoveStatusCode();
+		delete.setChangeElement(APIElementType.STATUS_CODE);
 		delete.setOld(oldElementReference);
 		
 		changes.add(delete);
@@ -313,8 +313,8 @@ public class DiffMetamodel {
 		newElementReference.setValue(addRes.getResponse().getCode());
 		newElementReference.setPath(addRes.getPath());
 		
-		Add add = diffFactoryI.createAdd();
-		add.setChangeElement(APIElementType.RETURN_TYPE);
+		AddStatusCode add = diffFactoryI.createAddStatusCode();
+		add.setChangeElement(APIElementType.STATUS_CODE);
 		add.setNew(newElementReference);
 		
 		changes.add(add);
