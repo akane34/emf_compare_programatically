@@ -20,7 +20,7 @@
       <post
           summary="save a new setting"
           description="save a new setting"
-          responses="//@responses.0">
+          responses="//@responses.1 //@responses.0">
         <tagReferences>admin</tagReferences>
         <consumes>application/javascript</consumes>
         <produces>application/json</produces>
@@ -38,7 +38,7 @@
     <paths relativePath="/ConfigByUser">
       <post
           parameters="//@paramters.0"
-          responses="//@responses.0">
+          responses="//@responses.1">
         <schemes>http</schemes>
         <schemes>https</schemes>
       </post>
@@ -62,6 +62,11 @@
   <schemas type="integer"
       name="age"
       title="age"/>
+  <responses
+      schema="//@schemas.1"
+      description="204"
+      code="204"
+      referenceName="204"/>
   <responses
       schema="//@schemas.0"
       description="OK"

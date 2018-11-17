@@ -20,7 +20,7 @@
       <post
           summary="save a new setting"
           description="save a new setting"
-          responses="//@responses.0">
+          responses="//@responses.0 //@api/@responses.0">
         <tagReferences>admin</tagReferences>
         <consumes>application/json</consumes>
         <produces>application/json</produces>
@@ -44,6 +44,11 @@
         <schemes>https</schemes>
       </post>
     </paths>
+    <responses
+        schema="//@schemas.1"
+        description="302"
+        code="302"
+        referenceName="302"/>
   </api>
   <paramters
       schema="//@schemas.0"
