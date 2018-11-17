@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="api.lavanapp.com" basePath="/api/v211" definitions="//@schemas.0 //@schemas.1 //@schemas.2 //@schemas.3 //@schemas.4 //@schemas.5 //@schemas.6 //@schemas.7 //@schemas.8 //@schemas.9 //@schemas.10 //@schemas.11 //@schemas.12 //@schemas.13 //@schemas.14 //@schemas.15 //@schemas.16 //@schemas.17 //@schemas.18 //@schemas.19 //@schemas.20 //@schemas.21">
+    <info title="API LAVANAPP" description="Documentaci&#xf3;n del api v2.1.1 de lavanapp" version="2.1.1">
+      <contact email="hola@lavanapp.com"/>
+    </info>
+    <schemes>http</schemes>
+    <consumes>application/json</consumes>
+    <produces>application/json</produces>
+    <paths relativePath="/configuration">
+      <get parameters="//@paramters.0 //@paramters.1 //@paramters.2" summary="Return the configuration detail of server" responses="//@responses.0 //@responses.1 //@responses.2 //@responses.3">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>configuration</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/configuration/faq">
+      <get parameters="//@paramters.3" summary="Return the faq" responses="//@responses.4 //@responses.5 //@responses.6 //@responses.7">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>configuration</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/configuration/tyc">
+      <get parameters="//@paramters.4" summary="Return the terms and conditions" responses="//@responses.8 //@responses.9 //@responses.10 //@responses.11">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>configuration</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/configuration/pdp">
+      <get parameters="//@paramters.5" summary="Return the privacy policy" responses="//@responses.12 //@responses.13 //@responses.14 //@responses.15">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>configuration</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/order/experience">
+      <post parameters="//@paramters.6" summary="Insert consumer experience" responses="//@responses.16 //@responses.17 //@responses.18 //@responses.19">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>consumer experience</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/user">
+      <post parameters="//@paramters.7" summary="Create user" responses="//@responses.20 //@responses.21 //@responses.22 //@responses.23">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/user/login">
+      <post parameters="//@paramters.8 //@paramters.9" summary="Login user" responses="//@responses.24 //@responses.25 //@responses.26">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/user/refresh">
+      <post parameters="//@paramters.10" summary="Refresh a token" responses="//@responses.27 //@responses.28 //@responses.29 //@responses.30">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/user/recover_password">
+      <post parameters="//@paramters.11" summary="Recover password" responses="//@responses.31 //@responses.32 //@responses.33 //@responses.34">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/user/{id}">
+      <put parameters="//@paramters.12 //@paramters.13" summary="Updated user" description="This can only be done by the logged in user. Login required if the token was created more than two days ago" responses="//@responses.35 //@responses.36 //@responses.37 //@responses.38">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/user/{id}/change_password">
+      <put parameters="//@paramters.14 //@paramters.15" summary="Updated user password" description="This can only be done by the logged in user. Login required if the token was created more than two days ago" responses="//@responses.39 //@responses.40 //@responses.41 //@responses.42">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/user/{id}/code">
+      <get parameters="//@paramters.16 //@paramters.17 //@paramters.18" summary="Send an email or an SMS with the activation code" description="This can only be done with a token unauthorized." responses="//@responses.43 //@responses.44 //@responses.45 //@responses.46">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/user/{id}/verify">
+      <put parameters="//@paramters.19 //@paramters.20 //@paramters.21" summary="Verify user. Check OTA" description="This can only be done with a token unauthorized." responses="//@responses.47 //@responses.48 //@responses.49 //@responses.50">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/user/{id}/fcm_token">
+      <put parameters="//@paramters.22 //@paramters.23 //@paramters.24" summary="Update FCM Token" description="This can only be done with a token authorized." responses="//@responses.51 //@responses.52 //@responses.53 //@responses.54">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>user</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/product">
+      <get summary="Return categories with list of products" responses="//@responses.55 //@responses.56 //@responses.57">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>product</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/product/{id}">
+      <get parameters="//@paramters.25" summary="Return the detail of a product" responses="//@responses.58 //@responses.59 //@responses.60 //@responses.61">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>product</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/order">
+      <get summary="Return list of user orders" responses="//@responses.62 //@responses.63 //@responses.64">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>order</tagReferences>
+      </get>
+      <post parameters="//@paramters.26 //@paramters.27" summary="Create an order" description="Login required if the token was created more than two days ago" responses="//@responses.65 //@responses.66 //@responses.67 //@responses.68">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>order</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/order/{id}">
+      <get parameters="//@paramters.28" summary="Return the detail of an order" responses="//@responses.69 //@responses.70 //@responses.71 //@responses.72">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>order</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/order/check_cart">
+      <post parameters="//@paramters.29" summary="check the compatibility of cart products" responses="//@responses.73 //@responses.74 //@responses.75 //@responses.76">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>order</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/voucher">
+      <get parameters="//@paramters.30 //@paramters.31" summary="Return information about voucher" responses="//@responses.77 //@responses.78 //@responses.79 //@responses.80">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>voucher</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/schedule/delivery">
+      <post parameters="//@paramters.32" summary="Return information about available delivery schedule " responses="//@responses.81 //@responses.82 //@responses.83 //@responses.84">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>schedule</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/schedule/pickup">
+      <get parameters="//@paramters.33" summary="Return information about available pickup schedule " responses="//@responses.85 //@responses.86 //@responses.87">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>schedule</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/state">
+      <get summary="Return array with (cities) ciudades and (states) provincias" responses="//@responses.88 //@responses.89 //@responses.90">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>state</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/address">
+      <get summary="Return information about user addresses" responses="//@responses.91 //@responses.92 //@responses.93">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>address</tagReferences>
+      </get>
+      <post parameters="//@paramters.34" summary="Insert a new address associated with the user" responses="//@responses.94 //@responses.95 //@responses.96 //@responses.97">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>address</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/address/{id}">
+      <put parameters="//@paramters.35 //@paramters.36" summary="Modify an user addresses." description="Login required if the token was created more than two days ago. Return the same address id if not exists an order associated; else, return a new address id." responses="//@responses.98 //@responses.99 //@responses.100 //@responses.101">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>address</tagReferences>
+      </put>
+      <delete parameters="//@paramters.37" summary="Delete an user addresses" responses="//@responses.102 //@responses.103 //@responses.104 //@responses.105">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>address</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/paying/authorization">
+      <get parameters="//@paramters.38" summary="Get an authorization token for payments that expires in 2 hours" responses="//@responses.106 //@responses.107 //@responses.108 //@responses.109">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>transaction</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/paying/payment_method">
+      <get summary="List consumer's paymente methods" responses="//@responses.110 //@responses.111 //@responses.112">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>transaction</tagReferences>
+      </get>
+      <post parameters="//@paramters.39" summary="For credit cards, returns the identifier of the new payment method created; for paypal accounts, returns the url of paypal to which would have acceded to authorize the association" responses="//@responses.113 //@responses.114 //@responses.115 //@responses.116">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>transaction</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/paying/payment_method/{id}">
+      <delete parameters="//@paramters.40" summary="Delete payment method" responses="//@responses.117 //@responses.118 //@responses.119 //@responses.120">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>transaction</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/paying/pay">
+      <post parameters="//@paramters.41" summary="Create a new billing agreement and execute the payment of the order in progress" responses="//@responses.121 //@responses.122 //@responses.123 //@responses.124">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements/>
+        <tagReferences>transaction</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/paying/accept_agreement">
+      <post parameters="//@paramters.42" summary="Accept a new billing agreement" responses="//@responses.125 //@responses.126 //@responses.127 //@responses.128">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <tagReferences>transaction</tagReferences>
+      </post>
+    </paths>
+    <securityDefinitions type="apiKey" name="Authorization" location="header" referenceName="Authorization"/>
+    <securityDefinitions type="apiKey" name="apikey" location="header" referenceName="ApiKey"/>
+    <securityDefinitions type="apiKey" name="tokenpayment" location="header" referenceName="tokenpayment"/>
+  </api>
+  <paramters type="string" description="unauth_token/access_token o ning&#xfa;n token" name="authorization" location="header" required="false"/>
+  <paramters type="string" description="Plataforma desde la que se hace la solicitud" name="platform" location="query" required="true"/>
+  <paramters type="string" description="Versi&#xf3;n de la plataforma" name="version" location="query" required="true"/>
+  <paramters type="string" description="unauth_token/access_token" name="authorization" location="header" required="false"/>
+  <paramters type="string" description="unauth_token/access_token" name="authorization" location="header" required="false"/>
+  <paramters type="string" description="unauth_token/access_token" name="authorization" location="header" required="false"/>
+  <paramters schema="//@schemas.21" description="Consumer experience" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.0" description="User Object" name="body" location="body" required="true"/>
+  <paramters type="string" description="encode base_64 (email:password(MD5)). Required by login with email" name="Basic" location="header"/>
+  <paramters schema="//@schemas.2" description="LoginUser Object" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.3" description="userRefresh Object" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.7" description="RecvoverUser Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="user id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" description="User Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="user id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.4" description="User Object" name="body" location="body" required="true"/>
+  <paramters type="string" description="unauth_token" name="authorization" location="header" required="true"/>
+  <paramters type="integer" description="user id" name="id" location="path" required="true"/>
+  <paramters type="string" description="email or sms" name="type" location="query" required="true"/>
+  <paramters type="string" description="unauth_token" name="authorization" location="header" required="true"/>
+  <paramters type="integer" description="user id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.5" description="User Object" name="body" location="body" required="true"/>
+  <paramters type="string" description="unauth_token" name="authorization" location="header" required="true"/>
+  <paramters type="integer" description="user id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.6" description="FCM Token" name="body" location="body" required="true"/>
+  <paramters type="integer" description="product id" name="id" location="path" required="true"/>
+  <paramters type="string" description="android or ios" name="Platform" location="header" required="true"/>
+  <paramters schema="//@schemas.9" description="Order Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="order id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.10" description="Cart Object" name="body" location="body" required="true"/>
+  <paramters type="string" description="coupon code text" name="coupon_code" location="query" required="true"/>
+  <paramters type="string" description="total amount of order" name="total_order" location="query" required="true"/>
+  <paramters schema="//@schemas.11" description="Delivery data Object" name="body" location="body" required="true"/>
+  <paramters type="string" description="postal code from pickup" name="postal_code" location="query" required="true"/>
+  <paramters schema="//@schemas.13" description="address data Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="address id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.13" description="address data Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="address id" name="id" location="path" required="true"/>
+  <paramters type="integer" description="Order identification" name="order_id" location="query" required="true"/>
+  <paramters schema="//@schemas.656" description="Payment method Object" name="body" location="body" required="true"/>
+  <paramters type="integer" description="payment method id" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.692" description="Payment Object" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.710" description="Payment Object" name="body" location="body" required="true"/>
+  <schemas type="object" name="User" example="{&quot;email&quot;:{&quot;name&quot;:&quot;Clara Mu&#xf1;oz&quot;,&quot;password&quot;:&quot;25f9e794323b453885f5181f1b624d0b&quot;,&quot;email&quot;:&quot;clara@lavanapp.com&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;fcm_token&quot;:&quot;adsfasdferewrwefr&quot;,&quot;phone&quot;:&quot;736573661&quot;,&quot;type&quot;:&quot;email&quot;,&quot;want_news&quot;:true,&quot;id&quot;:&quot;&quot;,&quot;token&quot;:&quot;&quot;},&quot;facebook&quot;:{&quot;name&quot;:&quot;Clara Mu&#xf1;oz&quot;,&quot;password&quot;:&quot;&quot;,&quot;email&quot;:&quot;clara@lavanapp.com&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;fcm_token&quot;:&quot;adsfasdferewrwefr&quot;,&quot;phone&quot;:&quot;736573661&quot;,&quot;type&quot;:&quot;facebook&quot;,&quot;want_news&quot;:true,&quot;id&quot;:&quot;2578&quot;,&quot;token&quot;:&quot;adsfasdferewrwefr&quot;}}" properties="//@schemas.22 //@schemas.23 //@schemas.24 //@schemas.25 //@schemas.26 //@schemas.27 //@schemas.28 //@schemas.29 //@schemas.30 //@schemas.31" declaringContext="//@api" required="//@schemas.22 //@schemas.23 //@schemas.25 //@schemas.26 //@schemas.28 //@schemas.29"/>
+  <schemas type="object" name="UpdatedUser" example="{&quot;name&quot;:&quot;Clara Mu&#xf1;oz&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;want_news&quot;:false}" properties="//@schemas.32 //@schemas.33 //@schemas.34" declaringContext="//@api" required="//@schemas.32 //@schemas.34"/>
+  <schemas type="object" name="LoginUserBody" example="{&quot;facebook&quot;:{&quot;type&quot;:&quot;facebook&quot;,&quot;email&quot;:&quot;clara@lavanapp.com&quot;,&quot;id&quot;:&quot;2217&quot;,&quot;token&quot;:&quot;asdfjkasdfjasjdfsdfkldskmehtuicj&quot;,&quot;fcm_token&quot;:&quot;asdfjkasdfjasjdfsdfkldskmehtuicj&quot;},&quot;email&quot;:{&quot;type&quot;:&quot;email&quot;,&quot;email&quot;:&quot;clara@lavanapp.com&quot;,&quot;id&quot;:&quot;&quot;,&quot;token&quot;:&quot;&quot;,&quot;fcm_token&quot;:&quot;asdfjkasdfjasjdfsdfkldskmehtuicj&quot;}}" properties="//@schemas.35 //@schemas.36 //@schemas.37 //@schemas.38 //@schemas.39" declaringContext="//@api" required="//@schemas.35"/>
+  <schemas type="object" name="RefreshUserBody" example="{&quot;type&quot;:&quot;email&quot;,&quot;password&quot;:&quot;25f9e794323b453885f5181f1b624d0b&quot;}" properties="//@schemas.40 //@schemas.41 //@schemas.42" declaringContext="//@api" required="//@schemas.40"/>
+  <schemas type="object" name="ChangePasswordUser" example="{&quot;old_password&quot;:&quot;6ebe76c9fb411be97b3b0d48b791a7c9&quot;,&quot;new_password&quot;:&quot;25f9e794323b453885f5181f1b624d0b&quot;,&quot;confirm_new_password&quot;:&quot;25f9e794323b453885f5181f1b624d0b&quot;}" properties="//@schemas.43 //@schemas.44 //@schemas.45" declaringContext="//@api" required="//@schemas.43 //@schemas.44 //@schemas.45"/>
+  <schemas type="object" name="VerifyUser" example="{&quot;code&quot;:&quot;12345&quot;}" properties="//@schemas.46" declaringContext="//@api" required="//@schemas.46"/>
+  <schemas type="object" name="FcmToken" example="{&quot;fcm_token&quot;:&quot;12345&quot;}" properties="//@schemas.47" declaringContext="//@api" required="//@schemas.47"/>
+  <schemas type="object" name="RecoverUserBody" example="{&quot;email&quot;:&quot;clara@lavanapp.com&quot;}" properties="//@schemas.48" declaringContext="//@api" required="//@schemas.48"/>
+  <schemas type="object" name="PaymentInfoTokenBody" example="{&quot;token&quot;:&quot;eyJzdWIiOiJ0ZXN0aW5nX2FuZHJvaWRAbGF2YW5hcHAuY29tIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoiMjAxNi0xMS0wMyAxMjo1NzoyNyIsInR5cGUiOiJhdXRoIiwiZXhwIjoxNDg2ODMzOTQ4LCJleHBfc2Vzc2lvbiI6MTQ4MTgyMjc0OH&quot;}" properties="//@schemas.49" declaringContext="//@api" required="//@schemas.49"/>
+  <schemas type="object" name="OrderBody" example="{&quot;total_price&quot;:&quot;10&quot;,&quot;subtotal&quot;:&quot;20&quot;,&quot;total_amount_products&quot;:&quot;15.95&quot;,&quot;complete_amount&quot;:true,&quot;pickup_date&quot;:&quot;2016-12-15&quot;,&quot;pickup_time&quot;:&quot;18:00-19:00&quot;,&quot;pickup_address_id&quot;:&quot;157&quot;,&quot;expected_delivery_date&quot;:&quot;2016-12-16&quot;,&quot;expected_delivery_time&quot;:&quot;13:00-13:30&quot;,&quot;delivery_address_id&quot;:&quot;157&quot;,&quot;special_instructions&quot;:&quot;Dejar al vecino si no hay nadie en casa&quot;,&quot;products&quot;:[{&quot;id&quot;:420,&quot;quantity&quot;:1,&quot;price&quot;:&quot;15.95&quot;,&quot;attributes&quot;:[{&quot;group_id&quot;:1,&quot;attribute_id&quot;:1,&quot;group_value&quot;:&quot;&quot;}]}],&quot;coupon_id&quot;:&quot;55&quot;}" properties="//@schemas.50 //@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56 //@schemas.57 //@schemas.58 //@schemas.59 //@schemas.60 //@schemas.61 //@schemas.71" declaringContext="//@api" required="//@schemas.50 //@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56 //@schemas.57 //@schemas.58 //@schemas.59 //@schemas.61"/>
+  <schemas type="object" name="CartBody" example="{&quot;products&quot;:[{&quot;id&quot;:420,&quot;quantity&quot;:1,&quot;price&quot;:&quot;15.95&quot;,&quot;attributes&quot;:[{&quot;group_id&quot;:1,&quot;attribute_id&quot;:1,&quot;group_value&quot;:&quot;&quot;}]}]}" properties="//@schemas.72" declaringContext="//@api" required="//@schemas.72"/>
+  <schemas type="object" name="DeliveryBody" example="{&quot;date&quot;:&quot;2016-12-16&quot;,&quot;slot_id&quot;:&quot;161&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;products&quot;:{&quot;id&quot;:&quot;420&quot;}}" properties="//@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85" declaringContext="//@api" required="//@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85"/>
+  <schemas type="object" name="AddressResponse" properties="//@schemas.88" declaringContext="//@api"/>
+  <schemas type="object" name="Address" example="{&quot;name&quot;:&quot;Trabajo&quot;,&quot;street&quot;:&quot;Carretera de Canillas&quot;,&quot;street_number&quot;:&quot;138&quot;,&quot;complement&quot;:&quot;&quot;,&quot;special_instruction&quot;:&quot;&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;township&quot;:&quot;Madrid&quot;}" properties="//@schemas.101 //@schemas.102 //@schemas.103 //@schemas.104 //@schemas.105 //@schemas.106 //@schemas.107" declaringContext="//@api" required="//@schemas.102 //@schemas.103 //@schemas.106"/>
+  <schemas type="object" name="Schedules" properties="//@schemas.108 //@schemas.109 //@schemas.110 //@schemas.111" declaringContext="//@api" required="//@schemas.108 //@schemas.109 //@schemas.110 //@schemas.111"/>
+  <schemas type="object" name="Payment_methods" properties="//@schemas.116 //@schemas.117 //@schemas.118 //@schemas.119 //@schemas.120 //@schemas.121 //@schemas.122 //@schemas.123 //@schemas.124" declaringContext="//@api" required="//@schemas.116 //@schemas.123 //@schemas.124"/>
+  <schemas type="object" name="statescities" example="{&quot;schedule&quot;:{&quot;date&quot;:&quot;2016-12-16&quot;,&quot;text_day&quot;:&quot;Hoy&quot;,&quot;slots&quot;:{&quot;id&quot;:&quot;171&quot;,&quot;slot&quot;:&quot;12:00 - 13:00&quot;,&quot;closed&quot;:false}}}" properties="//@schemas.125 //@schemas.126 //@schemas.127 //@schemas.128" declaringContext="//@api" required="//@schemas.125 //@schemas.126 //@schemas.127 //@schemas.128"/>
+  <schemas type="object" name="CategoriesProductGet" example="{&quot;categories&quot;:{&quot;id&quot;:&quot;12&quot;,&quot;name&quot;:&quot;Ofertas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/app/webroot/Uploads/Category/VW5TL0.png&quot;,&quot;products&quot;:{&quot;id&quot;:&quot;420&quot;,&quot;name&quot;:&quot;5 camisas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/app/webroot/Uploads/Products/LL3KK0.jpg&quot;,&quot;price&quot;:&quot;15.95&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;}}}" properties="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.137" declaringContext="//@api" required="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.137"/>
+  <schemas type="object" name="ProductDetailGet" example="{&quot;product&quot;:{&quot;id&quot;:&quot;420&quot;,&quot;category_id&quot;:&quot;12&quot;,&quot;name&quot;:&quot;5 camisas&quot;,&quot;price&quot;:&quot;15.95&quot;,&quot;description&quot;:&quot;5 camisas lavadas y planchadas.&quot;,&quot;description_large&quot;:&quot;&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/Uploads/Products/LL3KK0.jpg&quot;,&quot;preparation_time&quot;:&quot;24&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;,&quot;feature&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Temperatura de lavado&quot;,&quot;values&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;value&quot;:&quot;10&#xba;C&quot;}},&quot;attribute_group&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Tejidos&quot;,&quot;group_type_id&quot;:&quot;3&quot;,&quot;group_type&quot;:&quot;Select&quot;,&quot;inc_price&quot;:&quot;&quot;,&quot;attributes&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;value&quot;:&quot;Seda&quot;,&quot;inc_price&quot;:&quot;5.00&quot;}}}}" properties="//@schemas.144 //@schemas.145 //@schemas.146 //@schemas.147 //@schemas.148 //@schemas.149 //@schemas.150 //@schemas.151 //@schemas.152 //@schemas.160" declaringContext="//@api" required="//@schemas.144 //@schemas.145 //@schemas.146 //@schemas.147 //@schemas.148 //@schemas.150 //@schemas.151"/>
+  <schemas type="object" name="OrdersGet" properties="//@schemas.172 //@schemas.173 //@schemas.174 //@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178 //@schemas.179 //@schemas.180 //@schemas.181 //@schemas.182 //@schemas.183" declaringContext="//@api" required="//@schemas.172 //@schemas.173 //@schemas.174 //@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178 //@schemas.179 //@schemas.180 //@schemas.181 //@schemas.182 //@schemas.183"/>
+  <schemas type="object" name="OrderDetailGet" properties="//@schemas.184 //@schemas.185 //@schemas.186 //@schemas.187 //@schemas.188 //@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.194 //@schemas.199 //@schemas.200 //@schemas.201 //@schemas.206 //@schemas.207 //@schemas.208" declaringContext="//@api" required="//@schemas.184 //@schemas.185 //@schemas.186 //@schemas.187 //@schemas.188 //@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.199 //@schemas.200 //@schemas.206 //@schemas.207 //@schemas.208"/>
+  <schemas type="object" name="customExperienceBody" example="{&quot;example_with_high_score&quot;:{&quot;order_id&quot;:3141,&quot;consumer_id&quot;:1496,&quot;stars&quot;:5,&quot;comments&quot;:&quot;F&#xe1;cil e intuitivo&quot;},&quot;ex_low_score&quot;:{&quot;order_id&quot;:3141,&quot;consumer_id&quot;:1496,&quot;stars&quot;:2,&quot;incidence_type&quot;:1,&quot;comments&quot;:&quot;La mancha no ha desaparecido&quot;}}" properties="//@schemas.229 //@schemas.230 //@schemas.231 //@schemas.232 //@schemas.233" declaringContext="//@api" required="//@schemas.229 //@schemas.230 //@schemas.231"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="phone" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Required for registration by email" name="password" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="email" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="postal_code" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="fcm_token" declaringContext="//@schemas.0"/>
+  <schemas type="boolean" name="want_news" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="email or facebook" name="type" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Required for registration by facebook" name="id" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Required for registration by facebook" name="token" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.1"/>
+  <schemas type="string" name="postal_code" declaringContext="//@schemas.1"/>
+  <schemas type="boolean" name="want_news" declaringContext="//@schemas.1"/>
+  <schemas type="string" description="email o facebook" name="type" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="en caso de facebook" name="email" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="id del usuario en caso de facebook" name="id" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="en caso de facebook" name="token" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="token fcm del dispositivo para firebase" name="fcm_token" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="email o facebook" name="type" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="en caso de facebook" name="email" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="MD5 en caso de email" name="password" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="MD5" name="old_password" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="MD5" name="new_password" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="MD5" name="confirm_new_password" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="OTA code" name="code" declaringContext="//@schemas.5"/>
+  <schemas type="string" description="FCM Token" name="fcm_token" declaringContext="//@schemas.6"/>
+  <schemas type="string" description="User email" name="email" declaringContext="//@schemas.7"/>
+  <schemas type="string" description="User payment method token" name="token" declaringContext="//@schemas.8"/>
+  <schemas type="string" name="total_price" declaringContext="//@schemas.9"/>
+  <schemas type="string" description="If the price has decimals, it is rounded to two. If no coupon is applied to the order, the subtotal will be equal to the total_price" name="subtotal" declaringContext="//@schemas.9"/>
+  <schemas type="string" description="The real value of the products of the cart" name="total_amount_products" declaringContext="//@schemas.9"/>
+  <schemas type="boolean" description="Indicates whether the customer wants to complete the order amount up to the minimum required" name="complete_amount" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="pickup_date" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="pickup_time" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="pickup_address_id" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="expected_delivery_date" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="expected_delivery_time" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="delivery_address_id" declaringContext="//@schemas.9"/>
+  <schemas type="string" name="special_instructions" declaringContext="//@schemas.9"/>
+  <schemas type="array" name="products" items="//@schemas.62" declaringContext="//@schemas.9"/>
+  <schemas type="object" properties="//@schemas.63 //@schemas.64 //@schemas.65 //@schemas.66" required="//@schemas.63 //@schemas.64 //@schemas.65"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.62"/>
+  <schemas type="integer" name="quantity" declaringContext="//@schemas.62"/>
+  <schemas type="string" name="price" declaringContext="//@schemas.62"/>
+  <schemas type="array" name="attributes" items="//@schemas.67" declaringContext="//@schemas.62"/>
+  <schemas type="object" properties="//@schemas.68 //@schemas.69 //@schemas.70" required="//@schemas.68"/>
+  <schemas type="integer" description="group type id" name="group_id" declaringContext="//@schemas.67"/>
+  <schemas type="integer" description="attribute id if the attribute selected is select or radiobutton" name="attribute_id" declaringContext="//@schemas.67"/>
+  <schemas type="string" description="value of attribute multiplier (number of square meters, for example)" name="group_value" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="coupon_id" declaringContext="//@schemas.9"/>
+  <schemas type="array" name="products" items="//@schemas.73" declaringContext="//@schemas.10"/>
+  <schemas type="object" properties="//@schemas.74 //@schemas.75 //@schemas.76 //@schemas.77" required="//@schemas.74 //@schemas.75 //@schemas.76"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.73"/>
+  <schemas type="integer" name="quantity" declaringContext="//@schemas.73"/>
+  <schemas type="string" name="price" declaringContext="//@schemas.73"/>
+  <schemas type="array" name="attributes" items="//@schemas.78" declaringContext="//@schemas.73"/>
+  <schemas type="object" properties="//@schemas.79 //@schemas.80 //@schemas.81" required="//@schemas.79"/>
+  <schemas type="integer" description="group type id" name="group_id" declaringContext="//@schemas.78"/>
+  <schemas type="integer" description="attribute id if the attribute selected is select or radiobutton" name="attribute_id" declaringContext="//@schemas.78"/>
+  <schemas type="string" description="value of attribute multiplier (number of square meters, for example)" name="group_value" declaringContext="//@schemas.78"/>
+  <schemas type="string" description="selected pickup date" name="date" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="slot id" name="slot_id" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="delivery postal code" name="postal_code" declaringContext="//@schemas.11"/>
+  <schemas type="array" name="products" items="//@schemas.86" declaringContext="//@schemas.11"/>
+  <schemas type="object" properties="//@schemas.87" required="//@schemas.87"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.86"/>
+  <schemas type="array" name="addresses" items="//@schemas.89" declaringContext="//@schemas.12"/>
+  <schemas type="object" properties="//@schemas.90 //@schemas.91 //@schemas.92 //@schemas.93 //@schemas.94 //@schemas.95 //@schemas.96 //@schemas.97 //@schemas.98 //@schemas.99 //@schemas.100" required="//@schemas.90 //@schemas.92 //@schemas.93 //@schemas.96 //@schemas.98 //@schemas.100 //@schemas.97 //@schemas.99"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="street" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="street_number" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="complement" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="special_instructions" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="postal_code" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="township" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="city" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="province" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="state" declaringContext="//@schemas.89"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="street" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="street_number" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="complement" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="special_instructions" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="postal_code" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="township" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="date" declaringContext="//@schemas.14"/>
+  <schemas type="string" name="text_day" declaringContext="//@schemas.14"/>
+  <schemas type="boolean" name="closed" declaringContext="//@schemas.14"/>
+  <schemas type="array" name="slots" items="//@schemas.112" declaringContext="//@schemas.14"/>
+  <schemas type="object" properties="//@schemas.113 //@schemas.114 //@schemas.115" required="//@schemas.113 //@schemas.114 //@schemas.115"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.112"/>
+  <schemas type="string" name="slot" declaringContext="//@schemas.112"/>
+  <schemas type="boolean" name="closed" declaringContext="//@schemas.112"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="last_four_number" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="expiration_card" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="card_type" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="card_holder_name" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="email_account" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="image_url" declaringContext="//@schemas.15"/>
+  <schemas type="integer" name="platform_id" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="platform" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="status" declaringContext="//@schemas.16"/>
+  <schemas type="array" name="cities" items="//@schemas.129" declaringContext="//@schemas.16"/>
+  <schemas type="object" properties="//@schemas.130 //@schemas.131 //@schemas.132 //@schemas.133" required="//@schemas.130 //@schemas.131 //@schemas.132 //@schemas.133"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.129"/>
+  <schemas type="string" name="state_id" declaringContext="//@schemas.129"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.129"/>
+  <schemas type="string" name="status" declaringContext="//@schemas.129"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.17"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.17"/>
+  <schemas type="string" name="image" declaringContext="//@schemas.17"/>
+  <schemas type="array" name="products" items="//@schemas.138" declaringContext="//@schemas.17"/>
+  <schemas type="object" properties="//@schemas.139 //@schemas.140 //@schemas.141 //@schemas.142 //@schemas.143" required="//@schemas.139 //@schemas.140 //@schemas.141 //@schemas.142 //@schemas.143"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.138"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.138"/>
+  <schemas type="string" name="image" declaringContext="//@schemas.138"/>
+  <schemas type="string" name="price" declaringContext="//@schemas.138"/>
+  <schemas type="string" name="currency" declaringContext="//@schemas.138"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="category_id" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="price" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="description" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="description_large" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="image" declaringContext="//@schemas.18"/>
+  <schemas type="string" description="default 24" name="preparation_time" declaringContext="//@schemas.18"/>
+  <schemas type="array" name="features" items="//@schemas.153" declaringContext="//@schemas.18"/>
+  <schemas type="object" properties="//@schemas.154 //@schemas.155 //@schemas.156" required="//@schemas.154 //@schemas.155 //@schemas.156"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.153"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.153"/>
+  <schemas type="array" name="values" items="//@schemas.157" declaringContext="//@schemas.153"/>
+  <schemas type="object" properties="//@schemas.158 //@schemas.159" required="//@schemas.158 //@schemas.159"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.157"/>
+  <schemas type="string" name="value" declaringContext="//@schemas.157"/>
+  <schemas type="array" name="attribute_group" items="//@schemas.161" declaringContext="//@schemas.18"/>
+  <schemas type="object" properties="//@schemas.162 //@schemas.163 //@schemas.164 //@schemas.165 //@schemas.166 //@schemas.167" required="//@schemas.162 //@schemas.163 //@schemas.164 //@schemas.165"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.161"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.161"/>
+  <schemas type="string" description="it could be 1,2,3,4" name="group_type_id" declaringContext="//@schemas.161"/>
+  <schemas type="string" description="it could be Multiplier,Checkbox,Select,Radiobutton" name="group_type" declaringContext="//@schemas.161"/>
+  <schemas type="string" description="it can be empty ('') if exists attributes associated; else, 0.00 default" name="inc_price" declaringContext="//@schemas.161"/>
+  <schemas type="array" name="attributes" items="//@schemas.168" declaringContext="//@schemas.161"/>
+  <schemas type="object" properties="//@schemas.169 //@schemas.170 //@schemas.171" required="//@schemas.169 //@schemas.170 //@schemas.171"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.168"/>
+  <schemas type="string" name="value" declaringContext="//@schemas.168"/>
+  <schemas type="string" name="inc_price" declaringContext="//@schemas.168"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="code" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="total_price" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="currency" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="product_count" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="created_on" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="pickup_date" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="pickup_time" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="delivery_date" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="delivery_time" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="status_id" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="status" declaringContext="//@schemas.19"/>
+  <schemas type="string" name="code" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="total_price" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="currency" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="product_count" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="created_on" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="pickup_date" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="pickup_time" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="delivery_date" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="delivery_time" declaringContext="//@schemas.20"/>
+  <schemas type="string" description="1 -> Ordered, 2 -> Collecting, 3 -> Cleaning, 4 -> Delivering, 5 -> Completed" name="status_id" declaringContext="//@schemas.20"/>
+  <schemas type="object" description="Collection of order statuses" name="statuses" properties="//@schemas.195 //@schemas.196 //@schemas.197 //@schemas.198" declaringContext="//@schemas.20" required="//@schemas.195 //@schemas.196 //@schemas.197 //@schemas.198"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.194"/>
+  <schemas type="string" description="status name" name="name" declaringContext="//@schemas.194"/>
+  <schemas type="string" name="path_url" declaringContext="//@schemas.194"/>
+  <schemas type="string" description="Name of image" name="img_name" declaringContext="//@schemas.194"/>
+  <schemas type="string" description="Pendiente de eliminar" name="status" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="special_instructions" declaringContext="//@schemas.20"/>
+  <schemas type="object" description="If a coupon has not been applied, it will be null" name="coupon" properties="//@schemas.202 //@schemas.203 //@schemas.204 //@schemas.205" declaringContext="//@schemas.20" required="//@schemas.202 //@schemas.203 //@schemas.204 //@schemas.205"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.201"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.201"/>
+  <schemas type="string" description="1 if discount is fixed an 2 if discount is percentage" name="discount_type" declaringContext="//@schemas.201"/>
+  <schemas type="string" description="Coupon discount price without being applied to the order price" name="discount" declaringContext="//@schemas.201"/>
+  <schemas type="array" name="pickup_address" items="//@schemas.12" declaringContext="//@schemas.20"/>
+  <schemas type="array" name="delivery_address" items="//@schemas.12" declaringContext="//@schemas.20"/>
+  <schemas type="array" name="products" items="//@schemas.209" declaringContext="//@schemas.20"/>
+  <schemas type="object" properties="//@schemas.210 //@schemas.211 //@schemas.212 //@schemas.213 //@schemas.214 //@schemas.215 //@schemas.216 //@schemas.217 //@schemas.218" required="//@schemas.210 //@schemas.211 //@schemas.212 //@schemas.213 //@schemas.214 //@schemas.215"/>
+  <schemas type="string" name="num_products" declaringContext="//@schemas.209"/>
+  <schemas type="string" name="category" declaringContext="//@schemas.209"/>
+  <schemas type="string" name="product" declaringContext="//@schemas.209"/>
+  <schemas type="string" name="image" declaringContext="//@schemas.209"/>
+  <schemas type="string" name="preparation_time" declaringContext="//@schemas.209"/>
+  <schemas type="string" name="price" declaringContext="//@schemas.209"/>
+  <schemas type="string" description="cantidad del atributo de tipo 'multiplier' si lo tuviera" name="multiplier_value" declaringContext="//@schemas.209"/>
+  <schemas type="string" description="unidad con que se mide el atributo de tipo 'multiplier' si lo tuviera" name="multiplier_name" declaringContext="//@schemas.209"/>
+  <schemas type="array" name="attribute_group" items="//@schemas.219" declaringContext="//@schemas.209"/>
+  <schemas type="object" properties="//@schemas.220 //@schemas.221 //@schemas.222 //@schemas.223 //@schemas.224" required="//@schemas.220 //@schemas.221 //@schemas.222 //@schemas.224"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.219"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.219"/>
+  <schemas type="string" name="group_type" declaringContext="//@schemas.219"/>
+  <schemas type="string" name="inc_price" declaringContext="//@schemas.219"/>
+  <schemas type="array" name="attributes" items="//@schemas.225" declaringContext="//@schemas.219"/>
+  <schemas type="object" properties="//@schemas.226 //@schemas.227 //@schemas.228"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.225"/>
+  <schemas type="string" name="value" declaringContext="//@schemas.225"/>
+  <schemas type="string" name="inc_price" declaringContext="//@schemas.225"/>
+  <schemas type="integer" description="identificador del pedido" name="order_id" declaringContext="//@schemas.21"/>
+  <schemas type="integer" description="identificador del cliente" name="consumer_id" declaringContext="//@schemas.21"/>
+  <schemas type="integer" description="puntuaci&#xf3;n del pedido (del 1 al 5)" name="stars" declaringContext="//@schemas.21"/>
+  <schemas type="integer" description="si el campo puntuaci&#xf3;n es igual o menor que 3, se debe indicar el tipo de incidencia" name="incidence_type" declaringContext="//@schemas.21"/>
+  <schemas type="string" description="comentarios opcionales" name="comments" declaringContext="//@schemas.21"/>
+  <schemas type="object" example="{&quot;force_update&quot;:true,&quot;min_order_amount&quot;:&quot;15&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;,&quot;token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwYzUxMTQyYjVjNDhlZWZiODM1OWRmMmU4ZDM2YmQzNTczMmI3MGIwIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoxNDc4MTc2NDMwLCJ0eXBlIjoidW5hdXRoIiwiZXhwIjoxOTk2NTcyODMwLCJleHBfc2Vzc2lvbiI6MTQ5NTQ1MjgzMH0.2oW9bdtULTIGZFWJ86qG-OxVlRiN-zAQ8UsI8m2Imhg&quot;,&quot;payment_methods&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Sipay&quot;,&quot;path_url&quot;:&quot;https://testing.lavanapp.com/img/android/&quot;,&quot;img_name&quot;:&quot;credit-card.png&quot;},&quot;custom_experience_incidence_type&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Limpieza&quot;,&quot;imageUrl&quot;:&quot;https://testing.lavanapp.com/img/incidences-incons/icono-limpeza.svg&quot;,&quot;selectedImageUrl&quot;:&quot;https://testing.lavanapp.com/img/incidences-incons/icono-limpeza-azul.svg&quot;}}" properties="//@schemas.235 //@schemas.236 //@schemas.237 //@schemas.238 //@schemas.239 //@schemas.245" required="//@schemas.235 //@schemas.236 //@schemas.237 //@schemas.238 //@schemas.239 //@schemas.245"/>
+  <schemas type="boolean" name="force_update" declaringContext="//@schemas.234"/>
+  <schemas type="string" name="min_order_amount" declaringContext="//@schemas.234"/>
+  <schemas type="string" name="currency" declaringContext="//@schemas.234"/>
+  <schemas type="string" name="token" declaringContext="//@schemas.234"/>
+  <schemas type="array" name="payment_methods" items="//@schemas.240" declaringContext="//@schemas.234"/>
+  <schemas type="object" properties="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244" required="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.240"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.240"/>
+  <schemas type="string" name="path_url" declaringContext="//@schemas.240"/>
+  <schemas type="string" name="img_name" declaringContext="//@schemas.240"/>
+  <schemas type="array" name="custom_experience_incidence_type" items="//@schemas.246" declaringContext="//@schemas.234"/>
+  <schemas type="object" properties="//@schemas.247 //@schemas.248 //@schemas.249 //@schemas.250" required="//@schemas.247 //@schemas.248 //@schemas.249 //@schemas.250"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.246"/>
+  <schemas type="string" name="type" declaringContext="//@schemas.246"/>
+  <schemas type="string" name="imageUrl" declaringContext="//@schemas.246"/>
+  <schemas type="string" name="selectedImageUrl" declaringContext="//@schemas.246"/>
+  <schemas type="object" example="{&quot;080101&quot;:{&quot;error_code&quot;:&quot;080101&quot;,&quot;error_msg&quot;:&quot;PLATFORM_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Platform not found&quot;},&quot;080103&quot;:{&quot;error_code&quot;:&quot;080103&quot;,&quot;error_msg&quot;:&quot;INCORRECT_VERSION&quot;,&quot;error_desc&quot;:&quot;Incorrect version&quot;}}" properties="//@schemas.252 //@schemas.253 //@schemas.254"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.251"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.251"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.251"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.256 //@schemas.257 //@schemas.258"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.255"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.255"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.255"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.260 //@schemas.261 //@schemas.262"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.259"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.259"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.259"/>
+  <schemas type="object" example="{&quot;faqs&quot;:{&quot;header&quot;:&quot;Lavanapp&quot;,&quot;faq&quot;:{&quot;title&quot;:&quot;&#xbf;Qu&#xe9; es Lavanapp?&quot;,&quot;content&quot;:&quot;&lt;p>Lavanapp es la tintorer&#xed;a app. &lt;p/>&quot;}}}" properties="//@schemas.264" required="//@schemas.264"/>
+  <schemas type="object" name="faqs" properties="//@schemas.265 //@schemas.266" declaringContext="//@schemas.263"/>
+  <schemas type="string" name="header" declaringContext="//@schemas.264"/>
+  <schemas type="array" name="faq" items="//@schemas.267" declaringContext="//@schemas.264"/>
+  <schemas type="object" properties="//@schemas.268 //@schemas.269" required="//@schemas.268 //@schemas.269"/>
+  <schemas type="string" name="title" declaringContext="//@schemas.267"/>
+  <schemas type="string" name="content" declaringContext="//@schemas.267"/>
+  <schemas type="object" example="{&quot;080101&quot;:{&quot;error_code&quot;:&quot;080101&quot;,&quot;error_msg&quot;:&quot;PLATFORM_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Platform not found&quot;},&quot;080103&quot;:{&quot;error_code&quot;:&quot;080103&quot;,&quot;error_msg&quot;:&quot;INCORRECT_VERSION&quot;,&quot;error_desc&quot;:&quot;Incorrect version&quot;}}" properties="//@schemas.271 //@schemas.272 //@schemas.273"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.270"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.270"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.270"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.275 //@schemas.276 //@schemas.277"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.274"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.274"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.274"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.279 //@schemas.280 //@schemas.281"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.278"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.278"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.278"/>
+  <schemas type="object" example="{&quot;tyc&quot;:&quot;1. INTRODUCCI&#xd3;N &lt;br>&lt;br> La contrataci&#xf3;n de los servicios a trav&#xe9;s del sitio web...&quot;}" properties="//@schemas.283" required="//@schemas.283"/>
+  <schemas type="string" name="tyc" declaringContext="//@schemas.282"/>
+  <schemas type="object" example="{&quot;080101&quot;:{&quot;error_code&quot;:&quot;080101&quot;,&quot;error_msg&quot;:&quot;PLATFORM_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Platform not found&quot;},&quot;080103&quot;:{&quot;error_code&quot;:&quot;080103&quot;,&quot;error_msg&quot;:&quot;INCORRECT_VERSION&quot;,&quot;error_desc&quot;:&quot;Incorrect version&quot;}}" properties="//@schemas.285 //@schemas.286 //@schemas.287"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.284"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.284"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.284"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.289 //@schemas.290 //@schemas.291"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.288"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.288"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.288"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.293 //@schemas.294 //@schemas.295"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.292"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.292"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.292"/>
+  <schemas type="object" example="{&quot;pdp&quot;:&quot;La presente Pol&#xed;tica de Privacidad regula el tratamiento que PARA&#xcd;SO ALDEA, S.L. (en adelante, 'LAVANAPP', 'el Administrador de la Web' o 'nosotros')...&quot;}" properties="//@schemas.297" required="//@schemas.297"/>
+  <schemas type="string" name="pdp" declaringContext="//@schemas.296"/>
+  <schemas type="object" example="{&quot;080101&quot;:{&quot;error_code&quot;:&quot;080101&quot;,&quot;error_msg&quot;:&quot;PLATFORM_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Platform not found&quot;},&quot;080103&quot;:{&quot;error_code&quot;:&quot;080103&quot;,&quot;error_msg&quot;:&quot;INCORRECT_VERSION&quot;,&quot;error_desc&quot;:&quot;Incorrect version&quot;}}" properties="//@schemas.299 //@schemas.300 //@schemas.301"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.298"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.298"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.298"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.303 //@schemas.304 //@schemas.305"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.302"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.302"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.302"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.307 //@schemas.308 //@schemas.309"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.306"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.306"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.306"/>
+  <schemas type="object" example="{&quot;order_id&quot;:3141}" properties="//@schemas.311" required="//@schemas.311"/>
+  <schemas type="integer" name="order_id" declaringContext="//@schemas.310"/>
+  <schemas type="object" example="{&quot;080101&quot;:{&quot;error_code&quot;:&quot;080101&quot;,&quot;error_msg&quot;:&quot;PLATFORM_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Platform not found&quot;},&quot;080103&quot;:{&quot;error_code&quot;:&quot;080103&quot;,&quot;error_msg&quot;:&quot;INCORRECT_VERSION&quot;,&quot;error_desc&quot;:&quot;Incorrect version&quot;},&quot;010802&quot;:{&quot;error_code&quot;:&quot;010802&quot;,&quot;error_msg&quot;:&quot;ERROR_SAVING_EXPERIENCE&quot;,&quot;error_desc&quot;:&quot;No se ha podido guardar la encuesta.&quot;},&quot;010803&quot;:{&quot;error_code&quot;:&quot;010803&quot;,&quot;error_msg&quot;:&quot;INCORRECT_SCORE&quot;,&quot;error_desc&quot;:&quot;La puntuaci&#xf3;n debe ser un n&#xfa;mero comprendido entre le 1 y el 5.&quot;},&quot;010804&quot;:{&quot;error_code&quot;:&quot;010804&quot;,&quot;error_msg&quot;:&quot;INCORRECT_EXPERIENCE_INCIDENCE_FORMAT&quot;,&quot;error_desc&quot;:&quot;Se debe especificar un tipo de incidencia.&quot;},&quot;010805&quot;:{&quot;error_code&quot;:&quot;010805&quot;,&quot;error_msg&quot;:&quot;INCORRECT_EXPERIENCE_INCIDENCE_TYPE&quot;,&quot;error_desc&quot;:&quot;El tipo de incidencia especificado no es v&#xe1;lido.&quot;}}" properties="//@schemas.313 //@schemas.314 //@schemas.315"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.312"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.312"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.312"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.317 //@schemas.318 //@schemas.319"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.316"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.316"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.316"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.321 //@schemas.322 //@schemas.323"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.320"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.320"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.320"/>
+  <schemas type="object" example="{&quot;ota&quot;:12345,&quot;id&quot;:&quot;2217&quot;}" properties="//@schemas.325 //@schemas.326" required="//@schemas.325 //@schemas.326"/>
+  <schemas type="integer" name="ota" declaringContext="//@schemas.324"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.324"/>
+  <schemas type="object" example="{&quot;010110&quot;:{&quot;error_code&quot;:&quot;010110&quot;,&quot;error_msg&quot;:&quot;INVALID_REGISTRATION_TYPE&quot;,&quot;error_desc&quot;:&quot;Tipo de registro inv&#xe1;lido&quot;},&quot;010113&quot;:{&quot;error_code&quot;:&quot;010113&quot;,&quot;error_msg&quot;:&quot;INCORRECT_DATA&quot;,&quot;error_desc&quot;:&quot;Incorrect data&quot;},&quot;010107&quot;:{&quot;error_code&quot;:&quot;010107&quot;,&quot;error_msg&quot;:&quot;OTP_COULD_NOT_BE_SEND&quot;,&quot;error_desc&quot;:&quot;OTP no se pudo enviar&quot;},&quot;010102&quot;:{&quot;error_code&quot;:&quot;010102&quot;,&quot;error_msg&quot;:&quot;TEL_EXISTS&quot;,&quot;error_desc&quot;:&quot;Telephone exists&quot;},&quot;010106&quot;:{&quot;error_code&quot;:&quot;010106&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;Ha habido un error con el registro. Por favor, contacta con nosotros en el 606 198 163.&quot;},&quot;010101&quot;:{&quot;error_code&quot;:&quot;010101&quot;,&quot;error_msg&quot;:&quot;EMAIL_EXISTS&quot;,&quot;error_desc&quot;:&quot;Email exists&quot;},&quot;010114&quot;:{&quot;error_code&quot;:&quot;010114&quot;,&quot;error_msg&quot;:&quot;INVALID_FACEBOOK_TOKEN&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error de autenticaci&#xf3;n con tu cuenta de facebook.&quot;},&quot;010115&quot;:{&quot;error_code&quot;:&quot;010115&quot;,&quot;error_msg&quot;:&quot;FAILED_CONNECT_FACEBOOK&quot;,&quot;error_desc&quot;:&quot;No se ha podido conectar con facebook.&quot;}}" properties="//@schemas.328 //@schemas.329 //@schemas.330"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.327"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.327"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.327"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.332 //@schemas.333 //@schemas.334"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.331"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.331"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.331"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;010116&quot;:{&quot;error_code&quot;:&quot;010116&quot;,&quot;error_msg&quot;:&quot;EMAIL_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Por favor, introduce el email&quot;}}" properties="//@schemas.336 //@schemas.337 //@schemas.338"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.335"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.335"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.335"/>
+  <schemas type="object" example="{&quot;id&quot;:&quot;2217&quot;,&quot;name&quot;:&quot;Juan&quot;,&quot;email&quot;:&quot;testing_android@lavanapp.com&quot;,&quot;phone_no&quot;:&quot;536363636&quot;,&quot;want_news&quot;:&quot;true&quot;,&quot;orders&quot;:16,&quot;token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0aW5nX2FuZHJvaWRAbGF2YW5hcHAuY29tIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoiMjAxNi0xMS0wMyAxMjo1NzoyNyIsInR5cGUiOiJhdXRoIiwiZXhwIjoxNDg2ODMzOTQ4LCJleHBfc2Vzc2lvbiI6MTQ4MTgyMjc0OH0.OBrpLk8o9hBCUBq7eht8QzFKY8djVoPi57cSkW45fZY&quot;}" properties="//@schemas.340 //@schemas.341 //@schemas.342 //@schemas.343 //@schemas.344 //@schemas.345 //@schemas.346" required="//@schemas.340 //@schemas.341 //@schemas.342 //@schemas.343 //@schemas.344 //@schemas.345 //@schemas.346"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.339"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.339"/>
+  <schemas type="string" name="email" declaringContext="//@schemas.339"/>
+  <schemas type="string" name="phone_no" declaringContext="//@schemas.339"/>
+  <schemas type="string" name="want_news" declaringContext="//@schemas.339"/>
+  <schemas type="integer" name="orders" declaringContext="//@schemas.339"/>
+  <schemas type="string" name="token" declaringContext="//@schemas.339"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;},&quot;010201&quot;:{&quot;error_code&quot;:&quot;010201&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;},&quot;010203&quot;:{&quot;error_code&quot;:&quot;010203&quot;,&quot;error_msg&quot;:&quot;CONSUMER_HAS_BEEN_BLOCKED&quot;,&quot;error_desc&quot;:&quot;Consumer has been blocked&quot;}}" properties="//@schemas.348 //@schemas.349 //@schemas.350"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.347"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.347"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.347"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;010204&quot;:{&quot;error_code&quot;:&quot;010204&quot;,&quot;error_msg&quot;:&quot;TYPE_LOGIN_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Type login required&quot;},&quot;010205&quot;:{&quot;error_code&quot;:&quot;010205&quot;,&quot;error_msg&quot;:&quot;INVALID_TYPE_LOGIN&quot;,&quot;error_desc&quot;:&quot;Invalid type login&quot;},&quot;010206&quot;:{&quot;error_code&quot;:&quot;010206&quot;,&quot;error_msg&quot;:&quot;EMAIL_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Por favor, introduce el email&quot;},&quot;010207&quot;:{&quot;error_code&quot;:&quot;010207&quot;,&quot;error_msg&quot;:&quot;INVALID_FACEBOOK_TOKEN&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error de autenticaci&#xf3;n con tu cuenta de facebook.&quot;},&quot;010208&quot;:{&quot;error_code&quot;:&quot;010208&quot;,&quot;error_msg&quot;:&quot;FAILED_CONNECT_FACEBOOK&quot;,&quot;error_desc&quot;:&quot;No se ha podido conectar con facebook.&quot;}}" properties="//@schemas.352 //@schemas.353 //@schemas.354"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.351"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.351"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.351"/>
+  <schemas type="object" example="{&quot;token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0aW5nX2FuZHJvaWRAbGF2YW5hcHAuY29tIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoiMjAxNi0xMS0wMyAxMjo1NzoyNyIsInR5cGUiOiJhdXRoIiwiZXhwIjoxNDg2ODMzOTQ4LCJleHBfc2Vzc2lvbiI6MTQ4MTgyMjc0OH0.OBrpLk8o9hBCUBq7eht8QzFKY8djVoPi57cSkW45fZY&quot;}" properties="//@schemas.356" required="//@schemas.356"/>
+  <schemas type="string" name="token" declaringContext="//@schemas.355"/>
+  <schemas type="object" example="{&quot;090201&quot;:{&quot;error_code&quot;:&quot;090201&quot;,&quot;error_msg&quot;:&quot;TYPE_REFRESH_TOKEN_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Type refresh token required&quot;},&quot;090202&quot;:{&quot;error_code&quot;:&quot;090202&quot;,&quot;error_msg&quot;:&quot;INVALID_TYPE_REFRESH_TOKEN&quot;,&quot;error_desc&quot;:&quot;Invalid type refresh token&quot;},&quot;090203&quot;:{&quot;error_code&quot;:&quot;090203&quot;,&quot;error_msg&quot;:&quot;PASSWOR_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Password is required&quot;},&quot;090204&quot;:{&quot;error_code&quot;:&quot;090204&quot;,&quot;error_msg&quot;:&quot;EMAIL_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Email is required&quot;},&quot;090205&quot;:{&quot;error_code&quot;:&quot;090205&quot;,&quot;error_msg&quot;:&quot;REFRESH_TOKEN_ERROR&quot;,&quot;error_desc&quot;:&quot;Refresh token error&quot;}}" properties="//@schemas.358 //@schemas.359 //@schemas.360"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.357"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.357"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.357"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.362 //@schemas.363 //@schemas.364"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.361"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.361"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.361"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.366 //@schemas.367 //@schemas.368"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.365"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.365"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.365"/>
+  <schemas type="object" example="{&quot;mail_send&quot;:1}" properties="//@schemas.370 //@schemas.371" required="//@schemas.371"/>
+  <schemas type="string" description="return consumer id if exists a consumer with the email" name="consumer_id" declaringContext="//@schemas.369"/>
+  <schemas type="integer" name="mail_send" declaringContext="//@schemas.369"/>
+  <schemas type="object" example="{&quot;010601&quot;:{&quot;error_code&quot;:&quot;010601&quot;,&quot;error_msg&quot;:&quot;EMAIL_NOT_EXISTS&quot;,&quot;error_desc&quot;:&quot;email not exists&quot;},&quot;010604&quot;:{&quot;error_code&quot;:&quot;010604&quot;,&quot;error_msg&quot;:&quot;EMAIL_USER_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Email and user not match&quot;},&quot;010603&quot;:{&quot;error_code&quot;:&quot;010603&quot;,&quot;error_msg&quot;:&quot;INVALID_EMAIL&quot;,&quot;error_desc&quot;:&quot;El formato del email introducido es incorrecto.&quot;},&quot;010602&quot;:{&quot;error_code&quot;:&quot;010602&quot;,&quot;error_msg&quot;:&quot;MAIL_NOT_SEND&quot;,&quot;error_desc&quot;:&quot;No se ha podido enviar el email para recuperar contrase&#xf1;a. Por favor, vuelve a intentarlo. Si el error persiste contacta con nosotros en el 606 198 163.&quot;}}" properties="//@schemas.373 //@schemas.374 //@schemas.375"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.372"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.372"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.372"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.377 //@schemas.378 //@schemas.379"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.376"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.376"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.376"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.381 //@schemas.382 //@schemas.383"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.380"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.380"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.380"/>
+  <schemas type="object" example="{&quot;result&quot;:&quot;ok&quot;}" properties="//@schemas.385" required="//@schemas.385"/>
+  <schemas type="string" name="result" declaringContext="//@schemas.384"/>
+  <schemas type="object" example="{&quot;(nuevo)010505&quot;:{&quot;error_code&quot;:&quot;010505&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_CONSUMER_NAME&quot;,&quot;error_desc&quot;:&quot;El nombre es incorrecto. Debe contener caracteres alfab&#xe9;ticos de longitud menor que 100.&quot;}}" properties="//@schemas.387 //@schemas.388 //@schemas.389"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.386"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.386"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.386"/>
+  <schemas type="object" example="{&quot;090101&quot;:{&quot;error_code&quot;:&quot;090101&quot;,&quot;error_msg&quot;:&quot;LOGIN_SECURITY_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Login security required&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.391 //@schemas.392 //@schemas.393"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.390"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.390"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.390"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.395 //@schemas.396 //@schemas.397"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.394"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.394"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.394"/>
+  <schemas type="object" example="{&quot;result&quot;:&quot;ok&quot;}" properties="//@schemas.399" required="//@schemas.399"/>
+  <schemas type="string" name="result" declaringContext="//@schemas.398"/>
+  <schemas type="object" example="{&quot;010301&quot;:{&quot;error_code&quot;:&quot;010301&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_PWD&quot;,&quot;error_desc&quot;:&quot;Incorrect format password&quot;},&quot;010303&quot;:{&quot;error_code&quot;:&quot;010303&quot;,&quot;error_msg&quot;:&quot;OLD_PASSWORD_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Old password does not match&quot;},&quot;010304&quot;:{&quot;error_code&quot;:&quot;010304&quot;,&quot;error_msg&quot;:&quot;NEW_AND_OLD_PWD_MUST_BE_DIFFERENT&quot;,&quot;error_desc&quot;:&quot;The new and old password must be different&quot;},&quot;010305&quot;:{&quot;error_code&quot;:&quot;010305&quot;,&quot;error_msg&quot;:&quot;NEW_PWD_AND_CONFIRMATION_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;New password and confirmation do not match&quot;},&quot;010306&quot;:{&quot;error_code&quot;:&quot;010306&quot;,&quot;error_msg&quot;:&quot;OLD_PASSWORD_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Por favor, introduce tu contrase&#xf1;a&quot;}}" properties="//@schemas.401 //@schemas.402 //@schemas.403"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.400"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.400"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.400"/>
+  <schemas type="object" example="{&quot;090101&quot;:{&quot;error_code&quot;:&quot;090101&quot;,&quot;error_msg&quot;:&quot;LOGIN_SECURITY_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Login security required&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.405 //@schemas.406 //@schemas.407"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.404"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.404"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.404"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.409 //@schemas.410 //@schemas.411"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.408"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.408"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.408"/>
+  <schemas type="object" example="{&quot;ota_send_status&quot;:true}" properties="//@schemas.413" required="//@schemas.413"/>
+  <schemas type="boolean" name="ota_send_status" declaringContext="//@schemas.412"/>
+  <schemas type="object" example="{&quot;010701&quot;:{&quot;error_code&quot;:&quot;010701&quot;,&quot;error_msg&quot;:&quot;INVALID_TOKEN&quot;,&quot;error_desc&quot;:&quot;Token payment does not exists&quot;},&quot;010111&quot;:{&quot;error_code&quot;:&quot;010111&quot;,&quot;error_msg&quot;:&quot;ERR_INVALID_TYPE_SEND&quot;,&quot;error_desc&quot;:&quot;Tipo de env&#xed;o inv&#xe1;lido&quot;},&quot;010112&quot;:{&quot;error_code&quot;:&quot;010112&quot;,&quot;error_msg&quot;:&quot;INVALID_USER_ID&quot;,&quot;error_desc&quot;:&quot;Invalid user id&quot;}}" properties="//@schemas.415 //@schemas.416 //@schemas.417"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.414"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.414"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.414"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.419 //@schemas.420 //@schemas.421"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.418"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.418"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.418"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.423 //@schemas.424 //@schemas.425"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.422"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.422"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.422"/>
+  <schemas type="object" example="{&quot;verification_status&quot;:1,&quot;token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0aW5nX2FuZHJvaWRAbGF2YW5hcHAuY29tIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoiMjAxNi0xMS0wMyAxMjo1NzoyNyIsInR5cGUiOiJhdXRoIiwiZXhwIjoxNDg2OTcwNzU3LCJleHBfc2Vzc2lvbiI6MTQ4MTk1OTU1N30.4MNEr6K8-g3IAcxfXVfDXR3C4zmbAqoMtK9Jjb6XYz0&quot;}" properties="//@schemas.427 //@schemas.428" required="//@schemas.427 //@schemas.428"/>
+  <schemas type="integer" name="verification_status" declaringContext="//@schemas.426"/>
+  <schemas type="string" name="token" declaringContext="//@schemas.426"/>
+  <schemas type="object" example="{&quot;010109&quot;:{&quot;error_code&quot;:&quot;010109&quot;,&quot;error_msg&quot;:&quot;INVALID_OTA&quot;,&quot;error_desc&quot;:&quot;El c&#xf3;digo de verificaci&#xf3;n introducido no es correcto&quot;},&quot;010112&quot;:{&quot;error_code&quot;:&quot;010112&quot;,&quot;error_msg&quot;:&quot;INVALID_USER_ID&quot;,&quot;error_desc&quot;:&quot;Invalid user id&quot;}}" properties="//@schemas.430 //@schemas.431 //@schemas.432"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.429"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.429"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.429"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.434 //@schemas.435 //@schemas.436"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.433"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.433"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.433"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.438 //@schemas.439 //@schemas.440"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.437"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.437"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.437"/>
+  <schemas type="object" example="{&quot;fcm_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0aW5nX2FuZHJvaWRAbGF2YW5hcHAuY29tIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoiMjAxNi0xMS0wMyAxMjo1NzoyNyIsInR5cGUiOiJhdXRoIiwiZXhwIjoxNDg2OTcwNzU3LCJleHBfc2Vzc2lvbiI6MTQ4MTk1OTU1N30.4MNEr6K8-g3IAcxfXVfDXR3C4zmbAqoMtK9Jjb6XYz0&quot;}" properties="//@schemas.442" required="//@schemas.442"/>
+  <schemas type="string" name="fcm_token" declaringContext="//@schemas.441"/>
+  <schemas type="object" example="{&quot;010109&quot;:{&quot;error_code&quot;:&quot;010507&quot;,&quot;error_msg&quot;:&quot;FCM_TOKEN_NOT_NULL&quot;,&quot;error_desc&quot;:&quot;El campo fcm_token no puede ser nulo&quot;}}" properties="//@schemas.444 //@schemas.445 //@schemas.446"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.443"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.443"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.443"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.448 //@schemas.449 //@schemas.450"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.447"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.447"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.447"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.452 //@schemas.453 //@schemas.454"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.451"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.451"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.451"/>
+  <schemas type="object" example="{&quot;categories&quot;:{&quot;id&quot;:&quot;12&quot;,&quot;name&quot;:&quot;Ofertas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/app/webroot/Uploads/Category/VW5TL0.png&quot;,&quot;products&quot;:{&quot;id&quot;:&quot;420&quot;,&quot;name&quot;:&quot;5 camisas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/app/webroot/Uploads/Products/LL3KK0.jpg&quot;,&quot;price&quot;:&quot;15.95&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;}}}" properties="//@schemas.456"/>
+  <schemas type="array" description="products and categories" minItems="0" name="categories" items="//@schemas.17" declaringContext="//@schemas.455"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.458 //@schemas.459 //@schemas.460"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.457"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.457"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.457"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.462 //@schemas.463 //@schemas.464"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.461"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.461"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.461"/>
+  <schemas type="object" example="{&quot;product&quot;:{&quot;id&quot;:&quot;420&quot;,&quot;category_id&quot;:&quot;12&quot;,&quot;name&quot;:&quot;5 camisas&quot;,&quot;price&quot;:&quot;15.95&quot;,&quot;description&quot;:&quot;5 camisas lavadas y planchadas.&quot;,&quot;description_large&quot;:&quot;Oferta de 5 camisas. Lavaremos tus camisas, las plancharemos y te las entregaremos en tu domicilio en 24 horas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/app/webroot/Uploads/Products/LL3KK0.jpg&quot;,&quot;preparation_time&quot;:&quot;24&quot;,&quot;feature&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Temperatura de lavado&quot;,&quot;values&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;value&quot;:&quot;10&#xba;C&quot;}},&quot;attribute_group&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Tejidos&quot;,&quot;group_type_id&quot;:&quot;3&quot;,&quot;group_type&quot;:&quot;Select&quot;,&quot;inc_price&quot;:&quot;&quot;,&quot;attributes&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;value&quot;:&quot;Seda&quot;,&quot;inc_price&quot;:&quot;6.00&quot;}}}}" properties="//@schemas.466" required="//@schemas.466"/>
+  <schemas type="array" description="product detail" minItems="0" name="product" items="//@schemas.18" declaringContext="//@schemas.465"/>
+  <schemas type="object" example="{&quot;030101&quot;:{&quot;error_code&quot;:&quot;030101&quot;,&quot;error_msg&quot;:&quot;PRODUCT_NOT_EXISTS&quot;,&quot;error_desc&quot;:&quot;Product not exists&quot;},&quot;030102&quot;:{&quot;error_code&quot;:&quot;030102&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.468 //@schemas.469 //@schemas.470"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.467"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.467"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.467"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.472 //@schemas.473 //@schemas.474"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.471"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.471"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.471"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.476 //@schemas.477 //@schemas.478"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.475"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.475"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.475"/>
+  <schemas type="object" example="{&quot;order_history_list&quot;:{&quot;id&quot;:&quot;2971&quot;,&quot;code&quot;:&quot;198F27621B7A&quot;,&quot;total_price&quot;:&quot;15.95&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;,&quot;product_count&quot;:&quot;1&quot;,&quot;created_on&quot;:&quot;2016-12-23 10:10:06&quot;,&quot;pickup_date&quot;:&quot;2016-12-15&quot;,&quot;pickup_time&quot;:&quot;18:00-19:00&quot;,&quot;delivery_date&quot;:&quot;2016-12-16&quot;,&quot;delivery_time&quot;:&quot;13:00-13:30&quot;,&quot;status_id&quot;:&quot;1&quot;,&quot;status&quot;:&quot;Confirmado&quot;}}" properties="//@schemas.480" required="//@schemas.480"/>
+  <schemas type="array" description="list of all consumer orders" minItems="0" name="order_history_list" items="//@schemas.19" declaringContext="//@schemas.479"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.482 //@schemas.483 //@schemas.484"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.481"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.481"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.481"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.486 //@schemas.487 //@schemas.488"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.485"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.485"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.485"/>
+  <schemas type="object" example="{&quot;code&quot;:&quot;194899A04AFA&quot;}" properties="//@schemas.490" required="//@schemas.490"/>
+  <schemas type="string" name="code" declaringContext="//@schemas.489"/>
+  <schemas type="object" example="{&quot;040406&quot;:{&quot;error_code&quot;:&quot;040406&quot;,&quot;error_msg&quot;:&quot;NOT_MATCH_CALCULATED_AND_RECEIVED_PRICE&quot;,&quot;error_desc&quot;:&quot;Does not match the price calculated with the price received&quot;},&quot;040404&quot;:{&quot;error_code&quot;:&quot;040404&quot;,&quot;error_msg&quot;:&quot;ORDER_COULD_NOT_BE_PLACED&quot;,&quot;error_desc&quot;:&quot;Su pedido no pudo ser realizado, por favor intentalo de nuevo&quot;},&quot;040417&quot;:{&quot;error_code&quot;:&quot;040417&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.492 //@schemas.493 //@schemas.494"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.491"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.491"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.491"/>
+  <schemas type="object" example="{&quot;090101&quot;:{&quot;error_code&quot;:&quot;090101&quot;,&quot;error_msg&quot;:&quot;LOGIN_SECURITY_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Login security required&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.496 //@schemas.497 //@schemas.498"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.495"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.495"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.495"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.500 //@schemas.501 //@schemas.502"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.499"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.499"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.499"/>
+  <schemas type="object" example="{&quot;order&quot;:{&quot;code&quot;:&quot;198F27621B7A&quot;,&quot;total_price&quot;:&quot;5.95&quot;,&quot;currency&quot;:&quot;&#x20ac;&quot;,&quot;product_count&quot;:&quot;1&quot;,&quot;created_on&quot;:&quot;2016-12-23 10:10:06&quot;,&quot;pickup_date&quot;:&quot;2016-12-15&quot;,&quot;pickup_time&quot;:&quot;18:00-19:00&quot;,&quot;delivery_date&quot;:&quot;2016-12-16&quot;,&quot;delivery_time&quot;:&quot;13:00-13:30&quot;,&quot;status_id&quot;:&quot;1&quot;,&quot;statuses&quot;:{&quot;1&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Confirmado&quot;,&quot;path_url&quot;:&quot;https://192.168.1.80/img/android/&quot;,&quot;img_name&quot;:&quot;cesta.png&quot;},&quot;2&quot;:{&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;Recogiendo&quot;,&quot;path_url&quot;:&quot;https://192.168.1.80/img/ios/&quot;,&quot;img_name&quot;:&quot;furgo.png&quot;}},&quot;status&quot;:&quot;Confirmado&quot;,&quot;special_instructions&quot;:&quot;&quot;,&quot;coupon&quot;:{&quot;id&quot;:&quot;55&quot;,&quot;name&quot;:&quot;ANDROIDA&quot;,&quot;discount_type_id&quot;:&quot;2&quot;,&quot;discount&quot;:&quot;10&quot;},&quot;pickup_address&quot;:{&quot;id&quot;:&quot;157&quot;,&quot;name&quot;:&quot;Mi casa&quot;,&quot;street&quot;:&quot;Carretera de Canillas&quot;,&quot;street_number&quot;:&quot;138&quot;,&quot;complement&quot;:&quot;primera planta&quot;,&quot;special_instructions&quot;:&quot;dejar al portero&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;township&quot;:&quot;Madrid&quot;,&quot;city&quot;:&quot;Madrid&quot;,&quot;province&quot;:&quot;Madrid&quot;,&quot;state&quot;:&quot;Madrid&quot;},&quot;delivery_address&quot;:{&quot;id&quot;:&quot;157&quot;,&quot;name&quot;:&quot;Mi casa&quot;,&quot;street&quot;:&quot;Carretera de Canillas&quot;,&quot;street_number&quot;:&quot;138&quot;,&quot;complement&quot;:&quot;primera planta&quot;,&quot;special_instructions&quot;:&quot;dejar al portero&quot;,&quot;postal_code&quot;:&quot;28043&quot;,&quot;township&quot;:&quot;Madrid&quot;,&quot;city&quot;:&quot;Madrid&quot;,&quot;province&quot;:&quot;Madrid&quot;,&quot;state&quot;:&quot;Madrid&quot;},&quot;products&quot;:{&quot;id&quot;:&quot;420&quot;,&quot;num_products&quot;:&quot;1&quot;,&quot;category_id&quot;:&quot;12&quot;,&quot;category&quot;:&quot;Ofertas&quot;,&quot;product&quot;:&quot;5 camisas&quot;,&quot;image&quot;:&quot;http://api.lavanapp.com/Uploads/Products/LL3KK0.jpg&quot;,&quot;preparation_time&quot;:&quot;24&quot;,&quot;price&quot;:&quot;15.95&quot;,&quot;multiplier_value&quot;:&quot;&quot;,&quot;multiplier_name&quot;:&quot;&quot;,&quot;attribute_group&quot;:{&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Tejidos&quot;,&quot;group_type&quot;:&quot;3&quot;,&quot;inc_price&quot;:&quot;&quot;,&quot;attributes&quot;:{&quot;id&quot;:&quot;5&quot;,&quot;value&quot;:&quot;Lana&quot;,&quot;inc_price&quot;:&quot;3.00&quot;}}}}}" properties="//@schemas.504" required="//@schemas.504"/>
+  <schemas type="array" description="get an order detail" minItems="0" name="order" items="//@schemas.20" declaringContext="//@schemas.503"/>
+  <schemas type="object" example="{&quot;040302&quot;:{&quot;error_code&quot;:&quot;040302&quot;,&quot;error_msg&quot;:&quot;ORDER_NOT_BELONG_USER&quot;,&quot;error_desc&quot;:&quot;The order does not belong to the user&quot;},&quot;040417&quot;:{&quot;error_code&quot;:&quot;040417&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.506 //@schemas.507 //@schemas.508"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.505"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.505"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.505"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.510 //@schemas.511 //@schemas.512"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.509"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.509"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.509"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.514 //@schemas.515 //@schemas.516"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.513"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.513"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.513"/>
+  <schemas type="object" example="{&quot;express_service&quot;:true}" properties="//@schemas.518" required="//@schemas.518"/>
+  <schemas type="boolean" name="express_service" declaringContext="//@schemas.517"/>
+  <schemas type="object" example="{&quot;040437&quot;:{&quot;error_code&quot;:&quot;040437&quot;,&quot;error_msg&quot;:&quot;CART_PRODUCTS_NOT_COMPATIBLE&quot;,&quot;error_desc&quot;:&quot;No se pueden mezclar los productos express con otra categor&#xed;a&quot;},&quot;040438&quot;:{&quot;error_code&quot;:&quot;040438&quot;,&quot;error_msg&quot;:&quot;SELECT_A_TYPE_OF_EXPRES_SERVICE&quot;,&quot;error_desc&quot;:&quot;Debe seleccionar un tipo de servicio express&quot;},&quot;040439&quot;:{&quot;error_code&quot;:&quot;040439&quot;,&quot;error_msg&quot;:&quot;SELECT_SAME_EXPRES_SERVICE&quot;,&quot;error_desc&quot;:&quot;Los tiempos de entrega no son iguales. Selecciona productos con el mismo tiempo de entrega.&quot;}}" properties="//@schemas.520 //@schemas.521 //@schemas.522"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.519"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.519"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.519"/>
+  <schemas type="object" example="{&quot;090101&quot;:{&quot;error_code&quot;:&quot;090101&quot;,&quot;error_msg&quot;:&quot;LOGIN_SECURITY_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Login security required&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.524 //@schemas.525 //@schemas.526"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.523"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.523"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.523"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.528 //@schemas.529 //@schemas.530"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.527"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.527"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.527"/>
+  <schemas type="object" example="{&quot;id&quot;:&quot;55&quot;,&quot;name&quot;:&quot;ANDROIDA&quot;,&quot;discount_type&quot;:&quot;2&quot;,&quot;discount&quot;:&quot;5&quot;}" properties="//@schemas.532 //@schemas.533 //@schemas.534 //@schemas.535" required="//@schemas.532 //@schemas.533 //@schemas.534 //@schemas.535"/>
+  <schemas type="string" name="id" declaringContext="//@schemas.531"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.531"/>
+  <schemas type="string" description="1 if discount is fixed an 2 if discount is percentage" name="discount_type" declaringContext="//@schemas.531"/>
+  <schemas type="string" name="discount" declaringContext="//@schemas.531"/>
+  <schemas type="object" example="{&quot;050101&quot;:{&quot;error_code&quot;:&quot;050101&quot;,&quot;error_msg&quot;:&quot;COUPON_INVALID&quot;,&quot;error_desc&quot;:&quot;Coupon invalid&quot;}}" properties="//@schemas.537 //@schemas.538 //@schemas.539"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.536"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.536"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.536"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.541 //@schemas.542 //@schemas.543"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.540"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.540"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.540"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.545 //@schemas.546 //@schemas.547"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.544"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.544"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.544"/>
+  <schemas type="object" example="{&quot;schedule&quot;:{&quot;date&quot;:&quot;2016-12-16&quot;,&quot;text_day&quot;:&quot;Ma&#xf1;ana&quot;,&quot;closed&quot;:false,&quot;slots&quot;:{&quot;id&quot;:&quot;161&quot;,&quot;slot&quot;:&quot;17:00 - 18:00&quot;,&quot;closed&quot;:false}}}" properties="//@schemas.549"/>
+  <schemas type="array" description="list of available date and time" minItems="0" name="schedule" items="//@schemas.14" declaringContext="//@schemas.548"/>
+  <schemas type="object" example="{&quot;060501&quot;:{&quot;error_code&quot;:&quot;060501&quot;,&quot;error_msg&quot;:&quot;INCORRECT_PARAMS&quot;,&quot;error_desc&quot;:&quot;Incorrect params&quot;}}" properties="//@schemas.551 //@schemas.552 //@schemas.553"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.550"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.550"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.550"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.555 //@schemas.556 //@schemas.557"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.554"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.554"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.554"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.559 //@schemas.560 //@schemas.561"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.558"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.558"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.558"/>
+  <schemas type="object" example="{&quot;schedule&quot;:{&quot;date&quot;:&quot;2016-12-15&quot;,&quot;text_day&quot;:&quot;Hoy&quot;,&quot;closed&quot;:false,&quot;slots&quot;:{&quot;id&quot;:&quot;161&quot;,&quot;slot&quot;:&quot;17:00 - 18:00&quot;,&quot;closed&quot;:false}}}" properties="//@schemas.563"/>
+  <schemas type="array" description="list of available date and time" minItems="0" name="schedule" items="//@schemas.14" declaringContext="//@schemas.562"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.565 //@schemas.566 //@schemas.567"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.564"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.564"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.564"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.569 //@schemas.570 //@schemas.571"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.568"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.568"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.568"/>
+  <schemas type="object" example="{&quot;states&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;A Coru&#xf1;a&quot;,&quot;status&quot;:&quot;1&quot;,&quot;cities&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;state_id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;A Coru&#xf1;a&quot;,&quot;status&quot;:&quot;1&quot;}}}" properties="//@schemas.573"/>
+  <schemas type="array" description="list of states and cities" minItems="0" name="states" items="//@schemas.16" declaringContext="//@schemas.572"/>
+  <schemas type="object" example="{&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.575 //@schemas.576 //@schemas.577"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.574"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.574"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.574"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.579 //@schemas.580 //@schemas.581"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.578"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.578"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.578"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.583 //@schemas.584 //@schemas.585"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.582"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.582"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.582"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.587 //@schemas.588 //@schemas.589"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.586"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.586"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.586"/>
+  <schemas type="object" example="{&quot;address_id&quot;:&quot;265&quot;}" properties="//@schemas.591" required="//@schemas.591"/>
+  <schemas type="string" name="address_id" declaringContext="//@schemas.590"/>
+  <schemas type="object" example="{&quot;010401&quot;:{&quot;error_code&quot;:&quot;010401&quot;,&quot;error_msg&quot;:&quot;ADDRESS_ALREADY_ASSOCIATED&quot;,&quot;error_desc&quot;:&quot;Address is already associated with the user&quot;},&quot;010403&quot;:{&quot;error_code&quot;:&quot;010403&quot;,&quot;error_msg&quot;:&quot;ERROR_SAVING_ADDRESS&quot;,&quot;error_desc&quot;:&quot;Error occurred saving address&quot;},&quot;010404&quot;:{&quot;error_code&quot;:&quot;010404&quot;,&quot;error_msg&quot;:&quot;ERROR_SAVING_ASSOCIATION&quot;,&quot;error_desc&quot;:&quot;Error occurred saving association&quot;},&quot;010408&quot;:{&quot;error_code&quot;:&quot;010408&quot;,&quot;error_msg&quot;:&quot;POSTAL_CODE_NOT_WORKING&quot;,&quot;error_desc&quot;:&quot;Lo sentimos, Lavanapp no opera en esta zona. Estamos trabajando para ampliar nuestra &#xe1;rea de servicio. &#xa1;Muy pronto llegaremos hasta all&#xed;!&quot;},&quot;(nuevo)010409&quot;:{&quot;error_code&quot;:&quot;010409&quot;,&quot;error_msg&quot;:&quot;STREET_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;La calle no puede estar vac&#xed;a&quot;},&quot;(nuevo)010410&quot;:{&quot;error_code&quot;:&quot;010410&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres de la calle excede del permitido (m&#xe1;ximo 500 caracteres)&quot;},&quot;(nuevo)010411&quot;:{&quot;error_code&quot;:&quot;010411&quot;,&quot;error_msg&quot;:&quot;STREET_NUMBER_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de la calle no puede ser vac&#xed;o&quot;},&quot;(nuevo)010412&quot;:{&quot;error_code&quot;:&quot;010412&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET_NUMBER&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres del n&#xfa;mero de calle excede del permitido (m&#xe1;ximo 45 caracteres)&quot;},&quot;(nuevo)010413&quot;:{&quot;error_code&quot;:&quot;010413&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET_COMPLEMENT&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres del complemento de la calle excede del permitido (m&#xe1;ximo 255 caracteres)&quot;},&quot;(nuevo)010414&quot;:{&quot;error_code&quot;:&quot;010414&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_SPECIAL_INSTRUCTIONS&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres de las instrucciones especiales excede del permitido (m&#xe1;ximo 500 caracteres)&quot;}}" properties="//@schemas.593 //@schemas.594 //@schemas.595"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.592"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.592"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.592"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.597 //@schemas.598 //@schemas.599"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.596"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.596"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.596"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.601 //@schemas.602 //@schemas.603"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.600"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.600"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.600"/>
+  <schemas type="object" example="{&quot;address_id&quot;:&quot;265&quot;}" properties="//@schemas.605" required="//@schemas.605"/>
+  <schemas type="string" name="address_id" declaringContext="//@schemas.604"/>
+  <schemas type="object" example="{&quot;010401&quot;:{&quot;error_code&quot;:&quot;010401&quot;,&quot;error_msg&quot;:&quot;ADDRESS_ALREADY_ASSOCIATED&quot;,&quot;error_desc&quot;:&quot;Address is already associated with the user&quot;},&quot;010406&quot;:{&quot;error_code&quot;:&quot;010406&quot;,&quot;error_msg&quot;:&quot;CAN_NOT_CHANGE_ADDRESS&quot;,&quot;error_desc&quot;:&quot;You can not change the direction&quot;},&quot;010408&quot;:{&quot;error_code&quot;:&quot;010408&quot;,&quot;error_msg&quot;:&quot;POSTAL_CODE_NOT_WORKING&quot;,&quot;error_desc&quot;:&quot;Lo sentimos, Lavanapp no opera en esta zona. Estamos trabajando para ampliar nuestra &#xe1;rea de servicio. &#xa1;Muy pronto llegaremos hasta all&#xed;!&quot;},&quot;(nuevo)010409&quot;:{&quot;error_code&quot;:&quot;010409&quot;,&quot;error_msg&quot;:&quot;STREET_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;La calle no puede estar vac&#xed;a&quot;},&quot;(nuevo)010410&quot;:{&quot;error_code&quot;:&quot;010410&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres de la calle excede del permitido (m&#xe1;ximo 500 caracteres)&quot;},&quot;(nuevo)010411&quot;:{&quot;error_code&quot;:&quot;010411&quot;,&quot;error_msg&quot;:&quot;STREET_NUMBER_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de la calle no puede ser vac&#xed;o&quot;},&quot;(nuevo)010412&quot;:{&quot;error_code&quot;:&quot;010412&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET_NUMBER&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres del n&#xfa;mero de calle excede del permitido (m&#xe1;ximo 45 caracteres)&quot;},&quot;(nuevo)010413&quot;:{&quot;error_code&quot;:&quot;010413&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_STREET_COMPLEMENT&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres del complemento de la calle excede del permitido (m&#xe1;ximo 255 caracteres)&quot;},&quot;(nuevo)010414&quot;:{&quot;error_code&quot;:&quot;010414&quot;,&quot;error_msg&quot;:&quot;INCORRECT_LONG_SPECIAL_INSTRUCTIONS&quot;,&quot;error_desc&quot;:&quot;El n&#xfa;mero de caracteres de las instrucciones especiales excede del permitido (m&#xe1;ximo 500 caracteres)&quot;}}" properties="//@schemas.607 //@schemas.608 //@schemas.609"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.606"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.606"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.606"/>
+  <schemas type="object" example="{&quot;090101&quot;:{&quot;error_code&quot;:&quot;090101&quot;,&quot;error_msg&quot;:&quot;LOGIN_SECURITY_REQUIRED&quot;,&quot;error_desc&quot;:&quot;Login security required&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.611 //@schemas.612 //@schemas.613"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.610"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.610"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.610"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.615 //@schemas.616 //@schemas.617"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.614"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.614"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.614"/>
+  <schemas type="object" example="{&quot;result&quot;:&quot;ok&quot;}" properties="//@schemas.619" required="//@schemas.619"/>
+  <schemas type="string" name="result" declaringContext="//@schemas.618"/>
+  <schemas type="object" example="{&quot;010407&quot;:{&quot;error_code&quot;:&quot;010407&quot;,&quot;error_msg&quot;:&quot;CAN_NOT_DELETE_ADDRESS&quot;,&quot;error_desc&quot;:&quot;You can not delete the direction&quot;}}" properties="//@schemas.621 //@schemas.622 //@schemas.623"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.620"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.620"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.620"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.625 //@schemas.626 //@schemas.627"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.624"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.624"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.624"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.629 //@schemas.630 //@schemas.631"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.628"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.628"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.628"/>
+  <schemas type="object" example="{&quot;x-tokenpayment&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwYzUxMTQyYjVjNDhlZWZiODM1OWRmMmU4ZDM2YmQzNTczMmI3MGIwIiwiYWRtaW4iOmZhbHNlLCJjcmVhdGVkX29uIjoxNDg4ODA0MDY1LCJ0eXBlIjoiYXV0aCIsImV4cCI6MTQ4ODgxMTI2NSwiZXhwX3Nlc3Npb24iOjE0ODg4MTEyNjV9.i-CmvLXQ43X_0RFXwZD5BuwES5lZy4j7u5HiavT8n6o&quot;}" properties="//@schemas.633" required="//@schemas.633"/>
+  <schemas type="string" name="x-tokenpayment" declaringContext="//@schemas.632"/>
+  <schemas type="object" example="{&quot;040106&quot;:{&quot;error_code&quot;:&quot;040106&quot;,&quot;error_msg&quot;:&quot;ORDER_ID_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;No se encuentra el identificador del pedido.&quot;}}" properties="//@schemas.635 //@schemas.636 //@schemas.637"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.634"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.634"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.634"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.639 //@schemas.640 //@schemas.641"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.638"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.638"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.638"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.643 //@schemas.644 //@schemas.645"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.642"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.642"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.642"/>
+  <schemas type="object" example="{&quot;payment_methods&quot;:{&quot;id&quot;:65,&quot;last_four_number&quot;:null,&quot;expiration_card&quot;:null,&quot;card_type&quot;:null,&quot;card_holder_name&quot;:null,&quot;email_account&quot;:&quot;sandbox-buyers@lavanapp.com&quot;,&quot;image_url&quot;:null,&quot;platform_id&quot;:2,&quot;platform&quot;:&quot;PAYPAL&quot;}}" properties="//@schemas.647" required="//@schemas.647"/>
+  <schemas type="array" description="list of available payment methods" minItems="0" name="payment_methods" items="//@schemas.15" declaringContext="//@schemas.646"/>
+  <schemas type="object" example="{&quot;040418&quot;:{&quot;error_code&quot;:&quot;040418&quot;,&quot;error_msg&quot;:&quot;PAYMENT_AUTHORIZATION_TOKEN_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Payment authorization token does not match the logged-in user&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.649 //@schemas.650 //@schemas.651"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.648"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.648"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.648"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;Expired token&quot;},&quot;090113&quot;:{&quot;error_code&quot;:&quot;090113&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_PAYMENT_TOKEN&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.653 //@schemas.654 //@schemas.655"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.652"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.652"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.652"/>
+  <schemas type="object" example="{&quot;example 1:Sipay&quot;:{&quot;payment_method_type&quot;:1,&quot;pan&quot;:&quot;4907272011072817&quot;,&quot;expiration&quot;:&quot;1117&quot;,&quot;cardholdername&quot;:&quot;&#xc1;ngel Barquilla&quot;,&quot;cvv&quot;:123,&quot;order_id&quot;:168},&quot;example 2:PayPal&quot;:{&quot;payment_method_type&quot;:2}}" properties="//@schemas.657 //@schemas.658 //@schemas.659 //@schemas.660 //@schemas.661 //@schemas.662" required="//@schemas.657"/>
+  <schemas type="integer" description="1 --> Sipay; 2 --> Paypal" name="payment_method_type" declaringContext="//@schemas.656"/>
+  <schemas type="integer" description="must contain the order ID when a new payment method is registered when placing an order" name="order_id" declaringContext="//@schemas.656"/>
+  <schemas type="string" description="Personal Account Number (card number) --> required for payment_method_type = 1" name="pan" declaringContext="//@schemas.656"/>
+  <schemas type="string" description="MMYY --> required for payment_method_type = 1" name="expiration" declaringContext="//@schemas.656"/>
+  <schemas type="string" description="Cardholder name --> required for payment_method_type = 1" name="cardholdername" declaringContext="//@schemas.656"/>
+  <schemas type="integer" description="Required for payment_method_type = 1" name="cvv" declaringContext="//@schemas.656"/>
+  <schemas type="object" example="{&quot;example 1: Credit Card&quot;:{&quot;payment_method_id&quot;:25},&quot;example 2:PayPal&quot;:{&quot;return_url&quot;:&quot;https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&amp;token=EC-51265042LH6335614&quot;}}" properties="//@schemas.664 //@schemas.665"/>
+  <schemas type="string" description="For creating a PayPal payment method" name="return_url" declaringContext="//@schemas.663"/>
+  <schemas type="integer" description="For creating a credit card payment method" name="payment_method_id" declaringContext="//@schemas.663"/>
+  <schemas type="object" example="{&quot;040104&quot;:{&quot;error_code&quot;:&quot;040104&quot;,&quot;error_msg&quot;:&quot;ORDER_NOT_EXISTS&quot;,&quot;error_desc&quot;:&quot;Order not exists&quot;},&quot;040105&quot;:{&quot;error_code&quot;:&quot;040105&quot;,&quot;error_msg&quot;:&quot;UNRECOGNIZED_SIPAY_FUNCIONALITY&quot;,&quot;error_desc&quot;:&quot;Unrecognized Sipay functionality&quot;},&quot;040202&quot;:{&quot;error_code&quot;:&quot;040202&quot;,&quot;error_msg&quot;:&quot;INVALID_CARD&quot;,&quot;error_desc&quot;:&quot;Invalid card&quot;},&quot;040203&quot;:{&quot;error_code&quot;:&quot;040203&quot;,&quot;error_msg&quot;:&quot;CARD_TYPE_NOT_SUPPORTED&quot;,&quot;error_desc&quot;:&quot;Lo sentimos, nuestro sistema no soporta el tipo de tarjeta introducido. Por favor, introduce otro m&#xe9;todo de pago.&quot;},&quot;040204&quot;:{&quot;error_code&quot;:&quot;040204&quot;,&quot;error_msg&quot;:&quot;INVALID_EXPIRATION_DATE&quot;,&quot;error_desc&quot;:&quot;La fecha de expiraci&#xf3;n introducida no es v&#xe1;lida. Por favor, introd&#xfa;cela correctamente (MM/AA)&quot;},&quot;040205&quot;:{&quot;error_code&quot;:&quot;040205&quot;,&quot;error_msg&quot;:&quot;CREDIT_CARD_EXPIRED&quot;,&quot;error_desc&quot;:&quot;La tarjeta ha caducado. Por favor, introduce otro m&#xe9;todo de pago.&quot;},&quot;040206&quot;:{&quot;error_code&quot;:&quot;040206&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_SAVING_CARD&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un erro al almacenar la tarjeta en nuestro sistema. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163&quot;},&quot;040207&quot;:{&quot;error_code&quot;:&quot;040207&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_SAVING_CARD_IN_VAULT&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un erro al almacenar la tarjeta en nuestro sistema. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163&quot;},&quot;040210&quot;:{&quot;error_code&quot;:&quot;040210&quot;,&quot;error_msg&quot;:&quot;PAN_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;Introduce un n&#xfa;mero de tarjeta.&quot;},&quot;040211&quot;:{&quot;error_code&quot;:&quot;040211&quot;,&quot;error_msg&quot;:&quot;EXPIRATION_DATE_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;Introduce la fecha de expiraci&#xf3;n.&quot;},&quot;040212&quot;:{&quot;error_code&quot;:&quot;040212&quot;,&quot;error_msg&quot;:&quot;CARDHOLDERNAME_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;Introduce el nombre del titular de la tarjeta.&quot;},&quot;040213&quot;:{&quot;error_code&quot;:&quot;040213&quot;,&quot;error_msg&quot;:&quot;CVV_CAN_NOT_BE_EMPTY&quot;,&quot;error_desc&quot;:&quot;Introduce el cvv de la tarjeta.&quot;},&quot;(nuevo)040214&quot;:{&quot;error_code&quot;:&quot;040214&quot;,&quot;error_msg&quot;:&quot;CONECT_SIPAY_ERROR&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error de conexi&#xf3;n. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163.&quot;},&quot;(nuevo)040215&quot;:{&quot;error_code&quot;:&quot;040215&quot;,&quot;error_msg&quot;:&quot;TRY_WITH_ANOTHER_CARD_102&quot;,&quot;error_desc&quot;:&quot;Ha habido un error con el m&#xe9;todo de pago. Por favor, int&#xe9;ntalo con otro diferente.&quot;},&quot;(nuevo)040216&quot;:{&quot;error_code&quot;:&quot;040216&quot;,&quot;error_msg&quot;:&quot;EXCEEDED_NUMBER_PIN_ATTEMPS&quot;,&quot;error_desc&quot;:&quot;Exceeded number of pin attempts&quot;},&quot;(nuevo)040217&quot;:{&quot;error_code&quot;:&quot;040217&quot;,&quot;error_msg&quot;:&quot;DENIED_CARD&quot;,&quot;error_desc&quot;:&quot;Tarjeta denegada. Por favor, contacta con tu entidad o int&#xe9;ntalo con otra tarjeta diferente.&quot;},&quot;(nuevo)040218&quot;:{&quot;error_code&quot;:&quot;040218&quot;,&quot;error_msg&quot;:&quot;INCORRECT_PIN&quot;,&quot;error_desc&quot;:&quot;Incorrect pin.&quot;},&quot;(nuevo)040219&quot;:{&quot;error_code&quot;:&quot;040219&quot;,&quot;error_msg&quot;:&quot;TRY_WITH_ANOTHER_CARD_202&quot;,&quot;error_desc&quot;:&quot;Ha habido un error con el m&#xe9;todo de pago. Por favor, int&#xe9;ntalo con otro diferente.&quot;},&quot;(nuevo)040220&quot;:{&quot;error_code&quot;:&quot;040220&quot;,&quot;error_msg&quot;:&quot;TRY_WITH_ANOTHER_CARD_901&quot;,&quot;error_desc&quot;:&quot;Ha habido un error con el m&#xe9;todo de pago. Por favor, int&#xe9;ntalo con otro diferente.&quot;},&quot;040410&quot;:{&quot;error_code&quot;:&quot;040410&quot;,&quot;error_msg&quot;:&quot;EXPRESS_CHEKOUT_FAIL&quot;,&quot;error_desc&quot;:&quot;Express chekout fail&quot;},&quot;040417&quot;:{&quot;error_code&quot;:&quot;040417&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;Aamount is 0&quot;},&quot;040433&quot;:{&quot;error_code&quot;:&quot;040433&quot;,&quot;error_msg&quot;:&quot;INCORRECT_PAYMENT_PLATFORM&quot;,&quot;error_desc&quot;:&quot;Plataforma de pago incorrecta&quot;},&quot;040428&quot;:{&quot;error_code&quot;:&quot;040428&quot;,&quot;error_msg&quot;:&quot;ERROR_SAVING_PAYPAL_TOKEN&quot;,&quot;error_desc&quot;:&quot;Ha habido un error en la redirecci&#xf3;n a Paypal. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163&quot;}}" properties="//@schemas.667 //@schemas.668 //@schemas.669"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.666"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.666"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.666"/>
+  <schemas type="object" example="{&quot;040418&quot;:{&quot;error_code&quot;:&quot;040418&quot;,&quot;error_msg&quot;:&quot;PAYMENT_AUTHORIZATION_TOKEN_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Payment authorization token does not match the logged-in user&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.671 //@schemas.672 //@schemas.673"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.670"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.670"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.670"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;090113&quot;:{&quot;error_code&quot;:&quot;090113&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_PAYMENT_TOKEN&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.675 //@schemas.676 //@schemas.677"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.674"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.674"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.674"/>
+  <schemas type="object" properties="//@schemas.679" required="//@schemas.679"/>
+  <schemas type="boolean" name="payment_deleted" declaringContext="//@schemas.678"/>
+  <schemas type="object" example="{&quot;040209&quot;:{&quot;error_code&quot;:&quot;040209&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_DELETING_METHOD_FROM_VAULT&quot;,&quot;error_desc&quot;:&quot;An error occurred deleting method from Sipay vault&quot;},&quot;040413&quot;:{&quot;error_code&quot;:&quot;040413&quot;,&quot;error_msg&quot;:&quot;PAYMENT_METHOD_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Payment method not found&quot;},&quot;040419&quot;:{&quot;error_code&quot;:&quot;040419&quot;,&quot;error_msg&quot;:&quot;CAN_NOT_DELETE_PAYMENT_METHOD&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error eliminando el m&#xe9;todo de pago. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163.&quot;},&quot;040434&quot;:{&quot;error_code&quot;:&quot;040434&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_DELETING_BILLING_AGREEMENT&quot;,&quot;error_desc&quot;:&quot;No se ha podido eliminar el acuerdo de pagos. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacte con nosotros en el 606 198 163&quot;}}" properties="//@schemas.681 //@schemas.682 //@schemas.683"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.680"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.680"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.680"/>
+  <schemas type="object" example="{&quot;040418&quot;:{&quot;error_code&quot;:&quot;040418&quot;,&quot;error_msg&quot;:&quot;PAYMENT_AUTHORIZATION_TOKEN_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Payment authorization token does not match the logged-in user&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.685 //@schemas.686 //@schemas.687"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.684"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.684"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.684"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;090113&quot;:{&quot;error_code&quot;:&quot;090113&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_PAYMENT_TOKEN&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.689 //@schemas.690 //@schemas.691"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.688"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.688"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.688"/>
+  <schemas type="object" example="{&quot;payment_method_id&quot;:65,&quot;order_id&quot;:168,&quot;payment_method_type&quot;:1}" properties="//@schemas.693 //@schemas.694 //@schemas.695" required="//@schemas.695 //@schemas.693"/>
+  <schemas type="integer" description="1 --> Sipay; 2 --> Paypal" name="payment_method_type" declaringContext="//@schemas.692"/>
+  <schemas type="integer" description="Payment method identification" name="payment_method_id" declaringContext="//@schemas.692"/>
+  <schemas type="integer" name="order_id" declaringContext="//@schemas.692"/>
+  <schemas type="object" example="{&quot;payment_status&quot;:1}" properties="//@schemas.697" required="//@schemas.697"/>
+  <schemas type="integer" name="payment_status" declaringContext="//@schemas.696"/>
+  <schemas type="object" example="{&quot;010701&quot;:{&quot;error_code&quot;:&quot;010701&quot;,&quot;error_msg&quot;:&quot;INVALID_TOKEN&quot;,&quot;error_desc&quot;:&quot;Token payment does not exists&quot;},&quot;040104&quot;:{&quot;error_code&quot;:&quot;040104&quot;,&quot;error_msg&quot;:&quot;ORDER_NOT_EXISTS&quot;,&quot;error_desc&quot;:&quot;El pedido no existe o ha expirado. Por favor, a&#xf1;ade los art&#xed;culos deseados al carrito.&quot;},&quot;040105&quot;:{&quot;error_code&quot;:&quot;040105&quot;,&quot;error_msg&quot;:&quot;UNRECOGNIZED_SIPAY_FUNCIONALITY&quot;,&quot;error_desc&quot;:&quot;Unrecognized Sipay functionality&quot;},&quot;040208&quot;:{&quot;error_code&quot;:&quot;040208&quot;,&quot;error_msg&quot;:&quot;SIPAY_ERROR&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;040407&quot;:{&quot;error_code&quot;:&quot;040407&quot;,&quot;error_msg&quot;:&quot;PAYMENT_DUPLICATED&quot;,&quot;error_desc&quot;:&quot;The order is already paid&quot;},&quot;040411&quot;:{&quot;error_code&quot;:&quot;040411&quot;,&quot;error_msg&quot;:&quot;TRANSACTION_FAILURE&quot;,&quot;error_desc&quot;:&quot;Internal transaction failure&quot;},&quot;040413&quot;:{&quot;error_code&quot;:&quot;040413&quot;,&quot;error_msg&quot;:&quot;PAYMENT_METHOD_NOT_FOUND&quot;,&quot;error_desc&quot;:&quot;Payment method not found&quot;},&quot;040414&quot;:{&quot;error_code&quot;:&quot;040414&quot;,&quot;error_msg&quot;:&quot;INVALID_PAYMENT_PLATFORM&quot;,&quot;error_desc&quot;:&quot;Invalid payment platform&quot;},&quot;040417&quot;:{&quot;error_code&quot;:&quot;040417&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;Amount is 0&quot;},&quot;040420&quot;:{&quot;error_code&quot;:&quot;040420&quot;,&quot;error_msg&quot;:&quot;BILLING_IS_NOT_APPROVED&quot;,&quot;error_desc&quot;:&quot;Billing is not approved&quot;},&quot;040433&quot;:{&quot;error_code&quot;:&quot;040433&quot;,&quot;error_msg&quot;:&quot;INCORRECT_PAYMENT_PLATFORM&quot;,&quot;error_desc&quot;:&quot;Plataforma de pago incorrecta.&quot;},&quot;040424&quot;:{&quot;error_code&quot;:&quot;040424&quot;,&quot;error_msg&quot;:&quot;PAYMENT_PLATFORM_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Payment platform not match&quot;},&quot;040425&quot;:{&quot;error_code&quot;:&quot;040425&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_MAKING_PAYMENT&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error con el pago del pedido. Por favor, int&#xe9;ntalo de nuevo m&#xe1;s tarde. Si el error persiste contacta con nosotros en el 606 198 163.&quot;},&quot;040436&quot;:{&quot;error_code&quot;:&quot;040436&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_PAYPAL_PAYMENT_METHOD&quot;,&quot;error_desc&quot;:&quot;Paypal no ha podido procesar el pago del pedido con el m&#xe9;todo de pago seleccionado. Por favor, seleccione otro m&#xe9;todo de pago alternativo.&quot;}}" properties="//@schemas.699 //@schemas.700 //@schemas.701"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.698"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.698"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.698"/>
+  <schemas type="object" example="{&quot;040418&quot;:{&quot;error_code&quot;:&quot;040418&quot;,&quot;error_msg&quot;:&quot;PAYMENT_AUTHORIZATION_TOKEN_NOT_MATCH&quot;,&quot;error_desc&quot;:&quot;Payment authorization token does not match the logged-in user&quot;},&quot;040422&quot;:{&quot;error_code&quot;:&quot;040422&quot;,&quot;error_msg&quot;:&quot;PAYMENT_TOKEN_IS_NOT_AUTHORIZATED&quot;,&quot;error_desc&quot;:&quot;Payment token is not authorizated for this order&quot;},&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.703 //@schemas.704 //@schemas.705"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.702"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.702"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.702"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;},&quot;090113&quot;:{&quot;error_code&quot;:&quot;090113&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_PAYMENT_TOKEN&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.707 //@schemas.708 //@schemas.709"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.706"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.706"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.706"/>
+  <schemas type="object" example="{&quot;paypal_token&quot;:&quot;EC-2EM31720MW080434Y&quot;}" properties="//@schemas.711" required="//@schemas.711"/>
+  <schemas type="string" name="paypal_token" declaringContext="//@schemas.710"/>
+  <schemas type="object" example="{&quot;payment_method_id&quot;:65}" properties="//@schemas.713" required="//@schemas.713"/>
+  <schemas type="integer" name="payment_method_id" declaringContext="//@schemas.712"/>
+  <schemas type="object" example="{&quot;010701&quot;:{&quot;error_code&quot;:&quot;010701&quot;,&quot;error_msg&quot;:&quot;INVALID_TOKEN&quot;,&quot;error_desc&quot;:&quot;Token payment does not exists&quot;},&quot;040417&quot;:{&quot;error_code&quot;:&quot;040417&quot;,&quot;error_msg&quot;:&quot;ERROR_VALIDATION_PARAMS&quot;,&quot;error_desc&quot;:&quot;PayPal token can not be empty&quot;},&quot;040420&quot;:{&quot;error_code&quot;:&quot;040420&quot;,&quot;error_msg&quot;:&quot;BILLING_IS_NOT_APPROVED&quot;,&quot;error_desc&quot;:&quot;El acuerdo de pagos con Paypal no se ha aceptado. Por favor, acepta el acuerdo para realizar el pedido.&quot;},&quot;040421&quot;:{&quot;error_code&quot;:&quot;040421&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_SAVING_AGREEMENT&quot;,&quot;error_desc&quot;:&quot;An error occurred while keeping the billing agreement&quot;},&quot;040427&quot;:{&quot;error_code&quot;:&quot;040427&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_CREATING_AGREEMENT&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error creando el acuerdo de pagos con Paypal. Por favor, int&#xe9;ntelo de nuevo m&#xe1;s tarde. Si el error persiste contacte con nosotros en el 606 198 163&quot;},&quot;040435&quot;:{&quot;error_code&quot;:&quot;040435&quot;,&quot;error_msg&quot;:&quot;ERROR_OCCURRED_GETTING_PAYPAL_CONSUMER_DATA&quot;,&quot;error_desc&quot;:&quot;Ha ocurrido un error obteniendo los datos de Paypal. Por favor, int&#xe9;ntelo de nuevo m&#xe1;s tarde. Si el error persiste contacte con nosotros en el 606 198 163&quot;}}" properties="//@schemas.715 //@schemas.716 //@schemas.717"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.714"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.714"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.714"/>
+  <schemas type="object" example="{&quot;090108&quot;:{&quot;error_code&quot;:&quot;090108&quot;,&quot;error_msg&quot;:&quot;TOKEN_UNAUTHORIZED&quot;,&quot;error_desc&quot;:&quot;Token unauthorized&quot;},&quot;080102&quot;:{&quot;error_code&quot;:&quot;080102&quot;,&quot;error_msg&quot;:&quot;INCORRECT_APIKEY&quot;,&quot;error_desc&quot;:&quot;Incorrect Api Key&quot;},&quot;090104&quot;:{&quot;error_code&quot;:&quot;090104&quot;,&quot;error_msg&quot;:&quot;USER_LOCKED&quot;,&quot;error_desc&quot;:&quot;User locked&quot;},&quot;090105&quot;:{&quot;error_code&quot;:&quot;090105&quot;,&quot;error_msg&quot;:&quot;UNREGISTERED_USER&quot;,&quot;error_desc&quot;:&quot;Unregistered user&quot;}}" properties="//@schemas.719 //@schemas.720 //@schemas.721"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.718"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.718"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.718"/>
+  <schemas type="object" example="{&quot;090102&quot;:{&quot;error_code&quot;:&quot;090102&quot;,&quot;error_msg&quot;:&quot;WRONG_NUMBER_AUTHORIZATION_HEADERS&quot;,&quot;error_desc&quot;:&quot;Wrong number of Authorization Headers&quot;},&quot;090103&quot;:{&quot;error_code&quot;:&quot;090103&quot;,&quot;error_msg&quot;:&quot;AUTHORIZATION_HEADERS_NO_DETECTED&quot;,&quot;error_desc&quot;:&quot;Authorization Headers are not detected&quot;},&quot;090107&quot;:{&quot;error_code&quot;:&quot;090107&quot;,&quot;error_msg&quot;:&quot;INCORRECT_FORMAT_TOKEN&quot;,&quot;error_desc&quot;:&quot;Incorrect format token&quot;},&quot;090109&quot;:{&quot;error_code&quot;:&quot;090109&quot;,&quot;error_msg&quot;:&quot;INTERNAL_ERROR_JWT&quot;,&quot;error_desc&quot;:&quot;&quot;}}" properties="//@schemas.723 //@schemas.724 //@schemas.725"/>
+  <schemas type="string" name="error_code" declaringContext="//@schemas.722"/>
+  <schemas type="string" name="error_msg" declaringContext="//@schemas.722"/>
+  <schemas type="string" name="error_desc" declaringContext="//@schemas.722"/>
+  <responses schema="//@schemas.234" description="successful operation" code="200"/>
+  <responses schema="//@schemas.251" description="Not found" code="400"/>
+  <responses schema="//@schemas.255" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.259" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.263" description="successful operation" code="200"/>
+  <responses schema="//@schemas.270" description="Not found" code="400"/>
+  <responses schema="//@schemas.274" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.278" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.282" description="successful operation" code="200"/>
+  <responses schema="//@schemas.284" description="Not found" code="400"/>
+  <responses schema="//@schemas.288" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.292" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.296" description="successful operation" code="200"/>
+  <responses schema="//@schemas.298" description="Not found" code="400"/>
+  <responses schema="//@schemas.302" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.306" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.310" description="successful operation" code="200"/>
+  <responses schema="//@schemas.312" description="Not found" code="400"/>
+  <responses schema="//@schemas.316" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.320" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.324" description="successful operation" code="200"/>
+  <responses schema="//@schemas.327" description="Not found" code="400"/>
+  <responses schema="//@schemas.331" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.335" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.339" description="successful operation" code="200"/>
+  <responses schema="//@schemas.347" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.351" description="Unauthorized" code="500"/>
+  <responses schema="//@schemas.355" description="successful operation" code="200"/>
+  <responses schema="//@schemas.357" description="Not found" code="400"/>
+  <responses schema="//@schemas.361" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.365" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.369" description="successful operation" code="200"/>
+  <responses schema="//@schemas.372" description="Not found" code="400"/>
+  <responses schema="//@schemas.376" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.380" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.384" description="successful operation" code="200"/>
+  <responses schema="//@schemas.386" description="Not found" code="400"/>
+  <responses schema="//@schemas.390" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.394" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.398" description="successful operation" code="200"/>
+  <responses schema="//@schemas.400" description="Not found" code="400"/>
+  <responses schema="//@schemas.404" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.408" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.412" description="successful operation" code="200"/>
+  <responses schema="//@schemas.414" description="Not found" code="400"/>
+  <responses schema="//@schemas.418" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.422" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.426" description="successful operation" code="200"/>
+  <responses schema="//@schemas.429" description="Not found" code="400"/>
+  <responses schema="//@schemas.433" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.437" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.441" description="successful operation" code="200"/>
+  <responses schema="//@schemas.443" description="Not found" code="400"/>
+  <responses schema="//@schemas.447" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.451" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.455" description="successful operation" code="200"/>
+  <responses schema="//@schemas.457" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.461" description="Unauthorized" code="500"/>
+  <responses schema="//@schemas.465" description="successful operation" code="200"/>
+  <responses schema="//@schemas.467" description="Not found" code="400"/>
+  <responses schema="//@schemas.471" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.475" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.479" description="successful operation" code="200"/>
+  <responses schema="//@schemas.481" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.485" description="Unauthorized" code="500"/>
+  <responses schema="//@schemas.489" description="successful operation" code="200"/>
+  <responses schema="//@schemas.491" description="Not found" code="400"/>
+  <responses schema="//@schemas.495" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.499" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.503" description="successful operation" code="200"/>
+  <responses schema="//@schemas.505" description="Not found" code="400"/>
+  <responses schema="//@schemas.509" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.513" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.517" description="successful operation" code="200"/>
+  <responses schema="//@schemas.519" description="Not found" code="400"/>
+  <responses schema="//@schemas.523" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.527" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.531" description="successful operation" code="200"/>
+  <responses schema="//@schemas.536" description="Not found" code="400"/>
+  <responses schema="//@schemas.540" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.544" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.548" description="successful operation" code="200"/>
+  <responses schema="//@schemas.550" description="Not found" code="400"/>
+  <responses schema="//@schemas.554" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.558" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.562" description="successful operation" code="200"/>
+  <responses schema="//@schemas.564" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.568" description="Unauthorized" code="500"/>
+  <responses schema="//@schemas.572" description="successful operation" code="200"/>
+  <responses schema="//@schemas.574" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.578" description="Unauthorized" code="500"/>
+  <responses schema="//@schemas.12" description="successful operation" code="200"/>
+  <responses schema="//@schemas.582" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.586" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.590" description="successful operation" code="200"/>
+  <responses schema="//@schemas.592" description="Not found" code="400"/>
+  <responses schema="//@schemas.596" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.600" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.604" description="successful operation" code="200"/>
+  <responses schema="//@schemas.606" description="Not found" code="400"/>
+  <responses schema="//@schemas.610" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.614" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.618" description="successful operation" code="200"/>
+  <responses schema="//@schemas.620" description="Not found" code="400"/>
+  <responses schema="//@schemas.624" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.628" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.632" description="successful operation" code="200"/>
+  <responses schema="//@schemas.634" description="Not found" code="400"/>
+  <responses schema="//@schemas.638" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.642" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.646" description="successful operation" code="200"/>
+  <responses schema="//@schemas.648" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.652" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.663" description="successful operation" code="200"/>
+  <responses schema="//@schemas.666" description="Not found" code="400"/>
+  <responses schema="//@schemas.670" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.674" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.678" description="successful operation" code="200"/>
+  <responses schema="//@schemas.680" description="Not found" code="400"/>
+  <responses schema="//@schemas.684" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.688" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.696" description="successful operation" code="200"/>
+  <responses schema="//@schemas.698" description="Not found" code="400"/>
+  <responses schema="//@schemas.702" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.706" description="Internal Server Error" code="500"/>
+  <responses schema="//@schemas.712" description="successful operation" code="200"/>
+  <responses schema="//@schemas.714" description="Not found" code="400"/>
+  <responses schema="//@schemas.718" description="Unauthorized" code="401"/>
+  <responses schema="//@schemas.722" description="Internal Server Error" code="500"/>
+</openapi:Root>

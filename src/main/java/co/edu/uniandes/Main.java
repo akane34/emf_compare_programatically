@@ -29,8 +29,8 @@ public class Main {
 	static String newVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		String oldModelPath = "v1.0.xmi";
-		String newModelPath = "v2.0.xmi";
+		String oldModelPath = "lavanapp_2.0.0.xmi";
+		String newModelPath = "lavanapp_2.1.1.xmi";
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();
