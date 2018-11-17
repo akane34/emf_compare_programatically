@@ -386,6 +386,20 @@ public class ChangesProcessor {
 		}
 	}	
 	
+	public static void processRemoveRestrictedAccessToTheAPI(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
+		System.out.println("-------------------- processRemoveRestrictedAccessToTheAPI");	
+		for(ChangeResponse addRes: addResponse) {
+			if (addRes.getDifferenceKind() == DifferenceKind.ADD &&
+				("401".equals(addRes.getResponse().getCode()) ||
+				 "403".equals(addRes.getResponse().getCode()))){
+				
+				System.out.println(addRes.getPath() + " " + addRes.getResponse().getCode() + " Added");		  
+				System.out.println("\n ");
+				diffMetamodel.createAddedStatusCode(addRes, changes);
+			}
+		}
+	}
+	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {		

@@ -96,7 +96,7 @@ public class DiffMetamodel {
 		newElementReference.setEObject(parameter.getNewParameterUri());
 		newElementReference.setValue(parameter.getNewParameter().getName());
 
-		Rename rename = diffFactoryI.createRename();		
+		RenameParameter rename = diffFactoryI.createRenameParameter();		
 		rename.setChangeElement(APIElementType.METHOD_PARAMETER);
 		rename.setOld(oldElementReference);		
 		rename.setNew(newElementReference);		
@@ -395,7 +395,7 @@ public class DiffMetamodel {
 		elementReference.setEObject(contentTypeUpdated.getUri());
 		elementReference.setPath(contentTypeUpdated.getPath());
 		elementReference.setValue(contentTypeUpdated.getValue());
-		ResultType resultType = diffFactoryI.createResultType();
+		ReturnType resultType = diffFactoryI.createReturnType();
 		
 		switch (contentTypeUpdated.getKind()) {
 		case ADD:
@@ -459,6 +459,10 @@ public class DiffMetamodel {
 		defaultValue.setNew(newElementReference);
 								
 		changes.add(defaultValue);
+	}
+	
+	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse addRes, List<Change> changes) {
+		
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/

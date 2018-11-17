@@ -166,7 +166,37 @@ public enum APIElementType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RETURN_TYPE(14, "ReturnType", "ReturnType");
+	RETURN_TYPE(14, "ReturnType", "ReturnType"),
+
+	/**
+	 * The '<em><b>Path</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PATH_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PATH(15, "path", "path"),
+
+	/**
+	 * The '<em><b>Content Type</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CONTENT_TYPE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	CONTENT_TYPE(16, "ContentType", "ContentType"),
+
+	/**
+	 * The '<em><b>Status Code</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STATUS_CODE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	STATUS_CODE(17, "StatusCode", "StatusCode");
 
 	/**
 	 * The '<em><b>Package</b></em>' literal value.
@@ -394,6 +424,51 @@ public enum APIElementType implements Enumerator {
 	public static final int RETURN_TYPE_VALUE = 14;
 
 	/**
+	 * The '<em><b>Path</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Path</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #PATH
+	 * @model name="path"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PATH_VALUE = 15;
+
+	/**
+	 * The '<em><b>Content Type</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Content Type</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CONTENT_TYPE
+	 * @model name="ContentType"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CONTENT_TYPE_VALUE = 16;
+
+	/**
+	 * The '<em><b>Status Code</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Status Code</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #STATUS_CODE
+	 * @model name="StatusCode"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STATUS_CODE_VALUE = 17;
+
+	/**
 	 * An array of all the '<em><b>API Element Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -416,6 +491,9 @@ public enum APIElementType implements Enumerator {
 			TYPE_PARAMETER,
 			LOCATION,
 			RETURN_TYPE,
+			PATH,
+			CONTENT_TYPE,
+			STATUS_CODE,
 		};
 
 	/**
@@ -487,6 +565,9 @@ public enum APIElementType implements Enumerator {
 			case TYPE_PARAMETER_VALUE: return TYPE_PARAMETER;
 			case LOCATION_VALUE: return LOCATION;
 			case RETURN_TYPE_VALUE: return RETURN_TYPE;
+			case PATH_VALUE: return PATH;
+			case CONTENT_TYPE_VALUE: return CONTENT_TYPE;
+			case STATUS_CODE_VALUE: return STATUS_CODE;
 		}
 		return null;
 	}

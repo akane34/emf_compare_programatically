@@ -3,40 +3,43 @@
 package co.edu.uniandes.diff.metamodel.diff.impl;
 
 import co.edu.uniandes.diff.metamodel.diff.APIElementType;
-import co.edu.uniandes.diff.metamodel.diff.AccessModifier;
 import co.edu.uniandes.diff.metamodel.diff.Add;
+import co.edu.uniandes.diff.metamodel.diff.AddParameter;
 import co.edu.uniandes.diff.metamodel.diff.AddRestriction;
+import co.edu.uniandes.diff.metamodel.diff.AddStatusCode;
 import co.edu.uniandes.diff.metamodel.diff.Change;
+import co.edu.uniandes.diff.metamodel.diff.ChangeFormatReturnValue;
+import co.edu.uniandes.diff.metamodel.diff.CombineMethods;
 import co.edu.uniandes.diff.metamodel.diff.Complex;
 import co.edu.uniandes.diff.metamodel.diff.ConsumeType;
-import co.edu.uniandes.diff.metamodel.diff.ContractSuperSet;
 import co.edu.uniandes.diff.metamodel.diff.DefaultClause;
 import co.edu.uniandes.diff.metamodel.diff.DefaultValue;
 import co.edu.uniandes.diff.metamodel.diff.Delete;
+import co.edu.uniandes.diff.metamodel.diff.DeletePath;
 import co.edu.uniandes.diff.metamodel.diff.Diff;
 import co.edu.uniandes.diff.metamodel.diff.ElementDefinition;
 import co.edu.uniandes.diff.metamodel.diff.ElementReference;
 import co.edu.uniandes.diff.metamodel.diff.ElementType;
-import co.edu.uniandes.diff.metamodel.diff.FieldValue;
+import co.edu.uniandes.diff.metamodel.diff.ExposeData;
 import co.edu.uniandes.diff.metamodel.diff.LowerBondary;
 import co.edu.uniandes.diff.metamodel.diff.Modify;
-import co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy;
-import co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy;
+import co.edu.uniandes.diff.metamodel.diff.ModifyParameterSchemaType;
 import co.edu.uniandes.diff.metamodel.diff.MultipleParametersInOne;
-import co.edu.uniandes.diff.metamodel.diff.OtherModifier;
 import co.edu.uniandes.diff.metamodel.diff.ParameterLocation;
 import co.edu.uniandes.diff.metamodel.diff.ParameterType;
+import co.edu.uniandes.diff.metamodel.diff.ProduceType;
 import co.edu.uniandes.diff.metamodel.diff.RefactoringType;
 import co.edu.uniandes.diff.metamodel.diff.RelocateParameter;
+import co.edu.uniandes.diff.metamodel.diff.RemoveParameter;
 import co.edu.uniandes.diff.metamodel.diff.RemoveRestriction;
-import co.edu.uniandes.diff.metamodel.diff.Rename;
-import co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters;
-import co.edu.uniandes.diff.metamodel.diff.ResultType;
+import co.edu.uniandes.diff.metamodel.diff.RemoveStatusCode;
+import co.edu.uniandes.diff.metamodel.diff.RenameMethod;
+import co.edu.uniandes.diff.metamodel.diff.RenameParameter;
 import co.edu.uniandes.diff.metamodel.diff.ReturnType;
 import co.edu.uniandes.diff.metamodel.diff.SameParameter;
 import co.edu.uniandes.diff.metamodel.diff.Simple;
-import co.edu.uniandes.diff.metamodel.diff.TypeAPI;
-import co.edu.uniandes.diff.metamodel.diff.TypeBound;
+import co.edu.uniandes.diff.metamodel.diff.SplitMethod;
+import co.edu.uniandes.diff.metamodel.diff.UnsupportRequestMethod;
 import co.edu.uniandes.diff.metamodel.diff.UpperBondary;
 import co.edu.uniandes.diff.metamodel.diff.diffFactory;
 import co.edu.uniandes.diff.metamodel.diff.diffPackage;
@@ -82,13 +85,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass moveDownInHierarchyEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass relocateParameterEClass = null;
 
 	/**
@@ -110,27 +106,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass reorderTypeParametersEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass contractSuperSetEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass moveUpInHierarchyEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass simpleEClass = null;
 
 	/**
@@ -145,7 +120,35 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass addParameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass deleteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unsupportRequestMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deletePathEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass removeParameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,6 +163,13 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * @generated
 	 */
 	private EClass modifyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modifyParameterSchemaTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,28 +197,7 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass renameEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass accessModifierEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass typeBoundEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resultTypeEClass = null;
+	private EClass renameParameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,21 +211,28 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fieldValueEClass = null;
+	private EClass produceTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass typeAPIEClass = null;
+	private EClass addStatusCodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass otherModifierEClass = null;
+	private EClass removeStatusCodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exposeDataEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,6 +254,34 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * @generated
 	 */
 	private EClass removeRestrictionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass changeFormatReturnValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass renameMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass combineMethodsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass splitMethodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -455,15 +479,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMoveDownInHierarchy() {
-		return moveDownInHierarchyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRelocateParameter() {
 		return relocateParameterEClass;
 	}
@@ -509,33 +524,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getReorderTypeParameters() {
-		return reorderTypeParametersEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getContractSuperSet() {
-		return contractSuperSetEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMoveUpInHierarchy() {
-		return moveUpInHierarchyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSimple() {
 		return simpleEClass;
 	}
@@ -572,8 +560,44 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAddParameter() {
+		return addParameterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDelete() {
 		return deleteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnsupportRequestMethod() {
+		return unsupportRequestMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeletePath() {
+		return deletePathEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRemoveParameter() {
+		return removeParameterEClass;
 	}
 
 	/**
@@ -592,6 +616,15 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 */
 	public EClass getModify() {
 		return modifyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModifyParameterSchemaType() {
+		return modifyParameterSchemaTypeEClass;
 	}
 
 	/**
@@ -626,35 +659,8 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRename() {
-		return renameEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAccessModifier() {
-		return accessModifierEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTypeBound() {
-		return typeBoundEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResultType() {
-		return resultTypeEClass;
+	public EClass getRenameParameter() {
+		return renameParameterEClass;
 	}
 
 	/**
@@ -671,8 +677,8 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFieldValue() {
-		return fieldValueEClass;
+	public EClass getProduceType() {
+		return produceTypeEClass;
 	}
 
 	/**
@@ -680,8 +686,8 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTypeAPI() {
-		return typeAPIEClass;
+	public EClass getAddStatusCode() {
+		return addStatusCodeEClass;
 	}
 
 	/**
@@ -689,8 +695,17 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOtherModifier() {
-		return otherModifierEClass;
+	public EClass getRemoveStatusCode() {
+		return removeStatusCodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExposeData() {
+		return exposeDataEClass;
 	}
 
 	/**
@@ -763,6 +778,42 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 	 */
 	public EClass getRemoveRestriction() {
 		return removeRestrictionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChangeFormatReturnValue() {
+		return changeFormatReturnValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRenameMethod() {
+		return renameMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCombineMethods() {
+		return combineMethodsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSplitMethod() {
+		return splitMethodEClass;
 	}
 
 	/**
@@ -922,8 +973,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		changeEClass = createEClass(CHANGE);
 		createEAttribute(changeEClass, CHANGE__CHANGE_ELEMENT);
 
-		moveDownInHierarchyEClass = createEClass(MOVE_DOWN_IN_HIERARCHY);
-
 		relocateParameterEClass = createEClass(RELOCATE_PARAMETER);
 		createEAttribute(relocateParameterEClass, RELOCATE_PARAMETER__NEW_LOCATION);
 		createEAttribute(relocateParameterEClass, RELOCATE_PARAMETER__OLD_LOCATION);
@@ -932,23 +981,27 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 
 		sameParameterEClass = createEClass(SAME_PARAMETER);
 
-		reorderTypeParametersEClass = createEClass(REORDER_TYPE_PARAMETERS);
-
-		contractSuperSetEClass = createEClass(CONTRACT_SUPER_SET);
-
-		moveUpInHierarchyEClass = createEClass(MOVE_UP_IN_HIERARCHY);
-
 		simpleEClass = createEClass(SIMPLE);
 		createEReference(simpleEClass, SIMPLE__NEW);
 		createEReference(simpleEClass, SIMPLE__OLD);
 
 		addEClass = createEClass(ADD);
 
+		addParameterEClass = createEClass(ADD_PARAMETER);
+
 		deleteEClass = createEClass(DELETE);
+
+		unsupportRequestMethodEClass = createEClass(UNSUPPORT_REQUEST_METHOD);
+
+		deletePathEClass = createEClass(DELETE_PATH);
+
+		removeParameterEClass = createEClass(REMOVE_PARAMETER);
 
 		defaultClauseEClass = createEClass(DEFAULT_CLAUSE);
 
 		modifyEClass = createEClass(MODIFY);
+
+		modifyParameterSchemaTypeEClass = createEClass(MODIFY_PARAMETER_SCHEMA_TYPE);
 
 		upperBondaryEClass = createEClass(UPPER_BONDARY);
 
@@ -956,21 +1009,17 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 
 		defaultValueEClass = createEClass(DEFAULT_VALUE);
 
-		renameEClass = createEClass(RENAME);
-
-		accessModifierEClass = createEClass(ACCESS_MODIFIER);
-
-		typeBoundEClass = createEClass(TYPE_BOUND);
-
-		resultTypeEClass = createEClass(RESULT_TYPE);
+		renameParameterEClass = createEClass(RENAME_PARAMETER);
 
 		consumeTypeEClass = createEClass(CONSUME_TYPE);
 
-		fieldValueEClass = createEClass(FIELD_VALUE);
+		produceTypeEClass = createEClass(PRODUCE_TYPE);
 
-		typeAPIEClass = createEClass(TYPE_API);
+		addStatusCodeEClass = createEClass(ADD_STATUS_CODE);
 
-		otherModifierEClass = createEClass(OTHER_MODIFIER);
+		removeStatusCodeEClass = createEClass(REMOVE_STATUS_CODE);
+
+		exposeDataEClass = createEClass(EXPOSE_DATA);
 
 		elementReferenceEClass = createEClass(ELEMENT_REFERENCE);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__EOBJECT);
@@ -982,6 +1031,14 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		createEReference(complexEClass, COMPLEX__SIMPLE_DIFFS);
 
 		removeRestrictionEClass = createEClass(REMOVE_RESTRICTION);
+
+		changeFormatReturnValueEClass = createEClass(CHANGE_FORMAT_RETURN_VALUE);
+
+		renameMethodEClass = createEClass(RENAME_METHOD);
+
+		combineMethodsEClass = createEClass(COMBINE_METHODS);
+
+		splitMethodEClass = createEClass(SPLIT_METHOD);
 
 		addRestrictionEClass = createEClass(ADD_RESTRICTION);
 
@@ -1031,31 +1088,34 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		moveDownInHierarchyEClass.getESuperTypes().add(this.getComplex());
 		relocateParameterEClass.getESuperTypes().add(this.getComplex());
 		multipleParametersInOneEClass.getESuperTypes().add(this.getRelocateParameter());
 		sameParameterEClass.getESuperTypes().add(this.getRelocateParameter());
-		reorderTypeParametersEClass.getESuperTypes().add(this.getComplex());
-		contractSuperSetEClass.getESuperTypes().add(this.getComplex());
-		moveUpInHierarchyEClass.getESuperTypes().add(this.getComplex());
 		simpleEClass.getESuperTypes().add(this.getChange());
 		addEClass.getESuperTypes().add(this.getSimple());
+		addParameterEClass.getESuperTypes().add(this.getAdd());
 		deleteEClass.getESuperTypes().add(this.getSimple());
+		unsupportRequestMethodEClass.getESuperTypes().add(this.getDelete());
+		deletePathEClass.getESuperTypes().add(this.getDelete());
+		removeParameterEClass.getESuperTypes().add(this.getDelete());
 		defaultClauseEClass.getESuperTypes().add(this.getDelete());
 		modifyEClass.getESuperTypes().add(this.getSimple());
+		modifyParameterSchemaTypeEClass.getESuperTypes().add(this.getModify());
 		upperBondaryEClass.getESuperTypes().add(this.getModify());
 		lowerBondaryEClass.getESuperTypes().add(this.getModify());
 		defaultValueEClass.getESuperTypes().add(this.getModify());
-		renameEClass.getESuperTypes().add(this.getModify());
-		accessModifierEClass.getESuperTypes().add(this.getModify());
-		typeBoundEClass.getESuperTypes().add(this.getModify());
-		resultTypeEClass.getESuperTypes().add(this.getModify());
+		renameParameterEClass.getESuperTypes().add(this.getModify());
 		consumeTypeEClass.getESuperTypes().add(this.getModify());
-		fieldValueEClass.getESuperTypes().add(this.getModify());
-		typeAPIEClass.getESuperTypes().add(this.getModify());
-		otherModifierEClass.getESuperTypes().add(this.getModify());
+		produceTypeEClass.getESuperTypes().add(this.getModify());
+		addStatusCodeEClass.getESuperTypes().add(this.getModify());
+		removeStatusCodeEClass.getESuperTypes().add(this.getModify());
+		exposeDataEClass.getESuperTypes().add(this.getComplex());
 		complexEClass.getESuperTypes().add(this.getChange());
 		removeRestrictionEClass.getESuperTypes().add(this.getComplex());
+		changeFormatReturnValueEClass.getESuperTypes().add(this.getComplex());
+		renameMethodEClass.getESuperTypes().add(this.getComplex());
+		combineMethodsEClass.getESuperTypes().add(this.getComplex());
+		splitMethodEClass.getESuperTypes().add(this.getComplex());
 		addRestrictionEClass.getESuperTypes().add(this.getComplex());
 		parameterTypeEClass.getESuperTypes().add(this.getModify());
 		returnTypeEClass.getESuperTypes().add(this.getModify());
@@ -1073,8 +1133,6 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		initEClass(changeEClass, Change.class, "Change", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChange_ChangeElement(), this.getAPIElementType(), "changeElement", null, 0, 1, Change.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(moveDownInHierarchyEClass, MoveDownInHierarchy.class, "MoveDownInHierarchy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(relocateParameterEClass, RelocateParameter.class, "RelocateParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRelocateParameter_NewLocation(), this.getParameterLocation(), "newLocation", null, 0, 1, RelocateParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelocateParameter_OldLocation(), this.getParameterLocation(), "oldLocation", null, 0, 1, RelocateParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1083,23 +1141,27 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 
 		initEClass(sameParameterEClass, SameParameter.class, "SameParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(reorderTypeParametersEClass, ReorderTypeParameters.class, "ReorderTypeParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(contractSuperSetEClass, ContractSuperSet.class, "ContractSuperSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(moveUpInHierarchyEClass, MoveUpInHierarchy.class, "MoveUpInHierarchy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(simpleEClass, Simple.class, "Simple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimple_New(), this.getElementReference(), null, "new", null, 0, 1, Simple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimple_Old(), this.getElementReference(), null, "old", null, 0, 1, Simple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(addEClass, Add.class, "Add", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(addParameterEClass, AddParameter.class, "AddParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(deleteEClass, Delete.class, "Delete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(unsupportRequestMethodEClass, UnsupportRequestMethod.class, "UnsupportRequestMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deletePathEClass, DeletePath.class, "DeletePath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(removeParameterEClass, RemoveParameter.class, "RemoveParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(defaultClauseEClass, DefaultClause.class, "DefaultClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyEClass, Modify.class, "Modify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modifyParameterSchemaTypeEClass, ModifyParameterSchemaType.class, "ModifyParameterSchemaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(upperBondaryEClass, UpperBondary.class, "UpperBondary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1107,21 +1169,17 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 
 		initEClass(defaultValueEClass, DefaultValue.class, "DefaultValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(renameEClass, Rename.class, "Rename", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(accessModifierEClass, AccessModifier.class, "AccessModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(typeBoundEClass, TypeBound.class, "TypeBound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resultTypeEClass, ResultType.class, "ResultType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(renameParameterEClass, RenameParameter.class, "RenameParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(consumeTypeEClass, ConsumeType.class, "ConsumeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(fieldValueEClass, FieldValue.class, "FieldValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(produceTypeEClass, ProduceType.class, "ProduceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(typeAPIEClass, TypeAPI.class, "TypeAPI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(addStatusCodeEClass, AddStatusCode.class, "AddStatusCode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(otherModifierEClass, OtherModifier.class, "OtherModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(removeStatusCodeEClass, RemoveStatusCode.class, "RemoveStatusCode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(exposeDataEClass, ExposeData.class, "ExposeData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(elementReferenceEClass, ElementReference.class, "ElementReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElementReference_EObject(), ecorePackage.getEString(), "EObject", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1133,6 +1191,14 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		initEReference(getComplex_SimpleDiffs(), this.getSimple(), null, "simpleDiffs", null, 1, -1, Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(removeRestrictionEClass, RemoveRestriction.class, "RemoveRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(changeFormatReturnValueEClass, ChangeFormatReturnValue.class, "ChangeFormatReturnValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(renameMethodEClass, RenameMethod.class, "RenameMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(combineMethodsEClass, CombineMethods.class, "CombineMethods", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(splitMethodEClass, SplitMethod.class, "SplitMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(addRestrictionEClass, AddRestriction.class, "AddRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1165,6 +1231,9 @@ public class diffPackageImpl extends EPackageImpl implements diffPackage {
 		addEEnumLiteral(apiElementTypeEEnum, APIElementType.TYPE_PARAMETER);
 		addEEnumLiteral(apiElementTypeEEnum, APIElementType.LOCATION);
 		addEEnumLiteral(apiElementTypeEEnum, APIElementType.RETURN_TYPE);
+		addEEnumLiteral(apiElementTypeEEnum, APIElementType.PATH);
+		addEEnumLiteral(apiElementTypeEEnum, APIElementType.CONTENT_TYPE);
+		addEEnumLiteral(apiElementTypeEEnum, APIElementType.STATUS_CODE);
 
 		initEEnum(parameterLocationEEnum, ParameterLocation.class, "ParameterLocation");
 		addEEnumLiteral(parameterLocationEEnum, ParameterLocation.QUERY);

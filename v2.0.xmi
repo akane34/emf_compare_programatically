@@ -1031,7 +1031,7 @@
           parameters="//@paramters.261"
           summary="save tenant"
           description="save tenant"
-          responses="//@responses.121">
+          responses="//@responses.121 //@responses.140">
         <tagReferences>tenant</tagReferences>
         <consumes>application/xml</consumes>
         <produces>application/json</produces>
@@ -1041,7 +1041,7 @@
       <get parameters="//@paramters.262 //@paramters.263 //@paramters.264 //@paramters.265"
           summary="get tenants by search"
           description="get tenants by search"
-          responses="//@responses.122">
+          responses="//@responses.122 //@responses.140">
         <tagReferences>tenant</tagReferences>
         <produces>application/json</produces>
       </get>
@@ -4090,4 +4090,7 @@
       schema="//@schemas.250"
       description="OK"
       code="200"/>
+  <responses
+      description="401"
+      code="401"/>
 </openapi:Root>

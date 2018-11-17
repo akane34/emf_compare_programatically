@@ -60,32 +60,35 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 			case diffPackage.DIFF: return createDiff();
 			case diffPackage.REFACTORING_TYPE: return createRefactoringType();
 			case diffPackage.CHANGE: return createChange();
-			case diffPackage.MOVE_DOWN_IN_HIERARCHY: return createMoveDownInHierarchy();
 			case diffPackage.RELOCATE_PARAMETER: return createRelocateParameter();
 			case diffPackage.MULTIPLE_PARAMETERS_IN_ONE: return createMultipleParametersInOne();
 			case diffPackage.SAME_PARAMETER: return createSameParameter();
-			case diffPackage.REORDER_TYPE_PARAMETERS: return createReorderTypeParameters();
-			case diffPackage.CONTRACT_SUPER_SET: return createContractSuperSet();
-			case diffPackage.MOVE_UP_IN_HIERARCHY: return createMoveUpInHierarchy();
 			case diffPackage.SIMPLE: return createSimple();
 			case diffPackage.ADD: return createAdd();
+			case diffPackage.ADD_PARAMETER: return createAddParameter();
 			case diffPackage.DELETE: return createDelete();
+			case diffPackage.UNSUPPORT_REQUEST_METHOD: return createUnsupportRequestMethod();
+			case diffPackage.DELETE_PATH: return createDeletePath();
+			case diffPackage.REMOVE_PARAMETER: return createRemoveParameter();
 			case diffPackage.DEFAULT_CLAUSE: return createDefaultClause();
 			case diffPackage.MODIFY: return createModify();
+			case diffPackage.MODIFY_PARAMETER_SCHEMA_TYPE: return createModifyParameterSchemaType();
 			case diffPackage.UPPER_BONDARY: return createUpperBondary();
 			case diffPackage.LOWER_BONDARY: return createLowerBondary();
 			case diffPackage.DEFAULT_VALUE: return createDefaultValue();
-			case diffPackage.RENAME: return createRename();
-			case diffPackage.ACCESS_MODIFIER: return createAccessModifier();
-			case diffPackage.TYPE_BOUND: return createTypeBound();
-			case diffPackage.RESULT_TYPE: return createResultType();
+			case diffPackage.RENAME_PARAMETER: return createRenameParameter();
 			case diffPackage.CONSUME_TYPE: return createConsumeType();
-			case diffPackage.FIELD_VALUE: return createFieldValue();
-			case diffPackage.TYPE_API: return createTypeAPI();
-			case diffPackage.OTHER_MODIFIER: return createOtherModifier();
+			case diffPackage.PRODUCE_TYPE: return createProduceType();
+			case diffPackage.ADD_STATUS_CODE: return createAddStatusCode();
+			case diffPackage.REMOVE_STATUS_CODE: return createRemoveStatusCode();
+			case diffPackage.EXPOSE_DATA: return createExposeData();
 			case diffPackage.ELEMENT_REFERENCE: return createElementReference();
 			case diffPackage.COMPLEX: return createComplex();
 			case diffPackage.REMOVE_RESTRICTION: return createRemoveRestriction();
+			case diffPackage.CHANGE_FORMAT_RETURN_VALUE: return createChangeFormatReturnValue();
+			case diffPackage.RENAME_METHOD: return createRenameMethod();
+			case diffPackage.COMBINE_METHODS: return createCombineMethods();
+			case diffPackage.SPLIT_METHOD: return createSplitMethod();
 			case diffPackage.ADD_RESTRICTION: return createAddRestriction();
 			case diffPackage.PARAMETER_TYPE: return (EObject)createParameterType();
 			case diffPackage.ELEMENT_DEFINITION: return (EObject)createElementDefinition();
@@ -168,16 +171,6 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MoveDownInHierarchy createMoveDownInHierarchy() {
-		MoveDownInHierarchyImpl moveDownInHierarchy = new MoveDownInHierarchyImpl();
-		return moveDownInHierarchy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RelocateParameter createRelocateParameter() {
 		RelocateParameterImpl relocateParameter = new RelocateParameterImpl();
 		return relocateParameter;
@@ -208,36 +201,6 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReorderTypeParameters createReorderTypeParameters() {
-		ReorderTypeParametersImpl reorderTypeParameters = new ReorderTypeParametersImpl();
-		return reorderTypeParameters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContractSuperSet createContractSuperSet() {
-		ContractSuperSetImpl contractSuperSet = new ContractSuperSetImpl();
-		return contractSuperSet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MoveUpInHierarchy createMoveUpInHierarchy() {
-		MoveUpInHierarchyImpl moveUpInHierarchy = new MoveUpInHierarchyImpl();
-		return moveUpInHierarchy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Simple createSimple() {
 		SimpleImpl simple = new SimpleImpl();
 		return simple;
@@ -258,9 +221,49 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AddParameter createAddParameter() {
+		AddParameterImpl addParameter = new AddParameterImpl();
+		return addParameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Delete createDelete() {
 		DeleteImpl delete = new DeleteImpl();
 		return delete;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnsupportRequestMethod createUnsupportRequestMethod() {
+		UnsupportRequestMethodImpl unsupportRequestMethod = new UnsupportRequestMethodImpl();
+		return unsupportRequestMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeletePath createDeletePath() {
+		DeletePathImpl deletePath = new DeletePathImpl();
+		return deletePath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RemoveParameter createRemoveParameter() {
+		RemoveParameterImpl removeParameter = new RemoveParameterImpl();
+		return removeParameter;
 	}
 
 	/**
@@ -281,6 +284,16 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	public Modify createModify() {
 		ModifyImpl modify = new ModifyImpl();
 		return modify;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModifyParameterSchemaType createModifyParameterSchemaType() {
+		ModifyParameterSchemaTypeImpl modifyParameterSchemaType = new ModifyParameterSchemaTypeImpl();
+		return modifyParameterSchemaType;
 	}
 
 	/**
@@ -318,39 +331,9 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Rename createRename() {
-		RenameImpl rename = new RenameImpl();
-		return rename;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AccessModifier createAccessModifier() {
-		AccessModifierImpl accessModifier = new AccessModifierImpl();
-		return accessModifier;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TypeBound createTypeBound() {
-		TypeBoundImpl typeBound = new TypeBoundImpl();
-		return typeBound;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResultType createResultType() {
-		ResultTypeImpl resultType = new ResultTypeImpl();
-		return resultType;
+	public RenameParameter createRenameParameter() {
+		RenameParameterImpl renameParameter = new RenameParameterImpl();
+		return renameParameter;
 	}
 
 	/**
@@ -368,9 +351,9 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FieldValue createFieldValue() {
-		FieldValueImpl fieldValue = new FieldValueImpl();
-		return fieldValue;
+	public ProduceType createProduceType() {
+		ProduceTypeImpl produceType = new ProduceTypeImpl();
+		return produceType;
 	}
 
 	/**
@@ -378,9 +361,9 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeAPI createTypeAPI() {
-		TypeAPIImpl typeAPI = new TypeAPIImpl();
-		return typeAPI;
+	public AddStatusCode createAddStatusCode() {
+		AddStatusCodeImpl addStatusCode = new AddStatusCodeImpl();
+		return addStatusCode;
 	}
 
 	/**
@@ -388,9 +371,19 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OtherModifier createOtherModifier() {
-		OtherModifierImpl otherModifier = new OtherModifierImpl();
-		return otherModifier;
+	public RemoveStatusCode createRemoveStatusCode() {
+		RemoveStatusCodeImpl removeStatusCode = new RemoveStatusCodeImpl();
+		return removeStatusCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExposeData createExposeData() {
+		ExposeDataImpl exposeData = new ExposeDataImpl();
+		return exposeData;
 	}
 
 	/**
@@ -421,6 +414,46 @@ public class diffFactoryImpl extends EFactoryImpl implements diffFactory {
 	public RemoveRestriction createRemoveRestriction() {
 		RemoveRestrictionImpl removeRestriction = new RemoveRestrictionImpl();
 		return removeRestriction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChangeFormatReturnValue createChangeFormatReturnValue() {
+		ChangeFormatReturnValueImpl changeFormatReturnValue = new ChangeFormatReturnValueImpl();
+		return changeFormatReturnValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RenameMethod createRenameMethod() {
+		RenameMethodImpl renameMethod = new RenameMethodImpl();
+		return renameMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CombineMethods createCombineMethods() {
+		CombineMethodsImpl combineMethods = new CombineMethodsImpl();
+		return combineMethods;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SplitMethod createSplitMethod() {
+		SplitMethodImpl splitMethod = new SplitMethodImpl();
+		return splitMethod;
 	}
 
 	/**

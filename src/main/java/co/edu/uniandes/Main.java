@@ -84,6 +84,7 @@ public class Main {
 		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
 		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());
 		ChangesProcessor.processExposeData(diffMetamodel, contentTypesUpdated, diff.getChange());
+		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffMetamodel, addResponse, diff.getChange());
 		
 		diffMetamodel.saveInstance();
 		System.out.println("Process done");

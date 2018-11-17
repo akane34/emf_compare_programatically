@@ -84,14 +84,6 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.MOVE_DOWN_IN_HIERARCHY: {
-				MoveDownInHierarchy moveDownInHierarchy = (MoveDownInHierarchy)theEObject;
-				T result = caseMoveDownInHierarchy(moveDownInHierarchy);
-				if (result == null) result = caseComplex(moveDownInHierarchy);
-				if (result == null) result = caseChange(moveDownInHierarchy);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case diffPackage.RELOCATE_PARAMETER: {
 				RelocateParameter relocateParameter = (RelocateParameter)theEObject;
 				T result = caseRelocateParameter(relocateParameter);
@@ -118,30 +110,6 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.REORDER_TYPE_PARAMETERS: {
-				ReorderTypeParameters reorderTypeParameters = (ReorderTypeParameters)theEObject;
-				T result = caseReorderTypeParameters(reorderTypeParameters);
-				if (result == null) result = caseComplex(reorderTypeParameters);
-				if (result == null) result = caseChange(reorderTypeParameters);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case diffPackage.CONTRACT_SUPER_SET: {
-				ContractSuperSet contractSuperSet = (ContractSuperSet)theEObject;
-				T result = caseContractSuperSet(contractSuperSet);
-				if (result == null) result = caseComplex(contractSuperSet);
-				if (result == null) result = caseChange(contractSuperSet);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case diffPackage.MOVE_UP_IN_HIERARCHY: {
-				MoveUpInHierarchy moveUpInHierarchy = (MoveUpInHierarchy)theEObject;
-				T result = caseMoveUpInHierarchy(moveUpInHierarchy);
-				if (result == null) result = caseComplex(moveUpInHierarchy);
-				if (result == null) result = caseChange(moveUpInHierarchy);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case diffPackage.SIMPLE: {
 				Simple simple = (Simple)theEObject;
 				T result = caseSimple(simple);
@@ -157,11 +125,47 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case diffPackage.ADD_PARAMETER: {
+				AddParameter addParameter = (AddParameter)theEObject;
+				T result = caseAddParameter(addParameter);
+				if (result == null) result = caseAdd(addParameter);
+				if (result == null) result = caseSimple(addParameter);
+				if (result == null) result = caseChange(addParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case diffPackage.DELETE: {
 				Delete delete = (Delete)theEObject;
 				T result = caseDelete(delete);
 				if (result == null) result = caseSimple(delete);
 				if (result == null) result = caseChange(delete);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.UNSUPPORT_REQUEST_METHOD: {
+				UnsupportRequestMethod unsupportRequestMethod = (UnsupportRequestMethod)theEObject;
+				T result = caseUnsupportRequestMethod(unsupportRequestMethod);
+				if (result == null) result = caseDelete(unsupportRequestMethod);
+				if (result == null) result = caseSimple(unsupportRequestMethod);
+				if (result == null) result = caseChange(unsupportRequestMethod);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.DELETE_PATH: {
+				DeletePath deletePath = (DeletePath)theEObject;
+				T result = caseDeletePath(deletePath);
+				if (result == null) result = caseDelete(deletePath);
+				if (result == null) result = caseSimple(deletePath);
+				if (result == null) result = caseChange(deletePath);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.REMOVE_PARAMETER: {
+				RemoveParameter removeParameter = (RemoveParameter)theEObject;
+				T result = caseRemoveParameter(removeParameter);
+				if (result == null) result = caseDelete(removeParameter);
+				if (result == null) result = caseSimple(removeParameter);
+				if (result == null) result = caseChange(removeParameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -179,6 +183,15 @@ public class diffSwitch<T> extends Switch<T> {
 				T result = caseModify(modify);
 				if (result == null) result = caseSimple(modify);
 				if (result == null) result = caseChange(modify);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.MODIFY_PARAMETER_SCHEMA_TYPE: {
+				ModifyParameterSchemaType modifyParameterSchemaType = (ModifyParameterSchemaType)theEObject;
+				T result = caseModifyParameterSchemaType(modifyParameterSchemaType);
+				if (result == null) result = caseModify(modifyParameterSchemaType);
+				if (result == null) result = caseSimple(modifyParameterSchemaType);
+				if (result == null) result = caseChange(modifyParameterSchemaType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -209,39 +222,12 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.RENAME: {
-				Rename rename = (Rename)theEObject;
-				T result = caseRename(rename);
-				if (result == null) result = caseModify(rename);
-				if (result == null) result = caseSimple(rename);
-				if (result == null) result = caseChange(rename);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case diffPackage.ACCESS_MODIFIER: {
-				AccessModifier accessModifier = (AccessModifier)theEObject;
-				T result = caseAccessModifier(accessModifier);
-				if (result == null) result = caseModify(accessModifier);
-				if (result == null) result = caseSimple(accessModifier);
-				if (result == null) result = caseChange(accessModifier);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case diffPackage.TYPE_BOUND: {
-				TypeBound typeBound = (TypeBound)theEObject;
-				T result = caseTypeBound(typeBound);
-				if (result == null) result = caseModify(typeBound);
-				if (result == null) result = caseSimple(typeBound);
-				if (result == null) result = caseChange(typeBound);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case diffPackage.RESULT_TYPE: {
-				ResultType resultType = (ResultType)theEObject;
-				T result = caseResultType(resultType);
-				if (result == null) result = caseModify(resultType);
-				if (result == null) result = caseSimple(resultType);
-				if (result == null) result = caseChange(resultType);
+			case diffPackage.RENAME_PARAMETER: {
+				RenameParameter renameParameter = (RenameParameter)theEObject;
+				T result = caseRenameParameter(renameParameter);
+				if (result == null) result = caseModify(renameParameter);
+				if (result == null) result = caseSimple(renameParameter);
+				if (result == null) result = caseChange(renameParameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -254,30 +240,38 @@ public class diffSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.FIELD_VALUE: {
-				FieldValue fieldValue = (FieldValue)theEObject;
-				T result = caseFieldValue(fieldValue);
-				if (result == null) result = caseModify(fieldValue);
-				if (result == null) result = caseSimple(fieldValue);
-				if (result == null) result = caseChange(fieldValue);
+			case diffPackage.PRODUCE_TYPE: {
+				ProduceType produceType = (ProduceType)theEObject;
+				T result = caseProduceType(produceType);
+				if (result == null) result = caseModify(produceType);
+				if (result == null) result = caseSimple(produceType);
+				if (result == null) result = caseChange(produceType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.TYPE_API: {
-				TypeAPI typeAPI = (TypeAPI)theEObject;
-				T result = caseTypeAPI(typeAPI);
-				if (result == null) result = caseModify(typeAPI);
-				if (result == null) result = caseSimple(typeAPI);
-				if (result == null) result = caseChange(typeAPI);
+			case diffPackage.ADD_STATUS_CODE: {
+				AddStatusCode addStatusCode = (AddStatusCode)theEObject;
+				T result = caseAddStatusCode(addStatusCode);
+				if (result == null) result = caseModify(addStatusCode);
+				if (result == null) result = caseSimple(addStatusCode);
+				if (result == null) result = caseChange(addStatusCode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case diffPackage.OTHER_MODIFIER: {
-				OtherModifier otherModifier = (OtherModifier)theEObject;
-				T result = caseOtherModifier(otherModifier);
-				if (result == null) result = caseModify(otherModifier);
-				if (result == null) result = caseSimple(otherModifier);
-				if (result == null) result = caseChange(otherModifier);
+			case diffPackage.REMOVE_STATUS_CODE: {
+				RemoveStatusCode removeStatusCode = (RemoveStatusCode)theEObject;
+				T result = caseRemoveStatusCode(removeStatusCode);
+				if (result == null) result = caseModify(removeStatusCode);
+				if (result == null) result = caseSimple(removeStatusCode);
+				if (result == null) result = caseChange(removeStatusCode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.EXPOSE_DATA: {
+				ExposeData exposeData = (ExposeData)theEObject;
+				T result = caseExposeData(exposeData);
+				if (result == null) result = caseComplex(exposeData);
+				if (result == null) result = caseChange(exposeData);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -299,6 +293,38 @@ public class diffSwitch<T> extends Switch<T> {
 				T result = caseRemoveRestriction(removeRestriction);
 				if (result == null) result = caseComplex(removeRestriction);
 				if (result == null) result = caseChange(removeRestriction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.CHANGE_FORMAT_RETURN_VALUE: {
+				ChangeFormatReturnValue changeFormatReturnValue = (ChangeFormatReturnValue)theEObject;
+				T result = caseChangeFormatReturnValue(changeFormatReturnValue);
+				if (result == null) result = caseComplex(changeFormatReturnValue);
+				if (result == null) result = caseChange(changeFormatReturnValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.RENAME_METHOD: {
+				RenameMethod renameMethod = (RenameMethod)theEObject;
+				T result = caseRenameMethod(renameMethod);
+				if (result == null) result = caseComplex(renameMethod);
+				if (result == null) result = caseChange(renameMethod);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.COMBINE_METHODS: {
+				CombineMethods combineMethods = (CombineMethods)theEObject;
+				T result = caseCombineMethods(combineMethods);
+				if (result == null) result = caseComplex(combineMethods);
+				if (result == null) result = caseChange(combineMethods);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case diffPackage.SPLIT_METHOD: {
+				SplitMethod splitMethod = (SplitMethod)theEObject;
+				T result = caseSplitMethod(splitMethod);
+				if (result == null) result = caseComplex(splitMethod);
+				if (result == null) result = caseChange(splitMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -384,21 +410,6 @@ public class diffSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Move Down In Hierarchy</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Move Down In Hierarchy</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMoveDownInHierarchy(MoveDownInHierarchy object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Relocate Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -444,51 +455,6 @@ public class diffSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reorder Type Parameters</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reorder Type Parameters</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseReorderTypeParameters(ReorderTypeParameters object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Contract Super Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Contract Super Set</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseContractSuperSet(ContractSuperSet object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Move Up In Hierarchy</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Move Up In Hierarchy</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMoveUpInHierarchy(MoveUpInHierarchy object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -519,6 +485,21 @@ public class diffSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddParameter(AddParameter object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Delete</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -530,6 +511,51 @@ public class diffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDelete(Delete object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unsupport Request Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unsupport Request Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnsupportRequestMethod(UnsupportRequestMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeletePath(DeletePath object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Remove Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Remove Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRemoveParameter(RemoveParameter object) {
 		return null;
 	}
 
@@ -560,6 +586,21 @@ public class diffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModify(Modify object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Parameter Schema Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Parameter Schema Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModifyParameterSchemaType(ModifyParameterSchemaType object) {
 		return null;
 	}
 
@@ -609,62 +650,17 @@ public class diffSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rename</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Rename Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rename</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Rename Parameter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRename(Rename object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Access Modifier</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Access Modifier</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAccessModifier(AccessModifier object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type Bound</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type Bound</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTypeBound(TypeBound object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Result Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Result Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResultType(ResultType object) {
+	public T caseRenameParameter(RenameParameter object) {
 		return null;
 	}
 
@@ -684,47 +680,62 @@ public class diffSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Produce Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Produce Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFieldValue(FieldValue object) {
+	public T caseProduceType(ProduceType object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type API</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Add Status Code</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type API</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Add Status Code</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypeAPI(TypeAPI object) {
+	public T caseAddStatusCode(AddStatusCode object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Other Modifier</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Remove Status Code</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Other Modifier</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Remove Status Code</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOtherModifier(OtherModifier object) {
+	public T caseRemoveStatusCode(RemoveStatusCode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expose Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expose Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExposeData(ExposeData object) {
 		return null;
 	}
 
@@ -770,6 +781,66 @@ public class diffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRemoveRestriction(RemoveRestriction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Change Format Return Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Change Format Return Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChangeFormatReturnValue(ChangeFormatReturnValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rename Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rename Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRenameMethod(RenameMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Combine Methods</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Combine Methods</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCombineMethods(CombineMethods object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Split Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Split Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSplitMethod(SplitMethod object) {
 		return null;
 	}
 

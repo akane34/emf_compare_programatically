@@ -31,7 +31,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "diff";
+	String eNAME = "Diff";
 
 	/**
 	 * The package namespace URI.
@@ -47,7 +47,7 @@ public interface diffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "diff";
+	String eNS_PREFIX = "Diff";
 
 	/**
 	 * The singleton instance of the package.
@@ -203,7 +203,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getComplex()
 	 * @generated
 	 */
-	int COMPLEX = 27;
+	int COMPLEX = 26;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -242,52 +242,6 @@ public interface diffPackage extends EPackage {
 	int COMPLEX_OPERATION_COUNT = CHANGE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MoveDownInHierarchyImpl <em>Move Down In Hierarchy</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.MoveDownInHierarchyImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMoveDownInHierarchy()
-	 * @generated
-	 */
-	int MOVE_DOWN_IN_HIERARCHY = 3;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_DOWN_IN_HIERARCHY__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_DOWN_IN_HIERARCHY__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
-
-	/**
-	 * The number of structural features of the '<em>Move Down In Hierarchy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_DOWN_IN_HIERARCHY_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Move Down In Hierarchy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_DOWN_IN_HIERARCHY_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RelocateParameterImpl <em>Relocate Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -295,7 +249,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRelocateParameter()
 	 * @generated
 	 */
-	int RELOCATE_PARAMETER = 4;
+	int RELOCATE_PARAMETER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -359,7 +313,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMultipleParametersInOne()
 	 * @generated
 	 */
-	int MULTIPLE_PARAMETERS_IN_ONE = 5;
+	int MULTIPLE_PARAMETERS_IN_ONE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -423,7 +377,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSameParameter()
 	 * @generated
 	 */
-	int SAME_PARAMETER = 6;
+	int SAME_PARAMETER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -480,144 +434,6 @@ public interface diffPackage extends EPackage {
 	int SAME_PARAMETER_OPERATION_COUNT = RELOCATE_PARAMETER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl <em>Reorder Type Parameters</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReorderTypeParameters()
-	 * @generated
-	 */
-	int REORDER_TYPE_PARAMETERS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REORDER_TYPE_PARAMETERS__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REORDER_TYPE_PARAMETERS__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
-
-	/**
-	 * The number of structural features of the '<em>Reorder Type Parameters</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REORDER_TYPE_PARAMETERS_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Reorder Type Parameters</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REORDER_TYPE_PARAMETERS_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ContractSuperSetImpl <em>Contract Super Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ContractSuperSetImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getContractSuperSet()
-	 * @generated
-	 */
-	int CONTRACT_SUPER_SET = 8;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_SUPER_SET__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_SUPER_SET__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
-
-	/**
-	 * The number of structural features of the '<em>Contract Super Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_SUPER_SET_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Contract Super Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_SUPER_SET_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MoveUpInHierarchyImpl <em>Move Up In Hierarchy</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.MoveUpInHierarchyImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMoveUpInHierarchy()
-	 * @generated
-	 */
-	int MOVE_UP_IN_HIERARCHY = 9;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_UP_IN_HIERARCHY__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_UP_IN_HIERARCHY__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
-
-	/**
-	 * The number of structural features of the '<em>Move Up In Hierarchy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_UP_IN_HIERARCHY_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Move Up In Hierarchy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_UP_IN_HIERARCHY_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SimpleImpl <em>Simple</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -625,7 +441,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSimple()
 	 * @generated
 	 */
-	int SIMPLE = 10;
+	int SIMPLE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -680,7 +496,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAdd()
 	 * @generated
 	 */
-	int ADD = 11;
+	int ADD = 7;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -728,6 +544,61 @@ public interface diffPackage extends EPackage {
 	int ADD_OPERATION_COUNT = SIMPLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddParameterImpl <em>Add Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddParameterImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddParameter()
+	 * @generated
+	 */
+	int ADD_PARAMETER = 8;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_PARAMETER__CHANGE_ELEMENT = ADD__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_PARAMETER__NEW = ADD__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_PARAMETER__OLD = ADD__OLD;
+
+	/**
+	 * The number of structural features of the '<em>Add Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_PARAMETER_FEATURE_COUNT = ADD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Add Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_PARAMETER_OPERATION_COUNT = ADD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DeleteImpl <em>Delete</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,7 +606,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDelete()
 	 * @generated
 	 */
-	int DELETE = 12;
+	int DELETE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -781,6 +652,171 @@ public interface diffPackage extends EPackage {
 	 * @ordered
 	 */
 	int DELETE_OPERATION_COUNT = SIMPLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.UnsupportRequestMethodImpl <em>Unsupport Request Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.UnsupportRequestMethodImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getUnsupportRequestMethod()
+	 * @generated
+	 */
+	int UNSUPPORT_REQUEST_METHOD = 10;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSUPPORT_REQUEST_METHOD__CHANGE_ELEMENT = DELETE__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSUPPORT_REQUEST_METHOD__NEW = DELETE__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSUPPORT_REQUEST_METHOD__OLD = DELETE__OLD;
+
+	/**
+	 * The number of structural features of the '<em>Unsupport Request Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSUPPORT_REQUEST_METHOD_FEATURE_COUNT = DELETE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Unsupport Request Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSUPPORT_REQUEST_METHOD_OPERATION_COUNT = DELETE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DeletePathImpl <em>Delete Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.DeletePathImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDeletePath()
+	 * @generated
+	 */
+	int DELETE_PATH = 11;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_PATH__CHANGE_ELEMENT = DELETE__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_PATH__NEW = DELETE__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_PATH__OLD = DELETE__OLD;
+
+	/**
+	 * The number of structural features of the '<em>Delete Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_PATH_FEATURE_COUNT = DELETE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_PATH_OPERATION_COUNT = DELETE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveParameterImpl <em>Remove Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveParameterImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveParameter()
+	 * @generated
+	 */
+	int REMOVE_PARAMETER = 12;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_PARAMETER__CHANGE_ELEMENT = DELETE__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_PARAMETER__NEW = DELETE__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_PARAMETER__OLD = DELETE__OLD;
+
+	/**
+	 * The number of structural features of the '<em>Remove Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_PARAMETER_FEATURE_COUNT = DELETE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Remove Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_PARAMETER_OPERATION_COUNT = DELETE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DefaultClauseImpl <em>Default Clause</em>}' class.
@@ -893,6 +929,61 @@ public interface diffPackage extends EPackage {
 	int MODIFY_OPERATION_COUNT = SIMPLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ModifyParameterSchemaTypeImpl <em>Modify Parameter Schema Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ModifyParameterSchemaTypeImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getModifyParameterSchemaType()
+	 * @generated
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE__NEW = MODIFY__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE__OLD = MODIFY__OLD;
+
+	/**
+	 * The number of structural features of the '<em>Modify Parameter Schema Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Modify Parameter Schema Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.UpperBondaryImpl <em>Upper Bondary</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -900,7 +991,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getUpperBondary()
 	 * @generated
 	 */
-	int UPPER_BONDARY = 15;
+	int UPPER_BONDARY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -955,7 +1046,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getLowerBondary()
 	 * @generated
 	 */
-	int LOWER_BONDARY = 16;
+	int LOWER_BONDARY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1010,7 +1101,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDefaultValue()
 	 * @generated
 	 */
-	int DEFAULT_VALUE = 17;
+	int DEFAULT_VALUE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1058,14 +1149,14 @@ public interface diffPackage extends EPackage {
 	int DEFAULT_VALUE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameImpl <em>Rename</em>}' class.
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameParameterImpl <em>Rename Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRename()
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameParameterImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRenameParameter()
 	 * @generated
 	 */
-	int RENAME = 18;
+	int RENAME_PARAMETER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1074,7 +1165,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RENAME__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
+	int RENAME_PARAMETER__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>New</b></em>' containment reference.
@@ -1083,7 +1174,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RENAME__NEW = MODIFY__NEW;
+	int RENAME_PARAMETER__NEW = MODIFY__NEW;
 
 	/**
 	 * The feature id for the '<em><b>Old</b></em>' containment reference.
@@ -1092,190 +1183,25 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RENAME__OLD = MODIFY__OLD;
+	int RENAME_PARAMETER__OLD = MODIFY__OLD;
 
 	/**
-	 * The number of structural features of the '<em>Rename</em>' class.
+	 * The number of structural features of the '<em>Rename Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RENAME_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+	int RENAME_PARAMETER_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Rename</em>' class.
+	 * The number of operations of the '<em>Rename Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RENAME_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AccessModifierImpl <em>Access Modifier</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.AccessModifierImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAccessModifier()
-	 * @generated
-	 */
-	int ACCESS_MODIFIER = 19;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_MODIFIER__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>New</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_MODIFIER__NEW = MODIFY__NEW;
-
-	/**
-	 * The feature id for the '<em><b>Old</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_MODIFIER__OLD = MODIFY__OLD;
-
-	/**
-	 * The number of structural features of the '<em>Access Modifier</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_MODIFIER_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Access Modifier</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_MODIFIER_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.TypeBoundImpl <em>Type Bound</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.TypeBoundImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeBound()
-	 * @generated
-	 */
-	int TYPE_BOUND = 20;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_BOUND__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>New</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_BOUND__NEW = MODIFY__NEW;
-
-	/**
-	 * The feature id for the '<em><b>Old</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_BOUND__OLD = MODIFY__OLD;
-
-	/**
-	 * The number of structural features of the '<em>Type Bound</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_BOUND_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Type Bound</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_BOUND_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ResultTypeImpl <em>Result Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ResultTypeImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getResultType()
-	 * @generated
-	 */
-	int RESULT_TYPE = 21;
-
-	/**
-	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_TYPE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>New</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_TYPE__NEW = MODIFY__NEW;
-
-	/**
-	 * The feature id for the '<em><b>Old</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_TYPE__OLD = MODIFY__OLD;
-
-	/**
-	 * The number of structural features of the '<em>Result Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_TYPE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Result Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_TYPE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+	int RENAME_PARAMETER_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ConsumeTypeImpl <em>Consume Type</em>}' class.
@@ -1285,7 +1211,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getConsumeType()
 	 * @generated
 	 */
-	int CONSUME_TYPE = 22;
+	int CONSUME_TYPE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1333,14 +1259,14 @@ public interface diffPackage extends EPackage {
 	int CONSUME_TYPE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.FieldValueImpl <em>Field Value</em>}' class.
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ProduceTypeImpl <em>Produce Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.FieldValueImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getFieldValue()
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ProduceTypeImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getProduceType()
 	 * @generated
 	 */
-	int FIELD_VALUE = 23;
+	int PRODUCE_TYPE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1349,7 +1275,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_VALUE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
+	int PRODUCE_TYPE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>New</b></em>' containment reference.
@@ -1358,7 +1284,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_VALUE__NEW = MODIFY__NEW;
+	int PRODUCE_TYPE__NEW = MODIFY__NEW;
 
 	/**
 	 * The feature id for the '<em><b>Old</b></em>' containment reference.
@@ -1367,35 +1293,35 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_VALUE__OLD = MODIFY__OLD;
+	int PRODUCE_TYPE__OLD = MODIFY__OLD;
 
 	/**
-	 * The number of structural features of the '<em>Field Value</em>' class.
+	 * The number of structural features of the '<em>Produce Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_VALUE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+	int PRODUCE_TYPE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Field Value</em>' class.
+	 * The number of operations of the '<em>Produce Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_VALUE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+	int PRODUCE_TYPE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.TypeAPIImpl <em>Type API</em>}' class.
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddStatusCodeImpl <em>Add Status Code</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.TypeAPIImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeAPI()
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddStatusCodeImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddStatusCode()
 	 * @generated
 	 */
-	int TYPE_API = 24;
+	int ADD_STATUS_CODE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1404,7 +1330,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_API__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
+	int ADD_STATUS_CODE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>New</b></em>' containment reference.
@@ -1413,7 +1339,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_API__NEW = MODIFY__NEW;
+	int ADD_STATUS_CODE__NEW = MODIFY__NEW;
 
 	/**
 	 * The feature id for the '<em><b>Old</b></em>' containment reference.
@@ -1422,35 +1348,35 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_API__OLD = MODIFY__OLD;
+	int ADD_STATUS_CODE__OLD = MODIFY__OLD;
 
 	/**
-	 * The number of structural features of the '<em>Type API</em>' class.
+	 * The number of structural features of the '<em>Add Status Code</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_API_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+	int ADD_STATUS_CODE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Type API</em>' class.
+	 * The number of operations of the '<em>Add Status Code</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_API_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+	int ADD_STATUS_CODE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.OtherModifierImpl <em>Other Modifier</em>}' class.
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveStatusCodeImpl <em>Remove Status Code</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.OtherModifierImpl
-	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getOtherModifier()
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveStatusCodeImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveStatusCode()
 	 * @generated
 	 */
-	int OTHER_MODIFIER = 25;
+	int REMOVE_STATUS_CODE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1459,7 +1385,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_MODIFIER__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
+	int REMOVE_STATUS_CODE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>New</b></em>' containment reference.
@@ -1468,7 +1394,7 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_MODIFIER__NEW = MODIFY__NEW;
+	int REMOVE_STATUS_CODE__NEW = MODIFY__NEW;
 
 	/**
 	 * The feature id for the '<em><b>Old</b></em>' containment reference.
@@ -1477,25 +1403,71 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_MODIFIER__OLD = MODIFY__OLD;
+	int REMOVE_STATUS_CODE__OLD = MODIFY__OLD;
 
 	/**
-	 * The number of structural features of the '<em>Other Modifier</em>' class.
+	 * The number of structural features of the '<em>Remove Status Code</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_MODIFIER_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+	int REMOVE_STATUS_CODE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Other Modifier</em>' class.
+	 * The number of operations of the '<em>Remove Status Code</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_MODIFIER_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+	int REMOVE_STATUS_CODE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ExposeDataImpl <em>Expose Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ExposeDataImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getExposeData()
+	 * @generated
+	 */
+	int EXPOSE_DATA = 24;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPOSE_DATA__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPOSE_DATA__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Expose Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPOSE_DATA_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Expose Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPOSE_DATA_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl <em>Element Reference</em>}' class.
@@ -1505,7 +1477,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementReference()
 	 * @generated
 	 */
-	int ELEMENT_REFERENCE = 26;
+	int ELEMENT_REFERENCE = 25;
 
 	/**
 	 * The feature id for the '<em><b>EObject</b></em>' attribute.
@@ -1569,7 +1541,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveRestriction()
 	 * @generated
 	 */
-	int REMOVE_RESTRICTION = 28;
+	int REMOVE_RESTRICTION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1608,6 +1580,190 @@ public interface diffPackage extends EPackage {
 	int REMOVE_RESTRICTION_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ChangeFormatReturnValueImpl <em>Change Format Return Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.ChangeFormatReturnValueImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getChangeFormatReturnValue()
+	 * @generated
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE = 28;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Change Format Return Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Change Format Return Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameMethodImpl <em>Rename Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameMethodImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRenameMethod()
+	 * @generated
+	 */
+	int RENAME_METHOD = 29;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENAME_METHOD__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENAME_METHOD__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Rename Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENAME_METHOD_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Rename Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENAME_METHOD_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.CombineMethodsImpl <em>Combine Methods</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.CombineMethodsImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getCombineMethods()
+	 * @generated
+	 */
+	int COMBINE_METHODS = 30;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINE_METHODS__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINE_METHODS__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Combine Methods</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINE_METHODS_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Combine Methods</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMBINE_METHODS_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SplitMethodImpl <em>Split Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.SplitMethodImpl
+	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSplitMethod()
+	 * @generated
+	 */
+	int SPLIT_METHOD = 31;
+
+	/**
+	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLIT_METHOD__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLIT_METHOD__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+
+	/**
+	 * The number of structural features of the '<em>Split Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLIT_METHOD_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Split Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLIT_METHOD_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl <em>Add Restriction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1615,7 +1771,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddRestriction()
 	 * @generated
 	 */
-	int ADD_RESTRICTION = 29;
+	int ADD_RESTRICTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1661,7 +1817,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 30;
+	int PARAMETER_TYPE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1734,7 +1890,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementDefinition()
 	 * @generated
 	 */
-	int ELEMENT_DEFINITION = 31;
+	int ELEMENT_DEFINITION = 34;
 
 	/**
 	 * The feature id for the '<em><b>Schema Name</b></em>' attribute.
@@ -1780,7 +1936,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReturnType()
 	 * @generated
 	 */
-	int RETURN_TYPE = 32;
+	int RETURN_TYPE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Change Element</b></em>' attribute.
@@ -1853,7 +2009,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAPIElementType()
 	 * @generated
 	 */
-	int API_ELEMENT_TYPE = 33;
+	int API_ELEMENT_TYPE = 36;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ParameterLocation <em>Parameter Location</em>}' enum.
@@ -1863,7 +2019,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getParameterLocation()
 	 * @generated
 	 */
-	int PARAMETER_LOCATION = 34;
+	int PARAMETER_LOCATION = 37;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.diff.metamodel.diff.ElementType <em>Element Type</em>}' enum.
@@ -1873,7 +2029,7 @@ public interface diffPackage extends EPackage {
 	 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 35;
+	int ELEMENT_TYPE = 38;
 
 
 	/**
@@ -1973,16 +2129,6 @@ public interface diffPackage extends EPackage {
 	EAttribute getChange_ChangeElement();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy <em>Move Down In Hierarchy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Move Down In Hierarchy</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy
-	 * @generated
-	 */
-	EClass getMoveDownInHierarchy();
-
-	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RelocateParameter <em>Relocate Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2035,36 +2181,6 @@ public interface diffPackage extends EPackage {
 	EClass getSameParameter();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters <em>Reorder Type Parameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reorder Type Parameters</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters
-	 * @generated
-	 */
-	EClass getReorderTypeParameters();
-
-	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ContractSuperSet <em>Contract Super Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Contract Super Set</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ContractSuperSet
-	 * @generated
-	 */
-	EClass getContractSuperSet();
-
-	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy <em>Move Up In Hierarchy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Move Up In Hierarchy</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy
-	 * @generated
-	 */
-	EClass getMoveUpInHierarchy();
-
-	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.Simple <em>Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2107,6 +2223,16 @@ public interface diffPackage extends EPackage {
 	EClass getAdd();
 
 	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.AddParameter <em>Add Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Parameter</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddParameter
+	 * @generated
+	 */
+	EClass getAddParameter();
+
+	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.Delete <em>Delete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2115,6 +2241,36 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDelete();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.UnsupportRequestMethod <em>Unsupport Request Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unsupport Request Method</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.UnsupportRequestMethod
+	 * @generated
+	 */
+	EClass getUnsupportRequestMethod();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.DeletePath <em>Delete Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Path</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.DeletePath
+	 * @generated
+	 */
+	EClass getDeletePath();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveParameter <em>Remove Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Remove Parameter</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveParameter
+	 * @generated
+	 */
+	EClass getRemoveParameter();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.DefaultClause <em>Default Clause</em>}'.
@@ -2135,6 +2291,16 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getModify();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ModifyParameterSchemaType <em>Modify Parameter Schema Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modify Parameter Schema Type</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ModifyParameterSchemaType
+	 * @generated
+	 */
+	EClass getModifyParameterSchemaType();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.UpperBondary <em>Upper Bondary</em>}'.
@@ -2167,44 +2333,14 @@ public interface diffPackage extends EPackage {
 	EClass getDefaultValue();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.Rename <em>Rename</em>}'.
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RenameParameter <em>Rename Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rename</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.Rename
+	 * @return the meta object for class '<em>Rename Parameter</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RenameParameter
 	 * @generated
 	 */
-	EClass getRename();
-
-	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.AccessModifier <em>Access Modifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Access Modifier</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.AccessModifier
-	 * @generated
-	 */
-	EClass getAccessModifier();
-
-	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.TypeBound <em>Type Bound</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Type Bound</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.TypeBound
-	 * @generated
-	 */
-	EClass getTypeBound();
-
-	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ResultType <em>Result Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Result Type</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ResultType
-	 * @generated
-	 */
-	EClass getResultType();
+	EClass getRenameParameter();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ConsumeType <em>Consume Type</em>}'.
@@ -2217,34 +2353,44 @@ public interface diffPackage extends EPackage {
 	EClass getConsumeType();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.FieldValue <em>Field Value</em>}'.
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ProduceType <em>Produce Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Value</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.FieldValue
+	 * @return the meta object for class '<em>Produce Type</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ProduceType
 	 * @generated
 	 */
-	EClass getFieldValue();
+	EClass getProduceType();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.TypeAPI <em>Type API</em>}'.
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.AddStatusCode <em>Add Status Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Type API</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.TypeAPI
+	 * @return the meta object for class '<em>Add Status Code</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddStatusCode
 	 * @generated
 	 */
-	EClass getTypeAPI();
+	EClass getAddStatusCode();
 
 	/**
-	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.OtherModifier <em>Other Modifier</em>}'.
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveStatusCode <em>Remove Status Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Other Modifier</em>'.
-	 * @see co.edu.uniandes.diff.metamodel.diff.OtherModifier
+	 * @return the meta object for class '<em>Remove Status Code</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveStatusCode
 	 * @generated
 	 */
-	EClass getOtherModifier();
+	EClass getRemoveStatusCode();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ExposeData <em>Expose Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expose Data</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ExposeData
+	 * @generated
+	 */
+	EClass getExposeData();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ElementReference <em>Element Reference</em>}'.
@@ -2330,6 +2476,46 @@ public interface diffPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRemoveRestriction();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.ChangeFormatReturnValue <em>Change Format Return Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Change Format Return Value</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ChangeFormatReturnValue
+	 * @generated
+	 */
+	EClass getChangeFormatReturnValue();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.RenameMethod <em>Rename Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rename Method</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RenameMethod
+	 * @generated
+	 */
+	EClass getRenameMethod();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.CombineMethods <em>Combine Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Combine Methods</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.CombineMethods
+	 * @generated
+	 */
+	EClass getCombineMethods();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.SplitMethod <em>Split Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Split Method</em>'.
+	 * @see co.edu.uniandes.diff.metamodel.diff.SplitMethod
+	 * @generated
+	 */
+	EClass getSplitMethod();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.diff.metamodel.diff.AddRestriction <em>Add Restriction</em>}'.
@@ -2572,16 +2758,6 @@ public interface diffPackage extends EPackage {
 		EAttribute CHANGE__CHANGE_ELEMENT = eINSTANCE.getChange_ChangeElement();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MoveDownInHierarchyImpl <em>Move Down In Hierarchy</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.MoveDownInHierarchyImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMoveDownInHierarchy()
-		 * @generated
-		 */
-		EClass MOVE_DOWN_IN_HIERARCHY = eINSTANCE.getMoveDownInHierarchy();
-
-		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RelocateParameterImpl <em>Relocate Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2628,36 +2804,6 @@ public interface diffPackage extends EPackage {
 		EClass SAME_PARAMETER = eINSTANCE.getSameParameter();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl <em>Reorder Type Parameters</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ReorderTypeParametersImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getReorderTypeParameters()
-		 * @generated
-		 */
-		EClass REORDER_TYPE_PARAMETERS = eINSTANCE.getReorderTypeParameters();
-
-		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ContractSuperSetImpl <em>Contract Super Set</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ContractSuperSetImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getContractSuperSet()
-		 * @generated
-		 */
-		EClass CONTRACT_SUPER_SET = eINSTANCE.getContractSuperSet();
-
-		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.MoveUpInHierarchyImpl <em>Move Up In Hierarchy</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.MoveUpInHierarchyImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getMoveUpInHierarchy()
-		 * @generated
-		 */
-		EClass MOVE_UP_IN_HIERARCHY = eINSTANCE.getMoveUpInHierarchy();
-
-		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SimpleImpl <em>Simple</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2694,6 +2840,16 @@ public interface diffPackage extends EPackage {
 		EClass ADD = eINSTANCE.getAdd();
 
 		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddParameterImpl <em>Add Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddParameterImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddParameter()
+		 * @generated
+		 */
+		EClass ADD_PARAMETER = eINSTANCE.getAddParameter();
+
+		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DeleteImpl <em>Delete</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2702,6 +2858,36 @@ public interface diffPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DELETE = eINSTANCE.getDelete();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.UnsupportRequestMethodImpl <em>Unsupport Request Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.UnsupportRequestMethodImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getUnsupportRequestMethod()
+		 * @generated
+		 */
+		EClass UNSUPPORT_REQUEST_METHOD = eINSTANCE.getUnsupportRequestMethod();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DeletePathImpl <em>Delete Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.DeletePathImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getDeletePath()
+		 * @generated
+		 */
+		EClass DELETE_PATH = eINSTANCE.getDeletePath();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveParameterImpl <em>Remove Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveParameterImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveParameter()
+		 * @generated
+		 */
+		EClass REMOVE_PARAMETER = eINSTANCE.getRemoveParameter();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.DefaultClauseImpl <em>Default Clause</em>}' class.
@@ -2722,6 +2908,16 @@ public interface diffPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MODIFY = eINSTANCE.getModify();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ModifyParameterSchemaTypeImpl <em>Modify Parameter Schema Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ModifyParameterSchemaTypeImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getModifyParameterSchemaType()
+		 * @generated
+		 */
+		EClass MODIFY_PARAMETER_SCHEMA_TYPE = eINSTANCE.getModifyParameterSchemaType();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.UpperBondaryImpl <em>Upper Bondary</em>}' class.
@@ -2754,44 +2950,14 @@ public interface diffPackage extends EPackage {
 		EClass DEFAULT_VALUE = eINSTANCE.getDefaultValue();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameImpl <em>Rename</em>}' class.
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameParameterImpl <em>Rename Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRename()
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameParameterImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRenameParameter()
 		 * @generated
 		 */
-		EClass RENAME = eINSTANCE.getRename();
-
-		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AccessModifierImpl <em>Access Modifier</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.AccessModifierImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAccessModifier()
-		 * @generated
-		 */
-		EClass ACCESS_MODIFIER = eINSTANCE.getAccessModifier();
-
-		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.TypeBoundImpl <em>Type Bound</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.TypeBoundImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeBound()
-		 * @generated
-		 */
-		EClass TYPE_BOUND = eINSTANCE.getTypeBound();
-
-		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ResultTypeImpl <em>Result Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ResultTypeImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getResultType()
-		 * @generated
-		 */
-		EClass RESULT_TYPE = eINSTANCE.getResultType();
+		EClass RENAME_PARAMETER = eINSTANCE.getRenameParameter();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ConsumeTypeImpl <em>Consume Type</em>}' class.
@@ -2804,34 +2970,44 @@ public interface diffPackage extends EPackage {
 		EClass CONSUME_TYPE = eINSTANCE.getConsumeType();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.FieldValueImpl <em>Field Value</em>}' class.
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ProduceTypeImpl <em>Produce Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.FieldValueImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getFieldValue()
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ProduceTypeImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getProduceType()
 		 * @generated
 		 */
-		EClass FIELD_VALUE = eINSTANCE.getFieldValue();
+		EClass PRODUCE_TYPE = eINSTANCE.getProduceType();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.TypeAPIImpl <em>Type API</em>}' class.
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddStatusCodeImpl <em>Add Status Code</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.TypeAPIImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getTypeAPI()
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.AddStatusCodeImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getAddStatusCode()
 		 * @generated
 		 */
-		EClass TYPE_API = eINSTANCE.getTypeAPI();
+		EClass ADD_STATUS_CODE = eINSTANCE.getAddStatusCode();
 
 		/**
-		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.OtherModifierImpl <em>Other Modifier</em>}' class.
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RemoveStatusCodeImpl <em>Remove Status Code</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.OtherModifierImpl
-		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getOtherModifier()
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RemoveStatusCodeImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRemoveStatusCode()
 		 * @generated
 		 */
-		EClass OTHER_MODIFIER = eINSTANCE.getOtherModifier();
+		EClass REMOVE_STATUS_CODE = eINSTANCE.getRemoveStatusCode();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ExposeDataImpl <em>Expose Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ExposeDataImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getExposeData()
+		 * @generated
+		 */
+		EClass EXPOSE_DATA = eINSTANCE.getExposeData();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ElementReferenceImpl <em>Element Reference</em>}' class.
@@ -2902,6 +3078,46 @@ public interface diffPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REMOVE_RESTRICTION = eINSTANCE.getRemoveRestriction();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.ChangeFormatReturnValueImpl <em>Change Format Return Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.ChangeFormatReturnValueImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getChangeFormatReturnValue()
+		 * @generated
+		 */
+		EClass CHANGE_FORMAT_RETURN_VALUE = eINSTANCE.getChangeFormatReturnValue();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.RenameMethodImpl <em>Rename Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.RenameMethodImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getRenameMethod()
+		 * @generated
+		 */
+		EClass RENAME_METHOD = eINSTANCE.getRenameMethod();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.CombineMethodsImpl <em>Combine Methods</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.CombineMethodsImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getCombineMethods()
+		 * @generated
+		 */
+		EClass COMBINE_METHODS = eINSTANCE.getCombineMethods();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.SplitMethodImpl <em>Split Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.SplitMethodImpl
+		 * @see co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl#getSplitMethod()
+		 * @generated
+		 */
+		EClass SPLIT_METHOD = eINSTANCE.getSplitMethod();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.diff.metamodel.diff.impl.AddRestrictionImpl <em>Add Restriction</em>}' class.

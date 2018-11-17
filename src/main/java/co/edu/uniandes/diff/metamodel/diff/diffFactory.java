@@ -49,15 +49,6 @@ public interface diffFactory extends EFactory {
 	Change createChange();
 
 	/**
-	 * Returns a new object of class '<em>Move Down In Hierarchy</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Move Down In Hierarchy</em>'.
-	 * @generated
-	 */
-	MoveDownInHierarchy createMoveDownInHierarchy();
-
-	/**
 	 * Returns a new object of class '<em>Relocate Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,33 +76,6 @@ public interface diffFactory extends EFactory {
 	SameParameter createSameParameter();
 
 	/**
-	 * Returns a new object of class '<em>Reorder Type Parameters</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reorder Type Parameters</em>'.
-	 * @generated
-	 */
-	ReorderTypeParameters createReorderTypeParameters();
-
-	/**
-	 * Returns a new object of class '<em>Contract Super Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Contract Super Set</em>'.
-	 * @generated
-	 */
-	ContractSuperSet createContractSuperSet();
-
-	/**
-	 * Returns a new object of class '<em>Move Up In Hierarchy</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Move Up In Hierarchy</em>'.
-	 * @generated
-	 */
-	MoveUpInHierarchy createMoveUpInHierarchy();
-
-	/**
 	 * Returns a new object of class '<em>Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,6 +94,15 @@ public interface diffFactory extends EFactory {
 	Add createAdd();
 
 	/**
+	 * Returns a new object of class '<em>Add Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Parameter</em>'.
+	 * @generated
+	 */
+	AddParameter createAddParameter();
+
+	/**
 	 * Returns a new object of class '<em>Delete</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,6 +110,33 @@ public interface diffFactory extends EFactory {
 	 * @generated
 	 */
 	Delete createDelete();
+
+	/**
+	 * Returns a new object of class '<em>Unsupport Request Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unsupport Request Method</em>'.
+	 * @generated
+	 */
+	UnsupportRequestMethod createUnsupportRequestMethod();
+
+	/**
+	 * Returns a new object of class '<em>Delete Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Path</em>'.
+	 * @generated
+	 */
+	DeletePath createDeletePath();
+
+	/**
+	 * Returns a new object of class '<em>Remove Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Remove Parameter</em>'.
+	 * @generated
+	 */
+	RemoveParameter createRemoveParameter();
 
 	/**
 	 * Returns a new object of class '<em>Default Clause</em>'.
@@ -155,6 +155,15 @@ public interface diffFactory extends EFactory {
 	 * @generated
 	 */
 	Modify createModify();
+
+	/**
+	 * Returns a new object of class '<em>Modify Parameter Schema Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Modify Parameter Schema Type</em>'.
+	 * @generated
+	 */
+	ModifyParameterSchemaType createModifyParameterSchemaType();
 
 	/**
 	 * Returns a new object of class '<em>Upper Bondary</em>'.
@@ -184,40 +193,13 @@ public interface diffFactory extends EFactory {
 	DefaultValue createDefaultValue();
 
 	/**
-	 * Returns a new object of class '<em>Rename</em>'.
+	 * Returns a new object of class '<em>Rename Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rename</em>'.
+	 * @return a new object of class '<em>Rename Parameter</em>'.
 	 * @generated
 	 */
-	Rename createRename();
-
-	/**
-	 * Returns a new object of class '<em>Access Modifier</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Access Modifier</em>'.
-	 * @generated
-	 */
-	AccessModifier createAccessModifier();
-
-	/**
-	 * Returns a new object of class '<em>Type Bound</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type Bound</em>'.
-	 * @generated
-	 */
-	TypeBound createTypeBound();
-
-	/**
-	 * Returns a new object of class '<em>Result Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Result Type</em>'.
-	 * @generated
-	 */
-	ResultType createResultType();
+	RenameParameter createRenameParameter();
 
 	/**
 	 * Returns a new object of class '<em>Consume Type</em>'.
@@ -229,31 +211,40 @@ public interface diffFactory extends EFactory {
 	ConsumeType createConsumeType();
 
 	/**
-	 * Returns a new object of class '<em>Field Value</em>'.
+	 * Returns a new object of class '<em>Produce Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Value</em>'.
+	 * @return a new object of class '<em>Produce Type</em>'.
 	 * @generated
 	 */
-	FieldValue createFieldValue();
+	ProduceType createProduceType();
 
 	/**
-	 * Returns a new object of class '<em>Type API</em>'.
+	 * Returns a new object of class '<em>Add Status Code</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type API</em>'.
+	 * @return a new object of class '<em>Add Status Code</em>'.
 	 * @generated
 	 */
-	TypeAPI createTypeAPI();
+	AddStatusCode createAddStatusCode();
 
 	/**
-	 * Returns a new object of class '<em>Other Modifier</em>'.
+	 * Returns a new object of class '<em>Remove Status Code</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Other Modifier</em>'.
+	 * @return a new object of class '<em>Remove Status Code</em>'.
 	 * @generated
 	 */
-	OtherModifier createOtherModifier();
+	RemoveStatusCode createRemoveStatusCode();
+
+	/**
+	 * Returns a new object of class '<em>Expose Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expose Data</em>'.
+	 * @generated
+	 */
+	ExposeData createExposeData();
 
 	/**
 	 * Returns a new object of class '<em>Element Reference</em>'.
@@ -281,6 +272,42 @@ public interface diffFactory extends EFactory {
 	 * @generated
 	 */
 	RemoveRestriction createRemoveRestriction();
+
+	/**
+	 * Returns a new object of class '<em>Change Format Return Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Change Format Return Value</em>'.
+	 * @generated
+	 */
+	ChangeFormatReturnValue createChangeFormatReturnValue();
+
+	/**
+	 * Returns a new object of class '<em>Rename Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rename Method</em>'.
+	 * @generated
+	 */
+	RenameMethod createRenameMethod();
+
+	/**
+	 * Returns a new object of class '<em>Combine Methods</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Combine Methods</em>'.
+	 * @generated
+	 */
+	CombineMethods createCombineMethods();
+
+	/**
+	 * Returns a new object of class '<em>Split Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Split Method</em>'.
+	 * @generated
+	 */
+	SplitMethod createSplitMethod();
 
 	/**
 	 * Returns a new object of class '<em>Add Restriction</em>'.

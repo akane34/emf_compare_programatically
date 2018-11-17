@@ -80,10 +80,6 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createChangeAdapter();
 			}
 			@Override
-			public Adapter caseMoveDownInHierarchy(MoveDownInHierarchy object) {
-				return createMoveDownInHierarchyAdapter();
-			}
-			@Override
 			public Adapter caseRelocateParameter(RelocateParameter object) {
 				return createRelocateParameterAdapter();
 			}
@@ -96,18 +92,6 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createSameParameterAdapter();
 			}
 			@Override
-			public Adapter caseReorderTypeParameters(ReorderTypeParameters object) {
-				return createReorderTypeParametersAdapter();
-			}
-			@Override
-			public Adapter caseContractSuperSet(ContractSuperSet object) {
-				return createContractSuperSetAdapter();
-			}
-			@Override
-			public Adapter caseMoveUpInHierarchy(MoveUpInHierarchy object) {
-				return createMoveUpInHierarchyAdapter();
-			}
-			@Override
 			public Adapter caseSimple(Simple object) {
 				return createSimpleAdapter();
 			}
@@ -116,8 +100,24 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createAddAdapter();
 			}
 			@Override
+			public Adapter caseAddParameter(AddParameter object) {
+				return createAddParameterAdapter();
+			}
+			@Override
 			public Adapter caseDelete(Delete object) {
 				return createDeleteAdapter();
+			}
+			@Override
+			public Adapter caseUnsupportRequestMethod(UnsupportRequestMethod object) {
+				return createUnsupportRequestMethodAdapter();
+			}
+			@Override
+			public Adapter caseDeletePath(DeletePath object) {
+				return createDeletePathAdapter();
+			}
+			@Override
+			public Adapter caseRemoveParameter(RemoveParameter object) {
+				return createRemoveParameterAdapter();
 			}
 			@Override
 			public Adapter caseDefaultClause(DefaultClause object) {
@@ -126,6 +126,10 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModify(Modify object) {
 				return createModifyAdapter();
+			}
+			@Override
+			public Adapter caseModifyParameterSchemaType(ModifyParameterSchemaType object) {
+				return createModifyParameterSchemaTypeAdapter();
 			}
 			@Override
 			public Adapter caseUpperBondary(UpperBondary object) {
@@ -140,36 +144,28 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 				return createDefaultValueAdapter();
 			}
 			@Override
-			public Adapter caseRename(Rename object) {
-				return createRenameAdapter();
-			}
-			@Override
-			public Adapter caseAccessModifier(AccessModifier object) {
-				return createAccessModifierAdapter();
-			}
-			@Override
-			public Adapter caseTypeBound(TypeBound object) {
-				return createTypeBoundAdapter();
-			}
-			@Override
-			public Adapter caseResultType(ResultType object) {
-				return createResultTypeAdapter();
+			public Adapter caseRenameParameter(RenameParameter object) {
+				return createRenameParameterAdapter();
 			}
 			@Override
 			public Adapter caseConsumeType(ConsumeType object) {
 				return createConsumeTypeAdapter();
 			}
 			@Override
-			public Adapter caseFieldValue(FieldValue object) {
-				return createFieldValueAdapter();
+			public Adapter caseProduceType(ProduceType object) {
+				return createProduceTypeAdapter();
 			}
 			@Override
-			public Adapter caseTypeAPI(TypeAPI object) {
-				return createTypeAPIAdapter();
+			public Adapter caseAddStatusCode(AddStatusCode object) {
+				return createAddStatusCodeAdapter();
 			}
 			@Override
-			public Adapter caseOtherModifier(OtherModifier object) {
-				return createOtherModifierAdapter();
+			public Adapter caseRemoveStatusCode(RemoveStatusCode object) {
+				return createRemoveStatusCodeAdapter();
+			}
+			@Override
+			public Adapter caseExposeData(ExposeData object) {
+				return createExposeDataAdapter();
 			}
 			@Override
 			public Adapter caseElementReference(ElementReference object) {
@@ -182,6 +178,22 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRemoveRestriction(RemoveRestriction object) {
 				return createRemoveRestrictionAdapter();
+			}
+			@Override
+			public Adapter caseChangeFormatReturnValue(ChangeFormatReturnValue object) {
+				return createChangeFormatReturnValueAdapter();
+			}
+			@Override
+			public Adapter caseRenameMethod(RenameMethod object) {
+				return createRenameMethodAdapter();
+			}
+			@Override
+			public Adapter caseCombineMethods(CombineMethods object) {
+				return createCombineMethodsAdapter();
+			}
+			@Override
+			public Adapter caseSplitMethod(SplitMethod object) {
+				return createSplitMethodAdapter();
 			}
 			@Override
 			public Adapter caseAddRestriction(AddRestriction object) {
@@ -262,20 +274,6 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy <em>Move Down In Hierarchy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.MoveDownInHierarchy
-	 * @generated
-	 */
-	public Adapter createMoveDownInHierarchyAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RelocateParameter <em>Relocate Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -318,48 +316,6 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters <em>Reorder Type Parameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ReorderTypeParameters
-	 * @generated
-	 */
-	public Adapter createReorderTypeParametersAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ContractSuperSet <em>Contract Super Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ContractSuperSet
-	 * @generated
-	 */
-	public Adapter createContractSuperSetAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy <em>Move Up In Hierarchy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.MoveUpInHierarchy
-	 * @generated
-	 */
-	public Adapter createMoveUpInHierarchyAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.Simple <em>Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -388,6 +344,20 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.AddParameter <em>Add Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddParameter
+	 * @generated
+	 */
+	public Adapter createAddParameterAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.Delete <em>Delete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -398,6 +368,48 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDeleteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.UnsupportRequestMethod <em>Unsupport Request Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.UnsupportRequestMethod
+	 * @generated
+	 */
+	public Adapter createUnsupportRequestMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.DeletePath <em>Delete Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.DeletePath
+	 * @generated
+	 */
+	public Adapter createDeletePathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveParameter <em>Remove Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveParameter
+	 * @generated
+	 */
+	public Adapter createRemoveParameterAdapter() {
 		return null;
 	}
 
@@ -426,6 +438,20 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModifyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ModifyParameterSchemaType <em>Modify Parameter Schema Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ModifyParameterSchemaType
+	 * @generated
+	 */
+	public Adapter createModifyParameterSchemaTypeAdapter() {
 		return null;
 	}
 
@@ -472,58 +498,16 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.Rename <em>Rename</em>}'.
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RenameParameter <em>Rename Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.Rename
+	 * @see co.edu.uniandes.diff.metamodel.diff.RenameParameter
 	 * @generated
 	 */
-	public Adapter createRenameAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.AccessModifier <em>Access Modifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.AccessModifier
-	 * @generated
-	 */
-	public Adapter createAccessModifierAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.TypeBound <em>Type Bound</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.TypeBound
-	 * @generated
-	 */
-	public Adapter createTypeBoundAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ResultType <em>Result Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.ResultType
-	 * @generated
-	 */
-	public Adapter createResultTypeAdapter() {
+	public Adapter createRenameParameterAdapter() {
 		return null;
 	}
 
@@ -542,44 +526,58 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.FieldValue <em>Field Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ProduceType <em>Produce Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.FieldValue
+	 * @see co.edu.uniandes.diff.metamodel.diff.ProduceType
 	 * @generated
 	 */
-	public Adapter createFieldValueAdapter() {
+	public Adapter createProduceTypeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.TypeAPI <em>Type API</em>}'.
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.AddStatusCode <em>Add Status Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.TypeAPI
+	 * @see co.edu.uniandes.diff.metamodel.diff.AddStatusCode
 	 * @generated
 	 */
-	public Adapter createTypeAPIAdapter() {
+	public Adapter createAddStatusCodeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.OtherModifier <em>Other Modifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RemoveStatusCode <em>Remove Status Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see co.edu.uniandes.diff.metamodel.diff.OtherModifier
+	 * @see co.edu.uniandes.diff.metamodel.diff.RemoveStatusCode
 	 * @generated
 	 */
-	public Adapter createOtherModifierAdapter() {
+	public Adapter createRemoveStatusCodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ExposeData <em>Expose Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ExposeData
+	 * @generated
+	 */
+	public Adapter createExposeDataAdapter() {
 		return null;
 	}
 
@@ -622,6 +620,62 @@ public class diffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRemoveRestrictionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.ChangeFormatReturnValue <em>Change Format Return Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.ChangeFormatReturnValue
+	 * @generated
+	 */
+	public Adapter createChangeFormatReturnValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.RenameMethod <em>Rename Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.RenameMethod
+	 * @generated
+	 */
+	public Adapter createRenameMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.CombineMethods <em>Combine Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.CombineMethods
+	 * @generated
+	 */
+	public Adapter createCombineMethodsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.diff.metamodel.diff.SplitMethod <em>Split Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.diff.metamodel.diff.SplitMethod
+	 * @generated
+	 */
+	public Adapter createSplitMethodAdapter() {
 		return null;
 	}
 
