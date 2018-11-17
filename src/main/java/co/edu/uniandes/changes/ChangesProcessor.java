@@ -270,10 +270,10 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processContentTypesUpdaes(DiffMetamodel diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
+	public static void processContentTypesUpdates(DiffMetamodel diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
 		for(ChangeContentType contentTypeUpdated : contentTypesUpdated) {
 			if (contentTypeUpdated.getAttr().getName().equals("produces")) {
-				diffMetamodel.createReturnTypeUpdate(contentTypeUpdated, changes);
+				diffMetamodel.createProduceUpdate(contentTypeUpdated, changes);
 			}else if (contentTypeUpdated.getAttr().getName().equals("consumes")) {
 				diffMetamodel.createConsumeTypeUpdate(contentTypeUpdated, changes);
 			}

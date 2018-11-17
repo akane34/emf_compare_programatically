@@ -80,7 +80,7 @@ public class Main {
 		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
 		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
 		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
-		ChangesProcessor.processContentTypesUpdaes(diffMetamodel,contentTypesUpdated, diff.getChange());
+		ChangesProcessor.processContentTypesUpdates(diffMetamodel,contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
 		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());
 		ChangesProcessor.processExposeData(diffMetamodel, contentTypesUpdated, diff.getChange());

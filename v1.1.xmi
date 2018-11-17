@@ -20,21 +20,48 @@
       <post
           summary="save a new setting"
           description="save a new setting"
-          responses="//@responses.0 //@responses.1">
+          responses="//@responses.0">
         <tagReferences>admin</tagReferences>
+        <consumes>application/json</consumes>
         <produces>application/json</produces>
+        <produces>application/msword</produces>
+      </post>
+    </paths>
+    <paths relativePath="/User">
+      <post
+          parameters="//@paramters.0"
+          summary="save">
+        <produces>json</produces>
+        <schemes>http</schemes>
+        <schemes>https</schemes>
+      </post>
+    </paths>
+    <paths relativePath="/ConfigByUser">
+      <post
+          parameters="//@paramters.0"
+          responses="//@responses.0">
+        <schemes>http</schemes>
+        <schemes>https</schemes>
       </post>
     </paths>
   </api>
+  <paramters
+      schema="//@schemas.0"
+      name="user"
+      required="true"/>
+  <schemas type="object"
+      pattern=""
+      name="User"
+      title="User"
+      properties="//@schemas.1 //@schemas.2"/>
+  <schemas type="string"
+      name="name"
+      title="name"/>
+  <schemas type="string"
+      name="lastname"
+      title="lastname"/>
   <responses
+      schema="//@schemas.0"
       description="OK"
       code="200"/>
-  <responses
-      description="302 descp"
-      code="302"
-      referenceName="302 desc"/>
-  <responses
-      description="403 desc"
-      code="403"
-      referenceName="403"/>
 </openapi:Root>

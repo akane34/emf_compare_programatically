@@ -385,25 +385,26 @@ public class DiffMetamodel {
 		changes.add(returnType);
 	}
 
-	public void createReturnTypeUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
+	public void createProduceUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
 		
 		ElementReference elementReference = diffFactoryI.createElementReference();
 		elementReference.setEObject(contentTypeUpdated.getUri());
 		elementReference.setPath(contentTypeUpdated.getPath());
 		elementReference.setValue(contentTypeUpdated.getValue());
-		ReturnType resultType = diffFactoryI.createReturnType();
+		ProduceType produceType = diffFactoryI.createProduceType();
+		produceType.setChangeElement(APIElementType.CONTENT_TYPE);
 		
 		switch (contentTypeUpdated.getKind()) {
 		case ADD:
-			resultType.setNew(elementReference);
+			produceType.setNew(elementReference);
 			break;
 		case DELETE:
-			resultType.setOld(elementReference);
+			produceType.setOld(elementReference);
 			break;
 		default:
 			break;
 		}
-		changes.add(resultType);
+		changes.add(produceType);
 	}
 	
 	public void createConsumeTypeUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
@@ -412,6 +413,7 @@ public class DiffMetamodel {
 		elementReference.setPath(contentTypeUpdated.getPath());
 		elementReference.setValue(contentTypeUpdated.getValue());
 		ConsumeType consumeType = diffFactoryI.createConsumeType();
+		consumeType.setChangeElement(APIElementType.CONTENT_TYPE);
 		
 		switch (contentTypeUpdated.getKind()) {
 		case ADD:
