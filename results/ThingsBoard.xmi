@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Diff:Diff xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Diff="http://www.uniandes.edu.co/diff" newVersion="2.0" oldVersion="1.0">
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.6" value="activateToken" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.7" value="password" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:Add" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.69" value="activateRequest" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:MultipleParametersInOne" changeElement="methodParameter" simpleDiffs="//@change.2 //@change.0 //@change.1" newLocation="body"/>
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.3" value="currentPassword" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.4" value="newPassword" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:Add" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.67" value="changePasswordRequest" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:MultipleParametersInOne" changeElement="methodParameter" simpleDiffs="//@change.6 //@change.4 //@change.5" newLocation="body"/>
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.10" value="resetToken" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:Delete" changeElement="methodParameter">
+    <old EObject="thingsboardV1.xmi#//@paramters.11" value="password" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:Add" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.72" value="resetPasswordRequest" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:MultipleParametersInOne" changeElement="methodParameter" simpleDiffs="//@change.10 //@change.8 //@change.9" newLocation="body"/>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.246" value="entityType" path="/{entityType}/{entityId}/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.247" value="entityId" path="/{entityType}/{entityId}/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.248" value="scope" path="/{entityType}/{entityId}/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.249" value="request" path="/{entityType}/{entityId}/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.193" value="deviceId" path="/oneway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.194" value="requestBody" path="/oneway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.137" value="strDeviceIds" path="/devices"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.138" value="query" path="/devices"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.212" value="entityType" path="/{entityType}/{entityId}/keys/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.213" value="entityId" path="/{entityType}/{entityId}/keys/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.214" value="scope" path="/{entityType}/{entityId}/keys/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.35" value="customerId" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.36" value="limit" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.37" value="type" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.38" value="textSearch" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.39" value="idOffset" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.40" value="textOffset" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.208" value="ruleNodeId" path="/ruleNode/{ruleNodeId}/debugIn"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.250" value="entityType" path="/{entityType}/{entityId}/timeseries/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.251" value="entityId" path="/{entityType}/{entityId}/timeseries/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.252" value="scope" path="/{entityType}/{entityId}/timeseries/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.253" value="request" path="/{entityType}/{entityId}/timeseries/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.70" value="resetPasswordByEmailRequest" path="/noauth/resetPasswordByEmail"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.85" value="customerTitle" path="/tenant/customers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.98" value="dashboardId" path="/dashboard/{dashboardId}/customers/remove"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.99" value="strCustomerIds" path="/dashboard/{dashboardId}/customers/remove"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.8" value="entityType" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.9" value="entityId" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.10" value="searchStatus" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.11" value="status" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.12" value="limit" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.13" value="startTime" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.14" value="endTime" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.15" value="ascOrder" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.16" value="offset" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.17" value="fetchOriginator" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.79" value="customerId" path="/customer/{customerId}/title"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.28" value="assetId" path="/customer/public/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.49" value="userId" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.50" value="limit" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.51" value="startTime" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.52" value="endTime" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.53" value="ascOrder" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.54" value="offset" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.195" value="deviceId" path="/twoway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.196" value="requestBody" path="/twoway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.130" value="deviceName" path="/tenant/devices2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.4" value="alarmId" path="/alarm/info/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.41" value="assetIds" path="/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.42" value="query" path="/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.69" value="activateRequest" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.78" value="customerId" path="/customer/{customerId}/shortInfo"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.6" value="alarmId" path="/alarm/{alarmId}/ack"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.152" value="strFromId" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.153" value="strFromType" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.154" value="strRelationTypeGroup" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.155" value="query" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.156" value="strId" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.157" value="strType" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.145" value="query" path="/relation"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.126" value="type" path="/tenant/devices"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.29" value="limit" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.30" value="type" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.31" value="textSearch" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.32" value="idOffset" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.33" value="textOffset" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.3" value="alarmId" path="/alarm/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.271" value="userId" path="/user/{userId}/activationLink"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.269" value="sendActivationMail" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.133" value="type" path="/customer/{customerId}/devices"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.86" value="dashboardId" path="/dashboard/info/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.215" value="entityType" path="/{entityType}/{entityId}/values/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.216" value="entityId" path="/{entityType}/{entityId}/values/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.199" value="ruleChainId" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.254" value="entityType" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.255" value="entityId" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.256" value="scope" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.257" value="ttl" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.258" value="request" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.201" value="ruleChainId" path="/ruleChain/{ruleChainId}/root"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.202" value="ruleChain" path="/ruleChain/{ruleChainId}/root"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.5" value="alarm" path="/alarm"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.173" value="strToId" path="/relations/info2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.174" value="strToType" path="/relations/info2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.175" value="strRelationTypeGroup" path="/relations/info2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.34" value="assetName" path="/tenant/assets2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.222" value="entityType" path="/{entityType}/{entityId}/values/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.223" value="entityId" path="/{entityType}/{entityId}/values/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.158" value="strFromId" path="/relations2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.159" value="strFromType" path="/relations2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.160" value="strRelationType" path="/relations2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.161" value="strRelationTypeGroup" path="/relations2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.162" value="strToId" path="/relations3"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.163" value="strToType" path="/relations3"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.164" value="strRelationTypeGroup" path="/relations3"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.7" value="alarmId" path="/alarm/{alarmId}/clear"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.75" value="componentTypes" path="/components"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.165" value="strToId" path="/relations4"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.166" value="strToType" path="/relations4"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.167" value="strRelationType" path="/relations4"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.168" value="strRelationTypeGroup" path="/relations4"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.96" value="dashboardId" path="/dashboard/{dashboardId}/customers/add"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.97" value="strCustomerIds" path="/dashboard/{dashboardId}/customers/add"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.67" value="changePasswordRequest" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.224" value="entityType" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.225" value="entityId" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.226" value="keys" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.227" value="startTs" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.228" value="endTs" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.229" value="interval" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.230" value="limit" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.231" value="agg" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.55" value="entityType" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.56" value="entityId" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.57" value="limit" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.58" value="startTime" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.59" value="endTime" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.60" value="ascOrder" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.61" value="offset" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.209" value="inputParams" path="/ruleChain/testScript"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.210" value="entityType" path="/{entityType}/{entityId}/keys/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.211" value="entityId" path="/{entityType}/{entityId}/keys/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.24" value="asset" path="/asset"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.27" value="assetId" path="/customer/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.203" value="ruleChainMetaData" path="/ruleChain/metadata"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.62" value="limit" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.63" value="startTime" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.64" value="endTime" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.65" value="ascOrder" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.66" value="offset" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.122" value="deviceId" path="/customer/public/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.200" value="ruleChain" path="/ruleChain"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.241" value="request" path="/{entityType}/{entityId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.245" value="keys" path="/{entityType}/{entityId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.43" value="customerId" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.44" value="limit" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.45" value="startTime" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.46" value="endTime" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.47" value="ascOrder" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.48" value="offset" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.220" value="entityType" path="/{entityType}/{entityId}/keys/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.221" value="entityId" path="/{entityType}/{entityId}/keys/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.217" value="entityType" path="/{entityType}/{entityId}/values/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.218" value="entityId" path="/{entityType}/{entityId}/values/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.219" value="scope" path="/{entityType}/{entityId}/values/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.169" value="strFromId" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.170" value="strFromType" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.171" value="strRelationTypeGroup" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.172" value="query" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.102" value="tenantId" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.103" value="limit" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.104" value="textSearch" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.105" value="idOffset" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.106" value="textOffset" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.72" value="resetPasswordRequest" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.234" value="request" path="/{deviceId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.237" value="keys" path="/{deviceId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.18" value="entityType" path="/alarm/highestSeverity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.19" value="entityId" path="/alarm/highestSeverity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.20" value="searchStatus" path="/alarm/highestSeverity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.21" value="status" path="/alarm/highestSeverity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.25" value="customerId" path="/customer/{customerId}/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.26" value="assetId" path="/customer/{customerId}/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.74" value="pluginToken" path="/ruleNode/{ruleNodeId}/debugIn"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.125" value="isSystem" path="/widgetTypes"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.126" value="bundleAlias" path="/widgetTypes"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.8" value="email" path="/noauth/resetPasswordByEmail"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.6" value="activateToken" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.7" value="password" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.86" value="tenantId" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.87" value="limit" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.88" value="textSearch" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.89" value="idOffset" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.90" value="textOffset" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.14" value="pluginClazz:.+" path="/components"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.3" value="currentPassword" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.4" value="newPassword" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.80" value="ruleId" path="/ruleChain/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.79" value="source" path="/ruleChain"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.10" value="resetToken" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV1.xmi#//@paramters.11" value="password" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.100" value="RuleChain" path="/ruleChain/{ruleChainId}/root"/>
+    <old EObject="thingsboardV1.xmi#//@responses.46" path="/ruleChain/{ruleChainId}/root"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="RuleChain"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.98" value="RuleChainMetaData" path="/ruleChain/{ruleChainId}/metadata"/>
+    <old EObject="thingsboardV1.xmi#//@responses.45" value="TextPageData" path="/ruleChain/{ruleChainId}/metadata"/>
+    <oldDefinition SchemaName="TextPageData"/>
+    <newDefinition SchemaName="RuleChainMetaData"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.99" value="RuleChain" path="/ruleChain"/>
+    <old EObject="thingsboardV1.xmi#//@responses.41" value="RuleMetaData" path="/ruleChain"/>
+    <oldDefinition SchemaName="RuleMetaData"/>
+    <newDefinition SchemaName="RuleChain"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.96" value="RuleChain" path="/ruleChain/{ruleChainId}"/>
+    <old EObject="thingsboardV1.xmi#//@responses.37" value="RuleMetaData" path="/ruleChain/{ruleChainId}"/>
+    <oldDefinition SchemaName="RuleMetaData"/>
+    <newDefinition SchemaName="RuleChain"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.40" path="/noauth/resetPassword"/>
+    <old EObject="thingsboardV1.xmi#//@responses.10" value="ResponseEntity" path="/noauth/resetPassword"/>
+    <oldDefinition SchemaName="ResponseEntity"/>
+    <newDefinition/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.39" value="ResponseEntity" path="/noauth/resetPassword"/>
+    <old EObject="thingsboardV1.xmi#//@responses.11" path="/noauth/resetPassword"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ResponseEntity"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.37" path="/noauth/activate"/>
+    <old EObject="thingsboardV1.xmi#//@responses.7" value="ResponseEntity" path="/noauth/activate"/>
+    <oldDefinition SchemaName="ResponseEntity"/>
+    <newDefinition/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="thingsboardV2.xmi#//@responses.36" value="ResponseEntity" path="/noauth/activate"/>
+    <old EObject="thingsboardV1.xmi#//@responses.8" path="/noauth/activate"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ResponseEntity"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.208" value="ruleNodeId"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.72" value="ruleId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.201" value="ruleChainId"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.73" value="ruleId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.199" value="ruleChainId"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.80" value="ruleId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.198" value="ruleChainId"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.81" value="ruleId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.227" value="startTs"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.125" value="isSystem"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.227" value="startTs"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.125" value="isSystem"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="thingsboardV2.xmi#//@paramters.34" value="assetName"/>
+    <old EObject="thingsboardV1.xmi#//@paramters.126" value="bundleAlias"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.66" value="200" path="/widgetTypes"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.64" value="200" path="/widgetType"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.65" value="200" path="/widgetType"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.62" value="200" path="/widgetType/{widgetTypeId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.63" value="200" path="/widgetType/{widgetTypeId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.61" value="200" path="/widgetsBundles2"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.60" value="200" path="/widgetsBundles"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.59" value="200" path="/widgetsBundle"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.57" value="200" path="/widgetsBundle/{widgetsBundleId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.58" value="200" path="/widgetsBundle/{widgetsBundleId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.56" value="200" path="/customer/{customerId}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.55" value="200" path="/tenant/{tenantId}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.54" value="200" path="/user/sendActivationMail"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.53" value="200" path="/user"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.51" value="200" path="/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.52" value="200" path="/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.50" value="200" path="/tenants"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.49" value="200" path="/tenant"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.47" value="200" path="/tenant/{tenantId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.48" value="200" path="/tenant/{tenantId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.46" value="200" path="/ruleChain/{ruleChainId}/root"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.45" value="200" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.44" value="200" path="/ruleChains"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.42" value="200" path="/ruleChain/metadata"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.41" value="200" path="/ruleChain"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.37" value="200" path="/ruleChain/{ruleChainId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.38" value="200" path="/ruleChain/{ruleChainId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.36" value="200" path="/events/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.35" value="200" path="/events/{entityType}/{entityId}/{eventType}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.34" value="200" path="/customer/{customerId}/devices"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.33" value="200" path="/tenant/devices"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.32" value="200" path="/device/credentials"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.31" value="200" path="/device/{deviceId}/credentials"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.30" value="200" path="/customer/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.29" value="200" path="/customer/{customerId}/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.28" value="200" path="/device"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.26" value="200" path="/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.27" value="200" path="/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.25" value="200" path="/customer/{customerId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.24" value="200" path="/tenant/dashboards"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.23" value="200" path="/dashboard/{dashboardId}/customers"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.22" value="200" path="/customer/{customerId}/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.21" value="200" path="/dashboard"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.19" value="200" path="/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.20" value="200" path="/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.18" value="200" path="/customers"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.17" value="200" path="/customer"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.15" value="200" path="/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.16" value="200" path="/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.14" value="200" path="/components"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.13" value="200" path="/components/{componentType}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.12" value="200" path="/component/{componentDescriptorClazz:.+}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.10" value="200" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.11" value="200" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.9" value="200" path="/noauth/resetPasswordByEmail"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.7" value="200" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.8" value="200" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.6" value="200" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="thingsboardV1.xmi#//@responses.5" value="200" path="/auth/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.139" value="200" path="/widgetTypes"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.137" value="200" path="/widgetType"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.138" value="200" path="/widgetType"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.135" value="200" path="/widgetType/{widgetTypeId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.136" value="200" path="/widgetType/{widgetTypeId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.134" value="200" path="/widgetsBundles2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.133" value="200" path="/widgetsBundles"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.132" value="200" path="/widgetsBundle"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.130" value="200" path="/widgetsBundle/{widgetsBundleId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.131" value="200" path="/widgetsBundle/{widgetsBundleId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.129" value="200" path="/customer/{customerId}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.128" value="200" path="/tenant/{tenantId}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.126" value="200" path="/user/sendActivationMail"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.125" value="200" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.123" value="200" path="/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.124" value="200" path="/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.122" value="200" path="/tenants"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.121" value="200" path="/tenant"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.119" value="200" path="/tenant/{tenantId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.120" value="200" path="/tenant/{tenantId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.100" value="200" path="/ruleChain/{ruleChainId}/root"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.104" value="200" path="/ruleChain/testScript"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.98" value="200" path="/ruleChain/{ruleChainId}/metadata"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.102" value="200" path="/ruleChains"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.101" value="200" path="/ruleChain/metadata"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.127" value="200" path="/user/{userId}/activationLink"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.99" value="200" path="/ruleChain"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.96" value="200" path="/ruleChain/{ruleChainId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.97" value="200" path="/ruleChain/{ruleChainId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.93" value="200" path="/events/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.92" value="200" path="/events/{entityType}/{entityId}/{eventType}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.76" value="200" path="/customer/{customerId}/devices"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.74" value="200" path="/tenant/devices"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.73" value="200" path="/device/credentials"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.72" value="200" path="/device/{deviceId}/credentials"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.70" value="200" path="/customer/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.69" value="200" path="/customer/{customerId}/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.68" value="200" path="/device"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.66" value="200" path="/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.67" value="200" path="/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.65" value="200" path="/customer/{customerId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.64" value="200" path="/tenant/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.58" value="200" path="/dashboard/{dashboardId}/customers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.56" value="200" path="/customer/{customerId}/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.57" value="200" path="/customer/{customerId}/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.55" value="200" path="/dashboard"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.53" value="200" path="/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.54" value="200" path="/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.49" value="200" path="/customers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.48" value="200" path="/customer"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.44" value="200" path="/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.45" value="200" path="/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.43" value="200" path="/components"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.42" value="200" path="/components/{componentType}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.41" value="200" path="/component/{componentDescriptorClazz:.+}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.39" value="200" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.40" value="200" path="/noauth/resetPassword"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.38" value="200" path="/noauth/resetPasswordByEmail"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.36" value="200" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.37" value="200" path="/noauth/activate"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.35" value="200" path="/auth/changePassword"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.34" value="200" path="/auth/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.118" value="200" path="/{entityType}/{entityId}/timeseries/{scope}/{ttl}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.117" value="200" path="/{entityType}/{entityId}/timeseries/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.116" value="200" path="/{entityType}/{entityId}/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.114" value="200" path="/{entityType}/{entityId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.115" value="200" path="/{entityType}/{entityId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.112" value="200" path="/{deviceId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.113" value="200" path="/{deviceId}/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.111" value="200" path="/{entityType}/{entityId}/values/timeseries2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.110" value="200" path="/{entityType}/{entityId}/values/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.109" value="200" path="/{entityType}/{entityId}/keys/timeseries"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.108" value="200" path="/{entityType}/{entityId}/values/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.107" value="200" path="/{entityType}/{entityId}/values/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.106" value="200" path="/{entityType}/{entityId}/keys/attributes/{scope}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.105" value="200" path="/{entityType}/{entityId}/keys/attributes"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.95" value="200" path="/twoway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.94" value="200" path="/oneway/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.91" value="200" path="/relations/info2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.89" value="200" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.90" value="200" path="/relations/info"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.88" value="200" path="/relations4"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.87" value="200" path="/relations3"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.86" value="200" path="/relations2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.83" value="200" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.84" value="200" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.85" value="200" path="/relations"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.80" value="200" path="/relation"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.81" value="200" path="/relation"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.82" value="200" path="/relation"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.79" value="200" path="/device/types"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.77" value="200" path="/devices"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.78" value="200" path="/devices"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.75" value="200" path="/tenant/devices2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.71" value="200" path="/customer/public/device/{deviceId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.63" value="200" path="/tenant/{tenantId}/dashboards"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.61" value="200" path="/customer/public/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.62" value="200" path="/customer/public/dashboard/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.60" value="200" path="/dashboard/{dashboardId}/customers/remove"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.59" value="200" path="/dashboard/{dashboardId}/customers/add"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.52" value="200" path="/dashboard/info/{dashboardId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.51" value="200" path="/dashboard/serverTime"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.50" value="200" path="/tenant/customers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.47" value="200" path="/customer/{customerId}/title"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.46" value="200" path="/customer/{customerId}/shortInfo"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.33" value="200" path="/audit/logs"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.32" value="200" path="/audit/logs/entity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.31" value="200" path="/audit/logs/user/{userId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.30" value="200" path="/audit/logs/customer/{customerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.29" value="200" path="/asset/types"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.27" value="200" path="/assets"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.28" value="200" path="/assets"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.26" value="200" path="/customer/{customerId}/assets"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.25" value="200" path="/tenant/assets2"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.24" value="200" path="/tenant/assets"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.23" value="200" path="/customer/public/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.22" value="200" path="/customer/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.21" value="200" path="/customer/{customerId}/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.20" value="200" path="/asset"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.18" value="200" path="/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.19" value="200" path="/asset/{assetId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.17" value="200" path="/alarm/highestSeverity/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.15" value="200" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.16" value="400" path="/alarm/{entityType}/{entityId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.13" value="200" path="/alarm/{alarmId}/clear"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.14" value="400" path="/alarm/{alarmId}/clear"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.11" value="200" path="/alarm/{alarmId}/ack"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.12" value="400" path="/alarm/{alarmId}/ack"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.10" value="200" path="/alarm"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.8" value="200" path="/alarm/info/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.9" value="400" path="/alarm/info/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.6" value="200" path="/alarm/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.7" value="400" path="/alarm/{alarmId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="thingsboardV2.xmi#//@responses.5" value="200" path="/updates"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.2"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.2"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.3"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.3"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.3"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.3"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.5"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.5"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.5"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.5"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <newDefinition SchemaName="hasNext" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <newDefinition SchemaName="nextPageLink" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <oldDefinition SchemaName="hasNext" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.12"/>
+    <oldDefinition SchemaName="nextPageLink" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.22"/>
+    <newDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.22"/>
+    <newDefinition SchemaName="customerId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.22"/>
+    <newDefinition SchemaName="additionalInfo" type="object"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.22"/>
+    <oldDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.22"/>
+    <oldDefinition SchemaName="customerId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <newDefinition SchemaName="type" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <newDefinition SchemaName="clazz" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <oldDefinition SchemaName="type" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.26"/>
+    <oldDefinition SchemaName="clazz" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="hasNext" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="nextPageLink" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="hasNext" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="nextPageLink" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="customerId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="additionalInfo" type="object"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="customerId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="clazz" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.34"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.34"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.34"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.34"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.51"/>
+    <newDefinition SchemaName="additionalInfo" type="object"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <newDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <newDefinition SchemaName="alias" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <newDefinition SchemaName="title" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <oldDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <oldDefinition SchemaName="alias" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.53"/>
+    <oldDefinition SchemaName="title" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <newDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <newDefinition SchemaName="alias" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <oldDefinition SchemaName="tenantId" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <oldDefinition SchemaName="alias" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="thingsboardV2.xmi#//@schemas.54"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="thingsboardV1.xmi#//@api/@paths.34/@post" value="virtserver.swaggerhub.com/thingsboard/2.0.0/rule/{ruleId}/suspend" path="/rule/{ruleId}/suspend"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="thingsboardV1.xmi#//@api/@paths.32/@get" value="virtserver.swaggerhub.com/thingsboard/2.0.0/rule" path="/rule"/>
+  </change>
+</Diff:Diff>

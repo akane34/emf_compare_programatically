@@ -24,8 +24,8 @@ import co.edu.uniandes.changes.ChangeOperation;
 
 public class Main {
 
-	static String oldVersion = "1.0";
-	static String newVersion = "2.0";
+	static String oldVersion = "1.0.10";
+	static String newVersion = "1.0.37";
 	
 	public static void main(String[] args) {		
 		String oldModelPath = "UP_Digital_User_1.0.10.xmi";
