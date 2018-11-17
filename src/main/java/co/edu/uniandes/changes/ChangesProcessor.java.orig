@@ -386,15 +386,7 @@ public class ChangesProcessor {
 		}
 	}	
 	
-	public static void processAddRestrictedAccess(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponses, EList<Change> changes) {
-		for(ChangeResponse changeResponse :  addResponses) {
-			if(changeResponse.getResponse().getCode().equals("403") || changeResponse.getResponse().getCode().equals("401")) {
-				diffMetamodel.createAddRestriction(changeResponse,changes);
-			}
-		}
-		
-	}
-	
+<<<<<<< HEAD
 	public static void processRemoveRestrictedAccessToTheAPI(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
 		System.out.println("-------------------- processRemoveRestrictedAccessToTheAPI");	
 		for(ChangeResponse addRes: addResponse) {
@@ -407,8 +399,16 @@ public class ChangesProcessor {
 				diffMetamodel.createAddedStatusCode(addRes, changes);
 			}
 		}
+=======
+	public static void processAddRestrictedAccess(DiffMetamodel diffMetamodel, List<ChangeResponse> addResponses, EList<Change> changes) {
+		for(ChangeResponse changeResponse :  addResponses) {
+			if(changeResponse.getResponse().getCode().equals("403") || changeResponse.getResponse().getCode().equals("401")) {
+				diffMetamodel.createAddRestriction(changeResponse,changes);
+			}
+		}
+		
+>>>>>>> 7578b46e579064bc8294035b46a6d677cf9880b6
 	}
-
 	
 	/************************************ GET METHODS ************************************************************/
 	

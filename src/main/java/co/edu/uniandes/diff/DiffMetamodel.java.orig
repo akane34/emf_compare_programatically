@@ -457,10 +457,10 @@ public class DiffMetamodel {
 		changes.add(defaultValue);
 	}
 	
+<<<<<<< HEAD
 	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse addRes, List<Change> changes) {
 		
-	}
-	
+=======
 	public void createAddRestriction(ChangeResponse changeResponse, EList<Change> changes) {
 		ElementReference newElementReference = diffFactoryI.createElementReference();
 		newElementReference.setEObject(changeResponse.getUri());
@@ -477,6 +477,7 @@ public class DiffMetamodel {
 		
 		changes.add(add);
 		changes.add(addRestriction);
+>>>>>>> 7578b46e579064bc8294035b46a6d677cf9880b6
 	}
 	
 	/******************************************* P R I V A T E      M E T H O D S ***********************************/
