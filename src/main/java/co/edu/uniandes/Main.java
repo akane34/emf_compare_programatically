@@ -20,7 +20,6 @@ import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.changes.ChangesProcessor;
 import co.edu.uniandes.comparer.Comparer;
 import co.edu.uniandes.diff.DiffMetamodel;
-import co.edu.uniandes.diff.metamodel.diff.Change;
 import co.edu.uniandes.changes.ChangeOperation;
 
 public class Main {
@@ -29,8 +28,8 @@ public class Main {
 	static String newVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		String oldModelPath = "lavanapp_2.0.0.xmi";
-		String newModelPath = "lavanapp_2.1.1.xmi";
+		String oldModelPath = "UP_Digital_User_1.0.10.xmi";
+		String newModelPath = "UP_Digital_User_1.0.37.xmi";
 		
 		DiffMetamodel diffMetamodel = new DiffMetamodel();
 		Comparer comparer = new Comparer();

@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="virtserver.swaggerhub.com" basePath="/jpreed/Shipwire-API/4.0" definitions="//@schemas.0 //@schemas.1 //@schemas.2 //@schemas.3 //@schemas.4 //@schemas.5 //@schemas.6 //@schemas.7 //@schemas.8 //@schemas.9 //@schemas.10 //@schemas.11 //@schemas.12 //@schemas.13 //@schemas.14 //@schemas.15 //@schemas.16 //@schemas.17 //@schemas.18 //@schemas.19 //@schemas.20 //@schemas.21 //@schemas.22 //@schemas.23 //@schemas.24 //@schemas.25 //@schemas.26 //@schemas.27 //@schemas.28 //@schemas.29 //@schemas.30 //@schemas.31 //@schemas.32 //@schemas.33 //@schemas.34 //@schemas.35 //@schemas.36 //@schemas.37 //@schemas.38 //@schemas.39 //@schemas.40 //@schemas.41 //@schemas.42 //@schemas.43 //@schemas.44 //@schemas.45 //@schemas.46">
+    <externalDocs description="Find out more about my website" url="http://www.shipwire.com/w/developers"/>
+    <info title="Shipwire APIs" description="Api description..." version="3.0">
+      <contact email="contact@shipwire.com"/>
+      <license name="Private License" url="http://www.shipwire.com"/>
+    </info>
+    <schemes>https</schemes>
+    <schemes>http</schemes>
+    <paths relativePath="/api/v3.1/addressValidation">
+      <post parameters="//@paramters.0" summary="Address Validation Request" description="Validate Address" operationId="ApiV31AddressValidationPost" responses="//@responses.0 //@responses.1">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/containers">
+      <get parameters="//@paramters.1 //@paramters.2 //@paramters.3 //@paramters.4" summary="Get containers" description="Get a collection of containers filtering by isActive, warehouse ids, warehouse external ids." operationId="ApiV31ContainersWarehouseIdsWarehouseIdsWarehouseExternalIdsWarehouseExternalIdsByIsActiveAndTypeGet" responses="//@responses.2">
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.5" summary="Create a new container" description="" operationId="ApiV31ContainersPost" responses="//@responses.3">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/containers/{id}">
+      <get parameters="//@paramters.6" summary="?Get a container" description="Get a container by container's id or external id." operationId="ApiV31ContainersByIdGet" responses="//@responses.4">
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.7 //@paramters.8" summary="Update a container" description="Modify a container based on its containers's id or external id" operationId="ApiV31ContainersByIdPut" responses="//@responses.5">
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3/orders">
+      <get parameters="//@paramters.9 //@paramters.10 //@paramters.11 //@paramters.12 //@paramters.13 //@paramters.14 //@paramters.15 //@paramters.16 //@paramters.17 //@paramters.18 //@paramters.19 //@paramters.20 //@paramters.21 //@paramters.22 //@paramters.23 //@paramters.24 //@paramters.25 //@paramters.26 //@paramters.27 //@paramters.28 //@paramters.29 //@paramters.30 //@paramters.31 //@paramters.32 //@paramters.33 //@paramters.34" summary="Get orders" description="Get an itemized list of orders." operationId="ApiV3OrdersGet" responses="//@responses.6">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.35 //@paramters.36" summary="Create an order" description="Create a new order." operationId="ApiV3OrdersPost" responses="//@responses.7">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id} or /api/v3/orders/E{externalId}">
+      <get parameters="//@paramters.37 //@paramters.38 //@paramters.39" summary="Get order" description="Get information about this order." operationId="ApiV3OrdersOrApiV3OrdersEByIdAndExternalIdGet" responses="//@responses.8">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.40 //@paramters.41 //@paramters.42 //@paramters.43" summary="Update an order" description="Modify information about this order." operationId="ApiV3OrdersOrApiV3OrdersEByIdAndExternalIdPut" responses="//@responses.9">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/cancel or /api/v3/orders/E{externalId}/cancel">
+      <post parameters="//@paramters.44 //@paramters.45 //@paramters.46" summary="Cancel an order" description="Cancel this order." operationId="ApiV3OrdersCancelOrApiV3OrdersECancelByIdAndExternalIdPost" responses="//@responses.10">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/items or /api/v3/orders/E{externalId}/items">
+      <get parameters="//@paramters.47 //@paramters.48" summary="Get items detail" description="Get the contents of this order." operationId="ApiV3OrdersItemsOrApiV3OrdersEItemsByIdAndExternalIdGet" responses="//@responses.11">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/holds or /api/v3/orders/E{externalId}/holds">
+      <get parameters="//@paramters.49 //@paramters.50 //@paramters.51" summary="Get holds detail" description="Get the list of holds, if any, on an order." operationId="ApiV3OrdersHoldsOrApiV3OrdersEHoldsByIdAndExternalIdGet" responses="//@responses.12">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/trackings or /api/v3/orders/E{externalId}/trackings">
+      <get parameters="//@paramters.52 //@paramters.53" summary="Get trackings detail" description="Get tracking information for this order." operationId="ApiV3OrdersTrackingsOrApiV3OrdersETrackingsByIdAndExternalIdGet" responses="//@responses.13">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.54 //@paramters.55 //@paramters.56" summary="Create tracking for an order" description="Create new trackings endpoint works only for shipwire anywhere warehouse orders." operationId="ApiV3OrdersTrackingsOrApiV3OrdersETrackingsByIdAndExternalIdPost" responses="//@responses.14">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/commercialInvoice or /api/v3/orders/E{externalId}/commercialInvoice">
+      <get parameters="//@paramters.57 //@paramters.58" summary="Get shipping order Commercial Invoice" description="Get the shipping order Commercial Invoice of this order." operationId="ApiV3OrdersCommercialInvoiceOrApiV3OrdersECommercialInvoiceByIdAndExternalIdGet" responses="//@responses.15">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/packingList or /api/v3/orders/E{externalId}/packingList">
+      <get parameters="//@paramters.59 //@paramters.60" summary="Get shipping order Packing List" description="Get the shipping order Packing List of this order." operationId="ApiV3OrdersPackingListOrApiV3OrdersEPackingListByIdAndExternalIdGet" responses="//@responses.16">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/shippingLabel or /api/v3/orders/E{externalId}/shippingLabel">
+      <get parameters="//@paramters.61 //@paramters.62" summary="Get shipping order Shipping Label" description="Get the shipping order Shipping Label of this order." operationId="ApiV3OrdersShippingLabelOrApiV3OrdersEShippingLabelByIdAndExternalIdGet" responses="//@responses.17">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/splitOrders or /api/v3/orders/E{externalId}/splitOrders">
+      <get parameters="//@paramters.63 //@paramters.64" summary="Get Split Orders detail" description="Get Split Orders information for this order." operationId="ApiV3OrdersSplitOrdersOrApiV3OrdersESplitOrdersByIdAndExternalIdGet" responses="//@responses.18">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/pieces or /api/v3/orders/E{externalId}/pieces">
+      <get parameters="//@paramters.65 //@paramters.66" summary="Get shipping pieces" description="Get the shipping pieces of this order." operationId="ApiV3OrdersPiecesOrApiV3OrdersEPiecesByIdAndExternalIdGet" responses="//@responses.19">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/extendedAttributes or /api/v3/orders/E{externalId}/extendedAttributes">
+      <get parameters="//@paramters.67 //@paramters.68" summary="Get shipping order extended attributes" description="Get the shipping order extended attributes of this order." operationId="ApiV3OrdersExtendedAttributesOrApiV3OrdersEExtendedAttributesByIdAndExternalIdGet" responses="//@responses.20">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/returns or /api/v3/orders/E{externalId}/returns">
+      <get parameters="//@paramters.69 //@paramters.70" summary="Get returns detail" description="Get any returns associated with this order." operationId="ApiV3OrdersReturnsOrApiV3OrdersEReturnsByIdAndExternalIdGet" responses="//@responses.21">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/holds/clear or /api/v3/orders/E{externalId}/holds/clear">
+      <post parameters="//@paramters.71 //@paramters.72 //@paramters.73" summary="Clear the hold" description="clear hold on this order." operationId="ApiV3OrdersHoldsClearOrApiV3OrdersEHoldsClearByIdAndExternalIdPost" responses="//@responses.22">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/markProcessed or /api/v3/orders/E{externalId}/markProcessed">
+      <post parameters="//@paramters.74 //@paramters.75 //@paramters.76" summary="Mark the order processed" description="Mark this order to processed state. This endpoint works only for shipwire anywhere warehouse orders." operationId="ApiV3OrdersMarkProcessedOrApiV3OrdersEMarkProcessedByIdAndExternalIdPost" responses="//@responses.23">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/markSubmitted or /api/v3/orders/E{externalId}/markSubmitted">
+      <post parameters="//@paramters.77 //@paramters.78 //@paramters.79" summary="Mark the order submitted" description="Mark this order to submitted state. This endpoint works only for shipwire anywhere warehouse orders." operationId="ApiV3OrdersMarkSubmittedOrApiV3OrdersEMarkSubmittedByIdAndExternalIdPost" responses="//@responses.24">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/orders/{id}/markComplete or /api/v3/orders/E{externalId}/markComplete">
+      <post parameters="//@paramters.80 //@paramters.81 //@paramters.82" summary="Mark the order completed" description="Mark this order to complete state. This endpoint works only for shipwire anywhere warehouse orders." operationId="ApiV3OrdersMarkCompleteOrApiV3OrdersEMarkCompleteByIdAndExternalIdPost" responses="//@responses.25">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/orders/generateLabels/{id}">
+      <get parameters="//@paramters.83 //@paramters.84" summary="Get Generate Labels Job status and PDF download URL" description="Get Job status by Job ID" operationId="ApiV31OrdersGenerateLabelsAPIByIdAndAcceptGet" responses="//@responses.26">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.85 //@paramters.86 //@paramters.87" summary="Initiate Generate Labels Job" description="Asynchronously generate labels for multiple orders. The Job will return a combined PDF download URL. Job status can be retrieved via polling or webhook subscription.&#xA;API will return HTTP 422 if one of the following conditions are true:&#xA;+ Order IDs are invalid&#xA;+ Orders are on hold&#xA;+ Orders' status is not `processed` or `submitted`&#xA;+ Orders' warehouse is not Shipwire Anywhere none-routing only" operationId="ApiV31OrdersGenerateLabelsAPIByIdAndAcceptPost" responses="//@responses.27">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/orders/generatePackingLists/{id}">
+      <get parameters="//@paramters.88 //@paramters.89" summary="Get Generate Packing Lists Job status and PDF download URL" description="Get Job status by Job ID" operationId="ApiV31OrdersGeneratePackingListsAPIByIdAndAcceptGet" responses="//@responses.28">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.90 //@paramters.91 //@paramters.92" summary="Initiate Generate Packing Lists Job" description="Asynchronously generate packing lists for multiple orders. The Job will return a combined PDF download URL. Job status can be retrieved via polling or webhook subscription.&#xA;API will return HTTP 422 if order IDs are invalid" operationId="ApiV31OrdersGeneratePackingListsAPIByIdAndAcceptPost" responses="//@responses.29">
+        <tagReferences>Orders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/products">
+      <get parameters="//@paramters.93 //@paramters.94 //@paramters.95 //@paramters.96 //@paramters.97 //@paramters.98 //@paramters.99 //@paramters.100 //@paramters.101 //@paramters.102 //@paramters.103 //@paramters.104 //@paramters.105" summary="Get collection" description="Get an itemized list of products." operationId="ApiV3ProductsGet" responses="//@responses.30">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.106" summary="Update products in the collection" description="Modify products of any classification." operationId="ApiV3ProductsPut" responses="//@responses.31">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <post parameters="//@paramters.107" summary="Add products to the collection" description="Create new products of any classification." operationId="ApiV3ProductsPost" responses="//@responses.32">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/products/{id} or /api/v3/products/E{externalId}">
+      <get parameters="//@paramters.108 //@paramters.109" summary="Get a product" description="Get information about a product." operationId="ApiV3ProductsOrApiV3ProductsEByIdAndExternalIdGet" responses="//@responses.33">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.110 //@paramters.111 //@paramters.112" summary="Update a product" description="Modify a product." operationId="ApiV3ProductsOrApiV3ProductsEByIdAndExternalIdPut" responses="//@responses.34">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3/products/retire">
+      <post parameters="//@paramters.113" summary="Retire products" description="Indicates that the listed products will not longer be used." operationId="ApiV3ProductsRetirePost" responses="//@responses.35">
+        <tagReferences>Products</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders">
+      <get parameters="//@paramters.114 //@paramters.115 //@paramters.116 //@paramters.117 //@paramters.118 //@paramters.119 //@paramters.120 //@paramters.121" summary="Get orders" description="Get an itemized list of purchase orders." operationId="ApiV3PurchaseOrdersGet" responses="//@responses.36">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.122 //@paramters.123" summary="Create a purchase order" description="Create a new purchase order." operationId="ApiV3PurchaseOrdersPost" responses="//@responses.37">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id} or /api/v3/purchaseOrders/E{externalId}">
+      <get parameters="//@paramters.124 //@paramters.125 //@paramters.126" summary="Get purchase order" description="Get information about this purchase order." operationId="ApiV3PurchaseOrdersOrApiV3PurchaseOrdersEByIdAndExternalIdGet" responses="//@responses.38">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.127 //@paramters.128 //@paramters.129 //@paramters.130" summary="Update a purchase order" description="Modify information about this purchase order." operationId="ApiV3PurchaseOrdersOrApiV3PurchaseOrdersEByIdAndExternalIdPut" responses="//@responses.39">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/cancel or /api/v3/purchaseOrders/E{externalId}/cancel">
+      <post parameters="//@paramters.131 //@paramters.132 //@paramters.133" summary="Cancel an order" description="Cancel this purchase order." operationId="ApiV3PurchaseOrdersCancelOrApiV3PurchaseOrdersECancelByIdAndExternalIdPost" responses="//@responses.40">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/hold or /api/v3/purchaseOrders/E{externalId}/hold">
+      <post parameters="//@paramters.134 //@paramters.135 //@paramters.136" summary="Hold a Purchase order" description="Place a hold on this purchase order." operationId="ApiV3PurchaseOrdersHoldOrApiV3PurchaseOrdersEHoldByIdAndExternalIdPost" responses="//@responses.41">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/hold/clear or /api/v3/purchaseOrders/E{externalId}/hold/clear">
+      <post parameters="//@paramters.137 //@paramters.138 //@paramters.139" summary="Clear any manual holds on this purchase order" description="Clear manual holds on a given purchase order.&#xA;It cannot be used to clear other types of holds that may be placed by Shipwire." operationId="ApiV3PurchaseOrdersHoldClearOrApiV3PurchaseOrdersEHoldClearByIdAndExternalIdPost" responses="//@responses.42">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/holds or /api/v3/purchaseOrders/E{externalId}/holds">
+      <get parameters="//@paramters.140 //@paramters.141 //@paramters.142" summary="Get holds detail" description="Get the list of holds, if any, on an purchaseOrders." operationId="ApiV3PurchaseOrdersHoldsOrApiV3PurchaseOrdersEHoldsByIdAndExternalIdGet" responses="//@responses.43">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/items or /api/v3/purchaseOrders/E{externalId}/items">
+      <get parameters="//@paramters.143 //@paramters.144" summary="Get items detail" description="Get the contents of this purchase order." operationId="ApiV3PurchaseOrdersItemsOrApiV3PurchaseOrdersEItemsByIdAndExternalIdGet" responses="//@responses.44">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/trackings or /api/v3/purchaseOrders/E{externalId}/trackings">
+      <get parameters="//@paramters.145 //@paramters.146" summary="Get trackings detail" description="Get tracking information for this purchase order." operationId="ApiV3PurchaseOrdersTrackingsOrApiV3PurchaseOrdersETrackingsByIdAndExternalIdGet" responses="//@responses.45">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/orders or /api/v3/purchaseOrders/E{externalId}/orders">
+      <get parameters="//@paramters.147 //@paramters.148" summary="Get orders detail" description="Get order information for this purchase order." operationId="ApiV3PurchaseOrdersOrdersOrApiV3PurchaseOrdersEOrdersByIdAndExternalIdGet" responses="//@responses.46">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/extendedAttributes or /api/v3/purchaseOrders/E{externalId}/extendedAttributes">
+      <get parameters="//@paramters.149 //@paramters.150" summary="Get purchaseOrders extended attributes" description="Get the purchaseOrders extended attributes of this order." operationId="ApiV3PurchaseOrdersExtendedAttributesOrApiV3PurchaseOrdersEExtendedAttributesByIdAndExternalIdGet" responses="//@responses.47">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/purchaseOrders/{id}/approve or /api/v3/purchaseOrders/E{externalId}/approve">
+      <post parameters="//@paramters.151 //@paramters.152 //@paramters.153" summary="Approve the Purchase Order" description="Approve this purchase order." operationId="ApiV3PurchaseOrdersApproveOrApiV3PurchaseOrdersEApproveByIdAndExternalIdPost" responses="//@responses.48">
+        <tagReferences>PurchaseOrders</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/rate">
+      <post parameters="//@paramters.154" summary="Generate rates" description="Generate a real-time shipping quote." operationId="ApiV3RatePost" responses="//@responses.49">
+        <tagReferences>Rates</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/rate">
+      <post parameters="//@paramters.155" summary="Generate rates1" description="Generate a real-time shipping quote and provide more shipping options.&#xA;Rate 3.1 is a transitional version while we explore what we would like&#xA;to see in a v4 API. The request structure is mostly unchanged, with just&#xA;the additonal &quot;returnAllRates&quot; option. The response structure provides&#xA;the same information as V3 Rate, but it more succinctly groups shipping&#xA;methods per rated shipment with a map indicating which methods are&#xA;recommended." operationId="ApiV31RatePost" responses="//@responses.50">
+        <tagReferences>Rates</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/receivings">
+      <get parameters="//@paramters.156 //@paramters.157 //@paramters.158 //@paramters.159 //@paramters.160 //@paramters.161 //@paramters.162 //@paramters.163 //@paramters.164 //@paramters.165 //@paramters.166 //@paramters.167" summary="Get list of advance ship notices" description="Get an itemized list of receivings." operationId="ApiV3ReceivingsGet" responses="//@responses.51">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.168 //@paramters.169" summary="Create an advance ship notice" description="Create a new receiving." operationId="ApiV3ReceivingsPost" responses="//@responses.52">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}">
+      <get parameters="//@paramters.170 //@paramters.171" summary="Get advance ship notice" description="Get information about this receiving." operationId="ApiV3ReceivingsByIdGet" responses="//@responses.53">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.172 //@paramters.173 //@paramters.174" summary="Update an advance ship notice" description="Modify information about this receiving." operationId="ApiV3ReceivingsByIdPut" responses="//@responses.54">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/cancel">
+      <post parameters="//@paramters.175 //@paramters.176" summary="Cancel a receiving order" description="Cancel this receiving." operationId="ApiV3ReceivingsCancelByIdPost" responses="//@responses.55">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/labels/cancel">
+      <post parameters="//@paramters.177 //@paramters.178" summary="Cancel a receiving label" description="Cancel shipping labels on this receiving." operationId="ApiV3ReceivingsLabelsCancelByIdPost" responses="//@responses.56">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/holds">
+      <get parameters="//@paramters.179 //@paramters.180" summary="Get holds detail" description="Get the list of holds, if any, on this receiving." operationId="ApiV3ReceivingsHoldsByIdGet" responses="//@responses.57">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/instructionsRecipients">
+      <get parameters="//@paramters.181" summary="Get instructions recipients details" description="Get email recipients and instructions for this receiving." operationId="ApiV3ReceivingsInstructionsRecipientsByIdGet" responses="//@responses.58">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/extendedAttributes">
+      <get parameters="//@paramters.182" summary="Get receiving extended attributes" description="Get the extended attributes of this receiving." operationId="ApiV3ReceivingsExtendedAttributesByIdGet" responses="//@responses.59">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/items">
+      <get parameters="//@paramters.183" summary="Get items detail" description="Get the contents of this receiving." operationId="ApiV3ReceivingsItemsByIdGet" responses="//@responses.60">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/shipments">
+      <get parameters="//@paramters.184" summary="Get shipment details" description="Get shipping dimension and container information." operationId="ApiV3ReceivingsShipmentsByIdGet" responses="//@responses.61">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/trackings">
+      <get parameters="//@paramters.185" summary="Get trackings detail" description="Get tracking information for this receiving." operationId="ApiV3ReceivingsTrackingsByIdGet" responses="//@responses.62">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/receivings/{id}/labels">
+      <get parameters="//@paramters.186" summary="Get labels detail" description="Get labels information for this receiving.&#xA;To retrieve the labels as PDF add the following header to the request:&#xA;Accept: application/pdf" operationId="ApiV3ReceivingsLabelsByIdGet" responses="//@responses.63">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3.1/receivings/{id}/markComplete">
+      <post parameters="//@paramters.187 //@paramters.188" summary="Mark the receiving completed" description="Mark this receivings order as complete. This endpoint works only for shipwire anywhere warehouses." operationId="ApiV31ReceivingsMarkCompleteByIdPost" responses="//@responses.64">
+        <tagReferences>Receivings</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/returns">
+      <get parameters="//@paramters.189 //@paramters.190 //@paramters.191 //@paramters.192 //@paramters.193 //@paramters.194 //@paramters.195 //@paramters.196 //@paramters.197 //@paramters.198 //@paramters.199" summary="Get list of return orders" description="Get an itemized list of returns." operationId="ApiV3ReturnsGet" responses="//@responses.65">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.200" summary="Create an return order" description="Create a new return." operationId="ApiV3ReturnsPost" responses="//@responses.66">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}">
+      <get parameters="//@paramters.201 //@paramters.202" summary="Get return order" description="Get information about this return." operationId="ApiV3ReturnsByIdGet" responses="//@responses.67">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}/cancel">
+      <post parameters="//@paramters.203 //@paramters.204" summary="Cancel a receiving order" description="Cancel this return." operationId="ApiV3ReturnsCancelByIdPost" responses="//@responses.68">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}/holds">
+      <get parameters="//@paramters.205 //@paramters.206" summary="Get holds detail" description="Get the list of holds, if any, on this return." operationId="ApiV3ReturnsHoldsByIdGet" responses="//@responses.69">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}/items">
+      <get parameters="//@paramters.207" summary="Get items detail" description="Get the contents of this return." operationId="ApiV3ReturnsItemsByIdGet" responses="//@responses.70">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}/trackings">
+      <get parameters="//@paramters.208" summary="Get trackings detail" description="Get tracking information for this return." operationId="ApiV3ReturnsTrackingsByIdGet" responses="//@responses.71">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/returns/{id}/labels">
+      <get parameters="//@paramters.209" summary="Get label details" description="Get the shipping labels for this return.&#xA;To retrieve the labels as PDF add the following header to the request:&#xA;Accept: application/pdf" operationId="ApiV3ReturnsLabelsByIdGet" responses="//@responses.72">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3.1/returns/{id}/markComplete">
+      <post parameters="//@paramters.210 //@paramters.211" summary="Mark return completed" description="Mark this return order as complete. This endpoint works only for shipwire anywhere warehouses." operationId="ApiV31ReturnsMarkCompleteByIdPost" responses="//@responses.73">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/returns/generateLabels/{id}">
+      <get parameters="//@paramters.212 //@paramters.213" summary="Get Generate Return Labels Job status and PDF download URL" description="Get Job status by Job ID" operationId="ApiV31ReturnsGenerateLabelsAPIByIdAndAcceptGet" responses="//@responses.74">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.214 //@paramters.215 //@paramters.216" summary="Initiate Generate Return Labels Job" description="Asynchronously generate return labels for multiple orders. The Job will return a combined PDF download URL. Job status can be retrieved via polling or webhook subscription.&#xA;API will return HTTP 422 if order IDs (or external order IDs) are invalid" operationId="ApiV31ReturnsGenerateLabelsAPIByIdAndAcceptPost" responses="//@responses.75">
+        <tagReferences>Returns</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/stock">
+      <get parameters="//@paramters.217 //@paramters.218 //@paramters.219 //@paramters.220 //@paramters.221 //@paramters.222 //@paramters.223 //@paramters.224 //@paramters.225 //@paramters.226 //@paramters.227 //@paramters.228 //@paramters.229 //@paramters.230 //@paramters.231" summary="Get stock availability" description="Get stock information for your products." operationId="ApiV3StockGet" responses="//@responses.76">
+        <tagReferences>Stock</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/stock/adjust">
+      <post parameters="//@paramters.232" summary="Adjust inventory" description="Adjust inventory levels. Only applicable to Shipwire Anywhere warehouses." operationId="ApiV3StockAdjustPost" responses="//@responses.77">
+        <tagReferences>Stock</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/vendors">
+      <get parameters="//@paramters.233 //@paramters.234 //@paramters.235 //@paramters.236" summary="Get vendors" description="Get a collection of vendors filtering by vendor ids, external ids, vendor names, vendor status." operationId="ApiV31VendorsNameNameStatusStatusByIdAndExternalIdGet" responses="//@responses.78">
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.237" summary="Create a new vendor" description="Create a new vendor" operationId="ApiV31VendorsPost" responses="//@responses.79">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/vendors/{id}">
+      <get parameters="//@paramters.238" summary="Get a vendor" description="Get a vendor by vendor's id or external id." operationId="ApiV31VendorsByIdGet" responses="//@responses.80">
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.239 //@paramters.240" summary="Update a vendor" description="Modify a vendor based on its vendor's id or external id" operationId="ApiV31VendorsByIdPut" responses="//@responses.81">
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3.1/vendors/{id}/retire">
+      <post parameters="//@paramters.241" summary="Retire a vendor" description="Indicates that the vendor will not longer be used. If the vendor is not associated with any orders, products, or warehouses&#xA;the vendor will be deleted. Otherwise the vendor will have its status set to &quot;inactive&quot;." operationId="ApiV31VendorsRetireByIdPost" responses="//@responses.82 //@responses.83 //@responses.84">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/vendors/{id}/extendedAttributes">
+      <get parameters="//@paramters.242" summary="Get a vendors extended attributes" description="Get a vendor's extended attributes" operationId="ApiV31VendorsExtendedAttributesByIdGet" responses="//@responses.85">
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3.1/warehouses">
+      <get parameters="//@paramters.243 //@paramters.244 //@paramters.245 //@paramters.246 //@paramters.247 //@paramters.248 //@paramters.249 //@paramters.250" summary="Get warehouses" description="Get a collection of warehouses" operationId="ApiV31WarehousesNameNameVendorIdVendorIdVendorExternalIdVendorExternalIdCountryCountryGeneratesLabelsGeneratesLabelsTypeTypeByIdAndExternalIdGet" responses="//@responses.86">
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.251" summary="Create a new warehouse" description="" operationId="ApiV31WarehousesPost" responses="//@responses.87">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/warehouses/{id}">
+      <get parameters="//@paramters.252" summary="Get a warehouse" description="Get a warehouse by id or external id." operationId="ApiV31WarehousesByIdGet" responses="//@responses.88">
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.253 //@paramters.254" summary="Update a warehouse" description="Modify a warehouse based on its id or external id" operationId="ApiV31WarehousesByIdPut" responses="//@responses.89">
+        <produces>application/json</produces>
+      </put>
+    </paths>
+    <paths relativePath="/api/v3.1/warehouses/{id}/retire">
+      <post parameters="//@paramters.255" summary="Retire a warehouse" description="Indicates that the warehouse will not longer be used. If the warehouse is not associated with any active vendors or orders&#xA;the warehouse will be deleted. Otherwise the warehouse will have its &quot;isActive&quot; property set to false." operationId="ApiV31WarehousesRetireByIdPost" responses="//@responses.90 //@responses.91 //@responses.92">
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3.1/warehouses/{id}/containers">
+      <get parameters="//@paramters.256" summary="Get containers associated with a warehouse" description="" operationId="ApiV31WarehousesContainersByIdGet" responses="//@responses.93">
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v3/webhooks">
+      <get summary="List all Webhooks" description="List all Webhooks" operationId="ApiV3WebhooksGet" responses="//@responses.94">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.257" summary="Create a subscription" description="Create a subscription" operationId="ApiV3WebhooksPost" responses="//@responses.95">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/webhooks/{id}">
+      <get parameters="//@paramters.258" summary="Retrieve a webhook" description="Get a single subscription" operationId="ApiV3WebhooksByIdGet" responses="//@responses.96">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.259 //@paramters.260" summary="Update a subscription" description="Update a subscription" operationId="ApiV3WebhooksByIdPut" responses="//@responses.97">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.261" summary="Remove a subscription" description="Delete a subscription" operationId="ApiV3WebhooksByIdDelete" responses="//@responses.98">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v3/secret">
+      <get summary="List all secrets" description="List all Secrets" operationId="ApiV3SecretGet" responses="//@responses.99">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post summary="Create a secret" description="Create a new secret" operationId="ApiV3SecretPost" responses="//@responses.100">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v3/secret/{id}">
+      <get parameters="//@paramters.262" summary="Retrieve a secret" description="Get a single secret" operationId="ApiV3SecretByIdGet" responses="//@responses.101">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.263" summary="Remove a subscription1" description="Delete a subscription" operationId="ApiV3SecretByIdDelete" responses="//@responses.102">
+        <tagReferences>Webhooks</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <securityDefinitions type="apiKey" name="apiKey" location="header" referenceName="apiKey"/>
+  </api>
+  <paramters schema="//@schemas.257" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Returns containers that are active or not. Valid options are 1 or 0." name="isActive" location="query" required="true"/>
+  <paramters type="string" description="Returns all containers that exist in the provided warehouse. Single warehouse's id or comma separated list of warehouse ids." name="warehouseIds" location="query" required="true"/>
+  <paramters type="string" description="Returns all containers that exist in the provided warehouse. Single warehouse's external id or comma separated list of warehouse external ids." name="warehouseExternalIds" location="query" required="true"/>
+  <paramters type="string" description="" name="type" location="query" required="true"/>
+  <paramters schema="//@schemas.258" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The container's id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="The containers's id or external id." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.4" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand order data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items` , `returns` and `trackings`, `splitOrders`, `pieces` or simply `all`.&#xA;See resources `Holds`, `Items`, `Returns`, `Trackings`, `Split Orders` and `Pieces` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="Filter by commerceName (comma separated list)" name="commerceName" location="query" required="false"/>
+  <paramters type="string" description="Filter by transactionId (comma separated list)" name="transactionId" location="query" required="false"/>
+  <paramters type="string" description="Filter by orderId (comma separated list)" name="orderId" location="query" required="false"/>
+  <paramters type="string" description="Filter by orderNo (comma separated list)" name="orderNo" location="query" required="false"/>
+  <paramters type="string" description="Filter by referer (comma separated list)" name="referrer" location="query" required="false"/>
+  <paramters type="string" description="Filter by externalId (comma separated list)" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by status (comma separated list of: `processed`, `canceled`, `completed`, `delivered`, `returned`, `submitted`, `held`, `tracked`)" name="status" location="query" required="false"/>
+  <paramters type="string" description="Filter by order hold type and status = `held` (comma separated list)" name="holdType" location="query" required="false"/>
+  <paramters type="string" description="Filter by order hold type is not and status = `held` (comma separated list)" name="holdTypeNot" location="query" required="false"/>
+  <paramters type="string" description="Filter on status = held ignoring holds less than 60 seconds old (can be combined with holdType or holdTypeNot)" name="excludeInProgressHolds" location="query" required="false"/>
+  <paramters type="string" description="Only show resources updated after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by purchaseOrderId (comma separated list)" name="purchaseOrderId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorId (comma separated list)" name="vendorId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorExternalId (comma separated list)" name="vendorExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseId (comma separated list)" name="warehouseId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseExternalId (comma separated list)" name="warehouseExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by order created after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="createdAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by order created before this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="createdBefore" location="query" required="false"/>
+  <paramters type="string" description="Filter by order processed after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="processedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by order processed before this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="processedBefore" location="query" required="false"/>
+  <paramters type="string" description="Filter by order completed after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="completedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by order completed before this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="completedBefore" location="query" required="false"/>
+  <paramters type="string" description="Filter Shipwire Anywhere warehouse orders: `0` = Exclude Shipwire Anywhere, `1` = Include Only Shipwire Anywhere" name="shipwireAnywhere" location="query" required="false"/>
+  <paramters type="string" description="Sort by field(s) (comma separated list)" name="sortBy" location="query" required="false"/>
+  <paramters type="string" description="Sort direction: `ASC` or `DESC` (comma separated list)" name="sortDirection" location="query" required="false"/>
+  <paramters schema="//@schemas.260" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand order data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items` , `returns` and `trackings`, `splitOrders`, `pieces` or simply `all`.&#xA;See resources `Holds`, `Items`, `Returns`, `Trackings`, `Split Orders` and `Pieces` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="Expand order data in the response, instead of providing URIs to the data.&#xA;Valid values are `holds`, `items` , `returns` and `trackings`, `splitOrders`, `pieces` or simply `all`.&#xA;See resources `Holds`, `Items`, `Returns`, `Trackings`, `Split Orders` and `Pieces` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.263" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand order data in the response, instead of providing URIs to the data.&#xA;Valid values are `holds`, `items` , `returns` and `trackings`, `splitOrders`, `pieces` or simply `all`.&#xA;See resources `Holds`, `Items`, `Returns`, `Trackings`, `Split Orders` and `Pieces` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.265" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="Include holds that are cleared (0: no, 1: yes)" name="includeCleared" location="query" required="false"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.7" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.277" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.278" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.279" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.280" description="" name="body" location="body" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.282" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.285" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="string" description="Expand specific product data in the response -comma separated list.&#xA;Valid values are: `all`, `alternateNames`, `alternativeDescriptions`, `masterCase`, `enqueuedDimensions`, `flags`, `dimensions`, `technicalData`, `innerPack`, `pallet`, `values`, `kitContent`, `inclusionRules`, and `virtualKitContent`." name="expand" location="query" required="false"/>
+  <paramters type="string" description="Filter products by matching their &quot;description&quot; property." name="description" location="query" required="false"/>
+  <paramters type="string" description="Filter products by matching their &quot;sku&quot; property." name="sku" location="query" required="false"/>
+  <paramters type="string" description="Filter products by matching their &quot;storageConfiguration&quot; property.&#xA;Valid values are: `INDIVIDUAL_ITEM`, `INNER_PACK`, `MASTER_CASE`, `PALLET`, `KIT`." name="storageConfiguration" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their classification.&#xA;Valid values are `baseProduct`, `kit`, `virtualKit`, `marketingInsert`." name="classification" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their archived status.&#xA;Valid values are: `onlyArchived`, `includeArchived`, `excludeArchived`." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their status -comma separated list.&#xA;Valid values are `notinuse`, `instock`, `outofstock`." name="status" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their current step in the flow.&#xA;Valid values are `manage`, `kit`, `virtualKit`, `order`, `receiving`, and `quote`." name="flow" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their ID -comma separated list." name="ids" location="query" required="false"/>
+  <paramters type="string" description="Filters products by their externalId -comma seperated list" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filters products by vendorId -comma seperated list" name="vendorId" location="query" required="false"/>
+  <paramters type="string" description="Filters products by vendorEXternalId -comma seperated list" name="vendorExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter products by their SKU -comma separated list." name="skus" location="query" required="false"/>
+  <paramters schema="//@schemas.288" description="" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.290" description="Create new products of any classification." name="body" location="body" required="true"/>
+  <paramters type="string" description="The products's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The product's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The products's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The product's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.293" description="" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.13" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand purchase order data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items` , and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Items`, and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="Filter by transaction Id (comma separated list)" name="transactionId" location="query" required="false"/>
+  <paramters type="string" description="Filter by purchase order Id (comma separated list)" name="purchaseOrderId" location="query" required="false"/>
+  <paramters type="string" description="Filter by order number (comma separated list)" name="orderNo" location="query" required="false"/>
+  <paramters type="string" description="Filter by referer (comma separated list)" name="referrer" location="query" required="false"/>
+  <paramters type="string" description="Only show resources updated after this date (ISO 8601 format, ex: &quot;2014-05-30T13: 08: 29-07: 00&quot;)" name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by externalId (comma separated list)" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by status (comma separated list of: `canceled`, `needsApproval`, `onHold`, `pending`, `inProgress`, `partiallyCompleted`, `completed`)" name="status" location="query" required="false"/>
+  <paramters schema="//@schemas.296" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand purchase order data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items`, and `trackings`, or simply `all`.&#xA;See resources `Holds` (not implemented), `Items`, and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="Expand purchase order data in the response, instead of providing URIs to the data.&#xA;Valid values are `holds`, `items` , and `trackings`, or simply `all`.&#xA;See resources `Holds` (not implemented), `Items`, and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.299" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand purchase order data in the response, instead of providing URIs to the data.&#xA;Valid values are `holds`, `items` , and `trackings`, or simply `all`.&#xA;See resources `Holds` (not implemented), `Items`, and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.301" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.303" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.304" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase orders's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="Include holds that are cleared (0: no, 1: yes)" name="includeCleared" location="query" required="false"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The purchase orders's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase orders's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The purchase order's external ID (must be prefixed with &quot;E&quot;)." name="externalId" location="path" required="true"/>
+  <paramters schema="//@schemas.309" description="" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.310" description="" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.312" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand receivings data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `instructionsRecipients`, `items` , `shipments`, `labels' and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Instruction Recipients`, `Items`, `Shipments`, `labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="Filter by commerceName (comma separated list)" name="commerceName" location="query" required="false"/>
+  <paramters type="string" description="Filter by transactionId (comma separated list)" name="transactionId" location="query" required="false"/>
+  <paramters type="string" description="Filter by externalId (comma separated list)" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by orderId (comma separated list)" name="orderId" location="query" required="false"/>
+  <paramters type="string" description="Filter by orderNo (comma separated list)" name="orderNo" location="query" required="false"/>
+  <paramters type="string" description="Filter by status (comma separated list of: 'processed', 'canceled', 'completed', 'delivered', 'returned', 'submitted', 'held', 'tracked')" name="status" location="query" required="false"/>
+  <paramters type="string" description="Only show resources updated after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseId (comma separated list)" name="warehouseId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseExternalId (comma separated list)" name="warehouseExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorId" name="vendorId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorExternalId" name="vendorExternalId" location="query" required="false"/>
+  <paramters schema="//@schemas.315" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand receivings data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `instructionsRecipients`, `items` , `shipments`, `labels' and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Instruction Recipients`, `Items`, `Shipments`, `labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="Expand advance ship notice data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `instructionsRecipients`, `items` , `shipments`, `labels` and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Instruction Recipients`, `Items`, `Shipments`, `labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.318" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand advance ship notice data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `instructionsRecipients`, `items` , `shipments`, `labels` and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Instruction Recipients`, `Items`, `Shipments`, `labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.320" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.321" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="Include holds that are cleared (0: no, 1: yes)" name="includeCleared" location="query" required="false"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The receiving's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The advance ship notice's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.329" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Expand returns data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items` , `labels`, `originalOrder` and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Items`, `labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="Filter by commerceName (comma separated list)" name="commerceName" location="query" required="false"/>
+  <paramters type="string" description="Filter by transactionId (comma separated list)" name="transactionId" location="query" required="false"/>
+  <paramters type="string" description="Filter by externalId (comma separated list)" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by orderId (comma separated list)" name="orderId" location="query" required="false"/>
+  <paramters type="string" description="Filter by status (comma separated list of: 'processed', 'canceled', 'completed', 'delivered', 'returned', 'submitted', 'held', 'tracked')" name="status" location="query" required="false"/>
+  <paramters type="string" description="Only show resources updated after this date (ISO 8601 format, ex: &quot;2014-05-30T13:08:29-07:00&quot;)" name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseId (comma separated list)" name="warehouseId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouseExternalId (comma separated list)" name="warehouseExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorId" name="vendorId" location="query" required="false"/>
+  <paramters type="string" description="Filter by vendorExternalId" name="vendorExternalId" location="query" required="false"/>
+  <paramters schema="//@schemas.22" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="Expand return order data in the response, instead of accessing directly via a URL (comma separated list).&#xA;Valid values are `holds`, `items`, `originalOrder`, `labels` and `trackings`, or simply `all`.&#xA;See resources `Holds`, `Items`, `Labels` and `Trackings` for information on the data model returned by this parameter." name="expand" location="query" required="false"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.333" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="Include holds that are cleared (0: no, 1: yes)" name="includeCleared" location="query" required="false"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The return order's ID." name="id" location="path" required="true"/>
+  <paramters type="string" description="The return's ID." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.338" description="" name="body" location="body" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="integer" format="int32" description="The Job ID returned when the POST request was made" name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.340" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="To retrieve successfully generated labels use query parameter `?accept=pdf` or use header `Content-Type: application/pdf`" name="accept" location="query" required="true"/>
+  <paramters type="string" description="Product ID or external ID" name="parentId" location="query" required="false"/>
+  <paramters type="string" description="Filters by SKU, comma-separated list can be specified" name="sku" location="query" required="false"/>
+  <paramters type="string" description="Filters by product ID (Shipwire platform), comma-separated list can be specified" name="productId" location="query" required="false"/>
+  <paramters type="string" description="Filters by product ID (Client platform), comma-separated list can be specified" name="productExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filters by warehouse ID (Shipwire platform), comma-separated list can be specified" name="warehouseId" location="query" required="false"/>
+  <paramters type="string" description="Filters by warehouse ID (Client platform), comma-separated list can be specified" name="warehouseExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filters by warehouse Region, comma-separated list can be specified" name="warehouseRegion" location="query" required="false"/>
+  <paramters type="string" description="Filters by warehouse Area (continents and countries), comma-separated list can be specified" name="warehouseArea" location="query" required="false"/>
+  <paramters type="string" description="Sets channelName for the request" name="channelName" location="query" required="false"/>
+  <paramters type="string" description="If set to '1' then empty resources will be displayed as well" name="includeEmpty" location="query" required="false"/>
+  <paramters type="string" description="Vendor ID list (comma-separated)" name="vendorId" location="query" required="false"/>
+  <paramters type="string" description="Vendor external ID list (comma-separated)" name="vendorExternalId" location="query" required="false"/>
+  <paramters type="string" description="Disable Auto Break Lots" name="disableAutoBreakLots" location="query" required="false"/>
+  <paramters type="string" description="Valid values: IncludingHigherLevelQuantitiesWithLots (default if account is setup to break lots), IncludingHigherLevelQuantitiesWithoutLots, NotIncludingHigherLevelQuantitiesWithLots (default if account is not setup to break lots), NotIncludingHigherLevelQuantitiesWithoutLots" name="mode" location="query" required="false"/>
+  <paramters type="string" description="Include Empty Shipwire Anywhere" name="includeEmptyShipwireAnywhere" location="query" required="false"/>
+  <paramters schema="//@schemas.343" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Vendor's id, supports comma separated list" name="id" location="query" required="true"/>
+  <paramters type="string" description="Vendor's external id, supports comma separated list" name="externalId" location="query" required="true"/>
+  <paramters type="string" description="Vendor's name, supports comma separated list" name="name" location="query" required="true"/>
+  <paramters type="string" description="Vendor's status. Valid status values are `active`, `pending`, and `inactive`" name="status" location="query" required="true"/>
+  <paramters schema="//@schemas.26" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The vendor's id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="The vendor's id or external id." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.28" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The vendor's id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="The vendor's id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="Filter by warehouse ids, supports comma separated list" name="id" location="query" required="true"/>
+  <paramters type="string" description="Filter by warehouse external ids, supports comma separated list" name="externalId" location="query" required="true"/>
+  <paramters type="string" description="Filter by warehouse names, supports comma separated list" name="name" location="query" required="true"/>
+  <paramters type="string" description="Filter by associated vendor's id, supports comma separated list" name="vendorId" location="query" required="true"/>
+  <paramters type="string" description="Filter by associated vendor's external id, supports comma separated list" name="vendorExternalId" location="query" required="true"/>
+  <paramters type="string" description="Filter by country, supports comma separated list" name="country" location="query" required="true"/>
+  <paramters type="string" description="Filter by warehouses that require label generation" name="generatesLabels" location="query" required="true"/>
+  <paramters type="string" description="Filter by type (&quot;SHIPWIRE&quot;, &quot;SHIPWIRE_ANYWHERE&quot;)" name="type" location="query" required="true"/>
+  <paramters schema="//@schemas.34" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The warehouse id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="The warehouse's id or external id." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.35" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="Warehouse id or external id." name="id" location="path" required="true"/>
+  <paramters type="string" description="The warehouse id or external id." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.39" description="" name="body" location="body" required="true"/>
+  <paramters type="number" format="double" description="Numeric `id` of the Webhook." name="id" location="path" required="true"/>
+  <paramters type="number" format="double" description="Numeric `id` of the Webhook." name="id" location="path" required="true"/>
+  <paramters schema="//@schemas.42" description="" name="body" location="body" required="true"/>
+  <paramters type="number" format="double" description="Numeric `id` of the Webhook." name="id" location="path" required="true"/>
+  <paramters type="number" format="double" description="Numeric `id` of the secret." name="id" location="path" required="true"/>
+  <paramters type="number" format="double" description="Numeric `id` of the secret." name="id" location="path" required="true"/>
+  <schemas type="object" name="AddressValidationRequestResponse" title="Address Validation Request response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;The address provided is valid&quot;,&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Mr. Smith&quot;,&quot;company&quot;:&quot;Ingram Micro Inc.&quot;,&quot;address1&quot;:&quot;3351 Michelson Dr STE 100&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Irvine&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:&quot;92612-0697&quot;,&quot;country&quot;:&quot;US&quot;,&quot;phone&quot;:&quot;888-555-1212&quot;,&quot;isCommercial&quot;:1,&quot;isPoBox&quot;:0}}" properties="//@schemas.47 //@schemas.48 //@schemas.49 //@schemas.50" declaringContext="//@api" required="//@schemas.47 //@schemas.48 //@schemas.49 //@schemas.50"/>
+  <schemas type="object" name="AddressValidationRequest422Response" title="Address Validation Request 422 response" example="{&quot;status&quot;:422,&quot;message&quot;:&quot;The address provided is invalid&quot;,&quot;warnings&quot;:{&quot;0&quot;:{&quot;address1&quot;:{&quot;rules&quot;:{&quot;invalidStreetAddress&quot;:{&quot;message&quot;:&quot;Invalid street address submitted&quot;,&quot;ruleValue&quot;:{&quot;suggestedValue&quot;:&quot;3351 MICHELSON DR STE 100&quot;}}}},&quot;city&quot;:{&quot;rules&quot;:{&quot;invalidCityAddress&quot;:{&quot;message&quot;:&quot;Invalid city submitted&quot;,&quot;ruleValue&quot;:{&quot;suggestedValue&quot;:&quot;IRVINE&quot;}}}},&quot;postalCode&quot;:{&quot;rules&quot;:{&quot;invalidPostalCodeAddress&quot;:{&quot;message&quot;:&quot;Invalid postal code submitted&quot;,&quot;ruleValue&quot;:{&quot;suggestedValue&quot;:92612}},&quot;invalidZIP4Address&quot;:{&quot;message&quot;:&quot;Invalid postal code plus4 submitted&quot;,&quot;ruleValue&quot;:{&quot;suggestedValue&quot;:697.0}}}}}},&quot;errors&quot;:{&quot;0&quot;:{&quot;phone&quot;:{&quot;rules&quot;:{&quot;Regex&quot;:{&quot;message&quot;:&quot;Submitted phone number 888-555-121 is invalid&quot;,&quot;ruleValue&quot;:{&quot;pattern&quot;:&quot;/^(?:1(?:[. -])?)?(?:\\((?=\\d{3}\\)))?([2-9]\\d{2})(?:(?&lt;=\\(\\d{3})\\))? ?(?:(?&lt;=\\d{3})[.-])?([2-9]\\d{2})[. -]?(\\d{4})(?: (?i:ext)\\.? ?(\\d{1,5}))?$/&quot;,&quot;htmlPattern&quot;:null,&quot;match&quot;:true}}}}}},&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Mr. Smith&quot;,&quot;company&quot;:&quot;Ingram Micro Inc.&quot;,&quot;address1&quot;:&quot;3351 Michalson Dr STE 100&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Irvin&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:&quot;92615-0698&quot;,&quot;country&quot;:&quot;US&quot;,&quot;phone&quot;:&quot;888-555-121&quot;,&quot;isCommercial&quot;:1,&quot;isPoBox&quot;:0}}" properties="//@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56" declaringContext="//@api" required="//@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56"/>
+  <schemas type="object" name="GetContainersResponse" title="Get containers response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:30,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers/245641&quot;,&quot;resource&quot;:{&quot;id&quot;:245641,&quot;externalId&quot;:null,&quot;name&quot;:&quot;6.00 X 6.00 X 6.00 box&quot;,&quot;type&quot;:&quot;box&quot;,&quot;isActive&quot;:1,&quot;warehouseId&quot;:3811,&quot;warehouseExternalId&quot;:null,&quot;basis&quot;:5005.0,&quot;serviceSpecificCarrierCode&quot;:null,&quot;dimensions&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;length&quot;:6.0,&quot;width&quot;:6.0,&quot;height&quot;:6.0,&quot;weight&quot;:0.26,&quot;maxWeight&quot;:40.0,&quot;lengthUnit&quot;:&quot;IN&quot;,&quot;widthUnit&quot;:&quot;IN&quot;,&quot;heightUnit&quot;:&quot;IN&quot;,&quot;weightUnit&quot;:&quot;LB&quot;,&quot;maxWeightUnit&quot;:&quot;LB&quot;}},&quot;values&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;costValue&quot;:0.0,&quot;retailValue&quot;:0.0,&quot;costValueCurrency&quot;:&quot;USD&quot;,&quot;retailValueCurrency&quot;:&quot;USD&quot;}}}},{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers/245651&quot;,&quot;resource&quot;:{&quot;id&quot;:245651,&quot;externalId&quot;:null,&quot;name&quot;:&quot;8.00 X 8.00 X 8.00 box&quot;,&quot;type&quot;:&quot;box&quot;,&quot;isActive&quot;:1,&quot;warehouseId&quot;:3811,&quot;warehouseExternalId&quot;:null,&quot;basis&quot;:5015.0,&quot;serviceSpecificCarrierCode&quot;:null,&quot;dimensions&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;length&quot;:8.0,&quot;width&quot;:8.0,&quot;height&quot;:8.0,&quot;weight&quot;:0.45,&quot;maxWeight&quot;:40.0,&quot;lengthUnit&quot;:&quot;IN&quot;,&quot;widthUnit&quot;:&quot;IN&quot;,&quot;heightUnit&quot;:&quot;IN&quot;,&quot;weightUnit&quot;:&quot;LB&quot;,&quot;maxWeightUnit&quot;:&quot;LB&quot;}},&quot;values&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;costValue&quot;:0.0,&quot;retailValue&quot;:0.0,&quot;costValueCurrency&quot;:&quot;USD&quot;,&quot;retailValueCurrency&quot;:&quot;USD&quot;}}}}]}}" properties="//@schemas.57 //@schemas.58 //@schemas.59 //@schemas.60" declaringContext="//@api" required="//@schemas.57 //@schemas.58 //@schemas.59 //@schemas.60"/>
+  <schemas type="object" name="CreateANewContainerResponse" title="Create a new container response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;warnings&quot;:{},&quot;errors&quot;:{},&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers/302281&quot;,&quot;resource&quot;:{&quot;id&quot;:302281,&quot;externalId&quot;:1002,&quot;name&quot;:&quot;25.00 X 5.00 X 5.00 box&quot;,&quot;type&quot;:&quot;box&quot;,&quot;isActive&quot;:1,&quot;warehouseId&quot;:3071,&quot;warehouseExternalId&quot;:null,&quot;basis&quot;:5045.0,&quot;serviceSpecificCarrierCode&quot;:&quot;FDX FT&quot;,&quot;dimensions&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;length&quot;:20.0,&quot;width&quot;:5.0,&quot;height&quot;:5.0,&quot;weight&quot;:0.46,&quot;maxWeight&quot;:40.0,&quot;lengthUnit&quot;:&quot;IN&quot;,&quot;widthUnit&quot;:&quot;IN&quot;,&quot;heightUnit&quot;:&quot;IN&quot;,&quot;weightUnit&quot;:&quot;LB&quot;,&quot;maxWeightUnit&quot;:&quot;LB&quot;}},&quot;values&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;costValue&quot;:10.0,&quot;retailValue&quot;:50.0,&quot;costValueCurrency&quot;:&quot;USD&quot;,&quot;retailValueCurrency&quot;:&quot;USD&quot;}}}}]}}" properties="//@schemas.61 //@schemas.62 //@schemas.63 //@schemas.64 //@schemas.65 //@schemas.66" declaringContext="//@api" required="//@schemas.61 //@schemas.62 //@schemas.63 //@schemas.64 //@schemas.65 //@schemas.66"/>
+  <schemas type="object" name="UpdateAContainerRequest" title="Update a container request" properties="//@schemas.67 //@schemas.68 //@schemas.69 //@schemas.70 //@schemas.71 //@schemas.72 //@schemas.73 //@schemas.74 //@schemas.75" declaringContext="//@api" required="//@schemas.67 //@schemas.68 //@schemas.69 //@schemas.70 //@schemas.71 //@schemas.72 //@schemas.73 //@schemas.74 //@schemas.75"/>
+  <schemas type="object" name="UpdateAContainerResponse" title="Update a container response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;warnings&quot;:{},&quot;errors&quot;:{},&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers/302281&quot;,&quot;resource&quot;:{&quot;id&quot;:302281,&quot;externalId&quot;:1002,&quot;name&quot;:&quot;25.00 X 5.00 X 5.00 box updated&quot;,&quot;type&quot;:&quot;box&quot;,&quot;isActive&quot;:1,&quot;warehouseId&quot;:3071,&quot;warehouseExternalId&quot;:null,&quot;basis&quot;:5045.0,&quot;serviceSpecificCarrierCode&quot;:&quot;FDX FT&quot;,&quot;dimensions&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;length&quot;:20.0,&quot;width&quot;:5.0,&quot;height&quot;:5.0,&quot;weight&quot;:0.46,&quot;maxWeight&quot;:40.0,&quot;lengthUnit&quot;:&quot;IN&quot;,&quot;widthUnit&quot;:&quot;IN&quot;,&quot;heightUnit&quot;:&quot;IN&quot;,&quot;weightUnit&quot;:&quot;LB&quot;,&quot;maxWeightUnit&quot;:&quot;LB&quot;}},&quot;values&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;costValue&quot;:10.0,&quot;retailValue&quot;:50.0,&quot;costValueCurrency&quot;:&quot;USD&quot;,&quot;retailValueCurrency&quot;:&quot;USD&quot;}}}}]}}" properties="//@schemas.76 //@schemas.77 //@schemas.78 //@schemas.79 //@schemas.80 //@schemas.81" declaringContext="//@api" required="//@schemas.76 //@schemas.77 //@schemas.78 //@schemas.79 //@schemas.80 //@schemas.81"/>
+  <schemas type="object" name="getAContainerResponse" title="?Get a container response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/containers/302281&quot;,&quot;resource&quot;:{&quot;id&quot;:302281,&quot;externalId&quot;:1002,&quot;name&quot;:&quot;25.00 X 5.00 X 5.00 box update&quot;,&quot;type&quot;:&quot;box&quot;,&quot;isActive&quot;:1,&quot;warehouseId&quot;:3071,&quot;warehouseExternalId&quot;:null,&quot;basis&quot;:5045.0,&quot;serviceSpecificCarrierCode&quot;:&quot;FDX FT&quot;,&quot;dimensions&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;length&quot;:20.0,&quot;width&quot;:5.0,&quot;height&quot;:5.0,&quot;weight&quot;:0.46,&quot;maxWeight&quot;:40.0,&quot;lengthUnit&quot;:&quot;IN&quot;,&quot;widthUnit&quot;:&quot;IN&quot;,&quot;heightUnit&quot;:&quot;IN&quot;,&quot;weightUnit&quot;:&quot;LB&quot;,&quot;maxWeightUnit&quot;:&quot;LB&quot;}},&quot;values&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;costValue&quot;:10.0,&quot;retailValue&quot;:50.0,&quot;costValueCurrency&quot;:&quot;USD&quot;,&quot;retailValueCurrency&quot;:&quot;USD&quot;}}}}" properties="//@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85" declaringContext="//@api" required="//@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85"/>
+  <schemas type="object" name="CreateTrackingForAnOrderRequest" title="Create tracking for an order request" properties="//@schemas.86 //@schemas.87 //@schemas.88" declaringContext="//@api" required="//@schemas.86 //@schemas.87 //@schemas.88"/>
+  <schemas type="object" name="GetShippingOrderShippingLabelResponse" title="Get shipping order Shipping Label response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/orders/12345/shippingLabel&quot;,&quot;resource&quot;:{&quot;orderId&quot;:12345,&quot;externalId&quot;:null,&quot;warehouseId&quot;:84141,&quot;warehouseExternalId&quot;:&quot;external-retailer11&quot;,&quot;vendorId&quot;:20321,&quot;vendorExternalId&quot;:null,&quot;documentLocation&quot;:&quot;https://api.shipwire.com/api/v3/orders/12345/shippingLabel&quot;}}" properties="//@schemas.89 //@schemas.90 //@schemas.91 //@schemas.92" declaringContext="//@api" required="//@schemas.89 //@schemas.90 //@schemas.91 //@schemas.92"/>
+  <schemas type="object" name="ClearTheHoldResponse" title="Clear the hold response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Manual hold cleared (if exists)&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.93 //@schemas.94 //@schemas.95" declaringContext="//@api" required="//@schemas.93 //@schemas.94 //@schemas.95"/>
+  <schemas type="object" name="MarkTheOrderProcessedResponse" title="Mark the order processed response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.96 //@schemas.97 //@schemas.98" declaringContext="//@api" required="//@schemas.96 //@schemas.97 //@schemas.98"/>
+  <schemas type="object" name="MarkTheOrderSubmittedResponse" title="Mark the order submitted response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.99 //@schemas.100 //@schemas.101" declaringContext="//@api" required="//@schemas.99 //@schemas.100 //@schemas.101"/>
+  <schemas type="object" name="MarkTheOrderCompletedResponse" title="Mark the order completed response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.102 //@schemas.103 //@schemas.104" declaringContext="//@api" required="//@schemas.102 //@schemas.103 //@schemas.104"/>
+  <schemas type="object" name="RetireProductsRequest" title="Retire products request" properties="//@schemas.105" declaringContext="//@api" required="//@schemas.105"/>
+  <schemas type="object" name="RetireProductsResponse" title="Retire products response" properties="//@schemas.107 //@schemas.108 //@schemas.109 //@schemas.111" declaringContext="//@api" required="//@schemas.107 //@schemas.108 //@schemas.109 //@schemas.111"/>
+  <schemas type="object" name="HoldAPurchaseOrderResponse" title="Hold a Purchase order response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Manual hold placed&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.112 //@schemas.113 //@schemas.114" declaringContext="//@api" required="//@schemas.112 //@schemas.113 //@schemas.114"/>
+  <schemas type="object" name="ClearAnyManualHoldsOnThisPurchaseOrderResponse" title="Clear any manual holds on this purchase order response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Manual hold cleared (if exists)&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.115 //@schemas.116 //@schemas.117" declaringContext="//@api" required="//@schemas.115 //@schemas.116 //@schemas.117"/>
+  <schemas type="object" name="GetItemsDetailResponse" title="Get items detail response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/purchaseOrders/704891/items?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;retailerLineNo&quot;:null,&quot;sku&quot;:&quot;BP1iz5h&quot;,&quot;retailerSku&quot;:null,&quot;supplierSku&quot;:null,&quot;upc&quot;:null,&quot;description&quot;:null,&quot;quantity&quot;:1,&quot;unitOfMeasure&quot;:null,&quot;retailValue&quot;:123.57,&quot;wholesaleValue&quot;:92.67,&quot;costValue&quot;:30.88,&quot;discountAmount&quot;:0,&quot;taxAmount&quot;:0,&quot;extendedAttributes&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Product Origin&quot;,&quot;value&quot;:&quot;US&quot;,&quot;type&quot;:&quot;string&quot;}}]}},&quot;lineId&quot;:998361,&quot;productId&quot;:6379661,&quot;productExternalId&quot;:null,&quot;purchaseOrderId&quot;:704891,&quot;purchaseOrderExternalId&quot;:null,&quot;status&quot;:&quot;Pending&quot;}}]}}" properties="//@schemas.118 //@schemas.119 //@schemas.120 //@schemas.121" declaringContext="//@api" required="//@schemas.118 //@schemas.119 //@schemas.120 //@schemas.121"/>
+  <schemas type="object" name="ApproveThePurchaseOrderResponse" title="Approve the Purchase Order response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Purchase order approved&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.122 //@schemas.123 //@schemas.124" declaringContext="//@api" required="//@schemas.122 //@schemas.123 //@schemas.124"/>
+  <schemas type="object" name="CancelAReceivingOrderResponse" title="Cancel a receiving order response" example="{&quot;status&quot;:200,&quot;resourceLocation&quot;:null,&quot;message&quot;:&quot;Receiving was cancelled&quot;}" properties="//@schemas.125 //@schemas.126 //@schemas.127" declaringContext="//@api" required="//@schemas.125 //@schemas.126 //@schemas.127"/>
+  <schemas type="object" name="CancelAReceivingLabelResponse" title="Cancel a receiving label response" example="{&quot;status&quot;:200,&quot;resourceLocation&quot;:null,&quot;message&quot;:&quot;Labels cancelled&quot;}" properties="//@schemas.128 //@schemas.129 //@schemas.130" declaringContext="//@api" required="//@schemas.128 //@schemas.129 //@schemas.130"/>
+  <schemas type="object" name="MarkTheReceivingCompletedResponse" title="Mark the receiving completed response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.131 //@schemas.132 //@schemas.133" declaringContext="//@api" required="//@schemas.131 //@schemas.132 //@schemas.133"/>
+  <schemas type="object" name="CreateAnReturnOrderRequest" title="Create an return order request" example="{&quot;externalId&quot;:&quot;eId123&quot;,&quot;originalOrder&quot;:{&quot;id&quot;:673},&quot;items&quot;:[{&quot;sku&quot;:&quot;Laura-s_Pen&quot;,&quot;quantity&quot;:1}],&quot;options&quot;:{&quot;generatePrepaidLabel&quot;:1,&quot;emailCustomer&quot;:1,&quot;warehouseId&quot;:11,&quot;warehouseExternalId&quot;:12,&quot;warehouseRegion&quot;:&quot;LAX&quot;}}" properties="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.138" declaringContext="//@api" required="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.138"/>
+  <schemas type="object" name="CancelReturnOrderResponse" title="Cancel a receiving order response" example="{&quot;status&quot;:200,&quot;resourceLocation&quot;:null,&quot;message&quot;:&quot;Return Order cancelled&quot;}" properties="//@schemas.139 //@schemas.140 //@schemas.141" declaringContext="//@api" required="//@schemas.139 //@schemas.140 //@schemas.141"/>
+  <schemas type="object" name="MarkReturnCompletedResponse" title="Mark return completed response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.142 //@schemas.143 //@schemas.144" declaringContext="//@api" required="//@schemas.142 //@schemas.143 //@schemas.144"/>
+  <schemas type="object" name="GetVendorsResponse" title="Get vendors response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:2,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2861&quot;,&quot;resource&quot;:{&quot;id&quot;:2861,&quot;name&quot;:&quot;Widget Mega Factory&quot;,&quot;status&quot;:&quot;active&quot;,&quot;description&quot;:&quot;&quot;,&quot;externalId&quot;:1000,&quot;address&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Colonel Sanders&quot;,&quot;email&quot;:&quot;customercare@widgets.com&quot;,&quot;phone&quot;:&quot;555-555-5555&quot;,&quot;fax&quot;:&quot;555-555-5555&quot;,&quot;address1&quot;:&quot;123 Indio way&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Sunnyvale&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:94085,&quot;country&quot;:&quot;US&quot;}},&quot;extendedAttributes&quot;:{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2861/extendedAttributes?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:2,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;alternateEmail&quot;,&quot;value&quot;:&quot;customercare2@widgets.com&quot;,&quot;type&quot;:&quot;string&quot;}},{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;category&quot;,&quot;value&quot;:&quot;Mega Widgets&quot;,&quot;type&quot;:&quot;string&quot;}}]}}}},{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2851&quot;,&quot;resource&quot;:{&quot;id&quot;:2851,&quot;name&quot;:&quot;Cool Widgets Dot Com&quot;,&quot;status&quot;:&quot;inactive&quot;,&quot;description&quot;:&quot;&quot;,&quot;externalId&quot;:1001,&quot;address&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Bob Ross&quot;,&quot;email&quot;:&quot;&quot;,&quot;phone&quot;:&quot;555-555-5555&quot;,&quot;fax&quot;:&quot;&quot;,&quot;address1&quot;:&quot;321 Indio way&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Mountain View&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:94035,&quot;country&quot;:&quot;US&quot;}},&quot;extendedAttributes&quot;:{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2851/extendedAttributes?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;alternatePhoneNumber&quot;,&quot;value&quot;:&quot;800 (555) 123-4567&quot;,&quot;type&quot;:&quot;string&quot;}}]}}}}]}}" properties="//@schemas.145 //@schemas.146 //@schemas.147 //@schemas.148" declaringContext="//@api" required="//@schemas.145 //@schemas.146 //@schemas.147 //@schemas.148"/>
+  <schemas type="object" name="CreateANewVendorRequest" title="Create a new vendor request" properties="//@schemas.149 //@schemas.150 //@schemas.151 //@schemas.152 //@schemas.153 //@schemas.154" declaringContext="//@api" required="//@schemas.149 //@schemas.150 //@schemas.151 //@schemas.152 //@schemas.153 //@schemas.154"/>
+  <schemas type="object" name="CreateANewVendorResponse" title="Create a new vendor response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;warnings&quot;:{},&quot;errors&quot;:{},&quot;resourceLocation&quot;:&quot;https://api.developer.corp.shipwire.com/api/v3.1/vendors?offset=0&amp;limit=1&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.developer.corp.shipwire.com/api/v3.1/vendors/2911&quot;,&quot;resource&quot;:{&quot;id&quot;:2911,&quot;name&quot;:&quot;Honest Widget Company&quot;,&quot;status&quot;:&quot;active&quot;,&quot;description&quot;:&quot;An honest widget company&quot;,&quot;externalId&quot;:1002,&quot;address&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Honest Abe&quot;,&quot;email&quot;:&quot;customersupport@widgets.com&quot;,&quot;phone&quot;:&quot;555-555-5555&quot;,&quot;fax&quot;:&quot;555-555-5556&quot;,&quot;address1&quot;:&quot;789 Indio way&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Sunnyvale&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:94085,&quot;country&quot;:&quot;US&quot;}},&quot;extendedAttributes&quot;:{&quot;resourceLocation&quot;:&quot;https://api.developer.corp.shipwire.com/api/v3.1/vendors/2911/extendedAttributes?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;alternateEmail&quot;,&quot;value&quot;:&quot;customersupport2@widgets.com&quot;,&quot;type&quot;:&quot;string&quot;}}]}}}}]}}" properties="//@schemas.156 //@schemas.157 //@schemas.158 //@schemas.159 //@schemas.160 //@schemas.161" declaringContext="//@api" required="//@schemas.156 //@schemas.157 //@schemas.158 //@schemas.159 //@schemas.160 //@schemas.161"/>
+  <schemas type="object" name="UpdateAVendorRequest" title="Update a vendor request" properties="//@schemas.162 //@schemas.163 //@schemas.164 //@schemas.165 //@schemas.166 //@schemas.167" declaringContext="//@api" required="//@schemas.162 //@schemas.163 //@schemas.164 //@schemas.165 //@schemas.166 //@schemas.167"/>
+  <schemas type="object" name="UpdateAVendorResponse" title="Update a vendor response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;warnings&quot;:{},&quot;errors&quot;:{},&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2861&quot;,&quot;resource&quot;:{&quot;id&quot;:2861,&quot;name&quot;:&quot;Updated Vendor Name&quot;,&quot;status&quot;:&quot;active&quot;,&quot;description&quot;:&quot;This is the updated description&quot;,&quot;externalId&quot;:1002,&quot;address&quot;:{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;Updated Contact Name&quot;,&quot;email&quot;:&quot;updated@widgets.com&quot;,&quot;phone&quot;:&quot;555-555-5555&quot;,&quot;fax&quot;:&quot;555-555-5555&quot;,&quot;address1&quot;:&quot;123 Indio way&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;city&quot;:&quot;Sunnyvale&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postalCode&quot;:94085,&quot;country&quot;:&quot;US&quot;}},&quot;extendedAttributes&quot;:{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3.1/vendors/2861/extendedAttributes?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;alternateEmail&quot;,&quot;value&quot;:&quot;customercare2@widgets.com&quot;,&quot;type&quot;:&quot;string&quot;}}]}}}}]}}" properties="//@schemas.169 //@schemas.170 //@schemas.171 //@schemas.172 //@schemas.173 //@schemas.174" declaringContext="//@api" required="//@schemas.169 //@schemas.170 //@schemas.171 //@schemas.172 //@schemas.173 //@schemas.174"/>
+  <schemas type="object" name="GetAVendorResponse" title="Get a vendor response" properties="//@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178" declaringContext="//@api" required="//@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178"/>
+  <schemas type="object" name="RetireAVendorResponse" title="Retire a vendor response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Deleted.&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.179 //@schemas.180 //@schemas.181" declaringContext="//@api" required="//@schemas.179 //@schemas.180 //@schemas.181"/>
+  <schemas type="object" name="RetireAVendor404Response" title="Retire a vendor 404 response" example="{&quot;status&quot;:404,&quot;message&quot;:&quot;Vendor not found&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.182 //@schemas.183 //@schemas.184" declaringContext="//@api" required="//@schemas.182 //@schemas.183 //@schemas.184"/>
+  <schemas type="object" name="GetAVendorsExtendedAttributesResponse" title="Get a vendors extended attributes response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.developer.corp.shipwire.com/api/v3.1/vendors/2901/extendedAttributes?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:null,&quot;resource&quot;:{&quot;name&quot;:&quot;alternateEmail&quot;,&quot;value&quot;:&quot;customersupport@widgets.com&quot;,&quot;type&quot;:&quot;string&quot;}}]}}" properties="//@schemas.185 //@schemas.186 //@schemas.187 //@schemas.188" declaringContext="//@api" required="//@schemas.185 //@schemas.186 //@schemas.187 //@schemas.188"/>
+  <schemas type="object" name="CreateANewWarehouseRequest" title="Create a new warehouse request" properties="//@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.194 //@schemas.195 //@schemas.196 //@schemas.197 //@schemas.198 //@schemas.199 //@schemas.200 //@schemas.201 //@schemas.202 //@schemas.203" declaringContext="//@api" required="//@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.194 //@schemas.195 //@schemas.196 //@schemas.197 //@schemas.198 //@schemas.199 //@schemas.200 //@schemas.201 //@schemas.202 //@schemas.203"/>
+  <schemas type="object" name="UpdateAWarehouseRequest" title="Update a warehouse request" properties="//@schemas.204 //@schemas.205 //@schemas.206 //@schemas.207 //@schemas.208 //@schemas.209 //@schemas.210 //@schemas.211 //@schemas.212 //@schemas.213 //@schemas.214 //@schemas.215 //@schemas.216 //@schemas.217 //@schemas.218" declaringContext="//@api" required="//@schemas.204 //@schemas.205 //@schemas.206 //@schemas.207 //@schemas.208 //@schemas.209 //@schemas.210 //@schemas.211 //@schemas.212 //@schemas.213 //@schemas.214 //@schemas.215 //@schemas.216 //@schemas.217 //@schemas.218"/>
+  <schemas type="object" name="RetireAWarehouseResponse" title="Retire a warehouse response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Deleted.&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.219 //@schemas.220 //@schemas.221" declaringContext="//@api" required="//@schemas.219 //@schemas.220 //@schemas.221"/>
+  <schemas type="object" name="RetireAWarehouse404Response" title="Retire a warehouse 404 response" example="{&quot;status&quot;:404,&quot;message&quot;:&quot;Warehouse not found&quot;,&quot;resourceLocation&quot;:null}" properties="//@schemas.222 //@schemas.223 //@schemas.224" declaringContext="//@api" required="//@schemas.222 //@schemas.223 //@schemas.224"/>
+  <schemas type="object" name="ListAllWebhooksResponse" title="List all Webhooks response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks/882&quot;,&quot;resource&quot;:{&quot;id&quot;:882,&quot;topic&quot;:&quot;v1.stock.transition&quot;,&quot;url&quot;:&quot;https://stephensearles.com&quot;}}]}}" properties="//@schemas.225 //@schemas.226 //@schemas.227 //@schemas.228" declaringContext="//@api" required="//@schemas.225 //@schemas.226 //@schemas.227 //@schemas.228"/>
+  <schemas type="object" name="CreateASubscriptionRequest" title="Create a subscription request" example="{&quot;topic&quot;:&quot;orders&quot;,&quot;url&quot;:&quot;https://yourdomain.com/get/webhooks/here&quot;}" properties="//@schemas.229 //@schemas.230" declaringContext="//@api" required="//@schemas.229 //@schemas.230"/>
+  <schemas type="object" name="CreateASubscriptionResponse" title="Create a subscription response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks?offset=0&amp;limit=1&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks/921&quot;,&quot;resource&quot;:{&quot;id&quot;:921,&quot;topic&quot;:&quot;stock.transition&quot;,&quot;url&quot;:&quot;https://stephensearles.com&quot;}}]}}" properties="//@schemas.231 //@schemas.232 //@schemas.233 //@schemas.234" declaringContext="//@api" required="//@schemas.231 //@schemas.232 //@schemas.233 //@schemas.234"/>
+  <schemas type="object" name="RetrieveAWebhookResponse" title="Retrieve a webhook response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks/882&quot;,&quot;resource&quot;:{&quot;id&quot;:882,&quot;topic&quot;:&quot;v1.stock.transition&quot;,&quot;url&quot;:&quot;https://stephensearles.com&quot;}}" properties="//@schemas.235 //@schemas.236 //@schemas.237 //@schemas.238" declaringContext="//@api" required="//@schemas.235 //@schemas.236 //@schemas.237 //@schemas.238"/>
+  <schemas type="object" name="UpdateASubscriptionRequest" title="Update a subscription request" example="{&quot;topic&quot;:&quot;orders.created&quot;,&quot;url&quot;:&quot;https://yourdomain.com/get/webhooks/here&quot;}" properties="//@schemas.239 //@schemas.240" declaringContext="//@api" required="//@schemas.239 //@schemas.240"/>
+  <schemas type="object" name="UpdateASubscriptionResponse" title="Update a subscription response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/api/v3/webhooks/882&quot;,&quot;resource&quot;:{&quot;id&quot;:882,&quot;topic&quot;:&quot;v1.stock.transition&quot;,&quot;url&quot;:&quot;https://stephensearles.com/&quot;}}" properties="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244" declaringContext="//@api" required="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244"/>
+  <schemas type="object" name="ListAllSecretsResponse" title="List all secrets response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/secret?offset=0&amp;limit=20&quot;,&quot;resource&quot;:{&quot;offset&quot;:0,&quot;total&quot;:1,&quot;previous&quot;:null,&quot;next&quot;:null,&quot;items&quot;:[{&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/secret/111&quot;,&quot;resource&quot;:{&quot;id&quot;:111,&quot;secret&quot;:&quot;9d573f...6015c&quot;,&quot;expiration&quot;:null}}]}}" properties="//@schemas.245 //@schemas.246 //@schemas.247 //@schemas.248" declaringContext="//@api" required="//@schemas.245 //@schemas.246 //@schemas.247 //@schemas.248"/>
+  <schemas type="object" name="CreateASecretResponse" title="Create a secret response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/secret/111&quot;,&quot;resource&quot;:{&quot;id&quot;:111,&quot;secret&quot;:&quot;9d573f...6015c&quot;,&quot;expiration&quot;:null}}" properties="//@schemas.249 //@schemas.250 //@schemas.251 //@schemas.252" declaringContext="//@api" required="//@schemas.249 //@schemas.250 //@schemas.251 //@schemas.252"/>
+  <schemas type="object" name="RetrieveASecretResponse" title="Retrieve a secret response" example="{&quot;status&quot;:200,&quot;message&quot;:&quot;Successful&quot;,&quot;resourceLocation&quot;:&quot;https://api.shipwire.com/secret/111&quot;,&quot;resource&quot;:{&quot;id&quot;:111,&quot;secret&quot;:&quot;9d573f...6015c&quot;,&quot;expiration&quot;:null}}" properties="//@schemas.253 //@schemas.254 //@schemas.255 //@schemas.256" declaringContext="//@api" required="//@schemas.253 //@schemas.254 //@schemas.255 //@schemas.256"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.0"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.0"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.1"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.1"/>
+  <schemas type="object" description="" name="warnings" declaringContext="//@schemas.1"/>
+  <schemas type="object" description="" name="errors" declaringContext="//@schemas.1"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.1"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.1"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.2"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.2"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.3"/>
+  <schemas type="object" description="" name="warnings" declaringContext="//@schemas.3"/>
+  <schemas type="object" description="" name="errors" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.3"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="" name="name" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="" name="type" declaringContext="//@schemas.4"/>
+  <schemas type="integer" format="int32" description="" name="isActive" declaringContext="//@schemas.4"/>
+  <schemas type="integer" format="int32" description="" name="warehouseId" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="" name="basis" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="" name="serviceSpecificCarrierCode" declaringContext="//@schemas.4"/>
+  <schemas type="object" description="" name="dimensions" declaringContext="//@schemas.4"/>
+  <schemas type="object" description="" name="values" declaringContext="//@schemas.4"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.5"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.5"/>
+  <schemas type="object" description="" name="warnings" declaringContext="//@schemas.5"/>
+  <schemas type="object" description="" name="errors" declaringContext="//@schemas.5"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.5"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.5"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.6"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.6"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.6"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.6"/>
+  <schemas type="string" description="" name="tracking" declaringContext="//@schemas.7"/>
+  <schemas type="string" description="" name="carrier" declaringContext="//@schemas.7"/>
+  <schemas type="string" description="" name="carrierCode" declaringContext="//@schemas.7"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.8"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.8"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.8"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.8"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.9"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.9"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.9"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.10"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.10"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.10"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.11"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.12"/>
+  <schemas type="array" description="" name="ids" items="//@schemas.106" declaringContext="//@schemas.13"/>
+  <schemas type="integer" format="int32"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.14"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.14"/>
+  <schemas type="array" description="" name="moreInfo" items="//@schemas.110" declaringContext="//@schemas.14"/>
+  <schemas type="object"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.14"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.15"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.15"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.15"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.16"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.16"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.16"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.17"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.17"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.17"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.17"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.18"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.18"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.18"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.19"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.19"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.19"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.20"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.20"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.20"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.21"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.21"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.21"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.22"/>
+  <schemas type="object" description="" name="originalOrder" declaringContext="//@schemas.22"/>
+  <schemas type="array" description="" name="items" items="//@schemas.137" declaringContext="//@schemas.22"/>
+  <schemas type="object"/>
+  <schemas type="object" description="" name="options" declaringContext="//@schemas.22"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.23"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.23"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.23"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.24"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.24"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.24"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.25"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="" name="name" declaringContext="//@schemas.26"/>
+  <schemas type="string" description="" name="status" declaringContext="//@schemas.26"/>
+  <schemas type="string" description="" name="description" declaringContext="//@schemas.26"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.26"/>
+  <schemas type="object" description="" name="address" declaringContext="//@schemas.26"/>
+  <schemas type="array" description="" name="extendedAttributes" items="//@schemas.155" declaringContext="//@schemas.26"/>
+  <schemas type="object"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.27"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.27"/>
+  <schemas type="object" description="" name="warnings" declaringContext="//@schemas.27"/>
+  <schemas type="object" description="" name="errors" declaringContext="//@schemas.27"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.27"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.27"/>
+  <schemas type="string" description="" name="name" declaringContext="//@schemas.28"/>
+  <schemas type="string" description="" name="status" declaringContext="//@schemas.28"/>
+  <schemas type="string" description="" name="description" declaringContext="//@schemas.28"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.28"/>
+  <schemas type="object" description="" name="address" declaringContext="//@schemas.28"/>
+  <schemas type="array" description="" name="extendedAttributes" items="//@schemas.168" declaringContext="//@schemas.28"/>
+  <schemas type="object"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.29"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.29"/>
+  <schemas type="object" description="" name="warnings" declaringContext="//@schemas.29"/>
+  <schemas type="object" description="" name="errors" declaringContext="//@schemas.29"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.29"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.29"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.30"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.30"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.30"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.30"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.31"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.31"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.31"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.32"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.32"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.32"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.33"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.33"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.33"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.33"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="name" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="code" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="vendorId" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="vendorExternalId" declaringContext="//@schemas.34"/>
+  <schemas type="integer" format="int32" description="" name="isActive" declaringContext="//@schemas.34"/>
+  <schemas type="object" description="" name="address" declaringContext="//@schemas.34"/>
+  <schemas type="number" format="double" description="" name="latitude" declaringContext="//@schemas.34"/>
+  <schemas type="number" format="double" description="" name="longitude" declaringContext="//@schemas.34"/>
+  <schemas type="integer" format="int32" description="" name="isRoutable" declaringContext="//@schemas.34"/>
+  <schemas type="integer" format="int32" description="" name="isRoutingOnly" declaringContext="//@schemas.34"/>
+  <schemas type="integer" format="int32" description="" name="generatesLabels" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="labelFormat" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="returnWarehouseId" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="returnWarehouseExternalId" declaringContext="//@schemas.34"/>
+  <schemas type="string" description="" name="externalId" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="name" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="code" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="vendorId" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="vendorExternalId" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" description="" name="isActive" declaringContext="//@schemas.35"/>
+  <schemas type="object" description="" name="address" declaringContext="//@schemas.35"/>
+  <schemas type="number" format="double" description="" name="latitude" declaringContext="//@schemas.35"/>
+  <schemas type="number" format="double" description="" name="longitude" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" description="" name="isRoutable" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" description="" name="isRoutingOnly" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" description="" name="generatesLabels" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="labelFormat" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="returnWarehouseId" declaringContext="//@schemas.35"/>
+  <schemas type="string" description="" name="returnWarehouseExternalId" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.36"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.36"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.36"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.37"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.37"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.37"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.38"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.38"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.38"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.38"/>
+  <schemas type="string" description="" name="topic" declaringContext="//@schemas.39"/>
+  <schemas type="string" description="" name="url" declaringContext="//@schemas.39"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.40"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.40"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.40"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.40"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.41"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.41"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.41"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.41"/>
+  <schemas type="string" description="" name="topic" declaringContext="//@schemas.42"/>
+  <schemas type="string" description="" name="url" declaringContext="//@schemas.42"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.43"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.43"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.43"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.43"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.44"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.44"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.44"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.44"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.45"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.45"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.45"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.45"/>
+  <schemas type="integer" format="int32" description="" name="status" declaringContext="//@schemas.46"/>
+  <schemas type="string" description="" name="message" declaringContext="//@schemas.46"/>
+  <schemas type="string" description="" name="resourceLocation" declaringContext="//@schemas.46"/>
+  <schemas type="object" description="" name="resource" declaringContext="//@schemas.46"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="string"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <responses schema="//@schemas.0" description="" code="200"/>
+  <responses schema="//@schemas.1" description="Unexpected error in API call. See HTTP response body for details." code="422"/>
+  <responses schema="//@schemas.2" description="" code="200"/>
+  <responses schema="//@schemas.3" description="" code="200"/>
+  <responses schema="//@schemas.6" description="" code="200"/>
+  <responses schema="//@schemas.5" description="" code="200"/>
+  <responses schema="//@schemas.259" description="" code="200"/>
+  <responses schema="//@schemas.261" description="" code="200"/>
+  <responses schema="//@schemas.262" description="" code="200"/>
+  <responses schema="//@schemas.264" description="" code="200"/>
+  <responses schema="//@schemas.266" description="" code="200"/>
+  <responses schema="//@schemas.267" description="" code="200"/>
+  <responses schema="//@schemas.268" description="" code="200"/>
+  <responses schema="//@schemas.269" description="" code="200"/>
+  <responses schema="//@schemas.270" description="" code="200"/>
+  <responses schema="//@schemas.271" description="" code="200"/>
+  <responses schema="//@schemas.272" description="" code="200"/>
+  <responses schema="//@schemas.8" description="" code="200"/>
+  <responses schema="//@schemas.273" description="" code="200"/>
+  <responses schema="//@schemas.274" description="" code="200"/>
+  <responses schema="//@schemas.275" description="" code="200"/>
+  <responses schema="//@schemas.276" description="" code="200"/>
+  <responses schema="//@schemas.9" description="" code="200"/>
+  <responses schema="//@schemas.10" description="" code="200"/>
+  <responses schema="//@schemas.11" description="" code="200"/>
+  <responses schema="//@schemas.12" description="" code="200"/>
+  <responses schema="//@schemas.281" description="" code="200"/>
+  <responses schema="//@schemas.283" description="" code="200"/>
+  <responses schema="//@schemas.284" description="" code="200"/>
+  <responses schema="//@schemas.286" description="" code="200"/>
+  <responses schema="//@schemas.287" description="" code="200"/>
+  <responses schema="//@schemas.289" description="" code="200"/>
+  <responses schema="//@schemas.291" description="" code="200"/>
+  <responses schema="//@schemas.292" description="" code="200"/>
+  <responses schema="//@schemas.294" description="" code="200"/>
+  <responses schema="//@schemas.14" description="" code="200"/>
+  <responses schema="//@schemas.295" description="" code="200"/>
+  <responses schema="//@schemas.297" description="" code="200"/>
+  <responses schema="//@schemas.298" description="" code="200"/>
+  <responses schema="//@schemas.300" description="" code="200"/>
+  <responses schema="//@schemas.302" description="" code="200"/>
+  <responses schema="//@schemas.15" description="" code="200"/>
+  <responses schema="//@schemas.16" description="" code="200"/>
+  <responses schema="//@schemas.305" description="" code="200"/>
+  <responses schema="//@schemas.17" description="" code="200"/>
+  <responses schema="//@schemas.306" description="" code="200"/>
+  <responses schema="//@schemas.307" description="" code="200"/>
+  <responses schema="//@schemas.308" description="" code="200"/>
+  <responses schema="//@schemas.18" description="" code="200"/>
+  <responses schema="//@schemas.311" description="" code="200"/>
+  <responses schema="//@schemas.313" description="" code="200"/>
+  <responses schema="//@schemas.314" description="" code="200"/>
+  <responses schema="//@schemas.316" description="" code="200"/>
+  <responses schema="//@schemas.317" description="" code="200"/>
+  <responses schema="//@schemas.319" description="" code="200"/>
+  <responses schema="//@schemas.19" description="" code="200"/>
+  <responses schema="//@schemas.20" description="" code="200"/>
+  <responses schema="//@schemas.322" description="" code="200"/>
+  <responses schema="//@schemas.323" description="" code="200"/>
+  <responses schema="//@schemas.324" description="" code="200"/>
+  <responses schema="//@schemas.325" description="" code="200"/>
+  <responses schema="//@schemas.326" description="" code="200"/>
+  <responses schema="//@schemas.327" description="" code="200"/>
+  <responses schema="//@schemas.328" description="" code="200"/>
+  <responses schema="//@schemas.21" description="" code="200"/>
+  <responses schema="//@schemas.330" description="" code="200"/>
+  <responses schema="//@schemas.331" description="" code="200"/>
+  <responses schema="//@schemas.332" description="" code="200"/>
+  <responses schema="//@schemas.23" description="" code="200"/>
+  <responses schema="//@schemas.334" description="" code="200"/>
+  <responses schema="//@schemas.335" description="" code="200"/>
+  <responses schema="//@schemas.336" description="" code="200"/>
+  <responses schema="//@schemas.337" description="" code="200"/>
+  <responses schema="//@schemas.24" description="" code="200"/>
+  <responses schema="//@schemas.339" description="" code="200"/>
+  <responses schema="//@schemas.341" description="" code="200"/>
+  <responses schema="//@schemas.342" description="" code="200"/>
+  <responses schema="//@schemas.344" description="" code="200"/>
+  <responses schema="//@schemas.25" description="" code="200"/>
+  <responses schema="//@schemas.27" description="" code="200"/>
+  <responses schema="//@schemas.30" description="" code="200"/>
+  <responses schema="//@schemas.29" description="" code="200"/>
+  <responses schema="//@schemas.31" description="" code="200"/>
+  <responses schema="//@schemas.32" description="Unexpected error in API call. See HTTP response body for details." code="404"/>
+  <responses schema="//@schemas.32" description="Unexpected error in API call. See HTTP response body for details." code="422"/>
+  <responses schema="//@schemas.33" description="" code="200"/>
+  <responses schema="//@schemas.345" description="" code="200"/>
+  <responses schema="//@schemas.346" description="" code="200"/>
+  <responses schema="//@schemas.347" description="" code="200"/>
+  <responses schema="//@schemas.348" description="" code="200"/>
+  <responses schema="//@schemas.36" description="" code="200"/>
+  <responses schema="//@schemas.37" description="Unexpected error in API call. See HTTP response body for details." code="404"/>
+  <responses schema="//@schemas.37" description="Unexpected error in API call. See HTTP response body for details." code="422"/>
+  <responses schema="//@schemas.349" description="" code="200"/>
+  <responses schema="//@schemas.38" description="" code="200"/>
+  <responses schema="//@schemas.40" description="" code="201"/>
+  <responses schema="//@schemas.41" description="" code="200"/>
+  <responses schema="//@schemas.43" description="" code="200"/>
+  <responses description="" code="204"/>
+  <responses schema="//@schemas.44" description="" code="200"/>
+  <responses schema="//@schemas.45" description="" code="201"/>
+  <responses schema="//@schemas.46" description="" code="200"/>
+  <responses description="" code="204"/>
+</openapi:Root>
