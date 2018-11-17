@@ -2,12 +2,15 @@ package co.edu.uniandes.changes;
 import org.eclipse.emf.compare.DifferenceKind;
 import org.eclipse.emf.ecore.EAttribute;
 
+import edu.uoc.som.openapi.Path;
+
 public class ChangeContentType {
 	private String path;
 	private String uri;
 	private EAttribute attr;
 	private DifferenceKind kind;
 	private String value;
+	private Path pathObject;
 	
 	
 	public String getValue() {
@@ -41,5 +44,10 @@ public class ChangeContentType {
 	public DifferenceKind getKind() {
 		return kind;
 	}
-	
+	public Path getPathObject() {
+		return pathObject;
+	}
+	public void setPathObject(Path pathObject) {
+		this.pathObject = pathObject;
+	}	
 }

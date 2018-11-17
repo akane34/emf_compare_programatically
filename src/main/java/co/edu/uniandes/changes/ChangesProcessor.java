@@ -20,6 +20,7 @@ import co.edu.uniandes.diff.DiffMetamodel;
 import co.edu.uniandes.diff.metamodel.diff.Change;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
+import edu.uoc.som.openapi.Path;
 import edu.uoc.som.openapi.Response;
 import edu.uoc.som.openapi.Schema;
 import edu.uoc.som.openapi.impl.OperationImpl;
@@ -366,15 +367,15 @@ public class ChangesProcessor {
 		
 		if (operations.size() > 0){
 			List<ChangeContentType> deleted = new ArrayList<ChangeContentType>();
-			List<ChangeContentType> added = new ArrayList<ChangeContentType>();
+			List<ChangeContentType> added = new ArrayList<ChangeContentType>();			
 			for (Map.Entry<String, List<ChangeContentType>> entry : operations.entrySet())
 			{			
 			    for (ChangeContentType p : entry.getValue()){
 			    	if (p.getKind() == DifferenceKind.DELETE){		
-			    		added.add(p);
+			    		added.add(p);			    		
 			    		System.out.println(entry.getKey() + " " + p.getValue() + " Added");		    		
 			    	}
-			    	if (p.getKind() == DifferenceKind.ADD){		    
+			    	if (p.getKind() == DifferenceKind.ADD){			    		
 			    		deleted.add(p);
 			    		System.out.println(entry.getKey() + " " + p.getValue() + " Deleted");		    		
 			    	}		    	
@@ -402,9 +403,9 @@ public class ChangesProcessor {
 				("401".equals(addRes.getResponse().getCode()) ||
 				 "403".equals(addRes.getResponse().getCode()))){
 				
-				System.out.println(addRes.getPath() + " " + addRes.getResponse().getCode() + " Added");		  
+				System.out.println(addRes.getPath() + " " + addRes.getResponse().getCode() + " Remove");		  
 				System.out.println("\n ");
-				diffMetamodel.createAddedStatusCode(addRes, changes);
+				diffMetamodel.createRemoveRestrictedAccessToTheAPIInstance(addRes, changes);
 			}
 		}
 	}
@@ -630,6 +631,7 @@ public class ChangesProcessor {
 					change.setUri(EcoreUtil.getURI(right).toString());
 					change.setKind(diff.getKind());
 					change.setValue(((AttributeChange)diff).getValue().toString());
+					change.setPathObject(pathRight);					
 					contentTypesUpdated.add(change);
 				 }					 
 			 }

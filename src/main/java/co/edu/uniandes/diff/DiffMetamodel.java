@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
@@ -23,6 +24,7 @@ import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.diff.metamodel.diff.*;
 import co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl;
 import edu.uoc.som.openapi.JSONDataType;
+import edu.uoc.som.openapi.Path;
 import co.edu.uniandes.changes.ChangeOperation;
 
 public class DiffMetamodel {
@@ -110,7 +112,7 @@ public class DiffMetamodel {
 		newElementReference.setValue(newParameter.getNewParameter().getName());
 		newElementReference.setPath(newParameter.getPath());
 		
-		Add add = diffFactoryI.createAdd();
+		AddParameter add = diffFactoryI.createAddParameter();
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
 		add.setNew(newElementReference);
 								
@@ -123,7 +125,7 @@ public class DiffMetamodel {
 		newElementReference.setValue(newParameter.getNewParameter().getName());
 		newElementReference.setPath(newParameter.getPath());
 		
-		Delete delete = diffFactoryI.createDelete();
+		RemoveParameter delete = diffFactoryI.createRemoveParameter();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
 		delete.setNew(newElementReference);
 				
@@ -135,8 +137,39 @@ public class DiffMetamodel {
 		
 	}
 	
-	public void createExposeDataInstance(List<ChangeContentType> deleted, List<ChangeContentType> added, List<Change> changes){
+	public void createExposeDataInstance(List<ChangeContentType> deleted, List<ChangeContentType> added, List<Change> changes){		
+		ExposeData exposeData = diffFactoryI.createExposeData();
+		exposeData.setChangeElement(APIElementType.PATH);		
 		
+		for (ChangeContentType contentType : deleted){
+			ElementReference oldElementReference = diffFactoryI.createElementReference();
+			oldElementReference.setValue(contentType.getValue());		
+			oldElementReference.setEObject(contentType.getUri());
+			oldElementReference.setPath(contentType.getPath());
+			
+			Delete delete = diffFactoryI.createDelete();
+			delete.setChangeElement(APIElementType.CONTENT_TYPE);
+			delete.setOld(oldElementReference);
+			
+			exposeData.getSimpleDiffs().add(delete);
+			changes.add(delete);
+		}
+		
+		for (ChangeContentType contentType : added){
+			ElementReference newElementReference = diffFactoryI.createElementReference();
+			newElementReference.setValue(contentType.getValue());		
+			newElementReference.setEObject(contentType.getUri());
+			newElementReference.setPath(contentType.getPath());
+			
+			Add add = diffFactoryI.createAdd();
+			add.setChangeElement(APIElementType.CONTENT_TYPE);
+			add.setOld(newElementReference);
+			
+			exposeData.getSimpleDiffs().add(add);
+			changes.add(add);
+		}	
+		
+		changes.add(exposeData);
 	}
 		
 	public void createChangeTypeOfReturnValueInstance(ChangeResponse oldResponse, ChangeResponse newResponse, List<Change> changes){
@@ -178,7 +211,7 @@ public class DiffMetamodel {
 		oldElementReference.setValue(operation.getOldOperation().getFullPath());		
 		oldElementReference.setPath(operation.getPath());
 
-		Delete delete = diffFactoryI.createDelete();
+		UnsupportRequestMethod delete = diffFactoryI.createUnsupportRequestMethod();
 		delete.setChangeElement(APIElementType.METHOD);
 		delete.setOld(oldElementReference);		
 						
@@ -435,7 +468,7 @@ public class DiffMetamodel {
 		oldElementReference.setValue(path.getOldPath().getRelativePath());		
 		oldElementReference.setPath(path.getPath());
 
-		Delete delete = diffFactoryI.createDelete();
+		DeletePath delete = diffFactoryI.createDeletePath();
 		delete.setChangeElement(APIElementType.INTERFACE);
 		delete.setOld(oldElementReference);
 						
@@ -459,8 +492,22 @@ public class DiffMetamodel {
 		changes.add(defaultValue);
 	}
 	
-	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse addRes, List<Change> changes) {
+	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse changeResponse, List<Change> changes) {
+		ElementReference oldElementReference = diffFactoryI.createElementReference();
+		oldElementReference.setEObject(changeResponse.getUri());
+		oldElementReference.setValue(changeResponse.getResponse().getCode());
+		oldElementReference.setPath(changeResponse.getPath());
 		
+		Delete delete = diffFactoryI.createDelete();
+		delete.setChangeElement(APIElementType.STATUS_CODE);
+		delete.setNew(oldElementReference);
+		
+		RemoveRestriction removeRestriction = diffFactoryI.createRemoveRestriction();
+		removeRestriction.setChangeElement(APIElementType.STATUS_CODE);
+		removeRestriction.getSimpleDiffs().add(delete);
+		
+		changes.add(delete);
+		changes.add(removeRestriction);
 	}
 	
 	public void createAddRestriction(ChangeResponse changeResponse, EList<Change> changes) {
@@ -470,11 +517,11 @@ public class DiffMetamodel {
 		newElementReference.setPath(changeResponse.getPath());
 		
 		Add add = diffFactoryI.createAdd();
-		add.setChangeElement(APIElementType.RETURN_TYPE);
+		add.setChangeElement(APIElementType.STATUS_CODE);
 		add.setNew(newElementReference);
 		
 		AddRestriction addRestriction = diffFactoryI.createAddRestriction();
-		addRestriction.setChangeElement(APIElementType.RETURN_TYPE);
+		addRestriction.setChangeElement(APIElementType.STATUS_CODE);
 		addRestriction.getSimpleDiffs().add(add);
 		
 		changes.add(add);
