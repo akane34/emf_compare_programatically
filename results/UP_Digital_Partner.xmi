@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Diff:Diff xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Diff="http://www.uniandes.edu.co/diff" newVersion="1.0.49" oldVersion="1.0.1">
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.9" value="body"/>
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.9" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="partner_autorization_item" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.35" value="body"/>
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.35" value="body"/>
+    <oldDefinition SchemaName="branch_detail" type="unspecified"/>
+    <newDefinition SchemaName="request_body" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.29" value="body"/>
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.29" value="body"/>
+    <oldDefinition SchemaName="reset_password" type="unspecified"/>
+    <newDefinition SchemaName="user_detail" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.25" value="body"/>
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.25" value="body"/>
+    <oldDefinition SchemaName="user_detail" type="unspecified"/>
+    <newDefinition SchemaName="reset_password" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.34" value="partner_id" path="/partners/{partner_id}/request"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.35" value="body" path="/partners/{partner_id}/request"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@paramters.20" value="code" path="/vouchers/scan"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.47" value="404" path="/partners/{partner_id}/roles"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.42" value="200" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.43" value="500" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.44" value="200" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.45" value="500" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.40" value="200" path="/partners/{partner_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.41" value="404" path="/partners/{partner_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.38" value="200" path="/branches/{branch_id}/reset_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.39" value="404" path="/branches/{branch_id}/reset_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.34" value="200" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.35" value="404" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.36" value="200" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.32" value="200" path="/branches"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Partner_1.0.1.xmi#//@responses.33" value="404" path="/branches"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.49" value="404" path="/partners/{partner_id}/roles"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.44" value="200" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.45" value="500" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.46" value="200" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.47" value="500" path="/partners/{partner_id}/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.42" value="200" path="/partners/{partner_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.43" value="404" path="/partners/{partner_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.40" value="200" path="/branches/{branch_id}/reset_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.41" value="404" path="/branches/{branch_id}/reset_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.36" value="200" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.37" value="404" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.38" value="200" path="/branches/{branch_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.34" value="200" path="/branches"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.35" value="404" path="/branches"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.50" value="200" path="/partners/{partner_id}/request"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.51" value="400" path="/partners/{partner_id}/request"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.32" value="200" path="/vouchers/scan"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@responses.33" value="404" path="/vouchers/scan"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <oldDefinition SchemaName="is_directory" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <oldDefinition SchemaName="file_length" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <oldDefinition SchemaName="dictionary_path" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.18"/>
+    <oldDefinition SchemaName="is_directory" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="tip" type="number"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="partner" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="terminal" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="internal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <newDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <oldDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <newDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.30"/>
+    <oldDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.33"/>
+    <newDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.33"/>
+    <oldDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.36"/>
+    <newDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.36"/>
+    <oldDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.36"/>
+    <newDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.36"/>
+    <oldDefinition SchemaName="other" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <newDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <oldDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <newDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <oldDefinition SchemaName="branch_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.38"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.41"/>
+    <newDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.41"/>
+    <oldDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <newDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="data" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Partner_1.0.9.xmi#//@schemas.43"/>
+    <oldDefinition SchemaName="pagination" type="unspecified"/>
+  </change>
+</Diff:Diff>

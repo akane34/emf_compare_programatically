@@ -600,7 +600,7 @@ public class ChangesProcessor {
 			EObject left = diff.getMatch().getLeft();
 			EObject right = diff.getMatch().getRight();
 			
-			if(left instanceof Schema && right instanceof Schema  && ((Schema)left).getName().equals(((Schema)right).getName())) {
+			if(left instanceof Schema && right instanceof Schema  && ((Schema)left).getName() !=null && ((Schema)right).getName() != null && ((Schema)left).getName().equals(((Schema)right).getName())) {
 				ChangeSchema updated = new ChangeSchema();
 				
 				updated.setSchema(schemaAdded);

@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Diff:Diff xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Diff="http://www.uniandes.edu.co/diff" newVersion="2.1.1" oldVersion="2.0.0">
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.31" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.31" value="body"/>
+    <oldDefinition SchemaName="User" type="unspecified"/>
+    <newDefinition type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.8" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.8" value="body"/>
+    <oldDefinition SchemaName="RecoverUserBody" type="unspecified"/>
+    <newDefinition SchemaName="PaymentInfoTokenBody" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.18" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.18" value="body"/>
+    <oldDefinition SchemaName="UpdatedUser" type="unspecified"/>
+    <newDefinition SchemaName="VerifyUser" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.10" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.10" value="body"/>
+    <oldDefinition SchemaName="VerifyUser" type="unspecified"/>
+    <newDefinition SchemaName="UpdatedUser" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.3" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.3" value="body"/>
+    <oldDefinition SchemaName="CartBody" type="unspecified"/>
+    <newDefinition SchemaName="User" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.3" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.3" value="body"/>
+    <oldDefinition SchemaName="CartBody" type="unspecified"/>
+    <newDefinition SchemaName="User" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.7" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.7" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="RecoverUserBody" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.7" value="body"/>
+    <old EObject="lavanapp_2.0.0.xmi#//@paramters.7" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="RecoverUserBody" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.19" value="id" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.8" value="body" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="lavanapp_2.1.1.xmi#//@paramters.31" value="total_order" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.23" value="code"/>
+    <old EObject="lavanapp_2.1.1.xmi#//@paramters.28" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="lavanapp_2.0.0.xmi#//@paramters.23" value="code"/>
+    <old EObject="lavanapp_2.1.1.xmi#//@paramters.28" value="id"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.121" value="200" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.122" value="400" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.123" value="401" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.124" value="500" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.102" value="200" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.103" value="400" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.104" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.105" value="500" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.98" value="200" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.99" value="400" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.100" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.101" value="500" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.95" value="400" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.96" value="401" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.97" value="500" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.91" value="200" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.93" value="500" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.88" value="200" path="/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.89" value="401" path="/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.90" value="500" path="/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.85" value="200" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.86" value="401" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.87" value="500" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.81" value="200" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.82" value="400" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.83" value="401" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.84" value="500" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.77" value="200" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.78" value="400" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.79" value="401" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.80" value="500" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.69" value="200" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.70" value="400" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.71" value="401" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.72" value="500" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.65" value="200" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.66" value="400" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.67" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.68" value="500" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.62" value="200" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.63" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.58" value="200" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.59" value="400" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.60" value="401" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.61" value="500" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.55" value="200" path="/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.56" value="401" path="/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.57" value="500" path="/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.47" value="200" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.49" value="401" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.50" value="500" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.43" value="200" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.44" value="400" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.45" value="401" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.46" value="500" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.39" value="200" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.40" value="400" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.41" value="401" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.42" value="500" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.35" value="200" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.36" value="400" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.37" value="401" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.38" value="500" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.31" value="200" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.32" value="400" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.33" value="401" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.34" value="500" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.27" value="200" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.28" value="400" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.29" value="401" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.30" value="500" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.24" value="200" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.25" value="401" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.26" value="500" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.20" value="200" path="/user"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.21" value="400" path="/user"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.22" value="401" path="/user"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="lavanapp_2.1.1.xmi#//@responses.23" value="500" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.92" value="200" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.93" value="400" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.94" value="401" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.95" value="500" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.22" value="200" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.23" value="400" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.24" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.25" value="500" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.19" value="200" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.20" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.21" value="500" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.88" value="200" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.89" value="400" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.90" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.91" value="500" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.84" value="200" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.85" value="400" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.86" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.87" value="500" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.81" value="400" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.82" value="401" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.83" value="500" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.77" value="200" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.79" value="500" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.74" value="200" path="/state"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.75" value="401" path="/state"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.76" value="500" path="/state"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.71" value="200" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.72" value="401" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.73" value="500" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.67" value="200" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.68" value="400" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.69" value="401" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.70" value="500" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.63" value="200" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.64" value="400" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.65" value="401" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.66" value="500" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.59" value="200" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.60" value="400" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.61" value="401" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.62" value="500" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.55" value="200" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.56" value="400" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.57" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.58" value="500" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.52" value="200" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.53" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.48" value="200" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.49" value="400" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.50" value="401" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.51" value="500" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.45" value="200" path="/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.46" value="401" path="/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.47" value="500" path="/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.42" value="200" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.43" value="401" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.44" value="500" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.38" value="200" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.40" value="401" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.41" value="500" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.34" value="200" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.35" value="400" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.36" value="401" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.37" value="500" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.30" value="200" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.31" value="400" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.32" value="401" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.33" value="500" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.26" value="200" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.27" value="400" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.28" value="401" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.29" value="500" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.15" value="200" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.16" value="400" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.17" value="401" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.18" value="500" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.11" value="200" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.12" value="400" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.13" value="401" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.14" value="500" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.8" value="200" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.9" value="401" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.10" value="500" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.4" value="200" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.5" value="400" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.6" value="401" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.7" value="500" path="/user"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="fcm_token" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="push_id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <newDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.0"/>
+    <oldDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <newDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <newDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <oldDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <oldDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <newDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.1"/>
+    <oldDefinition SchemaName="want_news" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="fcm_token" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <oldDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <newDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.2"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <newDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <newDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <oldDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <newDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.3"/>
+    <oldDefinition SchemaName="type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="total_amount_products" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="complete_amount" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="total_amount_products" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="complete_amount" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="street" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="street_number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="complement" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="township" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="street" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="street_number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="complement" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="city_id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="state_id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="street" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="street_number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <newDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="street" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="street_number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="postal_code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="city_id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.11"/>
+    <oldDefinition SchemaName="state_id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.12"/>
+    <newDefinition SchemaName="closed" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.12"/>
+    <oldDefinition SchemaName="closed" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.12"/>
+    <newDefinition SchemaName="closed" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.12"/>
+    <oldDefinition SchemaName="closed" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.14"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <newDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.15"/>
+    <oldDefinition SchemaName="image" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="code" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.16"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="statuses" type="object"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="total_price" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="currency" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="product_count" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="created_on" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="pickup_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="pickup_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="delivery_date" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="delivery_time" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="status" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="special_instructions" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="discount_type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="discount_type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <newDefinition SchemaName="discount_type" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="id" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="lavanapp_2.0.0.xmi#//@schemas.168"/>
+    <oldDefinition SchemaName="discount_type" type="string"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.29/@post" value="api.lavanapp.com/api/v211/paying/accept_agreement" path="/paying/accept_agreement"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.27/@delete" value="api.lavanapp.com/api/v211/paying/payment_method/{id}" path="/paying/payment_method/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.26/@get" value="api.lavanapp.com/api/v211/paying/payment_method" path="/paying/payment_method"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.26/@post" value="api.lavanapp.com/api/v211/paying/payment_method" path="/paying/payment_method"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.25/@get" value="api.lavanapp.com/api/v211/paying/authorization" path="/paying/authorization"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.18/@post" value="api.lavanapp.com/api/v211/order/check_cart" path="/order/check_cart"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.13/@put" value="api.lavanapp.com/api/v211/user/{id}/fcm_token" path="/user/{id}/fcm_token"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.4/@post" value="api.lavanapp.com/api/v211/order/experience" path="/order/experience"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.3/@get" value="api.lavanapp.com/api/v211/configuration/pdp" path="/configuration/pdp"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.2/@get" value="api.lavanapp.com/api/v211/configuration/tyc" path="/configuration/tyc"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="lavanapp_2.1.1.xmi#//@api/@paths.1/@get" value="api.lavanapp.com/api/v211/configuration/faq" path="/configuration/faq"/>
+  </change>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.94" value="401" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.409"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.24" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.411"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.20" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.413"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.90" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.415"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.86" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.417"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.82" value="401" path="/address"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.419"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.75" value="401" path="/state"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.421"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.72" value="401" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.423"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.69" value="401" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.425"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.65" value="401" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.427"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.61" value="401" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.429"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.57" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.431"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.53" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.433"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.50" value="401" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.435"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.46" value="401" path="/product"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.437"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.43" value="401" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.439"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.40" value="401" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.441"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.36" value="401" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.443"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.32" value="401" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.445"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.28" value="401" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.447"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.17" value="401" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.449"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.13" value="401" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.451"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.9" value="401" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.453"/>
+  <change xsi:type="Diff:Add" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.6" value="401" path="/user"/>
+  </change>
+  <change xsi:type="Diff:AddRestriction" changeElement="StatusCode" simpleDiffs="//@change.455"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.94" value="401" path="/paying"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.457"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.24" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.459"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.20" value="401" path="/user/payment_methods"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.461"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.90" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.463"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.86" value="401" path="/address/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.465"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.82" value="401" path="/address"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.467"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.75" value="401" path="/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.469"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.72" value="401" path="/schedule/pickup"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.471"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.69" value="401" path="/schedule/delivery"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.473"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.65" value="401" path="/voucher"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.475"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.61" value="401" path="/order/{code}"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.477"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.57" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.479"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.53" value="401" path="/order"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.481"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.50" value="401" path="/product/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.483"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.46" value="401" path="/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.485"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.43" value="401" path="/user/{id}/payment_token"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.487"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.40" value="401" path="/user/{id}/verify"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.489"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.36" value="401" path="/user/{id}/code"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.491"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.32" value="401" path="/user/{id}/change_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.493"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.28" value="401" path="/user/{id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.495"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.17" value="401" path="/user/recover_password"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.497"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.13" value="401" path="/user/refresh"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.499"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.9" value="401" path="/user/login"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.501"/>
+  <change xsi:type="Diff:Delete" changeElement="StatusCode">
+    <new EObject="lavanapp_2.0.0.xmi#//@responses.6" value="401" path="/user"/>
+  </change>
+  <change xsi:type="Diff:RemoveRestriction" changeElement="StatusCode" simpleDiffs="//@change.503"/>
+</Diff:Diff>

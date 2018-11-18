@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Diff:Diff xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Diff="http://www.uniandes.edu.co/diff" newVersion="1.0.42" oldVersion="1.0.10">
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.94" value="body"/>
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.94" value="body"/>
+    <oldDefinition SchemaName="order_detail" type="unspecified"/>
+    <newDefinition SchemaName="login_body" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.22" value="body"/>
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.22" value="body"/>
+    <oldDefinition SchemaName="orders_import_body" type="unspecified"/>
+    <newDefinition SchemaName="order_detail" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.92" value="width" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.93" value="crop" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.41" value="file_type" path="/orders/export"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.36" value="file_type" path="/orders/{order_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.65" value="file_type" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.12" value="place_id" path="/google_maps/place"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.70" value="file_type" path="/invoices/export"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.26" value="product_id" path="/orders/{order_id}/products/{product_id}/import"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.44" value="client_id" path="/templates/order/{product_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.94" value="body" path="/auth/login"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.34" value="client_id" path="/clients/{client_id}/categories"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.11" value="search_text" path="/google_maps/autocomplete"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.33" value="client_id" path="/clients/{client_id}/addresses"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.10.xmi#//@paramters.23" value="order_id" path="/orders/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.10.xmi#//@paramters.56" value="format" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.10.xmi#//@paramters.13" value="body" path="/orders"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.36" value="result_save" path="/orders/{order_id}"/>
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.26" value="order_detail" path="/orders/{order_id}"/>
+    <oldDefinition SchemaName="order_detail"/>
+    <newDefinition SchemaName="result_save"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.34" value="order_detail" path="/orders/{order_id}"/>
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.28" value="result_save" path="/orders/{order_id}"/>
+    <oldDefinition SchemaName="result_save"/>
+    <newDefinition SchemaName="order_detail"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@paramters.65" value="file_type"/>
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@paramters.65" value="format"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.132" value="200" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.133" value="400" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.128" value="200" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.129" value="400" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.130" value="200" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.131" value="400" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.123" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.124" value="200" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.125" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.126" value="200" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.127" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.121" value="400" path="/benefits"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.115" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.116" value="200" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.117" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.118" value="200" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.119" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.113" value="400" path="/surveys/{survey_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.110" value="200" path="/surveys/{survey_id}/summary/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.111" value="400" path="/surveys/{survey_id}/summary/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.109" value="400" path="/surveys"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.106" value="200" path="/my_rewards/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.107" value="400" path="/my_rewards/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.105" value="400" path="/my_rewards"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.102" value="200" path="/documents/upload"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.103" value="400" path="/documents/upload"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.100" value="200" path="/documents/{document_id}/download"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.101" value="400" path="/documents/{document_id}/download"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.99" value="400" path="/documents"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.97" value="400" path="/invoices"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.94" value="200" path="/invoices/{invoice_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.95" value="400" path="/invoices/{invoice_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.92" value="200" path="/cards/compensation/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.93" value="400" path="/cards/compensation/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.90" value="200" path="/cards/block/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.91" value="400" path="/cards/block/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.88" value="200" path="/cards/active/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.89" value="400" path="/cards/active/bulk"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.86" value="200" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.87" value="400" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.85" value="400" path="/cards"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.79" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.80" value="200" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.81" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.82" value="200" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.83" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.76" value="200" path="/jubilees/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.77" value="400" path="/jubilees/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.75" value="400" path="/jubilees"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.69" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.70" value="200" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.71" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.72" value="200" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.73" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.67" value="400" path="/organization_units/{organization_unit_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.65" value="400" path="/organization_units"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.62" value="200" path="/users/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.63" value="400" path="/users/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.57" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.58" value="200" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.59" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.60" value="200" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.61" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.54" value="200" path="/users/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.55" value="400" path="/users/export"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.53" value="400" path="/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.50" value="200" path="/templates/order/{product_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.51" value="400" path="/templates/order/{product_id}/users"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.48" value="200" path="/templates/order/{product_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.49" value="400" path="/templates/order/{product_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.46" value="200" path="/orders/{order_id}/confirmation"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.47" value="400" path="/orders/{order_id}/confirmation"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.45" value="400" path="/orders/{order_id}/status"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.43" value="400" path="/orders/{order_id}/summary"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.40" value="200" path="/orders/{order_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.41" value="400" path="/orders/{order_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.38" value="200" path="/clients/{client_id}/order/{product_id}/last"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.36" value="200" path="/orders/{order_id}/reset"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.37" value="400" path="/orders/{order_id}/reset"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.34" value="200" path="/orders/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.35" value="404" path="/orders/state"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.32" value="200" path="/orders/{order_id}/products/{product_id}/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.33" value="404" path="/orders/{order_id}/products/{product_id}/import"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.26" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.27" value="404" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.28" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.29" value="404" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.30" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.31" value="400" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.23" value="400" path="/orders"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.21" value="400" path="/client_groups"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.19" value="400" path="/business_places"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@responses.17" value="404" path="/products"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.148" value="200" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.149" value="400" path="/images/{image_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.144" value="200" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.145" value="400" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.146" value="200" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.147" value="400" path="/benefits/{benefit_id}/image"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.139" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.140" value="200" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.141" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.142" value="200" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.143" value="400" path="/benefits/{benefit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.137" value="400" path="/benefits"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.131" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.132" value="200" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.133" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.134" value="200" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.135" value="400" path="/surveys/{survey_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.129" value="400" path="/surveys/{survey_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.126" value="200" path="/surveys/{survey_id}/summary/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.127" value="400" path="/surveys/{survey_id}/summary/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.125" value="400" path="/surveys"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.122" value="200" path="/my_rewards/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.123" value="400" path="/my_rewards/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.121" value="400" path="/my_rewards"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.118" value="200" path="/documents/upload"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.119" value="400" path="/documents/upload"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.116" value="200" path="/documents/{document_id}/download"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.117" value="400" path="/documents/{document_id}/download"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.115" value="400" path="/documents"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.111" value="400" path="/invoices"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.108" value="200" path="/invoices/{invoice_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.109" value="400" path="/invoices/{invoice_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.106" value="200" path="/cards/compensation/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.107" value="400" path="/cards/compensation/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.104" value="200" path="/cards/block/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.105" value="400" path="/cards/block/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.102" value="200" path="/cards/active/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.103" value="400" path="/cards/active/bulk"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.100" value="200" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.101" value="400" path="/cards/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.99" value="400" path="/cards"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.93" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.94" value="200" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.95" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.96" value="200" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.97" value="400" path="/jubilees/{jubilee_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.90" value="200" path="/jubilees/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.91" value="400" path="/jubilees/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.89" value="400" path="/jubilees"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.83" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.84" value="200" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.85" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.86" value="200" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.87" value="400" path="/organization_units/{organization_unit_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.81" value="400" path="/organization_units/{organization_unit_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.79" value="400" path="/organization_units"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.76" value="200" path="/users/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.77" value="400" path="/users/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.71" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.72" value="200" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.73" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.74" value="200" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.75" value="400" path="/users/{user_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.68" value="200" path="/users/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.69" value="400" path="/users/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.67" value="400" path="/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.64" value="200" path="/templates/order/{product_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.65" value="400" path="/templates/order/{product_id}/users"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.62" value="200" path="/templates/order/{product_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.63" value="400" path="/templates/order/{product_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.58" value="200" path="/orders/{order_id}/confirmation"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.59" value="400" path="/orders/{order_id}/confirmation"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.57" value="400" path="/orders/{order_id}/status"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.55" value="400" path="/orders/{order_id}/summary"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.52" value="200" path="/orders/{order_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.53" value="400" path="/orders/{order_id}/pdf"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.46" value="200" path="/clients/{client_id}/order/{product_id}/last"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.44" value="200" path="/orders/{order_id}/reset"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.45" value="400" path="/orders/{order_id}/reset"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.42" value="200" path="/orders/state"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.43" value="404" path="/orders/state"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.40" value="200" path="/orders/{order_id}/products/{product_id}/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.41" value="404" path="/orders/{order_id}/products/{product_id}/import"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.34" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.35" value="404" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.36" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.37" value="404" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.38" value="200" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.39" value="400" path="/orders/{order_id}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.33" value="400" path="/orders"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.31" value="400" path="/client_groups"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.23" value="400" path="/business_places"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.21" value="404" path="/products"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.150" value="200" path="/auth/login"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.151" value="400" path="/auth/login"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.112" value="200" path="/invoices/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.113" value="400" path="/invoices/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.60" value="200" path="/orders/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.61" value="400" path="/orders/export"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.50" value="200" path="/clients/{client_id}/categories"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.51" value="404" path="/clients/{client_id}/categories"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.48" value="200" path="/clients/{client_id}/addresses"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.49" value="404" path="/clients/{client_id}/addresses"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.24" value="200" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.25" value="400" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.26" value="200" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.27" value="404" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.28" value="200" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.29" value="400" path="/cost_centers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.18" value="200" path="/google_maps/place"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.19" value="404" path="/google_maps/place"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.16" value="200" path="/google_maps/autocomplete"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@responses.17" value="404" path="/google_maps/autocomplete"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.4"/>
+    <oldDefinition SchemaName="file_length" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.4"/>
+    <oldDefinition SchemaName="dictionary_path" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="vat_identification" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.8"/>
+    <oldDefinition SchemaName="send_notification_of_changes" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.13"/>
+    <oldDefinition SchemaName="parameter" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="description_detailed" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.17"/>
+    <oldDefinition SchemaName="order" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <newDefinition SchemaName="products" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="product" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.23"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="order_item_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="business_place_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="surname" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="note" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="count" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="nominal_values" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="order_item_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="business_place_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="surname" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="note" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="count" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="book_items" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="address" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="email" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="phone" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="account_name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="order_item_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="business_place_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="surname" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <newDefinition SchemaName="count" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="order_item_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="business_place_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="name" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="surname" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.27"/>
+    <oldDefinition SchemaName="count" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="order_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="product_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="valid_from" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="valid_to" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="order_items" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="order_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="product_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="valid_from" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="valid_to" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="order_items" type="array"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="free_coupons" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="order_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="product_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="valid_from" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <newDefinition SchemaName="valid_to" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="order_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="number" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="product_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="valid_from" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="valid_to" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.28"/>
+    <oldDefinition SchemaName="free_coupons" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.29"/>
+    <newDefinition SchemaName="id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.29"/>
+    <oldDefinition SchemaName="id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.32"/>
+    <oldDefinition SchemaName="number_of_books" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <newDefinition SchemaName="organization_unit_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="organization_unit" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="language" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="puk" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="percent_transfer" type="number"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="is_work_email_default" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="mobile" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="cost_center_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="probationary_period" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <newDefinition SchemaName="organization_unit_id" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="organization_unit" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="language" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.37"/>
+    <oldDefinition SchemaName="is_work_email_default" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <newDefinition SchemaName="pan" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <oldDefinition SchemaName="number_short" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <oldDefinition SchemaName="user" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <newDefinition SchemaName="pan" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <newDefinition SchemaName="valid_to" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <oldDefinition SchemaName="number_short" type="string"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.44"/>
+    <oldDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.48"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.48"/>
+    <oldDefinition SchemaName="is_directory" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.48"/>
+    <newDefinition SchemaName="parent" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <new EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.48"/>
+    <newDefinition SchemaName="state" type="integer"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="class">
+    <old EObject="UP_Digital_Client_1.0.42.xmi#//@schemas.48"/>
+    <oldDefinition SchemaName="is_directory" type="boolean"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="UP_Digital_Client_1.0.10.xmi#//@api/@paths.12/@post" value="virtserver.swaggerhub.com/Petr_Vesely/UP_Digital_Client/1.0.0/orders/pdf" path="/orders/pdf"/>
+  </change>
+</Diff:Diff>

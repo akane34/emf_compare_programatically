@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" basePath="/" definitions="//@schemas.0 //@schemas.1 //@schemas.2 //@schemas.3 //@schemas.4 //@schemas.5 //@schemas.6 //@schemas.7 //@schemas.8 //@schemas.9 //@schemas.10 //@schemas.11 //@schemas.12 //@schemas.13 //@schemas.14 //@schemas.15 //@schemas.16 //@schemas.17 //@schemas.18 //@schemas.19 //@schemas.20 //@schemas.21 //@schemas.22 //@schemas.23 //@schemas.24 //@schemas.25 //@schemas.26 //@schemas.27 //@schemas.28 //@schemas.29 //@schemas.30 //@schemas.31 //@schemas.32 //@schemas.33 //@schemas.34 //@schemas.35">
+    <externalDocs description="Find out more about my website" url="http://www.shipwire.com/w/developers"/>
+    <info title="Shipwire APIs" description="# Welcome to the Shipwire API&#xA;&#xA;Get started using the world's most robust developer toolset for shipping and logistics.&#xA;" version="4.0">
+      <contact email="contact@shipwire.com"/>
+      <license name="Private License" url="https://opensource.org/licenses/MIT"/>
+    </info>
+    <schemes>https</schemes>
+    <schemes>http</schemes>
+    <paths relativePath="/api/v4/auth">
+      <get summary="List tokens for a v4 API user" description="List all tokens for a v4 API user." operationId="AuthTokenController@index" responses="//@responses.0">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Auth Tokens</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post summary="Create a new v4 API user" description="Creates a new v4 API user based on Shipwire basic authentication." operationId="AuthTokenController@create" responses="//@responses.1 //@responses.2">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.2"/>
+        <tagReferences>Auth Tokens</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v4/warehouse">
+      <get parameters="//@paramters.0 //@paramters.1 //@paramters.2 //@paramters.3 //@paramters.4 //@paramters.5 //@paramters.6 //@paramters.7 //@paramters.8 //@paramters.9 //@paramters.10 //@paramters.11 //@paramters.12 //@paramters.13" summary="Get a list of warehouses" description="Get a list of warehouses with optional filters." operationId="WarehouseController@index" responses="//@responses.3">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.14 //@paramters.15 //@paramters.16 //@paramters.17" summary="Create a warehouse" description="This can only be done by the logged in user." operationId="WarehouseController@create" responses="//@responses.4">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v4/warehouse/{warehouseId}">
+      <get parameters="//@paramters.18 //@paramters.19 //@paramters.20" summary="Get a warehouse by id" description="Allows retrieving a warehouse by either the v4 id or the shipwireId" operationId="WarehouseController@get" responses="//@responses.5 //@responses.6">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.21 //@paramters.22 //@paramters.23 //@paramters.24 //@paramters.25" summary="Update a warehouse by id" description="Allows updating a warehouse by either the v4 id or the shipwireId" operationId="WarehouseController@update" responses="//@responses.7 //@responses.8 //@responses.9">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.26" summary="Delete a warehouse by id" description="Allows deleting a warehouse by either the v4 id or the shipwireId" operationId="WarehouseController@delete" responses="//@responses.10 //@responses.11">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v4/warehouse/e/{externalId}">
+      <get parameters="//@paramters.27 //@paramters.28 //@paramters.29" summary="Get a warehouse by external id" description="Allows retrieving a warehouse by the merchant external id" operationId="WarehouseController@getByExternalId" responses="//@responses.12 //@responses.13">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.30 //@paramters.31 //@paramters.32 //@paramters.33 //@paramters.34" summary="Update a warehouse by external id" description="Allows updating a warehouse by the merchant external id" operationId="WarehouseController@updateByExternalId" responses="//@responses.14 //@responses.15 //@responses.16">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.35" summary="Delete a warehouse by external id" description="Allows deleting a warehouse by the merchant external id" operationId="WarehouseController@deleteByExternalId" responses="//@responses.17 //@responses.18">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v4/warehouse/{warehouseId}/containers">
+      <get parameters="//@paramters.36 //@paramters.37 //@paramters.38" summary="Get warehouse containers by id" description="Allows retrieving the containers for a warehouse by the warehouse v4 id or shipwireId" operationId="WarehouseController@subResourceIndexById@containers" responses="//@responses.19 //@responses.20">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse Containers</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v4/warehouse/e/{externalId}/containers">
+      <get parameters="//@paramters.39 //@paramters.40 //@paramters.41" summary="Get warehouse containers by external id" description="Allows retrieving the containers for a warehouse by the warehouse external id" operationId="WarehouseController@subResourceIndexByExternalId@containers" responses="//@responses.21 //@responses.22">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Warehouse Containers</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/api/v4/container">
+      <get parameters="//@paramters.42 //@paramters.43 //@paramters.44 //@paramters.45 //@paramters.46 //@paramters.47 //@paramters.48 //@paramters.49 //@paramters.50 //@paramters.51" summary="Get a list of containers" description="Get a list of containers with optional filters." operationId="ContainerController@index" responses="//@responses.23">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.52 //@paramters.53 //@paramters.54 //@paramters.55" summary="Create a container" description="This can only be done by the logged in user." operationId="ContainerController@create" responses="//@responses.24 //@responses.25">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v4/container/{containerId}">
+      <get parameters="//@paramters.56 //@paramters.57 //@paramters.58" summary="Get a container by id" description="Allows retrieving a container by either the v4 id or the shipwireId" operationId="ContainerController@get" responses="//@responses.26 //@responses.27">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.59 //@paramters.60 //@paramters.61 //@paramters.62 //@paramters.63" summary="Update a container by id" description="Allows updating a container by either the v4 id or the shipwireId" operationId="ContainerController@update" responses="//@responses.28 //@responses.29 //@responses.30">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.64" summary="Delete a container by id" description="Allows deleting a container by either the v4 id or the shipwireId" operationId="ContainerController@delete" responses="//@responses.31 //@responses.32">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v4/container/e/{externalId}">
+      <get parameters="//@paramters.65 //@paramters.66 //@paramters.67" summary="Get a container by external id" description="Allows retrieving a container by the merchant external id" operationId="ContainerController@getByExternalId" responses="//@responses.33 //@responses.34">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.68 //@paramters.69 //@paramters.70 //@paramters.71 //@paramters.72" summary="Update a container by external id" description="Allows updating a container by the merchant external id" operationId="ContainerController@updateByExternalId" responses="//@responses.35 //@responses.36 //@responses.37">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.73" summary="Delete a container by external id" description="Allows deleting a container by the merchant external id" operationId="ContainerController@deleteByExternalId" responses="//@responses.38 //@responses.39">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Container</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v4/product">
+      <get parameters="//@paramters.74 //@paramters.75 //@paramters.76 //@paramters.77 //@paramters.78 //@paramters.79 //@paramters.80 //@paramters.81 //@paramters.82 //@paramters.83 //@paramters.84 //@paramters.85" summary="Get a list of products" description="Get an itemized list of products." operationId="ProductController@index" responses="//@responses.40">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.86 //@paramters.87" summary="Update a list of products" description="Modify products of any classification." operationId="ProductController@updateList" responses="//@responses.41">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <post parameters="//@paramters.88 //@paramters.89" summary="Create one or more containers" description="Create new products of any classification." operationId="ProductController@create" responses="//@responses.42">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/api/v4/product/{productId}">
+      <get parameters="//@paramters.90 //@paramters.91" summary="Get a product by id" description="Get information about a product." operationId="ProductController@get" responses="//@responses.43">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.92 //@paramters.93 //@paramters.94" summary="Update a product by id" description="Update a product." operationId="ProductController@update" responses="//@responses.44">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.95" summary="Delete a product by id" description="Allows deleting a product by either the v4 id or the shipwireId" operationId="ProductController@delete" responses="//@responses.45 //@responses.46">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/api/v4/product/e/{externalId}">
+      <get parameters="//@paramters.96 //@paramters.97" summary="Get a product by external id" description="Get information about a product." operationId="ProductController@getByExternalId" responses="//@responses.47">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <put parameters="//@paramters.98 //@paramters.99 //@paramters.100" summary="Update a product by external id" description="Update a product by external ID." operationId="ProductController@updateByExternalId" responses="//@responses.48">
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </put>
+      <delete parameters="//@paramters.101" summary="Delete a product by external id" description="Allows deleting a product by the merchant external id" operationId="ProductController@deleteByExternalId" responses="//@responses.49 //@responses.50">
+        <securityRequirements securitySchema="//@api/@securityDefinitions.0"/>
+        <securityRequirements securitySchema="//@api/@securityDefinitions.1"/>
+        <tagReferences>Product</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <securityDefinitions type="apiKey" name="apiKey" location="query" referenceName="apiKeyQuery"/>
+    <securityDefinitions type="apiKey" name="x-shipwire-api-key" location="header" referenceName="apiKeyHeader"/>
+    <securityDefinitions type="basic" referenceName="basicAuth"/>
+  </api>
+  <paramters type="integer" description="Number of records to skip" name="offset" location="query" required="false"/>
+  <paramters type="integer" description="Max number of records to return" name="limit" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="integer" description="Filter by warehouse shipwire ids, supports comma separated list." name="shipwireId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouse external ids, supports comma separated list." name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouse names, supports comma separated list." name="name" location="query" required="false"/>
+  <paramters type="integer" description="Filter by associated vendor's Shipwire id, supports comma separated list." name="shipwireVendorId" location="query" required="false"/>
+  <paramters type="string" description="Filter by associated vendor's external id, supports comma separated list." name="vendorExternalId" location="query" required="false"/>
+  <paramters type="string" description="Filter by country, supports comma separated list." name="country" location="query" required="false"/>
+  <paramters type="boolean" description="Filter by warehouses that require label generation." name="generatesLabels" location="query" required="false"/>
+  <paramters type="string" description="Filter by type ('SHIPWIRE', 'SHIPWIRE_ANYWHERE')." name="type" location="query" required="false"/>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="Return warehouses updated after the supplied UTC timestamp." name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Return warehouses updated before the supplied UTC timestamp." name="updatedBefore" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.4" description="Created warehouse object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the warehouse to be fetched." name="warehouseId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the warehouse to be updated." name="warehouseId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.4" description="Update warehouse object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the warehouse to be deleted." name="warehouseId" location="path" required="true"/>
+  <paramters type="string" description="The merchant external id of the warehouse to be fetched." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="The merchant external id of the warehouse to be updated." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the warehouse to include in the response.&#xA;&#xA;Example: &#x2018;include=containers.*&#x2019; will return the main warehouse properties and all the container properties, but will not include the warehouse address properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>containers</enum>
+      <enum>containers.dimensions</enum>
+      <enum>containers.values</enum>
+      <enum>containers.\*</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.4" description="Update warehouse object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The merchant external id of the warehouse to be deleted." name="externalId" location="path" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the warehouse for containers to be fetched." name="warehouseId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the containers to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="The merchant external id of the warehouse for containers to be fetched." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the containers to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="integer" description="Number of records to skip" name="offset" location="query" required="false"/>
+  <paramters type="integer" description="Max number of records to return" name="limit" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="boolean" description="Returns containers that are active or not. Valid options are 1 or 0." name="isActive" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouse ids, supports comma separated list." name="warehouseId" location="query" required="false"/>
+  <paramters type="integer" description="Filter by shipwire warehouse ids, supports comma separated list." name="shipwireWarehouseId" location="query" required="false"/>
+  <paramters type="string" description="Filter by warehouse external ids, supports comma separated list." name="warehouseExternalId" location="query" required="false"/>
+  <paramters type="string" description="Return containers updated after the supplied UTC timestamp." name="updatedAfter" location="query" required="false"/>
+  <paramters type="string" description="Return containers updated before the supplied UTC timestamp." name="updatedBefore" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.3" description="Created container object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the container to be fetched." name="containerId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the container to be updated." name="containerId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.3" description="Update container object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the container to be deleted." name="containerId" location="path" required="true"/>
+  <paramters type="string" description="The merchant external id of the container to be fetched." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="Include archived warehouses in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="string" description="The merchant external id of the container to be updated." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the container to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the container properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>address</enum>
+      <enum>dimensions</enum>
+      <enum>values</enum>
+    </items>
+  </paramters>
+  <paramters type="boolean" description="For batches, identifies whether to only persist objects in the batch if none of the objects have errors (true) or whether to partially save the batch when possible (false)." default="false" name="allOrNothing" location="query" required="false"/>
+  <paramters type="boolean" description="Identifies whether to not perist objects that have warnings (true) or whether to persist them as long as they do not have errors (false)." default="false" name="doNotPersistOnWarnings" location="query" required="false"/>
+  <paramters schema="//@schemas.3" description="Update container object" name="body" location="body" required="true"/>
+  <paramters type="string" description="The merchant external id of the container to be deleted." name="externalId" location="path" required="true"/>
+  <paramters type="integer" description="Number of records to skip" name="offset" location="query" required="false"/>
+  <paramters type="integer" description="Max number of records to return" name="limit" location="query" required="false"/>
+  <paramters type="boolean" description="Include archived products in response." name="includeArchived" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters type="string" description="Filter products by text search using the &quot;description&quot; and &quot;sku&quot; properties.&#xA;Includes &quot;alternateNames&quot; and &quot;alternateDescriptions&quot;.  Also searches the&#xA;&quot;description&quot; and &quot;sku&quot; of any associated &quot;innerPack&quot;, &quot;masterCase&quot; and &quot;pallet&quot;.&#xA;" name="text" location="query" required="false"/>
+  <paramters type="array" description="Filter products by matching their &quot;sku&quot; property. -comma separated list." name="sku" location="query" required="false">
+    <items type="string"/>
+  </paramters>
+  <paramters type="array" description="Filter products by their classification." name="classification" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>baseProduct</enum>
+      <enum>kit</enum>
+      <enum>virtualKit</enum>
+      <enum>marketingInsert</enum>
+    </items>
+  </paramters>
+  <paramters type="array" description="Filter products by their status -comma separated list." name="status" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>notinuse</enum>
+      <enum>instock</enum>
+      <enum>outofstock</enum>
+    </items>
+  </paramters>
+  <paramters type="string" description="Filter products by their ID -comma separated list." name="productId" location="query" required="false"/>
+  <paramters type="string" description="Filters products by their externalId -comma seperated list" name="externalId" location="query" required="false"/>
+  <paramters type="string" description="Filters products by the vendor's Shipwire id -comma seperated list" name="shipwireVendorId" location="query" required="false"/>
+  <paramters type="string" description="Filters products by vendorEXternalId -comma seperated list" name="vendorExternalId" location="query" required="false"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters schema="//@schemas.278" description="Modify products of any classification." name="body" location="body" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters schema="//@schemas.12" description="Create new products of any classification." name="body" location="body" required="true"/>
+  <paramters type="string" description="The products's ID." name="productId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters type="string" description="The products's ID." name="productId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters schema="//@schemas.12" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The v4 id or the shipwireId of the product to be deleted." name="productId" location="path" required="true"/>
+  <paramters type="string" description="The product's external ID." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters type="string" description="The product's external ID." name="externalId" location="path" required="true"/>
+  <paramters type="array" description="A comma separated list of sub-properties for the products to include in the response.&#xA;&#xA;Example: &#x2018;include=*&#x2019; will return all the product properties.&#xA;" name="include" location="query" required="false">
+    <items type="string" format="enum">
+      <enum>\*</enum>
+      <enum>alternateNames</enum>
+      <enum>alternateDescriptions</enum>
+      <enum>masterCase</enum>
+      <enum>enqueuedDimensions</enum>
+      <enum>flags</enum>
+      <enum>dimensions</enum>
+      <enum>technicalData</enum>
+      <enum>innerPack</enum>
+      <enum>pallet</enum>
+      <enum>values</enum>
+      <enum>kitContent</enum>
+      <enum>inclusionRules</enum>
+      <enum>extendedAttributes</enum>
+    </items>
+  </paramters>
+  <paramters schema="//@schemas.12" description="" name="body" location="body" required="true"/>
+  <paramters type="string" description="The merchant external id of the product to be deleted." name="externalId" location="path" required="true"/>
+  <schemas type="object" description="The address of a warehouse" name="WarehouseAddress" properties="//@schemas.36 //@schemas.37 //@schemas.38 //@schemas.39 //@schemas.40 //@schemas.41 //@schemas.42 //@schemas.43 //@schemas.44 //@schemas.45 //@schemas.46 //@schemas.47" declaringContext="//@api" required="//@schemas.36 //@schemas.39 //@schemas.40 //@schemas.41 //@schemas.42 //@schemas.44 //@schemas.45 //@schemas.46"/>
+  <schemas type="object" description="The dimensions of a container or box" name="ContainerDimensions" properties="//@schemas.48 //@schemas.49 //@schemas.50 //@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56 //@schemas.57" declaringContext="//@api"/>
+  <schemas type="object" description="Cost/Retail values of a container or box" name="ContainerValues" properties="//@schemas.58 //@schemas.59 //@schemas.60 //@schemas.61" declaringContext="//@api"/>
+  <schemas type="object" description="Shipping container or box within Shipwire Anywhere warehouses and dropship locations" name="Container" properties="//@schemas.62 //@schemas.63 //@schemas.64 //@schemas.65 //@schemas.66 //@schemas.67 //@schemas.68 //@schemas.69 //@schemas.70 //@schemas.71 //@schemas.72 //@schemas.73 //@schemas.74 //@schemas.75 //@schemas.76 //@schemas.77 //@schemas.78" declaringContext="//@api" required="//@schemas.65 //@schemas.66"/>
+  <schemas type="object" description="A Shipwire Anywhere warehouse or dropship location" name="Warehouse" properties="//@schemas.79 //@schemas.80 //@schemas.81 //@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85 //@schemas.86 //@schemas.87 //@schemas.88 //@schemas.89 //@schemas.90 //@schemas.91 //@schemas.92 //@schemas.93 //@schemas.94 //@schemas.95 //@schemas.96 //@schemas.97 //@schemas.98 //@schemas.99 //@schemas.100 //@schemas.101 //@schemas.102 //@schemas.103 //@schemas.104" declaringContext="//@api" required="//@schemas.82 //@schemas.91 //@schemas.98"/>
+  <schemas type="object" description="Shipping container response" name="ContainerSaveResponse" properties="//@schemas.105 //@schemas.106 //@schemas.107 //@schemas.108 //@schemas.109 //@schemas.110" declaringContext="//@api"/>
+  <schemas type="object" description="Shipping container response" name="ContainerGetResponse" properties="//@schemas.111 //@schemas.112 //@schemas.113 //@schemas.114" declaringContext="//@api"/>
+  <schemas type="object" description="Shipping container response" name="ContainerIndexResponse" properties="//@schemas.115 //@schemas.116 //@schemas.117 //@schemas.118" declaringContext="//@api"/>
+  <schemas type="object" description="A Shipwire Anywhere warehouse response" name="WarehouseSaveResponse" properties="//@schemas.119 //@schemas.120 //@schemas.121 //@schemas.122 //@schemas.123 //@schemas.124" declaringContext="//@api"/>
+  <schemas type="object" description="A Shipwire Anywhere warehouse response" name="WarehouseGetResponse" properties="//@schemas.125 //@schemas.126 //@schemas.127 //@schemas.128" declaringContext="//@api"/>
+  <schemas type="object" description="A Shipwire Anywhere warehouse response" name="WarehouseIndexResponse" properties="//@schemas.129 //@schemas.130 //@schemas.131 //@schemas.132" declaringContext="//@api"/>
+  <schemas type="object" description="The response after deleting an object" name="DeleteResponse" properties="//@schemas.133 //@schemas.134 //@schemas.135 //@schemas.136 //@schemas.137" declaringContext="//@api"/>
+  <schemas type="object" description="Product definition" name="Product" title="Product" discriminator="classification" properties="//@schemas.138 //@schemas.139 //@schemas.140 //@schemas.141 //@schemas.142 //@schemas.143 //@schemas.144 //@schemas.145 //@schemas.146 //@schemas.147 //@schemas.148 //@schemas.149" declaringContext="//@api" required="//@schemas.141 //@schemas.142 //@schemas.143"/>
+  <schemas type="object" description="Product details" name="ProductDetails" title="Details" properties="//@schemas.150 //@schemas.151 //@schemas.152 //@schemas.153 //@schemas.154" declaringContext="//@api"/>
+  <schemas type="object" description="Alternative names of the product" name="ProductAlternateName" title="Alternate Names" properties="//@schemas.155" declaringContext="//@api"/>
+  <schemas type="object" description="Alternative descriptions of the product" name="ProductAlternateDescription" title="Alternate Descriptions" properties="//@schemas.156 //@schemas.157" declaringContext="//@api"/>
+  <schemas type="object" description="Product Values" name="ProductValues" title="Values" properties="//@schemas.158 //@schemas.159 //@schemas.160 //@schemas.161 //@schemas.162 //@schemas.163" declaringContext="//@api"/>
+  <schemas type="object" description="Product Dimensions" name="ProductDimensions" title="Product Dimensions" properties="//@schemas.164 //@schemas.165 //@schemas.166 //@schemas.167 //@schemas.168 //@schemas.169 //@schemas.170 //@schemas.171" declaringContext="//@api"/>
+  <schemas type="object" description="Product Technical Data" name="ProductTechnicalData" title="Technical Data" properties="//@schemas.172" declaringContext="//@api"/>
+  <schemas type="object" description="Product Technical Battery Data" name="ProductBatteryTechnicalData" title="Technical Battery Data" properties="//@schemas.173 //@schemas.174 //@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178" declaringContext="//@api"/>
+  <schemas type="object" description="Product extended attributes" name="ProductExtendedAttribute" title="Extended Attributes" properties="//@schemas.179 //@schemas.180 //@schemas.181" declaringContext="//@api"/>
+  <schemas type="object" description="Product Flags Minimal" name="ProductFlagsMinimal" title="Flags Minimal" properties="//@schemas.182 //@schemas.183 //@schemas.184" declaringContext="//@api"/>
+  <schemas type="object" description="Product Flags" name="ProductFlags" title="Flags" allOf="//@schemas.185 //@schemas.21" declaringContext="//@api"/>
+  <schemas type="object" description="Product Pack Detail Flags" name="ProductPackDetailFlags" title="Pack Detail Flags" properties="//@schemas.195" declaringContext="//@api"/>
+  <schemas type="object" description="Product Marketing Insert Flags" name="ProductMarketingInsertFlags" title="Marketing Insert Flags" allOf="//@schemas.196 //@schemas.21" declaringContext="//@api"/>
+  <schemas type="object" description="Product Minimal Packing Details" name="ProductPackDetailsMinimal" title="Minimal Packing Details" properties="//@schemas.198 //@schemas.199 //@schemas.200 //@schemas.201 //@schemas.202 //@schemas.203 //@schemas.204" declaringContext="//@api" required="//@schemas.200 //@schemas.201"/>
+  <schemas type="object" description="Product Packing Details" name="ProductPackDetails" title="Packing Details" allOf="//@schemas.25 //@schemas.205" declaringContext="//@api"/>
+  <schemas type="object" description="Product Kit Content Item" name="ProductKitContentItem" title="Kit Content Item" properties="//@schemas.208 //@schemas.209 //@schemas.210 //@schemas.211" declaringContext="//@api"/>
+  <schemas type="object" description="Base Product" name="ProductBase" title="Base Product" allOf="//@schemas.12 //@schemas.13 //@schemas.212" declaringContext="//@api"/>
+  <schemas type="object" description="Product Kit" name="ProductKit" title="Kit" allOf="//@schemas.12 //@schemas.13 //@schemas.226" declaringContext="//@api"/>
+  <schemas type="object" description="Product Virtual Kit" name="ProductVirtualKit" title="Virtual Kit" allOf="//@schemas.12 //@schemas.238" declaringContext="//@api"/>
+  <schemas type="object" description="Product Marketing Insert" name="ProductMarketingInsert" title="Marketing Insert" allOf="//@schemas.12 //@schemas.242" declaringContext="//@api"/>
+  <schemas type="object" description="Product Marketing Insert Inclusion Rules" name="InsertInclusionRules" title="Inclusion Rules" properties="//@schemas.252 //@schemas.253 //@schemas.254 //@schemas.255 //@schemas.256" declaringContext="//@api"/>
+  <schemas type="object" description="Product response" name="ProductSaveResponse" properties="//@schemas.257 //@schemas.258 //@schemas.259 //@schemas.260 //@schemas.261 //@schemas.262" declaringContext="//@api"/>
+  <schemas type="object" description="Product response" name="ProductGetResponse" properties="//@schemas.263 //@schemas.264 //@schemas.265 //@schemas.266" declaringContext="//@api"/>
+  <schemas type="object" description="Product response" name="ProductIndexResponse" properties="//@schemas.267 //@schemas.268 //@schemas.269 //@schemas.270" declaringContext="//@api"/>
+  <schemas type="string" description="Warehouse address line 1" name="address1" example="&quot;1409 S Lilac Ave&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Warehouse address line 2" name="address2" example="&quot;Suite 260&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Warehouse address line 3" name="address3" example="&quot;c/o Lilac systems&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="City" name="city" example="&quot;Bloomington&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="State" name="state" example="&quot;CA&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Postal code" name="postalCode" example="92316" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Country" name="country" example="&quot;US&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Continent" name="continent" example="&quot;NORTH_AMERICA&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Company or person name" name="name" example="&quot;NGL Bloomington&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Email address" name="email" example="&quot;foo@bar.com&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Phone number" name="phone" example="&quot;650-561-4800&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Fax number" name="fax" example="&quot;650-561-4801&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="number" description="Container length" name="length" example="6.0" declaringContext="//@schemas.1"/>
+  <schemas type="string" format="enum" description="Container length unit" default="&quot;IN&quot;" name="lengthUnit" declaringContext="//@schemas.1">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" description="Container width" name="width" example="6.0" declaringContext="//@schemas.1"/>
+  <schemas type="string" format="enum" description="Container width unit" default="&quot;IN&quot;" name="widthUnit" declaringContext="//@schemas.1">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" description="Container height" name="height" example="6.0" declaringContext="//@schemas.1"/>
+  <schemas type="string" format="enum" description="Container height unit" default="&quot;IN&quot;" name="heightUnit" declaringContext="//@schemas.1">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" description="Container weight" name="weight" example="0.26" declaringContext="//@schemas.1"/>
+  <schemas type="string" format="enum" description="Container weight unit" default="&quot;LB&quot;" name="weightUnit" declaringContext="//@schemas.1">
+    <enum>LB</enum>
+    <enum>KG</enum>
+  </schemas>
+  <schemas type="number" description="Container max weight" name="maxWeight" example="40.0" declaringContext="//@schemas.1"/>
+  <schemas type="string" format="enum" description="Container max weight unit" default="&quot;LB&quot;" name="maxWeightUnit" declaringContext="//@schemas.1">
+    <enum>LB</enum>
+    <enum>KG</enum>
+  </schemas>
+  <schemas type="number" description="Container cost value" name="costValue" example="1.25" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="Container cost currency" default="&quot;USD&quot;" name="costValueCurrency" declaringContext="//@schemas.2"/>
+  <schemas type="number" description="Container retail value" name="retailValue" example="2.5" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="Container retail currency" default="&quot;USD&quot;" name="retailValueCurrency" declaringContext="//@schemas.2"/>
+  <schemas type="string" description="V4 id" name="_id" example="&quot;5a1cbccd292e6f002e348e32&quot;" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="integer" description="Shipwire warehouse id" name="shipwireId" example="654321" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Container description" name="externalId" example="&quot;XFG878&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Container name" name="name" example="&quot;Small Box&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Container type" name="type" example="&quot;box&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="V4 warehouse id" name="warehouseId" example="&quot;5a0a52656f03fd00151e00f3&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="integer" description="Shipwire warehouse id for container" name="shipwireWarehouseId" example="3811" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Merchant external warehouse id for container" name="warehouseExternalId" declaringContext="//@schemas.3"/>
+  <schemas type="number" description="Carrier-specific container cost basis to model dim weight etc" name="basis" example="5005.0" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Service specific carrier code" name="serviceSpecificCarrierCode" example="&quot;FDX FT&quot;" declaringContext="//@schemas.3"/>
+  <schemas name="dimensions" declaringContext="//@schemas.3" value="//@schemas.1"/>
+  <schemas name="values" declaringContext="//@schemas.3" value="//@schemas.2"/>
+  <schemas type="string" description="Date/Time the record was created" name="createdAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="integer" description="User id of the user who created the record" name="createdBy" example="654321" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Date/Time the record was last updated" name="updatedAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="integer" description="User id of the user who last updated the record" name="updatedBy" example="654321" readOnly="true" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="Container was archived on this date" default="null" name="archivedAt" declaringContext="//@schemas.3"/>
+  <schemas type="string" description="V4 id" minLength="5" name="_id" example="&quot;5a1cbccd292e6f002e348e32&quot;" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="Shipwire warehouse id" name="shipwireId" example="654321" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Merchant warehouse id" name="externalId" example="&quot;H65379&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse name" name="name" example="&quot;Middlefield&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse code" name="code" example="&quot;MDF&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="Shipwire vendor id" name="shipwireVendorId" example="396" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Merchant vendor id" name="vendorExternalId" example="&quot;VEN209&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="number" description="Warehouse location latitude" name="latitude" example="34.075" declaringContext="//@schemas.4"/>
+  <schemas type="number" description="Warehouse location's longitude" name="longitude" example="-117.378" declaringContext="//@schemas.4"/>
+  <schemas type="boolean" description="Warehouse routable flag" default="false" name="isRoutable" declaringContext="//@schemas.4"/>
+  <schemas type="boolean" description="Generate labels for this warehouse" default="false" name="generatesLabels" example="false" declaringContext="//@schemas.4"/>
+  <schemas type="boolean" description="Combine shipping documents" default="false" name="combineShippingDocuments" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse label format" name="labelFormat" example="&quot;8.5x11&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse type" name="type" example="&quot;SHIPWIRE ANYWHERE&quot;" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse id for returns" name="returnWarehouseId" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="Warehouse shipwire id for returns" name="returnShipwireWarehouseId" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Merchant warehouse id for returns" name="returnWarehouseExternalId" declaringContext="//@schemas.4"/>
+  <schemas type="boolean" description="Seed warehouse with typical containers" default="false" name="seedWithTypicalContainers" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="Shipwire physical warehouse id" name="physicalWarehouseId" example="22" declaringContext="//@schemas.4"/>
+  <schemas name="address" declaringContext="//@schemas.4" value="//@schemas.0"/>
+  <schemas type="array" name="containers" items="//@schemas.3" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Date/Time the record was created" name="createdAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="User id of the user who created the record" name="createdBy" example="654321" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Date/Time the record was last updated" name="updatedAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="User id of the user who last updated the record" name="updatedBy" example="654321" readOnly="true" declaringContext="//@schemas.4"/>
+  <schemas type="string" description="Warehouse was archived on this date" default="null" name="archivedAt" declaringContext="//@schemas.4"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.5"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.5"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.5"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.3" declaringContext="//@schemas.5"/>
+  <schemas type="object" description="Status code" name="errors" declaringContext="//@schemas.5"/>
+  <schemas type="object" description="Status code" name="warnings" declaringContext="//@schemas.5"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.6"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.6"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.6"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.3" declaringContext="//@schemas.6"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.7"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.7"/>
+  <schemas type="integer" description="Result limit" name="limit" example="20" declaringContext="//@schemas.7"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.3" declaringContext="//@schemas.7"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.8"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.8"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.8"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.4" declaringContext="//@schemas.8"/>
+  <schemas type="object" description="Status code" name="errors" declaringContext="//@schemas.8"/>
+  <schemas type="object" description="Status code" name="warnings" declaringContext="//@schemas.8"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.9"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.9"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.9"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.4" declaringContext="//@schemas.9"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.10"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.10"/>
+  <schemas type="integer" description="Result limit" name="limit" example="20" declaringContext="//@schemas.10"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.4" declaringContext="//@schemas.10"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.11"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.11"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="Identifies if the object was permanently DELETED or ARCHIVED" name="code" example="&quot;DELETED&quot;" declaringContext="//@schemas.11"/>
+  <schemas description="Result items" name="items" example="null" declaringContext="//@schemas.11"/>
+  <schemas type="string" description="V4 id" name="_id" example="&quot;5a1cbccd292e6f002e348e32&quot;" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="integer" description="Shipwire product id" name="shipwireId" example="654321" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="External reference ID of the product" maxLength="32" minLength="2" name="externalId" example="&quot;EXTERNAL-CASE&quot;" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="SKU Name for product" name="sku" example="&quot;sportsWatch&quot;" declaringContext="//@schemas.12"/>
+  <schemas type="string" format="enum" description="Type of product" name="classification" example="&quot;baseProduct&quot;" declaringContext="//@schemas.12">
+    <enum>baseProduct</enum>
+    <enum>marketingInsert</enum>
+    <enum>kit</enum>
+    <enum>virtualKit</enum>
+  </schemas>
+  <schemas type="string" description="Product Description" maxLength="50" minLength="1" name="description" example="&quot;The best sports watch. Ever.&quot;" declaringContext="//@schemas.12"/>
+  <schemas type="string" format="enum" description="SKU Name for product" name="status" example="&quot;notinuse&quot;" readOnly="true" declaringContext="//@schemas.12">
+    <enum>notinuse</enum>
+    <enum>inuse</enum>
+    <enum>outofstock</enum>
+  </schemas>
+  <schemas type="string" description="Date/Time the record was created" name="createdAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="integer" description="User id of the user who created the record" name="createdBy" example="654321" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="Date/Time the record was last updated" name="updatedAt" example="&quot;2017-11-08 03:33:48&quot;" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="integer" description="User id of the user who last updated the record" name="updatedBy" example="654321" readOnly="true" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="Product was archived on this date" default="null" name="archivedAt" declaringContext="//@schemas.12"/>
+  <schemas type="string" description="HS Code of the product" name="hsCode" example="100612" declaringContext="//@schemas.13"/>
+  <schemas type="string" description="HTS Code of the product" maxLength="10" minLength="6" name="htsCode" example="6.3079075E7" declaringContext="//@schemas.13"/>
+  <schemas type="string" description="Export Control Classification Number(ECCN) of the product" maxLength="11" minLength="5" name="eccn" example="654321" declaringContext="//@schemas.13"/>
+  <schemas type="string" description="Please mention the country code where the product belongs to" name="countryOfOrigin" example="&quot;US&quot;" declaringContext="//@schemas.13"/>
+  <schemas type="string" format="enum" description="Battery Configuration" name="batteryConfiguration" example="&quot;ISBATTERY&quot;" declaringContext="//@schemas.13">
+    <enum>ISBATTERY</enum>
+    <enum>HASLOOSEBATTERY</enum>
+    <enum>HASBATTERY</enum>
+    <enum>NOBATTERY</enum>
+  </schemas>
+  <schemas type="string" name="name" example="&quot;SuperSportsWatch&quot;" declaringContext="//@schemas.14"/>
+  <schemas type="string" name="description" example="&quot;A great sports watch!&quot;" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="localizationCode" example="&quot;en_US&quot;" declaringContext="//@schemas.15"/>
+  <schemas type="number" format="float" description="Cost value of the product" maximum="1000000.0" minimum="0.1" pattern="/^\d*?(\.{0,1}\d{0,2})$/" name="costValue" example="1.25" declaringContext="//@schemas.16"/>
+  <schemas type="number" format="float" description="Wholesale value of the product" maximum="1000000.0" minimum="0.1" pattern="/^\d*?(\.{0,1}\d{0,2})$/" name="wholesaleValue" example="2.37" declaringContext="//@schemas.16"/>
+  <schemas type="number" format="float" description="Retail value of the product" maximum="1000000.0" minimum="0.1" pattern="/^\d*?(\.{0,1}\d{0,2})$/" name="retailValue" example="3.89" declaringContext="//@schemas.16"/>
+  <schemas type="string" description="Cost value currency" name="costValueCurrency" example="&quot;USD&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="string" description="Wholesale value currency" name="wholesaleValueCurrency" example="&quot;USD&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="string" description="Retail value currency" name="retailValueCurrency" example="&quot;USD&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="number" format="float" description="Product length" name="length" example="4.25" declaringContext="//@schemas.17"/>
+  <schemas type="string" format="enum" description="Product length unit" default="&quot;IN&quot;" name="lengthUnit" declaringContext="//@schemas.17">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" format="float" description="Product width" name="width" example="2.25" declaringContext="//@schemas.17"/>
+  <schemas type="string" format="enum" description="Product width unit" default="&quot;IN&quot;" name="widthUnit" declaringContext="//@schemas.17">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" format="float" description="Product height" name="height" example="1.5" declaringContext="//@schemas.17"/>
+  <schemas type="string" format="enum" description="Product height unit" default="&quot;IN&quot;" name="heightUnit" declaringContext="//@schemas.17">
+    <enum>IN</enum>
+    <enum>CM</enum>
+  </schemas>
+  <schemas type="number" format="float" description="Product weight" name="weight" example="3.75" declaringContext="//@schemas.17"/>
+  <schemas type="string" format="enum" description="Product weight unit" default="&quot;LB&quot;" name="weightUnit" declaringContext="//@schemas.17">
+    <enum>LB</enum>
+    <enum>KG</enum>
+  </schemas>
+  <schemas name="battery" declaringContext="//@schemas.18" value="//@schemas.19"/>
+  <schemas type="string" format="enum" description="Battery Type" name="type" example="&quot;LI-ION&quot;" declaringContext="//@schemas.19">
+    <enum>LI-ION</enum>
+    <enum>LI-POLYMER</enum>
+    <enum>NICAD</enum>
+    <enum>LEADACID</enum>
+    <enum>ALKALINE</enum>
+    <enum>LI-METAL</enum>
+  </schemas>
+  <schemas type="number" format="float" description="Battery Weight" maximum="1000.0" minimum="0.001" name="batteryWeight" example="5.0" declaringContext="//@schemas.19"/>
+  <schemas type="integer" format="int32" description="Number of batteries allowed" name="numberOfBatteries" example="5" declaringContext="//@schemas.19"/>
+  <schemas type="number" description="Battery Capacity" name="capacity" example="3.0" declaringContext="//@schemas.19"/>
+  <schemas type="integer" format="int32" description="Number of tery Cells" name="numberOfCells" example="2" declaringContext="//@schemas.19"/>
+  <schemas type="string" format="enum" description="Battery capacity unit" name="capacityUnit" example="&quot;WATTHOUR&quot;" declaringContext="//@schemas.19">
+    <enum>WATTHOUR</enum>
+    <enum>TERAWATTHOUR</enum>
+    <enum>PETAWATTHOUR</enum>
+  </schemas>
+  <schemas type="string" description="Extended attribute name" name="name" example="&quot;marketing_code&quot;" declaringContext="//@schemas.20"/>
+  <schemas type="string" description="Extended attribute value" name="value" example="&quot;HK47B&quot;" declaringContext="//@schemas.20"/>
+  <schemas type="string" format="enum" description="Extended attribute type" name="type" example="&quot;string&quot;" declaringContext="//@schemas.20">
+    <enum>string</enum>
+    <enum>int</enum>
+    <enum>float</enum>
+  </schemas>
+  <schemas type="boolean" description="Flag to indicate if the product is archivable" default="false" name="isArchivable" readOnly="true" declaringContext="//@schemas.21"/>
+  <schemas type="boolean" description="Flag to indicate if the product is deletable" default="false" name="isDeletable" readOnly="true" declaringContext="//@schemas.21"/>
+  <schemas type="boolean" description="Flag to indicate if the product has edit restrictions" default="false" name="hasEditRestrictions" readOnly="true" declaringContext="//@schemas.21"/>
+  <schemas properties="//@schemas.186 //@schemas.187 //@schemas.188 //@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.194" declaringContext="//@schemas.22"/>
+  <schemas type="boolean" description="Flag to indicate packaged is ready to ship" default="false" name="isPackagedReadyToShip" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is fragile" default="false" name="isFragile" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is dangerous" default="false" name="isDangerous" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is perishable" default="false" name="isPerishable" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is Media" default="false" name="isMedia" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is adult one" default="false" name="isAdult" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is liquid" default="false" name="isLiquid" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is a lithium battery, has a lithium battery in the package, or has a lithium battery installed in the product." default="false" name="hasLithium" readOnly="true" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate if the product is a lithium battery.  If true, hasLithium should also be true." default="false" name="hasLithiumOnly" readOnly="true" declaringContext="//@schemas.185"/>
+  <schemas type="boolean" description="Flag to indicate packaged is ready to ship" default="false" name="isPackagedReadyToShip" example="false" declaringContext="//@schemas.23"/>
+  <schemas properties="//@schemas.197" declaringContext="//@schemas.24"/>
+  <schemas type="boolean" description="Fold flag" name="shouldNotFold" example="false" declaringContext="//@schemas.196"/>
+  <schemas type="integer" description="Shipwire product id" name="shipwireId" example="654321" readOnly="true" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="ExternalID of the package" maxLength="32" minLength="1" name="externalId" example="&quot;narp2&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="Product SKU" name="sku" example="&quot;SKU1234&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="string" description="Package Description" name="description" example="&quot;Multiple sports watches.&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="integer" format="int32" description="Individual Items per case" maximum="1000000.0" minimum="1.0" name="individualItemsPerCase" example="2" declaringContext="//@schemas.25"/>
+  <schemas name="dimensions" declaringContext="//@schemas.25" value="//@schemas.17"/>
+  <schemas name="enqueuedDimensions" declaringContext="//@schemas.25" value="//@schemas.17"/>
+  <schemas properties="//@schemas.206 //@schemas.207" declaringContext="//@schemas.26"/>
+  <schemas name="values" declaringContext="//@schemas.205" value="//@schemas.16"/>
+  <schemas name="flags" declaringContext="//@schemas.205" value="//@schemas.23"/>
+  <schemas type="string" description="V4 product id" name="productId" example="&quot;5a1cbccd292e6f002e348e32&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="integer" description="Shipwire product id" name="shipwireProductId" example="654321" declaringContext="//@schemas.27"/>
+  <schemas type="string" description="Product External ID" name="externalId" example="&quot;MYKITITEM&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="integer" format="int32" description="Product Quantity" name="quantity" example="2" declaringContext="//@schemas.27"/>
+  <schemas properties="//@schemas.213 //@schemas.214 //@schemas.215 //@schemas.216 //@schemas.217 //@schemas.218 //@schemas.219 //@schemas.220 //@schemas.221 //@schemas.222 //@schemas.223 //@schemas.224 //@schemas.225" declaringContext="//@schemas.28" required="//@schemas.213"/>
+  <schemas type="string" format="enum" description="Product Category" name="category" example="&quot;TOYS_SPORTS_HOBBIES&quot;" declaringContext="//@schemas.212">
+    <enum>TOYS_SPORTS_HOBBIES</enum>
+    <enum>APPAREL</enum>
+    <enum>AUTOMOTIVE</enum>
+    <enum>BOOKS_&amp;_ENTERTAINMENT</enum>
+    <enum>COMPUTER_ELECTRONICS</enum>
+    <enum>FOOD_&amp;_BEVERAGE</enum>
+    <enum>FURNITURE_&amp;_APPLIANCES</enum>
+    <enum>HEALTH_&amp;_PERSONAL_CARE</enum>
+    <enum>HOME_&amp;_GARDEN</enum>
+    <enum>OTHER</enum>
+  </schemas>
+  <schemas type="integer" format="int32" description="ID of Vendor it is mapped to" name="shipwireVendorId" example="34" declaringContext="//@schemas.212"/>
+  <schemas type="string" description="External ID of Vendor it is mapped to" name="vendorExternalId" example="&quot;veid34&quot;" declaringContext="//@schemas.212"/>
+  <schemas type="array" name="alternateNames" items="//@schemas.14" declaringContext="//@schemas.212"/>
+  <schemas type="array" name="alternateDescriptions" items="//@schemas.15" declaringContext="//@schemas.212"/>
+  <schemas name="values" declaringContext="//@schemas.212" value="//@schemas.16"/>
+  <schemas name="dimensions" declaringContext="//@schemas.212" value="//@schemas.17"/>
+  <schemas name="technicalData" declaringContext="//@schemas.212" value="//@schemas.18"/>
+  <schemas name="flags" declaringContext="//@schemas.212" value="//@schemas.22"/>
+  <schemas name="innerPack" declaringContext="//@schemas.212" value="//@schemas.26"/>
+  <schemas name="masterCase" declaringContext="//@schemas.212" value="//@schemas.26"/>
+  <schemas name="pallet" declaringContext="//@schemas.212" value="//@schemas.26"/>
+  <schemas type="array" name="extendedAttributes" items="//@schemas.20" declaringContext="//@schemas.212"/>
+  <schemas properties="//@schemas.227 //@schemas.228 //@schemas.229 //@schemas.230 //@schemas.231 //@schemas.232 //@schemas.233 //@schemas.234 //@schemas.235 //@schemas.236 //@schemas.237" declaringContext="//@schemas.29"/>
+  <schemas name="values" declaringContext="//@schemas.226" value="//@schemas.16"/>
+  <schemas type="array" name="alternateNames" items="//@schemas.14" declaringContext="//@schemas.226"/>
+  <schemas type="array" name="alternateDescriptions" items="//@schemas.15" declaringContext="//@schemas.226"/>
+  <schemas type="array" name="kitContent" items="//@schemas.27" declaringContext="//@schemas.226"/>
+  <schemas name="dimensions" declaringContext="//@schemas.226" value="//@schemas.17"/>
+  <schemas name="technicalData" declaringContext="//@schemas.226" value="//@schemas.18"/>
+  <schemas name="flags" declaringContext="//@schemas.226" value="//@schemas.22"/>
+  <schemas name="innerPack" declaringContext="//@schemas.226" value="//@schemas.26"/>
+  <schemas name="masterCase" declaringContext="//@schemas.226" value="//@schemas.26"/>
+  <schemas name="pallet" declaringContext="//@schemas.226" value="//@schemas.26"/>
+  <schemas type="array" name="extendedAttributes" items="//@schemas.20" declaringContext="//@schemas.226"/>
+  <schemas properties="//@schemas.239 //@schemas.240 //@schemas.241" declaringContext="//@schemas.30"/>
+  <schemas type="array" name="alternateDescriptions" items="//@schemas.15" declaringContext="//@schemas.238"/>
+  <schemas type="array" name="kitContent" items="//@schemas.27" declaringContext="//@schemas.238"/>
+  <schemas name="flags" declaringContext="//@schemas.238" value="//@schemas.21"/>
+  <schemas properties="//@schemas.243 //@schemas.244 //@schemas.245 //@schemas.246 //@schemas.247 //@schemas.248 //@schemas.249 //@schemas.250 //@schemas.251" declaringContext="//@schemas.31"/>
+  <schemas type="string" description="External reference ID of the product" maxLength="32" minLength="2" name="externalId" example="&quot;narp&quot;" declaringContext="//@schemas.242"/>
+  <schemas type="string" description="Type of Inclusion rule" name="inclusionRuleType" example="&quot;CUSTOM&quot;" declaringContext="//@schemas.242"/>
+  <schemas type="array" name="alternateNames" items="//@schemas.14" declaringContext="//@schemas.242"/>
+  <schemas type="array" name="alternateDescriptions" items="//@schemas.15" declaringContext="//@schemas.242"/>
+  <schemas name="dimensions" declaringContext="//@schemas.242" value="//@schemas.17"/>
+  <schemas name="flags" declaringContext="//@schemas.242" value="//@schemas.24"/>
+  <schemas name="inclusionRules" declaringContext="//@schemas.242" value="//@schemas.32"/>
+  <schemas name="masterCase" declaringContext="//@schemas.242" value="//@schemas.25"/>
+  <schemas type="array" name="extendedAttributes" items="//@schemas.20" declaringContext="//@schemas.242"/>
+  <schemas type="string" format="date-time" description="Insert After the specified date and time" name="insertAfterDate" example="&quot;2015-02-15T18:04:26.0000000+00:00&quot;" declaringContext="//@schemas.32"/>
+  <schemas type="string" format="date-time" description="Insert Before the specified date and time" name="insertBeforeDate" example="&quot;2035-02-15T18:04:26.0000000+00:00&quot;" declaringContext="//@schemas.32"/>
+  <schemas type="number" format="float" description="Automatically add marketing insert when this value is reached on the base product" maximum="1000000.0" minimum="0.1" name="insertWhenWorthValue" example="5" declaringContext="//@schemas.32"/>
+  <schemas type="integer" format="int32" description="Automatically add marketing insert when this count is reached on the base product" name="insertWhenQuantity" example="5" declaringContext="//@schemas.32"/>
+  <schemas type="string" description="Automatically add marketing insert when the cost is reached (based on the currency) related to the base product" name="insertWhenWorthValueCurrency" example="&quot;USD&quot;" declaringContext="//@schemas.32"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.33"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.33"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.33"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.12" declaringContext="//@schemas.33"/>
+  <schemas type="object" description="Status code" name="errors" declaringContext="//@schemas.33"/>
+  <schemas type="object" description="Status code" name="warnings" declaringContext="//@schemas.33"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.34"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.34"/>
+  <schemas type="integer" description="Result limit" name="limit" example="1" declaringContext="//@schemas.34"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.12" declaringContext="//@schemas.34"/>
+  <schemas type="integer" description="Total results" name="total" example="1" declaringContext="//@schemas.35"/>
+  <schemas type="integer" description="Result offset" name="offset" example="0" declaringContext="//@schemas.35"/>
+  <schemas type="integer" description="Result limit" name="limit" example="20" declaringContext="//@schemas.35"/>
+  <schemas type="array" description="Result items" name="items" items="//@schemas.12" declaringContext="//@schemas.35"/>
+  <schemas type="object" properties="//@schemas.272"/>
+  <schemas type="array" description="v4 tokens for the user" name="tokens" items="//@schemas.273" declaringContext="//@schemas.271"/>
+  <schemas type="string" example="&quot;aIXoMqtVWV6u1eY3glXy22FMowjg3Gmw&quot;" readOnly="true"/>
+  <schemas type="object" properties="//@schemas.275 //@schemas.276 //@schemas.277"/>
+  <schemas type="string" description="v4 token created for the user" name="token" example="&quot;aIXoMqtVWV6u1eY3glXy22FMowjg3Gmw&quot;" readOnly="true" declaringContext="//@schemas.274"/>
+  <schemas type="string" description="Date/Time the user was created" name="createdAt" example="&quot;2017-12-21 02:55:18&quot;" readOnly="true" declaringContext="//@schemas.274"/>
+  <schemas type="string" description="Date/Time the user was updated" name="updatedAt" example="&quot;2018-01-03 01:53:46&quot;" readOnly="true" declaringContext="//@schemas.274"/>
+  <schemas type="array" items="//@schemas.12"/>
+  <responses schema="//@schemas.271" description="Successful operation" code="200"/>
+  <responses schema="//@schemas.274" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses schema="//@schemas.10" description="successful operation" code="200"/>
+  <responses schema="//@schemas.8" description="Successful operation" code="200"/>
+  <responses schema="//@schemas.9" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.8" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.9" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.8" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.6" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.6" description="Successful operation" code="200"/>
+  <responses description="Warehouse not found" code="404"/>
+  <responses schema="//@schemas.7" description="successful operation" code="200"/>
+  <responses schema="//@schemas.5" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses schema="//@schemas.6" description="Successful operation" code="200"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.5" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.6" description="Successful operation" code="200"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.5" description="Successful operation" code="200"/>
+  <responses description="Unprocessable Entity" code="422"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Container not found" code="404"/>
+  <responses schema="//@schemas.35" description="OK" code="200"/>
+  <responses schema="//@schemas.33" description="OK" code="200"/>
+  <responses schema="//@schemas.33" description="OK" code="200"/>
+  <responses schema="//@schemas.34" description="OK" code="200"/>
+  <responses schema="//@schemas.33" description="OK" code="200"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Product not found" code="404"/>
+  <responses schema="//@schemas.34" description="OK" code="200"/>
+  <responses schema="//@schemas.33" description="OK" code="200"/>
+  <responses schema="//@schemas.11" description="Successful operation" code="200"/>
+  <responses description="Product not found" code="404"/>
+</openapi:Root>

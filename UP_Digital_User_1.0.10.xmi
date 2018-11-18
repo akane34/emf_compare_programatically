@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="virtserver.swaggerhub.com" basePath="/Petr_Vesely/UP_Digital_User/1.0.0" definitions="//@schemas.0 //@schemas.1 //@schemas.2 //@schemas.3 //@schemas.4 //@schemas.5 //@schemas.6 //@schemas.7 //@schemas.8 //@schemas.9 //@schemas.10 //@schemas.11 //@schemas.12 //@schemas.13 //@schemas.14 //@schemas.15 //@schemas.16 //@schemas.17 //@schemas.18 //@schemas.19 //@schemas.20 //@schemas.21 //@schemas.22 //@schemas.23 //@schemas.24 //@schemas.25 //@schemas.26 //@schemas.27 //@schemas.28 //@schemas.29 //@schemas.30 //@schemas.31 //@schemas.32 //@schemas.33 //@schemas.34 //@schemas.35 //@schemas.36 //@schemas.37 //@schemas.38 //@schemas.39 //@schemas.40 //@schemas.41 //@schemas.42 //@schemas.43 //@schemas.44 //@schemas.45 //@schemas.46 //@schemas.47 //@schemas.48 //@schemas.49 //@schemas.50 //@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55 //@schemas.56 //@schemas.57 //@schemas.58 //@schemas.59 //@schemas.60 //@schemas.61 //@schemas.62 //@schemas.63 //@schemas.64 //@schemas.65 //@schemas.66 //@schemas.67 //@schemas.68 //@schemas.69">
+    <securityRequirements securityScopes="//@api/@securityDefinitions.0/@scopes.1 //@api/@securityDefinitions.0/@scopes.0" securitySchema="//@api/@securityDefinitions.0"/>
+    <info title="Sample Implicit Flow OAuth2 Project" description="This is an example of using OAuth2 Implicit Flow in a specification to describe security to your API." version="1.0.10"/>
+    <schemes>https</schemes>
+    <paths relativePath="/users/{user_id}/dashboard">
+      <get parameters="//@paramters.0" summary="Returns user detail for dashboard, basic information, name, surname, atc. | Use in WF: U1, AU2" operationId="get_users_dashboard" responses="//@responses.0 //@responses.1">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/notifications">
+      <get summary="Returns the user notification list. (dynamic filter) | Use in WF: Global menu" operationId="get_notifications" responses="//@responses.2 //@responses.3">
+        <tagReferences>Notification</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/accounts">
+      <get parameters="//@paramters.1" summary="Returns the user account list. | Use in WF: U1, U2, AU2, AU3.1, AU4.1, AU4.1.1, AU4.1.2, AU4.1.3" operationId="get_users_accounts" responses="//@responses.4 //@responses.5">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/confirm_cash">
+      <post parameters="//@paramters.2 //@paramters.3" summary="Confirmation of a cash account that may have a cash account. | Use in WF: U1" operationId="put_confirm_cash" responses="//@responses.6 //@responses.7">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/meal_card_transfer">
+      <post parameters="//@paramters.4 //@paramters.5 //@paramters.6" summary="Setting the user's voucher as much as he wants to convert the voucher percentage. | Use in WF: U2" operationId="post_meal_card_transfer" responses="//@responses.8 //@responses.9">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/transfer_request">
+      <post parameters="//@paramters.7 //@paramters.8" summary="Request to transfer cash to an account. | Use in WF: U1" operationId="put_transfer_request" responses="//@responses.10 //@responses.11">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/cards">
+      <get parameters="//@paramters.9" summary="Returns the user notification list. | none" operationId="get_cards" responses="//@responses.12 //@responses.13">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/cards/{card_id}/block">
+      <post parameters="//@paramters.10 //@paramters.11" summary="Card blocation.  | Use in WF: U1, U2" operationId="put_card_blocation" responses="//@responses.14 //@responses.15">
+        <tagReferences>Card</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/transactions">
+      <get parameters="//@paramters.12" summary="An overview of all user transactions for all accounts. (dynamic filter) | Use in WF: U4, AU6" operationId="get_users_transactions" responses="//@responses.16 //@responses.17">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/transactions/export">
+      <post parameters="//@paramters.13 //@paramters.14" summary="Export to PDF. (dynamic filter) | Use in WF: U4" operationId="post_users_transactions_export" responses="//@responses.18 //@responses.19">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/pre_orders">
+      <get summary="An overview of all pre-orders. (dynamic filter) | Use in WF: none" operationId="get_pre_orders" responses="//@responses.20 //@responses.21">
+        <tagReferences>Pre-order</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/pre_orders/{pre_order_id}">
+      <post parameters="//@paramters.15" summary="Pre-order detail. | Use in WF: none" operationId="post_pre_order" responses="//@responses.22 //@responses.23">
+        <tagReferences>Pre-order</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/pre_orders/{pre_order_id} (PUT)">
+      <put parameters="//@paramters.16 //@paramters.17" summary="Update or create a pre-order. | Use in WF: none" operationId="put_pre_order" responses="//@responses.24 //@responses.25">
+        <tagReferences>Pre-order</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/pre_orders/{pre_order_id} (DELETE)">
+      <delete parameters="//@paramters.18 //@paramters.19" summary="Delete pre-order. | Use in WF: none" operationId="delete_pre_order" responses="//@responses.26 //@responses.27">
+        <tagReferences>Pre-order</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/users/{user_id}/partners/favourite">
+      <get parameters="//@paramters.20" summary="An overview of favorite partners. | Use in WF: none" operationId="get_user_favourite_partners" responses="//@responses.28 //@responses.29">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/partners/full_search">
+      <get parameters="//@paramters.21 //@paramters.22 //@paramters.23 //@paramters.24 //@paramters.25" summary="Full text search of partners. | Use in WF: U1, U7, AU2, AU5, AU5.1" operationId="get_partners_full_text_search" responses="//@responses.30 //@responses.31">
+        <tagReferences>Partner</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/partners/quick_search">
+      <get parameters="//@paramters.26" summary="Quick text search of partners. | Use in WF: Global menu" operationId="get_partners_quick_text_search" responses="//@responses.32 //@responses.33">
+        <tagReferences>Partner</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/products">
+      <get summary="List of products. (dynamic filter) | Use in WF: U1, U7 [codelist]" operationId="get_products" responses="//@responses.34 //@responses.35">
+        <tagReferences>Product</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/categories">
+      <get summary="List of categories. (dynamic filter) | Use in WF: U1, U7 [codelist]" operationId="get_categories" responses="//@responses.36 //@responses.37">
+        <tagReferences>Category</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/modules">
+      <get parameters="//@paramters.27" summary="A list of modules that are accessible to user. | Use in WF: U6" operationId="get_users_modules" responses="//@responses.38 //@responses.39">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/news">
+      <get parameters="//@paramters.28" summary="A list of news for user. | Use in WF: U1" operationId="get_users_news" responses="//@responses.40 //@responses.41">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/news/{news_id}">
+      <get parameters="//@paramters.29 //@paramters.30" summary="A detail of news. | Use in WF: U1" operationId="get_users_news_by_id" responses="//@responses.42 //@responses.43">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/actions">
+      <get parameters="//@paramters.31" summary="A list of events and discounts for user. | Use in WF: U5" operationId="get_users_actions" responses="//@responses.44 //@responses.45">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/news">
+      <get summary="An overview of all news. (dynamic filter) | Use in WF: U5" operationId="get_news" responses="//@responses.46 //@responses.47">
+        <tagReferences>New</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}">
+      <put parameters="//@paramters.32 //@paramters.33" summary="User actualisation. | Use in WF: U3" operationId="put_user" responses="//@responses.48 //@responses.49">
+        <tagReferences>User</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/users/{user_id}/reset_password">
+      <post parameters="//@paramters.34 //@paramters.35" summary="Changing user logins and password with confirmation. | Use in WF: U3, AU1.3" operationId="put_clogin_password" responses="//@responses.50 //@responses.51">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/cards/{card_id}/pin">
+      <post parameters="//@paramters.36 //@paramters.37 //@paramters.38" summary="Changing the user PIN is used specifically for cafeterias. | Use in WF: U3, AU1.4" operationId="post_user_card_pin" responses="//@responses.52 //@responses.53">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/cards/{card_id}/pin">
+      <post parameters="//@paramters.39 //@paramters.40" summary="Change the PIN on the card. | Use in WF: U2" operationId="put_card_pin" responses="//@responses.54 //@responses.55">
+        <tagReferences>Card</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users/{user_id}/puk">
+      <post parameters="//@paramters.41 //@paramters.42" summary="Changing the user's security password. | Use in WF: U3, AU4.5" operationId="put_user_puk" responses="//@responses.56 //@responses.57">
+        <tagReferences>User</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/messages">
+      <put parameters="//@paramters.43" summary="Insert message with volatile attachment. (dynamic filter) | Use in WF: Global" operationId="put_messages_info" responses="//@responses.58 //@responses.59">
+        <tagReferences>Message</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/users/{user_id}/surveys">
+      <get parameters="//@paramters.44" summary="Overview of user surveys. Survey has to be valid (valid from - valid to). The list by user. If the user has filled in the survey, is no longer displayed. | Use in WF: (none)" operationId="get_user_surveys" responses="//@responses.60 //@responses.61">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/surveys/{survey_id}">
+      <put parameters="//@paramters.45 //@paramters.46 //@paramters.47" summary="Filling the poll by the user. | Use in WF: (none)" operationId="put_user_survey" responses="//@responses.62 //@responses.63">
+        <tagReferences>User</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/users/{user_id}/my_reward/pdf">
+      <get parameters="//@paramters.48" summary="Returns pdf of my rewards. | Use in WF: (none)" operationId="get_user_my_reward_pdf" responses="//@responses.64 //@responses.65">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/organization_units">
+      <get summary="An overview of the organizational structure can also be filtered by clientId. (dynamic filter) | Use in WF: (none, filter: client_id)" operationId="get_organization_units" responses="//@responses.66 //@responses.67">
+        <tagReferences>Organization-unit</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/organization_units/{organization_unit_id}/users">
+      <get parameters="//@paramters.49" summary="A list of people assigned to the organizational unit. | Use in WF: (none, filter: client_id)" operationId="get_organization_units_users" responses="//@responses.68 //@responses.69">
+        <tagReferences>Organization-unit</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/cashback_partners">
+      <get summary="Partner overview for cashback, standard filtering. (dynamic filter) | Use in WF: (none)" operationId="get_cashback_partners" responses="//@responses.70 //@responses.71">
+        <tagReferences>Cashback-partner</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/auctions">
+      <get summary="Overview of auctions with standard filtering, for example, by clientId. | Use in WF: (none, filter: for_all == true OR for_clients.contains(client_id))" operationId="get_auctions" responses="//@responses.72 //@responses.73">
+        <tagReferences>Auction</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/auctions/{auction_id}">
+      <get parameters="//@paramters.50" summary="Detail of auction. | Use in WF: (none)" operationId="get_auction" responses="//@responses.74 //@responses.75">
+        <tagReferences>Auction</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/auctions/{auction_id}/bidding">
+      <get parameters="//@paramters.51" summary="A list of bids for the auction, sorted by the latest bid of the largest. | Use in WF: (none)" operationId="get_auction_bidding" responses="//@responses.76 //@responses.77">
+        <tagReferences>Auction</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/auctions/{auction_id}/bidding  (POST)">
+      <post parameters="//@paramters.52 //@paramters.53" summary="Bid over the auction. | Use in WF: (none)" operationId="post_auction_bidding" responses="//@responses.78 //@responses.79">
+        <tagReferences>Auction</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/benefits">
+      <get summary="Overview of benefits. (dynamic filter) | Use in WF: U6.1 (filter: client_id = value)" operationId="get_benefits" responses="//@responses.80 //@responses.81">
+        <tagReferences>Benefit</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/benefits/{benefit_id}">
+      <get parameters="//@paramters.54" summary="Detail of benefit. | Use in WF: (none)" operationId="get_benefit" responses="//@responses.82 //@responses.83">
+        <tagReferences>Benefit</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/benefits/{benefit_id}  (PUT)">
+      <put parameters="//@paramters.55 //@paramters.56" summary="Order of internal benefit. | Use in WF: (none)" operationId="put_benefit" responses="//@responses.84 //@responses.85">
+        <tagReferences>Benefit</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/baskets">
+      <get summary="Basket list, filter by class i filter by userId. The basket also has the status of being opened or sent. (dynamic filter) | Use in WF: U7.3 (filter: user_id = value AND state = 1)" operationId="get_baskets" responses="//@responses.86 //@responses.87">
+        <tagReferences>Basket</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/baskets/{basket_id}/basket_items">
+      <get parameters="//@paramters.57" summary="List of items in the basket. | Use in WF: U7.3 (filter: state == 1)" operationId="get_basket_items" responses="//@responses.88 //@responses.89">
+        <tagReferences>Basket</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/baskets/{basket_id}/confirmation">
+      <put parameters="//@paramters.58 //@paramters.59" summary="Confirmation of the basket. | Use in WF: U7.3" operationId="put_basket_confirmation" responses="//@responses.90 //@responses.91">
+        <tagReferences>Basket</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/baskets/{basket_id}">
+      <delete parameters="//@paramters.60 //@paramters.61" summary="Clear the basket. | Use in WF: U7.3" operationId="delete_basket" responses="//@responses.92 //@responses.93">
+        <tagReferences>Basket</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/basket_items/{basket_item_id}">
+      <put parameters="//@paramters.62 //@paramters.63" summary="Change item in basket (quantity). | Use in WF: U7.3" operationId="put_basket_item_quantity" responses="//@responses.94 //@responses.95">
+        <tagReferences>Basket-item</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/basket_items/{basket_item_id}  (DELETE)">
+      <delete parameters="//@paramters.64 //@paramters.65" summary="Remove item from the basket. | Use in WF: U7.3" operationId="delete_basket_item" responses="//@responses.96 //@responses.97">
+        <tagReferences>Basket-item</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/partners/{partner_id}">
+      <get parameters="//@paramters.66" summary="Detail of the partner. | Use in WF: U7.3, AU5.1.1, AU5.2.1" operationId="get_partner" responses="//@responses.98 //@responses.99">
+        <tagReferences>Partner</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/partners/{partner_id}/benefits">
+      <get parameters="//@paramters.67" summary="List of partners benefits. | Use in WF: U7.3 (filter: state == 1)" operationId="get_partner_benefits" responses="//@responses.100 //@responses.101">
+        <tagReferences>Partner</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/benefits/{benefit_id}/order">
+      <post parameters="//@paramters.68 //@paramters.69" summary="List of partners benefit. | Use in WF: U7.2, AU3.1, AU3.2" operationId="post_benefit_order" responses="//@responses.102 //@responses.103">
+        <tagReferences>Benefit</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/non_contractual_billings/{non_contractual_billing_id} (GET)">
+      <get parameters="//@paramters.70" summary="Get data of non-contractual billing. | Use in WF: none" operationId="get_non_contractual_billings" responses="//@responses.104 //@responses.105">
+        <tagReferences>non-contractual-billings</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/non_contractual_billings/{non_contractual_billing_id} (PUT)">
+      <put parameters="//@paramters.71 //@paramters.72" summary="Insert of non-contractual billing. | Use in WF: none" operationId="put_non_contractual_billings" responses="//@responses.106 //@responses.107">
+        <tagReferences>non-contractual-billings</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/non_contractual_billings/{non_contractual_billing_id}/confirmation">
+      <put parameters="//@paramters.73" summary="Confirmaton of non-contractual billing. | Use in WF: none" operationId="put_non_contractual_billings_confirmation" responses="//@responses.108 //@responses.109">
+        <tagReferences>non-contractual-billings</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/non_contractual_billings/{non_contractual_billing_id}/cancel">
+      <put parameters="//@paramters.74" summary="Cancel confirmmaton of non-contractual billing. | Use in WF: none" operationId="put_non_contractual_billings_cancel" responses="//@responses.110 //@responses.111">
+        <tagReferences>non-contractual-billings</tagReferences>
+      </put>
+    </paths>
+    <paths relativePath="/partners/validation">
+      <post parameters="//@paramters.75" summary="Validation of the Companys ID number against ARES, Justice, ... | Use in WF: U4.1" operationId="post_partner_validation" responses="//@responses.112 //@responses.113">
+        <tagReferences>Partner</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/categories/csp">
+      <get summary="CSP codes of categories. | Use in WF: " operationId="get_categories_csp" responses="//@responses.114 //@responses.115">
+        <tagReferences>Category</tagReferences>
+      </get>
+    </paths>
+    <paths relativePath="/users/{user_id}/partners/{partner_id}/products/{product_id}/available_amount">
+      <get parameters="//@paramters.76 //@paramters.77 //@paramters.78" summary="Obtaining a possible amount for drawing on a specific product with a particular partner. | Use in WF: " operationId="get_users_partners_products_available_amount" responses="//@responses.116 //@responses.117">
+        <tagReferences>User</tagReferences>
+      </get>
+    </paths>
+    <securityDefinitions type="oauth2" flow="password" tokenUrl="http://example.com/oauth/token" referenceName="password">
+      <scopes name="write" description="allows modifying resources"/>
+      <scopes name="read" description="allows reading resources"/>
+    </securityDefinitions>
+    <tags name="User" description="UP Digital - User"/>
+  </api>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="false"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="card_id" location="path" required="true"/>
+  <paramters schema="//@schemas.9" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters schema="//@schemas.10" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="card_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="false"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="string" name="format" location="query" required="true"/>
+  <paramters type="integer" name="pre_order_id" location="path" required="true"/>
+  <paramters type="integer" name="pre_order_id" location="path" required="true"/>
+  <paramters schema="//@schemas.20" name="body" location="body" required="true"/>
+  <paramters type="integer" name="pre_order_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="false"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="string" name="text" location="query" required="true"/>
+  <paramters type="integer" description="example: category_id=1&amp;category_id=2" name="category_id" location="query" required="false"/>
+  <paramters type="string" name="gps_latitude" location="query" required="false"/>
+  <paramters type="string" name="gps_longitude" location="query" required="false"/>
+  <paramters type="integer" name="distance" location="query" required="false"/>
+  <paramters type="string" name="text" location="query" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="news_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters schema="//@schemas.28" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters schema="//@schemas.17" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="card_id" location="path" required="true"/>
+  <paramters schema="//@schemas.18" name="body" location="body" required="true"/>
+  <paramters type="integer" name="card_id" location="path" required="true"/>
+  <paramters schema="//@schemas.18" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters schema="//@schemas.19" name="body" location="body" required="true"/>
+  <paramters schema="//@schemas.25" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="survey_id" location="path" required="true"/>
+  <paramters schema="//@schemas.31" name="body" location="body" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="organization_unit_id" location="path" required="true"/>
+  <paramters type="integer" name="auction_id" location="path" required="true"/>
+  <paramters type="integer" name="auction_id" location="path" required="true"/>
+  <paramters type="integer" name="auction_id" location="path" required="true"/>
+  <paramters schema="//@schemas.41" name="body" location="body" required="false"/>
+  <paramters type="integer" name="benefit_id" location="path" required="true"/>
+  <paramters type="integer" name="benefit_id" location="path" required="true"/>
+  <paramters schema="//@schemas.44" name="body" location="body" required="false"/>
+  <paramters type="integer" name="basket_id" location="path" required="true"/>
+  <paramters type="integer" name="basket_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="true"/>
+  <paramters type="integer" name="basket_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="false"/>
+  <paramters type="integer" name="basket_item_id" location="path" required="true"/>
+  <paramters schema="//@schemas.48" name="body" location="body" required="true"/>
+  <paramters type="integer" name="basket_item_id" location="path" required="true"/>
+  <paramters schema="//@schemas.1" name="body" location="body" required="false"/>
+  <paramters type="string" name="partner_id" location="path" required="true"/>
+  <paramters type="integer" name="partner_id" location="path" required="true"/>
+  <paramters type="integer" name="benefit_id" location="path" required="true"/>
+  <paramters schema="//@schemas.52" name="body" location="body" required="true"/>
+  <paramters type="integer" name="non_contractual_billing_id" location="path" required="true"/>
+  <paramters type="integer" name="non_contractual_billing_id" location="path" required="true"/>
+  <paramters schema="//@schemas.67" name="body" location="body" required="true"/>
+  <paramters type="integer" name="non_contractual_billing_id" location="path" required="true"/>
+  <paramters type="integer" name="non_contractual_billing_id" location="path" required="true"/>
+  <paramters type="string" name="registration_identification" location="query" required="true"/>
+  <paramters type="integer" name="user_id" location="path" required="true"/>
+  <paramters type="integer" name="partner_id" location="path" required="true"/>
+  <paramters type="integer" name="product_id" location="path" required="true"/>
+  <schemas name="pagination" properties="//@schemas.70 //@schemas.71 //@schemas.72" declaringContext="//@api"/>
+  <schemas type="object" name="result" properties="//@schemas.73 //@schemas.74" declaringContext="//@api"/>
+  <schemas type="object" name="result_save" allOf="//@schemas.1 //@schemas.75" declaringContext="//@api"/>
+  <schemas name="file" properties="//@schemas.77 //@schemas.78" declaringContext="//@api" required="//@schemas.77 //@schemas.78"/>
+  <schemas name="user_dashboard" properties="//@schemas.79 //@schemas.80 //@schemas.81 //@schemas.82 //@schemas.83" declaringContext="//@api" required="//@schemas.79 //@schemas.80 //@schemas.81 //@schemas.83"/>
+  <schemas name="notification" properties="//@schemas.84 //@schemas.85 //@schemas.86" declaringContext="//@api" required="//@schemas.84 //@schemas.85"/>
+  <schemas name="transaction_short" properties="//@schemas.87 //@schemas.88 //@schemas.89 //@schemas.90 //@schemas.91" declaringContext="//@api" required="//@schemas.87 //@schemas.88"/>
+  <schemas name="account" properties="//@schemas.92 //@schemas.93 //@schemas.94 //@schemas.95 //@schemas.96 //@schemas.97 //@schemas.98" declaringContext="//@api" required="//@schemas.92 //@schemas.93 //@schemas.94 //@schemas.95"/>
+  <schemas name="card" properties="//@schemas.99 //@schemas.100 //@schemas.101 //@schemas.102" declaringContext="//@api" required="//@schemas.99 //@schemas.100 //@schemas.101 //@schemas.102"/>
+  <schemas name="meal_card_transfer_body" properties="//@schemas.103" declaringContext="//@api" required="//@schemas.103"/>
+  <schemas name="transfer_request_body" properties="//@schemas.104 //@schemas.105 //@schemas.106" declaringContext="//@api" required="//@schemas.104 //@schemas.105 //@schemas.106"/>
+  <schemas name="transaction_data" properties="//@schemas.107 //@schemas.108 //@schemas.109 //@schemas.110 //@schemas.111 //@schemas.112 //@schemas.113 //@schemas.114" declaringContext="//@api" required="//@schemas.107 //@schemas.108 //@schemas.111 //@schemas.112 //@schemas.113 //@schemas.114"/>
+  <schemas name="user_transaction_response" properties="//@schemas.115 //@schemas.116" declaringContext="//@api" required="//@schemas.115 //@schemas.116"/>
+  <schemas name="product" properties="//@schemas.117 //@schemas.118" declaringContext="//@api" required="//@schemas.117 //@schemas.118"/>
+  <schemas name="category" properties="//@schemas.119 //@schemas.120 //@schemas.121" declaringContext="//@api" required="//@schemas.119 //@schemas.121"/>
+  <schemas name="module" properties="//@schemas.122 //@schemas.123" declaringContext="//@api" required="//@schemas.122 //@schemas.123"/>
+  <schemas name="news" properties="//@schemas.124 //@schemas.125 //@schemas.126 //@schemas.127" declaringContext="//@api" required="//@schemas.124 //@schemas.125 //@schemas.126"/>
+  <schemas name="login_password" properties="//@schemas.128 //@schemas.129 //@schemas.130" declaringContext="//@api" required="//@schemas.128 //@schemas.129 //@schemas.130"/>
+  <schemas name="pin" properties="//@schemas.131 //@schemas.132" declaringContext="//@api" required="//@schemas.131 //@schemas.132"/>
+  <schemas name="puk" properties="//@schemas.133" declaringContext="//@api" required="//@schemas.133"/>
+  <schemas name="pre_order" properties="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.137 //@schemas.138 //@schemas.139" declaringContext="//@api" required="//@schemas.134 //@schemas.135 //@schemas.136 //@schemas.137 //@schemas.138"/>
+  <schemas name="month_value" properties="//@schemas.143 //@schemas.144 //@schemas.145 //@schemas.146" declaringContext="//@api" required="//@schemas.143 //@schemas.144 //@schemas.145 //@schemas.146"/>
+  <schemas name="partner" properties="//@schemas.147 //@schemas.148 //@schemas.149 //@schemas.150" declaringContext="//@api" required="//@schemas.147 //@schemas.148"/>
+  <schemas name="partner_search_detail" properties="//@schemas.151 //@schemas.152 //@schemas.153 //@schemas.154 //@schemas.155 //@schemas.156 //@schemas.157" declaringContext="//@api" required="//@schemas.151 //@schemas.152"/>
+  <schemas name="action_detail" properties="//@schemas.158 //@schemas.159 //@schemas.160 //@schemas.161" declaringContext="//@api" required="//@schemas.158 //@schemas.159"/>
+  <schemas name="message" properties="//@schemas.162 //@schemas.163 //@schemas.164 //@schemas.165" declaringContext="//@api" required="//@schemas.162 //@schemas.163"/>
+  <schemas name="news_response" properties="//@schemas.166 //@schemas.167" declaringContext="//@api" required="//@schemas.166 //@schemas.167"/>
+  <schemas name="news_item" properties="//@schemas.168 //@schemas.169 //@schemas.170 //@schemas.171 //@schemas.172 //@schemas.173 //@schemas.174" declaringContext="//@api" required="//@schemas.168 //@schemas.170"/>
+  <schemas name="user" properties="//@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178 //@schemas.179 //@schemas.180 //@schemas.181 //@schemas.182 //@schemas.183 //@schemas.184 //@schemas.185 //@schemas.186 //@schemas.187 //@schemas.188 //@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193 //@schemas.194 //@schemas.195" declaringContext="//@api" required="//@schemas.175 //@schemas.176 //@schemas.177 //@schemas.178 //@schemas.183 //@schemas.186 //@schemas.188 //@schemas.189 //@schemas.190 //@schemas.191 //@schemas.192 //@schemas.193"/>
+  <schemas name="survey_item" properties="//@schemas.196 //@schemas.197 //@schemas.198 //@schemas.199 //@schemas.200" declaringContext="//@api" required="//@schemas.196 //@schemas.197 //@schemas.199 //@schemas.200"/>
+  <schemas name="question_item" properties="//@schemas.201 //@schemas.202" declaringContext="//@api" required="//@schemas.201 //@schemas.202"/>
+  <schemas name="survey_detail" properties="//@schemas.204 //@schemas.205" declaringContext="//@api" required="//@schemas.204 //@schemas.205"/>
+  <schemas name="organization_unit" properties="//@schemas.206 //@schemas.207 //@schemas.208 //@schemas.209" declaringContext="//@api" required="//@schemas.206 //@schemas.207 //@schemas.209"/>
+  <schemas name="organization_unit_user" properties="//@schemas.210 //@schemas.211 //@schemas.212 //@schemas.213" declaringContext="//@api" required="//@schemas.210 //@schemas.212 //@schemas.211 //@schemas.213"/>
+  <schemas name="organization_unit_response" properties="//@schemas.214 //@schemas.215" declaringContext="//@api" required="//@schemas.214 //@schemas.215"/>
+  <schemas name="cashback" properties="//@schemas.216 //@schemas.217 //@schemas.218 //@schemas.219 //@schemas.220 //@schemas.221 //@schemas.222" declaringContext="//@api" required="//@schemas.216 //@schemas.217 //@schemas.219 //@schemas.220"/>
+  <schemas name="cashbacks_response" properties="//@schemas.223 //@schemas.224" declaringContext="//@api" required="//@schemas.223 //@schemas.224"/>
+  <schemas name="auction_item" properties="//@schemas.225 //@schemas.226 //@schemas.227 //@schemas.228 //@schemas.229 //@schemas.230" declaringContext="//@api" required="//@schemas.225 //@schemas.226 //@schemas.229"/>
+  <schemas name="auction_response" properties="//@schemas.232 //@schemas.233" declaringContext="//@api" required="//@schemas.232 //@schemas.233"/>
+  <schemas name="auction_detail" properties="//@schemas.234 //@schemas.235 //@schemas.236 //@schemas.237 //@schemas.238 //@schemas.239 //@schemas.240" declaringContext="//@api" required="//@schemas.234 //@schemas.235 //@schemas.238 //@schemas.239 //@schemas.240"/>
+  <schemas name="bidding_item" properties="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244 //@schemas.245" declaringContext="//@api" required="//@schemas.241 //@schemas.242 //@schemas.243 //@schemas.244 //@schemas.245"/>
+  <schemas name="bidding_body" properties="//@schemas.246 //@schemas.247" declaringContext="//@api" required="//@schemas.246 //@schemas.247"/>
+  <schemas name="benefit_item" properties="//@schemas.248 //@schemas.249 //@schemas.250 //@schemas.251 //@schemas.252" declaringContext="//@api" required="//@schemas.248 //@schemas.249 //@schemas.252"/>
+  <schemas name="benefits_response" properties="//@schemas.253 //@schemas.254" declaringContext="//@api" required="//@schemas.253 //@schemas.254"/>
+  <schemas name="benefit_body" properties="//@schemas.255 //@schemas.256 //@schemas.257" declaringContext="//@api" required="//@schemas.255 //@schemas.256 //@schemas.257"/>
+  <schemas name="basket" properties="//@schemas.258 //@schemas.259 //@schemas.260 //@schemas.261 //@schemas.262" declaringContext="//@api" required="//@schemas.258 //@schemas.259 //@schemas.260 //@schemas.261 //@schemas.262"/>
+  <schemas name="baskets_response" properties="//@schemas.263 //@schemas.264" declaringContext="//@api" required="//@schemas.263 //@schemas.264"/>
+  <schemas name="basket_item" properties="//@schemas.265 //@schemas.266 //@schemas.267 //@schemas.268 //@schemas.269 //@schemas.270" declaringContext="//@api" required="//@schemas.265 //@schemas.266 //@schemas.267 //@schemas.268 //@schemas.269 //@schemas.270"/>
+  <schemas name="quantity_body" properties="//@schemas.271 //@schemas.272 //@schemas.273" declaringContext="//@api" required="//@schemas.271 //@schemas.272 //@schemas.273"/>
+  <schemas name="benefit" properties="//@schemas.274 //@schemas.275 //@schemas.276 //@schemas.277 //@schemas.278 //@schemas.279 //@schemas.280" declaringContext="//@api" required="//@schemas.274 //@schemas.276 //@schemas.278 //@schemas.275"/>
+  <schemas name="branch" properties="//@schemas.281 //@schemas.282" declaringContext="//@api" required="//@schemas.281 //@schemas.282"/>
+  <schemas name="benefit_price_item" properties="//@schemas.283 //@schemas.284 //@schemas.285 //@schemas.286 //@schemas.287 //@schemas.288" declaringContext="//@api" required="//@schemas.283 //@schemas.284 //@schemas.285 //@schemas.286 //@schemas.287 //@schemas.288"/>
+  <schemas name="benefit_order_body" properties="//@schemas.289 //@schemas.290 //@schemas.291 //@schemas.292 //@schemas.293" declaringContext="//@api" required="//@schemas.289 //@schemas.290 //@schemas.291 //@schemas.292 //@schemas.293"/>
+  <schemas name="address" properties="//@schemas.294 //@schemas.295 //@schemas.296" declaringContext="//@api" required="//@schemas.294 //@schemas.295 //@schemas.296"/>
+  <schemas name="address_gps" allOf="//@schemas.53 //@schemas.297" declaringContext="//@api"/>
+  <schemas name="partner_validation" properties="//@schemas.300 //@schemas.301 //@schemas.302 //@schemas.303" declaringContext="//@api" required="//@schemas.300 //@schemas.301 //@schemas.302 //@schemas.303"/>
+  <schemas name="location" properties="//@schemas.304 //@schemas.305" declaringContext="//@api" required="//@schemas.304 //@schemas.305"/>
+  <schemas name="product_item" properties="//@schemas.306 //@schemas.307 //@schemas.308" declaringContext="//@api" required="//@schemas.306 //@schemas.307"/>
+  <schemas name="opening_period" properties="//@schemas.309 //@schemas.310 //@schemas.311" declaringContext="//@api" required="//@schemas.310 //@schemas.311"/>
+  <schemas name="equipment" properties="//@schemas.312 //@schemas.313 //@schemas.314 //@schemas.315 //@schemas.316" declaringContext="//@api" required="//@schemas.312 //@schemas.313 //@schemas.314 //@schemas.315"/>
+  <schemas name="credit_card" properties="//@schemas.317 //@schemas.318" declaringContext="//@api" required="//@schemas.317 //@schemas.318"/>
+  <schemas name="service" properties="//@schemas.319 //@schemas.320 //@schemas.321 //@schemas.322" declaringContext="//@api" required="//@schemas.319 //@schemas.320 //@schemas.321 //@schemas.322"/>
+  <schemas name="availability" properties="//@schemas.323 //@schemas.324 //@schemas.325 //@schemas.326" declaringContext="//@api" required="//@schemas.323 //@schemas.324 //@schemas.325 //@schemas.326"/>
+  <schemas name="partner_detail" properties="//@schemas.327 //@schemas.328 //@schemas.329 //@schemas.330 //@schemas.331 //@schemas.332 //@schemas.333 //@schemas.334 //@schemas.335 //@schemas.336 //@schemas.337 //@schemas.338 //@schemas.339 //@schemas.340 //@schemas.341 //@schemas.343 //@schemas.344" declaringContext="//@api" required="//@schemas.327 //@schemas.328"/>
+  <schemas name="user_news_response" properties="//@schemas.345 //@schemas.346" declaringContext="//@api" required="//@schemas.345 //@schemas.346"/>
+  <schemas name="partner_search_detail_response" properties="//@schemas.347 //@schemas.348" declaringContext="//@api" required="//@schemas.347 //@schemas.348"/>
+  <schemas name="non_contractual_billings" properties="//@schemas.349 //@schemas.350 //@schemas.351 //@schemas.352 //@schemas.353 //@schemas.354" declaringContext="//@api" required="//@schemas.349 //@schemas.350 //@schemas.351 //@schemas.352 //@schemas.353 //@schemas.354"/>
+  <schemas name="non_contractual_billings_detail" properties="//@schemas.355 //@schemas.356 //@schemas.357 //@schemas.358 //@schemas.359 //@schemas.360 //@schemas.361 //@schemas.362 //@schemas.363 //@schemas.364 //@schemas.365 //@schemas.366 //@schemas.367 //@schemas.368" declaringContext="//@api" required="//@schemas.355 //@schemas.356 //@schemas.357 //@schemas.358 //@schemas.359 //@schemas.360 //@schemas.361 //@schemas.366 //@schemas.367 //@schemas.368"/>
+  <schemas name="csp" properties="//@schemas.369 //@schemas.370 //@schemas.371 //@schemas.372" declaringContext="//@api" required="//@schemas.369 //@schemas.370 //@schemas.371"/>
+  <schemas name="social_network" properties="//@schemas.373 //@schemas.374 //@schemas.375 //@schemas.376 //@schemas.377" declaringContext="//@api"/>
+  <schemas type="integer" format="int32" name="object_count" example="10" declaringContext="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="page" example="1" declaringContext="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="per_page" example="10" declaringContext="//@schemas.0"/>
+  <schemas type="integer" name="result" declaringContext="//@schemas.1"/>
+  <schemas type="string" name="message" declaringContext="//@schemas.1"/>
+  <schemas type="object" properties="//@schemas.76" declaringContext="//@schemas.2"/>
+  <schemas type="integer" name="id" declaringContext="//@schemas.75"/>
+  <schemas type="string" name="file_name" example="&quot;test.pdf&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="string" format="byte" description="BASE64" name="byte_data" example="&quot;116cfgnbfg616fgnsXb56&quot;" declaringContext="//@schemas.3"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.4"/>
+  <schemas type="string" name="user_name" example="&quot;Jan&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="string" name="user_surname" example="&quot;Novak&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="string" name="user_salutation" example="&quot;lenoch&quot;" declaringContext="//@schemas.4"/>
+  <schemas type="boolean" name="cash_allowed" example="false" declaringContext="//@schemas.4"/>
+  <schemas type="integer" format="int32" name="notification_id" example="123" declaringContext="//@schemas.5"/>
+  <schemas type="string" format="datetime" name="date" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.5"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.5"/>
+  <schemas type="string" name="transaction_number" example="&quot;1236789&quot;" declaringContext="//@schemas.6"/>
+  <schemas type="string" format="timestamp" name="date" example="&quot;2009-06-15T13:45:30.6170000&quot;" declaringContext="//@schemas.6"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.6"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.6"/>
+  <schemas type="string" format="datetime" name="account_validity_to" example="&quot;2009-06-15 13:45&quot;" declaringContext="//@schemas.6"/>
+  <schemas type="integer" format="int32" name="account_id" example="123" declaringContext="//@schemas.7"/>
+  <schemas type="number" format="decimal" name="current_balance" example="100.5" declaringContext="//@schemas.7"/>
+  <schemas type="string" name="name" example="&quot;ESTRAVENKA - 3000&quot;" declaringContext="//@schemas.7"/>
+  <schemas type="boolean" name="point_account" example="true" declaringContext="//@schemas.7"/>
+  <schemas type="array" name="cards" items="//@schemas.8" declaringContext="//@schemas.7"/>
+  <schemas name="last_charge" declaringContext="//@schemas.7" value="//@schemas.6"/>
+  <schemas name="last_drawdown" declaringContext="//@schemas.7" value="//@schemas.6"/>
+  <schemas type="integer" format="int32" name="card_id" example="123" declaringContext="//@schemas.8"/>
+  <schemas type="string" format="timestamp" name="valid_from" example="&quot;2009-06-15T13:45:30.6170000&quot;" declaringContext="//@schemas.8"/>
+  <schemas type="string" format="timestamp" name="valid_to" example="&quot;2010-03-15T13:45:30.6170000&quot;" declaringContext="//@schemas.8"/>
+  <schemas type="integer" format="int32" description="1 = Benefit; 2 = E-Meal vouchers; 3 = Cash card; 4 = Benefit + E-Meal card; 5 = Alive" name="type" example="1" declaringContext="//@schemas.8"/>
+  <schemas type="number" format="decimal" name="percent" example="123.5" declaringContext="//@schemas.9"/>
+  <schemas type="number" format="decimal" name="amount" example="123.5" declaringContext="//@schemas.10"/>
+  <schemas type="string" name="account_number" example="&quot;111-1478523690&quot;" declaringContext="//@schemas.10"/>
+  <schemas type="string" name="bank_code" example="&quot;0800&quot;" declaringContext="//@schemas.10"/>
+  <schemas type="string" name="transaction_number" example="&quot;986408&quot;" declaringContext="//@schemas.11"/>
+  <schemas type="string" format="timestamp" name="date" example="&quot;2009-06-15T13:45:30.6170000&quot;" declaringContext="//@schemas.11"/>
+  <schemas type="string" name="partner_name" example="&quot;Partner 123&quot;" declaringContext="//@schemas.11"/>
+  <schemas type="string" name="description" example="&quot;Popisek&quot;" declaringContext="//@schemas.11"/>
+  <schemas type="number" format="decimal" name="amount" example="123.5" declaringContext="//@schemas.11"/>
+  <schemas type="integer" description="1 = Reservation; 2 = Completed; 3 = Not applied; 4 = Cancel" name="status" example="1" declaringContext="//@schemas.11"/>
+  <schemas type="integer" description="1 = Cafeterie; 2 = E-Meal card; 3 = Cash" name="product_id" example="1" declaringContext="//@schemas.11"/>
+  <schemas type="integer" description="1 = Buying a Benefit; 2 = Import points; 3 = Cash; 4 = Non-Conventional Authorization; 5 = Points conversion; 6 = Postage" name="type" example="1" declaringContext="//@schemas.11"/>
+  <schemas type="array" name="data" items="//@schemas.11" declaringContext="//@schemas.12"/>
+  <schemas name="pagination" declaringContext="//@schemas.12" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="product_id" example="123" declaringContext="//@schemas.13"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev XYZ&quot;" declaringContext="//@schemas.13"/>
+  <schemas type="integer" format="int32" name="category_id" example="123" declaringContext="//@schemas.14"/>
+  <schemas type="integer" format="int32" name="parent_id" example="123" declaringContext="//@schemas.14"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev Z&quot;" declaringContext="//@schemas.14"/>
+  <schemas type="integer" format="int32" name="module_id" example="123" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev X&quot;" declaringContext="//@schemas.15"/>
+  <schemas type="integer" format="int32" name="news_id" example="123" declaringContext="//@schemas.16"/>
+  <schemas type="string" format="timestamp" name="date" example="&quot;2010-03-15T13:45:30.6170000&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev X&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="note" example="&quot;text...&quot;" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="login" example="&quot;uzivatel&quot;" declaringContext="//@schemas.17"/>
+  <schemas type="string" name="password_old" example="&quot;ux5FGhztel&amp;_df46&quot;" declaringContext="//@schemas.17"/>
+  <schemas type="string" name="password_new" example="&quot;FGhux56&amp;66_dfu465&quot;" declaringContext="//@schemas.17"/>
+  <schemas type="string" name="pin_old" example="&quot;8546&quot;" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="pin_new" example="&quot;9573&quot;" declaringContext="//@schemas.18"/>
+  <schemas type="string" name="puk" example="&quot;6463&quot;" declaringContext="//@schemas.19"/>
+  <schemas type="integer" format="int32" name="pre_order_id" example="123" declaringContext="//@schemas.20"/>
+  <schemas type="integer" format="int32" name="user_id" example="1234" declaringContext="//@schemas.20"/>
+  <schemas type="integer" format="int32" name="internal_benefit_id" example="23" declaringContext="//@schemas.20"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev XYZ&quot;" declaringContext="//@schemas.20"/>
+  <schemas type="integer" format="int32" name="year" example="2018" declaringContext="//@schemas.20"/>
+  <schemas type="array" name="months" items="//@schemas.140" declaringContext="//@schemas.20"/>
+  <schemas type="object" properties="//@schemas.141 //@schemas.142"/>
+  <schemas type="integer" format="int32" name="key" example="1" declaringContext="//@schemas.140"/>
+  <schemas name="value" declaringContext="//@schemas.140" value="//@schemas.21"/>
+  <schemas type="number" format="decimal" name="value" example="123.5" declaringContext="//@schemas.21"/>
+  <schemas type="number" format="decimal" name="value_min" example="123.5" declaringContext="//@schemas.21"/>
+  <schemas type="number" format="decimal" name="value_max" example="123.5" declaringContext="//@schemas.21"/>
+  <schemas type="boolean" name="checked" example="false" declaringContext="//@schemas.21"/>
+  <schemas type="integer" format="int32" name="partner_id" example="123" declaringContext="//@schemas.22"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev X&quot;" declaringContext="//@schemas.22"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.22"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.22"/>
+  <schemas type="integer" format="int32" name="partner_id" example="123" declaringContext="//@schemas.23"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev X&quot;" declaringContext="//@schemas.23"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.23"/>
+  <schemas name="location" declaringContext="//@schemas.23" value="//@schemas.56"/>
+  <schemas name="address" declaringContext="//@schemas.23" value="//@schemas.53"/>
+  <schemas type="array" name="categories" items="//@schemas.14" declaringContext="//@schemas.23"/>
+  <schemas type="array" name="products" items="//@schemas.57" declaringContext="//@schemas.23"/>
+  <schemas type="integer" format="int32" name="action_id" example="123" declaringContext="//@schemas.24"/>
+  <schemas type="string" name="name" example="&quot;N&#xe1;zev X&quot;" declaringContext="//@schemas.24"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.24"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.24"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.25"/>
+  <schemas type="string" name="text" example="&quot;text ...&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="integer" format="int32" description="1 - info, 2 - problem" name="type" example="1" declaringContext="//@schemas.25"/>
+  <schemas name="file" declaringContext="//@schemas.25" value="//@schemas.3"/>
+  <schemas type="array" name="data" items="//@schemas.27" declaringContext="//@schemas.26"/>
+  <schemas name="pagination" declaringContext="//@schemas.26" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="news_id" example="123" declaringContext="//@schemas.27"/>
+  <schemas type="integer" format="int32" name="client_id" example="23" declaringContext="//@schemas.27"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="string" format="datetime" name="date_from" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="string" format="datetime" name="date_to" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.27"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.27"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.28"/>
+  <schemas type="string" name="name" example="&quot;Jan&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" name="surname" example="&quot;Nov&#xe1;k&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" name="internal_code" example="&quot;123456&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="email" name="work_email" example="&quot;novak@email.cz&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="email" name="private_email" example="&quot;novak@email.cz&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="tel" name="phone" example="&quot;+420 777 777 777&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="date" name="birthdate" example="&quot;2018-02-06&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" name="login" example="&quot;JanNovak&quot;" declaringContext="//@schemas.28"/>
+  <schemas name="address" declaringContext="//@schemas.28" value="//@schemas.53"/>
+  <schemas type="integer" format="int32" name="bussines_place_id" example="23" declaringContext="//@schemas.28"/>
+  <schemas type="integer" format="int32" name="role_id" example="3" declaringContext="//@schemas.28"/>
+  <schemas type="integer" format="int32" name="organization_unit_id" example="23" declaringContext="//@schemas.28"/>
+  <schemas type="boolean" name="generate_cart" example="false" declaringContext="//@schemas.28"/>
+  <schemas type="boolean" name="blocked" example="false" declaringContext="//@schemas.28"/>
+  <schemas type="boolean" name="dont_import_credit" example="false" declaringContext="//@schemas.28"/>
+  <schemas type="boolean" name="alive_licence" example="false" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="datetime" name="valid_date_from" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="datetime" name="valid_date_to" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="datetime" name="employment_begin" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="string" format="datetime" name="employment_end" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.28"/>
+  <schemas type="integer" format="int32" name="survey_id" example="123" declaringContext="//@schemas.29"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.29"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.29"/>
+  <schemas type="string" format="datetime" name="valid_from" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.29"/>
+  <schemas type="string" format="datetime" name="valid_to" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.29"/>
+  <schemas type="integer" format="int32" name="question_id" example="123" declaringContext="//@schemas.30"/>
+  <schemas type="array" name="answer_values" items="//@schemas.203" declaringContext="//@schemas.30"/>
+  <schemas type="string" example="&quot;X&quot;"/>
+  <schemas type="integer" format="int32" name="survey_id" example="123" declaringContext="//@schemas.31"/>
+  <schemas type="array" name="answer_values" items="//@schemas.30" declaringContext="//@schemas.31"/>
+  <schemas type="integer" format="int32" name="organization_unit_id" example="123" declaringContext="//@schemas.32"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.32"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.32"/>
+  <schemas type="integer" format="int32" name="client_id" example="123" declaringContext="//@schemas.32"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.33"/>
+  <schemas type="string" name="name" example="&quot;Jan&quot;" declaringContext="//@schemas.33"/>
+  <schemas type="string" name="surname" example="&quot;Nov&#xe1;k&quot;" declaringContext="//@schemas.33"/>
+  <schemas type="string" format="tel" name="phone" example="&quot;+420 777 777 777&quot;" declaringContext="//@schemas.33"/>
+  <schemas type="array" name="data" items="//@schemas.32" declaringContext="//@schemas.34"/>
+  <schemas name="pagination" declaringContext="//@schemas.34" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="cashback_id" example="123" declaringContext="//@schemas.35"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.35"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.35"/>
+  <schemas type="number" format="decimal" name="provision_min" example="100.5" declaringContext="//@schemas.35"/>
+  <schemas type="number" format="decimal" name="provision_max" example="100.5" declaringContext="//@schemas.35"/>
+  <schemas type="integer" format="int32" name="image_id" example="123" declaringContext="//@schemas.35"/>
+  <schemas type="string" name="link" example="&quot;www.xyz.cz&quot;" declaringContext="//@schemas.35"/>
+  <schemas type="array" name="data" items="//@schemas.35" declaringContext="//@schemas.36"/>
+  <schemas name="pagination" declaringContext="//@schemas.36" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="auction_id" example="123" declaringContext="//@schemas.37"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.37"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.37"/>
+  <schemas type="integer" format="int32" name="image_id" example="123" declaringContext="//@schemas.37"/>
+  <schemas type="boolean" name="for_all" example="false" declaringContext="//@schemas.37"/>
+  <schemas type="array" name="for_clients" items="//@schemas.231" declaringContext="//@schemas.37"/>
+  <schemas type="integer" format="int32" example="123"/>
+  <schemas type="array" name="data" items="//@schemas.37" declaringContext="//@schemas.38"/>
+  <schemas name="pagination" declaringContext="//@schemas.38" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="auction_id" example="123" declaringContext="//@schemas.39"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.39"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.39"/>
+  <schemas type="integer" format="int32" name="image_id" example="123" declaringContext="//@schemas.39"/>
+  <schemas type="string" format="datetime" name="valid_from" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.39"/>
+  <schemas type="string" format="datetime" name="valid_to" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.39"/>
+  <schemas type="number" format="decimal" name="start_value" example="100.5" declaringContext="//@schemas.39"/>
+  <schemas type="integer" format="int32" name="bidding_id" example="123" declaringContext="//@schemas.40"/>
+  <schemas type="string" name="name" example="&quot;Jan&quot;" declaringContext="//@schemas.40"/>
+  <schemas type="string" name="surname" example="&quot;Nov&#xe1;k&quot;" declaringContext="//@schemas.40"/>
+  <schemas type="string" format="datetime" name="date" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.40"/>
+  <schemas type="number" format="decimal" name="bidding" example="100.5" declaringContext="//@schemas.40"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.41"/>
+  <schemas type="number" format="decimal" name="value" example="100.5" declaringContext="//@schemas.41"/>
+  <schemas type="integer" format="int32" name="benefit_id" example="123" declaringContext="//@schemas.42"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.42"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.42"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.42"/>
+  <schemas type="integer" format="int32" name="partner_id" example="23" declaringContext="//@schemas.42"/>
+  <schemas type="array" name="data" items="//@schemas.42" declaringContext="//@schemas.43"/>
+  <schemas name="pagination" declaringContext="//@schemas.43" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="benefit_id" example="123" declaringContext="//@schemas.44"/>
+  <schemas type="number" format="decimal" name="price" example="100.5" declaringContext="//@schemas.44"/>
+  <schemas type="integer" format="int32" name="quantity" example="2" declaringContext="//@schemas.44"/>
+  <schemas type="integer" format="int32" name="basket_id" example="123" declaringContext="//@schemas.45"/>
+  <schemas type="integer" format="int32" name="user_id" example="23" declaringContext="//@schemas.45"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.45"/>
+  <schemas type="integer" format="int32" name="number_of_items" example="2" declaringContext="//@schemas.45"/>
+  <schemas type="integer" format="int32" description="1 = Developed; 2 = Posted; 3 = Canceled" name="state" example="1" declaringContext="//@schemas.45"/>
+  <schemas type="array" name="data" items="//@schemas.45" declaringContext="//@schemas.46"/>
+  <schemas name="pagination" declaringContext="//@schemas.46" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="basket_item_id" example="123" declaringContext="//@schemas.47"/>
+  <schemas type="integer" format="int32" name="basket_id" example="123" declaringContext="//@schemas.47"/>
+  <schemas name="benefit" declaringContext="//@schemas.47" value="//@schemas.49"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.47"/>
+  <schemas type="integer" format="int32" name="quantity" example="2" declaringContext="//@schemas.47"/>
+  <schemas type="integer" format="int32" description="1 = Included in the basket; 3 = Canceled" name="state" example="1" declaringContext="//@schemas.47"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.48"/>
+  <schemas type="number" format="decimal" name="price" example="100.5" declaringContext="//@schemas.48"/>
+  <schemas type="integer" format="int32" name="quantity" example="2" declaringContext="//@schemas.48"/>
+  <schemas type="integer" format="int32" name="benefit_id" example="123" declaringContext="//@schemas.49"/>
+  <schemas type="integer" format="int32" name="partner_id" example="23" declaringContext="//@schemas.49"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.49"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.49"/>
+  <schemas type="integer" format="int32" description="1 = Order from cafeterie; 2 = Contact" name="type" example="1" declaringContext="//@schemas.49"/>
+  <schemas type="array" name="branches" items="//@schemas.50" declaringContext="//@schemas.49"/>
+  <schemas type="array" name="benefit_price_items" items="//@schemas.51" declaringContext="//@schemas.49"/>
+  <schemas type="integer" format="int32" name="branch_id" example="123" declaringContext="//@schemas.50"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.50"/>
+  <schemas type="integer" format="int32" name="benefit_price_item_id" example="23" declaringContext="//@schemas.51"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.51"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.51"/>
+  <schemas type="integer" format="int32" name="quantity" example="2" declaringContext="//@schemas.51"/>
+  <schemas type="boolean" name="amount_fixed" example="false" declaringContext="//@schemas.51"/>
+  <schemas type="boolean" name="quantity_fixed" example="false" declaringContext="//@schemas.51"/>
+  <schemas type="integer" format="int32" name="user_id" example="123" declaringContext="//@schemas.52"/>
+  <schemas type="integer" format="int32" name="branch_id" example="123" declaringContext="//@schemas.52"/>
+  <schemas type="integer" format="int32" name="benefit_item_id" example="23" declaringContext="//@schemas.52"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.52"/>
+  <schemas type="integer" format="int32" name="quantity" example="2" declaringContext="//@schemas.52"/>
+  <schemas type="string" name="town" example="&quot;Bene&#x161;ov&quot;" declaringContext="//@schemas.53"/>
+  <schemas type="string" name="street" example="&quot;N&#xe1;dra&#x17e;n&#xed; 2000&quot;" declaringContext="//@schemas.53"/>
+  <schemas type="string" name="zip_code" example="&quot;25601&quot;" declaringContext="//@schemas.53"/>
+  <schemas properties="//@schemas.298 //@schemas.299" declaringContext="//@schemas.54"/>
+  <schemas type="string" name="gps_latitude" example="&quot;23.2345&quot;" declaringContext="//@schemas.297"/>
+  <schemas type="string" name="gps_longitude" example="&quot;23.2345&quot;" declaringContext="//@schemas.297"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.55"/>
+  <schemas type="string" name="registration_identification" declaringContext="//@schemas.55"/>
+  <schemas type="string" name="vat_identification" declaringContext="//@schemas.55"/>
+  <schemas name="address" declaringContext="//@schemas.55" value="//@schemas.53"/>
+  <schemas type="string" name="gps_latitude" example="&quot;23.2345&quot;" declaringContext="//@schemas.56"/>
+  <schemas type="string" name="gps_longitude" example="&quot;23.2345&quot;" declaringContext="//@schemas.56"/>
+  <schemas type="integer" format="int32" description=" 1 = monday; 2 = tuesday" name="product_id" example="123" declaringContext="//@schemas.57"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.57"/>
+  <schemas type="integer" format="int32" name="image_id" example="23" declaringContext="//@schemas.57"/>
+  <schemas type="integer" format="int32" name="opening_periods" example="123" declaringContext="//@schemas.58"/>
+  <schemas type="string" description="HH:mm" name="time_from" example="&quot;12:35&quot;" declaringContext="//@schemas.58"/>
+  <schemas type="string" description="HH:mm" name="time_to" example="&quot;12:35&quot;" declaringContext="//@schemas.58"/>
+  <schemas type="boolean" name="wifi" example="false" declaringContext="//@schemas.59"/>
+  <schemas type="boolean" name="garden" example="false" declaringContext="//@schemas.59"/>
+  <schemas type="boolean" name="accepting_meal_ticket" example="false" declaringContext="//@schemas.59"/>
+  <schemas type="boolean" name="accepting_e_meal_card" example="false" declaringContext="//@schemas.59"/>
+  <schemas type="array" name="accepting_credit_cards" items="//@schemas.60" declaringContext="//@schemas.59"/>
+  <schemas type="integer" format="int32" name="credit_card_id" example="123" declaringContext="//@schemas.60"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.60"/>
+  <schemas type="boolean" name="terrace" example="false" declaringContext="//@schemas.61"/>
+  <schemas type="boolean" name="reservation_online" example="false" declaringContext="//@schemas.61"/>
+  <schemas type="boolean" name="barrier_free" example="false" declaringContext="//@schemas.61"/>
+  <schemas type="boolean" name="private_events" example="false" declaringContext="//@schemas.61"/>
+  <schemas type="boolean" name="parking" example="false" declaringContext="//@schemas.62"/>
+  <schemas type="boolean" name="children" example="false" declaringContext="//@schemas.62"/>
+  <schemas type="boolean" name="pets" example="false" declaringContext="//@schemas.62"/>
+  <schemas type="string" name="capacity" example="&quot;2 sal&#xf3;nky po 30 &#x17e;idl&#xed;ch&quot;" declaringContext="//@schemas.62"/>
+  <schemas type="integer" format="int32" name="partner_id" example="123" declaringContext="//@schemas.63"/>
+  <schemas type="string" name="name" example="&quot;Nazev X&quot;" declaringContext="//@schemas.63"/>
+  <schemas type="string" name="description" example="&quot;Popis...&quot;" declaringContext="//@schemas.63"/>
+  <schemas type="string" format="tel" name="phone" example="&quot;+420 777 777 777&quot;" declaringContext="//@schemas.63"/>
+  <schemas type="string" format="email" name="email" example="&quot;novak@email.cz&quot;" declaringContext="//@schemas.63"/>
+  <schemas type="string" name="web" example="&quot;www.xyz.cz&quot;" declaringContext="//@schemas.63"/>
+  <schemas name="location" declaringContext="//@schemas.63" value="//@schemas.56"/>
+  <schemas type="array" name="products" items="//@schemas.57" declaringContext="//@schemas.63"/>
+  <schemas type="array" name="categories" items="//@schemas.14" declaringContext="//@schemas.63"/>
+  <schemas type="array" name="opening_periods" items="//@schemas.58" declaringContext="//@schemas.63"/>
+  <schemas name="equipment" declaringContext="//@schemas.63" value="//@schemas.59"/>
+  <schemas name="services" declaringContext="//@schemas.63" value="//@schemas.61"/>
+  <schemas name="availability" declaringContext="//@schemas.63" value="//@schemas.62"/>
+  <schemas type="string" name="link_to_donappetit" example="&quot;www.xyz.cz&quot;" declaringContext="//@schemas.63"/>
+  <schemas type="array" name="images" items="//@schemas.342" declaringContext="//@schemas.63"/>
+  <schemas type="integer" format="int32" example="123"/>
+  <schemas name="social_networks" declaringContext="//@schemas.63" value="//@schemas.69"/>
+  <schemas name="address" declaringContext="//@schemas.63" value="//@schemas.54"/>
+  <schemas type="array" name="data" items="//@schemas.16" declaringContext="//@schemas.64"/>
+  <schemas name="pagination" declaringContext="//@schemas.64" value="//@schemas.0"/>
+  <schemas type="array" name="data" items="//@schemas.23" declaringContext="//@schemas.65"/>
+  <schemas name="pagination" declaringContext="//@schemas.65" value="//@schemas.0"/>
+  <schemas type="integer" format="int32" name="non_contractual_billing_id" example="123" declaringContext="//@schemas.66"/>
+  <schemas type="string" format="datetime" name="date" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.66"/>
+  <schemas type="string" name="partner_name" example="&quot;XYZ&quot;" declaringContext="//@schemas.66"/>
+  <schemas type="string" name="transaction_number" example="&quot;123456789&quot;" declaringContext="//@schemas.66"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.66"/>
+  <schemas type="integer" format="int32" description="1 - Received, 2 - Confirmed, 3 - Refused, 4 - Accepted, 5 - Paid" name="state" example="2" declaringContext="//@schemas.66"/>
+  <schemas type="string" name="registration_number" example="&quot;123456789&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="city" example="&quot;Bene&#x161;ov&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="street" example="&quot;Na Bezd&#x11b;kov&#x11b;&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="partner_account_number" example="&quot;123456789&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="variable_symbol" example="&quot;1234&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="partner_name" example="&quot;XYZ&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="number" format="decimal" name="amount" example="100.5" declaringContext="//@schemas.67"/>
+  <schemas type="string" format="datetime" name="due_date" example="&quot;2018-02-06 12:00&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="note" example="&quot;Pozn&#xe1;mka...&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" format="tel" name="phone" example="&quot;+420 777 777 777&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" format="email" name="email" example="&quot;novak@email.cz&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="card_number" example="&quot;123456789&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="user_name" example="&quot;JanNovak&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="string" name="client_name" example="&quot;Jan Nov&#xe1;k&quot;" declaringContext="//@schemas.67"/>
+  <schemas type="integer" format="int32" name="csp_id" example="123" declaringContext="//@schemas.68"/>
+  <schemas type="string" name="name" example="&quot;XYZ&quot;" declaringContext="//@schemas.68"/>
+  <schemas type="string" name="partner" example="&quot;123456789&quot;" declaringContext="//@schemas.68"/>
+  <schemas type="array" name="categories" items="//@schemas.14" declaringContext="//@schemas.68"/>
+  <schemas type="string" name="url_facebook" example="&quot;www.facebook.com/&quot;" declaringContext="//@schemas.69"/>
+  <schemas type="string" name="url_twitter" example="&quot;www.twitter.com/&quot;" declaringContext="//@schemas.69"/>
+  <schemas type="string" name="url_linkedin" example="&quot;www.linkedin.com/&quot;" declaringContext="//@schemas.69"/>
+  <schemas type="string" name="url_google_plus" example="&quot;www.google.com/&quot;" declaringContext="//@schemas.69"/>
+  <schemas type="string" name="url_pinterest" example="&quot;www.pinterest.com/&quot;" declaringContext="//@schemas.69"/>
+  <schemas type="array" items="//@schemas.5"/>
+  <schemas type="array" items="//@schemas.7"/>
+  <schemas type="array" items="//@schemas.8"/>
+  <schemas type="array" items="//@schemas.12"/>
+  <schemas type="array" items="//@schemas.20"/>
+  <schemas items="//@schemas.2"/>
+  <schemas type="array" items="//@schemas.22"/>
+  <schemas type="array" items="//@schemas.13"/>
+  <schemas type="array" items="//@schemas.14"/>
+  <schemas type="array" items="//@schemas.15"/>
+  <schemas type="array" items="//@schemas.24"/>
+  <schemas items="//@schemas.2"/>
+  <schemas items="//@schemas.2"/>
+  <schemas type="array" items="//@schemas.29"/>
+  <schemas items="//@schemas.2"/>
+  <schemas type="array" items="//@schemas.33"/>
+  <schemas type="array" items="//@schemas.40"/>
+  <schemas type="array" items="//@schemas.47"/>
+  <schemas type="array" items="//@schemas.49"/>
+  <schemas type="array" items="//@schemas.68"/>
+  <schemas type="integer" example="1500"/>
+  <responses schema="//@schemas.4" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses schema="//@schemas.378" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses schema="//@schemas.379" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.380" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.381" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.3" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.382" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.20" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.383" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.384" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses schema="//@schemas.65" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses schema="//@schemas.65" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+  <responses schema="//@schemas.385" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.386" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.387" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.64" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.16" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.388" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.26" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.389" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.390" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.391" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.392" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.3" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.34" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.393" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.36" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.38" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.39" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.394" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.43" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.49" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.46" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.395" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.63" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.396" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.66" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.55" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.397" description="Ok" code="200"/>
+  <responses description="Error" code="400"/>
+  <responses schema="//@schemas.398" description="Ok" code="200"/>
+  <responses description="Not found" code="404"/>
+</openapi:Root>

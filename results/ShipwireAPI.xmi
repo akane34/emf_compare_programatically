@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Diff:Diff xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Diff="http://www.uniandes.edu.co/diff" newVersion="4.0" oldVersion="3.0">
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.100" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.100" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Product" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.94" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.94" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Product" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.34" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.34" value="body"/>
+    <oldDefinition SchemaName="UpdateAContainerRequest" type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.34" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.34" value="body"/>
+    <oldDefinition SchemaName="UpdateAContainerRequest" type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.89" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.89" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Product" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.89" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.89" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Product" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.72" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.72" value="body"/>
+    <oldDefinition SchemaName="RetireProductsRequest" type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.72" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.72" value="body"/>
+    <oldDefinition SchemaName="RetireProductsRequest" type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.63" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.63" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.63" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.63" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.55" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.55" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.55" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.55" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Container" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.25" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.25" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.25" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.25" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.17" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.17" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:ParameterType" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.17" value="body"/>
+    <old EObject="ShipwireAPI_4.0.xmi#//@paramters.17" value="body"/>
+    <oldDefinition type="unspecified"/>
+    <newDefinition SchemaName="Warehouse" type="unspecified"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.58" value="includeArchived" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.61" value="allOrNothing" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.62" value="doNotPersistOnWarnings" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.100" value="body" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.70" value="allOrNothing" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.71" value="doNotPersistOnWarnings" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.72" value="body" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.67" value="includeArchived" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.74" value="offset" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.75" value="limit" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.76" value="includeArchived" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.78" value="text" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.79" value="sku" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.80" value="classification" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.81" value="status" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.82" value="productId" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.83" value="externalId" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.84" value="shipwireVendorId" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.85" value="vendorExternalId" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.39" value="externalId" path="/api/v4/warehouse/e/{externalId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.40" value="include" path="/api/v4/warehouse/e/{externalId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.41" value="includeArchived" path="/api/v4/warehouse/e/{externalId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.32" value="allOrNothing" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.33" value="doNotPersistOnWarnings" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.34" value="body" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.29" value="includeArchived" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.20" value="includeArchived" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.23" value="allOrNothing" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.24" value="doNotPersistOnWarnings" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.42" value="offset" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.43" value="limit" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.45" value="includeArchived" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.47" value="warehouseId" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.48" value="shipwireWarehouseId" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.49" value="warehouseExternalId" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.50" value="updatedAfter" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.51" value="updatedBefore" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.53" value="allOrNothing" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.54" value="doNotPersistOnWarnings" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.0" value="offset" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.1" value="limit" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.3" value="shipwireId" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.6" value="shipwireVendorId" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.11" value="includeArchived" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.12" value="updatedAfter" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.13" value="updatedBefore" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.15" value="allOrNothing" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.16" value="doNotPersistOnWarnings" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.36" value="warehouseId" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.37" value="include" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.38" value="includeArchived" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.110" value="id" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.111" value="externalId" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.108" value="id" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.2" value="warehouseIds" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.3" value="warehouseExternalIds" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.4" value="type" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.243" value="id" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.246" value="vendorId" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:RemoveParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_3.0.xmi#//@paramters.256" value="id" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.19" value="ContainerGetResponse" path="/api/v4/warehouse/{warehouseId}/containers"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.93" path="/api/v4/warehouse/{warehouseId}/containers"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ContainerGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.5" value="WarehouseGetResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.88" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.7" value="WarehouseSaveResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.88" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.10" value="DeleteResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.88" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.5" value="WarehouseGetResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.89" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.7" value="WarehouseSaveResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.89" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.10" value="DeleteResponse" path="/api/v4/warehouse/{warehouseId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.89" path="/api/v4/warehouse/{warehouseId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.3" value="WarehouseIndexResponse" path="/api/v4/warehouse"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.86" path="/api/v4/warehouse"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.4" value="WarehouseSaveResponse" path="/api/v4/warehouse"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.86" path="/api/v4/warehouse"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.3" value="WarehouseIndexResponse" path="/api/v4/warehouse"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.87" path="/api/v4/warehouse"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.4" value="WarehouseSaveResponse" path="/api/v4/warehouse"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.87" path="/api/v4/warehouse"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="WarehouseSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.47" value="ProductGetResponse" path="/api/v4/product/e/{externalId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.33" path="/api/v4/product/e/{externalId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.49" value="DeleteResponse" path="/api/v4/product/e/{externalId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.33" path="/api/v4/product/e/{externalId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.48" value="ProductSaveResponse" path="/api/v4/product/e/{externalId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.33" path="/api/v4/product/e/{externalId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.44" value="ProductSaveResponse" path="/api/v4/product/{productId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.34" path="/api/v4/product/{productId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.45" value="DeleteResponse" path="/api/v4/product/{productId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.34" path="/api/v4/product/{productId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.43" value="ProductGetResponse" path="/api/v4/product/{productId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.34" path="/api/v4/product/{productId}"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.41" value="ProductSaveResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.31" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.42" value="ProductSaveResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.31" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.40" value="ProductIndexResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.31" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.41" value="ProductSaveResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.32" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.42" value="ProductSaveResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.32" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.40" value="ProductIndexResponse" path="/api/v4/product"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.32" path="/api/v4/product"/>
+    <oldDefinition/>
+    <newDefinition SchemaName="ProductIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.26" value="ContainerGetResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.4" value="getAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="getAContainerResponse"/>
+    <newDefinition SchemaName="ContainerGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.28" value="ContainerSaveResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.4" value="getAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="getAContainerResponse"/>
+    <newDefinition SchemaName="ContainerSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.31" value="DeleteResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.4" value="getAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="getAContainerResponse"/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.26" value="ContainerGetResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.5" value="UpdateAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="UpdateAContainerResponse"/>
+    <newDefinition SchemaName="ContainerGetResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.28" value="ContainerSaveResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.5" value="UpdateAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="UpdateAContainerResponse"/>
+    <newDefinition SchemaName="ContainerSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.31" value="DeleteResponse" path="/api/v4/container/{containerId}"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.5" value="UpdateAContainerResponse" path="/api/v4/container/{containerId}"/>
+    <oldDefinition SchemaName="UpdateAContainerResponse"/>
+    <newDefinition SchemaName="DeleteResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.23" value="ContainerIndexResponse" path="/api/v4/container"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.2" value="GetContainersResponse" path="/api/v4/container"/>
+    <oldDefinition SchemaName="GetContainersResponse"/>
+    <newDefinition SchemaName="ContainerIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.24" value="ContainerSaveResponse" path="/api/v4/container"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.2" value="GetContainersResponse" path="/api/v4/container"/>
+    <oldDefinition SchemaName="GetContainersResponse"/>
+    <newDefinition SchemaName="ContainerSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.23" value="ContainerIndexResponse" path="/api/v4/container"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.3" value="CreateANewContainerResponse" path="/api/v4/container"/>
+    <oldDefinition SchemaName="CreateANewContainerResponse"/>
+    <newDefinition SchemaName="ContainerIndexResponse"/>
+  </change>
+  <change xsi:type="Diff:ReturnType" changeElement="ReturnType">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.24" value="ContainerSaveResponse" path="/api/v4/container"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.3" value="CreateANewContainerResponse" path="/api/v4/container"/>
+    <oldDefinition SchemaName="CreateANewContainerResponse"/>
+    <newDefinition SchemaName="ContainerSaveResponse"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.6" value="shipwireVendorId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.22" value="vendorId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.6" value="shipwireVendorId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.22" value="vendorId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.6" value="shipwireVendorId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.22" value="vendorId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.51" value="updatedBefore"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.27" value="createdBefore"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.51" value="updatedBefore"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.27" value="createdBefore"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.13" value="updatedBefore"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.31" value="completedBefore"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.13" value="updatedBefore"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.31" value="completedBefore"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.59" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.38" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.59" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.38" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.64" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.64" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.64" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.64" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.84" value="shipwireVendorId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.103" value="vendorId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.84" value="shipwireVendorId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.103" value="vendorId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.92" value="productId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.108" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.90" value="productId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.110" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.78" value="text"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.120" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.78" value="text"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.120" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.67" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.142" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.67" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.142" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.67" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.142" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.56" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.146" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.56" value="containerId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.146" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.95" value="productId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.148" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.95" value="productId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.148" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.36" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.150" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.36" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.150" value="externalId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.48" value="shipwireWarehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.164" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.48" value="shipwireWarehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.164" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.48" value="shipwireWarehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.164" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.58" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.180" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.58" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.180" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.58" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.180" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.3" value="shipwireId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.196" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.3" value="shipwireId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.196" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.3" value="shipwireId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.196" value="warehouseId"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.45" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.206" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.45" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.206" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.45" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.206" value="includeCleared"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.99" value="include"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.226" value="includeEmpty"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.99" value="include"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.226" value="includeEmpty"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.99" value="include"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.226" value="includeEmpty"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.41" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.231" value="includeEmptyShipwireAnywhere"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.41" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.231" value="includeEmptyShipwireAnywhere"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.41" value="includeArchived"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.231" value="includeEmptyShipwireAnywhere"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.26" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.252" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.26" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.252" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.21" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.256" value="id"/>
+  </change>
+  <change xsi:type="Diff:RenameParameter" changeElement="methodParameter">
+    <new EObject="ShipwireAPI_4.0.xmi#//@paramters.21" value="warehouseId"/>
+    <old EObject="ShipwireAPI_3.0.xmi#//@paramters.256" value="id"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.93" value="200" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.88" value="200" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.89" value="200" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.86" value="200" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.87" value="200" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.33" value="200" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.34" value="200" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.31" value="200" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.32" value="200" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.4" value="200" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.5" value="200" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.2" value="200" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:RemoveStatusCode" changeElement="StatusCode">
+    <old EObject="ShipwireAPI_3.0.xmi#//@responses.3" value="200" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.19" value="200" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.20" value="404" path="/api/v4/warehouse/{warehouseId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.5" value="200" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.6" value="404" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.7" value="200" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.8" value="422" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.9" value="404" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.10" value="200" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.11" value="404" path="/api/v4/warehouse/{warehouseId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.3" value="200" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.4" value="200" path="/api/v4/warehouse"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.47" value="200" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.44" value="200" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.49" value="200" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.50" value="404" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.48" value="200" path="/api/v4/product/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.41" value="200" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.42" value="200" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.40" value="200" path="/api/v4/product"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.26" value="200" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.27" value="404" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.28" value="200" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.29" value="422" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.30" value="404" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.31" value="200" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.32" value="404" path="/api/v4/container/{containerId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.23" value="200" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.24" value="200" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.25" value="422" path="/api/v4/container"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.45" value="200" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.46" value="404" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.43" value="200" path="/api/v4/product/{productId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.38" value="200" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.39" value="404" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.35" value="200" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.36" value="422" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.37" value="404" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.33" value="200" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.34" value="404" path="/api/v4/container/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.21" value="200" path="/api/v4/warehouse/e/{externalId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.22" value="404" path="/api/v4/warehouse/e/{externalId}/containers"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.17" value="200" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.18" value="404" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.14" value="200" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.15" value="422" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.16" value="404" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.12" value="200" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.13" value="404" path="/api/v4/warehouse/e/{externalId}"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.1" value="200" path="/api/v4/auth"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.2" value="422" path="/api/v4/auth"/>
+  </change>
+  <change xsi:type="Diff:AddStatusCode" changeElement="StatusCode">
+    <new EObject="ShipwireAPI_4.0.xmi#//@responses.0" value="200" path="/api/v4/auth"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.72/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/secret/{id}" path="/api/v3/secret/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.72/@delete" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/secret/{id}" path="/api/v3/secret/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.71/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/secret" path="/api/v3/secret"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.71/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/secret" path="/api/v3/secret"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.70/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/webhooks/{id}" path="/api/v3/webhooks/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.70/@put" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/webhooks/{id}" path="/api/v3/webhooks/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.70/@delete" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/webhooks/{id}" path="/api/v3/webhooks/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.69/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/webhooks" path="/api/v3/webhooks"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.69/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/webhooks" path="/api/v3/webhooks"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.67/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/warehouses/{id}/retire" path="/api/v3.1/warehouses/{id}/retire"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.64/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors/{id}/extendedAttributes" path="/api/v3.1/vendors/{id}/extendedAttributes"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.63/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors/{id}/retire" path="/api/v3.1/vendors/{id}/retire"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.62/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors/{id}" path="/api/v3.1/vendors/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.62/@put" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors/{id}" path="/api/v3.1/vendors/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.61/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors" path="/api/v3.1/vendors"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.61/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/vendors" path="/api/v3.1/vendors"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.60/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/stock/adjust" path="/api/v3/stock/adjust"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.59/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/stock" path="/api/v3/stock"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.58/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/returns/generateLabels/{id}" path="/api/v3.1/returns/generateLabels/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.58/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/returns/generateLabels/{id}" path="/api/v3.1/returns/generateLabels/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.57/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/returns/{id}/markComplete" path="/api/v3.1/returns/{id}/markComplete"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.56/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}/labels" path="/api/v3/returns/{id}/labels"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.55/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}/trackings" path="/api/v3/returns/{id}/trackings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.54/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}/items" path="/api/v3/returns/{id}/items"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.53/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}/holds" path="/api/v3/returns/{id}/holds"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.52/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}/cancel" path="/api/v3/returns/{id}/cancel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.51/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns/{id}" path="/api/v3/returns/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.50/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns" path="/api/v3/returns"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.50/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/returns" path="/api/v3/returns"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.49/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/receivings/{id}/markComplete" path="/api/v3.1/receivings/{id}/markComplete"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.48/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/labels" path="/api/v3/receivings/{id}/labels"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.47/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/trackings" path="/api/v3/receivings/{id}/trackings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.46/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/shipments" path="/api/v3/receivings/{id}/shipments"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.45/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/items" path="/api/v3/receivings/{id}/items"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.44/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/extendedAttributes" path="/api/v3/receivings/{id}/extendedAttributes"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.43/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/instructionsRecipients" path="/api/v3/receivings/{id}/instructionsRecipients"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.42/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/holds" path="/api/v3/receivings/{id}/holds"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.41/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/labels/cancel" path="/api/v3/receivings/{id}/labels/cancel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.40/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}/cancel" path="/api/v3/receivings/{id}/cancel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.39/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}" path="/api/v3/receivings/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.39/@put" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings/{id}" path="/api/v3/receivings/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.38/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings" path="/api/v3/receivings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.38/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/receivings" path="/api/v3/receivings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.37/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/rate" path="/api/v3.1/rate"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.36/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/rate" path="/api/v3/rate"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.35/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/approve or /api/v3/purchaseOrders/E{externalId}/approve" path="/api/v3/purchaseOrders/{id}/approve or /api/v3/purchaseOrders/E{externalId}/approve"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.34/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/extendedAttributes or /api/v3/purchaseOrders/E{externalId}/extendedAttributes" path="/api/v3/purchaseOrders/{id}/extendedAttributes or /api/v3/purchaseOrders/E{externalId}/extendedAttributes"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.33/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/orders or /api/v3/purchaseOrders/E{externalId}/orders" path="/api/v3/purchaseOrders/{id}/orders or /api/v3/purchaseOrders/E{externalId}/orders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.32/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/trackings or /api/v3/purchaseOrders/E{externalId}/trackings" path="/api/v3/purchaseOrders/{id}/trackings or /api/v3/purchaseOrders/E{externalId}/trackings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.31/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/items or /api/v3/purchaseOrders/E{externalId}/items" path="/api/v3/purchaseOrders/{id}/items or /api/v3/purchaseOrders/E{externalId}/items"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.30/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/holds or /api/v3/purchaseOrders/E{externalId}/holds" path="/api/v3/purchaseOrders/{id}/holds or /api/v3/purchaseOrders/E{externalId}/holds"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.29/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/hold/clear or /api/v3/purchaseOrders/E{externalId}/hold/clear" path="/api/v3/purchaseOrders/{id}/hold/clear or /api/v3/purchaseOrders/E{externalId}/hold/clear"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.28/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/hold or /api/v3/purchaseOrders/E{externalId}/hold" path="/api/v3/purchaseOrders/{id}/hold or /api/v3/purchaseOrders/E{externalId}/hold"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.27/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id}/cancel or /api/v3/purchaseOrders/E{externalId}/cancel" path="/api/v3/purchaseOrders/{id}/cancel or /api/v3/purchaseOrders/E{externalId}/cancel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.26/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id} or /api/v3/purchaseOrders/E{externalId}" path="/api/v3/purchaseOrders/{id} or /api/v3/purchaseOrders/E{externalId}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.26/@put" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders/{id} or /api/v3/purchaseOrders/E{externalId}" path="/api/v3/purchaseOrders/{id} or /api/v3/purchaseOrders/E{externalId}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.25/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders" path="/api/v3/purchaseOrders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.25/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/purchaseOrders" path="/api/v3/purchaseOrders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.24/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/products/retire" path="/api/v3/products/retire"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.22/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/products" path="/api/v3/products"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.21/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/orders/generatePackingLists/{id}" path="/api/v3.1/orders/generatePackingLists/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.21/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/orders/generatePackingLists/{id}" path="/api/v3.1/orders/generatePackingLists/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.20/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/orders/generateLabels/{id}" path="/api/v3.1/orders/generateLabels/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.20/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/orders/generateLabels/{id}" path="/api/v3.1/orders/generateLabels/{id}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.19/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/markComplete or /api/v3/orders/E{externalId}/markComplete" path="/api/v3/orders/{id}/markComplete or /api/v3/orders/E{externalId}/markComplete"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.18/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/markSubmitted or /api/v3/orders/E{externalId}/markSubmitted" path="/api/v3/orders/{id}/markSubmitted or /api/v3/orders/E{externalId}/markSubmitted"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.17/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/markProcessed or /api/v3/orders/E{externalId}/markProcessed" path="/api/v3/orders/{id}/markProcessed or /api/v3/orders/E{externalId}/markProcessed"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.16/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/holds/clear or /api/v3/orders/E{externalId}/holds/clear" path="/api/v3/orders/{id}/holds/clear or /api/v3/orders/E{externalId}/holds/clear"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.15/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/returns or /api/v3/orders/E{externalId}/returns" path="/api/v3/orders/{id}/returns or /api/v3/orders/E{externalId}/returns"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.14/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/extendedAttributes or /api/v3/orders/E{externalId}/extendedAttributes" path="/api/v3/orders/{id}/extendedAttributes or /api/v3/orders/E{externalId}/extendedAttributes"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.13/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/pieces or /api/v3/orders/E{externalId}/pieces" path="/api/v3/orders/{id}/pieces or /api/v3/orders/E{externalId}/pieces"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.12/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/splitOrders or /api/v3/orders/E{externalId}/splitOrders" path="/api/v3/orders/{id}/splitOrders or /api/v3/orders/E{externalId}/splitOrders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.11/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/shippingLabel or /api/v3/orders/E{externalId}/shippingLabel" path="/api/v3/orders/{id}/shippingLabel or /api/v3/orders/E{externalId}/shippingLabel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.10/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/packingList or /api/v3/orders/E{externalId}/packingList" path="/api/v3/orders/{id}/packingList or /api/v3/orders/E{externalId}/packingList"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.9/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/commercialInvoice or /api/v3/orders/E{externalId}/commercialInvoice" path="/api/v3/orders/{id}/commercialInvoice or /api/v3/orders/E{externalId}/commercialInvoice"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.8/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/trackings or /api/v3/orders/E{externalId}/trackings" path="/api/v3/orders/{id}/trackings or /api/v3/orders/E{externalId}/trackings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.8/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/trackings or /api/v3/orders/E{externalId}/trackings" path="/api/v3/orders/{id}/trackings or /api/v3/orders/E{externalId}/trackings"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.7/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/holds or /api/v3/orders/E{externalId}/holds" path="/api/v3/orders/{id}/holds or /api/v3/orders/E{externalId}/holds"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.6/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/items or /api/v3/orders/E{externalId}/items" path="/api/v3/orders/{id}/items or /api/v3/orders/E{externalId}/items"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.5/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id}/cancel or /api/v3/orders/E{externalId}/cancel" path="/api/v3/orders/{id}/cancel or /api/v3/orders/E{externalId}/cancel"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.4/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id} or /api/v3/orders/E{externalId}" path="/api/v3/orders/{id} or /api/v3/orders/E{externalId}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.4/@put" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders/{id} or /api/v3/orders/E{externalId}" path="/api/v3/orders/{id} or /api/v3/orders/E{externalId}"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.3/@get" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders" path="/api/v3/orders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.3/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3/orders" path="/api/v3/orders"/>
+  </change>
+  <change xsi:type="Diff:UnsupportRequestMethod" changeElement="method">
+    <old EObject="ShipwireAPI_3.0.xmi#//@api/@paths.0/@post" value="virtserver.swaggerhub.com/jpreed/Shipwire-API/4.0/api/v3.1/addressValidation" path="/api/v3.1/addressValidation"/>
+  </change>
+</Diff:Diff>
