@@ -6,41 +6,51 @@
   <packaging>war</packaging>
   <version>1.0.0</version>
   <name>comparer Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
+  <url>http://maven.apache.org</url>  
    
+    
+  	<build>  
+		<sourceDirectory>src</sourceDirectory>
+		<finalName>comparer</finalName>
+		<plugins>
+			<plugin>			
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target> 
+				</configuration>
+			</plugin>
+		</plugins>
+	</build> 
+         	
   <properties>
 		<tycho.version>0.22.0</tycho.version>
 		<luna-repo.url>http://download.eclipse.org/releases/luna</luna-repo.url>
 		<epsilon-repo.url>http://archive.eclipse.org/epsilon/1.2/updates/</epsilon-repo.url>
 	</properties>
       
-  <repositories>
-   
+  <repositories>   
     <repository>
       <id>emf</id>
       <name>EMF Comparer</name>
       <url>https://repo.eclipse.org/content/repositories/emfcompare-snapshots</url>
-    </repository>
-            
+    </repository>            
     <repository>
       <id>emfmaven</id>
       <name>EMF Comparer Maven</name>
       <url>http://maven.thingml.org/thirdparty</url>
-    </repository>
-    
+    </repository>    
     <repository>
       <id>emfmaven2</id>
       <name>EMF Comparer Maven2</name>
       <url>http://www.jabylon.org/maven/</url>
-    </repository>
-    
+    </repository>    
     <repository>
       <id>emfreleases</id>
       <name>EMF Comparer Releases</name>
       <url>https://repo.eclipse.org/content/groups/releases</url>
-    </repository>
-    
+    </repository>    
     <repository>
 			<id>public</id>
 			<name>Archiva Managed Public Repository</name>
@@ -55,112 +65,15 @@
   </repositories>  
   
   
-  <dependencies>
-	<!--  
-	<dependency>
-	    <groupId>com.google.guava</groupId>
-	    <artifactId>guava</artifactId>
-	    <version>18.0</version>
-	</dependency>		
-	
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>compare</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>compare</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>common</artifactId>
-			<version>2.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>ecore.xmi</artifactId>
-			<version>2.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>ecore</artifactId>
-			<version>2.10.0</version>
-		</dependency>		
-				
-		<dependency>
-		    <groupId>org.eclipse.ocl</groupId>
-		    <artifactId>org.eclipse.ocl</artifactId>
-		    <version>3.3.0.v20130909-1552</version>
-		</dependency>
-				
-		<dependency>
-		    <groupId>org.eclipse.ocl</groupId>
-		    <artifactId>org.eclipse.ocl.ecore</artifactId>
-		    <version>3.3.0.v20130520-1222</version>
-		</dependency>		
-		-->
-		<!-- https://mvnrepository.com/artifact/org.eclipse.ui/workbench -->
-<!-- 
-<dependency>
-    <groupId>org.eclipse.ui</groupId>
-    <artifactId>workbench</artifactId>
-    <version>3.3.0-I20070608-1100</version>
-    <scope>provided</scope>
-</dependency>
-		
-<dependency>
-    <groupId>org.eclipse.swt</groupId>
-    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
-    <version>4.3</version>
-</dependency>
-		 
-		
-		
-		
-		
-		
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>common</artifactId>
-			<version>2.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>ecore.xmi</artifactId>
-			<version>2.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>ecore</artifactId>
-			<version>2.10.0</version>
-		</dependency>		
-				
-		<dependency>
-		    <groupId>org.eclipse.ocl</groupId>
-		    <artifactId>org.eclipse.ocl</artifactId>
-		    <version>3.3.0.v20130909-1552</version>
-		</dependency>
-				
-		<dependency>
-		    <groupId>org.eclipse.ocl</groupId>
-		    <artifactId>org.eclipse.ocl.ecore</artifactId>
-		    <version>3.3.0.v20130520-1222</version>
-		</dependency>
-		
-		-->
-		
+  <dependencies>	
+  		<!-- ************************** EMF COMPARE DEPENDENCIES ********************************* -->	
 		<dependency>
 		    <groupId>com.google</groupId>
 		    <artifactId>guava</artifactId>
 		    <version>15.0.0</version>
 		    <scope>system</scope>
 		    <systemPath>${project.basedir}/lib/com.google.guava_15.0.0.jar</systemPath>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.eclipse.emf</groupId>
 			<artifactId>common</artifactId>
@@ -269,16 +182,58 @@
 		    <scope>system</scope>
 		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.uml2_2.3.0.jar</systemPath>
 		</dependency>
-		<!-- -->
 		
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>comparer</finalName>
-  </build>
+		<!-- ********************************* JERSEY DEPENDENCIES ************************************ -->
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-bundle</artifactId>
+			<version>1.19.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20170516</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.19.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.19.4</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+			<version>1.19.4</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.9</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.5</version>
+		    <scope>provided</scope>
+		</dependency>
+
+
+		<!-- ********************************** UNITTEST DEPENDENCIES *********************************** -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>3.8.1</version>
+	      <scope>test</scope>
+	    </dependency>
+  </dependencies>  
 </project>

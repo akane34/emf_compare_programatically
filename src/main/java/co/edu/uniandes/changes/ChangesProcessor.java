@@ -20,8 +20,6 @@ import co.edu.uniandes.diff.DiffMetamodel;
 import co.edu.uniandes.diff.metamodel.diff.Change;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
-import edu.uoc.som.openapi.Path;
-import edu.uoc.som.openapi.Response;
 import edu.uoc.som.openapi.Schema;
 import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;

@@ -190,8 +190,7 @@ public class ReturnTypeImpl extends ModifyImpl implements ReturnType {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
+	 */	
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

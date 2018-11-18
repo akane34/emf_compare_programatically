@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import co.edu.uniandes.changes.ChangeBoundaryParameter;
@@ -24,17 +23,15 @@ import co.edu.uniandes.changes.ChangeSchema;
 import co.edu.uniandes.diff.metamodel.diff.*;
 import co.edu.uniandes.diff.metamodel.diff.impl.diffPackageImpl;
 import edu.uoc.som.openapi.JSONDataType;
-import edu.uoc.som.openapi.Path;
 import co.edu.uniandes.changes.ChangeOperation;
 
 public class DiffMetamodel {
 
 	private diffPackage diffPackageI;	
 	private diffFactory diffFactoryI;
-	private Resource resource;
+	private Resource resource;	
 	
-	
-	public DiffMetamodel(){
+	public DiffMetamodel(String outputFilePath){
 		diffPackageI = diffPackage.eINSTANCE;		
 		EPackage.Registry.INSTANCE.put(diffPackageI.getNsURI(), diffPackageI);		
 		
@@ -47,7 +44,7 @@ public class DiffMetamodel {
         m.put("xmi", new XMIResourceFactoryImpl());
         
         ResourceSet resSet = new ResourceSetImpl();
-        resource = resSet.createResource(URI.createFileURI("C:/temp/model.xmi"));        
+        resource = resSet.createResource(URI.createFileURI(outputFilePath));        
 	}	
 	
 	public Diff createDiff(String oldVersion, String newVersion) {

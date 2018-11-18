@@ -1,93 +1,32 @@
 package co.edu.uniandes;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.compare.AttributeChange;
-import org.eclipse.emf.compare.Comparison;
-import org.eclipse.emf.compare.Diff;
-import org.eclipse.emf.compare.ReferenceChange;
-
-import co.edu.uniandes.changes.ChangeBoundaryParameter;
-import co.edu.uniandes.changes.ChangeContentType;
-import co.edu.uniandes.changes.ChangeParameter;
-import co.edu.uniandes.changes.ChangePath;
-import co.edu.uniandes.changes.ChangeResponse;
-import co.edu.uniandes.changes.ChangeSchema;
-import co.edu.uniandes.changes.ChangesProcessor;
-import co.edu.uniandes.comparer.Comparer;
-import co.edu.uniandes.diff.DiffMetamodel;
-import co.edu.uniandes.diff.metamodel.diff.Change;
-import co.edu.uniandes.changes.ChangeOperation;
+import co.edu.uniandes.diff.ChangesIdentifier;
+import co.edu.uniandes.pojos.CompareVersionInput;
+import co.edu.uniandes.pojos.CompareVersionOutput;
 
 public class Main {
 
-	static String oldVersion = "1.0";
-	static String newVersion = "2.0";
+	static String minorVersion = "1.0";
+	static String mayorVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		String oldModelPath = "v1.0.xmi";
-		String newModelPath = "v2.0.xmi";
+		String minorModelPath = "v1.0.xmi";
+		String mayorModelPath = "v2.0.xmi";
 		
-		DiffMetamodel diffMetamodel = new DiffMetamodel();
-		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare(oldModelPath, newModelPath);
-	
-		EList<Diff> diffs = comparison.getDifferences();
+		CompareVersionInput compareVersionInput = new CompareVersionInput();
+		compareVersionInput.setInputType("filePath");
+		compareVersionInput.setMinorVersionNumber(minorVersion);
+		compareVersionInput.setMayorVersionNumber(mayorVersion);
+		compareVersionInput.setMinorVersionModel(minorModelPath);
+		compareVersionInput.setMayorVersionModel(mayorModelPath);
+		compareVersionInput.setOutputType("filePath");
+		compareVersionInput.setOutputDiffModel("C:\\temp\\model.xmi");
 		
-		List<ChangeParameter> deleteParameters = new ArrayList<ChangeParameter>();
-		List<ChangeParameter> addParameters = new ArrayList<ChangeParameter>();
-		List<ChangeParameter> changeParameters = new ArrayList<ChangeParameter>();
-		Map<String, List<ChangeParameter>> operations = new HashMap<String, List<ChangeParameter>>();
-		List<ChangeBoundaryParameter> changesBoundaryParameters = new ArrayList<ChangeBoundaryParameter>();
-		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
-		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
-		List<ChangeSchema> schemasUpdated = new ArrayList<ChangeSchema>();
-		List<ChangeContentType> contentTypesUpdated = new ArrayList<ChangeContentType>();
-		List<ChangeOperation> deleteOperations = new ArrayList<ChangeOperation>();
-		List<ChangePath> deletePaths = new ArrayList<ChangePath>();
-		List<ChangeOperation> changeOperations = new ArrayList<ChangeOperation>();
+		ChangesIdentifier identifierChanges = new ChangesIdentifier();
+		CompareVersionOutput comparerVersionOutput = identifierChanges.createDiffModel(compareVersionInput);
 		
-		for (Diff diff : diffs){			
-			if (diff instanceof ReferenceChange){								
-				ChangesProcessor.getDeletedParameters(deleteParameters, operations, diff, oldVersion);				
-				ChangesProcessor.getAddedParameters(addParameters, operations, diff, newVersion);				
-				ChangesProcessor.getChangedParameters(changeParameters, diff, oldVersion, newVersion);
-				ChangesProcessor.getDeletedResponse(deleteResponse, diff, oldVersion);				
-				ChangesProcessor.getAddedResponse(addResponse, diff, newVersion);
-				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
-				ChangesProcessor.getDeletedOperations(deleteOperations, diff, newVersion);		
-				ChangesProcessor.getDeletedPaths(deletePaths, diff, oldVersion, newVersion);
-				ChangesProcessor.getChangedOperations(changeOperations, diff, oldVersion, newVersion);
-			}else if (diff instanceof AttributeChange) {
-				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
-				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
-				ChangesProcessor.getChangedParameters(changeParameters, diff, oldVersion, newVersion);
-			}			
-		}
-		co.edu.uniandes.diff.metamodel.diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, newVersion, oldVersion);
-		ChangesProcessor.processRelocateSameParameter(diffMetamodel, changeParameters, diff.getChange());
-		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffMetamodel, changeParameters, operations, diff.getChange());
-		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, changeParameters, diff.getChange());
-		ChangesProcessor.processIncreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
-		ChangesProcessor.processDecreaseNumberOfParameters(diffMetamodel, operations, oldVersion, diff.getChange());
-		ChangesProcessor.processChangeTypeOfReturnValue(diffMetamodel, deleteResponse, addResponse, diff.getChange());
-		ChangesProcessor.processRenameParameter(diffMetamodel, changeParameters, diff.getChange());
-		ChangesProcessor.processDeletedResponses(diffMetamodel, deleteResponse, diff.getChange());
-		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
-		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
-		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
-		ChangesProcessor.processContentTypesUpdates(diffMetamodel,contentTypesUpdated, diff.getChange());
-		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
-		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());
-		ChangesProcessor.processExposeData(diffMetamodel, contentTypesUpdated, diff.getChange());
-		ChangesProcessor.processAddRestrictedAccess(diffMetamodel, addResponse, diff.getChange());
-		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffMetamodel, addResponse, diff.getChange());
-		diffMetamodel.saveInstance();
-		System.out.println("Process done");
-		
+		System.out.println("Diff model type: " + comparerVersionOutput.getOutputType());
+		System.out.println("Diff model: " + comparerVersionOutput.getDiffModel());
+		System.out.println("Error: " + comparerVersionOutput.getError());		
 	}	
 }

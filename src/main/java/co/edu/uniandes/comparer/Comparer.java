@@ -85,7 +85,7 @@ public class Comparer {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		
 		URI uri = URI.createFileURI(absolutePath);
-
+		
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
 		resourceSet.getResource(uri, true);
 	  
