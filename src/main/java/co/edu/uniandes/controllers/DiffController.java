@@ -6,9 +6,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import co.edu.uniandes.diff.ChangesIdentifier;
+import co.edu.uniandes.changesIdentifier.ChangesIdentifier;
 import co.edu.uniandes.pojos.CompareVersionInput;
-import co.edu.uniandes.pojos.CompareVersionOutput;
+import co.edu.uniandes.pojos.IdentifyOutput;
 
 @Path("/diff")
 public class DiffController {
@@ -17,9 +17,9 @@ public class DiffController {
 	@Path("compare")	
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public CompareVersionOutput compare(CompareVersionInput compareVersion ){
+	public IdentifyOutput compare(CompareVersionInput compareVersion ){
 		
 		ChangesIdentifier identifierChanges = new ChangesIdentifier();
-		return identifierChanges.createDiffModel(compareVersion);		
+		return identifierChanges.identify(compareVersion);		
 	}	
 }

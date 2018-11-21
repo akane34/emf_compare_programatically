@@ -11,8 +11,8 @@ public class CompareVersionInput {
 	private String minorVersionModel;
 	private String mayorVersionModel;
 	private String outputType;
-	private String outputDiffModel;	
-	
+	private String outputDiffModel;
+		
 	public String getMinorVersionNumber() {
 		return minorVersionNumber;
 	}

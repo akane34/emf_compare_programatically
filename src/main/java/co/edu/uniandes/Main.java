@@ -1,8 +1,8 @@
 package co.edu.uniandes;
 
-import co.edu.uniandes.diff.ChangesIdentifier;
+import co.edu.uniandes.changesIdentifier.ChangesIdentifier;
 import co.edu.uniandes.pojos.CompareVersionInput;
-import co.edu.uniandes.pojos.CompareVersionOutput;
+import co.edu.uniandes.pojos.IdentifyOutput;
 
 public class Main {
 
@@ -23,7 +23,7 @@ public class Main {
 		compareVersionInput.setOutputDiffModel("C:\\temp\\model.xmi");
 		
 		ChangesIdentifier identifierChanges = new ChangesIdentifier();
-		CompareVersionOutput comparerVersionOutput = identifierChanges.createDiffModel(compareVersionInput);
+		IdentifyOutput comparerVersionOutput = identifierChanges.identify(compareVersionInput);
 		
 		System.out.println("Diff model type: " + comparerVersionOutput.getOutputType());
 		System.out.println("Diff model: " + comparerVersionOutput.getDiffModel());
