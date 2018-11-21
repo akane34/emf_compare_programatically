@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.EAttributeImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import co.edu.uniandes.M2M.DiffModel;
-import co.edu.uniandes.metamodel.Diff.Change;
+import co.edu.uniandes.metamodels.Diff.Change;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
 import edu.uoc.som.openapi.Schema;
@@ -222,7 +222,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static co.edu.uniandes.metamodel.Diff.Diff processVersion(DiffModel diffMetamodel, String newVersion, String oldVersion) {
+	public static co.edu.uniandes.metamodels.Diff.Diff processVersion(DiffModel diffMetamodel, String newVersion, String oldVersion) {
 		return diffMetamodel.createDiffModel(oldVersion, newVersion);
 	}
 	

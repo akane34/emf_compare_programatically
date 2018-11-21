@@ -21,8 +21,8 @@ import co.edu.uniandes.changesIdentifier.ChangeParameter;
 import co.edu.uniandes.changesIdentifier.ChangePath;
 import co.edu.uniandes.changesIdentifier.ChangeResponse;
 import co.edu.uniandes.changesIdentifier.ChangeSchema;
-import co.edu.uniandes.metamodel.Diff.*;
-import co.edu.uniandes.metamodel.Diff.impl.DiffPackageImpl;
+import co.edu.uniandes.metamodels.Diff.*;
+import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
 import edu.uoc.som.openapi.JSONDataType;
 
 public class DiffModel {

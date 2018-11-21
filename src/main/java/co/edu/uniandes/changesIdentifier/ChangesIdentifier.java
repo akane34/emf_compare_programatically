@@ -115,7 +115,7 @@ public class ChangesIdentifier {
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
 			}			
 		}
-		co.edu.uniandes.metamodel.Diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, mayorVersion, minorVersion);
+		co.edu.uniandes.metamodels.Diff.Diff diff = ChangesProcessor.processVersion(diffMetamodel, mayorVersion, minorVersion);
 		ChangesProcessor.processRelocateSameParameter(diffMetamodel, changeParameters, diff.getChange());
 		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffMetamodel, changeParameters, operations, diff.getChange());
 		ChangesProcessor.processChangeTypeParameter(diffMetamodel, deleteParameters, addParameters, changeParameters, diff.getChange());
