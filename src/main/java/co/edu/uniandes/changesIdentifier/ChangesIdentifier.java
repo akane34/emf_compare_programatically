@@ -18,12 +18,12 @@ import org.eclipse.emf.compare.Comparison;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 
-import co.edu.uniandes.M2M.DiffModel;
 import co.edu.uniandes.comparator.Comparer;
 import co.edu.uniandes.pojos.CompareVersionInput;
 import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelInputType;
 import co.edu.uniandes.pojos.ModelOutputType;
+import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
 
 public class ChangesIdentifier {
 
@@ -79,7 +79,7 @@ public class ChangesIdentifier {
 		String minorVersion = compareVersionInput.getMinorVersionNumber();
 		String mayorVersion = compareVersionInput.getMinorVersionNumber();
 		
-		DiffModel diffMetamodel = new DiffModel(outputModelPath);
+		DiffModelTransformation diffMetamodel = new DiffModelTransformation(outputModelPath);
 		Comparer comparer = new Comparer();
 		Comparison comparison = comparer.compare(minorModelPath, mayorModelPath);
 	

@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('http://www.uniandes.edu.co/diff')]
+[template public generateHTML(aDiff : Diff)]
+[comment @main/]
+[file ('index.html', false, 'UTF-8')]
+<h2> Diff </h2>
+<table border="" style="with:50%">
+
+[for (p : SameParameter | aDiff.eAllContents(SameParameter) )]
+	<tr>
+		<td>
+		
+			<p><h4>SameParameter</h4></p>			
+			<p><h4>changeElement: [p.changeElement/]</h4></p>
+			<p><h4>newLocation: [p.newLocation/]</h4></p>
+			
+			[for (s : Add | p.simpleDiffs.eAllContents(Add) )]
+				
+				<p><h4>[s.changeElement/]</h4></p>
+			[/for]
+				
+		</td>
+	</tr>
+[/for]
+</table>
+[/file]
+[/template]

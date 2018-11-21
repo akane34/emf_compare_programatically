@@ -183,6 +183,15 @@
 		    <systemPath>${project.basedir}/lib/org.eclipse.emf.compare.uml2_2.3.0.jar</systemPath>
 		</dependency>
 		
+		<!-- **************************** MTC LAUNCHER DEPENDENCIES *********************************** -->
+		<dependency>
+		    <groupId>cs.ualberta</groupId>
+		    <artifactId>launcher</artifactId>
+		    <version>1.0.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/lib/MTCLauncherJava.jar</systemPath>
+		</dependency>
+		
 		<!-- ********************************* JERSEY DEPENDENCIES ************************************ -->
 		<dependency>
 			<groupId>asm</groupId>
