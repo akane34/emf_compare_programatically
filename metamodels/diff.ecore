@@ -36,7 +36,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="RemoveParameter" eSuperTypes="#//Delete"/>
   <eClassifiers xsi:type="ecore:EClass" name="DefaultClause" eSuperTypes="#//Delete"/>
   <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//Simple"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyParameterSchemaType" eSuperTypes="#//Modify"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyParameterSchemaType" eSuperTypes="#//Modify">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schemas" lowerBound="1"
+        upperBound="-1" eType="#//Schema"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UpperBondary" eSuperTypes="#//Modify"/>
   <eClassifiers xsi:type="ecore:EClass" name="LowerBondary" eSuperTypes="#//Modify"/>
   <eClassifiers xsi:type="ecore:EClass" name="DefaultValue" eSuperTypes="#//Modify"/>
@@ -102,4 +105,8 @@
     <eLiterals name="null" value="8" literal="null"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReturnType" eSuperTypes="#//Modify"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Schema">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

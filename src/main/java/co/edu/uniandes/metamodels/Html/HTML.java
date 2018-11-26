@@ -35,7 +35,7 @@ public interface HTML extends EObject {
 	 * @see #setHead(HEAD)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTML_Head()
 	 * @see co.edu.uniandes.metamodels.Html.HEAD#getHtml
-	 * @model opposite="html" ordered="false"
+	 * @model opposite="html" required="true" ordered="false"
 	 * @generated
 	 */
 	HEAD getHead();
@@ -63,7 +63,7 @@ public interface HTML extends EObject {
 	 * @see #setBody(BODY)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTML_Body()
 	 * @see co.edu.uniandes.metamodels.Html.BODY#getHtml
-	 * @model opposite="html" ordered="false"
+	 * @model opposite="html" required="true" ordered="false"
 	 * @generated
 	 */
 	BODY getBody();

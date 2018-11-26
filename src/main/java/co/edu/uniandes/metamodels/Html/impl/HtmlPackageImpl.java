@@ -2,13 +2,6 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import co.edu.uniandes.metamodels.Html.BODYElement;
 import co.edu.uniandes.metamodels.Html.HEADElement;
 import co.edu.uniandes.metamodels.Html.HTMLElement;
@@ -16,8 +9,17 @@ import co.edu.uniandes.metamodels.Html.HtmlFactory;
 import co.edu.uniandes.metamodels.Html.HtmlPackage;
 import co.edu.uniandes.metamodels.Html.ListElement;
 import co.edu.uniandes.metamodels.Html.TABLEElement;
+
 import co.edu.uniandes.metamodels.PrimitiveTypes.PrimitiveTypesPackage;
+
 import co.edu.uniandes.metamodels.PrimitiveTypes.impl.PrimitiveTypesPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -573,6 +575,33 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHTMLElement_Id() {
+		return (EAttribute)htmlElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHTMLElement_Class() {
+		return (EAttribute)htmlElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHTMLElement_Title() {
+		return (EAttribute)htmlElementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHEAD() {
 		return headEClass;
 	}
@@ -636,7 +665,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLINK_Title() {
+	public EAttribute getLINK_Ahref() {
 		return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -645,17 +674,8 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLINK_Ahref() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLINK_Type() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1232,15 +1252,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 */
 	public EAttribute getA_Name() {
 		return (EAttribute)aEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getA_Id() {
-		return (EAttribute)aEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1878,7 +1889,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOBJECT_Id() {
+	public EAttribute getOBJECT_Data() {
 		return (EAttribute)objectEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1887,7 +1898,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOBJECT_Data() {
+	public EAttribute getOBJECT_Type() {
 		return (EAttribute)objectEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1896,17 +1907,8 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOBJECT_Type() {
-		return (EAttribute)objectEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getOBJECT_Standby() {
-		return (EAttribute)objectEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2080,6 +2082,9 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		createEAttribute(htmlElementEClass, HTML_ELEMENT__VALUE);
 		createEReference(htmlElementEClass, HTML_ELEMENT__CHILDREN);
 		createEReference(htmlElementEClass, HTML_ELEMENT__PARENT);
+		createEAttribute(htmlElementEClass, HTML_ELEMENT__ID);
+		createEAttribute(htmlElementEClass, HTML_ELEMENT__CLASS);
+		createEAttribute(htmlElementEClass, HTML_ELEMENT__TITLE);
 
 		headEClass = createEClass(HEAD);
 		createEReference(headEClass, HEAD__HEAD_ELEMENTS);
@@ -2090,7 +2095,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 
 		linkEClass = createEClass(LINK);
 		createEAttribute(linkEClass, LINK__REL);
-		createEAttribute(linkEClass, LINK__TITLE);
 		createEAttribute(linkEClass, LINK__AHREF);
 		createEAttribute(linkEClass, LINK__TYPE);
 
@@ -2185,7 +2189,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		aEClass = createEClass(A);
 		createEAttribute(aEClass, A__AHREF);
 		createEAttribute(aEClass, A__NAME);
-		createEAttribute(aEClass, A__ID);
 
 		divEClass = createEClass(DIV);
 		createEAttribute(divEClass, DIV__ALIGN);
@@ -2278,7 +2281,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 
 		objectEClass = createEClass(OBJECT);
 		createEAttribute(objectEClass, OBJECT__CLASSID);
-		createEAttribute(objectEClass, OBJECT__ID);
 		createEAttribute(objectEClass, OBJECT__DATA);
 		createEAttribute(objectEClass, OBJECT__TYPE);
 		createEAttribute(objectEClass, OBJECT__STANDBY);
@@ -2379,13 +2381,16 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(htmlEClass, co.edu.uniandes.metamodels.Html.HTML.class, "HTML", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHTML_Head(), this.getHEAD(), this.getHEAD_Html(), "head", null, 0, 1, co.edu.uniandes.metamodels.Html.HTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getHTML_Body(), this.getBODY(), this.getBODY_Html(), "body", null, 0, 1, co.edu.uniandes.metamodels.Html.HTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHTML_Head(), this.getHEAD(), this.getHEAD_Html(), "head", null, 1, 1, co.edu.uniandes.metamodels.Html.HTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHTML_Body(), this.getBODY(), this.getBODY_Html(), "body", null, 1, 1, co.edu.uniandes.metamodels.Html.HTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(htmlElementEClass, HTMLElement.class, "HTMLElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHTMLElement_Value(), thePrimitiveTypesPackage.getString(), "value", null, 1, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHTMLElement_Children(), this.getHTMLElement(), this.getHTMLElement_Parent(), "children", null, 0, -1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHTMLElement_Parent(), this.getHTMLElement(), this.getHTMLElement_Children(), "parent", null, 1, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHTMLElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHTMLElement_Class(), ecorePackage.getEString(), "class", null, 0, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHTMLElement_Title(), ecorePackage.getEString(), "title", null, 0, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headEClass, co.edu.uniandes.metamodels.Html.HEAD.class, "HEAD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHEAD_HeadElements(), this.getHEADElement(), this.getHEADElement_Head(), "headElements", null, 0, -1, co.edu.uniandes.metamodels.Html.HEAD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2396,7 +2401,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 
 		initEClass(linkEClass, co.edu.uniandes.metamodels.Html.LINK.class, "LINK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLINK_Rel(), thePrimitiveTypesPackage.getString(), "rel", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getLINK_Title(), thePrimitiveTypesPackage.getString(), "title", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLINK_Ahref(), thePrimitiveTypesPackage.getString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLINK_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2491,7 +2495,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEClass(aEClass, co.edu.uniandes.metamodels.Html.A.class, "A", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getA_Ahref(), thePrimitiveTypesPackage.getString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getA_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getA_Id(), thePrimitiveTypesPackage.getString(), "id", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(divEClass, co.edu.uniandes.metamodels.Html.DIV.class, "DIV", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDIV_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.DIV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2584,7 +2587,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 
 		initEClass(objectEClass, co.edu.uniandes.metamodels.Html.OBJECT.class, "OBJECT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOBJECT_Classid(), thePrimitiveTypesPackage.getString(), "classid", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getOBJECT_Id(), thePrimitiveTypesPackage.getString(), "id", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOBJECT_Data(), thePrimitiveTypesPackage.getString(), "data", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOBJECT_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOBJECT_Standby(), thePrimitiveTypesPackage.getString(), "standby", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

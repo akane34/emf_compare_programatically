@@ -33,7 +33,7 @@ public interface FORM extends EObject {
 	 * @return the value of the '<em>Action</em>' attribute.
 	 * @see #setAction(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFORM_Action()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAction();
@@ -59,7 +59,7 @@ public interface FORM extends EObject {
 	 * @return the value of the '<em>Method</em>' attribute.
 	 * @see #setMethod(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFORM_Method()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getMethod();

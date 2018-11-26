@@ -31,7 +31,7 @@ public interface LI extends ListElement {
 	 * @return the value of the '<em>Li Value</em>' attribute.
 	 * @see #setLiValue(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLI_LiValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getLiValue();

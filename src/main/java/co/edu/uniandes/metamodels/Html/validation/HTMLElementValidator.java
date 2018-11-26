@@ -4,9 +4,9 @@
  */
 package co.edu.uniandes.metamodels.Html.validation;
 
-import org.eclipse.emf.common.util.EList;
-
 import co.edu.uniandes.metamodels.Html.HTMLElement;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Html.HTMLElement}.
@@ -20,4 +20,7 @@ public interface HTMLElementValidator {
 	boolean validateValue(Object value);
 	boolean validateChildren(EList<HTMLElement> value);
 	boolean validateParent(HTMLElement value);
+	boolean validateId(String value);
+	boolean validateClass(String value);
+	boolean validateTitle(String value);
 }

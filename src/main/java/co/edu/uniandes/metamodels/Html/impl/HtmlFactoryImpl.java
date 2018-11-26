@@ -2,6 +2,8 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.*;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -9,8 +11,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import co.edu.uniandes.metamodels.Html.*;
 
 /**
  * <!-- begin-user-doc -->

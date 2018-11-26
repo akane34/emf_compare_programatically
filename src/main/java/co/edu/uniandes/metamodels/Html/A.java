@@ -14,7 +14,6 @@ package co.edu.uniandes.metamodels.Html;
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Html.A#getAhref <em>Ahref</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.A#getName <em>Name</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Html.A#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA()
@@ -33,7 +32,7 @@ public interface A extends BODYElement {
 	 * @return the value of the '<em>Ahref</em>' attribute.
 	 * @see #setAhref(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAhref();
@@ -59,7 +58,7 @@ public interface A extends BODYElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getName();
@@ -73,31 +72,5 @@ public interface A extends BODYElement {
 	 * @generated
 	 */
 	void setName(Object value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(Object)
-	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA_Id()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
-	 * @generated
-	 */
-	Object getId();
-
-	/**
-	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.A#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(Object value);
 
 } // A

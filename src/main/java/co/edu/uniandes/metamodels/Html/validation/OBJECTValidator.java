@@ -15,7 +15,6 @@ public interface OBJECTValidator {
 	boolean validate();
 
 	boolean validateClassid(Object value);
-	boolean validateId(Object value);
 	boolean validateData(Object value);
 	boolean validateType(Object value);
 	boolean validateStandby(Object value);

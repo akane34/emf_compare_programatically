@@ -31,7 +31,7 @@ public interface SPAN extends BODYElement {
 	 * @return the value of the '<em>Style</em>' attribute.
 	 * @see #setStyle(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSPAN_Style()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getStyle();

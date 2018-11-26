@@ -34,7 +34,7 @@ public interface TEXTAREA extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getName();
@@ -60,7 +60,7 @@ public interface TEXTAREA extends EObject {
 	 * @return the value of the '<em>Rows</em>' attribute.
 	 * @see #setRows(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Rows()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getRows();
@@ -86,7 +86,7 @@ public interface TEXTAREA extends EObject {
 	 * @return the value of the '<em>Cols</em>' attribute.
 	 * @see #setCols(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Cols()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getCols();

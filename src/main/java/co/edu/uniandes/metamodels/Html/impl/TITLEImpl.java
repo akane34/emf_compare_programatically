@@ -2,10 +2,10 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import co.edu.uniandes.metamodels.Html.HtmlPackage;
 import co.edu.uniandes.metamodels.Html.TITLE;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

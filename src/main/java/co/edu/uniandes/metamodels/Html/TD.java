@@ -36,7 +36,7 @@ public interface TD extends TABLEElement {
 	 * @return the value of the '<em>Colspan</em>' attribute.
 	 * @see #setColspan(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Colspan()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getColspan();
@@ -62,7 +62,7 @@ public interface TD extends TABLEElement {
 	 * @return the value of the '<em>Rowspan</em>' attribute.
 	 * @see #setRowspan(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Rowspan()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getRowspan();
@@ -88,7 +88,7 @@ public interface TD extends TABLEElement {
 	 * @return the value of the '<em>Valign</em>' attribute.
 	 * @see #setValign(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Valign()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getValign();
@@ -114,7 +114,7 @@ public interface TD extends TABLEElement {
 	 * @return the value of the '<em>Align</em>' attribute.
 	 * @see #setAlign(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAlign();
@@ -140,7 +140,7 @@ public interface TD extends TABLEElement {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getWidth();

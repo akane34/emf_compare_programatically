@@ -39,7 +39,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Background</em>' attribute.
 	 * @see #setBackground(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Background()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBackground();
@@ -65,7 +65,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Bgcolor</em>' attribute.
 	 * @see #setBgcolor(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Bgcolor()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBgcolor();
@@ -91,7 +91,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Text()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getText();
@@ -117,7 +117,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Link</em>' attribute.
 	 * @see #setLink(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Link()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getLink();
@@ -143,7 +143,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Alink</em>' attribute.
 	 * @see #setAlink(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Alink()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAlink();
@@ -169,7 +169,7 @@ public interface BODY extends HTMLElement {
 	 * @return the value of the '<em>Vlink</em>' attribute.
 	 * @see #setVlink(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBODY_Vlink()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getVlink();

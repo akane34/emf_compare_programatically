@@ -31,7 +31,7 @@ public interface DIV extends BODYElement {
 	 * @return the value of the '<em>Align</em>' attribute.
 	 * @see #setAlign(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getDIV_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAlign();

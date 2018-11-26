@@ -34,7 +34,7 @@ public interface SELECT extends EObject {
 	 * @return the value of the '<em>Multiple</em>' attribute.
 	 * @see #setMultiple(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Multiple()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getMultiple();
@@ -60,7 +60,7 @@ public interface SELECT extends EObject {
 	 * @return the value of the '<em>Size</em>' attribute.
 	 * @see #setSize(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Size()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getSize();
@@ -86,7 +86,7 @@ public interface SELECT extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getName();

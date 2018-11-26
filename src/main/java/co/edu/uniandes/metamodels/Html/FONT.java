@@ -33,7 +33,7 @@ public interface FONT extends BODYElement {
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFONT_Color()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getColor();
@@ -59,7 +59,7 @@ public interface FONT extends BODYElement {
 	 * @return the value of the '<em>Face</em>' attribute.
 	 * @see #setFace(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFONT_Face()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getFace();
@@ -85,7 +85,7 @@ public interface FONT extends BODYElement {
 	 * @return the value of the '<em>Size</em>' attribute.
 	 * @see #setSize(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFONT_Size()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getSize();

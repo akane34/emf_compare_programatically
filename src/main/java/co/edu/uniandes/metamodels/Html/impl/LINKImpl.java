@@ -2,14 +2,14 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+import co.edu.uniandes.metamodels.Html.LINK;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
-import co.edu.uniandes.metamodels.Html.LINK;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,6 @@ import co.edu.uniandes.metamodels.Html.LINK;
  * </p>
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.LINKImpl#getRel <em>Rel</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Html.impl.LINKImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.LINKImpl#getAhref <em>Ahref</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.LINKImpl#getType <em>Type</em>}</li>
  * </ul>
@@ -37,16 +36,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * @ordered
 	 */
 	protected Object rel;
-
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected Object title;
 
 	/**
 	 * The cached value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
@@ -113,27 +102,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getTitle() {
-		return title;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle(Object newTitle) {
-		Object oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LINK__TITLE, oldTitle, title));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Object getAhref() {
 		return ahref;
 	}
@@ -181,8 +149,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
 				return getRel();
-			case HtmlPackage.LINK__TITLE:
-				return getTitle();
 			case HtmlPackage.LINK__AHREF:
 				return getAhref();
 			case HtmlPackage.LINK__TYPE:
@@ -201,9 +167,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
 				setRel(newValue);
-				return;
-			case HtmlPackage.LINK__TITLE:
-				setTitle(newValue);
 				return;
 			case HtmlPackage.LINK__AHREF:
 				setAhref(newValue);
@@ -226,9 +189,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 			case HtmlPackage.LINK__REL:
 				setRel((Object)null);
 				return;
-			case HtmlPackage.LINK__TITLE:
-				setTitle((Object)null);
-				return;
 			case HtmlPackage.LINK__AHREF:
 				setAhref((Object)null);
 				return;
@@ -249,8 +209,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
 				return rel != null;
-			case HtmlPackage.LINK__TITLE:
-				return title != null;
 			case HtmlPackage.LINK__AHREF:
 				return ahref != null;
 			case HtmlPackage.LINK__TYPE:
@@ -271,8 +229,6 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (rel: ");
 		result.append(rel);
-		result.append(", title: ");
-		result.append(title);
 		result.append(", ahref: ");
 		result.append(ahref);
 		result.append(", type: ");

@@ -33,7 +33,7 @@ public interface AREA extends BODYElement {
 	 * @return the value of the '<em>Shape</em>' attribute.
 	 * @see #setShape(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Shape()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getShape();
@@ -59,7 +59,7 @@ public interface AREA extends BODYElement {
 	 * @return the value of the '<em>Coords</em>' attribute.
 	 * @see #setCoords(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Coords()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getCoords();
@@ -85,7 +85,7 @@ public interface AREA extends BODYElement {
 	 * @return the value of the '<em>Ahref</em>' attribute.
 	 * @see #setAhref(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAhref();

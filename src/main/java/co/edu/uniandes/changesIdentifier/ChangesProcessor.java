@@ -335,13 +335,14 @@ public class ChangesProcessor {
 	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- processModifyParameterSchemaType");
 		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
+		
 		for (ChangeSchema addAndDeletedSchema : addAndDeletedSchemas){			
 			SchemaImpl schema = (SchemaImpl)mayorVersionModel.getEObject(addAndDeletedSchema.getUri(), true);
 		    Collection<Setting> schemasUsages = getUsages(schema);
 		    Collection<String> schemaIds = new ArrayList<String>();
 		    Collection<String> parameterIds = new ArrayList<String>();
 		    
-		    Collection<ParameterImpl> parameters = getParameters(schemasUsages, schemaIds, parameterIds);		    
+		    Collection<ParameterImpl> parameters = getParametersRecursively(schemasUsages, schemaIds, parameterIds);		    
 		    if (!parameters.isEmpty()){		    	
 			    for (ParameterImpl parameter : parameters)
 			    {			    				    	
@@ -350,7 +351,8 @@ public class ChangesProcessor {
 			    		String uriChangeSchema = EcoreUtil.getURI(changeSchema.getSchema()).toString();
 			    		
 			    		if (uriParamSchema.equals(uriChangeSchema)){			    			
-			    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>(); 
+			    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();
+			    			
 			    			for(Setting setting : getUsages(parameter)){
 			    				EObject object = setting.getEObject();
 			    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
@@ -710,13 +712,13 @@ public class ChangesProcessor {
 	private static void addOperations(Map<String, List<ChangeParameter>> operations, PathImpl path,
 			ChangeParameter param) {
 		
-		for(Operation operation : param.getOperations()){
-			List<ChangeParameter> params = operations.get(path.getRelativePath() + ":" + operation.getMethod());
+		for(OperationWrapper wrapper : param.getOperations()){
+			List<ChangeParameter> params = operations.get(path.getRelativePath() + ":" + wrapper.getMethod());
 			if (params == null)
 				params = new ArrayList<ChangeParameter>();										
 			
 			params.add(param);
-			operations.put(path.getRelativePath() + ":" + operation.getMethod(), params);
+			operations.put(path.getRelativePath() + ":" + wrapper.getMethod(), params);
 		}
 	}	
 	
@@ -727,20 +729,40 @@ public class ChangesProcessor {
 		Operation postOperation = path.getPost();
 		Operation putOperation = path.getPut();					
 		
-		if (getOperation != null){							
-			param.getOperations().add(getOperation);											
+		if (getOperation != null){				
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(getOperation);
+			wrapper.setMethod("Get");
+			
+			param.getOperations().add(wrapper);											
 		}
-		if (deleteOperation != null){							
-			param.getOperations().add(deleteOperation);					
+		if (deleteOperation != null){	
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(deleteOperation);
+			wrapper.setMethod("Delete");
+			
+			param.getOperations().add(wrapper);					
 		}
-		if (pathcOperation != null){							
-			param.getOperations().add(pathcOperation);					
+		if (pathcOperation != null){		
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(pathcOperation);
+			wrapper.setMethod("Patch");
+			
+			param.getOperations().add(wrapper);					
 		}
-		if (postOperation != null){							
-			param.getOperations().add(postOperation);					
+		if (postOperation != null){	
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(postOperation);
+			wrapper.setMethod("Post");
+			
+			param.getOperations().add(wrapper);					
 		}
-		if (putOperation != null){							
-			param.getOperations().add(putOperation);					
+		if (putOperation != null){	
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(putOperation);
+			wrapper.setMethod("Put");
+			
+			param.getOperations().add(wrapper);					
 		}
 	}
 	
@@ -791,14 +813,14 @@ public class ChangesProcessor {
 		return usages;
 	}
 	
-	private static Collection<ParameterImpl> getParameters(Collection<Setting> usages, Collection<String> schemaIds, Collection<String> parameterIds){
+	private static Collection<ParameterImpl> getParametersRecursively(Collection<Setting> usages, Collection<String> schemaIds, Collection<String> parameterIds){
 		Collection<ParameterImpl> parameters = new ArrayList<ParameterImpl>();
 		for (Setting usage : usages)
 	    {			
 	    	EObject parent = usage.getEObject();
 	    	if (parent instanceof SchemaImpl && !schemaIds.contains(EcoreUtil.getURI((SchemaImpl)parent).toString())){
 	    		schemaIds.add(EcoreUtil.getURI((SchemaImpl)parent).toString());	    		
-	    		parameters.addAll(getParameters(getUsages(parent), schemaIds, parameterIds));	    				    		
+	    		parameters.addAll(getParametersRecursively(getUsages(parent), schemaIds, parameterIds));	    				    		
 	    	}
 	    	else if (parent instanceof ParameterImpl && !parameterIds.contains(EcoreUtil.getURI((ParameterImpl)parent).toString())){
 	    		parameterIds.add(EcoreUtil.getURI((ParameterImpl)parent).toString());	  

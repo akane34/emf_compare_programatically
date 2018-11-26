@@ -2,14 +2,14 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.DIV;
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import co.edu.uniandes.metamodels.Html.DIV;
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
 
 /**
  * <!-- begin-user-doc -->

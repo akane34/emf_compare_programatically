@@ -36,7 +36,7 @@ public interface FRAMESET extends EObject {
 	 * @return the value of the '<em>Rows</em>' attribute.
 	 * @see #setRows(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAMESET_Rows()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getRows();
@@ -62,7 +62,7 @@ public interface FRAMESET extends EObject {
 	 * @return the value of the '<em>Cols</em>' attribute.
 	 * @see #setCols(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAMESET_Cols()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getCols();
@@ -88,7 +88,7 @@ public interface FRAMESET extends EObject {
 	 * @return the value of the '<em>Framespacing</em>' attribute.
 	 * @see #setFramespacing(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAMESET_Framespacing()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getFramespacing();
@@ -114,7 +114,7 @@ public interface FRAMESET extends EObject {
 	 * @return the value of the '<em>Frameborder</em>' attribute.
 	 * @see #setFrameborder(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAMESET_Frameborder()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getFrameborder();
@@ -140,7 +140,7 @@ public interface FRAMESET extends EObject {
 	 * @return the value of the '<em>Border</em>' attribute.
 	 * @see #setBorder(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAMESET_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBorder();

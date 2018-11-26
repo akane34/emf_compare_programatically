@@ -5,14 +5,13 @@ import java.util.List;
 
 import org.eclipse.emf.compare.DifferenceKind;
 
-import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
 
 public class ChangeParameter {
 
 	private Parameter oldParameter;
 	private Parameter newParameter;	
-	private List<Operation> operations;
+	private List<OperationWrapper> operations;
 	private String path;
 	private String version;
 	private DifferenceKind differenceKind;
@@ -25,9 +24,9 @@ public class ChangeParameter {
 	public void setNewParameter(Parameter parameter) {
 		this.newParameter = parameter;
 	}
-	public List<Operation> getOperations() {
+	public List<OperationWrapper> getOperations() {
 		if (operations == null)
-			operations = new ArrayList<Operation>();
+			operations = new ArrayList<OperationWrapper>();
 		
 		return operations;
 	}	

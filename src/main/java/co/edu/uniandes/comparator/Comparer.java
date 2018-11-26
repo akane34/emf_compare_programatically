@@ -1,8 +1,15 @@
 package co.edu.uniandes.comparator;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Base64;
 import java.util.Iterator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.Comparison;
+import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.EMFCompare;
 import org.eclipse.emf.compare.match.DefaultComparisonFactory;
 import org.eclipse.emf.compare.match.DefaultEqualityHelperFactory;
@@ -18,6 +25,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
+import co.edu.uniandes.pojos.CompareVersionInput;
+import co.edu.uniandes.pojos.IdentifyOutput;
+import co.edu.uniandes.pojos.ModelInputType;
+import co.edu.uniandes.pojos.ModelPathOutput;
 import co.edu.uniandes.util.Tools;
 import edu.uoc.som.openapi.OpenAPIPackage;
 
@@ -29,12 +40,14 @@ public class Comparer {
 		Tools.registerOpenAPIMetamodel();
 	}
 	
-	public Comparison compare(ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {		
+	public EList<Diff> compare(ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {		
 		try{	
 			EMFCompare comparator = getComparator();
 			IComparisonScope scope = createScope(minorVersionModel, mayorVersionModel);
 			
-			return comparator.compare(scope);
+			Comparison comparison = comparator.compare(scope);
+			
+			return comparison.getDifferences();
 		}catch (Exception ex){
 			System.out.println(ex.getMessage() + " " + ex.getStackTrace());
 		}
@@ -53,8 +66,8 @@ public class Comparer {
 		}
 		
 		return null;
-	}		
-
+	}	
+	
 	private EMFCompare getComparator() {
 		IEObjectMatcher matcher = DefaultMatchEngine.createDefaultEObjectMatcher(UseIdentifiers.NEVER);
 		IComparisonFactory comparisonFactory = new DefaultComparisonFactory(new DefaultEqualityHelperFactory());

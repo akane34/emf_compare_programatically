@@ -140,13 +140,40 @@ public interface HtmlPackage extends EPackage {
 	int HTML_ELEMENT__PARENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__ID = 3;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__CLASS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__TITLE = 5;
+
+	/**
 	 * The number of structural features of the '<em>HTML Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HTML_ELEMENT_FEATURE_COUNT = 3;
+	int HTML_ELEMENT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>HTML Element</em>' class.
@@ -193,6 +220,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int HEAD__PARENT = HTML_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD__TITLE = HTML_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Head Elements</b></em>' reference list.
@@ -268,6 +322,33 @@ public interface HtmlPackage extends EPackage {
 	int HEAD_ELEMENT__PARENT = HTML_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD_ELEMENT__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD_ELEMENT__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD_ELEMENT__TITLE = HTML_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Head</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -332,6 +413,33 @@ public interface HtmlPackage extends EPackage {
 	int LINK__PARENT = HEAD_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__ID = HEAD_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__CLASS = HEAD_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TITLE = HEAD_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Head</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -350,22 +458,13 @@ public interface HtmlPackage extends EPackage {
 	int LINK__REL = HEAD_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__TITLE = HEAD_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Ahref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__AHREF = HEAD_ELEMENT_FEATURE_COUNT + 2;
+	int LINK__AHREF = HEAD_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -374,7 +473,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__TYPE = HEAD_ELEMENT_FEATURE_COUNT + 3;
+	int LINK__TYPE = HEAD_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>LINK</em>' class.
@@ -383,7 +482,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = HEAD_ELEMENT_FEATURE_COUNT + 4;
+	int LINK_FEATURE_COUNT = HEAD_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>LINK</em>' class.
@@ -430,6 +529,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TITLE__PARENT = HEAD_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__ID = HEAD_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__CLASS = HEAD_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__TITLE = HEAD_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Head</b></em>' reference.
@@ -494,6 +620,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int BODY__PARENT = HTML_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY__TITLE = HTML_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Background</b></em>' attribute.
@@ -623,6 +776,33 @@ public interface HtmlPackage extends EPackage {
 	int BODY_ELEMENT__PARENT = HTML_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_ELEMENT__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_ELEMENT__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_ELEMENT__TITLE = HTML_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -685,6 +865,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int H1__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H1__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H1__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H1__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -751,6 +958,33 @@ public interface HtmlPackage extends EPackage {
 	int H2__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H2__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H2__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H2__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -813,6 +1047,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int H3__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H3__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H3__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H3__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -879,6 +1140,33 @@ public interface HtmlPackage extends EPackage {
 	int H4__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H4__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H4__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int H4__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -941,6 +1229,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int EM__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EM__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EM__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EM__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1007,6 +1322,33 @@ public interface HtmlPackage extends EPackage {
 	int STRONG__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1069,6 +1411,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int B__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int B__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int B__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int B__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1135,6 +1504,33 @@ public interface HtmlPackage extends EPackage {
 	int I__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int I__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int I__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int I__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1197,6 +1593,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TT__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TT__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TT__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TT__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1263,6 +1686,33 @@ public interface HtmlPackage extends EPackage {
 	int PRE__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1325,6 +1775,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int BIG__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BIG__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BIG__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BIG__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1391,6 +1868,33 @@ public interface HtmlPackage extends EPackage {
 	int SMALL__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALL__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1453,6 +1957,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUB__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1519,6 +2050,33 @@ public interface HtmlPackage extends EPackage {
 	int SUP__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUP__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUP__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUP__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1583,6 +2141,33 @@ public interface HtmlPackage extends EPackage {
 	int STRIKE__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRIKE__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRIKE__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRIKE__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1645,6 +2230,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int FONT__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FONT__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FONT__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FONT__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1736,6 +2348,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMG__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMG__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMG__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMG__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -1892,6 +2531,33 @@ public interface HtmlPackage extends EPackage {
 	int BR__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BR__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BR__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BR__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1965,6 +2631,33 @@ public interface HtmlPackage extends EPackage {
 	int MAP__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2027,6 +2720,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int AREA__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AREA__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AREA__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AREA__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2120,6 +2840,33 @@ public interface HtmlPackage extends EPackage {
 	int STYLE__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STYLE__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STYLE__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STYLE__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2182,6 +2929,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMBED__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBED__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBED__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBED__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2311,6 +3085,33 @@ public interface HtmlPackage extends EPackage {
 	int NOEMBED__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOEMBED__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOEMBED__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOEMBED__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2373,6 +3174,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int SPAN__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2448,6 +3276,33 @@ public interface HtmlPackage extends EPackage {
 	int A__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int A__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2475,22 +3330,13 @@ public interface HtmlPackage extends EPackage {
 	int A__NAME = BODY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int A__ID = BODY_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int A_FEATURE_COUNT = BODY_ELEMENT_FEATURE_COUNT + 3;
+	int A_FEATURE_COUNT = BODY_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>A</em>' class.
@@ -2537,6 +3383,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIV__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIV__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIV__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIV__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2612,6 +3485,33 @@ public interface HtmlPackage extends EPackage {
 	int P__PARENT = BODY_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int P__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int P__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int P__TITLE = BODY_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2674,6 +3574,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABLE_ELEMENT__PARENT = BODY_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ELEMENT__ID = BODY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ELEMENT__CLASS = BODY_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ELEMENT__TITLE = BODY_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2756,6 +3683,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABLE__PARENT = TABLE_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__ID = TABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__CLASS = TABLE_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__TITLE = TABLE_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -2885,6 +3839,33 @@ public interface HtmlPackage extends EPackage {
 	int TR__PARENT = TABLE_ELEMENT__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TR__ID = TABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TR__CLASS = TABLE_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TR__TITLE = TABLE_ELEMENT__TITLE;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3001,6 +3982,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TD__PARENT = TABLE_ELEMENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TD__ID = TABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TD__CLASS = TABLE_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TD__TITLE = TABLE_ELEMENT__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -3137,6 +4145,33 @@ public interface HtmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TH__PARENT = TD__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TH__ID = TD__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TH__CLASS = TD__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TH__TITLE = TD__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' reference.
@@ -3937,22 +4972,13 @@ public interface HtmlPackage extends EPackage {
 	int OBJECT__CLASSID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECT__ID = 1;
-
-	/**
 	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__DATA = 2;
+	int OBJECT__DATA = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -3961,7 +4987,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__TYPE = 3;
+	int OBJECT__TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Standby</b></em>' attribute.
@@ -3970,7 +4996,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__STANDBY = 4;
+	int OBJECT__STANDBY = 3;
 
 	/**
 	 * The number of structural features of the '<em>OBJECT</em>' class.
@@ -3979,7 +5005,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_FEATURE_COUNT = 5;
+	int OBJECT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>OBJECT</em>' class.
@@ -4332,6 +5358,39 @@ public interface HtmlPackage extends EPackage {
 	EReference getHTMLElement_Parent();
 
 	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see co.edu.uniandes.metamodels.Html.HTMLElement#getId()
+	 * @see #getHTMLElement()
+	 * @generated
+	 */
+	EAttribute getHTMLElement_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class</em>'.
+	 * @see co.edu.uniandes.metamodels.Html.HTMLElement#getClass_()
+	 * @see #getHTMLElement()
+	 * @generated
+	 */
+	EAttribute getHTMLElement_Class();
+
+	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see co.edu.uniandes.metamodels.Html.HTMLElement#getTitle()
+	 * @see #getHTMLElement()
+	 * @generated
+	 */
+	EAttribute getHTMLElement_Title();
+
+	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.metamodels.Html.HEAD <em>HEAD</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4404,17 +5463,6 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLINK_Rel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.LINK#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see co.edu.uniandes.metamodels.Html.LINK#getTitle()
-	 * @see #getLINK()
-	 * @generated
-	 */
-	EAttribute getLINK_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.LINK#getAhref <em>Ahref</em>}'.
@@ -5113,17 +6161,6 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getA_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.A#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see co.edu.uniandes.metamodels.Html.A#getId()
-	 * @see #getA()
-	 * @generated
-	 */
-	EAttribute getA_Id();
 
 	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.metamodels.Html.DIV <em>DIV</em>}'.
@@ -5874,17 +6911,6 @@ public interface HtmlPackage extends EPackage {
 	EAttribute getOBJECT_Classid();
 
 	/**
-	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.OBJECT#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see co.edu.uniandes.metamodels.Html.OBJECT#getId()
-	 * @see #getOBJECT()
-	 * @generated
-	 */
-	EAttribute getOBJECT_Id();
-
-	/**
 	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Html.OBJECT#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6162,6 +7188,30 @@ public interface HtmlPackage extends EPackage {
 		EReference HTML_ELEMENT__PARENT = eINSTANCE.getHTMLElement_Parent();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HTML_ELEMENT__ID = eINSTANCE.getHTMLElement_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HTML_ELEMENT__CLASS = eINSTANCE.getHTMLElement_Class();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HTML_ELEMENT__TITLE = eINSTANCE.getHTMLElement_Title();
+
+		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.metamodels.Html.impl.HEADImpl <em>HEAD</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6222,14 +7272,6 @@ public interface HtmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LINK__REL = eINSTANCE.getLINK_Rel();
-
-		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK__TITLE = eINSTANCE.getLINK_Title();
 
 		/**
 		 * The meta object literal for the '<em><b>Ahref</b></em>' attribute feature.
@@ -6814,14 +7856,6 @@ public interface HtmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute A__NAME = eINSTANCE.getA_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute A__ID = eINSTANCE.getA_Id();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.metamodels.Html.impl.DIVImpl <em>DIV</em>}' class.
@@ -7426,14 +8460,6 @@ public interface HtmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OBJECT__CLASSID = eINSTANCE.getOBJECT_Classid();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OBJECT__ID = eINSTANCE.getOBJECT_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.

@@ -31,7 +31,7 @@ public interface OL extends ListElement {
 	 * @return the value of the '<em>Start</em>' attribute.
 	 * @see #setStart(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOL_Start()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getStart();

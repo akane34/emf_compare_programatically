@@ -37,7 +37,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Src</em>' attribute.
 	 * @see #setSrc(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getSrc();
@@ -63,7 +63,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getName();
@@ -89,7 +89,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Marginwidth</em>' attribute.
 	 * @see #setMarginwidth(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Marginwidth()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getMarginwidth();
@@ -115,7 +115,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Marginheight</em>' attribute.
 	 * @see #setMarginheight(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Marginheight()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getMarginheight();
@@ -141,7 +141,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Scrolling</em>' attribute.
 	 * @see #setScrolling(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Scrolling()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getScrolling();
@@ -167,7 +167,7 @@ public interface FRAME extends EObject {
 	 * @return the value of the '<em>Noresize</em>' attribute.
 	 * @see #setNoresize(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Noresize()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getNoresize();

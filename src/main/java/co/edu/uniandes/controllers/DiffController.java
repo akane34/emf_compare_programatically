@@ -6,9 +6,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import co.edu.uniandes.changesIdentifier.ChangesIdentifier;
 import co.edu.uniandes.pojos.CompareVersionInput;
-import co.edu.uniandes.pojos.IdentifyOutput;
+import co.edu.uniandes.pojos.TransformationChainOutput;
+import co.edu.uniandes.transformations.TransformationChain;
 
 @Path("/diff")
 public class DiffController {
@@ -17,9 +17,9 @@ public class DiffController {
 	@Path("compare")	
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public IdentifyOutput compare(CompareVersionInput compareVersion ){
+	public TransformationChainOutput compare(CompareVersionInput compareVersion){		
 		
-		ChangesIdentifier identifierChanges = new ChangesIdentifier();
-		return identifierChanges.identify(compareVersion);		
+		TransformationChain transformationChain = new TransformationChain();
+		return transformationChain.execute(compareVersion);
 	}	
 }

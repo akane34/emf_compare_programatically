@@ -2,15 +2,15 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+import co.edu.uniandes.metamodels.Html.OBJECT;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
-import co.edu.uniandes.metamodels.Html.OBJECT;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,6 @@ import co.edu.uniandes.metamodels.Html.OBJECT;
  * </p>
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.OBJECTImpl#getClassid <em>Classid</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Html.impl.OBJECTImpl#getId <em>Id</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.OBJECTImpl#getData <em>Data</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.OBJECTImpl#getType <em>Type</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.OBJECTImpl#getStandby <em>Standby</em>}</li>
@@ -39,16 +38,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * @ordered
 	 */
 	protected Object classid;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected Object id;
 
 	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
@@ -125,27 +114,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(Object newId) {
-		Object oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OBJECT__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Object getData() {
 		return data;
 	}
@@ -214,8 +182,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
 				return getClassid();
-			case HtmlPackage.OBJECT__ID:
-				return getId();
 			case HtmlPackage.OBJECT__DATA:
 				return getData();
 			case HtmlPackage.OBJECT__TYPE:
@@ -236,9 +202,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
 				setClassid(newValue);
-				return;
-			case HtmlPackage.OBJECT__ID:
-				setId(newValue);
 				return;
 			case HtmlPackage.OBJECT__DATA:
 				setData(newValue);
@@ -264,9 +227,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 			case HtmlPackage.OBJECT__CLASSID:
 				setClassid((Object)null);
 				return;
-			case HtmlPackage.OBJECT__ID:
-				setId((Object)null);
-				return;
 			case HtmlPackage.OBJECT__DATA:
 				setData((Object)null);
 				return;
@@ -290,8 +250,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
 				return classid != null;
-			case HtmlPackage.OBJECT__ID:
-				return id != null;
 			case HtmlPackage.OBJECT__DATA:
 				return data != null;
 			case HtmlPackage.OBJECT__TYPE:
@@ -314,8 +272,6 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (classid: ");
 		result.append(classid);
-		result.append(", id: ");
-		result.append(id);
 		result.append(", data: ");
 		result.append(data);
 		result.append(", type: ");

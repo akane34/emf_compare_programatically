@@ -36,7 +36,7 @@ public interface TABLE extends TABLEElement {
 	 * @return the value of the '<em>Border</em>' attribute.
 	 * @see #setBorder(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBorder();
@@ -62,7 +62,7 @@ public interface TABLE extends TABLEElement {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getWidth();
@@ -88,7 +88,7 @@ public interface TABLE extends TABLEElement {
 	 * @return the value of the '<em>Cellspacing</em>' attribute.
 	 * @see #setCellspacing(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Cellspacing()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getCellspacing();
@@ -114,7 +114,7 @@ public interface TABLE extends TABLEElement {
 	 * @return the value of the '<em>Cellpadding</em>' attribute.
 	 * @see #setCellpadding(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Cellpadding()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getCellpadding();

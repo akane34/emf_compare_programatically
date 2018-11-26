@@ -2,12 +2,12 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+import co.edu.uniandes.metamodels.Html.NOFRAME;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
-import co.edu.uniandes.metamodels.Html.NOFRAME;
 
 /**
  * <!-- begin-user-doc -->

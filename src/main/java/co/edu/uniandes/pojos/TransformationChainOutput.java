@@ -2,15 +2,12 @@ package co.edu.uniandes.pojos;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.eclipse.emf.ecore.resource.ResourceSet;
-
 @XmlRootElement
-public class IdentifyOutput {
+public class TransformationChainOutput {
 	private String outputType;
 	private String diffModel;
 	private boolean success;
-	private String error;
-	private ResourceSet outputModel;
+	private String error;	
 	
 	public String getOutputType() {
 		return outputType;
@@ -37,11 +34,5 @@ public class IdentifyOutput {
 	}
 	public void setError(String error) {
 		this.error = error;
-	}
-	public ResourceSet getOutputModel() {
-		return outputModel;
-	}
-	public void setOutputDiffModel(ResourceSet outputModel) {
-		this.outputModel = outputModel;
 	}	
 }

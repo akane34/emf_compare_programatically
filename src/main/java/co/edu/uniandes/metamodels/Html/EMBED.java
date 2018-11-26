@@ -37,7 +37,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Src</em>' attribute.
 	 * @see #setSrc(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getSrc();
@@ -63,7 +63,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getWidth();
@@ -89,7 +89,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Height()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getHeight();
@@ -115,7 +115,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Align</em>' attribute.
 	 * @see #setAlign(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAlign();
@@ -141,7 +141,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Vspace</em>' attribute.
 	 * @see #setVspace(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Vspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getVspace();
@@ -167,7 +167,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Hspace</em>' attribute.
 	 * @see #setHspace(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Hspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getHspace();
@@ -193,7 +193,7 @@ public interface EMBED extends BODYElement {
 	 * @return the value of the '<em>Border</em>' attribute.
 	 * @see #setBorder(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBorder();

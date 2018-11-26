@@ -1,8 +1,8 @@
 package co.edu.uniandes;
 
-import co.edu.uniandes.changesIdentifier.ChangesIdentifier;
 import co.edu.uniandes.pojos.CompareVersionInput;
-import co.edu.uniandes.pojos.IdentifyOutput;
+import co.edu.uniandes.pojos.TransformationChainOutput;
+import co.edu.uniandes.transformations.TransformationChain;
 
 public class Main {
 
@@ -10,11 +10,8 @@ public class Main {
 	static String mayorVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		//String minorModelPath = "v1.0.xmi";
-		//String mayorModelPath = "v2.0.xmi";
-		
-		String minorModelPath = "validationAPIv1.xmi";
-		String mayorModelPath = "validationAPIv2.xmi";
+		String minorModelPath = "v1.0.xmi";
+		String mayorModelPath = "v2.0.xmi";		
 		
 		CompareVersionInput compareVersionInput = new CompareVersionInput();
 		compareVersionInput.setInputType("filePath");
@@ -25,11 +22,11 @@ public class Main {
 		compareVersionInput.setOutputType("filePath");
 		compareVersionInput.setOutputDiffModel("C:\\temp\\model.xmi");
 		
-		ChangesIdentifier identifierChanges = new ChangesIdentifier();
-		IdentifyOutput comparerVersionOutput = identifierChanges.identify(compareVersionInput);
+		TransformationChain transformationChain = new TransformationChain();
+		TransformationChainOutput transformationChainOutput = transformationChain.execute(compareVersionInput);
 		
-		System.out.println("Diff model type: " + comparerVersionOutput.getOutputType());
-		System.out.println("Diff model: " + comparerVersionOutput.getDiffModel());
-		System.out.println("Error: " + (comparerVersionOutput.getError().isEmpty() ? "none" : comparerVersionOutput.getError()));		
+		System.out.println("Diff model type: " + transformationChainOutput.getOutputType());
+		System.out.println("Diff model: " + transformationChainOutput.getDiffModel());
+		System.out.println("Error: " + (transformationChainOutput.getError().isEmpty() ? "none" : transformationChainOutput.getError()));		
 	}	
 }

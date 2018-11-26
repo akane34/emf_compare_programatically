@@ -15,7 +15,6 @@ public interface LINKValidator {
 	boolean validate();
 
 	boolean validateRel(Object value);
-	boolean validateTitle(Object value);
 	boolean validateAhref(Object value);
 	boolean validateType(Object value);
 }

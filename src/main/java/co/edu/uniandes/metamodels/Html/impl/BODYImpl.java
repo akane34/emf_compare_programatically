@@ -2,6 +2,11 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.BODY;
+import co.edu.uniandes.metamodels.Html.BODYElement;
+import co.edu.uniandes.metamodels.Html.HTML;
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,11 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import co.edu.uniandes.metamodels.Html.BODY;
-import co.edu.uniandes.metamodels.Html.BODYElement;
-import co.edu.uniandes.metamodels.Html.HTML;
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
 
 /**
  * <!-- begin-user-doc -->

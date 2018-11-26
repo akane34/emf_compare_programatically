@@ -4,10 +4,10 @@
  */
 package co.edu.uniandes.metamodels.Html.validation;
 
-import org.eclipse.emf.common.util.EList;
-
 import co.edu.uniandes.metamodels.Html.BODYElement;
 import co.edu.uniandes.metamodels.Html.HTML;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Html.BODY}.

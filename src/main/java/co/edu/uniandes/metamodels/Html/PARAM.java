@@ -33,7 +33,7 @@ public interface PARAM extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getPARAM_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getName();
@@ -59,7 +59,7 @@ public interface PARAM extends EObject {
 	 * @return the value of the '<em>Param Value</em>' attribute.
 	 * @see #setParamValue(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getPARAM_ParamValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getParamValue();

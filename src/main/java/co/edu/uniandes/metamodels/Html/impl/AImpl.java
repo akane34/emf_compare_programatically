@@ -2,14 +2,14 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.A;
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import co.edu.uniandes.metamodels.Html.A;
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,6 @@ import co.edu.uniandes.metamodels.Html.HtmlPackage;
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.AImpl#getAhref <em>Ahref</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.AImpl#getName <em>Name</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Html.impl.AImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,16 +45,6 @@ public class AImpl extends BODYElementImpl implements A {
 	 * @ordered
 	 */
 	protected Object name;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected Object id;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,27 +112,6 @@ public class AImpl extends BODYElementImpl implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(Object newId) {
-		Object oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.A__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -151,8 +119,6 @@ public class AImpl extends BODYElementImpl implements A {
 				return getAhref();
 			case HtmlPackage.A__NAME:
 				return getName();
-			case HtmlPackage.A__ID:
-				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,9 +136,6 @@ public class AImpl extends BODYElementImpl implements A {
 				return;
 			case HtmlPackage.A__NAME:
 				setName(newValue);
-				return;
-			case HtmlPackage.A__ID:
-				setId(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,9 +155,6 @@ public class AImpl extends BODYElementImpl implements A {
 			case HtmlPackage.A__NAME:
 				setName((Object)null);
 				return;
-			case HtmlPackage.A__ID:
-				setId((Object)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +171,6 @@ public class AImpl extends BODYElementImpl implements A {
 				return ahref != null;
 			case HtmlPackage.A__NAME:
 				return name != null;
-			case HtmlPackage.A__ID:
-				return id != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -231,8 +189,6 @@ public class AImpl extends BODYElementImpl implements A {
 		result.append(ahref);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

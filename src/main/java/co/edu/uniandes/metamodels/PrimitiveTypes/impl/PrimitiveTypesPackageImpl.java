@@ -2,15 +2,17 @@
  */
 package co.edu.uniandes.metamodels.PrimitiveTypes.impl;
 
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+
+import co.edu.uniandes.metamodels.Html.impl.HtmlPackageImpl;
+
+import co.edu.uniandes.metamodels.PrimitiveTypes.PrimitiveTypesFactory;
+import co.edu.uniandes.metamodels.PrimitiveTypes.PrimitiveTypesPackage;
+
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
-import co.edu.uniandes.metamodels.Html.impl.HtmlPackageImpl;
-import co.edu.uniandes.metamodels.PrimitiveTypes.PrimitiveTypesFactory;
-import co.edu.uniandes.metamodels.PrimitiveTypes.PrimitiveTypesPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -33,7 +33,7 @@ public interface OPTION extends EObject {
 	 * @return the value of the '<em>Selected</em>' attribute.
 	 * @see #setSelected(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOPTION_Selected()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getSelected();
@@ -59,7 +59,7 @@ public interface OPTION extends EObject {
 	 * @return the value of the '<em>Option Value</em>' attribute.
 	 * @see #setOptionValue(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOPTION_OptionValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getOptionValue();

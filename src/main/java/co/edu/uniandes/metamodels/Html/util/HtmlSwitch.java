@@ -2,12 +2,12 @@
  */
 package co.edu.uniandes.metamodels.Html.util;
 
+import co.edu.uniandes.metamodels.Html.*;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import co.edu.uniandes.metamodels.Html.*;
 
 /**
  * <!-- begin-user-doc -->

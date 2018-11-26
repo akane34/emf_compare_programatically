@@ -2,6 +2,9 @@
  */
 package co.edu.uniandes.metamodels.Html.impl;
 
+import co.edu.uniandes.metamodels.Html.HTMLElement;
+import co.edu.uniandes.metamodels.Html.HtmlPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,9 +22,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import co.edu.uniandes.metamodels.Html.HTMLElement;
-import co.edu.uniandes.metamodels.Html.HtmlPackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>HTML Element</b></em>'.
@@ -33,6 +33,9 @@ import co.edu.uniandes.metamodels.Html.HtmlPackage;
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getValue <em>Value</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getClass_ <em>Class</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.impl.HTMLElementImpl#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +60,66 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	 * @ordered
 	 */
 	protected EList<HTMLElement> children;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClass_() <em>Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClass_() <em>Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected String class_ = CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +219,69 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.HTML_ELEMENT__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getClass_() {
+		return class_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClass(String newClass) {
+		String oldClass = class_;
+		class_ = newClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.HTML_ELEMENT__CLASS, oldClass, class_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.HTML_ELEMENT__TITLE, oldTitle, title));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -214,6 +340,12 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 				return getChildren();
 			case HtmlPackage.HTML_ELEMENT__PARENT:
 				return getParent();
+			case HtmlPackage.HTML_ELEMENT__ID:
+				return getId();
+			case HtmlPackage.HTML_ELEMENT__CLASS:
+				return getClass_();
+			case HtmlPackage.HTML_ELEMENT__TITLE:
+				return getTitle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -237,6 +369,15 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 			case HtmlPackage.HTML_ELEMENT__PARENT:
 				setParent((HTMLElement)newValue);
 				return;
+			case HtmlPackage.HTML_ELEMENT__ID:
+				setId((String)newValue);
+				return;
+			case HtmlPackage.HTML_ELEMENT__CLASS:
+				setClass((String)newValue);
+				return;
+			case HtmlPackage.HTML_ELEMENT__TITLE:
+				setTitle((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -258,6 +399,15 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 			case HtmlPackage.HTML_ELEMENT__PARENT:
 				setParent((HTMLElement)null);
 				return;
+			case HtmlPackage.HTML_ELEMENT__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case HtmlPackage.HTML_ELEMENT__CLASS:
+				setClass(CLASS_EDEFAULT);
+				return;
+			case HtmlPackage.HTML_ELEMENT__TITLE:
+				setTitle(TITLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,6 +426,12 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 				return children != null && !children.isEmpty();
 			case HtmlPackage.HTML_ELEMENT__PARENT:
 				return getParent() != null;
+			case HtmlPackage.HTML_ELEMENT__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case HtmlPackage.HTML_ELEMENT__CLASS:
+				return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
+			case HtmlPackage.HTML_ELEMENT__TITLE:
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -292,6 +448,12 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", class: ");
+		result.append(class_);
+		result.append(", title: ");
+		result.append(title);
 		result.append(')');
 		return result.toString();
 	}

@@ -32,7 +32,7 @@ public interface TABLEElement extends BODYElement {
 	 * @return the value of the '<em>Bgcolor</em>' attribute.
 	 * @see #setBgcolor(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLEElement_Bgcolor()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBgcolor();
@@ -58,7 +58,7 @@ public interface TABLEElement extends BODYElement {
 	 * @return the value of the '<em>Background</em>' attribute.
 	 * @see #setBackground(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLEElement_Background()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getBackground();

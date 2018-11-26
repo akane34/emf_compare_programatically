@@ -13,7 +13,6 @@ package co.edu.uniandes.metamodels.Html;
  * </p>
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Html.LINK#getRel <em>Rel</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Html.LINK#getTitle <em>Title</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.LINK#getAhref <em>Ahref</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.LINK#getType <em>Type</em>}</li>
  * </ul>
@@ -34,7 +33,7 @@ public interface LINK extends HEADElement {
 	 * @return the value of the '<em>Rel</em>' attribute.
 	 * @see #setRel(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Rel()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getRel();
@@ -50,32 +49,6 @@ public interface LINK extends HEADElement {
 	void setRel(Object value);
 
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(Object)
-	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Title()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
-	 * @generated
-	 */
-	Object getTitle();
-
-	/**
-	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.LINK#getTitle <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
-	 * @see #getTitle()
-	 * @generated
-	 */
-	void setTitle(Object value);
-
-	/**
 	 * Returns the value of the '<em><b>Ahref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -86,7 +59,7 @@ public interface LINK extends HEADElement {
 	 * @return the value of the '<em>Ahref</em>' attribute.
 	 * @see #setAhref(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getAhref();
@@ -112,7 +85,7 @@ public interface LINK extends HEADElement {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Type()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getType();

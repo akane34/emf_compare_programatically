@@ -16,5 +16,4 @@ public interface AValidator {
 
 	boolean validateAhref(Object value);
 	boolean validateName(Object value);
-	boolean validateId(Object value);
 }

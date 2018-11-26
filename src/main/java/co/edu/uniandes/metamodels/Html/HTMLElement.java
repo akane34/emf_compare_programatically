@@ -18,6 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getValue <em>Value</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getChildren <em>Children</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getParent <em>Parent</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getId <em>Id</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getClass_ <em>Class</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Html.HTMLElement#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement()
@@ -36,7 +39,7 @@ public interface HTMLElement extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement_Value()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getValue();
@@ -96,5 +99,83 @@ public interface HTMLElement extends EObject {
 	 * @generated
 	 */
 	void setParent(HTMLElement value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class</em>' attribute.
+	 * @see #setClass(String)
+	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement_Class()
+	 * @model
+	 * @generated
+	 */
+	String getClass_();
+
+	/**
+	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getClass_ <em>Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class</em>' attribute.
+	 * @see #getClass_()
+	 * @generated
+	 */
+	void setClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
+	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement_Title()
+	 * @model
+	 * @generated
+	 */
+	String getTitle();
+
+	/**
+	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getTitle <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Title</em>' attribute.
+	 * @see #getTitle()
+	 * @generated
+	 */
+	void setTitle(String value);
 
 } // HTMLElement

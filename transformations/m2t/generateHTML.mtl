@@ -1,27 +1,53 @@
 [comment encoding = UTF-8 /]
-[module generateHTML('http://www.uniandes.edu.co/diff')]
-[template public generateHTML(aDiff : Diff)]
+[module generateHTML('http://web.emn.fr/html')]
+[template public generateHTML(aHtml : HTML)]
 [comment @main/]
 [file ('index.html', false, 'UTF-8')]
-<h2> Diff </h2>
-<table border="" style="with:50%">
-
-[for (p : SameParameter | aDiff.eAllContents(SameParameter) )]
-	<tr>
-		<td>
-		
-			<p><h4>SameParameter</h4></p>			
-			<p><h4>changeElement: [p.changeElement/]</h4></p>
-			<p><h4>newLocation: [p.newLocation/]</h4></p>
-			
-			[for (s : Add | p.simpleDiffs.eAllContents(Add) )]
-				
-				<p><h4>[s.changeElement/]</h4></p>
-			[/for]
-				
-		</td>
-	</tr>
-[/for]
-</table>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>FAQ</title>   
+	<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Identified Changes</h2>
+		<div class="accordion">
+	    [for (t : TABLE | aHtml.eAllContents(TABLE) )]
+			<div class="accordion-item">
+				<a>[t.title]</a>
+				<div class="content">					
+					[for (tr : TR | t.trs )]
+						<div class="blog-container">						  
+							<div class="blog-header">
+								<div class="blog-author--no-cover">
+									<h3>[tr.title]</h3>
+								</div>
+							</div>
+							<div class="blog-body">
+								[for (td : TD | tr.tds )]
+									<div class="blog-title">
+										<h4>[td.title]</h4>
+									</div>
+									<div class="blog-summary">
+										<p>[td.value]</p>
+									</div>
+								[/for]
+							</div>
+							<div class="blog-footer">    
+							</div>
+						</div>						
+					[/for]
+				</div>
+			</div>
+		[/for]
+		</div>
+	</div>
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+	<script  src="js/index.js"></script>
+</body>
+</html>
 [/file]
 [/template]

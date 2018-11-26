@@ -31,7 +31,7 @@ public interface BR extends BODYElement {
 	 * @return the value of the '<em>Clear</em>' attribute.
 	 * @see #setClear(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBR_Clear()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getClear();

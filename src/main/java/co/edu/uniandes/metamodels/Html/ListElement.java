@@ -32,7 +32,7 @@ public interface ListElement extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Object)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getListElement_Type()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodel.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
 	 * @generated
 	 */
 	Object getType();
