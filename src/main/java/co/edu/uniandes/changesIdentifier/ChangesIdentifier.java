@@ -17,6 +17,7 @@ import org.eclipse.emf.compare.AttributeChange;
 import org.eclipse.emf.compare.Comparison;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import co.edu.uniandes.comparator.Comparer;
 import co.edu.uniandes.pojos.CompareVersionInput;
@@ -24,6 +25,7 @@ import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelInputType;
 import co.edu.uniandes.pojos.ModelOutputType;
 import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
+import co.edu.uniandes.util.Tools;
 
 public class ChangesIdentifier {
 
@@ -81,7 +83,11 @@ public class ChangesIdentifier {
 		
 		DiffModelTransformation diffMetamodel = new DiffModelTransformation(outputModelPath);
 		Comparer comparer = new Comparer();
-		Comparison comparison = comparer.compare(minorModelPath, mayorModelPath);
+		
+		ResourceSet minorVersionModel = Tools.loadModel(minorModelPath);
+		ResourceSet mayorVersionModel = Tools.loadModel(mayorModelPath);	
+		
+		Comparison comparison = comparer.compare(minorVersionModel, mayorVersionModel);
 	
 		EList<Diff> diffs = comparison.getDifferences();
 		
@@ -92,7 +98,8 @@ public class ChangesIdentifier {
 		List<ChangeBoundaryParameter> changesBoundaryParameters = new ArrayList<ChangeBoundaryParameter>();
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
-		List<ChangeSchema> schemasUpdated = new ArrayList<ChangeSchema>();
+		List<ChangeSchema> addAndDeletedSchemas = new ArrayList<ChangeSchema>();
+		List<ChangeSchema> changedSchemas = new ArrayList<ChangeSchema>();
 		List<ChangeContentType> contentTypesUpdated = new ArrayList<ChangeContentType>();
 		List<ChangeOperation> deleteOperations = new ArrayList<ChangeOperation>();
 		List<ChangePath> deletePaths = new ArrayList<ChangePath>();
@@ -105,7 +112,7 @@ public class ChangesIdentifier {
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
 				ChangesProcessor.getDeletedResponse(deleteResponse, diff, minorVersion);				
 				ChangesProcessor.getAddedResponse(addResponse, diff, mayorVersion);
-				ChangesProcessor.getChangesSchema(schemasUpdated, diff);
+				ChangesProcessor.getSchemaChanges(addAndDeletedSchemas, changedSchemas, diff);
 				ChangesProcessor.getDeletedOperations(deleteOperations, diff, mayorVersion);		
 				ChangesProcessor.getDeletedPaths(deletePaths, diff, minorVersion, mayorVersion);
 				ChangesProcessor.getChangedOperations(changeOperations, diff, minorVersion, mayorVersion);
@@ -126,17 +133,17 @@ public class ChangesIdentifier {
 		ChangesProcessor.processDeletedResponses(diffMetamodel, deleteResponse, diff.getChange());
 		ChangesProcessor.processAddedResponses(diffMetamodel, addResponse, diff.getChange());
 		ChangesProcessor.processBoundariesParamsUpdated(diffMetamodel,changesBoundaryParameters, diff.getChange());
-		ChangesProcessor.processSchemasUpdated(diffMetamodel, schemasUpdated, diff.getChange());
+		ChangesProcessor.processSchemasUpdated(diffMetamodel, addAndDeletedSchemas, diff.getChange());
 		ChangesProcessor.processContentTypesUpdates(diffMetamodel,contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processUnsupportRequestMethods(diffMetamodel, deleteOperations, diff.getChange());
 		ChangesProcessor.processChangeDefaultValueOfParameter(diffMetamodel, changeParameters, diff.getChange());
 		ChangesProcessor.processExposeData(diffMetamodel, contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processAddRestrictedAccess(diffMetamodel, addResponse, diff.getChange());
 		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffMetamodel, addResponse, diff.getChange());
+		ChangesProcessor.processModifyParameterSchemaType(diffMetamodel, addAndDeletedSchemas, changedSchemas, diff.getChange(), minorVersionModel, mayorVersionModel);
 		
 		diffMetamodel.saveInstance();		
-		
-				
+						
 		if (compareVersionInput.getOutputTypeE() == ModelOutputType.BASE64){
 			output.setDiffModel(base64Converter(outputModelPath));
 			output.setOutputType(compareVersionInput.getOutputTypeE().getName());

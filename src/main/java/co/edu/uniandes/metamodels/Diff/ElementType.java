@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see co.edu.uniandes.metamodels.Diff.DiffPackage#getElementType()
- * @model instanceClass="co.edu.uniandes.metamodel.Diff.ElementType"
+ * @model instanceClass="co.edu.uniandes.metamodels.Diff.ElementType"
  * @generated
  */
 public enum ElementType implements Enumerator {

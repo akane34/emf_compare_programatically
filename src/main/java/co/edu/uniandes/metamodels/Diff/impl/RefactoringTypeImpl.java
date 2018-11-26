@@ -2,6 +2,10 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
+import co.edu.uniandes.metamodels.Diff.Change;
+import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.RefactoringType;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,10 +15,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import co.edu.uniandes.metamodels.Diff.Change;
-import co.edu.uniandes.metamodels.Diff.DiffPackage;
-import co.edu.uniandes.metamodels.Diff.RefactoringType;
 
 /**
  * <!-- begin-user-doc -->

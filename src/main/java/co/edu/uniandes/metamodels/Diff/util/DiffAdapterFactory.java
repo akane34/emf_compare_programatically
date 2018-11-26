@@ -2,14 +2,14 @@
  */
 package co.edu.uniandes.metamodels.Diff.util;
 
+import co.edu.uniandes.metamodels.Diff.*;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
-import co.edu.uniandes.metamodels.Diff.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -206,6 +206,10 @@ public class DiffAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseReturnType(ReturnType object) {
 				return createReturnTypeAdapter();
+			}
+			@Override
+			public Adapter caseSchema(Schema object) {
+				return createSchemaAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -714,6 +718,20 @@ public class DiffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReturnTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.metamodels.Diff.Schema <em>Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see co.edu.uniandes.metamodels.Diff.Schema
+	 * @generated
+	 */
+	public Adapter createSchemaAdapter() {
 		return null;
 	}
 

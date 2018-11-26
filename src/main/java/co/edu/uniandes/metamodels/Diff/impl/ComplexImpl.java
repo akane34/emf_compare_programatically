@@ -2,6 +2,10 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
+import co.edu.uniandes.metamodels.Diff.Complex;
+import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.Simple;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -9,10 +13,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import co.edu.uniandes.metamodels.Diff.Complex;
-import co.edu.uniandes.metamodels.Diff.DiffPackage;
-import co.edu.uniandes.metamodels.Diff.Simple;
 
 /**
  * <!-- begin-user-doc -->

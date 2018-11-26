@@ -966,13 +966,22 @@ public interface DiffPackage extends EPackage {
 	int MODIFY_PARAMETER_SCHEMA_TYPE__OLD = MODIFY__OLD;
 
 	/**
+	 * The feature id for the '<em><b>Schemas</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_PARAMETER_SCHEMA_TYPE__SCHEMAS = MODIFY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Modify Parameter Schema Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PARAMETER_SCHEMA_TYPE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
+	int MODIFY_PARAMETER_SCHEMA_TYPE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Modify Parameter Schema Type</em>' class.
@@ -1920,6 +1929,52 @@ public interface DiffPackage extends EPackage {
 	int RETURN_TYPE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link co.edu.uniandes.metamodels.Diff.impl.SchemaImpl <em>Schema</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see co.edu.uniandes.metamodels.Diff.impl.SchemaImpl
+	 * @see co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl#getSchema()
+	 * @generated
+	 */
+	int SCHEMA = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEMA__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEMA__URI = 1;
+
+	/**
+	 * The number of structural features of the '<em>Schema</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEMA_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Schema</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEMA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link co.edu.uniandes.metamodels.Diff.APIElementType <em>API Element Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1927,7 +1982,7 @@ public interface DiffPackage extends EPackage {
 	 * @see co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl#getAPIElementType()
 	 * @generated
 	 */
-	int API_ELEMENT_TYPE = 35;
+	int API_ELEMENT_TYPE = 36;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.metamodels.Diff.ParameterLocation <em>Parameter Location</em>}' enum.
@@ -1937,7 +1992,7 @@ public interface DiffPackage extends EPackage {
 	 * @see co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl#getParameterLocation()
 	 * @generated
 	 */
-	int PARAMETER_LOCATION = 36;
+	int PARAMETER_LOCATION = 37;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.metamodels.Diff.ElementType <em>Element Type</em>}' enum.
@@ -1947,7 +2002,7 @@ public interface DiffPackage extends EPackage {
 	 * @see co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl#getElementType()
 	 * @generated
 	 */
-	int ELEMENT_TYPE = 37;
+	int ELEMENT_TYPE = 38;
 
 
 	/**
@@ -2221,6 +2276,17 @@ public interface DiffPackage extends EPackage {
 	EClass getModifyParameterSchemaType();
 
 	/**
+	 * Returns the meta object for the reference list '{@link co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType#getSchemas <em>Schemas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Schemas</em>'.
+	 * @see co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType#getSchemas()
+	 * @see #getModifyParameterSchemaType()
+	 * @generated
+	 */
+	EReference getModifyParameterSchemaType_Schemas();
+
+	/**
 	 * Returns the meta object for class '{@link co.edu.uniandes.metamodels.Diff.UpperBondary <em>Upper Bondary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2464,6 +2530,38 @@ public interface DiffPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getReturnType();
+
+	/**
+	 * Returns the meta object for class '{@link co.edu.uniandes.metamodels.Diff.Schema <em>Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Schema</em>'.
+	 * @see co.edu.uniandes.metamodels.Diff.Schema
+	 * @generated
+	 */
+	EClass getSchema();
+
+	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Diff.Schema#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see co.edu.uniandes.metamodels.Diff.Schema#getName()
+	 * @see #getSchema()
+	 * @generated
+	 */
+	EAttribute getSchema_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Diff.Schema#getUri <em>Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uri</em>'.
+	 * @see co.edu.uniandes.metamodels.Diff.Schema#getUri()
+	 * @see #getSchema()
+	 * @generated
+	 */
+	EAttribute getSchema_Uri();
 
 	/**
 	 * Returns the meta object for enum '{@link co.edu.uniandes.metamodels.Diff.APIElementType <em>API Element Type</em>}'.
@@ -2759,6 +2857,14 @@ public interface DiffPackage extends EPackage {
 		EClass MODIFY_PARAMETER_SCHEMA_TYPE = eINSTANCE.getModifyParameterSchemaType();
 
 		/**
+		 * The meta object literal for the '<em><b>Schemas</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODIFY_PARAMETER_SCHEMA_TYPE__SCHEMAS = eINSTANCE.getModifyParameterSchemaType_Schemas();
+
+		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.metamodels.Diff.impl.UpperBondaryImpl <em>Upper Bondary</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2987,6 +3093,32 @@ public interface DiffPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RETURN_TYPE = eINSTANCE.getReturnType();
+
+		/**
+		 * The meta object literal for the '{@link co.edu.uniandes.metamodels.Diff.impl.SchemaImpl <em>Schema</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see co.edu.uniandes.metamodels.Diff.impl.SchemaImpl
+		 * @see co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl#getSchema()
+		 * @generated
+		 */
+		EClass SCHEMA = eINSTANCE.getSchema();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEMA__NAME = eINSTANCE.getSchema_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEMA__URI = eINSTANCE.getSchema_Uri();
 
 		/**
 		 * The meta object literal for the '{@link co.edu.uniandes.metamodels.Diff.APIElementType <em>API Element Type</em>}' enum.

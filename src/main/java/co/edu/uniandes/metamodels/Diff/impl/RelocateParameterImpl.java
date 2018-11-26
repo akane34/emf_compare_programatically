@@ -2,15 +2,15 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
+import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.ParameterLocation;
+import co.edu.uniandes.metamodels.Diff.RelocateParameter;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import co.edu.uniandes.metamodels.Diff.DiffPackage;
-import co.edu.uniandes.metamodels.Diff.ParameterLocation;
-import co.edu.uniandes.metamodels.Diff.RelocateParameter;
 
 /**
  * <!-- begin-user-doc -->

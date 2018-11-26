@@ -2,14 +2,6 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import co.edu.uniandes.metamodels.Diff.APIElementType;
 import co.edu.uniandes.metamodels.Diff.Add;
 import co.edu.uniandes.metamodels.Diff.AddParameter;
@@ -46,10 +38,19 @@ import co.edu.uniandes.metamodels.Diff.RenameMethod;
 import co.edu.uniandes.metamodels.Diff.RenameParameter;
 import co.edu.uniandes.metamodels.Diff.ReturnType;
 import co.edu.uniandes.metamodels.Diff.SameParameter;
+import co.edu.uniandes.metamodels.Diff.Schema;
 import co.edu.uniandes.metamodels.Diff.Simple;
 import co.edu.uniandes.metamodels.Diff.SplitMethod;
 import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
 import co.edu.uniandes.metamodels.Diff.UpperBondary;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -302,6 +303,13 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 	 * @generated
 	 */
 	private EClass returnTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass schemaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -624,6 +632,15 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModifyParameterSchemaType_Schemas() {
+		return (EReference)modifyParameterSchemaTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getUpperBondary() {
 		return upperBondaryEClass;
 	}
@@ -840,6 +857,33 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSchema() {
+		return schemaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchema_Name() {
+		return (EAttribute)schemaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchema_Uri() {
+		return (EAttribute)schemaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getAPIElementType() {
 		return apiElementTypeEEnum;
 	}
@@ -931,6 +975,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 		modifyEClass = createEClass(MODIFY);
 
 		modifyParameterSchemaTypeEClass = createEClass(MODIFY_PARAMETER_SCHEMA_TYPE);
+		createEReference(modifyParameterSchemaTypeEClass, MODIFY_PARAMETER_SCHEMA_TYPE__SCHEMAS);
 
 		upperBondaryEClass = createEClass(UPPER_BONDARY);
 
@@ -974,6 +1019,10 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 		parameterTypeEClass = createEClass(PARAMETER_TYPE);
 
 		returnTypeEClass = createEClass(RETURN_TYPE);
+
+		schemaEClass = createEClass(SCHEMA);
+		createEAttribute(schemaEClass, SCHEMA__NAME);
+		createEAttribute(schemaEClass, SCHEMA__URI);
 
 		// Create enums
 		apiElementTypeEEnum = createEEnum(API_ELEMENT_TYPE);
@@ -1083,6 +1132,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 		initEClass(modifyEClass, Modify.class, "Modify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyParameterSchemaTypeEClass, ModifyParameterSchemaType.class, "ModifyParameterSchemaType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModifyParameterSchemaType_Schemas(), this.getSchema(), null, "schemas", null, 1, -1, ModifyParameterSchemaType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(upperBondaryEClass, UpperBondary.class, "UpperBondary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1126,6 +1176,10 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 		initEClass(parameterTypeEClass, ParameterType.class, "ParameterType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(returnTypeEClass, ReturnType.class, "ReturnType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSchema_Name(), ecorePackage.getEString(), "name", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchema_Uri(), ecorePackage.getEString(), "uri", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(apiElementTypeEEnum, APIElementType.class, "APIElementType");

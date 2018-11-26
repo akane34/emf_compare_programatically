@@ -2,7 +2,6 @@ package co.edu.uniandes.comparator;
 
 import java.util.Iterator;
 
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.compare.Comparison;
 import org.eclipse.emf.compare.EMFCompare;
 import org.eclipse.emf.compare.match.DefaultComparisonFactory;
@@ -17,11 +16,9 @@ import org.eclipse.emf.compare.scope.IComparisonScope;
 import org.eclipse.emf.compare.utils.UseIdentifiers;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import co.edu.uniandes.util.Tools;
 import edu.uoc.som.openapi.OpenAPIPackage;
 
 public class Comparer {
@@ -29,16 +26,13 @@ public class Comparer {
 	private OpenAPIPackage openAPIPackage;
 	
 	public Comparer(){
-		registerOpenAPIMetamodel();
+		Tools.registerOpenAPIMetamodel();
 	}
 	
-	public Comparison compare(String model1, String model2) {		
-		try{
-			ResourceSet resourceSet1 = loadModel(model1);
-			ResourceSet resourceSet2 = loadModel(model2);		
-	
+	public Comparison compare(ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {		
+		try{	
 			EMFCompare comparator = getComparator();
-			IComparisonScope scope = createScope(resourceSet1, resourceSet2);
+			IComparisonScope scope = createScope(minorVersionModel, mayorVersionModel);
 			
 			return comparator.compare(scope);
 		}catch (Exception ex){
@@ -59,16 +53,7 @@ public class Comparer {
 		}
 		
 		return null;
-	}
-	
-	private OpenAPIPackage registerOpenAPIMetamodel() {
-		if (openAPIPackage == null){
-			openAPIPackage = OpenAPIPackage.eINSTANCE;
-			EPackage.Registry.INSTANCE.put(openAPIPackage.getNsURI(), openAPIPackage);
-		}
-		
-		return openAPIPackage;
-	}	
+	}		
 
 	private EMFCompare getComparator() {
 		IEObjectMatcher matcher = DefaultMatchEngine.createDefaultEObjectMatcher(UseIdentifiers.NEVER);
@@ -79,18 +64,7 @@ public class Comparer {
 	        matchEngineRegistry.add(matchEngineFactory);
 		EMFCompare comparator = EMFCompare.builder().setMatchEngineFactoryRegistry(matchEngineRegistry).build();
 		return comparator;
-	}
-
-	private ResourceSet loadModel(String absolutePath) {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		
-		URI uri = URI.createFileURI(absolutePath);
-		
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
-		resourceSet.getResource(uri, true);
-	  
-		return resourceSet;
-	}	
+	}		
 	
 	@SuppressWarnings("deprecation")
 	private IComparisonScope createScope(ResourceSet resourceSet1, ResourceSet resourceSet2) {

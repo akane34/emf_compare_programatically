@@ -2,6 +2,9 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
+import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.ElementReference;
+
 import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -10,9 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import co.edu.uniandes.metamodels.Diff.DiffPackage;
-import co.edu.uniandes.metamodels.Diff.ElementReference;
 
 /**
  * <!-- begin-user-doc -->

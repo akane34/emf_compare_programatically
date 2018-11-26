@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import co.edu.uniandes.changesIdentifier.ChangeBoundaryParameter;
@@ -21,9 +22,11 @@ import co.edu.uniandes.changesIdentifier.ChangeParameter;
 import co.edu.uniandes.changesIdentifier.ChangePath;
 import co.edu.uniandes.changesIdentifier.ChangeResponse;
 import co.edu.uniandes.changesIdentifier.ChangeSchema;
+import co.edu.uniandes.changesIdentifier.ModifyParameterSchema;
 import co.edu.uniandes.metamodels.Diff.*;
 import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
 import edu.uoc.som.openapi.JSONDataType;
+import edu.uoc.som.openapi.Parameter;
 
 public class DiffModelTransformation {
 
@@ -53,7 +56,7 @@ public class DiffModelTransformation {
 		diff.setNewVersion(newVersion);
 		xmiResource.getContents().add(diff);
 		return diff;
-	}
+	}	
 	
 	public void createChangeTypeOfParameterInstance(ChangeParameter oldParameter, ChangeParameter newParameter,List<Change> changes){		
 		ElementReference oldElementReference = diffFactory.createElementReference();
@@ -359,7 +362,7 @@ public class DiffModelTransformation {
 
 	public void createAddedSchemaProperty(ChangeSchema schemaUpdated, List<Change> changes) {
 		ElementReference newElementReference = diffFactory.createElementReference();
-		newElementReference.setEObject(schemaUpdated.getUri());
+		newElementReference.setEObject(schemaUpdated.getUri().toString());
 		newElementReference.setValue(schemaUpdated.getSchema().getName());
 		
 		ReturnType returnType = diffFactory.createReturnType();
@@ -371,7 +374,7 @@ public class DiffModelTransformation {
 	
 	public void createDeletedSchemaProperty(ChangeSchema schemaUpdated, List<Change> changes) {
 		ElementReference oldElementReference = diffFactory.createElementReference();
-		oldElementReference.setEObject(schemaUpdated.getUri());
+		oldElementReference.setEObject(schemaUpdated.getUri().toString());
 		oldElementReference.setValue(schemaUpdated.getSchema().getName());
 		
 		ReturnType returnType = diffFactory.createReturnType();
@@ -438,21 +441,26 @@ public class DiffModelTransformation {
 		changes.add(delete);      
 	}
 
-	public void createModifyParameterSchemaTypeInstance(ChangeParameter parameter, List<Change> changes){
-		ElementReference oldElementReference = diffFactory.createElementReference();				
-		oldElementReference.setEObject(parameter.getOldParameterUri());
-		oldElementReference.setValue(parameter.getOldParameter().getSchema().getName());
-		
+	public void createModifyParameterSchemaTypeInstance(String path, Parameter parameter, List<ModifyParameterSchema> parameterSchemas, List<Change> changes){		
 		ElementReference newElementReference = diffFactory.createElementReference();
-		newElementReference.setEObject(parameter.getNewParameterUri());
-		newElementReference.setValue(parameter.getNewParameter().getSchema().getName());
-
-		DefaultValue defaultValue = diffFactory.createDefaultValue();		
-		defaultValue.setChangeElement(APIElementType.METHOD_PARAMETER);
-		defaultValue.setOld(oldElementReference);
-		defaultValue.setNew(newElementReference);
-								
-		changes.add(defaultValue);
+		newElementReference.setEObject(EcoreUtil.getURI(parameter).toString());
+		newElementReference.setValue(parameter.getName());
+		newElementReference.setPath(path);
+		
+		ModifyParameterSchemaType modifyParameter = diffFactory.createModifyParameterSchemaType();		
+		modifyParameter.setChangeElement(APIElementType.METHOD_PARAMETER);		
+		modifyParameter.setNew(newElementReference);
+		
+		for (ModifyParameterSchema m : parameterSchemas){
+			Schema s = diffFactory.createSchema();
+			s.setName(m.getSchema().getName());
+			s.setUri(EcoreUtil.getURI(m.getSchema()).toString());
+			
+			xmiResource.getContents().add(s);
+			modifyParameter.getSchemas().add(s);
+		}
+		
+		changes.add(modifyParameter);
 	}
 	
 	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse changeResponse, List<Change> changes) {

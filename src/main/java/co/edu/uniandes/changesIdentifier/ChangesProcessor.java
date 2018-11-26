@@ -1,20 +1,25 @@
 package co.edu.uniandes.changesIdentifier;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.emf.compare.DifferenceKind;
-import org.eclipse.emf.compare.DifferenceSource;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.AttributeChange;
 import org.eclipse.emf.compare.Diff;
+import org.eclipse.emf.compare.DifferenceKind;
+import org.eclipse.emf.compare.DifferenceSource;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.impl.EAttributeImpl;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EcoreUtil.UsageCrossReferencer;
 
 import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
@@ -25,6 +30,7 @@ import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;
 import edu.uoc.som.openapi.impl.PathImpl;
 import edu.uoc.som.openapi.impl.ResponseImpl;
+import edu.uoc.som.openapi.impl.SchemaImpl;
 
 public class ChangesProcessor {
 
@@ -324,29 +330,69 @@ public class ChangesProcessor {
 		}
 	}
 
-	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- processModifyParameterSchemaType");		
-		for (ChangeParameter p : changeParameters){
-			if (p.getOldParameter() != null &&	p.getNewParameter() != null){
-				String oldSchema = p.getOldParameter().getSchema() != null ? p.getOldParameter().getSchema().getName() : null;
-				String newSchema = p.getNewParameter().getSchema() != null ? p.getNewParameter().getSchema().getName() : null;				
-				
-				if (newSchema == null && oldSchema == null)
-					continue;
-				
-				if ((isNullOrEmpty(newSchema) && !isNullOrEmpty(oldSchema)) ||
-					(!isNullOrEmpty(newSchema) && isNullOrEmpty(oldSchema)) ||
-					(!newSchema.equals(oldSchema))){
-				
-					System.out.println(p.getPath() + "  v1 schema:" + oldSchema);
-					System.out.println(p.getPath() + "  v2 schema:" + newSchema);
-					System.out.println("\n ");
-					
-					diffMetamodel.createModifyParameterSchemaTypeInstance(p, changes);
-				}
-			}
-		}			
-	}
+	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
+		System.out.println("-------------------- processModifyParameterSchemaType");
+		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
+		for (ChangeSchema addAndDeletedSchema : addAndDeletedSchemas){			
+			SchemaImpl schema = (SchemaImpl)mayorVersionModel.getEObject(addAndDeletedSchema.getUri(), true);
+		    Collection<Setting> schemasUsages = getUsages(schema);
+		    Collection<String> schemaIds = new ArrayList<String>();
+		    Collection<String> parameterIds = new ArrayList<String>();
+		    
+		    Collection<ParameterImpl> parameters = getParameters(schemasUsages, schemaIds, parameterIds);		    
+		    if (!parameters.isEmpty()){		    	
+			    for (ParameterImpl parameter : parameters)
+			    {			    				    	
+			    	for (ChangeSchema changeSchema : changedSchemas){			    		
+			    		String uriParamSchema = EcoreUtil.getURI(parameter.getSchema()).toString();
+			    		String uriChangeSchema = EcoreUtil.getURI(changeSchema.getSchema()).toString();
+			    		
+			    		if (uriParamSchema.equals(uriChangeSchema)){			    			
+			    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>(); 
+			    			for(Setting setting : getUsages(parameter)){
+			    				EObject object = setting.getEObject();
+			    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
+			    		    		operations.add((OperationImpl)object);
+			    		    		String relativePath = ((PathImpl)((OperationImpl)object).eContainer()).getRelativePath();
+			    		    		
+			    		    		ModifyParameterSchema m = new ModifyParameterSchema();
+		    		    			m.setParameter(parameter);
+		    		    			m.setPath((PathImpl)((OperationImpl)object).eContainer());
+		    		    			m.setSchema(addAndDeletedSchema.getSchema());
+		    		    			m.setOperation((OperationImpl)object);
+		    		    			
+			    		    		if (modifyParameters.get(relativePath) == null){
+			    		    			List<ModifyParameterSchema> list = new ArrayList<ModifyParameterSchema>();			    		    			
+			    		    			list.add(m);			    		    			
+			    		    			
+			    		    			modifyParameters.put(relativePath, list);
+			    		    		}
+			    		    		else{
+			    		    			if(!modifyParameters.get(relativePath).contains(m))
+			    		    				modifyParameters.get(relativePath).add(m);
+			    		    		}			    		    		
+			    		    	}
+			    			}			    			
+			    		}
+			    	}		    	
+			    }
+		    }
+		}
+		
+		for (Map.Entry<String, List<ModifyParameterSchema>> entry : modifyParameters.entrySet())
+		{		    		    	
+			Parameter parameter = null;
+			String path = entry.getKey();
+			System.out.println("\n Path: " + path);
+		    for (ModifyParameterSchema p : entry.getValue()){
+		    	parameter = p.getParameter();
+		    	
+		    	System.out.println("\t Parameter: " + p.getParameter().getName() + " schema:" + p.getSchema().getName() + " uri: " + EcoreUtil.getURI(p.getSchema()).toString());		    	
+		    }
+		    
+		    diffMetamodel.createModifyParameterSchemaTypeInstance(path, parameter, entry.getValue(), changes);
+		}	
+	}		
 	
 	public static void processExposeData(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
 		System.out.println("-------------------- processExposeData");	
@@ -408,7 +454,6 @@ public class ChangesProcessor {
 		}
 	}
 
-	
 	/************************************ GET METHODS ************************************************************/
 	
 	public static void getAddedParameters(List<ChangeParameter> addParameters, Map<String, List<ChangeParameter>> operations, Diff diff, String newVersion) {		
@@ -571,7 +616,6 @@ public class ChangesProcessor {
 			}
 		}
 	}	
-	
 	public static void getDeletedResponse(List<ChangeResponse> deleteResponse, Diff diff, String oldVersion) {
 		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
@@ -592,10 +636,11 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void getChangesSchema(List<ChangeSchema> addedSchemas, Diff diff) {
-		Schema schemaAdded;
-		if ( ((ReferenceChange)diff).getValue() instanceof Schema && (diff.getKind() == DifferenceKind.ADD || diff.getKind() == DifferenceKind.DELETE)){
-			schemaAdded = (Schema)(((ReferenceChange)diff).getValue());
+	
+	public static void getSchemaChanges(List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changeSchemas, Diff diff) {
+		Schema schemaUpdated;
+		if ( ((ReferenceChange)diff).getValue() instanceof Schema && (diff.getKind() == DifferenceKind.ADD || diff.getKind() == DifferenceKind.DELETE || diff.getKind() == DifferenceKind.CHANGE)){
+			schemaUpdated = (Schema)(((ReferenceChange)diff).getValue());
 	
 			EObject left = diff.getMatch().getLeft();
 			EObject right = diff.getMatch().getRight();
@@ -603,10 +648,14 @@ public class ChangesProcessor {
 			if(left instanceof Schema && right instanceof Schema  && ((Schema)left).getName() !=null && ((Schema)right).getName() != null && ((Schema)left).getName().equals(((Schema)right).getName())) {
 				ChangeSchema updated = new ChangeSchema();
 				
-				updated.setSchema(schemaAdded);
-				updated.setUri(EcoreUtil.getURI((Schema)right).toString());
+				updated.setSchema(schemaUpdated);
+				updated.setUri(EcoreUtil.getURI(schemaUpdated));
 				updated.setDifferenceKind(diff.getKind());
-				addedSchemas.add(updated);
+				updated.setDiff(diff);
+								
+				addAndDeletedSchemas.add(updated);
+				if (diff.getKind() == DifferenceKind.CHANGE)
+					changeSchemas.add(updated);
 			}
 		}
 	}
@@ -637,6 +686,7 @@ public class ChangesProcessor {
 		}
 	}
 	
+	
 	public static void getDeletedPaths(List<ChangePath> deletePaths, Diff diff, String oldVersion, String newVersion) {
 		if (((ReferenceChange)diff).getValue() instanceof PathImpl && diff.getKind() == DifferenceKind.ADD){
 			PathImpl oldPath = (PathImpl)((ReferenceChange)diff).getValue();
@@ -652,7 +702,6 @@ public class ChangesProcessor {
 			deletePaths.add(path);			
 		}
 	}				
-		
 	
 	/************************************ PRIVATE METHODS ************************************************************/
 	
@@ -690,6 +739,7 @@ public class ChangesProcessor {
 		}
 	}
 	
+	
 	private static void setOperation(PathImpl path, ChangeResponse param) {
 		Operation getOperation = path.getGet();
 		Operation deleteOperation = path.getDelete();
@@ -713,10 +763,44 @@ public class ChangesProcessor {
 			param.setOperation(putOperation);					
 		}
 	}
+	
 
 	private static boolean isNullOrEmpty(String value){
 		return value == null || value.trim().isEmpty();
-	}
-
+	}	
 	
+	private static Collection<Setting> getUsages(EObject eobject) {
+		EObject rootEObject = EcoreUtil.getRootContainer(eobject);
+	    Resource resource = rootEObject.eResource();
+		Collection<Setting> usages;
+		if (resource == null)		    
+		  usages = UsageCrossReferencer.find(eobject, rootEObject);		    
+		else
+		{
+		  ResourceSet resourceSet = resource.getResourceSet();
+		  if (resourceSet == null)		      
+		    usages = UsageCrossReferencer.find(eobject, resource);		      
+		  else		      
+		    usages = UsageCrossReferencer.find(eobject, resourceSet);		      
+		}
+		return usages;
+	}
+	
+	private static Collection<ParameterImpl> getParameters(Collection<Setting> usages, Collection<String> schemaIds, Collection<String> parameterIds){
+		Collection<ParameterImpl> parameters = new ArrayList<ParameterImpl>();
+		for (Setting usage : usages)
+	    {			
+	    	EObject parent = usage.getEObject();
+	    	if (parent instanceof SchemaImpl && !schemaIds.contains(EcoreUtil.getURI((SchemaImpl)parent).toString())){
+	    		schemaIds.add(EcoreUtil.getURI((SchemaImpl)parent).toString());	    		
+	    		parameters.addAll(getParameters(getUsages(parent), schemaIds, parameterIds));	    				    		
+	    	}
+	    	else if (parent instanceof ParameterImpl && !parameterIds.contains(EcoreUtil.getURI((ParameterImpl)parent).toString())){
+	    		parameterIds.add(EcoreUtil.getURI((ParameterImpl)parent).toString());	  
+	    		parameters.add((ParameterImpl)parent);
+	    	}
+	    }
+		
+		return parameters;
+	}
 }

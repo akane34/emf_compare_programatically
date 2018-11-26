@@ -4,9 +4,9 @@
  */
 package co.edu.uniandes.metamodels.Diff.validation;
 
-import org.eclipse.emf.common.util.EList;
-
 import co.edu.uniandes.metamodels.Diff.Simple;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Diff.Complex}.

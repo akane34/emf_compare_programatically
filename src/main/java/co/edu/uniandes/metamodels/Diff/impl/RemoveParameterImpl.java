@@ -2,10 +2,10 @@
  */
 package co.edu.uniandes.metamodels.Diff.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import co.edu.uniandes.metamodels.Diff.DiffPackage;
 import co.edu.uniandes.metamodels.Diff.RemoveParameter;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

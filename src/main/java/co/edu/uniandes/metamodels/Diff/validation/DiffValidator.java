@@ -4,10 +4,10 @@
  */
 package co.edu.uniandes.metamodels.Diff.validation;
 
-import org.eclipse.emf.common.util.EList;
-
 import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.metamodels.Diff.RefactoringType;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Diff.Diff}.
