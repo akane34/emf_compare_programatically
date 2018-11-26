@@ -1,5 +1,8 @@
 package co.edu.uniandes.changesIdentifier;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.compare.DifferenceKind;
 
 import edu.uoc.som.openapi.Operation;
@@ -9,7 +12,7 @@ public class ChangeParameter {
 
 	private Parameter oldParameter;
 	private Parameter newParameter;	
-	private Operation operation;
+	private List<Operation> operations;
 	private String path;
 	private String version;
 	private DifferenceKind differenceKind;
@@ -22,12 +25,13 @@ public class ChangeParameter {
 	public void setNewParameter(Parameter parameter) {
 		this.newParameter = parameter;
 	}
-	public Operation getOperation() {
-		return operation;
-	}
-	public void setOperation(Operation operation) {
-		this.operation = operation;
-	}
+	public List<Operation> getOperations() {
+		if (operations == null)
+			operations = new ArrayList<Operation>();
+		
+		return operations;
+	}	
+	
 	public String getPath() {
 		return path;
 	}
@@ -68,7 +72,7 @@ public class ChangeParameter {
 	public void clone(ChangeParameter p){
 		this.oldParameter = p.getOldParameter();
 		this.newParameter = p.getNewParameter();	
-		this.operation = p.getOperation();
+		this.operations = p.getOperations();
 		this.path = p.getPath();
 		this.version = p.getVersion();
 		this.differenceKind = p.getDifferenceKind();

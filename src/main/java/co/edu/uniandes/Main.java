@@ -10,8 +10,11 @@ public class Main {
 	static String mayorVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		String minorModelPath = "v1.0.xmi";
-		String mayorModelPath = "v2.0.xmi";
+		//String minorModelPath = "v1.0.xmi";
+		//String mayorModelPath = "v2.0.xmi";
+		
+		String minorModelPath = "validationAPIv1.xmi";
+		String mayorModelPath = "validationAPIv2.xmi";
 		
 		CompareVersionInput compareVersionInput = new CompareVersionInput();
 		compareVersionInput.setInputType("filePath");
@@ -27,6 +30,6 @@ public class Main {
 		
 		System.out.println("Diff model type: " + comparerVersionOutput.getOutputType());
 		System.out.println("Diff model: " + comparerVersionOutput.getDiffModel());
-		System.out.println("Error: " + comparerVersionOutput.getError());		
+		System.out.println("Error: " + (comparerVersionOutput.getError().isEmpty() ? "none" : comparerVersionOutput.getError()));		
 	}	
 }

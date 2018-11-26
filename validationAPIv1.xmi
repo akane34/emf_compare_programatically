@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="validationapi-v1.herokuapp.com" basePath="/v1" definitions="//@schemas.0">
+    <info title="Swagger" description="This is a sample server" version="1.0.0"/>
+    <schemes>http</schemes>
+    <schemes>https</schemes>
+    <produces>application/json</produces>
+    <paths relativePath="/devices">
+      <post parameters="//@paramters.0" description="" responses="//@responses.0 //@responses.1">
+        <tagReferences>devices</tagReferences>
+        <consumes>application/json</consumes>
+      </post>
+    </paths>
+    <paths relativePath="/temperature">
+      <get parameters="//@paramters.1 //@paramters.2" description="" responses="//@responses.2 //@responses.3">
+        <tagReferences>temperature</tagReferences>
+      </get>
+      <post parameters="//@paramters.3" description="" responses="//@responses.4 //@responses.5">
+        <tagReferences>temperature</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/users">
+      <put parameters="//@paramters.4" description="" responses="//@responses.6 //@responses.7">
+        <tagReferences>users</tagReferences>
+      </put>
+    </paths>
+    <securityDefinitions type="apiKey" description="" name="Authorization" location="header" referenceName="JWT"/>
+    <tags name="devices" description="Operations about user"/>
+    <tags name="temperature" description="Operations about user"/>
+    <tags name="users" description="Operations about user"/>
+  </api>
+  <paramters schema="//@schemas.0" description="The device" name="device" location="body" required="true"/>
+  <paramters type="integer" description="register temperature record id" name="id" location="query" required="true"/>
+  <paramters type="string" description="register temperature record date" name="date" location="query" required="true"/>
+  <paramters type="integer" description="register temperature" name="temperature" location="query" required="true"/>
+  <paramters type="string" description="username" name="username" location="query" required="true"/>
+  <schemas name="Device" properties="//@schemas.1 //@schemas.2" declaringContext="//@api" required="//@schemas.1 //@schemas.2"/>
+  <schemas type="integer" description="Device id" name="id" declaringContext="//@schemas.0"/>
+  <schemas type="string" description="Device name" name="name" declaringContext="//@schemas.0"/>
+  <responses description="The updated user" code="201"/>
+  <responses description="Internal server error" code="500"/>
+  <responses description="The temperature record" code="201"/>
+  <responses description="Internal server error" code="500"/>
+  <responses description="The registred temperature" code="201"/>
+  <responses description="Internal server error" code="500"/>
+  <responses description="The updated user" code="200"/>
+  <responses description="Internal server error" code="500"/>
+</openapi:Root>

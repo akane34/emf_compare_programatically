@@ -148,7 +148,8 @@ public class ChangesProcessor {
 		    		countAdded = 0;
 		    		for (ChangeParameter p2 : entry.getValue()){
 		    			if (p.getNewParameter().getName().equals(p2.getNewParameter().getName()) &&
-		    				p.getNewParameter().getLocation() == p2.getNewParameter().getLocation())
+		    				p.getNewParameter().getLocation() == p2.getNewParameter().getLocation() &&
+		    				p2.getDifferenceKind() == DifferenceKind.ADD)
 		    				countAdded++;
 		    		}
 		    		
@@ -171,7 +172,8 @@ public class ChangesProcessor {
 		    		countDeleted = 0;
 		    		for (ChangeParameter p2 : entry.getValue()){
 		    			if (p.getNewParameter().getName().equals(p2.getNewParameter().getName()) &&
-		    				p.getNewParameter().getLocation() == p2.getNewParameter().getLocation())
+		    				p.getNewParameter().getLocation() == p2.getNewParameter().getLocation()&&
+		    				p2.getDifferenceKind() == DifferenceKind.DELETE)
 		    				countDeleted++;
 		    		}
 		    		
@@ -707,12 +709,15 @@ public class ChangesProcessor {
 	
 	private static void addOperations(Map<String, List<ChangeParameter>> operations, PathImpl path,
 			ChangeParameter param) {
-		List<ChangeParameter> params = operations.get(path.getRelativePath());
-		if (params == null)
-			params = new ArrayList<ChangeParameter>();										
 		
-		params.add(param);
-		operations.put(path.getRelativePath(), params);
+		for(Operation operation : param.getOperations()){
+			List<ChangeParameter> params = operations.get(path.getRelativePath() + ":" + operation.getMethod());
+			if (params == null)
+				params = new ArrayList<ChangeParameter>();										
+			
+			params.add(param);
+			operations.put(path.getRelativePath() + ":" + operation.getMethod(), params);
+		}
 	}	
 	
 	private static void setOperation(PathImpl path, ChangeParameter param) {
@@ -723,19 +728,19 @@ public class ChangesProcessor {
 		Operation putOperation = path.getPut();					
 		
 		if (getOperation != null){							
-			param.setOperation(getOperation);											
+			param.getOperations().add(getOperation);											
 		}
-		else if (deleteOperation != null){							
-			param.setOperation(deleteOperation);					
+		if (deleteOperation != null){							
+			param.getOperations().add(deleteOperation);					
 		}
-		else if (pathcOperation != null){							
-			param.setOperation(pathcOperation);					
+		if (pathcOperation != null){							
+			param.getOperations().add(pathcOperation);					
 		}
-		else if (postOperation != null){							
-			param.setOperation(postOperation);					
+		if (postOperation != null){							
+			param.getOperations().add(postOperation);					
 		}
-		else if (putOperation != null){							
-			param.setOperation(putOperation);					
+		if (putOperation != null){							
+			param.getOperations().add(putOperation);					
 		}
 	}
 	
