@@ -234,18 +234,31 @@ public class ChangesProcessor {
 		return diffMetamodel.createDiffModel(oldVersion, newVersion);
 	}
 	
-	public static void processDeletedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse,List<Change> changes) {
+	public static void processDeletedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse, List<ChangeResponse> addResponse, List<Change> changes) {
 		for(ChangeResponse delRes: deleteResponse) {
-			diffMetamodel.createDeleteStatusCode(delRes, changes);
+			if(!existInList(delRes, addResponse))
+				diffMetamodel.createDeleteStatusCode(delRes, changes);
 		}
 	}
 	
-	public static void processAddedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
+	public static void processAddedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<ChangeResponse> deletedResponse, List<Change> changes) {
 		for(ChangeResponse addRes: addResponse) {
-			diffMetamodel.createAddedStatusCode(addRes, changes);
+			if(!existInList(addRes, deletedResponse))
+				diffMetamodel.createAddedStatusCode(addRes, changes);
 		}
 	}
 	
+	private static boolean existInList(ChangeResponse responseToValidate, List<ChangeResponse> responses) {
+		boolean exist=false;
+		for(ChangeResponse response: responses) {
+			if(responseToValidate.getPath().equals(response.getPath()) && responseToValidate.getResponse().getCode().equals(response.getResponse().getCode())) {
+				exist=true;
+				break;
+			}
+		}
+		return exist;
+	}
+
 	public static void processBoundariesParamsUpdated(DiffModelTransformation diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
 		for(ChangeBoundaryParameter boundaryUpdated: changesBoundaryParameters) {
 			switch (boundaryUpdated.getBoundary()) {

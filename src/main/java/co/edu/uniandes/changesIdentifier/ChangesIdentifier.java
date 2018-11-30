@@ -87,8 +87,8 @@ public class ChangesIdentifier {
 		ChangesProcessor.processDecreaseNumberOfParameters(diffModelTransformation, operations, minorVersion, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
 		ChangesProcessor.processRenameParameter(diffModelTransformation, changeParameters, diff.getChange());
-		ChangesProcessor.processDeletedResponses(diffModelTransformation, deleteResponse, diff.getChange());
-		ChangesProcessor.processAddedResponses(diffModelTransformation, addResponse, diff.getChange());
+		ChangesProcessor.processDeletedResponses(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
+		ChangesProcessor.processAddedResponses(diffModelTransformation, addResponse,deleteResponse, diff.getChange());
 		ChangesProcessor.processBoundariesParamsUpdated(diffModelTransformation,changesBoundaryParameters, diff.getChange());
 		ChangesProcessor.processSchemasUpdated(diffModelTransformation, addAndDeletedSchemas, diff.getChange());
 		ChangesProcessor.processContentTypesUpdates(diffModelTransformation,contentTypesUpdated, diff.getChange());
