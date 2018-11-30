@@ -169,7 +169,7 @@ public class ChangesProcessor {
 			if(p.getPath().equals(changeParameter.getPath()) && p.getNewParameter().getName().equals(changeParameter.getNewParameter().getName())){
 				for(OperationWrapper operation : changeParameter.getOperations()) {
 					//belongs the same method
-					if(keyMap.contains(operation.getMethod())){
+					if(keyMap.endsWith(operation.getMethod())){
 						exist = true;
 						break;
 					}
