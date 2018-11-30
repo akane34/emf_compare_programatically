@@ -35,12 +35,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Applet</em>' attribute.
-	 * @see #setApplet(Object)
+	 * @see #setApplet(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Applet()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getApplet();
+	String getApplet();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getApplet <em>Applet</em>}' attribute.
@@ -50,7 +50,7 @@ public interface APPLET extends EObject {
 	 * @see #getApplet()
 	 * @generated
 	 */
-	void setApplet(Object value);
+	void setApplet(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Class</b></em>' attribute.
@@ -61,12 +61,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class</em>' attribute.
-	 * @see #setClass(Object)
+	 * @see #setClass(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Class()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getClass_();
+	String getClass_();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getClass_ <em>Class</em>}' attribute.
@@ -76,7 +76,7 @@ public interface APPLET extends EObject {
 	 * @see #getClass_()
 	 * @generated
 	 */
-	void setClass(Object value);
+	void setClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Src</b></em>' attribute.
@@ -87,12 +87,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
-	 * @see #setSrc(Object)
+	 * @see #setSrc(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSrc();
+	String getSrc();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getSrc <em>Src</em>}' attribute.
@@ -102,7 +102,7 @@ public interface APPLET extends EObject {
 	 * @see #getSrc()
 	 * @generated
 	 */
-	void setSrc(Object value);
+	void setSrc(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Align</b></em>' attribute.
@@ -113,12 +113,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getAlign <em>Align</em>}' attribute.
@@ -128,7 +128,7 @@ public interface APPLET extends EObject {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -139,12 +139,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Object)
+	 * @see #setWidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getWidth <em>Width</em>}' attribute.
@@ -154,7 +154,7 @@ public interface APPLET extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -165,12 +165,12 @@ public interface APPLET extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(Object)
+	 * @see #setHeight(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAPPLET_Height()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHeight();
+	String getHeight();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.APPLET#getHeight <em>Height</em>}' attribute.
@@ -180,6 +180,6 @@ public interface APPLET extends EObject {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(Object value);
+	void setHeight(String value);
 
 } // APPLET

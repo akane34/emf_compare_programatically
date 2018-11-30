@@ -14,7 +14,7 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface SELECTValidator {
 	boolean validate();
 
-	boolean validateMultiple(Object value);
-	boolean validateSize(Object value);
-	boolean validateName(Object value);
+	boolean validateMultiple(String value);
+	boolean validateSize(String value);
+	boolean validateName(String value);
 }

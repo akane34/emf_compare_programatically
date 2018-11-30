@@ -35,6 +35,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class IMGImpl extends BODYElementImpl implements IMG {
 	/**
+	 * The default value of the '{@link #getSrc() <em>Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRC_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,7 +52,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object src;
+	protected String src = SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -52,7 +72,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width;
+	protected String width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HEIGHT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -62,7 +92,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object height;
+	protected String height = HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlt() <em>Alt</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlt() <em>Alt</em>}' attribute.
@@ -72,7 +112,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object alt;
+	protected String alt = ALT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
@@ -82,7 +132,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVspace() <em>Vspace</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVspace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VSPACE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVspace() <em>Vspace</em>}' attribute.
@@ -92,7 +152,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object vspace;
+	protected String vspace = VSPACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHspace() <em>Hspace</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHspace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HSPACE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHspace() <em>Hspace</em>}' attribute.
@@ -102,7 +172,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object hspace;
+	protected String hspace = HSPACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsmap() <em>Ismap</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsmap()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ISMAP_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getIsmap() <em>Ismap</em>}' attribute.
@@ -112,7 +192,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object ismap;
+	protected String ismap = ISMAP_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUsemap() <em>Usemap</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsemap()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String USEMAP_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUsemap() <em>Usemap</em>}' attribute.
@@ -122,7 +212,17 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object usemap;
+	protected String usemap = USEMAP_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBorder() <em>Border</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BORDER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBorder() <em>Border</em>}' attribute.
@@ -132,7 +232,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object border;
+	protected String border = BORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,7 +258,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSrc() {
+	public String getSrc() {
 		return src;
 	}
 
@@ -167,8 +267,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrc(Object newSrc) {
-		Object oldSrc = src;
+	public void setSrc(String newSrc) {
+		String oldSrc = src;
 		src = newSrc;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__SRC, oldSrc, src));
@@ -179,7 +279,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public String getWidth() {
 		return width;
 	}
 
@@ -188,8 +288,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__WIDTH, oldWidth, width));
@@ -200,7 +300,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHeight() {
+	public String getHeight() {
 		return height;
 	}
 
@@ -209,8 +309,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(Object newHeight) {
-		Object oldHeight = height;
+	public void setHeight(String newHeight) {
+		String oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__HEIGHT, oldHeight, height));
@@ -221,7 +321,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlt() {
+	public String getAlt() {
 		return alt;
 	}
 
@@ -230,8 +330,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlt(Object newAlt) {
-		Object oldAlt = alt;
+	public void setAlt(String newAlt) {
+		String oldAlt = alt;
 		alt = newAlt;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__ALT, oldAlt, alt));
@@ -242,7 +342,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -251,8 +351,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__ALIGN, oldAlign, align));
@@ -263,7 +363,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getVspace() {
+	public String getVspace() {
 		return vspace;
 	}
 
@@ -272,8 +372,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVspace(Object newVspace) {
-		Object oldVspace = vspace;
+	public void setVspace(String newVspace) {
+		String oldVspace = vspace;
 		vspace = newVspace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__VSPACE, oldVspace, vspace));
@@ -284,7 +384,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHspace() {
+	public String getHspace() {
 		return hspace;
 	}
 
@@ -293,8 +393,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHspace(Object newHspace) {
-		Object oldHspace = hspace;
+	public void setHspace(String newHspace) {
+		String oldHspace = hspace;
 		hspace = newHspace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__HSPACE, oldHspace, hspace));
@@ -305,7 +405,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsmap() {
+	public String getIsmap() {
 		return ismap;
 	}
 
@@ -314,8 +414,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsmap(Object newIsmap) {
-		Object oldIsmap = ismap;
+	public void setIsmap(String newIsmap) {
+		String oldIsmap = ismap;
 		ismap = newIsmap;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__ISMAP, oldIsmap, ismap));
@@ -326,7 +426,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getUsemap() {
+	public String getUsemap() {
 		return usemap;
 	}
 
@@ -335,8 +435,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUsemap(Object newUsemap) {
-		Object oldUsemap = usemap;
+	public void setUsemap(String newUsemap) {
+		String oldUsemap = usemap;
 		usemap = newUsemap;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__USEMAP, oldUsemap, usemap));
@@ -347,7 +447,7 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBorder() {
+	public String getBorder() {
 		return border;
 	}
 
@@ -356,8 +456,8 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBorder(Object newBorder) {
-		Object oldBorder = border;
+	public void setBorder(String newBorder) {
+		String oldBorder = border;
 		border = newBorder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.IMG__BORDER, oldBorder, border));
@@ -404,34 +504,34 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.IMG__SRC:
-				setSrc(newValue);
+				setSrc((String)newValue);
 				return;
 			case HtmlPackage.IMG__WIDTH:
-				setWidth(newValue);
+				setWidth((String)newValue);
 				return;
 			case HtmlPackage.IMG__HEIGHT:
-				setHeight(newValue);
+				setHeight((String)newValue);
 				return;
 			case HtmlPackage.IMG__ALT:
-				setAlt(newValue);
+				setAlt((String)newValue);
 				return;
 			case HtmlPackage.IMG__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.IMG__VSPACE:
-				setVspace(newValue);
+				setVspace((String)newValue);
 				return;
 			case HtmlPackage.IMG__HSPACE:
-				setHspace(newValue);
+				setHspace((String)newValue);
 				return;
 			case HtmlPackage.IMG__ISMAP:
-				setIsmap(newValue);
+				setIsmap((String)newValue);
 				return;
 			case HtmlPackage.IMG__USEMAP:
-				setUsemap(newValue);
+				setUsemap((String)newValue);
 				return;
 			case HtmlPackage.IMG__BORDER:
-				setBorder(newValue);
+				setBorder((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -446,34 +546,34 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.IMG__SRC:
-				setSrc((Object)null);
+				setSrc(SRC_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__WIDTH:
-				setWidth((Object)null);
+				setWidth(WIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__HEIGHT:
-				setHeight((Object)null);
+				setHeight(HEIGHT_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__ALT:
-				setAlt((Object)null);
+				setAlt(ALT_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__VSPACE:
-				setVspace((Object)null);
+				setVspace(VSPACE_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__HSPACE:
-				setHspace((Object)null);
+				setHspace(HSPACE_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__ISMAP:
-				setIsmap((Object)null);
+				setIsmap(ISMAP_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__USEMAP:
-				setUsemap((Object)null);
+				setUsemap(USEMAP_EDEFAULT);
 				return;
 			case HtmlPackage.IMG__BORDER:
-				setBorder((Object)null);
+				setBorder(BORDER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -488,25 +588,25 @@ public class IMGImpl extends BODYElementImpl implements IMG {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.IMG__SRC:
-				return src != null;
+				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
 			case HtmlPackage.IMG__WIDTH:
-				return width != null;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case HtmlPackage.IMG__HEIGHT:
-				return height != null;
+				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
 			case HtmlPackage.IMG__ALT:
-				return alt != null;
+				return ALT_EDEFAULT == null ? alt != null : !ALT_EDEFAULT.equals(alt);
 			case HtmlPackage.IMG__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.IMG__VSPACE:
-				return vspace != null;
+				return VSPACE_EDEFAULT == null ? vspace != null : !VSPACE_EDEFAULT.equals(vspace);
 			case HtmlPackage.IMG__HSPACE:
-				return hspace != null;
+				return HSPACE_EDEFAULT == null ? hspace != null : !HSPACE_EDEFAULT.equals(hspace);
 			case HtmlPackage.IMG__ISMAP:
-				return ismap != null;
+				return ISMAP_EDEFAULT == null ? ismap != null : !ISMAP_EDEFAULT.equals(ismap);
 			case HtmlPackage.IMG__USEMAP:
-				return usemap != null;
+				return USEMAP_EDEFAULT == null ? usemap != null : !USEMAP_EDEFAULT.equals(usemap);
 			case HtmlPackage.IMG__BORDER:
-				return border != null;
+				return BORDER_EDEFAULT == null ? border != null : !BORDER_EDEFAULT.equals(border);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -18,12 +18,12 @@ import org.eclipse.emf.common.util.EList;
 public interface BODYValidator {
 	boolean validate();
 
-	boolean validateBackground(Object value);
-	boolean validateBgcolor(Object value);
-	boolean validateText(Object value);
-	boolean validateLink(Object value);
-	boolean validateAlink(Object value);
-	boolean validateVlink(Object value);
+	boolean validateBackground(String value);
+	boolean validateBgcolor(String value);
+	boolean validateText(String value);
+	boolean validateLink(String value);
+	boolean validateAlink(String value);
+	boolean validateVlink(String value);
 	boolean validateBodyElements(EList<BODYElement> value);
 	boolean validateHtml(HTML value);
 }

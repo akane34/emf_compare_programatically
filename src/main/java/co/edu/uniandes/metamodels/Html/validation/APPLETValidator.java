@@ -14,10 +14,10 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface APPLETValidator {
 	boolean validate();
 
-	boolean validateApplet(Object value);
-	boolean validateClass(Object value);
-	boolean validateSrc(Object value);
-	boolean validateAlign(Object value);
-	boolean validateWidth(Object value);
-	boolean validateHeight(Object value);
+	boolean validateApplet(String value);
+	boolean validateClass(String value);
+	boolean validateSrc(String value);
+	boolean validateAlign(String value);
+	boolean validateWidth(String value);
+	boolean validateHeight(String value);
 }

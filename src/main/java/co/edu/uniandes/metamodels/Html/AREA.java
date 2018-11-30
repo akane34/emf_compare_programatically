@@ -31,12 +31,12 @@ public interface AREA extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Shape</em>' attribute.
-	 * @see #setShape(Object)
+	 * @see #setShape(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Shape()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getShape();
+	String getShape();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.AREA#getShape <em>Shape</em>}' attribute.
@@ -46,7 +46,7 @@ public interface AREA extends BODYElement {
 	 * @see #getShape()
 	 * @generated
 	 */
-	void setShape(Object value);
+	void setShape(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Coords</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface AREA extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coords</em>' attribute.
-	 * @see #setCoords(Object)
+	 * @see #setCoords(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Coords()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getCoords();
+	String getCoords();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.AREA#getCoords <em>Coords</em>}' attribute.
@@ -72,7 +72,7 @@ public interface AREA extends BODYElement {
 	 * @see #getCoords()
 	 * @generated
 	 */
-	void setCoords(Object value);
+	void setCoords(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ahref</b></em>' attribute.
@@ -83,12 +83,12 @@ public interface AREA extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ahref</em>' attribute.
-	 * @see #setAhref(Object)
+	 * @see #setAhref(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getAREA_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAhref();
+	String getAhref();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.AREA#getAhref <em>Ahref</em>}' attribute.
@@ -98,6 +98,6 @@ public interface AREA extends BODYElement {
 	 * @see #getAhref()
 	 * @generated
 	 */
-	void setAhref(Object value);
+	void setAhref(String value);
 
 } // AREA

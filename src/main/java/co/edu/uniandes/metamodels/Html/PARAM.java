@@ -31,12 +31,12 @@ public interface PARAM extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getPARAM_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.PARAM#getName <em>Name</em>}' attribute.
@@ -46,7 +46,7 @@ public interface PARAM extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Param Value</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface PARAM extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Param Value</em>' attribute.
-	 * @see #setParamValue(Object)
+	 * @see #setParamValue(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getPARAM_ParamValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getParamValue();
+	String getParamValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.PARAM#getParamValue <em>Param Value</em>}' attribute.
@@ -72,6 +72,6 @@ public interface PARAM extends EObject {
 	 * @see #getParamValue()
 	 * @generated
 	 */
-	void setParamValue(Object value);
+	void setParamValue(String value);
 
 } // PARAM

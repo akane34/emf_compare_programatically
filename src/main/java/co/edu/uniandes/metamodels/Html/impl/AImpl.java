@@ -27,6 +27,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class AImpl extends BODYElementImpl implements A {
 	/**
+	 * The default value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAhref()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AHREF_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,7 +44,17 @@ public class AImpl extends BODYElementImpl implements A {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object ahref;
+	protected String ahref = AHREF_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -44,7 +64,7 @@ public class AImpl extends BODYElementImpl implements A {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +90,7 @@ public class AImpl extends BODYElementImpl implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAhref() {
+	public String getAhref() {
 		return ahref;
 	}
 
@@ -79,8 +99,8 @@ public class AImpl extends BODYElementImpl implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAhref(Object newAhref) {
-		Object oldAhref = ahref;
+	public void setAhref(String newAhref) {
+		String oldAhref = ahref;
 		ahref = newAhref;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.A__AHREF, oldAhref, ahref));
@@ -91,7 +111,7 @@ public class AImpl extends BODYElementImpl implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -100,8 +120,8 @@ public class AImpl extends BODYElementImpl implements A {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.A__NAME, oldName, name));
@@ -132,10 +152,10 @@ public class AImpl extends BODYElementImpl implements A {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.A__AHREF:
-				setAhref(newValue);
+				setAhref((String)newValue);
 				return;
 			case HtmlPackage.A__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -150,10 +170,10 @@ public class AImpl extends BODYElementImpl implements A {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.A__AHREF:
-				setAhref((Object)null);
+				setAhref(AHREF_EDEFAULT);
 				return;
 			case HtmlPackage.A__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -168,9 +188,9 @@ public class AImpl extends BODYElementImpl implements A {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.A__AHREF:
-				return ahref != null;
+				return AHREF_EDEFAULT == null ? ahref != null : !AHREF_EDEFAULT.equals(ahref);
 			case HtmlPackage.A__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}

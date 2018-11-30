@@ -14,6 +14,6 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface FORMValidator {
 	boolean validate();
 
-	boolean validateAction(Object value);
-	boolean validateMethod(Object value);
+	boolean validateAction(String value);
+	boolean validateMethod(String value);
 }

@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class FONTImpl extends BODYElementImpl implements FONT {
 	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLOR_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object color;
+	protected String color = COLOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFace() <em>Face</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FACE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getFace() <em>Face</em>}' attribute.
@@ -45,7 +65,17 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object face;
+	protected String face = FACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SIZE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -55,7 +85,7 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object size;
+	protected String size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,7 +111,7 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getColor() {
+	public String getColor() {
 		return color;
 	}
 
@@ -90,8 +120,8 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColor(Object newColor) {
-		Object oldColor = color;
+	public void setColor(String newColor) {
+		String oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FONT__COLOR, oldColor, color));
@@ -102,7 +132,7 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getFace() {
+	public String getFace() {
 		return face;
 	}
 
@@ -111,8 +141,8 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFace(Object newFace) {
-		Object oldFace = face;
+	public void setFace(String newFace) {
+		String oldFace = face;
 		face = newFace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FONT__FACE, oldFace, face));
@@ -123,7 +153,7 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSize() {
+	public String getSize() {
 		return size;
 	}
 
@@ -132,8 +162,8 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(Object newSize) {
-		Object oldSize = size;
+	public void setSize(String newSize) {
+		String oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FONT__SIZE, oldSize, size));
@@ -166,13 +196,13 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.FONT__COLOR:
-				setColor(newValue);
+				setColor((String)newValue);
 				return;
 			case HtmlPackage.FONT__FACE:
-				setFace(newValue);
+				setFace((String)newValue);
 				return;
 			case HtmlPackage.FONT__SIZE:
-				setSize(newValue);
+				setSize((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,13 +217,13 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FONT__COLOR:
-				setColor((Object)null);
+				setColor(COLOR_EDEFAULT);
 				return;
 			case HtmlPackage.FONT__FACE:
-				setFace((Object)null);
+				setFace(FACE_EDEFAULT);
 				return;
 			case HtmlPackage.FONT__SIZE:
-				setSize((Object)null);
+				setSize(SIZE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -208,11 +238,11 @@ public class FONTImpl extends BODYElementImpl implements FONT {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FONT__COLOR:
-				return color != null;
+				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
 			case HtmlPackage.FONT__FACE:
-				return face != null;
+				return FACE_EDEFAULT == null ? face != null : !FACE_EDEFAULT.equals(face);
 			case HtmlPackage.FONT__SIZE:
-				return size != null;
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 		}
 		return super.eIsSet(featureID);
 	}

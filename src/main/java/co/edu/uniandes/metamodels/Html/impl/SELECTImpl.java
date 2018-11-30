@@ -29,6 +29,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	/**
+	 * The default value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMultiple()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MULTIPLE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +46,17 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object multiple;
+	protected String multiple = MULTIPLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SIZE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -46,7 +66,17 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object size;
+	protected String size = SIZE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,7 +86,7 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,7 +112,7 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getMultiple() {
+	public String getMultiple() {
 		return multiple;
 	}
 
@@ -91,8 +121,8 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMultiple(Object newMultiple) {
-		Object oldMultiple = multiple;
+	public void setMultiple(String newMultiple) {
+		String oldMultiple = multiple;
 		multiple = newMultiple;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.SELECT__MULTIPLE, oldMultiple, multiple));
@@ -103,7 +133,7 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSize() {
+	public String getSize() {
 		return size;
 	}
 
@@ -112,8 +142,8 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(Object newSize) {
-		Object oldSize = size;
+	public void setSize(String newSize) {
+		String oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.SELECT__SIZE, oldSize, size));
@@ -124,7 +154,7 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -133,8 +163,8 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.SELECT__NAME, oldName, name));
@@ -167,13 +197,13 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.SELECT__MULTIPLE:
-				setMultiple(newValue);
+				setMultiple((String)newValue);
 				return;
 			case HtmlPackage.SELECT__SIZE:
-				setSize(newValue);
+				setSize((String)newValue);
 				return;
 			case HtmlPackage.SELECT__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,13 +218,13 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.SELECT__MULTIPLE:
-				setMultiple((Object)null);
+				setMultiple(MULTIPLE_EDEFAULT);
 				return;
 			case HtmlPackage.SELECT__SIZE:
-				setSize((Object)null);
+				setSize(SIZE_EDEFAULT);
 				return;
 			case HtmlPackage.SELECT__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -209,11 +239,11 @@ public class SELECTImpl extends MinimalEObjectImpl.Container implements SELECT {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.SELECT__MULTIPLE:
-				return multiple != null;
+				return MULTIPLE_EDEFAULT == null ? multiple != null : !MULTIPLE_EDEFAULT.equals(multiple);
 			case HtmlPackage.SELECT__SIZE:
-				return size != null;
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case HtmlPackage.SELECT__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}

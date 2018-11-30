@@ -32,6 +32,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	/**
+	 * The default value of the '{@link #getSrc() <em>Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRC_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,7 +49,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object src;
+	protected String src = SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -49,7 +69,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width;
+	protected String width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HEIGHT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -59,7 +89,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object height;
+	protected String height = HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
@@ -69,7 +109,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVspace() <em>Vspace</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVspace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VSPACE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVspace() <em>Vspace</em>}' attribute.
@@ -79,7 +129,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object vspace;
+	protected String vspace = VSPACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHspace() <em>Hspace</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHspace()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HSPACE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHspace() <em>Hspace</em>}' attribute.
@@ -89,7 +149,17 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object hspace;
+	protected String hspace = HSPACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBorder() <em>Border</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BORDER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBorder() <em>Border</em>}' attribute.
@@ -99,7 +169,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object border;
+	protected String border = BORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,7 +195,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSrc() {
+	public String getSrc() {
 		return src;
 	}
 
@@ -134,8 +204,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrc(Object newSrc) {
-		Object oldSrc = src;
+	public void setSrc(String newSrc) {
+		String oldSrc = src;
 		src = newSrc;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__SRC, oldSrc, src));
@@ -146,7 +216,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public String getWidth() {
 		return width;
 	}
 
@@ -155,8 +225,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__WIDTH, oldWidth, width));
@@ -167,7 +237,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHeight() {
+	public String getHeight() {
 		return height;
 	}
 
@@ -176,8 +246,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(Object newHeight) {
-		Object oldHeight = height;
+	public void setHeight(String newHeight) {
+		String oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__HEIGHT, oldHeight, height));
@@ -188,7 +258,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -197,8 +267,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__ALIGN, oldAlign, align));
@@ -209,7 +279,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getVspace() {
+	public String getVspace() {
 		return vspace;
 	}
 
@@ -218,8 +288,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVspace(Object newVspace) {
-		Object oldVspace = vspace;
+	public void setVspace(String newVspace) {
+		String oldVspace = vspace;
 		vspace = newVspace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__VSPACE, oldVspace, vspace));
@@ -230,7 +300,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHspace() {
+	public String getHspace() {
 		return hspace;
 	}
 
@@ -239,8 +309,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHspace(Object newHspace) {
-		Object oldHspace = hspace;
+	public void setHspace(String newHspace) {
+		String oldHspace = hspace;
 		hspace = newHspace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__HSPACE, oldHspace, hspace));
@@ -251,7 +321,7 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBorder() {
+	public String getBorder() {
 		return border;
 	}
 
@@ -260,8 +330,8 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBorder(Object newBorder) {
-		Object oldBorder = border;
+	public void setBorder(String newBorder) {
+		String oldBorder = border;
 		border = newBorder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.EMBED__BORDER, oldBorder, border));
@@ -302,25 +372,25 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.EMBED__SRC:
-				setSrc(newValue);
+				setSrc((String)newValue);
 				return;
 			case HtmlPackage.EMBED__WIDTH:
-				setWidth(newValue);
+				setWidth((String)newValue);
 				return;
 			case HtmlPackage.EMBED__HEIGHT:
-				setHeight(newValue);
+				setHeight((String)newValue);
 				return;
 			case HtmlPackage.EMBED__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.EMBED__VSPACE:
-				setVspace(newValue);
+				setVspace((String)newValue);
 				return;
 			case HtmlPackage.EMBED__HSPACE:
-				setHspace(newValue);
+				setHspace((String)newValue);
 				return;
 			case HtmlPackage.EMBED__BORDER:
-				setBorder(newValue);
+				setBorder((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -335,25 +405,25 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.EMBED__SRC:
-				setSrc((Object)null);
+				setSrc(SRC_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__WIDTH:
-				setWidth((Object)null);
+				setWidth(WIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__HEIGHT:
-				setHeight((Object)null);
+				setHeight(HEIGHT_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__VSPACE:
-				setVspace((Object)null);
+				setVspace(VSPACE_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__HSPACE:
-				setHspace((Object)null);
+				setHspace(HSPACE_EDEFAULT);
 				return;
 			case HtmlPackage.EMBED__BORDER:
-				setBorder((Object)null);
+				setBorder(BORDER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -368,19 +438,19 @@ public class EMBEDImpl extends BODYElementImpl implements EMBED {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.EMBED__SRC:
-				return src != null;
+				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
 			case HtmlPackage.EMBED__WIDTH:
-				return width != null;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case HtmlPackage.EMBED__HEIGHT:
-				return height != null;
+				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
 			case HtmlPackage.EMBED__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.EMBED__VSPACE:
-				return vspace != null;
+				return VSPACE_EDEFAULT == null ? vspace != null : !VSPACE_EDEFAULT.equals(vspace);
 			case HtmlPackage.EMBED__HSPACE:
-				return hspace != null;
+				return HSPACE_EDEFAULT == null ? hspace != null : !HSPACE_EDEFAULT.equals(hspace);
 			case HtmlPackage.EMBED__BORDER:
-				return border != null;
+				return BORDER_EDEFAULT == null ? border != null : !BORDER_EDEFAULT.equals(border);
 		}
 		return super.eIsSet(featureID);
 	}

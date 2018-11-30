@@ -450,7 +450,7 @@ public class DiffModelTransformation {
 		ModifyParameterSchemaType modifyParameter = diffFactory.createModifyParameterSchemaType();		
 		modifyParameter.setChangeElement(APIElementType.METHOD_PARAMETER);		
 		modifyParameter.setNew(newElementReference);
-		
+		/*
 		for (ModifyParameterSchema m : parameterSchemas){
 			Schema s = diffFactory.createSchema();
 			s.setName(m.getSchema().getName());
@@ -459,7 +459,7 @@ public class DiffModelTransformation {
 			xmiResource.getContents().add(s);
 			modifyParameter.getSchemas().add(s);
 		}
-		
+		*/
 		changes.add(modifyParameter);
 	}
 	

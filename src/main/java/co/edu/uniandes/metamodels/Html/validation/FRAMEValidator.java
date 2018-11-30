@@ -14,10 +14,10 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface FRAMEValidator {
 	boolean validate();
 
-	boolean validateSrc(Object value);
-	boolean validateName(Object value);
-	boolean validateMarginwidth(Object value);
-	boolean validateMarginheight(Object value);
-	boolean validateScrolling(Object value);
-	boolean validateNoresize(Object value);
+	boolean validateSrc(String value);
+	boolean validateName(String value);
+	boolean validateMarginwidth(String value);
+	boolean validateMarginheight(String value);
+	boolean validateScrolling(String value);
+	boolean validateNoresize(String value);
 }

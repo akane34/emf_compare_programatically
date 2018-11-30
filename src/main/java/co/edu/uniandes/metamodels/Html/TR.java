@@ -33,12 +33,12 @@ public interface TR extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valign</em>' attribute.
-	 * @see #setValign(Object)
+	 * @see #setValign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTR_Valign()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getValign();
+	String getValign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TR#getValign <em>Valign</em>}' attribute.
@@ -48,7 +48,7 @@ public interface TR extends TABLEElement {
 	 * @see #getValign()
 	 * @generated
 	 */
-	void setValign(Object value);
+	void setValign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Align</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface TR extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTR_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TR#getAlign <em>Align</em>}' attribute.
@@ -74,7 +74,7 @@ public interface TR extends TABLEElement {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Table</b></em>' reference.

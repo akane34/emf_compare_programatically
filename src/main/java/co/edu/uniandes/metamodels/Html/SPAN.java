@@ -29,12 +29,12 @@ public interface SPAN extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Style</em>' attribute.
-	 * @see #setStyle(Object)
+	 * @see #setStyle(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSPAN_Style()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getStyle();
+	String getStyle();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.SPAN#getStyle <em>Style</em>}' attribute.
@@ -44,6 +44,6 @@ public interface SPAN extends BODYElement {
 	 * @see #getStyle()
 	 * @generated
 	 */
-	void setStyle(Object value);
+	void setStyle(String value);
 
 } // SPAN

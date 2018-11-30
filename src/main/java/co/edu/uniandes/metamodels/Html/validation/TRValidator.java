@@ -18,8 +18,8 @@ import org.eclipse.emf.common.util.EList;
 public interface TRValidator {
 	boolean validate();
 
-	boolean validateValign(Object value);
-	boolean validateAlign(Object value);
+	boolean validateValign(String value);
+	boolean validateAlign(String value);
 	boolean validateTable(TABLE value);
 	boolean validateTds(EList<TD> value);
 }

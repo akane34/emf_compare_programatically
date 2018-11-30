@@ -37,12 +37,12 @@ public interface HTMLElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(Object)
+	 * @see #setValue(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getHTMLElement_Value()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getValue();
+	String getValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.HTMLElement#getValue <em>Value</em>}' attribute.
@@ -52,7 +52,7 @@ public interface HTMLElement extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Object value);
+	void setValue(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.

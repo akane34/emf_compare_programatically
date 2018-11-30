@@ -14,7 +14,7 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface TEXTAREAValidator {
 	boolean validate();
 
-	boolean validateName(Object value);
-	boolean validateRows(Object value);
-	boolean validateCols(Object value);
+	boolean validateName(String value);
+	boolean validateRows(String value);
+	boolean validateCols(String value);
 }

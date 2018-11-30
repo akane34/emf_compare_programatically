@@ -35,12 +35,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
-	 * @see #setSrc(Object)
+	 * @see #setSrc(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSrc();
+	String getSrc();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getSrc <em>Src</em>}' attribute.
@@ -50,7 +50,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getSrc()
 	 * @generated
 	 */
-	void setSrc(Object value);
+	void setSrc(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -61,12 +61,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Object)
+	 * @see #setWidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getWidth <em>Width</em>}' attribute.
@@ -76,7 +76,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -87,12 +87,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(Object)
+	 * @see #setHeight(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Height()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHeight();
+	String getHeight();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getHeight <em>Height</em>}' attribute.
@@ -102,7 +102,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(Object value);
+	void setHeight(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Align</b></em>' attribute.
@@ -113,12 +113,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getAlign <em>Align</em>}' attribute.
@@ -128,7 +128,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Vspace</b></em>' attribute.
@@ -139,12 +139,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vspace</em>' attribute.
-	 * @see #setVspace(Object)
+	 * @see #setVspace(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Vspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getVspace();
+	String getVspace();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getVspace <em>Vspace</em>}' attribute.
@@ -154,7 +154,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getVspace()
 	 * @generated
 	 */
-	void setVspace(Object value);
+	void setVspace(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Hspace</b></em>' attribute.
@@ -165,12 +165,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Hspace</em>' attribute.
-	 * @see #setHspace(Object)
+	 * @see #setHspace(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Hspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHspace();
+	String getHspace();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getHspace <em>Hspace</em>}' attribute.
@@ -180,7 +180,7 @@ public interface EMBED extends BODYElement {
 	 * @see #getHspace()
 	 * @generated
 	 */
-	void setHspace(Object value);
+	void setHspace(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Border</b></em>' attribute.
@@ -191,12 +191,12 @@ public interface EMBED extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Border</em>' attribute.
-	 * @see #setBorder(Object)
+	 * @see #setBorder(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getEMBED_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getBorder();
+	String getBorder();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.EMBED#getBorder <em>Border</em>}' attribute.
@@ -206,6 +206,6 @@ public interface EMBED extends BODYElement {
 	 * @see #getBorder()
 	 * @generated
 	 */
-	void setBorder(Object value);
+	void setBorder(String value);
 
 } // EMBED

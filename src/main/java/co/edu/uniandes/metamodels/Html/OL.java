@@ -29,12 +29,12 @@ public interface OL extends ListElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start</em>' attribute.
-	 * @see #setStart(Object)
+	 * @see #setStart(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOL_Start()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getStart();
+	String getStart();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OL#getStart <em>Start</em>}' attribute.
@@ -44,6 +44,6 @@ public interface OL extends ListElement {
 	 * @see #getStart()
 	 * @generated
 	 */
-	void setStart(Object value);
+	void setStart(String value);
 
 } // OL

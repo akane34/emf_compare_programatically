@@ -14,12 +14,12 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface INPUTValidator {
 	boolean validate();
 
-	boolean validateAlign(Object value);
-	boolean validateMaxlength(Object value);
-	boolean validateSize(Object value);
-	boolean validateChecked(Object value);
-	boolean validateSrc(Object value);
-	boolean validateInputValue(Object value);
-	boolean validateName(Object value);
-	boolean validateType(Object value);
+	boolean validateAlign(String value);
+	boolean validateMaxlength(String value);
+	boolean validateSize(String value);
+	boolean validateChecked(String value);
+	boolean validateSrc(String value);
+	boolean validateInputValue(String value);
+	boolean validateName(String value);
+	boolean validateType(String value);
 }

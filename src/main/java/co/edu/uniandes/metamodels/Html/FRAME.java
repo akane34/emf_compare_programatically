@@ -35,12 +35,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
-	 * @see #setSrc(Object)
+	 * @see #setSrc(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSrc();
+	String getSrc();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getSrc <em>Src</em>}' attribute.
@@ -50,7 +50,7 @@ public interface FRAME extends EObject {
 	 * @see #getSrc()
 	 * @generated
 	 */
-	void setSrc(Object value);
+	void setSrc(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -61,12 +61,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getName <em>Name</em>}' attribute.
@@ -76,7 +76,7 @@ public interface FRAME extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Marginwidth</b></em>' attribute.
@@ -87,12 +87,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Marginwidth</em>' attribute.
-	 * @see #setMarginwidth(Object)
+	 * @see #setMarginwidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Marginwidth()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getMarginwidth();
+	String getMarginwidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getMarginwidth <em>Marginwidth</em>}' attribute.
@@ -102,7 +102,7 @@ public interface FRAME extends EObject {
 	 * @see #getMarginwidth()
 	 * @generated
 	 */
-	void setMarginwidth(Object value);
+	void setMarginwidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Marginheight</b></em>' attribute.
@@ -113,12 +113,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Marginheight</em>' attribute.
-	 * @see #setMarginheight(Object)
+	 * @see #setMarginheight(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Marginheight()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getMarginheight();
+	String getMarginheight();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getMarginheight <em>Marginheight</em>}' attribute.
@@ -128,7 +128,7 @@ public interface FRAME extends EObject {
 	 * @see #getMarginheight()
 	 * @generated
 	 */
-	void setMarginheight(Object value);
+	void setMarginheight(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Scrolling</b></em>' attribute.
@@ -139,12 +139,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scrolling</em>' attribute.
-	 * @see #setScrolling(Object)
+	 * @see #setScrolling(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Scrolling()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getScrolling();
+	String getScrolling();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getScrolling <em>Scrolling</em>}' attribute.
@@ -154,7 +154,7 @@ public interface FRAME extends EObject {
 	 * @see #getScrolling()
 	 * @generated
 	 */
-	void setScrolling(Object value);
+	void setScrolling(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Noresize</b></em>' attribute.
@@ -165,12 +165,12 @@ public interface FRAME extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Noresize</em>' attribute.
-	 * @see #setNoresize(Object)
+	 * @see #setNoresize(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFRAME_Noresize()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getNoresize();
+	String getNoresize();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FRAME#getNoresize <em>Noresize</em>}' attribute.
@@ -180,6 +180,6 @@ public interface FRAME extends EObject {
 	 * @see #getNoresize()
 	 * @generated
 	 */
-	void setNoresize(Object value);
+	void setNoresize(String value);
 
 } // FRAME

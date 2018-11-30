@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	/**
+	 * The default value of the '{@link #getSelected() <em>Selected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelected()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SELECTED_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getSelected() <em>Selected</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object selected;
+	protected String selected = SELECTED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOptionValue() <em>Option Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOptionValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OPTION_VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getOptionValue() <em>Option Value</em>}' attribute.
@@ -45,7 +65,7 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object optionValue;
+	protected String optionValue = OPTION_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,7 +91,7 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSelected() {
+	public String getSelected() {
 		return selected;
 	}
 
@@ -80,8 +100,8 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelected(Object newSelected) {
-		Object oldSelected = selected;
+	public void setSelected(String newSelected) {
+		String oldSelected = selected;
 		selected = newSelected;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OPTION__SELECTED, oldSelected, selected));
@@ -92,7 +112,7 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getOptionValue() {
+	public String getOptionValue() {
 		return optionValue;
 	}
 
@@ -101,8 +121,8 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOptionValue(Object newOptionValue) {
-		Object oldOptionValue = optionValue;
+	public void setOptionValue(String newOptionValue) {
+		String oldOptionValue = optionValue;
 		optionValue = newOptionValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OPTION__OPTION_VALUE, oldOptionValue, optionValue));
@@ -133,10 +153,10 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.OPTION__SELECTED:
-				setSelected(newValue);
+				setSelected((String)newValue);
 				return;
 			case HtmlPackage.OPTION__OPTION_VALUE:
-				setOptionValue(newValue);
+				setOptionValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,10 +171,10 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OPTION__SELECTED:
-				setSelected((Object)null);
+				setSelected(SELECTED_EDEFAULT);
 				return;
 			case HtmlPackage.OPTION__OPTION_VALUE:
-				setOptionValue((Object)null);
+				setOptionValue(OPTION_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -169,9 +189,9 @@ public class OPTIONImpl extends MinimalEObjectImpl.Container implements OPTION {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OPTION__SELECTED:
-				return selected != null;
+				return SELECTED_EDEFAULT == null ? selected != null : !SELECTED_EDEFAULT.equals(selected);
 			case HtmlPackage.OPTION__OPTION_VALUE:
-				return optionValue != null;
+				return OPTION_VALUE_EDEFAULT == null ? optionValue != null : !OPTION_VALUE_EDEFAULT.equals(optionValue);
 		}
 		return super.eIsSet(featureID);
 	}

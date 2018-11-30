@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface OLValidator {
 	boolean validate();
 
-	boolean validateStart(Object value);
+	boolean validateStart(String value);
 }

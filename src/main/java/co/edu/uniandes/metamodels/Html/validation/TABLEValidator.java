@@ -17,9 +17,9 @@ import org.eclipse.emf.common.util.EList;
 public interface TABLEValidator {
 	boolean validate();
 
-	boolean validateBorder(Object value);
-	boolean validateWidth(Object value);
-	boolean validateCellspacing(Object value);
-	boolean validateCellpadding(Object value);
+	boolean validateBorder(String value);
+	boolean validateWidth(String value);
+	boolean validateCellspacing(String value);
+	boolean validateCellpadding(String value);
 	boolean validateTrs(EList<TR> value);
 }

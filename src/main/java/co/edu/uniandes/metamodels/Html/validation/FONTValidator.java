@@ -14,7 +14,7 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface FONTValidator {
 	boolean validate();
 
-	boolean validateColor(Object value);
-	boolean validateFace(Object value);
-	boolean validateSize(Object value);
+	boolean validateColor(String value);
+	boolean validateFace(String value);
+	boolean validateSize(String value);
 }

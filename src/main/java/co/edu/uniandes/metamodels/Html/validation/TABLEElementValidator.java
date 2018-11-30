@@ -14,6 +14,6 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface TABLEElementValidator {
 	boolean validate();
 
-	boolean validateBgcolor(Object value);
-	boolean validateBackground(Object value);
+	boolean validateBgcolor(String value);
+	boolean validateBackground(String value);
 }

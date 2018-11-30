@@ -15,10 +15,10 @@ import co.edu.uniandes.metamodels.Html.TR;
 public interface TDValidator {
 	boolean validate();
 
-	boolean validateColspan(Object value);
-	boolean validateRowspan(Object value);
-	boolean validateValign(Object value);
-	boolean validateAlign(Object value);
-	boolean validateWidth(Object value);
+	boolean validateColspan(String value);
+	boolean validateRowspan(String value);
+	boolean validateValign(String value);
+	boolean validateAlign(String value);
+	boolean validateWidth(String value);
 	boolean validateTr(TR value);
 }

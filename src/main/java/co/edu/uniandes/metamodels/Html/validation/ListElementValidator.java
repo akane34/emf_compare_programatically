@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface ListElementValidator {
 	boolean validate();
 
-	boolean validateType(Object value);
+	boolean validateType(String value);
 }

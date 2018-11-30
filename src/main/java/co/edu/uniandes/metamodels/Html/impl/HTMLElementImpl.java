@@ -42,6 +42,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTMLElement {
 	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALUE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,7 +59,7 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	 * @generated
 	 * @ordered
 	 */
-	protected Object value;
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
@@ -145,7 +155,7 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getValue() {
+	public String getValue() {
 		return value;
 	}
 
@@ -154,8 +164,8 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Object newValue) {
-		Object oldValue = value;
+	public void setValue(String newValue) {
+		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.HTML_ELEMENT__VALUE, oldValue, value));
@@ -360,7 +370,7 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.HTML_ELEMENT__VALUE:
-				setValue(newValue);
+				setValue((String)newValue);
 				return;
 			case HtmlPackage.HTML_ELEMENT__CHILDREN:
 				getChildren().clear();
@@ -391,7 +401,7 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.HTML_ELEMENT__VALUE:
-				setValue((Object)null);
+				setValue(VALUE_EDEFAULT);
 				return;
 			case HtmlPackage.HTML_ELEMENT__CHILDREN:
 				getChildren().clear();
@@ -421,7 +431,7 @@ public class HTMLElementImpl extends MinimalEObjectImpl.Container implements HTM
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.HTML_ELEMENT__VALUE:
-				return value != null;
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case HtmlPackage.HTML_ELEMENT__CHILDREN:
 				return children != null && !children.isEmpty();
 			case HtmlPackage.HTML_ELEMENT__PARENT:

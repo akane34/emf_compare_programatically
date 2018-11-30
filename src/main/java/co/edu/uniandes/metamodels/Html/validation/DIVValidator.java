@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface DIVValidator {
 	boolean validate();
 
-	boolean validateAlign(Object value);
+	boolean validateAlign(String value);
 }

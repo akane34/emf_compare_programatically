@@ -32,6 +32,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	/**
+	 * The default value of the '{@link #getApplet() <em>Applet</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApplet()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String APPLET_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getApplet() <em>Applet</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,7 +49,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object applet;
+	protected String applet = APPLET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClass_() <em>Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getClass_() <em>Class</em>}' attribute.
@@ -49,7 +69,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object class_;
+	protected String class_ = CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSrc() <em>Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRC_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' attribute.
@@ -59,7 +89,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object src;
+	protected String src = SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
@@ -69,7 +109,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -79,7 +129,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width;
+	protected String width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HEIGHT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -89,7 +149,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object height;
+	protected String height = HEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,7 +175,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getApplet() {
+	public String getApplet() {
 		return applet;
 	}
 
@@ -124,8 +184,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApplet(Object newApplet) {
-		Object oldApplet = applet;
+	public void setApplet(String newApplet) {
+		String oldApplet = applet;
 		applet = newApplet;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__APPLET, oldApplet, applet));
@@ -136,7 +196,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getClass_() {
+	public String getClass_() {
 		return class_;
 	}
 
@@ -145,8 +205,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClass(Object newClass) {
-		Object oldClass = class_;
+	public void setClass(String newClass) {
+		String oldClass = class_;
 		class_ = newClass;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__CLASS, oldClass, class_));
@@ -157,7 +217,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSrc() {
+	public String getSrc() {
 		return src;
 	}
 
@@ -166,8 +226,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrc(Object newSrc) {
-		Object oldSrc = src;
+	public void setSrc(String newSrc) {
+		String oldSrc = src;
 		src = newSrc;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__SRC, oldSrc, src));
@@ -178,7 +238,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -187,8 +247,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__ALIGN, oldAlign, align));
@@ -199,7 +259,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public String getWidth() {
 		return width;
 	}
 
@@ -208,8 +268,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__WIDTH, oldWidth, width));
@@ -220,7 +280,7 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHeight() {
+	public String getHeight() {
 		return height;
 	}
 
@@ -229,8 +289,8 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(Object newHeight) {
-		Object oldHeight = height;
+	public void setHeight(String newHeight) {
+		String oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.APPLET__HEIGHT, oldHeight, height));
@@ -269,22 +329,22 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.APPLET__APPLET:
-				setApplet(newValue);
+				setApplet((String)newValue);
 				return;
 			case HtmlPackage.APPLET__CLASS:
-				setClass(newValue);
+				setClass((String)newValue);
 				return;
 			case HtmlPackage.APPLET__SRC:
-				setSrc(newValue);
+				setSrc((String)newValue);
 				return;
 			case HtmlPackage.APPLET__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.APPLET__WIDTH:
-				setWidth(newValue);
+				setWidth((String)newValue);
 				return;
 			case HtmlPackage.APPLET__HEIGHT:
-				setHeight(newValue);
+				setHeight((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -299,22 +359,22 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.APPLET__APPLET:
-				setApplet((Object)null);
+				setApplet(APPLET_EDEFAULT);
 				return;
 			case HtmlPackage.APPLET__CLASS:
-				setClass((Object)null);
+				setClass(CLASS_EDEFAULT);
 				return;
 			case HtmlPackage.APPLET__SRC:
-				setSrc((Object)null);
+				setSrc(SRC_EDEFAULT);
 				return;
 			case HtmlPackage.APPLET__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.APPLET__WIDTH:
-				setWidth((Object)null);
+				setWidth(WIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.APPLET__HEIGHT:
-				setHeight((Object)null);
+				setHeight(HEIGHT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -329,17 +389,17 @@ public class APPLETImpl extends MinimalEObjectImpl.Container implements APPLET {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.APPLET__APPLET:
-				return applet != null;
+				return APPLET_EDEFAULT == null ? applet != null : !APPLET_EDEFAULT.equals(applet);
 			case HtmlPackage.APPLET__CLASS:
-				return class_ != null;
+				return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
 			case HtmlPackage.APPLET__SRC:
-				return src != null;
+				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
 			case HtmlPackage.APPLET__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.APPLET__WIDTH:
-				return width != null;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case HtmlPackage.APPLET__HEIGHT:
-				return height != null;
+				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
 		}
 		return super.eIsSet(featureID);
 	}

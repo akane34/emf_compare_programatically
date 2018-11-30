@@ -29,12 +29,12 @@ public interface DIV extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getDIV_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.DIV#getAlign <em>Align</em>}' attribute.
@@ -44,6 +44,6 @@ public interface DIV extends BODYElement {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 } // DIV

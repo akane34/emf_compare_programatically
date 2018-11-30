@@ -30,12 +30,12 @@ public interface TABLEElement extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bgcolor</em>' attribute.
-	 * @see #setBgcolor(Object)
+	 * @see #setBgcolor(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLEElement_Bgcolor()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getBgcolor();
+	String getBgcolor();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLEElement#getBgcolor <em>Bgcolor</em>}' attribute.
@@ -45,7 +45,7 @@ public interface TABLEElement extends BODYElement {
 	 * @see #getBgcolor()
 	 * @generated
 	 */
-	void setBgcolor(Object value);
+	void setBgcolor(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Background</b></em>' attribute.
@@ -56,12 +56,12 @@ public interface TABLEElement extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Background</em>' attribute.
-	 * @see #setBackground(Object)
+	 * @see #setBackground(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLEElement_Background()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getBackground();
+	String getBackground();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLEElement#getBackground <em>Background</em>}' attribute.
@@ -71,6 +71,6 @@ public interface TABLEElement extends BODYElement {
 	 * @see #getBackground()
 	 * @generated
 	 */
-	void setBackground(Object value);
+	void setBackground(String value);
 
 } // TABLEElement

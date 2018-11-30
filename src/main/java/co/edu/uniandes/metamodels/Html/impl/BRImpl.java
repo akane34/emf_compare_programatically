@@ -26,6 +26,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class BRImpl extends BODYElementImpl implements BR {
 	/**
+	 * The default value of the '{@link #getClear() <em>Clear</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClear()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLEAR_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getClear() <em>Clear</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,7 +43,7 @@ public class BRImpl extends BODYElementImpl implements BR {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object clear;
+	protected String clear = CLEAR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +69,7 @@ public class BRImpl extends BODYElementImpl implements BR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getClear() {
+	public String getClear() {
 		return clear;
 	}
 
@@ -68,8 +78,8 @@ public class BRImpl extends BODYElementImpl implements BR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClear(Object newClear) {
-		Object oldClear = clear;
+	public void setClear(String newClear) {
+		String oldClear = clear;
 		clear = newClear;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BR__CLEAR, oldClear, clear));
@@ -98,7 +108,7 @@ public class BRImpl extends BODYElementImpl implements BR {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.BR__CLEAR:
-				setClear(newValue);
+				setClear((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -113,7 +123,7 @@ public class BRImpl extends BODYElementImpl implements BR {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.BR__CLEAR:
-				setClear((Object)null);
+				setClear(CLEAR_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -128,7 +138,7 @@ public class BRImpl extends BODYElementImpl implements BR {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.BR__CLEAR:
-				return clear != null;
+				return CLEAR_EDEFAULT == null ? clear != null : !CLEAR_EDEFAULT.equals(clear);
 		}
 		return super.eIsSet(featureID);
 	}

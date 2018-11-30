@@ -32,12 +32,12 @@ public interface SELECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Multiple</em>' attribute.
-	 * @see #setMultiple(Object)
+	 * @see #setMultiple(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Multiple()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getMultiple();
+	String getMultiple();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.SELECT#getMultiple <em>Multiple</em>}' attribute.
@@ -47,7 +47,7 @@ public interface SELECT extends EObject {
 	 * @see #getMultiple()
 	 * @generated
 	 */
-	void setMultiple(Object value);
+	void setMultiple(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
@@ -58,12 +58,12 @@ public interface SELECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size</em>' attribute.
-	 * @see #setSize(Object)
+	 * @see #setSize(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Size()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSize();
+	String getSize();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.SELECT#getSize <em>Size</em>}' attribute.
@@ -73,7 +73,7 @@ public interface SELECT extends EObject {
 	 * @see #getSize()
 	 * @generated
 	 */
-	void setSize(Object value);
+	void setSize(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -84,12 +84,12 @@ public interface SELECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getSELECT_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.SELECT#getName <em>Name</em>}' attribute.
@@ -99,6 +99,6 @@ public interface SELECT extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 } // SELECT

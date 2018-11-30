@@ -40,6 +40,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TRImpl extends TABLEElementImpl implements TR {
 	/**
+	 * The default value of the '{@link #getValign() <em>Valign</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALIGN_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getValign() <em>Valign</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,7 +57,17 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object valign;
+	protected String valign = VALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
@@ -57,7 +77,7 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTable() <em>Table</em>}' reference.
@@ -103,7 +123,7 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getValign() {
+	public String getValign() {
 		return valign;
 	}
 
@@ -112,8 +132,8 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValign(Object newValign) {
-		Object oldValign = valign;
+	public void setValign(String newValign) {
+		String oldValign = valign;
 		valign = newValign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TR__VALIGN, oldValign, valign));
@@ -124,7 +144,7 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -133,8 +153,8 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TR__ALIGN, oldAlign, align));
@@ -278,10 +298,10 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.TR__VALIGN:
-				setValign(newValue);
+				setValign((String)newValue);
 				return;
 			case HtmlPackage.TR__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.TR__TABLE:
 				setTable((TABLE)newValue);
@@ -303,10 +323,10 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TR__VALIGN:
-				setValign((Object)null);
+				setValign(VALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.TR__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.TR__TABLE:
 				setTable((TABLE)null);
@@ -327,9 +347,9 @@ public class TRImpl extends TABLEElementImpl implements TR {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TR__VALIGN:
-				return valign != null;
+				return VALIGN_EDEFAULT == null ? valign != null : !VALIGN_EDEFAULT.equals(valign);
 			case HtmlPackage.TR__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.TR__TABLE:
 				return table != null;
 			case HtmlPackage.TR__TDS:

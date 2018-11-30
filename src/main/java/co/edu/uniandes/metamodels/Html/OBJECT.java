@@ -33,12 +33,12 @@ public interface OBJECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Classid</em>' attribute.
-	 * @see #setClassid(Object)
+	 * @see #setClassid(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOBJECT_Classid()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getClassid();
+	String getClassid();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OBJECT#getClassid <em>Classid</em>}' attribute.
@@ -48,7 +48,7 @@ public interface OBJECT extends EObject {
 	 * @see #getClassid()
 	 * @generated
 	 */
-	void setClassid(Object value);
+	void setClassid(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Data</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface OBJECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data</em>' attribute.
-	 * @see #setData(Object)
+	 * @see #setData(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOBJECT_Data()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getData();
+	String getData();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OBJECT#getData <em>Data</em>}' attribute.
@@ -74,7 +74,7 @@ public interface OBJECT extends EObject {
 	 * @see #getData()
 	 * @generated
 	 */
-	void setData(Object value);
+	void setData(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface OBJECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(Object)
+	 * @see #setType(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOBJECT_Type()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getType();
+	String getType();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OBJECT#getType <em>Type</em>}' attribute.
@@ -100,7 +100,7 @@ public interface OBJECT extends EObject {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(Object value);
+	void setType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Standby</b></em>' attribute.
@@ -111,12 +111,12 @@ public interface OBJECT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Standby</em>' attribute.
-	 * @see #setStandby(Object)
+	 * @see #setStandby(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOBJECT_Standby()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getStandby();
+	String getStandby();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OBJECT#getStandby <em>Standby</em>}' attribute.
@@ -126,6 +126,6 @@ public interface OBJECT extends EObject {
 	 * @see #getStandby()
 	 * @generated
 	 */
-	void setStandby(Object value);
+	void setStandby(String value);
 
 } // OBJECT

@@ -14,6 +14,6 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface PARAMValidator {
 	boolean validate();
 
-	boolean validateName(Object value);
-	boolean validateParamValue(Object value);
+	boolean validateName(String value);
+	boolean validateParamValue(String value);
 }

@@ -34,12 +34,12 @@ public interface TD extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Colspan</em>' attribute.
-	 * @see #setColspan(Object)
+	 * @see #setColspan(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Colspan()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getColspan();
+	String getColspan();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TD#getColspan <em>Colspan</em>}' attribute.
@@ -49,7 +49,7 @@ public interface TD extends TABLEElement {
 	 * @see #getColspan()
 	 * @generated
 	 */
-	void setColspan(Object value);
+	void setColspan(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Rowspan</b></em>' attribute.
@@ -60,12 +60,12 @@ public interface TD extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rowspan</em>' attribute.
-	 * @see #setRowspan(Object)
+	 * @see #setRowspan(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Rowspan()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getRowspan();
+	String getRowspan();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TD#getRowspan <em>Rowspan</em>}' attribute.
@@ -75,7 +75,7 @@ public interface TD extends TABLEElement {
 	 * @see #getRowspan()
 	 * @generated
 	 */
-	void setRowspan(Object value);
+	void setRowspan(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Valign</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface TD extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valign</em>' attribute.
-	 * @see #setValign(Object)
+	 * @see #setValign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Valign()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getValign();
+	String getValign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TD#getValign <em>Valign</em>}' attribute.
@@ -101,7 +101,7 @@ public interface TD extends TABLEElement {
 	 * @see #getValign()
 	 * @generated
 	 */
-	void setValign(Object value);
+	void setValign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Align</b></em>' attribute.
@@ -112,12 +112,12 @@ public interface TD extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TD#getAlign <em>Align</em>}' attribute.
@@ -127,7 +127,7 @@ public interface TD extends TABLEElement {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -138,12 +138,12 @@ public interface TD extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Object)
+	 * @see #setWidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTD_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TD#getWidth <em>Width</em>}' attribute.
@@ -153,7 +153,7 @@ public interface TD extends TABLEElement {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Tr</b></em>' reference.

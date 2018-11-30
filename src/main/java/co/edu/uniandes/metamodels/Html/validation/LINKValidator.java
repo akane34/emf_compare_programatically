@@ -14,7 +14,7 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface LINKValidator {
 	boolean validate();
 
-	boolean validateRel(Object value);
-	boolean validateAhref(Object value);
-	boolean validateType(Object value);
+	boolean validateRel(String value);
+	boolean validateAhref(String value);
+	boolean validateType(String value);
 }

@@ -32,12 +32,12 @@ public interface TEXTAREA extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TEXTAREA#getName <em>Name</em>}' attribute.
@@ -47,7 +47,7 @@ public interface TEXTAREA extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Rows</b></em>' attribute.
@@ -58,12 +58,12 @@ public interface TEXTAREA extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rows</em>' attribute.
-	 * @see #setRows(Object)
+	 * @see #setRows(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Rows()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getRows();
+	String getRows();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TEXTAREA#getRows <em>Rows</em>}' attribute.
@@ -73,7 +73,7 @@ public interface TEXTAREA extends EObject {
 	 * @see #getRows()
 	 * @generated
 	 */
-	void setRows(Object value);
+	void setRows(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Cols</b></em>' attribute.
@@ -84,12 +84,12 @@ public interface TEXTAREA extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cols</em>' attribute.
-	 * @see #setCols(Object)
+	 * @see #setCols(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTEXTAREA_Cols()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getCols();
+	String getCols();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TEXTAREA#getCols <em>Cols</em>}' attribute.
@@ -99,6 +99,6 @@ public interface TEXTAREA extends EObject {
 	 * @see #getCols()
 	 * @generated
 	 */
-	void setCols(Object value);
+	void setCols(String value);
 
 } // TEXTAREA

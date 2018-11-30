@@ -40,6 +40,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	/**
+	 * The default value of the '{@link #getBorder() <em>Border</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BORDER_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getBorder() <em>Border</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,7 +57,17 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object border;
+	protected String border = BORDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -57,7 +77,17 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width;
+	protected String width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCellspacing() <em>Cellspacing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellspacing()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CELLSPACING_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCellspacing() <em>Cellspacing</em>}' attribute.
@@ -67,7 +97,17 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object cellspacing;
+	protected String cellspacing = CELLSPACING_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCellpadding() <em>Cellpadding</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellpadding()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CELLPADDING_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCellpadding() <em>Cellpadding</em>}' attribute.
@@ -77,7 +117,7 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object cellpadding;
+	protected String cellpadding = CELLPADDING_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTrs() <em>Trs</em>}' reference list.
@@ -113,7 +153,7 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBorder() {
+	public String getBorder() {
 		return border;
 	}
 
@@ -122,8 +162,8 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBorder(Object newBorder) {
-		Object oldBorder = border;
+	public void setBorder(String newBorder) {
+		String oldBorder = border;
 		border = newBorder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE__BORDER, oldBorder, border));
@@ -134,7 +174,7 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public String getWidth() {
 		return width;
 	}
 
@@ -143,8 +183,8 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE__WIDTH, oldWidth, width));
@@ -155,7 +195,7 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getCellspacing() {
+	public String getCellspacing() {
 		return cellspacing;
 	}
 
@@ -164,8 +204,8 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCellspacing(Object newCellspacing) {
-		Object oldCellspacing = cellspacing;
+	public void setCellspacing(String newCellspacing) {
+		String oldCellspacing = cellspacing;
 		cellspacing = newCellspacing;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE__CELLSPACING, oldCellspacing, cellspacing));
@@ -176,7 +216,7 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getCellpadding() {
+	public String getCellpadding() {
 		return cellpadding;
 	}
 
@@ -185,8 +225,8 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCellpadding(Object newCellpadding) {
-		Object oldCellpadding = cellpadding;
+	public void setCellpadding(String newCellpadding) {
+		String oldCellpadding = cellpadding;
 		cellpadding = newCellpadding;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE__CELLPADDING, oldCellpadding, cellpadding));
@@ -265,16 +305,16 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.TABLE__BORDER:
-				setBorder(newValue);
+				setBorder((String)newValue);
 				return;
 			case HtmlPackage.TABLE__WIDTH:
-				setWidth(newValue);
+				setWidth((String)newValue);
 				return;
 			case HtmlPackage.TABLE__CELLSPACING:
-				setCellspacing(newValue);
+				setCellspacing((String)newValue);
 				return;
 			case HtmlPackage.TABLE__CELLPADDING:
-				setCellpadding(newValue);
+				setCellpadding((String)newValue);
 				return;
 			case HtmlPackage.TABLE__TRS:
 				getTrs().clear();
@@ -293,16 +333,16 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TABLE__BORDER:
-				setBorder((Object)null);
+				setBorder(BORDER_EDEFAULT);
 				return;
 			case HtmlPackage.TABLE__WIDTH:
-				setWidth((Object)null);
+				setWidth(WIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.TABLE__CELLSPACING:
-				setCellspacing((Object)null);
+				setCellspacing(CELLSPACING_EDEFAULT);
 				return;
 			case HtmlPackage.TABLE__CELLPADDING:
-				setCellpadding((Object)null);
+				setCellpadding(CELLPADDING_EDEFAULT);
 				return;
 			case HtmlPackage.TABLE__TRS:
 				getTrs().clear();
@@ -320,13 +360,13 @@ public class TABLEImpl extends TABLEElementImpl implements TABLE {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TABLE__BORDER:
-				return border != null;
+				return BORDER_EDEFAULT == null ? border != null : !BORDER_EDEFAULT.equals(border);
 			case HtmlPackage.TABLE__WIDTH:
-				return width != null;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case HtmlPackage.TABLE__CELLSPACING:
-				return cellspacing != null;
+				return CELLSPACING_EDEFAULT == null ? cellspacing != null : !CELLSPACING_EDEFAULT.equals(cellspacing);
 			case HtmlPackage.TABLE__CELLPADDING:
-				return cellpadding != null;
+				return CELLPADDING_EDEFAULT == null ? cellpadding != null : !CELLPADDING_EDEFAULT.equals(cellpadding);
 			case HtmlPackage.TABLE__TRS:
 				return trs != null && !trs.isEmpty();
 		}

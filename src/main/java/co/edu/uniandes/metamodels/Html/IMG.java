@@ -38,12 +38,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
-	 * @see #setSrc(Object)
+	 * @see #setSrc(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSrc();
+	String getSrc();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getSrc <em>Src</em>}' attribute.
@@ -53,7 +53,7 @@ public interface IMG extends BODYElement {
 	 * @see #getSrc()
 	 * @generated
 	 */
-	void setSrc(Object value);
+	void setSrc(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -64,12 +64,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Object)
+	 * @see #setWidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getWidth <em>Width</em>}' attribute.
@@ -79,7 +79,7 @@ public interface IMG extends BODYElement {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -90,12 +90,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(Object)
+	 * @see #setHeight(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Height()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHeight();
+	String getHeight();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getHeight <em>Height</em>}' attribute.
@@ -105,7 +105,7 @@ public interface IMG extends BODYElement {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(Object value);
+	void setHeight(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Alt</b></em>' attribute.
@@ -116,12 +116,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alt</em>' attribute.
-	 * @see #setAlt(Object)
+	 * @see #setAlt(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Alt()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlt();
+	String getAlt();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getAlt <em>Alt</em>}' attribute.
@@ -131,7 +131,7 @@ public interface IMG extends BODYElement {
 	 * @see #getAlt()
 	 * @generated
 	 */
-	void setAlt(Object value);
+	void setAlt(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Align</b></em>' attribute.
@@ -142,12 +142,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getAlign <em>Align</em>}' attribute.
@@ -157,7 +157,7 @@ public interface IMG extends BODYElement {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Vspace</b></em>' attribute.
@@ -168,12 +168,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vspace</em>' attribute.
-	 * @see #setVspace(Object)
+	 * @see #setVspace(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Vspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getVspace();
+	String getVspace();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getVspace <em>Vspace</em>}' attribute.
@@ -183,7 +183,7 @@ public interface IMG extends BODYElement {
 	 * @see #getVspace()
 	 * @generated
 	 */
-	void setVspace(Object value);
+	void setVspace(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Hspace</b></em>' attribute.
@@ -194,12 +194,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Hspace</em>' attribute.
-	 * @see #setHspace(Object)
+	 * @see #setHspace(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Hspace()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHspace();
+	String getHspace();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getHspace <em>Hspace</em>}' attribute.
@@ -209,7 +209,7 @@ public interface IMG extends BODYElement {
 	 * @see #getHspace()
 	 * @generated
 	 */
-	void setHspace(Object value);
+	void setHspace(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ismap</b></em>' attribute.
@@ -220,12 +220,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ismap</em>' attribute.
-	 * @see #setIsmap(Object)
+	 * @see #setIsmap(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Ismap()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getIsmap();
+	String getIsmap();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getIsmap <em>Ismap</em>}' attribute.
@@ -235,7 +235,7 @@ public interface IMG extends BODYElement {
 	 * @see #getIsmap()
 	 * @generated
 	 */
-	void setIsmap(Object value);
+	void setIsmap(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Usemap</b></em>' attribute.
@@ -246,12 +246,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usemap</em>' attribute.
-	 * @see #setUsemap(Object)
+	 * @see #setUsemap(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Usemap()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getUsemap();
+	String getUsemap();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getUsemap <em>Usemap</em>}' attribute.
@@ -261,7 +261,7 @@ public interface IMG extends BODYElement {
 	 * @see #getUsemap()
 	 * @generated
 	 */
-	void setUsemap(Object value);
+	void setUsemap(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Border</b></em>' attribute.
@@ -272,12 +272,12 @@ public interface IMG extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Border</em>' attribute.
-	 * @see #setBorder(Object)
+	 * @see #setBorder(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getIMG_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getBorder();
+	String getBorder();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.IMG#getBorder <em>Border</em>}' attribute.
@@ -287,6 +287,6 @@ public interface IMG extends BODYElement {
 	 * @see #getBorder()
 	 * @generated
 	 */
-	void setBorder(Object value);
+	void setBorder(String value);
 
 } // IMG

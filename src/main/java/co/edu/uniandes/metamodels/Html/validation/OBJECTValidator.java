@@ -14,8 +14,8 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface OBJECTValidator {
 	boolean validate();
 
-	boolean validateClassid(Object value);
-	boolean validateData(Object value);
-	boolean validateType(Object value);
-	boolean validateStandby(Object value);
+	boolean validateClassid(String value);
+	boolean validateData(String value);
+	boolean validateType(String value);
+	boolean validateStandby(String value);
 }

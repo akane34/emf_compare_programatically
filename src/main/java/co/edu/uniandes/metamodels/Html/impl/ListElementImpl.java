@@ -27,6 +27,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public abstract class ListElementImpl extends MinimalEObjectImpl.Container implements ListElement {
 	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,7 +44,7 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected Object type;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,7 +70,7 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -69,8 +79,8 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Object newType) {
-		Object oldType = type;
+	public void setType(String newType) {
+		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LIST_ELEMENT__TYPE, oldType, type));
@@ -99,7 +109,7 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.LIST_ELEMENT__TYPE:
-				setType(newValue);
+				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -114,7 +124,7 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LIST_ELEMENT__TYPE:
-				setType((Object)null);
+				setType(TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -129,7 +139,7 @@ public abstract class ListElementImpl extends MinimalEObjectImpl.Container imple
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LIST_ELEMENT__TYPE:
-				return type != null;
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -9,7 +9,7 @@ public class HtmlFileTransformation {
 		
 		try {
 			Launcher launcher = new Launcher();		
-			launcher.runAcceleo("metamodels/html.ecore", "Html", htmlModelPath, "transformations/M2T/generateHTML.mtl", "gen/");
+			launcher.runAcceleo("metamodels/html.ecore", "Html", htmlModelPath, "transformations/M2T/generateHTML.mtl", "WebContent/");
 			
 		} catch (AcceleoLauncherException e) {
 			System.out.println(e.getMessage());

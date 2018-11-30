@@ -31,12 +31,12 @@ public interface FORM extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Action</em>' attribute.
-	 * @see #setAction(Object)
+	 * @see #setAction(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFORM_Action()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAction();
+	String getAction();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FORM#getAction <em>Action</em>}' attribute.
@@ -46,7 +46,7 @@ public interface FORM extends EObject {
 	 * @see #getAction()
 	 * @generated
 	 */
-	void setAction(Object value);
+	void setAction(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface FORM extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' attribute.
-	 * @see #setMethod(Object)
+	 * @see #setMethod(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getFORM_Method()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getMethod();
+	String getMethod();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.FORM#getMethod <em>Method</em>}' attribute.
@@ -72,6 +72,6 @@ public interface FORM extends EObject {
 	 * @see #getMethod()
 	 * @generated
 	 */
-	void setMethod(Object value);
+	void setMethod(String value);
 
 } // FORM

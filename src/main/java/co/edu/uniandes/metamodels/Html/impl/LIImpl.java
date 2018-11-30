@@ -26,6 +26,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LIImpl extends ListElementImpl implements LI {
 	/**
+	 * The default value of the '{@link #getLiValue() <em>Li Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLiValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LI_VALUE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getLiValue() <em>Li Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,7 +43,7 @@ public class LIImpl extends ListElementImpl implements LI {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object liValue;
+	protected String liValue = LI_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +69,7 @@ public class LIImpl extends ListElementImpl implements LI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getLiValue() {
+	public String getLiValue() {
 		return liValue;
 	}
 
@@ -68,8 +78,8 @@ public class LIImpl extends ListElementImpl implements LI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLiValue(Object newLiValue) {
-		Object oldLiValue = liValue;
+	public void setLiValue(String newLiValue) {
+		String oldLiValue = liValue;
 		liValue = newLiValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LI__LI_VALUE, oldLiValue, liValue));
@@ -98,7 +108,7 @@ public class LIImpl extends ListElementImpl implements LI {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.LI__LI_VALUE:
-				setLiValue(newValue);
+				setLiValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -113,7 +123,7 @@ public class LIImpl extends ListElementImpl implements LI {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LI__LI_VALUE:
-				setLiValue((Object)null);
+				setLiValue(LI_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -128,7 +138,7 @@ public class LIImpl extends ListElementImpl implements LI {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LI__LI_VALUE:
-				return liValue != null;
+				return LI_VALUE_EDEFAULT == null ? liValue != null : !LI_VALUE_EDEFAULT.equals(liValue);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -15,7 +15,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HTMLElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="children" ordered="false"
           upperBound="-1" eType="#/1/HTMLElement" containment="true" eOpposite="#/1/HTMLElement/parent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" ordered="false"
@@ -36,26 +36,26 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LINK" eSuperTypes="#/1/HEADElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rel" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ahref" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TITLE" eSuperTypes="#/1/HEADElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="BODY" eSuperTypes="#/1/HTMLElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bgcolor" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="alink" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="vlink" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" ordered="false"
           upperBound="-1" eType="#/1/BODYElement" eOpposite="#/1/BODYElement/body"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="html" ordered="false"
@@ -82,103 +82,103 @@
     <eClassifiers xsi:type="ecore:EClass" name="STRIKE" eSuperTypes="#/1/BODYElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="FONT" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="face" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IMG" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="alt" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="vspace" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hspace" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ismap" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="usemap" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="border" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BR" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="clear" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MAP" eSuperTypes="#/1/BODYElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="AREA" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="shape" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="coords" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ahref" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="STYLE" eSuperTypes="#/1/BODYElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="EMBED" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="vspace" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hspace" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="border" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NOEMBED" eSuperTypes="#/1/BODYElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="SPAN" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="style" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="A" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ahref" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DIV" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="P" eSuperTypes="#/1/BODYElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="TABLEElement" abstract="true" eSuperTypes="#/1/BODYElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bgcolor" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TABLE" eSuperTypes="#/1/TABLEElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="border" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="cellspacing" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="cellpadding" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="trs" ordered="false"
           upperBound="-1" eType="#/1/TR" eOpposite="#/1/TR/table"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TR" eSuperTypes="#/1/TABLEElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="valign" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="table" ordered="false"
           lowerBound="1" eType="#/1/TABLE" eOpposite="#/1/TABLE/trs"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="tds" ordered="false"
@@ -186,136 +186,136 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TD" eSuperTypes="#/1/TABLEElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="colspan" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowspan" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="valign" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="tr" ordered="false" lowerBound="1"
           eType="#/1/TR" eOpposite="#/1/TR/tds"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TH" eSuperTypes="#/1/TD"/>
     <eClassifiers xsi:type="ecore:EClass" name="FORM">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="INPUT">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxlength" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="checked" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputValue" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TEXTAREA">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rows" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="cols" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SELECT">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiple" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OPTION">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="optionValue" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OL" eSuperTypes="#/1/ListElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UL" eSuperTypes="#/1/ListElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="LI" eSuperTypes="#/1/ListElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="liValue" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DL"/>
     <eClassifiers xsi:type="ecore:EClass" name="DT"/>
     <eClassifiers xsi:type="ecore:EClass" name="DD"/>
     <eClassifiers xsi:type="ecore:EClass" name="APPLET">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="applet" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="class" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PARAM">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="paramValue" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OBJECT">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="classid" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="standby" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FRAMESET">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rows" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="cols" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="framespacing" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameborder" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="border" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FRAME">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="marginwidth" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="marginheight" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="scrolling" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="noresize" ordered="false"
-          unique="false" lowerBound="1" eType="#/0/String"/>
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NOFRAME"/>
     <eClassifiers xsi:type="ecore:EClass" name="IFRAME" eSuperTypes="#/1/FRAME"/>

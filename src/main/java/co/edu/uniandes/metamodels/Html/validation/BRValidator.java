@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface BRValidator {
 	boolean validate();
 
-	boolean validateClear(Object value);
+	boolean validateClear(String value);
 }

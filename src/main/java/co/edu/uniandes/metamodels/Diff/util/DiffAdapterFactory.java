@@ -208,10 +208,6 @@ public class DiffAdapterFactory extends AdapterFactoryImpl {
 				return createReturnTypeAdapter();
 			}
 			@Override
-			public Adapter caseSchema(Schema object) {
-				return createSchemaAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -718,20 +714,6 @@ public class DiffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReturnTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link co.edu.uniandes.metamodels.Diff.Schema <em>Schema</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.edu.uniandes.metamodels.Diff.Schema
-	 * @generated
-	 */
-	public Adapter createSchemaAdapter() {
 		return null;
 	}
 

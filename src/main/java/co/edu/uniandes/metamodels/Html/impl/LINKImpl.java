@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LINKImpl extends HEADElementImpl implements LINK {
 	/**
+	 * The default value of the '{@link #getRel() <em>Rel</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REL_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getRel() <em>Rel</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object rel;
+	protected String rel = REL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAhref()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AHREF_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
@@ -45,7 +65,17 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object ahref;
+	protected String ahref = AHREF_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -55,7 +85,7 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object type;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,7 +111,7 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getRel() {
+	public String getRel() {
 		return rel;
 	}
 
@@ -90,8 +120,8 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRel(Object newRel) {
-		Object oldRel = rel;
+	public void setRel(String newRel) {
+		String oldRel = rel;
 		rel = newRel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LINK__REL, oldRel, rel));
@@ -102,7 +132,7 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAhref() {
+	public String getAhref() {
 		return ahref;
 	}
 
@@ -111,8 +141,8 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAhref(Object newAhref) {
-		Object oldAhref = ahref;
+	public void setAhref(String newAhref) {
+		String oldAhref = ahref;
 		ahref = newAhref;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LINK__AHREF, oldAhref, ahref));
@@ -123,7 +153,7 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -132,8 +162,8 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Object newType) {
-		Object oldType = type;
+	public void setType(String newType) {
+		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.LINK__TYPE, oldType, type));
@@ -166,13 +196,13 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
-				setRel(newValue);
+				setRel((String)newValue);
 				return;
 			case HtmlPackage.LINK__AHREF:
-				setAhref(newValue);
+				setAhref((String)newValue);
 				return;
 			case HtmlPackage.LINK__TYPE:
-				setType(newValue);
+				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,13 +217,13 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
-				setRel((Object)null);
+				setRel(REL_EDEFAULT);
 				return;
 			case HtmlPackage.LINK__AHREF:
-				setAhref((Object)null);
+				setAhref(AHREF_EDEFAULT);
 				return;
 			case HtmlPackage.LINK__TYPE:
-				setType((Object)null);
+				setType(TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -208,11 +238,11 @@ public class LINKImpl extends HEADElementImpl implements LINK {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.LINK__REL:
-				return rel != null;
+				return REL_EDEFAULT == null ? rel != null : !REL_EDEFAULT.equals(rel);
 			case HtmlPackage.LINK__AHREF:
-				return ahref != null;
+				return AHREF_EDEFAULT == null ? ahref != null : !AHREF_EDEFAULT.equals(ahref);
 			case HtmlPackage.LINK__TYPE:
-				return type != null;
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}

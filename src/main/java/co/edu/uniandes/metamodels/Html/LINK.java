@@ -31,12 +31,12 @@ public interface LINK extends HEADElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rel</em>' attribute.
-	 * @see #setRel(Object)
+	 * @see #setRel(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Rel()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getRel();
+	String getRel();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.LINK#getRel <em>Rel</em>}' attribute.
@@ -46,7 +46,7 @@ public interface LINK extends HEADElement {
 	 * @see #getRel()
 	 * @generated
 	 */
-	void setRel(Object value);
+	void setRel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Ahref</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface LINK extends HEADElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ahref</em>' attribute.
-	 * @see #setAhref(Object)
+	 * @see #setAhref(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAhref();
+	String getAhref();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.LINK#getAhref <em>Ahref</em>}' attribute.
@@ -72,7 +72,7 @@ public interface LINK extends HEADElement {
 	 * @see #getAhref()
 	 * @generated
 	 */
-	void setAhref(Object value);
+	void setAhref(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -83,12 +83,12 @@ public interface LINK extends HEADElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(Object)
+	 * @see #setType(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLINK_Type()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getType();
+	String getType();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.LINK#getType <em>Type</em>}' attribute.
@@ -98,6 +98,6 @@ public interface LINK extends HEADElement {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(Object value);
+	void setType(String value);
 
 } // LINK

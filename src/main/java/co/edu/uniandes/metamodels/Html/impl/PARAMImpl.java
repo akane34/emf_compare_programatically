@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getParamValue() <em>Param Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParamValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARAM_VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getParamValue() <em>Param Value</em>}' attribute.
@@ -45,7 +65,7 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object paramValue;
+	protected String paramValue = PARAM_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,7 +91,7 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -80,8 +100,8 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.PARAM__NAME, oldName, name));
@@ -92,7 +112,7 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getParamValue() {
+	public String getParamValue() {
 		return paramValue;
 	}
 
@@ -101,8 +121,8 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParamValue(Object newParamValue) {
-		Object oldParamValue = paramValue;
+	public void setParamValue(String newParamValue) {
+		String oldParamValue = paramValue;
 		paramValue = newParamValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.PARAM__PARAM_VALUE, oldParamValue, paramValue));
@@ -133,10 +153,10 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.PARAM__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 			case HtmlPackage.PARAM__PARAM_VALUE:
-				setParamValue(newValue);
+				setParamValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,10 +171,10 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.PARAM__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 			case HtmlPackage.PARAM__PARAM_VALUE:
-				setParamValue((Object)null);
+				setParamValue(PARAM_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -169,9 +189,9 @@ public class PARAMImpl extends MinimalEObjectImpl.Container implements PARAM {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.PARAM__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case HtmlPackage.PARAM__PARAM_VALUE:
-				return paramValue != null;
+				return PARAM_VALUE_EDEFAULT == null ? paramValue != null : !PARAM_VALUE_EDEFAULT.equals(paramValue);
 		}
 		return super.eIsSet(featureID);
 	}

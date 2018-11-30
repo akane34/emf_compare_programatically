@@ -34,6 +34,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -41,7 +51,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxlength() <em>Maxlength</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxlength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MAXLENGTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getMaxlength() <em>Maxlength</em>}' attribute.
@@ -51,7 +71,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object maxlength;
+	protected String maxlength = MAXLENGTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SIZE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -61,7 +91,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object size;
+	protected String size = SIZE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getChecked() <em>Checked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChecked()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CHECKED_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getChecked() <em>Checked</em>}' attribute.
@@ -71,7 +111,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object checked;
+	protected String checked = CHECKED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSrc() <em>Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRC_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' attribute.
@@ -81,7 +131,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object src;
+	protected String src = SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInputValue() <em>Input Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getInputValue() <em>Input Value</em>}' attribute.
@@ -91,7 +151,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object inputValue;
+	protected String inputValue = INPUT_VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -101,7 +171,17 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -111,7 +191,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object type;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,7 +217,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -146,8 +226,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__ALIGN, oldAlign, align));
@@ -158,7 +238,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getMaxlength() {
+	public String getMaxlength() {
 		return maxlength;
 	}
 
@@ -167,8 +247,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxlength(Object newMaxlength) {
-		Object oldMaxlength = maxlength;
+	public void setMaxlength(String newMaxlength) {
+		String oldMaxlength = maxlength;
 		maxlength = newMaxlength;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__MAXLENGTH, oldMaxlength, maxlength));
@@ -179,7 +259,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSize() {
+	public String getSize() {
 		return size;
 	}
 
@@ -188,8 +268,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(Object newSize) {
-		Object oldSize = size;
+	public void setSize(String newSize) {
+		String oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__SIZE, oldSize, size));
@@ -200,7 +280,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getChecked() {
+	public String getChecked() {
 		return checked;
 	}
 
@@ -209,8 +289,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setChecked(Object newChecked) {
-		Object oldChecked = checked;
+	public void setChecked(String newChecked) {
+		String oldChecked = checked;
 		checked = newChecked;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__CHECKED, oldChecked, checked));
@@ -221,7 +301,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSrc() {
+	public String getSrc() {
 		return src;
 	}
 
@@ -230,8 +310,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrc(Object newSrc) {
-		Object oldSrc = src;
+	public void setSrc(String newSrc) {
+		String oldSrc = src;
 		src = newSrc;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__SRC, oldSrc, src));
@@ -242,7 +322,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getInputValue() {
+	public String getInputValue() {
 		return inputValue;
 	}
 
@@ -251,8 +331,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputValue(Object newInputValue) {
-		Object oldInputValue = inputValue;
+	public void setInputValue(String newInputValue) {
+		String oldInputValue = inputValue;
 		inputValue = newInputValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__INPUT_VALUE, oldInputValue, inputValue));
@@ -263,7 +343,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -272,8 +352,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__NAME, oldName, name));
@@ -284,7 +364,7 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -293,8 +373,8 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Object newType) {
-		Object oldType = type;
+	public void setType(String newType) {
+		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.INPUT__TYPE, oldType, type));
@@ -337,28 +417,28 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.INPUT__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.INPUT__MAXLENGTH:
-				setMaxlength(newValue);
+				setMaxlength((String)newValue);
 				return;
 			case HtmlPackage.INPUT__SIZE:
-				setSize(newValue);
+				setSize((String)newValue);
 				return;
 			case HtmlPackage.INPUT__CHECKED:
-				setChecked(newValue);
+				setChecked((String)newValue);
 				return;
 			case HtmlPackage.INPUT__SRC:
-				setSrc(newValue);
+				setSrc((String)newValue);
 				return;
 			case HtmlPackage.INPUT__INPUT_VALUE:
-				setInputValue(newValue);
+				setInputValue((String)newValue);
 				return;
 			case HtmlPackage.INPUT__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 			case HtmlPackage.INPUT__TYPE:
-				setType(newValue);
+				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -373,28 +453,28 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.INPUT__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__MAXLENGTH:
-				setMaxlength((Object)null);
+				setMaxlength(MAXLENGTH_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__SIZE:
-				setSize((Object)null);
+				setSize(SIZE_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__CHECKED:
-				setChecked((Object)null);
+				setChecked(CHECKED_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__SRC:
-				setSrc((Object)null);
+				setSrc(SRC_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__INPUT_VALUE:
-				setInputValue((Object)null);
+				setInputValue(INPUT_VALUE_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 			case HtmlPackage.INPUT__TYPE:
-				setType((Object)null);
+				setType(TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -409,21 +489,21 @@ public class INPUTImpl extends MinimalEObjectImpl.Container implements INPUT {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.INPUT__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.INPUT__MAXLENGTH:
-				return maxlength != null;
+				return MAXLENGTH_EDEFAULT == null ? maxlength != null : !MAXLENGTH_EDEFAULT.equals(maxlength);
 			case HtmlPackage.INPUT__SIZE:
-				return size != null;
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case HtmlPackage.INPUT__CHECKED:
-				return checked != null;
+				return CHECKED_EDEFAULT == null ? checked != null : !CHECKED_EDEFAULT.equals(checked);
 			case HtmlPackage.INPUT__SRC:
-				return src != null;
+				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
 			case HtmlPackage.INPUT__INPUT_VALUE:
-				return inputValue != null;
+				return INPUT_VALUE_EDEFAULT == null ? inputValue != null : !INPUT_VALUE_EDEFAULT.equals(inputValue);
 			case HtmlPackage.INPUT__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case HtmlPackage.INPUT__TYPE:
-				return type != null;
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}

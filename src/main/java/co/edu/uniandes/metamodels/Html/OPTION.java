@@ -31,12 +31,12 @@ public interface OPTION extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected</em>' attribute.
-	 * @see #setSelected(Object)
+	 * @see #setSelected(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOPTION_Selected()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSelected();
+	String getSelected();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OPTION#getSelected <em>Selected</em>}' attribute.
@@ -46,7 +46,7 @@ public interface OPTION extends EObject {
 	 * @see #getSelected()
 	 * @generated
 	 */
-	void setSelected(Object value);
+	void setSelected(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Option Value</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface OPTION extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Option Value</em>' attribute.
-	 * @see #setOptionValue(Object)
+	 * @see #setOptionValue(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getOPTION_OptionValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getOptionValue();
+	String getOptionValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.OPTION#getOptionValue <em>Option Value</em>}' attribute.
@@ -72,6 +72,6 @@ public interface OPTION extends EObject {
 	 * @see #getOptionValue()
 	 * @generated
 	 */
-	void setOptionValue(Object value);
+	void setOptionValue(String value);
 
 } // OPTION

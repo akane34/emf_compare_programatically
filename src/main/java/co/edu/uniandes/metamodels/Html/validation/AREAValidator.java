@@ -14,7 +14,7 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface AREAValidator {
 	boolean validate();
 
-	boolean validateShape(Object value);
-	boolean validateCoords(Object value);
-	boolean validateAhref(Object value);
+	boolean validateShape(String value);
+	boolean validateCoords(String value);
+	boolean validateAhref(String value);
 }

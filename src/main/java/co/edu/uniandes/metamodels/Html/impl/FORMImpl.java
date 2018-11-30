@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	/**
+	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object action;
+	protected String action = ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String METHOD_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getMethod() <em>Method</em>}' attribute.
@@ -45,7 +65,7 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object method;
+	protected String method = METHOD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,7 +91,7 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAction() {
+	public String getAction() {
 		return action;
 	}
 
@@ -80,8 +100,8 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAction(Object newAction) {
-		Object oldAction = action;
+	public void setAction(String newAction) {
+		String oldAction = action;
 		action = newAction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FORM__ACTION, oldAction, action));
@@ -92,7 +112,7 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getMethod() {
+	public String getMethod() {
 		return method;
 	}
 
@@ -101,8 +121,8 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(Object newMethod) {
-		Object oldMethod = method;
+	public void setMethod(String newMethod) {
+		String oldMethod = method;
 		method = newMethod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FORM__METHOD, oldMethod, method));
@@ -133,10 +153,10 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.FORM__ACTION:
-				setAction(newValue);
+				setAction((String)newValue);
 				return;
 			case HtmlPackage.FORM__METHOD:
-				setMethod(newValue);
+				setMethod((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,10 +171,10 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FORM__ACTION:
-				setAction((Object)null);
+				setAction(ACTION_EDEFAULT);
 				return;
 			case HtmlPackage.FORM__METHOD:
-				setMethod((Object)null);
+				setMethod(METHOD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -169,9 +189,9 @@ public class FORMImpl extends MinimalEObjectImpl.Container implements FORM {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FORM__ACTION:
-				return action != null;
+				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 			case HtmlPackage.FORM__METHOD:
-				return method != null;
+				return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
 		}
 		return super.eIsSet(featureID);
 	}

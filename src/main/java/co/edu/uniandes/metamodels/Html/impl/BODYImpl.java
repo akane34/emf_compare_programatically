@@ -44,6 +44,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class BODYImpl extends HTMLElementImpl implements BODY {
 	/**
+	 * The default value of the '{@link #getBackground() <em>Background</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackground()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BACKGROUND_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getBackground() <em>Background</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,7 +61,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object background;
+	protected String background = BACKGROUND_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBgcolor() <em>Bgcolor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBgcolor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BGCOLOR_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBgcolor() <em>Bgcolor</em>}' attribute.
@@ -61,7 +81,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object bgcolor;
+	protected String bgcolor = BGCOLOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TEXT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
@@ -71,7 +101,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object text;
+	protected String text = TEXT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLink() <em>Link</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLink()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LINK_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLink() <em>Link</em>}' attribute.
@@ -81,7 +121,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object link;
+	protected String link = LINK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlink() <em>Alink</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlink()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALINK_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlink() <em>Alink</em>}' attribute.
@@ -91,7 +141,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object alink;
+	protected String alink = ALINK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVlink() <em>Vlink</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVlink()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VLINK_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVlink() <em>Vlink</em>}' attribute.
@@ -101,7 +161,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object vlink;
+	protected String vlink = VLINK_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBodyElements() <em>Body Elements</em>}' reference list.
@@ -147,7 +207,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBackground() {
+	public String getBackground() {
 		return background;
 	}
 
@@ -156,8 +216,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBackground(Object newBackground) {
-		Object oldBackground = background;
+	public void setBackground(String newBackground) {
+		String oldBackground = background;
 		background = newBackground;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__BACKGROUND, oldBackground, background));
@@ -168,7 +228,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBgcolor() {
+	public String getBgcolor() {
 		return bgcolor;
 	}
 
@@ -177,8 +237,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBgcolor(Object newBgcolor) {
-		Object oldBgcolor = bgcolor;
+	public void setBgcolor(String newBgcolor) {
+		String oldBgcolor = bgcolor;
 		bgcolor = newBgcolor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__BGCOLOR, oldBgcolor, bgcolor));
@@ -189,7 +249,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getText() {
+	public String getText() {
 		return text;
 	}
 
@@ -198,8 +258,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setText(Object newText) {
-		Object oldText = text;
+	public void setText(String newText) {
+		String oldText = text;
 		text = newText;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__TEXT, oldText, text));
@@ -210,7 +270,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getLink() {
+	public String getLink() {
 		return link;
 	}
 
@@ -219,8 +279,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLink(Object newLink) {
-		Object oldLink = link;
+	public void setLink(String newLink) {
+		String oldLink = link;
 		link = newLink;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__LINK, oldLink, link));
@@ -231,7 +291,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlink() {
+	public String getAlink() {
 		return alink;
 	}
 
@@ -240,8 +300,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlink(Object newAlink) {
-		Object oldAlink = alink;
+	public void setAlink(String newAlink) {
+		String oldAlink = alink;
 		alink = newAlink;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__ALINK, oldAlink, alink));
@@ -252,7 +312,7 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getVlink() {
+	public String getVlink() {
 		return vlink;
 	}
 
@@ -261,8 +321,8 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVlink(Object newVlink) {
-		Object oldVlink = vlink;
+	public void setVlink(String newVlink) {
+		String oldVlink = vlink;
 		vlink = newVlink;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.BODY__VLINK, oldVlink, vlink));
@@ -414,22 +474,22 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.BODY__BACKGROUND:
-				setBackground(newValue);
+				setBackground((String)newValue);
 				return;
 			case HtmlPackage.BODY__BGCOLOR:
-				setBgcolor(newValue);
+				setBgcolor((String)newValue);
 				return;
 			case HtmlPackage.BODY__TEXT:
-				setText(newValue);
+				setText((String)newValue);
 				return;
 			case HtmlPackage.BODY__LINK:
-				setLink(newValue);
+				setLink((String)newValue);
 				return;
 			case HtmlPackage.BODY__ALINK:
-				setAlink(newValue);
+				setAlink((String)newValue);
 				return;
 			case HtmlPackage.BODY__VLINK:
-				setVlink(newValue);
+				setVlink((String)newValue);
 				return;
 			case HtmlPackage.BODY__BODY_ELEMENTS:
 				getBodyElements().clear();
@@ -451,22 +511,22 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.BODY__BACKGROUND:
-				setBackground((Object)null);
+				setBackground(BACKGROUND_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__BGCOLOR:
-				setBgcolor((Object)null);
+				setBgcolor(BGCOLOR_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__TEXT:
-				setText((Object)null);
+				setText(TEXT_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__LINK:
-				setLink((Object)null);
+				setLink(LINK_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__ALINK:
-				setAlink((Object)null);
+				setAlink(ALINK_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__VLINK:
-				setVlink((Object)null);
+				setVlink(VLINK_EDEFAULT);
 				return;
 			case HtmlPackage.BODY__BODY_ELEMENTS:
 				getBodyElements().clear();
@@ -487,17 +547,17 @@ public class BODYImpl extends HTMLElementImpl implements BODY {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.BODY__BACKGROUND:
-				return background != null;
+				return BACKGROUND_EDEFAULT == null ? background != null : !BACKGROUND_EDEFAULT.equals(background);
 			case HtmlPackage.BODY__BGCOLOR:
-				return bgcolor != null;
+				return BGCOLOR_EDEFAULT == null ? bgcolor != null : !BGCOLOR_EDEFAULT.equals(bgcolor);
 			case HtmlPackage.BODY__TEXT:
-				return text != null;
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case HtmlPackage.BODY__LINK:
-				return link != null;
+				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
 			case HtmlPackage.BODY__ALINK:
-				return alink != null;
+				return ALINK_EDEFAULT == null ? alink != null : !ALINK_EDEFAULT.equals(alink);
 			case HtmlPackage.BODY__VLINK:
-				return vlink != null;
+				return VLINK_EDEFAULT == null ? vlink != null : !VLINK_EDEFAULT.equals(vlink);
 			case HtmlPackage.BODY__BODY_ELEMENTS:
 				return bodyElements != null && !bodyElements.isEmpty();
 			case HtmlPackage.BODY__HTML:

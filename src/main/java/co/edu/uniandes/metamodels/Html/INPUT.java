@@ -37,12 +37,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see #setAlign(Object)
+	 * @see #setAlign(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Align()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAlign();
+	String getAlign();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getAlign <em>Align</em>}' attribute.
@@ -52,7 +52,7 @@ public interface INPUT extends EObject {
 	 * @see #getAlign()
 	 * @generated
 	 */
-	void setAlign(Object value);
+	void setAlign(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Maxlength</b></em>' attribute.
@@ -63,12 +63,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maxlength</em>' attribute.
-	 * @see #setMaxlength(Object)
+	 * @see #setMaxlength(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Maxlength()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getMaxlength();
+	String getMaxlength();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getMaxlength <em>Maxlength</em>}' attribute.
@@ -78,7 +78,7 @@ public interface INPUT extends EObject {
 	 * @see #getMaxlength()
 	 * @generated
 	 */
-	void setMaxlength(Object value);
+	void setMaxlength(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
@@ -89,12 +89,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size</em>' attribute.
-	 * @see #setSize(Object)
+	 * @see #setSize(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Size()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSize();
+	String getSize();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getSize <em>Size</em>}' attribute.
@@ -104,7 +104,7 @@ public interface INPUT extends EObject {
 	 * @see #getSize()
 	 * @generated
 	 */
-	void setSize(Object value);
+	void setSize(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Checked</b></em>' attribute.
@@ -115,12 +115,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Checked</em>' attribute.
-	 * @see #setChecked(Object)
+	 * @see #setChecked(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Checked()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getChecked();
+	String getChecked();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getChecked <em>Checked</em>}' attribute.
@@ -130,7 +130,7 @@ public interface INPUT extends EObject {
 	 * @see #getChecked()
 	 * @generated
 	 */
-	void setChecked(Object value);
+	void setChecked(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Src</b></em>' attribute.
@@ -141,12 +141,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
-	 * @see #setSrc(Object)
+	 * @see #setSrc(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Src()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getSrc();
+	String getSrc();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getSrc <em>Src</em>}' attribute.
@@ -156,7 +156,7 @@ public interface INPUT extends EObject {
 	 * @see #getSrc()
 	 * @generated
 	 */
-	void setSrc(Object value);
+	void setSrc(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Value</b></em>' attribute.
@@ -167,12 +167,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Value</em>' attribute.
-	 * @see #setInputValue(Object)
+	 * @see #setInputValue(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_InputValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getInputValue();
+	String getInputValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getInputValue <em>Input Value</em>}' attribute.
@@ -182,7 +182,7 @@ public interface INPUT extends EObject {
 	 * @see #getInputValue()
 	 * @generated
 	 */
-	void setInputValue(Object value);
+	void setInputValue(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -193,12 +193,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getName <em>Name</em>}' attribute.
@@ -208,7 +208,7 @@ public interface INPUT extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -219,12 +219,12 @@ public interface INPUT extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(Object)
+	 * @see #setType(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getINPUT_Type()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getType();
+	String getType();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.INPUT#getType <em>Type</em>}' attribute.
@@ -234,6 +234,6 @@ public interface INPUT extends EObject {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(Object value);
+	void setType(String value);
 
 } // INPUT

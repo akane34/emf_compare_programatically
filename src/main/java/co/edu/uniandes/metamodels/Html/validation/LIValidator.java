@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface LIValidator {
 	boolean validate();
 
-	boolean validateLiValue(Object value);
+	boolean validateLiValue(String value);
 }

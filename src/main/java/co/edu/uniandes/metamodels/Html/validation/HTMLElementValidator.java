@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
 public interface HTMLElementValidator {
 	boolean validate();
 
-	boolean validateValue(Object value);
+	boolean validateValue(String value);
 	boolean validateChildren(EList<HTMLElement> value);
 	boolean validateParent(HTMLElement value);
 	boolean validateId(String value);

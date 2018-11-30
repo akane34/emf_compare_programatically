@@ -4,9 +4,6 @@
  */
 package co.edu.uniandes.metamodels.Diff.validation;
 
-import co.edu.uniandes.metamodels.Diff.Schema;
-
-import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType}.
@@ -17,5 +14,4 @@ import org.eclipse.emf.common.util.EList;
 public interface ModifyParameterSchemaTypeValidator {
 	boolean validate();
 
-	boolean validateSchemas(EList<Schema> value);
 }

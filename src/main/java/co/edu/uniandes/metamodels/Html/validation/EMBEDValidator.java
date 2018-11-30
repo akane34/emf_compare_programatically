@@ -14,11 +14,11 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface EMBEDValidator {
 	boolean validate();
 
-	boolean validateSrc(Object value);
-	boolean validateWidth(Object value);
-	boolean validateHeight(Object value);
-	boolean validateAlign(Object value);
-	boolean validateVspace(Object value);
-	boolean validateHspace(Object value);
-	boolean validateBorder(Object value);
+	boolean validateSrc(String value);
+	boolean validateWidth(String value);
+	boolean validateHeight(String value);
+	boolean validateAlign(String value);
+	boolean validateVspace(String value);
+	boolean validateHspace(String value);
+	boolean validateBorder(String value);
 }

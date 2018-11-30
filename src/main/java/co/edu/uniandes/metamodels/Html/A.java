@@ -30,12 +30,12 @@ public interface A extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ahref</em>' attribute.
-	 * @see #setAhref(Object)
+	 * @see #setAhref(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA_Ahref()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getAhref();
+	String getAhref();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.A#getAhref <em>Ahref</em>}' attribute.
@@ -45,7 +45,7 @@ public interface A extends BODYElement {
 	 * @see #getAhref()
 	 * @generated
 	 */
-	void setAhref(Object value);
+	void setAhref(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -56,12 +56,12 @@ public interface A extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(Object)
+	 * @see #setName(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getA_Name()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.A#getName <em>Name</em>}' attribute.
@@ -71,6 +71,6 @@ public interface A extends BODYElement {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 } // A

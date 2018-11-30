@@ -147,12 +147,12 @@
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateHTML">
       <details key="start" value="79"/>
-      <details key="end" value="870"/>
+      <details key="end" value="1428"/>
       <details key="line" value="3"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateHTML/%">
       <details key="start" value="143"/>
-      <details key="end" value="857"/>
+      <details key="end" value="1415"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateHTML/%/%">
@@ -162,7 +162,7 @@
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateHTML/%/%.1">
       <details key="start" value="529"/>
-      <details key="end" value="702"/>
+      <details key="end" value="1260"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateHTML/%/%.1/%">
@@ -191,9 +191,9 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateHTML/%/%.2">
-      <details key="start" value="704"/>
-      <details key="end" value="850"/>
-      <details key="line" value="26"/>
+      <details key="start" value="1262"/>
+      <details key="end" value="1408"/>
+      <details key="line" value="46"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateHTML/%/%.3">
       <details key="start" value="150"/>

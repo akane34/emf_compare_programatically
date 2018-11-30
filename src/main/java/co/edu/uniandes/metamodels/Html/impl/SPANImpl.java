@@ -26,6 +26,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class SPANImpl extends BODYElementImpl implements SPAN {
 	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,7 +43,7 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object style;
+	protected String style = STYLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +69,7 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getStyle() {
+	public String getStyle() {
 		return style;
 	}
 
@@ -68,8 +78,8 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStyle(Object newStyle) {
-		Object oldStyle = style;
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
 		style = newStyle;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.SPAN__STYLE, oldStyle, style));
@@ -98,7 +108,7 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.SPAN__STYLE:
-				setStyle(newValue);
+				setStyle((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -113,7 +123,7 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.SPAN__STYLE:
-				setStyle((Object)null);
+				setStyle(STYLE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -128,7 +138,7 @@ public class SPANImpl extends BODYElementImpl implements SPAN {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.SPAN__STYLE:
-				return style != null;
+				return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
 		}
 		return super.eIsSet(featureID);
 	}

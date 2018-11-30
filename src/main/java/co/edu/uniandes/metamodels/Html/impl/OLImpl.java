@@ -26,6 +26,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class OLImpl extends ListElementImpl implements OL {
 	/**
+	 * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String START_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getStart() <em>Start</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,7 +43,7 @@ public class OLImpl extends ListElementImpl implements OL {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object start;
+	protected String start = START_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +69,7 @@ public class OLImpl extends ListElementImpl implements OL {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getStart() {
+	public String getStart() {
 		return start;
 	}
 
@@ -68,8 +78,8 @@ public class OLImpl extends ListElementImpl implements OL {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStart(Object newStart) {
-		Object oldStart = start;
+	public void setStart(String newStart) {
+		String oldStart = start;
 		start = newStart;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OL__START, oldStart, start));
@@ -98,7 +108,7 @@ public class OLImpl extends ListElementImpl implements OL {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.OL__START:
-				setStart(newValue);
+				setStart((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -113,7 +123,7 @@ public class OLImpl extends ListElementImpl implements OL {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OL__START:
-				setStart((Object)null);
+				setStart(START_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -128,7 +138,7 @@ public class OLImpl extends ListElementImpl implements OL {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OL__START:
-				return start != null;
+				return START_EDEFAULT == null ? start != null : !START_EDEFAULT.equals(start);
 		}
 		return super.eIsSet(featureID);
 	}

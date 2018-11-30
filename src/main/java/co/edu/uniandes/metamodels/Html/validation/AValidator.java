@@ -14,6 +14,6 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface AValidator {
 	boolean validate();
 
-	boolean validateAhref(Object value);
-	boolean validateName(Object value);
+	boolean validateAhref(String value);
+	boolean validateName(String value);
 }

@@ -32,6 +32,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	/**
+	 * The default value of the '{@link #getSrc() <em>Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRC_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,7 +49,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object src;
+	protected String src = SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,7 +69,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMarginwidth() <em>Marginwidth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMarginwidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MARGINWIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getMarginwidth() <em>Marginwidth</em>}' attribute.
@@ -59,7 +89,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object marginwidth;
+	protected String marginwidth = MARGINWIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMarginheight() <em>Marginheight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMarginheight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MARGINHEIGHT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getMarginheight() <em>Marginheight</em>}' attribute.
@@ -69,7 +109,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object marginheight;
+	protected String marginheight = MARGINHEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getScrolling() <em>Scrolling</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScrolling()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SCROLLING_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getScrolling() <em>Scrolling</em>}' attribute.
@@ -79,7 +129,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object scrolling;
+	protected String scrolling = SCROLLING_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNoresize() <em>Noresize</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNoresize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NORESIZE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNoresize() <em>Noresize</em>}' attribute.
@@ -89,7 +149,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object noresize;
+	protected String noresize = NORESIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,7 +175,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSrc() {
+	public String getSrc() {
 		return src;
 	}
 
@@ -124,8 +184,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrc(Object newSrc) {
-		Object oldSrc = src;
+	public void setSrc(String newSrc) {
+		String oldSrc = src;
 		src = newSrc;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__SRC, oldSrc, src));
@@ -136,7 +196,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -145,8 +205,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__NAME, oldName, name));
@@ -157,7 +217,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getMarginwidth() {
+	public String getMarginwidth() {
 		return marginwidth;
 	}
 
@@ -166,8 +226,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMarginwidth(Object newMarginwidth) {
-		Object oldMarginwidth = marginwidth;
+	public void setMarginwidth(String newMarginwidth) {
+		String oldMarginwidth = marginwidth;
 		marginwidth = newMarginwidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__MARGINWIDTH, oldMarginwidth, marginwidth));
@@ -178,7 +238,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getMarginheight() {
+	public String getMarginheight() {
 		return marginheight;
 	}
 
@@ -187,8 +247,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMarginheight(Object newMarginheight) {
-		Object oldMarginheight = marginheight;
+	public void setMarginheight(String newMarginheight) {
+		String oldMarginheight = marginheight;
 		marginheight = newMarginheight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__MARGINHEIGHT, oldMarginheight, marginheight));
@@ -199,7 +259,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getScrolling() {
+	public String getScrolling() {
 		return scrolling;
 	}
 
@@ -208,8 +268,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScrolling(Object newScrolling) {
-		Object oldScrolling = scrolling;
+	public void setScrolling(String newScrolling) {
+		String oldScrolling = scrolling;
 		scrolling = newScrolling;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__SCROLLING, oldScrolling, scrolling));
@@ -220,7 +280,7 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getNoresize() {
+	public String getNoresize() {
 		return noresize;
 	}
 
@@ -229,8 +289,8 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNoresize(Object newNoresize) {
-		Object oldNoresize = noresize;
+	public void setNoresize(String newNoresize) {
+		String oldNoresize = noresize;
 		noresize = newNoresize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAME__NORESIZE, oldNoresize, noresize));
@@ -269,22 +329,22 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.FRAME__SRC:
-				setSrc(newValue);
+				setSrc((String)newValue);
 				return;
 			case HtmlPackage.FRAME__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 			case HtmlPackage.FRAME__MARGINWIDTH:
-				setMarginwidth(newValue);
+				setMarginwidth((String)newValue);
 				return;
 			case HtmlPackage.FRAME__MARGINHEIGHT:
-				setMarginheight(newValue);
+				setMarginheight((String)newValue);
 				return;
 			case HtmlPackage.FRAME__SCROLLING:
-				setScrolling(newValue);
+				setScrolling((String)newValue);
 				return;
 			case HtmlPackage.FRAME__NORESIZE:
-				setNoresize(newValue);
+				setNoresize((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -299,22 +359,22 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FRAME__SRC:
-				setSrc((Object)null);
+				setSrc(SRC_EDEFAULT);
 				return;
 			case HtmlPackage.FRAME__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 			case HtmlPackage.FRAME__MARGINWIDTH:
-				setMarginwidth((Object)null);
+				setMarginwidth(MARGINWIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.FRAME__MARGINHEIGHT:
-				setMarginheight((Object)null);
+				setMarginheight(MARGINHEIGHT_EDEFAULT);
 				return;
 			case HtmlPackage.FRAME__SCROLLING:
-				setScrolling((Object)null);
+				setScrolling(SCROLLING_EDEFAULT);
 				return;
 			case HtmlPackage.FRAME__NORESIZE:
-				setNoresize((Object)null);
+				setNoresize(NORESIZE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -329,17 +389,17 @@ public class FRAMEImpl extends MinimalEObjectImpl.Container implements FRAME {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FRAME__SRC:
-				return src != null;
+				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
 			case HtmlPackage.FRAME__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case HtmlPackage.FRAME__MARGINWIDTH:
-				return marginwidth != null;
+				return MARGINWIDTH_EDEFAULT == null ? marginwidth != null : !MARGINWIDTH_EDEFAULT.equals(marginwidth);
 			case HtmlPackage.FRAME__MARGINHEIGHT:
-				return marginheight != null;
+				return MARGINHEIGHT_EDEFAULT == null ? marginheight != null : !MARGINHEIGHT_EDEFAULT.equals(marginheight);
 			case HtmlPackage.FRAME__SCROLLING:
-				return scrolling != null;
+				return SCROLLING_EDEFAULT == null ? scrolling != null : !SCROLLING_EDEFAULT.equals(scrolling);
 			case HtmlPackage.FRAME__NORESIZE:
-				return noresize != null;
+				return NORESIZE_EDEFAULT == null ? noresize != null : !NORESIZE_EDEFAULT.equals(noresize);
 		}
 		return super.eIsSet(featureID);
 	}

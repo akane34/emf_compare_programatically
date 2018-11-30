@@ -27,6 +27,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEElement {
 	/**
+	 * The default value of the '{@link #getBgcolor() <em>Bgcolor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBgcolor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BGCOLOR_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getBgcolor() <em>Bgcolor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,7 +44,17 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * @generated
 	 * @ordered
 	 */
-	protected Object bgcolor;
+	protected String bgcolor = BGCOLOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBackground() <em>Background</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackground()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BACKGROUND_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBackground() <em>Background</em>}' attribute.
@@ -44,7 +64,7 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * @generated
 	 * @ordered
 	 */
-	protected Object background;
+	protected String background = BACKGROUND_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +90,7 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBgcolor() {
+	public String getBgcolor() {
 		return bgcolor;
 	}
 
@@ -79,8 +99,8 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBgcolor(Object newBgcolor) {
-		Object oldBgcolor = bgcolor;
+	public void setBgcolor(String newBgcolor) {
+		String oldBgcolor = bgcolor;
 		bgcolor = newBgcolor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE_ELEMENT__BGCOLOR, oldBgcolor, bgcolor));
@@ -91,7 +111,7 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBackground() {
+	public String getBackground() {
 		return background;
 	}
 
@@ -100,8 +120,8 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBackground(Object newBackground) {
-		Object oldBackground = background;
+	public void setBackground(String newBackground) {
+		String oldBackground = background;
 		background = newBackground;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TABLE_ELEMENT__BACKGROUND, oldBackground, background));
@@ -132,10 +152,10 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.TABLE_ELEMENT__BGCOLOR:
-				setBgcolor(newValue);
+				setBgcolor((String)newValue);
 				return;
 			case HtmlPackage.TABLE_ELEMENT__BACKGROUND:
-				setBackground(newValue);
+				setBackground((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -150,10 +170,10 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TABLE_ELEMENT__BGCOLOR:
-				setBgcolor((Object)null);
+				setBgcolor(BGCOLOR_EDEFAULT);
 				return;
 			case HtmlPackage.TABLE_ELEMENT__BACKGROUND:
-				setBackground((Object)null);
+				setBackground(BACKGROUND_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -168,9 +188,9 @@ public abstract class TABLEElementImpl extends BODYElementImpl implements TABLEE
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TABLE_ELEMENT__BGCOLOR:
-				return bgcolor != null;
+				return BGCOLOR_EDEFAULT == null ? bgcolor != null : !BGCOLOR_EDEFAULT.equals(bgcolor);
 			case HtmlPackage.TABLE_ELEMENT__BACKGROUND:
-				return background != null;
+				return BACKGROUND_EDEFAULT == null ? background != null : !BACKGROUND_EDEFAULT.equals(background);
 		}
 		return super.eIsSet(featureID);
 	}

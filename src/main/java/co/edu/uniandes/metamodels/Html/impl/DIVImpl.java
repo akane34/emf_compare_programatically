@@ -26,6 +26,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class DIVImpl extends BODYElementImpl implements DIV {
 	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,7 +43,7 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +69,7 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -68,8 +78,8 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.DIV__ALIGN, oldAlign, align));
@@ -98,7 +108,7 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.DIV__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -113,7 +123,7 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.DIV__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -128,7 +138,7 @@ public class DIVImpl extends BODYElementImpl implements DIV {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.DIV__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 		}
 		return super.eIsSet(featureID);
 	}

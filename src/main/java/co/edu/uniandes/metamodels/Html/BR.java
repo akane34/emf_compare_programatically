@@ -29,12 +29,12 @@ public interface BR extends BODYElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Clear</em>' attribute.
-	 * @see #setClear(Object)
+	 * @see #setClear(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getBR_Clear()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getClear();
+	String getClear();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.BR#getClear <em>Clear</em>}' attribute.
@@ -44,6 +44,6 @@ public interface BR extends BODYElement {
 	 * @see #getClear()
 	 * @generated
 	 */
-	void setClear(Object value);
+	void setClear(String value);
 
 } // BR

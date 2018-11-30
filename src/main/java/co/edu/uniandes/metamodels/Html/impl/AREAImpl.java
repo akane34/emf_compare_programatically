@@ -28,6 +28,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class AREAImpl extends BODYElementImpl implements AREA {
 	/**
+	 * The default value of the '{@link #getShape() <em>Shape</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShape()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SHAPE_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getShape() <em>Shape</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,7 +45,17 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object shape;
+	protected String shape = SHAPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCoords() <em>Coords</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoords()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COORDS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCoords() <em>Coords</em>}' attribute.
@@ -45,7 +65,17 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object coords;
+	protected String coords = COORDS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAhref()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AHREF_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAhref() <em>Ahref</em>}' attribute.
@@ -55,7 +85,7 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object ahref;
+	protected String ahref = AHREF_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,7 +111,7 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getShape() {
+	public String getShape() {
 		return shape;
 	}
 
@@ -90,8 +120,8 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setShape(Object newShape) {
-		Object oldShape = shape;
+	public void setShape(String newShape) {
+		String oldShape = shape;
 		shape = newShape;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.AREA__SHAPE, oldShape, shape));
@@ -102,7 +132,7 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getCoords() {
+	public String getCoords() {
 		return coords;
 	}
 
@@ -111,8 +141,8 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCoords(Object newCoords) {
-		Object oldCoords = coords;
+	public void setCoords(String newCoords) {
+		String oldCoords = coords;
 		coords = newCoords;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.AREA__COORDS, oldCoords, coords));
@@ -123,7 +153,7 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAhref() {
+	public String getAhref() {
 		return ahref;
 	}
 
@@ -132,8 +162,8 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAhref(Object newAhref) {
-		Object oldAhref = ahref;
+	public void setAhref(String newAhref) {
+		String oldAhref = ahref;
 		ahref = newAhref;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.AREA__AHREF, oldAhref, ahref));
@@ -166,13 +196,13 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.AREA__SHAPE:
-				setShape(newValue);
+				setShape((String)newValue);
 				return;
 			case HtmlPackage.AREA__COORDS:
-				setCoords(newValue);
+				setCoords((String)newValue);
 				return;
 			case HtmlPackage.AREA__AHREF:
-				setAhref(newValue);
+				setAhref((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,13 +217,13 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.AREA__SHAPE:
-				setShape((Object)null);
+				setShape(SHAPE_EDEFAULT);
 				return;
 			case HtmlPackage.AREA__COORDS:
-				setCoords((Object)null);
+				setCoords(COORDS_EDEFAULT);
 				return;
 			case HtmlPackage.AREA__AHREF:
-				setAhref((Object)null);
+				setAhref(AHREF_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -208,11 +238,11 @@ public class AREAImpl extends BODYElementImpl implements AREA {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.AREA__SHAPE:
-				return shape != null;
+				return SHAPE_EDEFAULT == null ? shape != null : !SHAPE_EDEFAULT.equals(shape);
 			case HtmlPackage.AREA__COORDS:
-				return coords != null;
+				return COORDS_EDEFAULT == null ? coords != null : !COORDS_EDEFAULT.equals(coords);
 			case HtmlPackage.AREA__AHREF:
-				return ahref != null;
+				return AHREF_EDEFAULT == null ? ahref != null : !AHREF_EDEFAULT.equals(ahref);
 		}
 		return super.eIsSet(featureID);
 	}

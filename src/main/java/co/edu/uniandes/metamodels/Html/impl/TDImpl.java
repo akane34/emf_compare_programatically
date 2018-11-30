@@ -34,6 +34,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TDImpl extends TABLEElementImpl implements TD {
 	/**
+	 * The default value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColspan()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLSPAN_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -41,7 +51,17 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object colspan;
+	protected String colspan = COLSPAN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRowspan() <em>Rowspan</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRowspan()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ROWSPAN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRowspan() <em>Rowspan</em>}' attribute.
@@ -51,7 +71,17 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object rowspan;
+	protected String rowspan = ROWSPAN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValign() <em>Valign</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValign() <em>Valign</em>}' attribute.
@@ -61,7 +91,17 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object valign;
+	protected String valign = VALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
@@ -71,7 +111,17 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object align;
+	protected String align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -81,7 +131,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width;
+	protected String width = WIDTH_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTr() <em>Tr</em>}' reference.
@@ -117,7 +167,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getColspan() {
+	public String getColspan() {
 		return colspan;
 	}
 
@@ -126,8 +176,8 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColspan(Object newColspan) {
-		Object oldColspan = colspan;
+	public void setColspan(String newColspan) {
+		String oldColspan = colspan;
 		colspan = newColspan;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TD__COLSPAN, oldColspan, colspan));
@@ -138,7 +188,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getRowspan() {
+	public String getRowspan() {
 		return rowspan;
 	}
 
@@ -147,8 +197,8 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRowspan(Object newRowspan) {
-		Object oldRowspan = rowspan;
+	public void setRowspan(String newRowspan) {
+		String oldRowspan = rowspan;
 		rowspan = newRowspan;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TD__ROWSPAN, oldRowspan, rowspan));
@@ -159,7 +209,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getValign() {
+	public String getValign() {
 		return valign;
 	}
 
@@ -168,8 +218,8 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValign(Object newValign) {
-		Object oldValign = valign;
+	public void setValign(String newValign) {
+		String oldValign = valign;
 		valign = newValign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TD__VALIGN, oldValign, valign));
@@ -180,7 +230,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getAlign() {
+	public String getAlign() {
 		return align;
 	}
 
@@ -189,8 +239,8 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(Object newAlign) {
-		Object oldAlign = align;
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TD__ALIGN, oldAlign, align));
@@ -201,7 +251,7 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public String getWidth() {
 		return width;
 	}
 
@@ -210,8 +260,8 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(String newWidth) {
+		String oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TD__WIDTH, oldWidth, width));
@@ -341,19 +391,19 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.TD__COLSPAN:
-				setColspan(newValue);
+				setColspan((String)newValue);
 				return;
 			case HtmlPackage.TD__ROWSPAN:
-				setRowspan(newValue);
+				setRowspan((String)newValue);
 				return;
 			case HtmlPackage.TD__VALIGN:
-				setValign(newValue);
+				setValign((String)newValue);
 				return;
 			case HtmlPackage.TD__ALIGN:
-				setAlign(newValue);
+				setAlign((String)newValue);
 				return;
 			case HtmlPackage.TD__WIDTH:
-				setWidth(newValue);
+				setWidth((String)newValue);
 				return;
 			case HtmlPackage.TD__TR:
 				setTr((TR)newValue);
@@ -371,19 +421,19 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TD__COLSPAN:
-				setColspan((Object)null);
+				setColspan(COLSPAN_EDEFAULT);
 				return;
 			case HtmlPackage.TD__ROWSPAN:
-				setRowspan((Object)null);
+				setRowspan(ROWSPAN_EDEFAULT);
 				return;
 			case HtmlPackage.TD__VALIGN:
-				setValign((Object)null);
+				setValign(VALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.TD__ALIGN:
-				setAlign((Object)null);
+				setAlign(ALIGN_EDEFAULT);
 				return;
 			case HtmlPackage.TD__WIDTH:
-				setWidth((Object)null);
+				setWidth(WIDTH_EDEFAULT);
 				return;
 			case HtmlPackage.TD__TR:
 				setTr((TR)null);
@@ -401,15 +451,15 @@ public class TDImpl extends TABLEElementImpl implements TD {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TD__COLSPAN:
-				return colspan != null;
+				return COLSPAN_EDEFAULT == null ? colspan != null : !COLSPAN_EDEFAULT.equals(colspan);
 			case HtmlPackage.TD__ROWSPAN:
-				return rowspan != null;
+				return ROWSPAN_EDEFAULT == null ? rowspan != null : !ROWSPAN_EDEFAULT.equals(rowspan);
 			case HtmlPackage.TD__VALIGN:
-				return valign != null;
+				return VALIGN_EDEFAULT == null ? valign != null : !VALIGN_EDEFAULT.equals(valign);
 			case HtmlPackage.TD__ALIGN:
-				return align != null;
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
 			case HtmlPackage.TD__WIDTH:
-				return width != null;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case HtmlPackage.TD__TR:
 				return tr != null;
 		}

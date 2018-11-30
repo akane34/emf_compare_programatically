@@ -14,6 +14,6 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface OPTIONValidator {
 	boolean validate();
 
-	boolean validateSelected(Object value);
-	boolean validateOptionValue(Object value);
+	boolean validateSelected(String value);
+	boolean validateOptionValue(String value);
 }

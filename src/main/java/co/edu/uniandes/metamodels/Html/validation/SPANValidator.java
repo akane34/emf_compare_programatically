@@ -14,5 +14,5 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface SPANValidator {
 	boolean validate();
 
-	boolean validateStyle(Object value);
+	boolean validateStyle(String value);
 }

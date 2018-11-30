@@ -29,6 +29,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAREA {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +46,17 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name;
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRows() <em>Rows</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRows()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ROWS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRows() <em>Rows</em>}' attribute.
@@ -46,7 +66,17 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * @generated
 	 * @ordered
 	 */
-	protected Object rows;
+	protected String rows = ROWS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCols() <em>Cols</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCols()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCols() <em>Cols</em>}' attribute.
@@ -56,7 +86,7 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * @generated
 	 * @ordered
 	 */
-	protected Object cols;
+	protected String cols = COLS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,7 +112,7 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -91,8 +121,8 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TEXTAREA__NAME, oldName, name));
@@ -103,7 +133,7 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getRows() {
+	public String getRows() {
 		return rows;
 	}
 
@@ -112,8 +142,8 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRows(Object newRows) {
-		Object oldRows = rows;
+	public void setRows(String newRows) {
+		String oldRows = rows;
 		rows = newRows;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TEXTAREA__ROWS, oldRows, rows));
@@ -124,7 +154,7 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getCols() {
+	public String getCols() {
 		return cols;
 	}
 
@@ -133,8 +163,8 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCols(Object newCols) {
-		Object oldCols = cols;
+	public void setCols(String newCols) {
+		String oldCols = cols;
 		cols = newCols;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.TEXTAREA__COLS, oldCols, cols));
@@ -167,13 +197,13 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.TEXTAREA__NAME:
-				setName(newValue);
+				setName((String)newValue);
 				return;
 			case HtmlPackage.TEXTAREA__ROWS:
-				setRows(newValue);
+				setRows((String)newValue);
 				return;
 			case HtmlPackage.TEXTAREA__COLS:
-				setCols(newValue);
+				setCols((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,13 +218,13 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TEXTAREA__NAME:
-				setName((Object)null);
+				setName(NAME_EDEFAULT);
 				return;
 			case HtmlPackage.TEXTAREA__ROWS:
-				setRows((Object)null);
+				setRows(ROWS_EDEFAULT);
 				return;
 			case HtmlPackage.TEXTAREA__COLS:
-				setCols((Object)null);
+				setCols(COLS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -209,11 +239,11 @@ public class TEXTAREAImpl extends MinimalEObjectImpl.Container implements TEXTAR
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.TEXTAREA__NAME:
-				return name != null;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case HtmlPackage.TEXTAREA__ROWS:
-				return rows != null;
+				return ROWS_EDEFAULT == null ? rows != null : !ROWS_EDEFAULT.equals(rows);
 			case HtmlPackage.TEXTAREA__COLS:
-				return cols != null;
+				return COLS_EDEFAULT == null ? cols != null : !COLS_EDEFAULT.equals(cols);
 		}
 		return super.eIsSet(featureID);
 	}

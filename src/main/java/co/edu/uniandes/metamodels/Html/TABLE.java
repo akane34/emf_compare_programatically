@@ -34,12 +34,12 @@ public interface TABLE extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Border</em>' attribute.
-	 * @see #setBorder(Object)
+	 * @see #setBorder(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Border()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getBorder();
+	String getBorder();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLE#getBorder <em>Border</em>}' attribute.
@@ -49,7 +49,7 @@ public interface TABLE extends TABLEElement {
 	 * @see #getBorder()
 	 * @generated
 	 */
-	void setBorder(Object value);
+	void setBorder(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -60,12 +60,12 @@ public interface TABLE extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Object)
+	 * @see #setWidth(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Width()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLE#getWidth <em>Width</em>}' attribute.
@@ -75,7 +75,7 @@ public interface TABLE extends TABLEElement {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Cellspacing</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface TABLE extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cellspacing</em>' attribute.
-	 * @see #setCellspacing(Object)
+	 * @see #setCellspacing(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Cellspacing()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getCellspacing();
+	String getCellspacing();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLE#getCellspacing <em>Cellspacing</em>}' attribute.
@@ -101,7 +101,7 @@ public interface TABLE extends TABLEElement {
 	 * @see #getCellspacing()
 	 * @generated
 	 */
-	void setCellspacing(Object value);
+	void setCellspacing(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Cellpadding</b></em>' attribute.
@@ -112,12 +112,12 @@ public interface TABLE extends TABLEElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cellpadding</em>' attribute.
-	 * @see #setCellpadding(Object)
+	 * @see #setCellpadding(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getTABLE_Cellpadding()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getCellpadding();
+	String getCellpadding();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.TABLE#getCellpadding <em>Cellpadding</em>}' attribute.
@@ -127,7 +127,7 @@ public interface TABLE extends TABLEElement {
 	 * @see #getCellpadding()
 	 * @generated
 	 */
-	void setCellpadding(Object value);
+	void setCellpadding(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Trs</b></em>' reference list.

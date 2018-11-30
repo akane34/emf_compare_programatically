@@ -31,6 +31,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMESET {
 	/**
+	 * The default value of the '{@link #getRows() <em>Rows</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRows()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ROWS_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getRows() <em>Rows</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,7 +48,17 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * @generated
 	 * @ordered
 	 */
-	protected Object rows;
+	protected String rows = ROWS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCols() <em>Cols</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCols()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COLS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCols() <em>Cols</em>}' attribute.
@@ -48,7 +68,17 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * @generated
 	 * @ordered
 	 */
-	protected Object cols;
+	protected String cols = COLS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFramespacing() <em>Framespacing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFramespacing()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FRAMESPACING_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getFramespacing() <em>Framespacing</em>}' attribute.
@@ -58,7 +88,17 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * @generated
 	 * @ordered
 	 */
-	protected Object framespacing;
+	protected String framespacing = FRAMESPACING_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFrameborder() <em>Frameborder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFrameborder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FRAMEBORDER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getFrameborder() <em>Frameborder</em>}' attribute.
@@ -68,7 +108,17 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * @generated
 	 * @ordered
 	 */
-	protected Object frameborder;
+	protected String frameborder = FRAMEBORDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBorder() <em>Border</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BORDER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBorder() <em>Border</em>}' attribute.
@@ -78,7 +128,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * @generated
 	 * @ordered
 	 */
-	protected Object border;
+	protected String border = BORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,7 +154,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getRows() {
+	public String getRows() {
 		return rows;
 	}
 
@@ -113,8 +163,8 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRows(Object newRows) {
-		Object oldRows = rows;
+	public void setRows(String newRows) {
+		String oldRows = rows;
 		rows = newRows;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAMESET__ROWS, oldRows, rows));
@@ -125,7 +175,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getCols() {
+	public String getCols() {
 		return cols;
 	}
 
@@ -134,8 +184,8 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCols(Object newCols) {
-		Object oldCols = cols;
+	public void setCols(String newCols) {
+		String oldCols = cols;
 		cols = newCols;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAMESET__COLS, oldCols, cols));
@@ -146,7 +196,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getFramespacing() {
+	public String getFramespacing() {
 		return framespacing;
 	}
 
@@ -155,8 +205,8 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFramespacing(Object newFramespacing) {
-		Object oldFramespacing = framespacing;
+	public void setFramespacing(String newFramespacing) {
+		String oldFramespacing = framespacing;
 		framespacing = newFramespacing;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAMESET__FRAMESPACING, oldFramespacing, framespacing));
@@ -167,7 +217,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getFrameborder() {
+	public String getFrameborder() {
 		return frameborder;
 	}
 
@@ -176,8 +226,8 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrameborder(Object newFrameborder) {
-		Object oldFrameborder = frameborder;
+	public void setFrameborder(String newFrameborder) {
+		String oldFrameborder = frameborder;
 		frameborder = newFrameborder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAMESET__FRAMEBORDER, oldFrameborder, frameborder));
@@ -188,7 +238,7 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getBorder() {
+	public String getBorder() {
 		return border;
 	}
 
@@ -197,8 +247,8 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBorder(Object newBorder) {
-		Object oldBorder = border;
+	public void setBorder(String newBorder) {
+		String oldBorder = border;
 		border = newBorder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.FRAMESET__BORDER, oldBorder, border));
@@ -235,19 +285,19 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.FRAMESET__ROWS:
-				setRows(newValue);
+				setRows((String)newValue);
 				return;
 			case HtmlPackage.FRAMESET__COLS:
-				setCols(newValue);
+				setCols((String)newValue);
 				return;
 			case HtmlPackage.FRAMESET__FRAMESPACING:
-				setFramespacing(newValue);
+				setFramespacing((String)newValue);
 				return;
 			case HtmlPackage.FRAMESET__FRAMEBORDER:
-				setFrameborder(newValue);
+				setFrameborder((String)newValue);
 				return;
 			case HtmlPackage.FRAMESET__BORDER:
-				setBorder(newValue);
+				setBorder((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -262,19 +312,19 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FRAMESET__ROWS:
-				setRows((Object)null);
+				setRows(ROWS_EDEFAULT);
 				return;
 			case HtmlPackage.FRAMESET__COLS:
-				setCols((Object)null);
+				setCols(COLS_EDEFAULT);
 				return;
 			case HtmlPackage.FRAMESET__FRAMESPACING:
-				setFramespacing((Object)null);
+				setFramespacing(FRAMESPACING_EDEFAULT);
 				return;
 			case HtmlPackage.FRAMESET__FRAMEBORDER:
-				setFrameborder((Object)null);
+				setFrameborder(FRAMEBORDER_EDEFAULT);
 				return;
 			case HtmlPackage.FRAMESET__BORDER:
-				setBorder((Object)null);
+				setBorder(BORDER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -289,15 +339,15 @@ public class FRAMESETImpl extends MinimalEObjectImpl.Container implements FRAMES
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.FRAMESET__ROWS:
-				return rows != null;
+				return ROWS_EDEFAULT == null ? rows != null : !ROWS_EDEFAULT.equals(rows);
 			case HtmlPackage.FRAMESET__COLS:
-				return cols != null;
+				return COLS_EDEFAULT == null ? cols != null : !COLS_EDEFAULT.equals(cols);
 			case HtmlPackage.FRAMESET__FRAMESPACING:
-				return framespacing != null;
+				return FRAMESPACING_EDEFAULT == null ? framespacing != null : !FRAMESPACING_EDEFAULT.equals(framespacing);
 			case HtmlPackage.FRAMESET__FRAMEBORDER:
-				return frameborder != null;
+				return FRAMEBORDER_EDEFAULT == null ? frameborder != null : !FRAMEBORDER_EDEFAULT.equals(frameborder);
 			case HtmlPackage.FRAMESET__BORDER:
-				return border != null;
+				return BORDER_EDEFAULT == null ? border != null : !BORDER_EDEFAULT.equals(border);
 		}
 		return super.eIsSet(featureID);
 	}

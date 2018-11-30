@@ -2328,9 +2328,6 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		PrimitiveTypesPackage thePrimitiveTypesPackage = (PrimitiveTypesPackage)EPackage.Registry.INSTANCE.getEPackage(PrimitiveTypesPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -2385,7 +2382,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEReference(getHTML_Body(), this.getBODY(), this.getBODY_Html(), "body", null, 1, 1, co.edu.uniandes.metamodels.Html.HTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(htmlElementEClass, HTMLElement.class, "HTMLElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHTMLElement_Value(), thePrimitiveTypesPackage.getString(), "value", null, 1, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHTMLElement_Value(), ecorePackage.getEString(), "value", null, 1, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHTMLElement_Children(), this.getHTMLElement(), this.getHTMLElement_Parent(), "children", null, 0, -1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getHTMLElement_Parent(), this.getHTMLElement(), this.getHTMLElement_Children(), "parent", null, 1, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHTMLElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, HTMLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2400,19 +2397,19 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEReference(getHEADElement_Head(), this.getHEAD(), this.getHEAD_HeadElements(), "head", null, 1, 1, HEADElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(linkEClass, co.edu.uniandes.metamodels.Html.LINK.class, "LINK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLINK_Rel(), thePrimitiveTypesPackage.getString(), "rel", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getLINK_Ahref(), thePrimitiveTypesPackage.getString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getLINK_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLINK_Rel(), ecorePackage.getEString(), "rel", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLINK_Ahref(), ecorePackage.getEString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLINK_Type(), ecorePackage.getEString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.LINK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(titleEClass, co.edu.uniandes.metamodels.Html.TITLE.class, "TITLE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(bodyEClass, co.edu.uniandes.metamodels.Html.BODY.class, "BODY", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBODY_Background(), thePrimitiveTypesPackage.getString(), "background", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBODY_Bgcolor(), thePrimitiveTypesPackage.getString(), "bgcolor", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBODY_Text(), thePrimitiveTypesPackage.getString(), "text", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBODY_Link(), thePrimitiveTypesPackage.getString(), "link", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBODY_Alink(), thePrimitiveTypesPackage.getString(), "alink", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBODY_Vlink(), thePrimitiveTypesPackage.getString(), "vlink", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Background(), ecorePackage.getEString(), "background", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Bgcolor(), ecorePackage.getEString(), "bgcolor", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Text(), ecorePackage.getEString(), "text", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Link(), ecorePackage.getEString(), "link", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Alink(), ecorePackage.getEString(), "alink", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBODY_Vlink(), ecorePackage.getEString(), "vlink", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBODY_BodyElements(), this.getBODYElement(), this.getBODYElement_Body(), "bodyElements", null, 0, -1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBODY_Html(), this.getHTML(), this.getHTML_Body(), "html", null, 1, 1, co.edu.uniandes.metamodels.Html.BODY.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2450,122 +2447,122 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEClass(strikeEClass, co.edu.uniandes.metamodels.Html.STRIKE.class, "STRIKE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fontEClass, co.edu.uniandes.metamodels.Html.FONT.class, "FONT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFONT_Color(), thePrimitiveTypesPackage.getString(), "color", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFONT_Face(), thePrimitiveTypesPackage.getString(), "face", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFONT_Size(), thePrimitiveTypesPackage.getString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFONT_Color(), ecorePackage.getEString(), "color", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFONT_Face(), ecorePackage.getEString(), "face", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFONT_Size(), ecorePackage.getEString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.FONT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(imgEClass, co.edu.uniandes.metamodels.Html.IMG.class, "IMG", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIMG_Src(), thePrimitiveTypesPackage.getString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Width(), thePrimitiveTypesPackage.getString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Height(), thePrimitiveTypesPackage.getString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Alt(), thePrimitiveTypesPackage.getString(), "alt", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Vspace(), thePrimitiveTypesPackage.getString(), "vspace", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Hspace(), thePrimitiveTypesPackage.getString(), "hspace", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Ismap(), thePrimitiveTypesPackage.getString(), "ismap", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Usemap(), thePrimitiveTypesPackage.getString(), "usemap", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIMG_Border(), thePrimitiveTypesPackage.getString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Src(), ecorePackage.getEString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Width(), ecorePackage.getEString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Height(), ecorePackage.getEString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Alt(), ecorePackage.getEString(), "alt", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Vspace(), ecorePackage.getEString(), "vspace", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Hspace(), ecorePackage.getEString(), "hspace", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Ismap(), ecorePackage.getEString(), "ismap", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Usemap(), ecorePackage.getEString(), "usemap", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIMG_Border(), ecorePackage.getEString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.IMG.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(brEClass, co.edu.uniandes.metamodels.Html.BR.class, "BR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBR_Clear(), thePrimitiveTypesPackage.getString(), "clear", null, 1, 1, co.edu.uniandes.metamodels.Html.BR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBR_Clear(), ecorePackage.getEString(), "clear", null, 1, 1, co.edu.uniandes.metamodels.Html.BR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(mapEClass, co.edu.uniandes.metamodels.Html.MAP.class, "MAP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(areaEClass, co.edu.uniandes.metamodels.Html.AREA.class, "AREA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAREA_Shape(), thePrimitiveTypesPackage.getString(), "shape", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAREA_Coords(), thePrimitiveTypesPackage.getString(), "coords", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAREA_Ahref(), thePrimitiveTypesPackage.getString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAREA_Shape(), ecorePackage.getEString(), "shape", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAREA_Coords(), ecorePackage.getEString(), "coords", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAREA_Ahref(), ecorePackage.getEString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.AREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(styleEClass, co.edu.uniandes.metamodels.Html.STYLE.class, "STYLE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(embedEClass, co.edu.uniandes.metamodels.Html.EMBED.class, "EMBED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEMBED_Src(), thePrimitiveTypesPackage.getString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Width(), thePrimitiveTypesPackage.getString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Height(), thePrimitiveTypesPackage.getString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Vspace(), thePrimitiveTypesPackage.getString(), "vspace", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Hspace(), thePrimitiveTypesPackage.getString(), "hspace", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEMBED_Border(), thePrimitiveTypesPackage.getString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Src(), ecorePackage.getEString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Width(), ecorePackage.getEString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Height(), ecorePackage.getEString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Vspace(), ecorePackage.getEString(), "vspace", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Hspace(), ecorePackage.getEString(), "hspace", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEMBED_Border(), ecorePackage.getEString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.EMBED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(noembedEClass, co.edu.uniandes.metamodels.Html.NOEMBED.class, "NOEMBED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(spanEClass, co.edu.uniandes.metamodels.Html.SPAN.class, "SPAN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSPAN_Style(), thePrimitiveTypesPackage.getString(), "style", null, 1, 1, co.edu.uniandes.metamodels.Html.SPAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSPAN_Style(), ecorePackage.getEString(), "style", null, 1, 1, co.edu.uniandes.metamodels.Html.SPAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(aEClass, co.edu.uniandes.metamodels.Html.A.class, "A", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getA_Ahref(), thePrimitiveTypesPackage.getString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getA_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getA_Ahref(), ecorePackage.getEString(), "ahref", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getA_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.A.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(divEClass, co.edu.uniandes.metamodels.Html.DIV.class, "DIV", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDIV_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.DIV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDIV_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.DIV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(pEClass, co.edu.uniandes.metamodels.Html.P.class, "P", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tableElementEClass, TABLEElement.class, "TABLEElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTABLEElement_Bgcolor(), thePrimitiveTypesPackage.getString(), "bgcolor", null, 1, 1, TABLEElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTABLEElement_Background(), thePrimitiveTypesPackage.getString(), "background", null, 1, 1, TABLEElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLEElement_Bgcolor(), ecorePackage.getEString(), "bgcolor", null, 1, 1, TABLEElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLEElement_Background(), ecorePackage.getEString(), "background", null, 1, 1, TABLEElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(tableEClass, co.edu.uniandes.metamodels.Html.TABLE.class, "TABLE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTABLE_Border(), thePrimitiveTypesPackage.getString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTABLE_Width(), thePrimitiveTypesPackage.getString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTABLE_Cellspacing(), thePrimitiveTypesPackage.getString(), "cellspacing", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTABLE_Cellpadding(), thePrimitiveTypesPackage.getString(), "cellpadding", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLE_Border(), ecorePackage.getEString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLE_Width(), ecorePackage.getEString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLE_Cellspacing(), ecorePackage.getEString(), "cellspacing", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTABLE_Cellpadding(), ecorePackage.getEString(), "cellpadding", null, 1, 1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTABLE_Trs(), this.getTR(), this.getTR_Table(), "trs", null, 0, -1, co.edu.uniandes.metamodels.Html.TABLE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(trEClass, co.edu.uniandes.metamodels.Html.TR.class, "TR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTR_Valign(), thePrimitiveTypesPackage.getString(), "valign", null, 1, 1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTR_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTR_Valign(), ecorePackage.getEString(), "valign", null, 1, 1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTR_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTR_Table(), this.getTABLE(), this.getTABLE_Trs(), "table", null, 1, 1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTR_Tds(), this.getTD(), this.getTD_Tr(), "tds", null, 0, -1, co.edu.uniandes.metamodels.Html.TR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(tdEClass, co.edu.uniandes.metamodels.Html.TD.class, "TD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTD_Colspan(), thePrimitiveTypesPackage.getString(), "colspan", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTD_Rowspan(), thePrimitiveTypesPackage.getString(), "rowspan", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTD_Valign(), thePrimitiveTypesPackage.getString(), "valign", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTD_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTD_Width(), thePrimitiveTypesPackage.getString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTD_Colspan(), ecorePackage.getEString(), "colspan", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTD_Rowspan(), ecorePackage.getEString(), "rowspan", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTD_Valign(), ecorePackage.getEString(), "valign", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTD_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTD_Width(), ecorePackage.getEString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTD_Tr(), this.getTR(), this.getTR_Tds(), "tr", null, 1, 1, co.edu.uniandes.metamodels.Html.TD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(thEClass, co.edu.uniandes.metamodels.Html.TH.class, "TH", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(formEClass, co.edu.uniandes.metamodels.Html.FORM.class, "FORM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFORM_Action(), thePrimitiveTypesPackage.getString(), "action", null, 1, 1, co.edu.uniandes.metamodels.Html.FORM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFORM_Method(), thePrimitiveTypesPackage.getString(), "method", null, 1, 1, co.edu.uniandes.metamodels.Html.FORM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFORM_Action(), ecorePackage.getEString(), "action", null, 1, 1, co.edu.uniandes.metamodels.Html.FORM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFORM_Method(), ecorePackage.getEString(), "method", null, 1, 1, co.edu.uniandes.metamodels.Html.FORM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(inputEClass, co.edu.uniandes.metamodels.Html.INPUT.class, "INPUT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getINPUT_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Maxlength(), thePrimitiveTypesPackage.getString(), "maxlength", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Size(), thePrimitiveTypesPackage.getString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Checked(), thePrimitiveTypesPackage.getString(), "checked", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Src(), thePrimitiveTypesPackage.getString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_InputValue(), thePrimitiveTypesPackage.getString(), "inputValue", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getINPUT_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Maxlength(), ecorePackage.getEString(), "maxlength", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Size(), ecorePackage.getEString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Checked(), ecorePackage.getEString(), "checked", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Src(), ecorePackage.getEString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_InputValue(), ecorePackage.getEString(), "inputValue", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getINPUT_Type(), ecorePackage.getEString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.INPUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(textareaEClass, co.edu.uniandes.metamodels.Html.TEXTAREA.class, "TEXTAREA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTEXTAREA_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTEXTAREA_Rows(), thePrimitiveTypesPackage.getString(), "rows", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTEXTAREA_Cols(), thePrimitiveTypesPackage.getString(), "cols", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTEXTAREA_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTEXTAREA_Rows(), ecorePackage.getEString(), "rows", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTEXTAREA_Cols(), ecorePackage.getEString(), "cols", null, 1, 1, co.edu.uniandes.metamodels.Html.TEXTAREA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(selectEClass, co.edu.uniandes.metamodels.Html.SELECT.class, "SELECT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSELECT_Multiple(), thePrimitiveTypesPackage.getString(), "multiple", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSELECT_Size(), thePrimitiveTypesPackage.getString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSELECT_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSELECT_Multiple(), ecorePackage.getEString(), "multiple", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSELECT_Size(), ecorePackage.getEString(), "size", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSELECT_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.SELECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(optionEClass, co.edu.uniandes.metamodels.Html.OPTION.class, "OPTION", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOPTION_Selected(), thePrimitiveTypesPackage.getString(), "selected", null, 1, 1, co.edu.uniandes.metamodels.Html.OPTION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getOPTION_OptionValue(), thePrimitiveTypesPackage.getString(), "optionValue", null, 1, 1, co.edu.uniandes.metamodels.Html.OPTION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOPTION_Selected(), ecorePackage.getEString(), "selected", null, 1, 1, co.edu.uniandes.metamodels.Html.OPTION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOPTION_OptionValue(), ecorePackage.getEString(), "optionValue", null, 1, 1, co.edu.uniandes.metamodels.Html.OPTION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(listElementEClass, ListElement.class, "ListElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getListElement_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, ListElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getListElement_Type(), ecorePackage.getEString(), "type", null, 1, 1, ListElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(olEClass, co.edu.uniandes.metamodels.Html.OL.class, "OL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOL_Start(), thePrimitiveTypesPackage.getString(), "start", null, 1, 1, co.edu.uniandes.metamodels.Html.OL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOL_Start(), ecorePackage.getEString(), "start", null, 1, 1, co.edu.uniandes.metamodels.Html.OL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(ulEClass, co.edu.uniandes.metamodels.Html.UL.class, "UL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(liEClass, co.edu.uniandes.metamodels.Html.LI.class, "LI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLI_LiValue(), thePrimitiveTypesPackage.getString(), "liValue", null, 1, 1, co.edu.uniandes.metamodels.Html.LI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLI_LiValue(), ecorePackage.getEString(), "liValue", null, 1, 1, co.edu.uniandes.metamodels.Html.LI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dlEClass, co.edu.uniandes.metamodels.Html.DL.class, "DL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2574,37 +2571,37 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEClass(ddEClass, co.edu.uniandes.metamodels.Html.DD.class, "DD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(appletEClass, co.edu.uniandes.metamodels.Html.APPLET.class, "APPLET", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAPPLET_Applet(), thePrimitiveTypesPackage.getString(), "applet", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAPPLET_Class(), thePrimitiveTypesPackage.getString(), "class", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAPPLET_Src(), thePrimitiveTypesPackage.getString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAPPLET_Align(), thePrimitiveTypesPackage.getString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAPPLET_Width(), thePrimitiveTypesPackage.getString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAPPLET_Height(), thePrimitiveTypesPackage.getString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Applet(), ecorePackage.getEString(), "applet", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Class(), ecorePackage.getEString(), "class", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Src(), ecorePackage.getEString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Align(), ecorePackage.getEString(), "align", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Width(), ecorePackage.getEString(), "width", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAPPLET_Height(), ecorePackage.getEString(), "height", null, 1, 1, co.edu.uniandes.metamodels.Html.APPLET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(paramEClass, co.edu.uniandes.metamodels.Html.PARAM.class, "PARAM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPARAM_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.PARAM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPARAM_ParamValue(), thePrimitiveTypesPackage.getString(), "paramValue", null, 1, 1, co.edu.uniandes.metamodels.Html.PARAM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPARAM_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.PARAM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPARAM_ParamValue(), ecorePackage.getEString(), "paramValue", null, 1, 1, co.edu.uniandes.metamodels.Html.PARAM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(objectEClass, co.edu.uniandes.metamodels.Html.OBJECT.class, "OBJECT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOBJECT_Classid(), thePrimitiveTypesPackage.getString(), "classid", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getOBJECT_Data(), thePrimitiveTypesPackage.getString(), "data", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getOBJECT_Type(), thePrimitiveTypesPackage.getString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getOBJECT_Standby(), thePrimitiveTypesPackage.getString(), "standby", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOBJECT_Classid(), ecorePackage.getEString(), "classid", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOBJECT_Data(), ecorePackage.getEString(), "data", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOBJECT_Type(), ecorePackage.getEString(), "type", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getOBJECT_Standby(), ecorePackage.getEString(), "standby", null, 1, 1, co.edu.uniandes.metamodels.Html.OBJECT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(framesetEClass, co.edu.uniandes.metamodels.Html.FRAMESET.class, "FRAMESET", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFRAMESET_Rows(), thePrimitiveTypesPackage.getString(), "rows", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAMESET_Cols(), thePrimitiveTypesPackage.getString(), "cols", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAMESET_Framespacing(), thePrimitiveTypesPackage.getString(), "framespacing", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAMESET_Frameborder(), thePrimitiveTypesPackage.getString(), "frameborder", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAMESET_Border(), thePrimitiveTypesPackage.getString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAMESET_Rows(), ecorePackage.getEString(), "rows", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAMESET_Cols(), ecorePackage.getEString(), "cols", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAMESET_Framespacing(), ecorePackage.getEString(), "framespacing", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAMESET_Frameborder(), ecorePackage.getEString(), "frameborder", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAMESET_Border(), ecorePackage.getEString(), "border", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAMESET.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(frameEClass, co.edu.uniandes.metamodels.Html.FRAME.class, "FRAME", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFRAME_Src(), thePrimitiveTypesPackage.getString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAME_Name(), thePrimitiveTypesPackage.getString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAME_Marginwidth(), thePrimitiveTypesPackage.getString(), "marginwidth", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAME_Marginheight(), thePrimitiveTypesPackage.getString(), "marginheight", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAME_Scrolling(), thePrimitiveTypesPackage.getString(), "scrolling", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFRAME_Noresize(), thePrimitiveTypesPackage.getString(), "noresize", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Src(), ecorePackage.getEString(), "src", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Name(), ecorePackage.getEString(), "name", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Marginwidth(), ecorePackage.getEString(), "marginwidth", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Marginheight(), ecorePackage.getEString(), "marginheight", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Scrolling(), ecorePackage.getEString(), "scrolling", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFRAME_Noresize(), ecorePackage.getEString(), "noresize", null, 1, 1, co.edu.uniandes.metamodels.Html.FRAME.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(noframeEClass, co.edu.uniandes.metamodels.Html.NOFRAME.class, "NOFRAME", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

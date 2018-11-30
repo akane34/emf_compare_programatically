@@ -92,7 +92,6 @@ public class DiffFactoryImpl extends EFactoryImpl implements DiffFactory {
 			case DiffPackage.ADD_RESTRICTION: return createAddRestriction();
 			case DiffPackage.PARAMETER_TYPE: return createParameterType();
 			case DiffPackage.RETURN_TYPE: return createReturnType();
-			case DiffPackage.SCHEMA: return createSchema();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -484,16 +483,6 @@ public class DiffFactoryImpl extends EFactoryImpl implements DiffFactory {
 	public ReturnType createReturnType() {
 		ReturnTypeImpl returnType = new ReturnTypeImpl();
 		return returnType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Schema createSchema() {
-		SchemaImpl schema = new SchemaImpl();
-		return schema;
 	}
 
 	/**

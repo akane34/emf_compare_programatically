@@ -14,9 +14,9 @@ package co.edu.uniandes.metamodels.Html.validation;
 public interface FRAMESETValidator {
 	boolean validate();
 
-	boolean validateRows(Object value);
-	boolean validateCols(Object value);
-	boolean validateFramespacing(Object value);
-	boolean validateFrameborder(Object value);
-	boolean validateBorder(Object value);
+	boolean validateRows(String value);
+	boolean validateCols(String value);
+	boolean validateFramespacing(String value);
+	boolean validateFrameborder(String value);
+	boolean validateBorder(String value);
 }

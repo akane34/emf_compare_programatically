@@ -29,12 +29,12 @@ public interface LI extends ListElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Li Value</em>' attribute.
-	 * @see #setLiValue(Object)
+	 * @see #setLiValue(String)
 	 * @see co.edu.uniandes.metamodels.Html.HtmlPackage#getLI_LiValue()
-	 * @model unique="false" dataType="co.edu.uniandes.metamodels.PrimitiveTypes.String" required="true" ordered="false"
+	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getLiValue();
+	String getLiValue();
 
 	/**
 	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Html.LI#getLiValue <em>Li Value</em>}' attribute.
@@ -44,6 +44,6 @@ public interface LI extends ListElement {
 	 * @see #getLiValue()
 	 * @generated
 	 */
-	void setLiValue(Object value);
+	void setLiValue(String value);
 
 } // LI

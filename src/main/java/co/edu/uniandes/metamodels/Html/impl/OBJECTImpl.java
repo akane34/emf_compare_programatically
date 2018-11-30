@@ -30,6 +30,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	/**
+	 * The default value of the '{@link #getClassid() <em>Classid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASSID_EDEFAULT = null;
+
+	/**
 	 * The cached value of the '{@link #getClassid() <em>Classid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,7 +47,17 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object classid;
+	protected String classid = CLASSID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DATA_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
@@ -47,7 +67,17 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object data;
+	protected String data = DATA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -57,7 +87,17 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object type;
+	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStandby() <em>Standby</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandby()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STANDBY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getStandby() <em>Standby</em>}' attribute.
@@ -67,7 +107,7 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object standby;
+	protected String standby = STANDBY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,7 +133,7 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getClassid() {
+	public String getClassid() {
 		return classid;
 	}
 
@@ -102,8 +142,8 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassid(Object newClassid) {
-		Object oldClassid = classid;
+	public void setClassid(String newClassid) {
+		String oldClassid = classid;
 		classid = newClassid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OBJECT__CLASSID, oldClassid, classid));
@@ -114,7 +154,7 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getData() {
+	public String getData() {
 		return data;
 	}
 
@@ -123,8 +163,8 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setData(Object newData) {
-		Object oldData = data;
+	public void setData(String newData) {
+		String oldData = data;
 		data = newData;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OBJECT__DATA, oldData, data));
@@ -135,7 +175,7 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -144,8 +184,8 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Object newType) {
-		Object oldType = type;
+	public void setType(String newType) {
+		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OBJECT__TYPE, oldType, type));
@@ -156,7 +196,7 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getStandby() {
+	public String getStandby() {
 		return standby;
 	}
 
@@ -165,8 +205,8 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStandby(Object newStandby) {
-		Object oldStandby = standby;
+	public void setStandby(String newStandby) {
+		String oldStandby = standby;
 		standby = newStandby;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HtmlPackage.OBJECT__STANDBY, oldStandby, standby));
@@ -201,16 +241,16 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
-				setClassid(newValue);
+				setClassid((String)newValue);
 				return;
 			case HtmlPackage.OBJECT__DATA:
-				setData(newValue);
+				setData((String)newValue);
 				return;
 			case HtmlPackage.OBJECT__TYPE:
-				setType(newValue);
+				setType((String)newValue);
 				return;
 			case HtmlPackage.OBJECT__STANDBY:
-				setStandby(newValue);
+				setStandby((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,16 +265,16 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
-				setClassid((Object)null);
+				setClassid(CLASSID_EDEFAULT);
 				return;
 			case HtmlPackage.OBJECT__DATA:
-				setData((Object)null);
+				setData(DATA_EDEFAULT);
 				return;
 			case HtmlPackage.OBJECT__TYPE:
-				setType((Object)null);
+				setType(TYPE_EDEFAULT);
 				return;
 			case HtmlPackage.OBJECT__STANDBY:
-				setStandby((Object)null);
+				setStandby(STANDBY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -249,13 +289,13 @@ public class OBJECTImpl extends MinimalEObjectImpl.Container implements OBJECT {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HtmlPackage.OBJECT__CLASSID:
-				return classid != null;
+				return CLASSID_EDEFAULT == null ? classid != null : !CLASSID_EDEFAULT.equals(classid);
 			case HtmlPackage.OBJECT__DATA:
-				return data != null;
+				return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
 			case HtmlPackage.OBJECT__TYPE:
-				return type != null;
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case HtmlPackage.OBJECT__STANDBY:
-				return standby != null;
+				return STANDBY_EDEFAULT == null ? standby != null : !STANDBY_EDEFAULT.equals(standby);
 		}
 		return super.eIsSet(featureID);
 	}
