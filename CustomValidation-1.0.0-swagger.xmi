@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="virtserver.swaggerhub.com" basePath="/castellanos/CustomValidation/1.0.0" definitions="//@schemas.0 //@schemas.1">
+    <info title="Simple Inventory API" description="This is a simple API" version="1.0.0">
+      <contact email="you@your-company.com"/>
+      <license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+    </info>
+    <schemes>https</schemes>
+    <schemes>http</schemes>
+    <paths relativePath="/updateAge">
+      <post parameters="//@paramters.0 //@paramters.1" summary="update  the user age" description="By passing new user age will be updated &#xA;" operationId="updaUserAge" responses="//@responses.0">
+        <tagReferences>user</tagReferences>
+        <consumes>application/json</consumes>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/updatePassword/{userId}">
+      <post parameters="//@paramters.2 //@paramters.3" summary="update user password" description="By passing a new password it will be updated&#xA;" operationId="updateUserPassword" responses="//@responses.1">
+        <tagReferences>user</tagReferences>
+        <consumes>application/json</consumes>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/updatePassword">
+      <post parameters="//@paramters.4 //@paramters.5" summary="update user password" description="By passing a new password it will be updated&#xA;" operationId="updateUserPassword2" responses="//@responses.2">
+        <tagReferences>user</tagReferences>
+        <consumes>application/json</consumes>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/settings">
+      <get parameters="//@paramters.6" summary="get all settings" description="get settings&#xA;" operationId="getSettings" responses="//@responses.3">
+        <tagReferences>admins</tagReferences>
+        <produces>application/xml</produces>
+      </get>
+    </paths>
+    <paths relativePath="/settings/{settingId}">
+      <get parameters="//@paramters.7" summary="get a setting" description="get setting&#xA;" operationId="getSetting" responses="//@responses.4">
+        <tagReferences>admins</tagReferences>
+        <consumes>application/json</consumes>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.8 //@paramters.9" summary="delete setting" description="Delete setting&#xA;" operationId="delete setting" responses="//@responses.5">
+        <tagReferences>user</tagReferences>
+        <consumes>application/json</consumes>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/user">
+      <get parameters="//@paramters.10" summary="get user" description="get user&#xA;" operationId="getUser" responses="//@responses.6">
+        <tagReferences>user</tagReferences>
+        <produces>application/xml</produces>
+      </get>
+      <post parameters="//@paramters.11" summary="save user" description="save user&#xA;" operationId="saveUser" responses="//@responses.7">
+        <tagReferences>user</tagReferences>
+        <consumes>application/xml</consumes>
+      </post>
+    </paths>
+    <tags name="admins" description="admin"/>
+    <tags name="user" description="user"/>
+  </api>
+  <paramters type="string" description="old age" name="ageOld" location="query"/>
+  <paramters type="string" description="new age" name="ageNew" location="query"/>
+  <paramters type="string" description="userId" name="userId" location="path" required="true"/>
+  <paramters type="string" description="new password" name="newPassword" location="query"/>
+  <paramters type="string" description="old password" name="oldPassword" location="query"/>
+  <paramters type="string" description="new password" name="agePassword" location="query"/>
+  <paramters type="integer" description="list top" maximum="100.0" minimum="5.0" default="10" name="top" location="query"/>
+  <paramters type="string" name="settingId" location="path" required="true"/>
+  <paramters type="string" name="settingId" location="path" required="true"/>
+  <paramters type="string" description="key setting" name="key" location="query"/>
+  <paramters type="string" name="nameUser" location="query" required="true"/>
+  <paramters schema="//@schemas.1" description="save user" name="user" location="body"/>
+  <schemas type="object" name="Setting" properties="//@schemas.2 //@schemas.3" declaringContext="//@api" required="//@schemas.2 //@schemas.3"/>
+  <schemas type="object" name="User" properties="//@schemas.4 //@schemas.5" declaringContext="//@api" required="//@schemas.4 //@schemas.5"/>
+  <schemas type="string" name="key" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="value" declaringContext="//@schemas.0"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.1"/>
+  <schemas type="string" name="age" declaringContext="//@schemas.1"/>
+  <schemas type="array" items="//@schemas.0"/>
+  <responses description="search results matching criteria" code="200"/>
+  <responses description="error 401" code="401"/>
+  <responses description="ok" code="200"/>
+  <responses schema="//@schemas.6" description="ok" code="200"/>
+  <responses schema="//@schemas.0" description="ok" code="200"/>
+  <responses description="ok" code="200"/>
+  <responses schema="//@schemas.1" description="ok" code="200"/>
+  <responses description="ok" code="200"/>
+</openapi:Root>

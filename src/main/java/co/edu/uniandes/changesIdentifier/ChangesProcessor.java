@@ -138,7 +138,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processIncreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, String oldVersion, List<Change> changes) {
+	public static void processIncreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, List<ChangeParameter> deleteParameters, String oldVersion, List<Change> changes) {
 		System.out.println("-------------------- processIncreaseNumberOfParameters");
 		int countAdded = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
@@ -153,7 +153,7 @@ public class ChangesProcessor {
 		    				countAdded++;
 		    		}
 		    		
-		    		if (countAdded == 1){
+		    		if (countAdded == 1 && !existInChangeParameterList(p,entry.getKey() ,deleteParameters)){
 		    			diffMetamodel.createIncreaseNumberOfParametersInstance(oldVersion, p, changes);
 		    			System.out.println(entry.getKey() + " " + p.getNewParameter().getName() + " Added");
 		    		}
@@ -162,7 +162,25 @@ public class ChangesProcessor {
 		}				
 	}
 
-	public static void processDecreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, String oldVersion, List<Change> changes) {
+	private static boolean existInChangeParameterList(ChangeParameter p, String keyMap ,List<ChangeParameter> changeParameters) {
+		boolean exist = false;
+		for(ChangeParameter changeParameter:changeParameters) {
+			//the same path and parameter name
+			if(p.getPath().equals(changeParameter.getPath()) && p.getNewParameter().getName().equals(changeParameter.getNewParameter().getName())){
+				for(OperationWrapper operation : changeParameter.getOperations()) {
+					//belongs the same method
+					if(keyMap.contains(operation.getMethod())){
+						exist = true;
+						break;
+					}
+				}
+				if(exist) break;
+			}
+		}
+		return exist;
+	}
+
+	public static void processDecreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations,List<ChangeParameter> addParameters, String oldVersion, List<Change> changes) {
 		System.out.println("-------------------- processDecreaseNumberOfParameters");
 		int countDeleted = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
@@ -177,7 +195,7 @@ public class ChangesProcessor {
 		    				countDeleted++;
 		    		}
 		    		
-		    		if (countDeleted == 1){
+		    		if (countDeleted == 1 && !existInChangeParameterList(p,entry.getKey() ,addParameters)){
 		    			diffMetamodel.createDecreaseNumberOfParametersInstance(oldVersion, p, changes);
 		    			System.out.println(entry.getKey() + " " + p.getNewParameter().getName() + " Deleted");
 		    		}

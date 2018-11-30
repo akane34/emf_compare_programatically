@@ -83,8 +83,8 @@ public class ChangesIdentifier {
 		ChangesProcessor.processRelocateSameParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffModelTransformation, changeParameters, operations, diff.getChange());
 		ChangesProcessor.processChangeTypeParameter(diffModelTransformation, deleteParameters, addParameters, changeParameters, diff.getChange());
-		ChangesProcessor.processIncreaseNumberOfParameters(diffModelTransformation, operations, minorVersion, diff.getChange());
-		ChangesProcessor.processDecreaseNumberOfParameters(diffModelTransformation, operations, minorVersion, diff.getChange());
+		ChangesProcessor.processIncreaseNumberOfParameters(diffModelTransformation, operations, deleteParameters, minorVersion, diff.getChange());
+		ChangesProcessor.processDecreaseNumberOfParameters(diffModelTransformation, operations, addParameters, minorVersion, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
 		ChangesProcessor.processRenameParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processDeletedResponses(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
