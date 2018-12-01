@@ -2,8 +2,6 @@
  */
 package co.edu.uniandes.metamodels.Diff;
 
-import java.math.BigInteger;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.ElementReference#getEObject <em>EObject</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Diff.ElementReference#getLineNumber <em>Line Number</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Diff.ElementReference#getMethod <em>Method</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.ElementReference#getValue <em>Value</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.ElementReference#getPath <em>Path</em>}</li>
  * </ul>
@@ -53,30 +51,30 @@ public interface ElementReference extends EObject {
 	void setEObject(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Line Number</b></em>' attribute.
+	 * Returns the value of the '<em><b>Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Line Number</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Method</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Line Number</em>' attribute.
-	 * @see #setLineNumber(BigInteger)
-	 * @see co.edu.uniandes.metamodels.Diff.DiffPackage#getElementReference_LineNumber()
+	 * @return the value of the '<em>Method</em>' attribute.
+	 * @see #setMethod(String)
+	 * @see co.edu.uniandes.metamodels.Diff.DiffPackage#getElementReference_Method()
 	 * @model
 	 * @generated
 	 */
-	BigInteger getLineNumber();
+	String getMethod();
 
 	/**
-	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Diff.ElementReference#getLineNumber <em>Line Number</em>}' attribute.
+	 * Sets the value of the '{@link co.edu.uniandes.metamodels.Diff.ElementReference#getMethod <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Line Number</em>' attribute.
-	 * @see #getLineNumber()
+	 * @param value the new value of the '<em>Method</em>' attribute.
+	 * @see #getMethod()
 	 * @generated
 	 */
-	void setLineNumber(BigInteger value);
+	void setMethod(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

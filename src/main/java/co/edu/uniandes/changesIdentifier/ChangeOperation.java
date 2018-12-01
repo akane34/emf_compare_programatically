@@ -16,6 +16,7 @@ public class ChangeOperation {
 	private DifferenceKind differenceKind;
 	private String oldOperationUri;	
 	private String newOperationUri;
+	private String method;
 			
 	public String getPath() {
 		return path;
@@ -70,6 +71,12 @@ public class ChangeOperation {
 	}
 	public void setNewPath(Path newPath) {
 		this.newPath = newPath;
+	}
+	public String getMethod() {
+		return method;
+	}
+	public void setMethod(String method) {
+		this.method = method;
 	}	
 }
 

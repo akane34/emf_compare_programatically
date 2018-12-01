@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [module generateHTML('http://web.emn.fr/html')]
-[template public generateHTML(aHtml : BODY)]
+[template public generateHTML(aBody : BODY)]
 [comment @main/]
 [file ('index.html', false, 'UTF-8')]
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 	<div class="container">
 		<h2>Identified Changes</h2>
 		<div class="accordion">
-	    [for (t : TABLE | aHtml.bodyElements )]
+	    [for (t : TABLE | aBody.bodyElements )]
 			<div class="accordion-item">
 				<a>[t.title/]</a>
 				<div class="content">					

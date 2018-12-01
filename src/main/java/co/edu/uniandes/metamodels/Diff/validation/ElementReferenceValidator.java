@@ -4,7 +4,6 @@
  */
 package co.edu.uniandes.metamodels.Diff.validation;
 
-import java.math.BigInteger;
 
 /**
  * A sample validator interface for {@link co.edu.uniandes.metamodels.Diff.ElementReference}.
@@ -16,7 +15,7 @@ public interface ElementReferenceValidator {
 	boolean validate();
 
 	boolean validateEObject(String value);
-	boolean validateLineNumber(BigInteger value);
+	boolean validateMethod(String value);
 	boolean validateValue(String value);
 	boolean validatePath(String value);
 }

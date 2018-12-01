@@ -10,8 +10,8 @@ public class Main {
 	static String mayorVersion = "2.0";
 	
 	public static void main(String[] args) {		
-		String minorModelPath = "validationParameterAddRemoveWrongV1.xmi";
-		String mayorModelPath = "validationParameterAddRemoveWrongV2.xmi";		
+		String minorModelPath = "v1.0.xmi";
+		String mayorModelPath = "v2.0.xmi";		
 		
 		CompareVersionInput compareVersionInput = new CompareVersionInput();
 		compareVersionInput.setInputType("filePath");

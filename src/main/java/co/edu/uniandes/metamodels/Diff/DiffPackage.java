@@ -1489,13 +1489,13 @@ public interface DiffPackage extends EPackage {
 	int ELEMENT_REFERENCE__EOBJECT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Line Number</b></em>' attribute.
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_REFERENCE__LINE_NUMBER = 1;
+	int ELEMENT_REFERENCE__METHOD = 1;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2332,15 +2332,15 @@ public interface DiffPackage extends EPackage {
 	EAttribute getElementReference_EObject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Diff.ElementReference#getLineNumber <em>Line Number</em>}'.
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Diff.ElementReference#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line Number</em>'.
-	 * @see co.edu.uniandes.metamodels.Diff.ElementReference#getLineNumber()
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see co.edu.uniandes.metamodels.Diff.ElementReference#getMethod()
 	 * @see #getElementReference()
 	 * @generated
 	 */
-	EAttribute getElementReference_LineNumber();
+	EAttribute getElementReference_Method();
 
 	/**
 	 * Returns the meta object for the attribute '{@link co.edu.uniandes.metamodels.Diff.ElementReference#getValue <em>Value</em>}'.
@@ -2867,12 +2867,12 @@ public interface DiffPackage extends EPackage {
 		EAttribute ELEMENT_REFERENCE__EOBJECT = eINSTANCE.getElementReference_EObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Line Number</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_REFERENCE__LINE_NUMBER = eINSTANCE.getElementReference_LineNumber();
+		EAttribute ELEMENT_REFERENCE__METHOD = eINSTANCE.getElementReference_Method();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.

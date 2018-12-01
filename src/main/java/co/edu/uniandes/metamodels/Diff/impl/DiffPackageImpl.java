@@ -723,7 +723,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElementReference_LineNumber() {
+	public EAttribute getElementReference_Method() {
 		return (EAttribute)elementReferenceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -952,7 +952,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 
 		elementReferenceEClass = createEClass(ELEMENT_REFERENCE);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__EOBJECT);
-		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__LINE_NUMBER);
+		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__METHOD);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__VALUE);
 		createEAttribute(elementReferenceEClass, ELEMENT_REFERENCE__PATH);
 
@@ -1104,7 +1104,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 
 		initEClass(elementReferenceEClass, ElementReference.class, "ElementReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElementReference_EObject(), ecorePackage.getEString(), "EObject", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElementReference_LineNumber(), ecorePackage.getEBigInteger(), "lineNumber", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementReference_Method(), ecorePackage.getEString(), "method", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElementReference_Value(), ecorePackage.getEString(), "value", null, 1, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElementReference_Path(), ecorePackage.getEString(), "path", null, 0, 1, ElementReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

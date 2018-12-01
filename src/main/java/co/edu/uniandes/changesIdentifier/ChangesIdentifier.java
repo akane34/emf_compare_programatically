@@ -15,6 +15,7 @@ import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
+import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.pojos.CompareVersionInput;
 import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelOutputType;
@@ -85,6 +86,7 @@ public class ChangesIdentifier {
 		ChangesProcessor.processChangeTypeParameter(diffModelTransformation, deleteParameters, addParameters, changeParameters, diff.getChange());
 		ChangesProcessor.processIncreaseNumberOfParameters(diffModelTransformation, operations, deleteParameters, minorVersion, diff.getChange());
 		ChangesProcessor.processDecreaseNumberOfParameters(diffModelTransformation, operations, addParameters, minorVersion, diff.getChange());
+		ChangesProcessor.processDeletePaths(diffModelTransformation, deletePaths, diff.getChange());
 		ChangesProcessor.processChangeTypeOfReturnValue(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
 		ChangesProcessor.processRenameParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processDeletedResponses(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
@@ -97,7 +99,7 @@ public class ChangesIdentifier {
 		ChangesProcessor.processExposeData(diffModelTransformation, contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processAddRestrictedAccess(diffModelTransformation, addResponse, diff.getChange());
 		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffModelTransformation, addResponse, diff.getChange());
-		ChangesProcessor.processModifyParameterSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, diff.getChange(), minorVersionModel, mayorVersionModel);
+		ChangesProcessor.processModifyParameterSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, diff.getChange(), minorVersionModel, mayorVersionModel);		
 		
 		diffModelTransformation.saveInstance();		
 		

@@ -25,6 +25,7 @@ import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
+import edu.uoc.som.openapi.Path;
 import edu.uoc.som.openapi.Schema;
 import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;
@@ -37,14 +38,14 @@ public class ChangesProcessor {
 	/************************************ PROCESS METHODS ************************************************************/
 
 	public static void processRelocateSameParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- processRelocateSameParameter");
+		System.out.println("-------------------- RelocateSameParameter");
 		for (ChangeParameter p : changeParameters){			
 			if (p.getOldParameter() != null &&
 				p.getNewParameter() != null &&
 				!p.getNewParameter().getLocation().equals(p.getOldParameter().getLocation())){
 				
-				System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " added");
-				System.out.println(p.getPath() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
+				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " added");
+				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
 				System.out.println("\n ");
 				
 				diffMetamodel.createRelocateSameParameterInstance(p, changes);
@@ -53,7 +54,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void processRelocateMultipleParametersInOneParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
-		System.out.println("-------------------- processRelocateMultipleParametersInOneParameter");		
+		System.out.println("-------------------- RelocateMultipleParametersInOneParameter");		
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
 		{			
 			int countAdded = 0;
@@ -80,9 +81,9 @@ public class ChangesProcessor {
 		    }
 		    
 		    if (deletedParameters.size() >= 2 && countAdded == 1 && !locationAdd.equals(locationDelete)){
-		    	System.out.println(newParameter.getPath() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newParameter.getNewParameter().getLocation() + " added");
+		    	System.out.println(entry.getKey() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newParameter.getNewParameter().getLocation() + " added");
 		    	for (ChangeParameter p : deletedParameters){
-		    		System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " deleted");
+		    		System.out.println(entry.getKey() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " deleted");
 		    	}
 				System.out.println("\n ");
 				
@@ -93,13 +94,13 @@ public class ChangesProcessor {
 	
 	public static void processChangeTypeParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> deleteParameters,
 			List<ChangeParameter> addParameters, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- processChangeTypeParameter");
+		System.out.println("-------------------- ChangeTypeParameter");
 		for (ChangeParameter dp : deleteParameters){
 			for (ChangeParameter ap : addParameters){
 				if (dp.getPath().equals(ap.getPath()) && dp.getNewParameter().getName().equals(ap.getNewParameter().getName())){
 					if (!dp.getNewParameter().getType().getName().equals(ap.getNewParameter().getType().getName())){
-						System.out.println(dp.getPath() + "  p:" + dp.getNewParameter().getName() + " 1:" + dp.getNewParameter().getType());
-						System.out.println(ap.getPath() + "  p:" + ap.getNewParameter().getName() + " 2:" + ap.getNewParameter().getType());
+						System.out.println(dp.getPath() + ":" + dp.getMethod() + "  p:" + dp.getNewParameter().getName() + " 1:" + dp.getNewParameter().getType());
+						System.out.println(ap.getPath() + ":" + ap.getMethod() + "  p:" + ap.getNewParameter().getName() + " 2:" + ap.getNewParameter().getType());
 						System.out.println("\n ");
 						
 						diffMetamodel.createChangeTypeOfParameterInstance(dp, ap, changes);
@@ -128,8 +129,8 @@ public class ChangesProcessor {
 					newParameter.clone(p);
 					newParameter.setNewParameter(p.getNewParameter());
 					
-					System.out.println(oldParameter.getPath() + "  p:" + oldParameter.getNewParameter().getName() + " 1:" + oldSchema);
-					System.out.println(newParameter.getPath() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newSchema);
+					System.out.println(oldParameter.getPath() + ":" + oldParameter.getMethod() + "  p:" + oldParameter.getNewParameter().getName() + " 1:" + oldSchema);
+					System.out.println(newParameter.getPath() + ":" + newParameter.getMethod() + "  p:" + newParameter.getNewParameter().getName() + " 2:" + newSchema);
 					System.out.println("\n ");
 					
 					diffMetamodel.createChangeTypeOfParameterInstance(oldParameter, newParameter, changes);
@@ -139,7 +140,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void processIncreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, List<ChangeParameter> deleteParameters, String oldVersion, List<Change> changes) {
-		System.out.println("-------------------- processIncreaseNumberOfParameters");
+		System.out.println("-------------------- IncreaseNumberOfParameters");
 		int countAdded = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
 		{		    		    		    
@@ -181,7 +182,7 @@ public class ChangesProcessor {
 	}
 
 	public static void processDecreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations,List<ChangeParameter> addParameters, String oldVersion, List<Change> changes) {
-		System.out.println("-------------------- processDecreaseNumberOfParameters");
+		System.out.println("-------------------- DecreaseNumberOfParameters");
 		int countDeleted = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
 		{		    		    		    
@@ -205,14 +206,14 @@ public class ChangesProcessor {
 	}
 	
 	public static void processRenameParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- processRenameParameter");		
+		System.out.println("-------------------- RenameParameter");		
 		for (ChangeParameter p : changeParameters){
 			if (p.getOldParameter() != null &&
 				p.getNewParameter() != null &&
 				!p.getNewParameter().getName().equals(p.getOldParameter().getName())){
 				
-				System.out.println(p.getPath() + "  p:" + p.getOldParameter().getName() + " 1:" + p.getOldParameter().getLocation());
-				System.out.println(p.getPath() + "  p:" + p.getNewParameter().getName() + " 2:" + p.getNewParameter().getLocation());
+				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getOldParameter().getName() + " 1:" + p.getOldParameter().getLocation());
+				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getName() + " 2:" + p.getNewParameter().getLocation());
 				System.out.println("\n ");
 				
 				diffMetamodel.createRenameParameterInstance(p, changes);
@@ -222,7 +223,7 @@ public class ChangesProcessor {
 	
 	public static void processChangeTypeOfReturnValue(DiffModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse,
 			List<ChangeResponse> addResponse, List<Change> changes) {
-		System.out.println("-------------------- processChangeTypeOfReturnValue");
+		System.out.println("-------------------- ChangeTypeOfReturnValue");
 		for (ChangeResponse dr : deleteResponse){
 			for (ChangeResponse ar : addResponse){
 				if (dr.getPath().equals(ar.getPath()) && dr.getResponse().getCode().equals(ar.getResponse().getCode())){
@@ -319,9 +320,9 @@ public class ChangesProcessor {
 	}
 	
 	public static void processUnsupportRequestMethods(DiffModelTransformation diffMetamodel, List<ChangeOperation> deleteOperations, List<Change> changes) {
-		System.out.println("-------------------- processUnsupportRequestMethods");
+		System.out.println("-------------------- UnsupportRequestMethods");
 		for (ChangeOperation co : deleteOperations){						
-			System.out.println(co.getPath() + "  v2:" + co.getOldOperation().getDescription() + " unsupported");			
+			System.out.println(co.getPath() + "  v2:" + co.getMethod() + " unsupported");			
 			System.out.println("\n ");
 						
 			diffMetamodel.createUnsupportRequestMethodInstance(co, changes);			
@@ -329,7 +330,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void processChangeDefaultValueOfParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- processChangeDefaultValueOfParameter");		
+		System.out.println("-------------------- ChangeDefaultValueOfParameter");		
 		for (ChangeParameter p : changeParameters){
 			if (p.getOldParameter() != null &&	p.getNewParameter() != null){				
 				String newDefault = p.getNewParameter().getDefault();
@@ -342,8 +343,8 @@ public class ChangesProcessor {
 					(!isNullOrEmpty(newDefault) && isNullOrEmpty(oldDefault)) ||
 					(!newDefault.equals(oldDefault))){
 				
-					System.out.println(p.getPath() + "  p:" + p.getOldParameter().getDefault() + " 1:" + p.getOldParameter().getLocation());
-					System.out.println(p.getPath() + "  p:" + p.getNewParameter().getDefault() + " 2:" + p.getNewParameter().getLocation());
+					System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getOldParameter().getDefault() + " 1:" + p.getOldParameter().getLocation());
+					System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getDefault() + " 2:" + p.getNewParameter().getLocation());
 					System.out.println("\n ");
 					
 					diffMetamodel.createChangeDefaultValueOfParameterInstance(p, changes);
@@ -353,7 +354,7 @@ public class ChangesProcessor {
 	}	
 	
 	public static void processDeletePaths(DiffModelTransformation diffMetamodel, List<ChangePath> deletePaths, List<Change> changes) {
-		System.out.println("-------------------- processDeletePaths");
+		System.out.println("-------------------- DeletePaths");
 		
 		for (ChangePath path : deletePaths){
 			System.out.println(path.getPath() + "  deleted");			
@@ -364,7 +365,7 @@ public class ChangesProcessor {
 	}
 
 	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
-		System.out.println("-------------------- processModifyParameterSchemaType");
+		System.out.println("-------------------- ModifyParameterSchemaType");
 		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
 		
 		for (ChangeSchema addAndDeletedSchema : addAndDeletedSchemas){			
@@ -430,7 +431,7 @@ public class ChangesProcessor {
 	}		
 	
 	public static void processExposeData(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
-		System.out.println("-------------------- processExposeData");	
+		System.out.println("-------------------- ExposeData");	
 		
 		Map<String, List<ChangeContentType>> operations = new HashMap<String, List<ChangeContentType>>();
 		for (ChangeContentType content : contentTypesUpdated){
@@ -476,7 +477,7 @@ public class ChangesProcessor {
 	}
 	
 	public static void processRemoveRestrictedAccessToTheAPI(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
-		System.out.println("-------------------- processRemoveRestrictedAccessToTheAPI");	
+		System.out.println("-------------------- RemoveRestrictedAccessToTheAPI");	
 		for(ChangeResponse addRes: addResponse) {
 			if (addRes.getDifferenceKind() == DifferenceKind.ADD &&
 				("401".equals(addRes.getResponse().getCode()) ||
@@ -530,6 +531,16 @@ public class ChangesProcessor {
 				
 				if (oldParameter != null)
 					param.setOldParameterUri(EcoreUtil.getURI(oldParameter).toString());
+								
+				for(Setting setting : getUsages(newParameter)){
+    				EObject object = setting.getEObject();
+    		    	if (object instanceof OperationImpl){
+    		    		PathImpl path = ((PathImpl)((OperationImpl)object).eContainer());    		    		
+    		    		param.setPath(path.getRelativePath());
+    		    		setOperation(path, param);
+    		    		break;
+    		    	}
+    		    }				
 				
 				changeParameters.add(param);						
 			}			
@@ -577,7 +588,20 @@ public class ChangesProcessor {
 				operation.setNewOperation(null);				
 				operation.setNewOperationUri("");		
 				operation.setOldPath(oldPath);
-				operation.setNewPath(newPath);				
+				operation.setNewPath(newPath);
+				
+				if(oldPath.getGet() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getGet())))
+					operation.setMethod("Get");
+				else if(oldPath.getDelete() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getDelete())))
+					operation.setMethod("Delete");
+				else if(oldPath.getPatch() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getPatch())))
+					operation.setMethod("Patch");
+				else if(oldPath.getPost() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getPost())))
+					operation.setMethod("Post");
+				else if(oldPath.getPut() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getPut())))
+					operation.setMethod("Put");
+				else if(oldPath.getOptions() != null && EcoreUtil.getURI(oldOperation).equals(EcoreUtil.getURI(oldPath.getOptions())))
+					operation.setMethod("Options");
 				
 				deleteOperations.add(operation);
 			}
@@ -590,16 +614,31 @@ public class ChangesProcessor {
 				Operation oldOperation = (Operation)diff.getMatch().getLeft();
 				Operation newOperation = (Operation)diff.getMatch().getRight();
 				
+				Path path = (PathImpl)(newOperation).eContainer();				
+				
 				ChangeOperation operation = new ChangeOperation();
 				operation.setOldOperation(oldOperation);
 				operation.setNewOperation(newOperation);
 				operation.setVersion(newVersion);
 				operation.setDifferenceKind(DifferenceKind.CHANGE);
-				operation.setPath(null);				
+				operation.setPath(path.getRelativePath());				
 				operation.setNewOperationUri(EcoreUtil.getURI(newOperation).toString());
 				
 				if (oldOperation != null)
 					operation.setOldOperationUri(EcoreUtil.getURI(oldOperation).toString());
+				
+				if(path.getGet() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getGet())))
+					operation.setMethod("Get");
+				else if(path.getDelete() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getDelete())))
+					operation.setMethod("Delete");
+				else if(path.getPatch() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getPatch())))
+					operation.setMethod("Patch");
+				else if(path.getPost() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getPost())))
+					operation.setMethod("Post");
+				else if(path.getPut() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getPut())))
+					operation.setMethod("Put");
+				else if(path.getOptions() != null && EcoreUtil.getURI(newOperation).equals(EcoreUtil.getURI(path.getOptions())))
+					operation.setMethod("Options");
 				
 				changeOperations.add(operation);						
 			}			
@@ -746,8 +785,7 @@ public class ChangesProcessor {
 		for(OperationWrapper wrapper : param.getOperations()){
 			List<ChangeParameter> params = operations.get(path.getRelativePath() + ":" + wrapper.getMethod());
 			if (params == null)
-				params = new ArrayList<ChangeParameter>();										
-			
+				params = new ArrayList<ChangeParameter>();			
 			params.add(param);
 			operations.put(path.getRelativePath() + ":" + wrapper.getMethod(), params);
 		}
@@ -758,19 +796,22 @@ public class ChangesProcessor {
 		Operation deleteOperation = path.getDelete();
 		Operation pathcOperation = path.getPatch();
 		Operation postOperation = path.getPost();
-		Operation putOperation = path.getPut();					
+		Operation putOperation = path.getPut();
+		Operation optionsOperation = path.getOptions();
 		
 		if (getOperation != null){				
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(getOperation);
 			wrapper.setMethod("Get");
+			param.setMethod("Get");
 			
 			param.getOperations().add(wrapper);											
 		}
 		if (deleteOperation != null){	
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(deleteOperation);
-			wrapper.setMethod("Delete");
+			wrapper.setMethod("Delete");			
+			param.setMethod("Delete");
 			
 			param.getOperations().add(wrapper);					
 		}
@@ -778,6 +819,7 @@ public class ChangesProcessor {
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(pathcOperation);
 			wrapper.setMethod("Patch");
+			param.setMethod("Patch");
 			
 			param.getOperations().add(wrapper);					
 		}
@@ -785,6 +827,7 @@ public class ChangesProcessor {
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(postOperation);
 			wrapper.setMethod("Post");
+			param.setMethod("Post");
 			
 			param.getOperations().add(wrapper);					
 		}
@@ -792,33 +835,51 @@ public class ChangesProcessor {
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(putOperation);
 			wrapper.setMethod("Put");
+			param.setMethod("Put");
 			
 			param.getOperations().add(wrapper);					
 		}
-	}
-	
+		if (optionsOperation != null){	
+			OperationWrapper wrapper = new OperationWrapper();
+			wrapper.setOperation(optionsOperation);
+			wrapper.setMethod("Options");
+			param.setMethod("Options");
+			
+			param.getOperations().add(wrapper);					
+		}
+	}	
 	
 	private static void setOperation(PathImpl path, ChangeResponse param) {
 		Operation getOperation = path.getGet();
 		Operation deleteOperation = path.getDelete();
 		Operation pathcOperation = path.getPatch();
 		Operation postOperation = path.getPost();
-		Operation putOperation = path.getPut();					
+		Operation putOperation = path.getPut();		
+		Operation optionsOperation = path.getOptions();
 		
 		if (getOperation != null){							
-			param.setOperation(getOperation);											
+			param.setOperation(getOperation);	
+			param.setMethod("Get");
 		}
 		else if (deleteOperation != null){							
-			param.setOperation(deleteOperation);					
+			param.setOperation(deleteOperation);	
+			param.setMethod("Delete");
 		}
 		else if (pathcOperation != null){							
-			param.setOperation(pathcOperation);					
+			param.setOperation(pathcOperation);		
+			param.setMethod("Pathc");
 		}
 		else if (postOperation != null){							
-			param.setOperation(postOperation);					
+			param.setOperation(postOperation);
+			param.setMethod("Post");
 		}
 		else if (putOperation != null){							
-			param.setOperation(putOperation);					
+			param.setOperation(putOperation);
+			param.setMethod("Put");
+		}
+		else if (optionsOperation != null){							
+			param.setOperation(optionsOperation);
+			param.setMethod("Options");
 		}
 	}
 	

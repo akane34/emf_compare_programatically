@@ -13,6 +13,7 @@ public class ChangeResponse {
 	private String version;
 	private DifferenceKind differenceKind;
 	private String uri;
+	private String method;
 	
 	public Response getResponse() {
 		return response;
@@ -50,5 +51,10 @@ public class ChangeResponse {
 	public void setUri(String uri) {
 		this.uri = uri;
 	}
-	
+	public String getMethod() {
+		return method;
+	}
+	public void setMethod(String method) {
+		this.method = method;
+	}	
 }

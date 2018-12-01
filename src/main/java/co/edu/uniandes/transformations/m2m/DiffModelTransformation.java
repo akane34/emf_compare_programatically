@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -23,7 +22,36 @@ import co.edu.uniandes.changesIdentifier.ChangePath;
 import co.edu.uniandes.changesIdentifier.ChangeResponse;
 import co.edu.uniandes.changesIdentifier.ChangeSchema;
 import co.edu.uniandes.changesIdentifier.ModifyParameterSchema;
-import co.edu.uniandes.metamodels.Diff.*;
+import co.edu.uniandes.metamodels.Diff.APIElementType;
+import co.edu.uniandes.metamodels.Diff.Add;
+import co.edu.uniandes.metamodels.Diff.AddParameter;
+import co.edu.uniandes.metamodels.Diff.AddRestriction;
+import co.edu.uniandes.metamodels.Diff.AddStatusCode;
+import co.edu.uniandes.metamodels.Diff.Change;
+import co.edu.uniandes.metamodels.Diff.ConsumeType;
+import co.edu.uniandes.metamodels.Diff.DefaultValue;
+import co.edu.uniandes.metamodels.Diff.Delete;
+import co.edu.uniandes.metamodels.Diff.DeletePath;
+import co.edu.uniandes.metamodels.Diff.Diff;
+import co.edu.uniandes.metamodels.Diff.DiffFactory;
+import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.ElementReference;
+import co.edu.uniandes.metamodels.Diff.ElementType;
+import co.edu.uniandes.metamodels.Diff.ExposeData;
+import co.edu.uniandes.metamodels.Diff.LowerBondary;
+import co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType;
+import co.edu.uniandes.metamodels.Diff.MultipleParametersInOne;
+import co.edu.uniandes.metamodels.Diff.ParameterLocation;
+import co.edu.uniandes.metamodels.Diff.ParameterType;
+import co.edu.uniandes.metamodels.Diff.ProduceType;
+import co.edu.uniandes.metamodels.Diff.RemoveParameter;
+import co.edu.uniandes.metamodels.Diff.RemoveRestriction;
+import co.edu.uniandes.metamodels.Diff.RemoveStatusCode;
+import co.edu.uniandes.metamodels.Diff.RenameParameter;
+import co.edu.uniandes.metamodels.Diff.ReturnType;
+import co.edu.uniandes.metamodels.Diff.SameParameter;
+import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
+import co.edu.uniandes.metamodels.Diff.UpperBondary;
 import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
 import edu.uoc.som.openapi.JSONDataType;
 import edu.uoc.som.openapi.Parameter;
@@ -63,11 +91,13 @@ public class DiffModelTransformation {
 		oldElementReference.setEObject(oldParameter.getNewParameterUri());
 		oldElementReference.setValue(oldParameter.getNewParameter().getName());
 		oldElementReference.setPath(oldParameter.getPath());
+		oldElementReference.setMethod(oldParameter.getMethod());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(newParameter.getNewParameterUri());
 		newElementReference.setValue(newParameter.getNewParameter().getName());
 		newElementReference.setPath(newParameter.getPath());
+		newElementReference.setMethod(newParameter.getMethod());
 		
 		ParameterType parameterType = diffFactory.createParameterType();
 		parameterType.setOld(oldElementReference);
@@ -81,10 +111,14 @@ public class DiffModelTransformation {
 		ElementReference oldElementReference = diffFactory.createElementReference();				
 		oldElementReference.setEObject(parameter.getOldParameterUri());
 		oldElementReference.setValue(parameter.getOldParameter().getName());
+		oldElementReference.setMethod(parameter.getMethod());
+		oldElementReference.setPath(parameter.getPath());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(parameter.getNewParameterUri());
 		newElementReference.setValue(parameter.getNewParameter().getName());
+		newElementReference.setMethod(parameter.getMethod());
+		newElementReference.setPath(parameter.getPath());
 
 		RenameParameter rename = diffFactory.createRenameParameter();		
 		rename.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -99,6 +133,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(newParameter.getNewParameterUri());
 		newElementReference.setValue(newParameter.getNewParameter().getName());
 		newElementReference.setPath(newParameter.getPath());
+		newElementReference.setMethod(newParameter.getMethod());
 		
 		AddParameter add = diffFactory.createAddParameter();
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -112,6 +147,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(newParameter.getNewParameterUri());
 		newElementReference.setValue(newParameter.getNewParameter().getName());
 		newElementReference.setPath(newParameter.getPath());
+		newElementReference.setMethod(newParameter.getMethod());
 		
 		RemoveParameter delete = diffFactory.createRemoveParameter();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -120,11 +156,7 @@ public class DiffModelTransformation {
 		changes.add(delete);
 		
 	}
-	
-	public void createChangeFormatOfReturnValueInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}
-	
+			
 	public void createExposeDataInstance(List<ChangeContentType> deleted, List<ChangeContentType> added, List<Change> changes){		
 		ExposeData exposeData = diffFactory.createExposeData();
 		exposeData.setChangeElement(APIElementType.PATH);		
@@ -133,7 +165,7 @@ public class DiffModelTransformation {
 			ElementReference oldElementReference = diffFactory.createElementReference();
 			oldElementReference.setValue(contentType.getValue());		
 			oldElementReference.setEObject(contentType.getUri());
-			oldElementReference.setPath(contentType.getPath());
+			oldElementReference.setPath(contentType.getPath());			
 			
 			Delete delete = diffFactory.createDelete();
 			delete.setChangeElement(APIElementType.CONTENT_TYPE);
@@ -165,11 +197,13 @@ public class DiffModelTransformation {
 		oldElementReference.setValue(oldResponse.getResponse().getSchema().getName());		
 		oldElementReference.setEObject(oldResponse.getUri());
 		oldElementReference.setPath(oldResponse.getPath());
+		oldElementReference.setMethod(oldResponse.getMethod());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(newResponse.getUri());
 		newElementReference.setValue(newResponse.getResponse().getSchema().getName());
 		newElementReference.setPath(newResponse.getPath());
+		newElementReference.setMethod(newResponse.getMethod());
 						
 		ReturnType returnType = diffFactory.createReturnType();
 		returnType.setOld(oldElementReference);
@@ -182,33 +216,23 @@ public class DiffModelTransformation {
 	public void createUnsupportRequestMethodInstance(ChangeOperation operation, List<Change> changes){
 		ElementReference oldElementReference = diffFactory.createElementReference();
 		oldElementReference.setEObject(operation.getOldOperationUri());
-		oldElementReference.setValue(operation.getOldOperation().getFullPath());		
+		oldElementReference.setValue(operation.getOldOperation().getDescription());		
 		oldElementReference.setPath(operation.getPath());
+		oldElementReference.setMethod(operation.getMethod());
 
 		UnsupportRequestMethod delete = diffFactory.createUnsupportRequestMethod();
 		delete.setChangeElement(APIElementType.METHOD);
 		delete.setOld(oldElementReference);		
 						
 		changes.add(delete);      
-	}
-	
-	public void createRenameMethodInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}
-	
-	public void createCombineMethodsInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}
-	
-	public void createSplitMethodInstance(EFactory diffFactoryInstance, String oldVersion, String newVersion){
-		
-	}
+	}	
 	
 	public void createRelocateSameParameterInstance(ChangeParameter parameter, List<Change> changes){		
 		ElementReference oldElementReference = diffFactory.createElementReference();
 		oldElementReference.setEObject(parameter.getOldParameterUri());
 		oldElementReference.setValue(parameter.getOldParameter().getName());		
 		oldElementReference.setPath(parameter.getPath());
+		oldElementReference.setMethod(parameter.getMethod());
 		
 		Delete delete = diffFactory.createDelete();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -218,6 +242,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(parameter.getNewParameterUri());
 		newElementReference.setValue(parameter.getNewParameter().getName());		
 		newElementReference.setPath(parameter.getPath());
+		newElementReference.setMethod(parameter.getMethod());
 		
 		Add add = diffFactory.createAdd();	
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -243,6 +268,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(newParameter.getNewParameterUri());
 		newElementReference.setValue(newParameter.getNewParameter().getName());		
 		newElementReference.setPath(newParameter.getPath());
+		newElementReference.setMethod(newParameter.getMethod());
 		
 		Add add = diffFactory.createAdd();	
 		add.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -262,6 +288,7 @@ public class DiffModelTransformation {
 			oldElementReference.setEObject(p.getNewParameterUri());
 			oldElementReference.setValue(p.getNewParameter().getName());		
 			oldElementReference.setPath(p.getPath());
+			oldElementReference.setMethod(p.getMethod());
 			
 			Delete delete = diffFactory.createDelete();
 			delete.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -279,10 +306,14 @@ public class DiffModelTransformation {
 		ElementReference oldElementReference = diffFactory.createElementReference();				
 		oldElementReference.setEObject(parameter.getOldParameterUri());
 		oldElementReference.setValue(parameter.getOldParameter().getDefault());
+		oldElementReference.setPath(parameter.getPath());
+		oldElementReference.setMethod(parameter.getMethod());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(parameter.getNewParameterUri());
 		newElementReference.setValue(parameter.getNewParameter().getDefault());
+		newElementReference.setPath(parameter.getPath());
+		newElementReference.setMethod(parameter.getMethod());
 
 		DefaultValue defaultValue = diffFactory.createDefaultValue();		
 		defaultValue.setChangeElement(APIElementType.METHOD_PARAMETER);
@@ -305,6 +336,7 @@ public class DiffModelTransformation {
 		oldElementReference.setEObject(delRes.getUri());
 		oldElementReference.setValue(delRes.getResponse().getCode());
 		oldElementReference.setPath(delRes.getPath());
+		oldElementReference.setMethod(delRes.getMethod());
 		
 		RemoveStatusCode delete = diffFactory.createRemoveStatusCode();
 		delete.setChangeElement(APIElementType.STATUS_CODE);
@@ -319,6 +351,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(addRes.getUri());
 		newElementReference.setValue(addRes.getResponse().getCode());
 		newElementReference.setPath(addRes.getPath());
+		newElementReference.setMethod(addRes.getMethod());
 		
 		AddStatusCode add = diffFactory.createAddStatusCode();
 		add.setChangeElement(APIElementType.STATUS_CODE);
@@ -468,6 +501,7 @@ public class DiffModelTransformation {
 		oldElementReference.setEObject(changeResponse.getUri());
 		oldElementReference.setValue(changeResponse.getResponse().getCode());
 		oldElementReference.setPath(changeResponse.getPath());
+		oldElementReference.setMethod(changeResponse.getMethod());
 		
 		Delete delete = diffFactory.createDelete();
 		delete.setChangeElement(APIElementType.STATUS_CODE);
@@ -486,6 +520,7 @@ public class DiffModelTransformation {
 		newElementReference.setEObject(changeResponse.getUri());
 		newElementReference.setValue(changeResponse.getResponse().getCode());
 		newElementReference.setPath(changeResponse.getPath());
+		newElementReference.setMethod(changeResponse.getMethod());
 		
 		Add add = diffFactory.createAdd();
 		add.setChangeElement(APIElementType.STATUS_CODE);

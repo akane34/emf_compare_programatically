@@ -17,6 +17,7 @@ public class ChangeParameter {
 	private DifferenceKind differenceKind;
 	private String oldParameterUri;	
 	private String newParameterUri;
+	private String method;
 	
 	public Parameter getNewParameter() {
 		return newParameter;
@@ -67,6 +68,12 @@ public class ChangeParameter {
 	public void setOldParameterUri(String oldParameterUri) {
 		this.oldParameterUri = oldParameterUri;
 	}	
+	public String getMethod() {
+		return method;
+	}
+	public void setMethod(String method) {
+		this.method = method;
+	}
 	
 	public void clone(ChangeParameter p){
 		this.oldParameter = p.getOldParameter();

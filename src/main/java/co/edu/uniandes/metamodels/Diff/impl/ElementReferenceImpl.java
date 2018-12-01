@@ -5,8 +5,6 @@ package co.edu.uniandes.metamodels.Diff.impl;
 import co.edu.uniandes.metamodels.Diff.DiffPackage;
 import co.edu.uniandes.metamodels.Diff.ElementReference;
 
-import java.math.BigInteger;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.impl.ElementReferenceImpl#getEObject <em>EObject</em>}</li>
- *   <li>{@link co.edu.uniandes.metamodels.Diff.impl.ElementReferenceImpl#getLineNumber <em>Line Number</em>}</li>
+ *   <li>{@link co.edu.uniandes.metamodels.Diff.impl.ElementReferenceImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.impl.ElementReferenceImpl#getValue <em>Value</em>}</li>
  *   <li>{@link co.edu.uniandes.metamodels.Diff.impl.ElementReferenceImpl#getPath <em>Path</em>}</li>
  * </ul>
@@ -52,24 +50,24 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	protected String eObject = EOBJECT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLineNumber() <em>Line Number</em>}' attribute.
+	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineNumber()
+	 * @see #getMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger LINE_NUMBER_EDEFAULT = null;
+	protected static final String METHOD_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getLineNumber() <em>Line Number</em>}' attribute.
+	 * The cached value of the '{@link #getMethod() <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineNumber()
+	 * @see #getMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger lineNumber = LINE_NUMBER_EDEFAULT;
+	protected String method = METHOD_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -156,8 +154,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger getLineNumber() {
-		return lineNumber;
+	public String getMethod() {
+		return method;
 	}
 
 	/**
@@ -165,11 +163,11 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLineNumber(BigInteger newLineNumber) {
-		BigInteger oldLineNumber = lineNumber;
-		lineNumber = newLineNumber;
+	public void setMethod(String newMethod) {
+		String oldMethod = method;
+		method = newMethod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DiffPackage.ELEMENT_REFERENCE__LINE_NUMBER, oldLineNumber, lineNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, DiffPackage.ELEMENT_REFERENCE__METHOD, oldMethod, method));
 	}
 
 	/**
@@ -224,8 +222,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case DiffPackage.ELEMENT_REFERENCE__EOBJECT:
 				return getEObject();
-			case DiffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
-				return getLineNumber();
+			case DiffPackage.ELEMENT_REFERENCE__METHOD:
+				return getMethod();
 			case DiffPackage.ELEMENT_REFERENCE__VALUE:
 				return getValue();
 			case DiffPackage.ELEMENT_REFERENCE__PATH:
@@ -245,8 +243,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 			case DiffPackage.ELEMENT_REFERENCE__EOBJECT:
 				setEObject((String)newValue);
 				return;
-			case DiffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
-				setLineNumber((BigInteger)newValue);
+			case DiffPackage.ELEMENT_REFERENCE__METHOD:
+				setMethod((String)newValue);
 				return;
 			case DiffPackage.ELEMENT_REFERENCE__VALUE:
 				setValue((String)newValue);
@@ -269,8 +267,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 			case DiffPackage.ELEMENT_REFERENCE__EOBJECT:
 				setEObject(EOBJECT_EDEFAULT);
 				return;
-			case DiffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
-				setLineNumber(LINE_NUMBER_EDEFAULT);
+			case DiffPackage.ELEMENT_REFERENCE__METHOD:
+				setMethod(METHOD_EDEFAULT);
 				return;
 			case DiffPackage.ELEMENT_REFERENCE__VALUE:
 				setValue(VALUE_EDEFAULT);
@@ -292,8 +290,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case DiffPackage.ELEMENT_REFERENCE__EOBJECT:
 				return EOBJECT_EDEFAULT == null ? eObject != null : !EOBJECT_EDEFAULT.equals(eObject);
-			case DiffPackage.ELEMENT_REFERENCE__LINE_NUMBER:
-				return LINE_NUMBER_EDEFAULT == null ? lineNumber != null : !LINE_NUMBER_EDEFAULT.equals(lineNumber);
+			case DiffPackage.ELEMENT_REFERENCE__METHOD:
+				return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
 			case DiffPackage.ELEMENT_REFERENCE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case DiffPackage.ELEMENT_REFERENCE__PATH:
@@ -314,8 +312,8 @@ public class ElementReferenceImpl extends MinimalEObjectImpl.Container implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (EObject: ");
 		result.append(eObject);
-		result.append(", lineNumber: ");
-		result.append(lineNumber);
+		result.append(", method: ");
+		result.append(method);
 		result.append(", value: ");
 		result.append(value);
 		result.append(", path: ");
