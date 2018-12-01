@@ -17,16 +17,20 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import co.edu.uniandes.metamodels.Diff.Add;
 import co.edu.uniandes.metamodels.Diff.AddParameter;
 import co.edu.uniandes.metamodels.Diff.Change;
+import co.edu.uniandes.metamodels.Diff.DefaultValue;
 import co.edu.uniandes.metamodels.Diff.Delete;
 import co.edu.uniandes.metamodels.Diff.DeletePath;
 import co.edu.uniandes.metamodels.Diff.DiffFactory;
 import co.edu.uniandes.metamodels.Diff.DiffPackage;
+import co.edu.uniandes.metamodels.Diff.LowerBondary;
+import co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType;
 import co.edu.uniandes.metamodels.Diff.MultipleParametersInOne;
 import co.edu.uniandes.metamodels.Diff.RemoveParameter;
 import co.edu.uniandes.metamodels.Diff.RenameParameter;
 import co.edu.uniandes.metamodels.Diff.SameParameter;
 import co.edu.uniandes.metamodels.Diff.Simple;
 import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
+import co.edu.uniandes.metamodels.Diff.UpperBondary;
 import co.edu.uniandes.metamodels.Diff.impl.DiffImpl;
 import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
 import co.edu.uniandes.metamodels.Html.BODY;
@@ -37,6 +41,7 @@ import co.edu.uniandes.metamodels.Html.TABLE;
 import co.edu.uniandes.metamodels.Html.TD;
 import co.edu.uniandes.metamodels.Html.TR;
 import co.edu.uniandes.metamodels.Html.impl.HtmlPackageImpl;
+import edu.uoc.som.openapi.Parameter;
 
 public class HtmlModelTransformation {
 	
@@ -71,6 +76,7 @@ public class HtmlModelTransformation {
 	}	
 	
 	public ResourceSet transformation(ResourceSet outputModel, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {				
+		try{
 		BODY body = htmlFactory.createBODY();		
 		
 		DiffImpl diffRoot = getDiffRoot(outputModel);
@@ -138,7 +144,7 @@ public class HtmlModelTransformation {
 				if (change instanceof MultipleParametersInOne){
 					createMultipleParameterInOne(tableMultipleParametersInOne, change);
 				}
-				if (change instanceof SameParameter){
+				else if (change instanceof SameParameter){
 					SameParameter c = (SameParameter)change;
 					
 					String path = "";
@@ -163,32 +169,57 @@ public class HtmlModelTransformation {
 					xmiResource.getContents().add(td1);					
 					xmiResource.getContents().add(tr);
 				}
-				if (change instanceof AddParameter){
+				else if (change instanceof AddParameter){
 					createAddParameter(tableAddParameter, value, change);
 				}
-				if (change instanceof UnsupportRequestMethod){
+				else if (change instanceof UnsupportRequestMethod){
 					createUnsupportRequestMethod(tableSameParameter, change);
 				}
-				if (change instanceof DeletePath){
-					DeletePath c = (DeletePath)change;
+				else if (change instanceof DeletePath){
+					createDeleteParameter(tableDeletePath, change);
+				}				
+				else if (change instanceof RemoveParameter){
+					createRemoveParameter(tableRemoveParameter, value, change);
+				}
+				else if (change instanceof ModifyParameterSchemaType){
+					createModifyParameterSchemaType(tableModifyParameterSchemaType, change);
+				}
+				else if (change instanceof UpperBondary){
+					createUpperBondary(mayorVersionModel, tableUpperBondary, change);
+				}
+				else if (change instanceof LowerBondary){
+					createLowerBondary(mayorVersionModel, tableLowerBondary, change);
+				}
+				else if (change instanceof DefaultValue){
+					DefaultValue c = (DefaultValue)change;
 					
-					String path = "";
+					URI uri = URI.createURI(c.getOld().getEObject());
+					Parameter parameter = (Parameter)mayorVersionModel.getEObject(uri, true);
 					
 					TD td1 = htmlFactory.createTD();					
-					td1.setTitle("Deleted path");
+					td1.setTitle("Parameter");
+					td1.setValue(parameter.getName());
+					
+					TD td2 = htmlFactory.createTD();					
+					td1.setTitle("Old default value");
 					td1.setValue(c.getOld().getValue());
 					
+					TD td3 = htmlFactory.createTD();					
+					td1.setTitle("New default value");
+					td1.setValue(c.getNew().getValue());
+					
 					TR tr = htmlFactory.createTR();					
-					tr.setTitle(path);
-					tr.getTds().add(td1);					
+					tr.setTitle(c.getNew().getPath());
+					tr.getTds().add(td1);
+					tr.getTds().add(td2);
+					tr.getTds().add(td3);
 					
-					tableDeletePath.getTrs().add(tr);					
+					tableDefaultValue.getTrs().add(tr);					
 					
-					xmiResource.getContents().add(td1);					
+					xmiResource.getContents().add(td1);
+					xmiResource.getContents().add(td2);
+					xmiResource.getContents().add(td3);					
 					xmiResource.getContents().add(tr);
-				}				
-				if (change instanceof RemoveParameter){
-					createRemoveParameter(tableRemoveParameter, value, change);
 				}
 				else if (change instanceof RenameParameter){
 					createRenameParameter(tableRenameParameter, change);
@@ -267,8 +298,112 @@ public class HtmlModelTransformation {
 		xmiResource.getContents().add(html);
 		xmiResource.getContents().add(body);
 		saveInstance();	
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
 		
 		return resourceSet;
+	}
+
+	private void createLowerBondary(ResourceSet mayorVersionModel, TABLE tableLowerBondary, Change change) {
+		LowerBondary c = (LowerBondary)change;
+		
+		URI uri = URI.createURI(c.getOld().getEObject());
+		Parameter parameter = (Parameter)mayorVersionModel.getEObject(uri, true);
+		
+		TD td1 = htmlFactory.createTD();					
+		td1.setTitle("Parameter");
+		td1.setValue(parameter.getName());
+		
+		TD td2 = htmlFactory.createTD();					
+		td1.setTitle("Old value");
+		td1.setValue(c.getOld().getValue());
+		
+		TD td3 = htmlFactory.createTD();					
+		td1.setTitle("New value");
+		td1.setValue(c.getNew().getValue());
+		
+		TR tr = htmlFactory.createTR();					
+		tr.setTitle(c.getNew().getPath());
+		tr.getTds().add(td1);
+		tr.getTds().add(td2);
+		tr.getTds().add(td3);
+		
+		tableLowerBondary.getTrs().add(tr);					
+		
+		xmiResource.getContents().add(td1);
+		xmiResource.getContents().add(td2);
+		xmiResource.getContents().add(td3);					
+		xmiResource.getContents().add(tr);
+	}
+
+	private void createUpperBondary(ResourceSet mayorVersionModel, TABLE tableUpperBondary, Change change) {
+		UpperBondary c = (UpperBondary)change;
+		
+		URI uri = URI.createURI(c.getOld().getEObject());
+		Parameter parameter = (Parameter)mayorVersionModel.getEObject(uri, true);
+		
+		TD td1 = htmlFactory.createTD();					
+		td1.setTitle("Parameter");
+		td1.setValue(parameter.getName());
+		
+		TD td2 = htmlFactory.createTD();					
+		td1.setTitle("Old value");
+		td1.setValue(c.getOld().getValue());
+		
+		TD td3 = htmlFactory.createTD();					
+		td1.setTitle("New value");
+		td1.setValue(c.getNew().getValue());
+		
+		TR tr = htmlFactory.createTR();					
+		tr.setTitle(c.getNew().getPath());
+		tr.getTds().add(td1);
+		tr.getTds().add(td2);
+		tr.getTds().add(td3);
+		
+		tableUpperBondary.getTrs().add(tr);					
+		
+		xmiResource.getContents().add(td1);
+		xmiResource.getContents().add(td2);
+		xmiResource.getContents().add(td3);					
+		xmiResource.getContents().add(tr);
+	}
+
+	private void createModifyParameterSchemaType(TABLE tableModifyParameterSchemaType, Change change) {
+		ModifyParameterSchemaType c = (ModifyParameterSchemaType)change;
+		
+		TD td1 = htmlFactory.createTD();					
+		
+		td1.setTitle("Parameter");
+		td1.setValue(c.getNew().getValue());
+		
+		TR tr = htmlFactory.createTR();					
+		tr.setTitle(c.getNew().getPath() + ":" + c.getNew().getMethod());
+		tr.getTds().add(td1);					
+		
+		tableModifyParameterSchemaType.getTrs().add(tr);					
+		
+		xmiResource.getContents().add(td1);					
+		xmiResource.getContents().add(tr);
+	}
+
+	private void createDeleteParameter(TABLE tableDeletePath, Change change) {
+		DeletePath c = (DeletePath)change;
+		
+		String path = "";
+		
+		TD td1 = htmlFactory.createTD();					
+		td1.setTitle("Deleted path");
+		td1.setValue(c.getOld().getValue());
+		
+		TR tr = htmlFactory.createTR();					
+		tr.setTitle(path);
+		tr.getTds().add(td1);					
+		
+		tableDeletePath.getTrs().add(tr);					
+		
+		xmiResource.getContents().add(td1);					
+		xmiResource.getContents().add(tr);
 	}
 
 	private void createUnsupportRequestMethod(TABLE tableSameParameter, Change change) {

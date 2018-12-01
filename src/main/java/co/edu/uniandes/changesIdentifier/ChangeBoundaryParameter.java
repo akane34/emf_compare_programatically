@@ -9,6 +9,7 @@ public class ChangeBoundaryParameter {
 	private String oldUri;
 	private String newUri;
 	private Boundary boundary;
+	private String path;	
 	
 	public Boundary getBoundary() {
 		return boundary;
@@ -40,5 +41,10 @@ public class ChangeBoundaryParameter {
 	public void setNewUri(String newUri) {
 		this.newUri = newUri;
 	}
-	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}	
 }

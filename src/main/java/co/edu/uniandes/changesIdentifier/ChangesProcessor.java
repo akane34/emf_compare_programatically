@@ -653,21 +653,29 @@ public class ChangesProcessor {
 		EObject left = ((AttributeChange)diff).getMatch().getLeft();
 		EObject right = ((AttributeChange)diff).getMatch().getRight();
 		if (left != null && left instanceof ParameterImpl && right != null && right instanceof ParameterImpl && att != null) {
-			ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
-			changeBoundaryParam.setOldParam((ParameterImpl)left);
-			changeBoundaryParam.setOldUri(EcoreUtil.getURI((ParameterImpl)left).toString());
+			ParameterImpl oldParameter = (ParameterImpl)(left);
+			ParameterImpl newParameter = (ParameterImpl)(right);
 			
-			changeBoundaryParam.setNewParam((ParameterImpl)right);
-			changeBoundaryParam.setNewUri(EcoreUtil.getURI((ParameterImpl)right).toString());
-			
-			if(att.getName().equals("maximum")) {
-				changeBoundaryParam.setBoundary(Boundary.UPPER);
-				changesBoundaryParameters.add(changeBoundaryParam);
+			if (oldParameter.eContainer() instanceof PathImpl && newParameter.eContainer() instanceof PathImpl){
+				PathImpl path = (PathImpl)oldParameter.eContainer();
+				
+				ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
+				changeBoundaryParam.setOldParam(oldParameter);
+				changeBoundaryParam.setOldUri(EcoreUtil.getURI(oldParameter).toString());
+				changeBoundaryParam.setPath(path.getRelativePath());
+				
+				changeBoundaryParam.setNewParam(newParameter);
+				changeBoundaryParam.setNewUri(EcoreUtil.getURI(newParameter).toString());
+												
+				if(att.getName().equals("maximum")) {
+					changeBoundaryParam.setBoundary(Boundary.UPPER);
+					changesBoundaryParameters.add(changeBoundaryParam);
+				}
+				else if(att.getName().equals("minimum")) {
+					changeBoundaryParam.setBoundary(Boundary.LOWER);
+					changesBoundaryParameters.add(changeBoundaryParam);
+				}			
 			}
-			else if(att.getName().equals("minimum")) {
-				changeBoundaryParam.setBoundary(Boundary.LOWER);
-				changesBoundaryParameters.add(changeBoundaryParam);
-			}			
 		}		
 	}
 	
@@ -770,6 +778,7 @@ public class ChangesProcessor {
 			path.setDifferenceKind(DifferenceKind.DELETE);
 			path.setPath(oldPath.getRelativePath());				
 			path.setOldPathUri(EcoreUtil.getURI(oldPath).toString());
+			path.setOldPath(oldPath);			
 			path.setNewPath(null);
 			path.setNewPathUri(null);
 		
