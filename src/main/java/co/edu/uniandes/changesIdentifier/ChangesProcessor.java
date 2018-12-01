@@ -551,8 +551,8 @@ public class ChangesProcessor {
 		if (((ReferenceChange)diff).getValue() instanceof ParameterImpl && diff.getKind() == DifferenceKind.ADD){
 			ParameterImpl parameter = (ParameterImpl)((ReferenceChange)diff).getValue();
 			
-			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
-				PathImpl path = (PathImpl)diff.getMatch().getRight().eContainer();
+			if (diff.getMatch().getLeft() != null && diff.getMatch().getLeft().eContainer() instanceof PathImpl){						
+				PathImpl path = (PathImpl)diff.getMatch().getLeft().eContainer();
 							
 				ChangeParameter param = new ChangeParameter();
 				param.setNewParameter(parameter);
