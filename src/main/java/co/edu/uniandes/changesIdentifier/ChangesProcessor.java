@@ -170,7 +170,7 @@ public class ChangesProcessor {
 			if(p.getPath().equals(changeParameter.getPath()) && p.getNewParameter().getName().equals(changeParameter.getNewParameter().getName())){
 				for(OperationWrapper operation : changeParameter.getOperations()) {
 					//belongs the same method
-					if(keyMap.endsWith(operation.getMethod())){
+					if(p.getMethod().equals(operation.getMethod())) {// keyMap.endsWith(operation.getMethod())){
 						exist = true;
 						break;
 					}
@@ -808,7 +808,7 @@ public class ChangesProcessor {
 		Operation putOperation = path.getPut();
 		Operation optionsOperation = path.getOptions();
 		
-		if (getOperation != null){				
+		if (getOperation != null && paramBelongsToOperation(param,getOperation)){				
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(getOperation);
 			wrapper.setMethod("Get");
@@ -816,7 +816,7 @@ public class ChangesProcessor {
 			
 			param.getOperations().add(wrapper);											
 		}
-		if (deleteOperation != null){	
+		if (deleteOperation != null && paramBelongsToOperation(param,deleteOperation)){	
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(deleteOperation);
 			wrapper.setMethod("Delete");			
@@ -824,7 +824,7 @@ public class ChangesProcessor {
 			
 			param.getOperations().add(wrapper);					
 		}
-		if (pathcOperation != null){		
+		if (pathcOperation != null && paramBelongsToOperation(param,pathcOperation)){		
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(pathcOperation);
 			wrapper.setMethod("Patch");
@@ -832,7 +832,7 @@ public class ChangesProcessor {
 			
 			param.getOperations().add(wrapper);					
 		}
-		if (postOperation != null){	
+		if (postOperation != null && paramBelongsToOperation(param,postOperation)){	
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(postOperation);
 			wrapper.setMethod("Post");
@@ -840,7 +840,7 @@ public class ChangesProcessor {
 			
 			param.getOperations().add(wrapper);					
 		}
-		if (putOperation != null){	
+		if (putOperation != null && paramBelongsToOperation(param,putOperation)){	
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(putOperation);
 			wrapper.setMethod("Put");
@@ -848,7 +848,7 @@ public class ChangesProcessor {
 			
 			param.getOperations().add(wrapper);					
 		}
-		if (optionsOperation != null){	
+		if (optionsOperation != null && paramBelongsToOperation(param,optionsOperation)){	
 			OperationWrapper wrapper = new OperationWrapper();
 			wrapper.setOperation(optionsOperation);
 			wrapper.setMethod("Options");
@@ -858,6 +858,17 @@ public class ChangesProcessor {
 		}
 	}	
 	
+	private static boolean paramBelongsToOperation(ChangeParameter param, Operation operation) {
+		boolean belongsTo = false;
+		for(Parameter p: operation.getParameters()) {
+			if(EcoreUtil.getURI(p).toString().equals(param.getNewParameterUri()) || EcoreUtil.getURI(p).toString().equals(param.getOldParameterUri())){
+					belongsTo = true;
+					break;
+			}
+		}
+		return belongsTo;
+	}
+
 	private static void setOperation(PathImpl path, ChangeResponse param) {
 		Operation getOperation = path.getGet();
 		Operation deleteOperation = path.getDelete();
