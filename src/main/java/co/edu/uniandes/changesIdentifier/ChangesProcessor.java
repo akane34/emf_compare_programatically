@@ -236,8 +236,9 @@ public class ChangesProcessor {
 						
 						if ((drschemaName != null && arschemaName == null) ||
 							(arschemaName != null && drschemaName == null) ||
-							(drschemaName != null && arschemaName != null && !drschemaName.equals(arschemaName))){
-						
+							(drschemaName != null && arschemaName != null && !drschemaName.equals(arschemaName)) ||
+							(drschema != null && arschema != null && !drschema.getType().toString().equals(arschema.getType().toString())) ){
+							
 							System.out.println(dr.getPath() + "  r:" + dr.getResponse().getSchema().getName());
 							System.out.println(ar.getPath() + "  r:" + ar.getResponse().getSchema().getName());
 							System.out.println("\n ");

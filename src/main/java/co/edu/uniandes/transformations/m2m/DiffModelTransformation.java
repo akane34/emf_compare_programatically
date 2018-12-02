@@ -194,14 +194,14 @@ public class DiffModelTransformation {
 		
 	public void createChangeTypeOfReturnValueInstance(ChangeResponse oldResponse, ChangeResponse newResponse, List<Change> changes){
 		ElementReference oldElementReference = diffFactory.createElementReference();
-		oldElementReference.setValue(oldResponse.getResponse().getSchema().getName());		
+		oldElementReference.setValue(oldResponse.getResponse().getSchema().getName()!=null? oldResponse.getResponse().getSchema().getName() : oldResponse.getResponse().getSchema().getType().toString());		
 		oldElementReference.setEObject(oldResponse.getUri());
 		oldElementReference.setPath(oldResponse.getPath());
 		oldElementReference.setMethod(oldResponse.getMethod());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(newResponse.getUri());
-		newElementReference.setValue(newResponse.getResponse().getSchema().getName());
+		newElementReference.setValue(newResponse.getResponse().getSchema().getName()!=null? newResponse.getResponse().getSchema().getName(): newResponse.getResponse().getSchema().getType().toString());
 		newElementReference.setPath(newResponse.getPath());
 		newElementReference.setMethod(newResponse.getMethod());
 						
