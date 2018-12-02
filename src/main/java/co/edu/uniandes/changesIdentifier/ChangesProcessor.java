@@ -26,6 +26,7 @@ import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
 import edu.uoc.som.openapi.Path;
+import edu.uoc.som.openapi.Response;
 import edu.uoc.som.openapi.Schema;
 import edu.uoc.som.openapi.impl.OperationImpl;
 import edu.uoc.som.openapi.impl.ParameterImpl;
@@ -686,15 +687,15 @@ public class ChangesProcessor {
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
 				PathImpl path = (PathImpl)diff.getMatch().getRight().eContainer();
 				
-				ChangeResponse param = new ChangeResponse();
-				param.setResponse(response);
-				param.setVersion(newVersion);
-				param.setDifferenceKind(DifferenceKind.ADD);
-				param.setPath(path.getRelativePath());				
-				param.setUri(EcoreUtil.getURI(response).toString());
-				setOperation(path, param);			
+				ChangeResponse changeResponse = new ChangeResponse();
+				changeResponse.setResponse(response);
+				changeResponse.setVersion(newVersion);
+				changeResponse.setDifferenceKind(DifferenceKind.ADD);
+				changeResponse.setPath(path.getRelativePath());				
+				changeResponse.setUri(EcoreUtil.getURI(response).toString());
+				setOperation(path, changeResponse);			
 				
-				addResponses.add(param);
+				addResponses.add(changeResponse);
 			}
 		}
 	}	
@@ -705,15 +706,15 @@ public class ChangesProcessor {
 			if (diff.getMatch().getLeft() != null && diff.getMatch().getLeft().eContainer() instanceof PathImpl){						
 				PathImpl path = (PathImpl)diff.getMatch().getLeft().eContainer();
 				
-				ChangeResponse param = new ChangeResponse();
-				param.setResponse(response);
-				param.setVersion(oldVersion);
-				param.setDifferenceKind(DifferenceKind.DELETE);
-				param.setPath(path.getRelativePath());				
-				param.setUri(EcoreUtil.getURI(response).toString());
-				setOperation(path, param);						
+				ChangeResponse changeResponse = new ChangeResponse();
+				changeResponse.setResponse(response);
+				changeResponse.setVersion(oldVersion);
+				changeResponse.setDifferenceKind(DifferenceKind.DELETE);
+				changeResponse.setPath(path.getRelativePath());				
+				changeResponse.setUri(EcoreUtil.getURI(response).toString());
+				setOperation(path, changeResponse);						
 				
-				deleteResponse.add(param);				
+				deleteResponse.add(changeResponse);				
 			}
 		}
 	}
@@ -882,7 +883,7 @@ public class ChangesProcessor {
 		return belongsTo;
 	}
 
-	private static void setOperation(PathImpl path, ChangeResponse param) {
+	private static void setOperation(PathImpl path, ChangeResponse changeResponse) {
 		Operation getOperation = path.getGet();
 		Operation deleteOperation = path.getDelete();
 		Operation pathcOperation = path.getPatch();
@@ -890,32 +891,43 @@ public class ChangesProcessor {
 		Operation putOperation = path.getPut();		
 		Operation optionsOperation = path.getOptions();
 		
-		if (getOperation != null){							
-			param.setOperation(getOperation);	
-			param.setMethod("Get");
+		if (getOperation != null && responseBelongsToOperation(changeResponse,getOperation)){							
+			changeResponse.setOperation(getOperation);	
+			changeResponse.setMethod("Get");
 		}
-		else if (deleteOperation != null){							
-			param.setOperation(deleteOperation);	
-			param.setMethod("Delete");
+		else if (deleteOperation != null && responseBelongsToOperation(changeResponse,deleteOperation)){							
+			changeResponse.setOperation(deleteOperation);	
+			changeResponse.setMethod("Delete");
 		}
-		else if (pathcOperation != null){							
-			param.setOperation(pathcOperation);		
-			param.setMethod("Pathc");
+		else if (pathcOperation != null && responseBelongsToOperation(changeResponse,pathcOperation)){							
+			changeResponse.setOperation(pathcOperation);		
+			changeResponse.setMethod("Pathc");
 		}
-		else if (postOperation != null){							
-			param.setOperation(postOperation);
-			param.setMethod("Post");
+		else if (postOperation != null && responseBelongsToOperation(changeResponse,postOperation)){							
+			changeResponse.setOperation(postOperation);
+			changeResponse.setMethod("Post");
 		}
-		else if (putOperation != null){							
-			param.setOperation(putOperation);
-			param.setMethod("Put");
+		else if (putOperation != null && responseBelongsToOperation(changeResponse,putOperation)){							
+			changeResponse.setOperation(putOperation);
+			changeResponse.setMethod("Put");
 		}
-		else if (optionsOperation != null){							
-			param.setOperation(optionsOperation);
-			param.setMethod("Options");
+		else if (optionsOperation != null && responseBelongsToOperation(changeResponse,optionsOperation)){							
+			changeResponse.setOperation(optionsOperation);
+			changeResponse.setMethod("Options");
 		}
 	}
 	
+
+	private static boolean responseBelongsToOperation(ChangeResponse changeResponse, Operation operation) {
+		boolean belongsTo = false;
+		for(Response response: operation.getResponses()) {
+			if(EcoreUtil.getURI(response).toString().equals(changeResponse.getUri())){
+					belongsTo = true;
+					break;
+			}
+		}
+		return belongsTo;
+	}
 
 	private static boolean isNullOrEmpty(String value){
 		return value == null || value.trim().isEmpty();
