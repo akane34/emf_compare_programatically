@@ -519,7 +519,8 @@ public class ChangesProcessor {
 
 	public static void getChangedParameters(List<ChangeParameter> changeParameters, Diff diff, String oldVersion, String newVersion) {
 		if (diff.getKind() == DifferenceKind.CHANGE){			
-			if (diff.getMatch().getRight() != null && diff.getMatch().getRight() instanceof ParameterImpl){						
+			if (diff.getMatch().getRight() != null && diff.getMatch().getRight() instanceof ParameterImpl &&
+				diff.getMatch().getLeft() != null && diff.getMatch().getLeft() instanceof ParameterImpl ){						
 				Parameter oldParameter = (Parameter)diff.getMatch().getLeft();
 				Parameter newParameter = (Parameter)diff.getMatch().getRight();
 				
@@ -533,18 +534,28 @@ public class ChangesProcessor {
 				
 				if (oldParameter != null)
 					param.setOldParameterUri(EcoreUtil.getURI(oldParameter).toString());
-								
+				PathImpl pathNewParam=null;
+				PathImpl pathOldParam=null;			
 				for(Setting setting : getUsages(newParameter)){
     				EObject object = setting.getEObject();
     		    	if (object instanceof OperationImpl){
-    		    		PathImpl path = ((PathImpl)((OperationImpl)object).eContainer());    		    		
-    		    		param.setPath(path.getRelativePath());
-    		    		setOperation(path, param);
+    		    		pathNewParam = ((PathImpl)((OperationImpl)object).eContainer());    		    		
     		    		break;
     		    	}
-    		    }				
-				
-				changeParameters.add(param);						
+    		    }	
+				for(Setting setting : getUsages(oldParameter)){
+    				EObject object = setting.getEObject();
+    		    	if (object instanceof OperationImpl){
+    		    		pathOldParam = ((PathImpl)((OperationImpl)object).eContainer());    		    		
+    		    		break;
+    		    	}
+    		    }
+				if(pathOldParam!=null && pathNewParam!= null && pathNewParam.getRelativePath().equals(pathOldParam.getRelativePath())) {
+					param.setPath(pathNewParam.getRelativePath());
+		    		setOperation(pathNewParam, param);
+					
+					changeParameters.add(param);						
+				}
 			}			
 		}
 	}
