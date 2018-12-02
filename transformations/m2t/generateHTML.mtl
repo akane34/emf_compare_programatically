@@ -2,12 +2,12 @@
 [module generateHTML('http://web.emn.fr/html')]
 [template public generateHTML(aBody : BODY)]
 [comment @main/]
-[file ('index.html', false, 'UTF-8')]
+[file ('changes.html', false, 'UTF-8')]
 <!DOCTYPE html>
 <html lang="en" >
 <head>
 	<meta charset="UTF-8">
-	<title>FAQ</title>   
+	<title>Herramienta de detección automática de cambios estáticos en versiones de API</title>   
 	<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 	<link rel="stylesheet" href="css/style.css">
 </head>

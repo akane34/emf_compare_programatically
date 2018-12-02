@@ -453,11 +453,11 @@ public class ChangesProcessor {
 			    for (ChangeContentType p : entry.getValue()){
 			    	if (p.getKind() == DifferenceKind.DELETE){		
 			    		added.add(p);			    		
-			    		System.out.println(entry.getKey() + " " + p.getValue() + " Added");		    		
+			    		System.out.println(entry.getKey() + " " + p.getNewValue() + " Added");		    		
 			    	}
 			    	if (p.getKind() == DifferenceKind.ADD){			    		
 			    		deleted.add(p);
-			    		System.out.println(entry.getKey() + " " + p.getValue() + " Deleted");		    		
+			    		System.out.println(entry.getKey() + " " + p.getOldValue() + " Deleted");		    		
 			    	}		    	
 			    }
 			}
@@ -757,10 +757,23 @@ public class ChangesProcessor {
 					ChangeContentType change = new ChangeContentType();
 					change.setAttr(att);
 					change.setPath(pathRight.getRelativePath());
-					change.setUri(EcoreUtil.getURI(right).toString());
-					change.setKind(diff.getKind());
-					change.setValue(((AttributeChange)diff).getValue().toString());
-					change.setPathObject(pathRight);					
+					change.setOldUri(EcoreUtil.getURI(left).toString());
+					change.setNewUri(EcoreUtil.getURI(right).toString());
+					change.setKind(diff.getKind());					
+					change.setPathObject(pathRight);
+					
+					String produceAll = "";
+					for (String produce : ((Operation)left).getProduces()){
+						produceAll += produce + " ";
+					}
+					change.setOldValue(produceAll);
+					
+					produceAll = "";
+					for (String produce : ((Operation)right).getProduces()){
+						produceAll += produce + " ";
+					}
+					change.setNewValue(produceAll);
+					
 					contentTypesUpdated.add(change);
 				 }					 
 			 }

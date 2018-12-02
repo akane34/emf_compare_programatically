@@ -6,18 +6,20 @@ import edu.uoc.som.openapi.Path;
 
 public class ChangeContentType {
 	private String path;
-	private String uri;
+	private String oldUri;
+	private String newUri;
 	private EAttribute attr;
 	private DifferenceKind kind;
-	private String value;
+	private String oldValue;
+	private String newValue;
 	private Path pathObject;
 	
 	
-	public String getValue() {
-		return value;
+	public String getOldValue() {
+		return oldValue;
 	}
-	public void setValue(String value) {
-		this.value = value;
+	public void setOldValue(String value) {
+		this.oldValue = value;
 	}
 	public String getPath() {
 		return path;
@@ -25,11 +27,11 @@ public class ChangeContentType {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	public String getUri() {
-		return uri;
+	public String getOldUri() {
+		return oldUri;
 	}
-	public void setUri(String uri) {
-		this.uri = uri;
+	public void setOldUri(String uri) {
+		this.oldUri = uri;
 	}
 	public EAttribute getAttr() {
 		return attr;
@@ -49,5 +51,17 @@ public class ChangeContentType {
 	}
 	public void setPathObject(Path pathObject) {
 		this.pathObject = pathObject;
+	}
+	public String getNewValue() {
+		return newValue;
+	}
+	public void setNewValue(String newValue) {
+		this.newValue = newValue;
+	}
+	public String getNewUri() {
+		return newUri;
+	}
+	public void setNewUri(String newUri) {
+		this.newUri = newUri;
 	}	
 }

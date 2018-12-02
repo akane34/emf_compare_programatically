@@ -151,7 +151,7 @@ public class DiffModelTransformation {
 		
 		RemoveParameter delete = diffFactory.createRemoveParameter();
 		delete.setChangeElement(APIElementType.METHOD_PARAMETER);
-		delete.setNew(newElementReference);
+		delete.setOld(newElementReference);
 				
 		changes.add(delete);
 		
@@ -163,8 +163,8 @@ public class DiffModelTransformation {
 		
 		for (ChangeContentType contentType : deleted){
 			ElementReference oldElementReference = diffFactory.createElementReference();
-			oldElementReference.setValue(contentType.getValue());		
-			oldElementReference.setEObject(contentType.getUri());
+			oldElementReference.setValue(contentType.getOldValue());		
+			oldElementReference.setEObject(contentType.getOldUri());
 			oldElementReference.setPath(contentType.getPath());			
 			
 			Delete delete = diffFactory.createDelete();
@@ -177,13 +177,13 @@ public class DiffModelTransformation {
 		
 		for (ChangeContentType contentType : added){
 			ElementReference newElementReference = diffFactory.createElementReference();
-			newElementReference.setValue(contentType.getValue());		
-			newElementReference.setEObject(contentType.getUri());
+			newElementReference.setValue(contentType.getNewValue());		
+			newElementReference.setEObject(contentType.getNewUri());
 			newElementReference.setPath(contentType.getPath());
 			
 			Add add = diffFactory.createAdd();
 			add.setChangeElement(APIElementType.CONTENT_TYPE);
-			add.setOld(newElementReference);
+			add.setNew(newElementReference);
 			
 			exposeData.getSimpleDiffs().add(add);
 			changes.add(add);
@@ -417,46 +417,43 @@ public class DiffModelTransformation {
 		changes.add(returnType);
 	}
 
-	public void createProduceUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
+	public void createProduceUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {		
+		ElementReference oldElementReference = diffFactory.createElementReference();
+		oldElementReference.setEObject(contentTypeUpdated.getOldUri());
+		oldElementReference.setPath(contentTypeUpdated.getPath());
+		oldElementReference.setValue(contentTypeUpdated.getOldValue());
 		
-		ElementReference elementReference = diffFactory.createElementReference();
-		elementReference.setEObject(contentTypeUpdated.getUri());
-		elementReference.setPath(contentTypeUpdated.getPath());
-		elementReference.setValue(contentTypeUpdated.getValue());
+		ElementReference newElementReference = diffFactory.createElementReference();
+		newElementReference.setEObject(contentTypeUpdated.getNewUri());
+		newElementReference.setPath(contentTypeUpdated.getPath());
+		newElementReference.setValue(contentTypeUpdated.getNewValue());
+		
 		ProduceType produceType = diffFactory.createProduceType();
 		produceType.setChangeElement(APIElementType.CONTENT_TYPE);
 		
-		switch (contentTypeUpdated.getKind()) {
-		case ADD:
-			produceType.setNew(elementReference);
-			break;
-		case DELETE:
-			produceType.setOld(elementReference);
-			break;
-		default:
-			break;
-		}
+		produceType.setNew(newElementReference);		
+		produceType.setOld(oldElementReference);
+		
 		changes.add(produceType);
 	}
 	
 	public void createConsumeTypeUpdate(ChangeContentType contentTypeUpdated, EList<Change> changes) {
-		ElementReference elementReference = diffFactory.createElementReference();
-		elementReference.setEObject(contentTypeUpdated.getUri());
-		elementReference.setPath(contentTypeUpdated.getPath());
-		elementReference.setValue(contentTypeUpdated.getValue());
+		ElementReference oldElementReference = diffFactory.createElementReference();
+		oldElementReference.setEObject(contentTypeUpdated.getOldUri());
+		oldElementReference.setPath(contentTypeUpdated.getPath());
+		oldElementReference.setValue(contentTypeUpdated.getOldValue());
+		
+		ElementReference newElementReference = diffFactory.createElementReference();
+		newElementReference.setEObject(contentTypeUpdated.getNewUri());
+		newElementReference.setPath(contentTypeUpdated.getPath());
+		newElementReference.setValue(contentTypeUpdated.getNewValue());
+		
 		ConsumeType consumeType = diffFactory.createConsumeType();
 		consumeType.setChangeElement(APIElementType.CONTENT_TYPE);
+				
+		consumeType.setNew(newElementReference);		
+		consumeType.setOld(oldElementReference);
 		
-		switch (contentTypeUpdated.getKind()) {
-		case ADD:
-			consumeType.setNew(elementReference);
-			break;
-		case DELETE:
-			consumeType.setOld(elementReference);
-			break;
-		default:
-			break;
-		}
 		changes.add(consumeType);
 		
 	}
@@ -483,16 +480,7 @@ public class DiffModelTransformation {
 		ModifyParameterSchemaType modifyParameter = diffFactory.createModifyParameterSchemaType();		
 		modifyParameter.setChangeElement(APIElementType.METHOD_PARAMETER);		
 		modifyParameter.setNew(newElementReference);
-		/*
-		for (ModifyParameterSchema m : parameterSchemas){
-			Schema s = diffFactory.createSchema();
-			s.setName(m.getSchema().getName());
-			s.setUri(EcoreUtil.getURI(m.getSchema()).toString());
-			
-			xmiResource.getContents().add(s);
-			modifyParameter.getSchemas().add(s);
-		}
-		*/
+		
 		changes.add(modifyParameter);
 	}
 	
@@ -505,7 +493,7 @@ public class DiffModelTransformation {
 		
 		Delete delete = diffFactory.createDelete();
 		delete.setChangeElement(APIElementType.STATUS_CODE);
-		delete.setNew(oldElementReference);
+		delete.setOld(oldElementReference);
 		
 		RemoveRestriction removeRestriction = diffFactory.createRemoveRestriction();
 		removeRestriction.setChangeElement(APIElementType.STATUS_CODE);
