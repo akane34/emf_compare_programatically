@@ -163,7 +163,7 @@ public class DiffModelTransformation {
 		
 		for (ChangeContentType contentType : deleted){
 			ElementReference oldElementReference = diffFactory.createElementReference();
-			oldElementReference.setValue(contentType.getOldValue());		
+			oldElementReference.setValue(contentType.getOldValueProduces());		
 			oldElementReference.setEObject(contentType.getOldUri());
 			oldElementReference.setPath(contentType.getPath());			
 			
@@ -177,7 +177,7 @@ public class DiffModelTransformation {
 		
 		for (ChangeContentType contentType : added){
 			ElementReference newElementReference = diffFactory.createElementReference();
-			newElementReference.setValue(contentType.getNewValue());		
+			newElementReference.setValue(contentType.getNewValueProduces());		
 			newElementReference.setEObject(contentType.getNewUri());
 			newElementReference.setPath(contentType.getPath());
 			
@@ -421,12 +421,12 @@ public class DiffModelTransformation {
 		ElementReference oldElementReference = diffFactory.createElementReference();
 		oldElementReference.setEObject(contentTypeUpdated.getOldUri());
 		oldElementReference.setPath(contentTypeUpdated.getPath());
-		oldElementReference.setValue(contentTypeUpdated.getOldValue());
+		oldElementReference.setValue(contentTypeUpdated.getOldValueProduces());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(contentTypeUpdated.getNewUri());
 		newElementReference.setPath(contentTypeUpdated.getPath());
-		newElementReference.setValue(contentTypeUpdated.getNewValue());
+		newElementReference.setValue(contentTypeUpdated.getNewValueProduces());
 		
 		ProduceType produceType = diffFactory.createProduceType();
 		produceType.setChangeElement(APIElementType.CONTENT_TYPE);
@@ -441,12 +441,12 @@ public class DiffModelTransformation {
 		ElementReference oldElementReference = diffFactory.createElementReference();
 		oldElementReference.setEObject(contentTypeUpdated.getOldUri());
 		oldElementReference.setPath(contentTypeUpdated.getPath());
-		oldElementReference.setValue(contentTypeUpdated.getOldValue());
+		oldElementReference.setValue(contentTypeUpdated.getOldValueConsumes());
 		
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(contentTypeUpdated.getNewUri());
 		newElementReference.setPath(contentTypeUpdated.getPath());
-		newElementReference.setValue(contentTypeUpdated.getNewValue());
+		newElementReference.setValue(contentTypeUpdated.getNewValueConsumes());
 		
 		ConsumeType consumeType = diffFactory.createConsumeType();
 		consumeType.setChangeElement(APIElementType.CONTENT_TYPE);
