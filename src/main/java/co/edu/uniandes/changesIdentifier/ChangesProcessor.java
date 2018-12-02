@@ -313,9 +313,13 @@ public class ChangesProcessor {
 	
 	public static void processContentTypesUpdates(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
 		for(ChangeContentType contentTypeUpdated : contentTypesUpdated) {
-			if (contentTypeUpdated.getAttr().getName().equals("produces")) {
+			if (contentTypeUpdated.getAttr().getName().equals("produces") &&
+				!contentTypeUpdated.getOldValueProduces().equals(contentTypeUpdated.getNewValueProduces()) &&
+				contentTypeUpdated.getKind() == DifferenceKind.ADD) {
 				diffMetamodel.createProduceUpdate(contentTypeUpdated, changes);
-			}else if (contentTypeUpdated.getAttr().getName().equals("consumes")) {
+			}else if (contentTypeUpdated.getAttr().getName().equals("consumes") &&
+					!contentTypeUpdated.getOldValueConsumes().equals(contentTypeUpdated.getNewValueConsumes()) &&
+					contentTypeUpdated.getKind() == DifferenceKind.ADD) {
 				diffMetamodel.createConsumeTypeUpdate(contentTypeUpdated, changes);
 			}
 		}		
@@ -455,11 +459,11 @@ public class ChangesProcessor {
 			    for (ChangeContentType p : entry.getValue()){
 			    	if (p.getKind() == DifferenceKind.DELETE){		
 			    		added.add(p);			    		
-			    		System.out.println(entry.getKey() + " " + p.getNewValue() + " Added");		    		
+			    		System.out.println(entry.getKey() + " " + p.getNewValueProduces() + " Added");		    		
 			    	}
 			    	if (p.getKind() == DifferenceKind.ADD){			    		
 			    		deleted.add(p);
-			    		System.out.println(entry.getKey() + " " + p.getOldValue() + " Deleted");		    		
+			    		System.out.println(entry.getKey() + " " + p.getOldValueProduces() + " Deleted");		    		
 			    	}		    	
 			    }
 			}
@@ -764,17 +768,29 @@ public class ChangesProcessor {
 					change.setKind(diff.getKind());					
 					change.setPathObject(pathRight);
 					
-					String produceAll = "";
+					String oldProduceAll = "";
 					for (String produce : ((Operation)left).getProduces()){
-						produceAll += produce + " ";
+						oldProduceAll += produce + " ";
 					}
-					change.setOldValue(produceAll);
+					change.setOldValueProduces(oldProduceAll);
 					
-					produceAll = "";
+					String newProduceAll = "";
 					for (String produce : ((Operation)right).getProduces()){
-						produceAll += produce + " ";
+						newProduceAll += produce + " ";
 					}
-					change.setNewValue(produceAll);
+					change.setNewValueProduces(newProduceAll);
+					
+					String oldConsumesAll = "";
+					for (String consumes : ((Operation)left).getConsumes()){
+						oldConsumesAll += consumes + " ";
+					}
+					change.setOldValueConsumes(oldConsumesAll);
+					
+					String newConsumesAll = "";
+					for (String consumes : ((Operation)right).getConsumes()){
+						newConsumesAll += consumes + " ";
+					}
+					change.setNewValueConsumes(newConsumesAll);
 					
 					contentTypesUpdated.add(change);
 				 }					 

@@ -10,17 +10,12 @@ public class ChangeContentType {
 	private String newUri;
 	private EAttribute attr;
 	private DifferenceKind kind;
-	private String oldValue;
-	private String newValue;
+	private String oldValueProduces;
+	private String newValueProduces;
+	private String oldValueConsumes;
+	private String newValueConsumes;
 	private Path pathObject;
-	
-	
-	public String getOldValue() {
-		return oldValue;
-	}
-	public void setOldValue(String value) {
-		this.oldValue = value;
-	}
+			
 	public String getPath() {
 		return path;
 	}
@@ -41,8 +36,7 @@ public class ChangeContentType {
 	}
 	public void setKind(DifferenceKind kind) {
 		this.kind = kind;
-	}
-	
+	}	
 	public DifferenceKind getKind() {
 		return kind;
 	}
@@ -51,17 +45,35 @@ public class ChangeContentType {
 	}
 	public void setPathObject(Path pathObject) {
 		this.pathObject = pathObject;
-	}
-	public String getNewValue() {
-		return newValue;
-	}
-	public void setNewValue(String newValue) {
-		this.newValue = newValue;
-	}
+	}	
 	public String getNewUri() {
 		return newUri;
 	}
 	public void setNewUri(String newUri) {
 		this.newUri = newUri;
+	}
+	public String getOldValueProduces() {
+		return oldValueProduces;
+	}
+	public void setOldValueProduces(String oldValueProduces) {
+		this.oldValueProduces = oldValueProduces;
+	}
+	public String getNewValueProduces() {
+		return newValueProduces;
+	}
+	public void setNewValueProduces(String newValueProduces) {
+		this.newValueProduces = newValueProduces;
+	}
+	public String getOldValueConsumes() {
+		return oldValueConsumes;
+	}
+	public void setOldValueConsumes(String oldValueConsumes) {
+		this.oldValueConsumes = oldValueConsumes;
+	}
+	public String getNewValueConsumes() {
+		return newValueConsumes;
+	}
+	public void setNewValueConsumes(String newValueConsumes) {
+		this.newValueConsumes = newValueConsumes;
 	}	
 }

@@ -164,7 +164,7 @@ public class HtmlModelTransformation {
 					createAddParameter(tableAddParameter, change);
 				}
 				else if (change instanceof UnsupportRequestMethod){
-					createUnsupportRequestMethod(tableSameParameter, change);
+					createUnsupportRequestMethod(tableUnsupportRequestMethod, change);
 				}
 				else if (change instanceof DeletePath){
 					createDeletePath(tableDeletePath, change);
@@ -207,10 +207,7 @@ public class HtmlModelTransformation {
 				}
 				else if (change instanceof AddRestriction){
 					createAddRestriction(tableAddRestriction, change);
-				}
-				else if (change instanceof AddRestriction){
-					createAddRestriction(tableAddRestriction, change);
-				}
+				}				
 				else if (change instanceof ReturnType){
 					createReturnType(tableReturnType, change);
 				}
@@ -426,7 +423,7 @@ public class HtmlModelTransformation {
 		value = new StringBuilder("");
 		for (Simple simple : c.getSimpleDiffs()){
 			if (simple instanceof Delete){
-				path = ((Delete)simple).getOld().getPath() + ":" + ((Delete)simple).getOld().getMethod();;
+				path = ((Delete)simple).getOld().getPath();
 				value.append(((Delete)simple).getOld().getValue());
 				value.append(" ");
 			}
@@ -438,7 +435,7 @@ public class HtmlModelTransformation {
 		value = new StringBuilder("");
 		for (Simple simple : c.getSimpleDiffs()){
 			if (simple instanceof Add){
-				path = ((Add)simple).getNew().getPath() + ":" + ((Add)simple).getNew().getMethod();;
+				path = ((Add)simple).getNew().getPath();
 				value.append(((Add)simple).getNew().getValue());
 				value.append(" ");
 			}
@@ -670,7 +667,7 @@ public class HtmlModelTransformation {
 		td1.setValue(c.getNew().getValue());
 		
 		TR tr = htmlFactory.createTR();					
-		tr.setTitle(c.getNew().getPath() + ":" + c.getNew().getMethod());
+		tr.setTitle(c.getNew().getPath());
 		tr.getTds().add(td1);					
 		
 		tableModifyParameterSchemaType.getTrs().add(tr);					
@@ -682,14 +679,12 @@ public class HtmlModelTransformation {
 	private void createDeletePath(TABLE tableDeletePath, Change change) {
 		DeletePath c = (DeletePath)change;
 		
-		String path = "";
-		
 		TD td1 = htmlFactory.createTD();					
 		td1.setTitle("Deleted path");
 		td1.setValue(c.getOld().getValue());
 		
 		TR tr = htmlFactory.createTR();					
-		tr.setTitle(path);
+		tr.setTitle(c.getOld().getValue());
 		tr.getTds().add(td1);					
 		
 		tableDeletePath.getTrs().add(tr);					
@@ -698,11 +693,9 @@ public class HtmlModelTransformation {
 		xmiResource.getContents().add(tr);
 	}
 
-	private void createUnsupportRequestMethod(TABLE tableSameParameter, Change change) {
+	private void createUnsupportRequestMethod(TABLE tableUnsupportRequestMethod, Change change) {
 		UnsupportRequestMethod c = (UnsupportRequestMethod)change;
-		
-		String path = "";
-		
+	
 		TD td1 = htmlFactory.createTD();					
 		td1.setTitle("Method");
 		td1.setValue(c.getOld().getMethod());
@@ -712,11 +705,11 @@ public class HtmlModelTransformation {
 		td2.setValue(c.getOld().getValue());
 		
 		TR tr = htmlFactory.createTR();					
-		tr.setTitle(path);
+		tr.setTitle(c.getOld().getPath());
 		tr.getTds().add(td1);
 		tr.getTds().add(td2);
 		
-		tableSameParameter.getTrs().add(tr);					
+		tableUnsupportRequestMethod.getTrs().add(tr);					
 		
 		xmiResource.getContents().add(td1);
 		xmiResource.getContents().add(td2);
