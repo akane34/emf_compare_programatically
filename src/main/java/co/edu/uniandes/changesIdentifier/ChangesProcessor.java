@@ -685,7 +685,7 @@ public class ChangesProcessor {
 			
 			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
 				PathImpl path = (PathImpl)diff.getMatch().getRight().eContainer();
-								
+				
 				ChangeResponse param = new ChangeResponse();
 				param.setResponse(response);
 				param.setVersion(newVersion);
@@ -702,9 +702,9 @@ public class ChangesProcessor {
 		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.ADD){
 			ResponseImpl response = (ResponseImpl)((ReferenceChange)diff).getValue();
 			
-			if (diff.getMatch().getRight() != null && diff.getMatch().getRight().eContainer() instanceof PathImpl){						
-				PathImpl path = (PathImpl)diff.getMatch().getRight().eContainer();
-							
+			if (diff.getMatch().getLeft() != null && diff.getMatch().getLeft().eContainer() instanceof PathImpl){						
+				PathImpl path = (PathImpl)diff.getMatch().getLeft().eContainer();
+				
 				ChangeResponse param = new ChangeResponse();
 				param.setResponse(response);
 				param.setVersion(oldVersion);
