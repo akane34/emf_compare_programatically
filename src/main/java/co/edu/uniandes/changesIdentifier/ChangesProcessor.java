@@ -783,7 +783,7 @@ public class ChangesProcessor {
 	
 	
 	public static void getDeletedPaths(List<ChangePath> deletePaths, Diff diff, String oldVersion, String newVersion) {
-		if (((ReferenceChange)diff).getValue() instanceof PathImpl && diff.getKind() == DifferenceKind.ADD){
+		if (((ReferenceChange)diff).getValue() instanceof PathImpl && (diff.getKind() == DifferenceKind.ADD  || diff.getKind() == DifferenceKind.MOVE || diff.getKind() == DifferenceKind.CHANGE)){
 			PathImpl oldPath = (PathImpl)((ReferenceChange)diff).getValue();
 							
 			ChangePath path = new ChangePath();			

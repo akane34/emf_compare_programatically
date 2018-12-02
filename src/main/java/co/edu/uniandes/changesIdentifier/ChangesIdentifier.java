@@ -21,6 +21,7 @@ import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelOutputType;
 import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
 import co.edu.uniandes.util.Tools;
+import edu.uoc.som.openapi.impl.PathImpl;
 
 public class ChangesIdentifier {
 
@@ -64,7 +65,7 @@ public class ChangesIdentifier {
 		List<ChangeOperation> changeOperations = new ArrayList<ChangeOperation>();
 		
 		for (Diff diff : diffs){			
-			if (diff instanceof ReferenceChange){								
+			if (diff instanceof ReferenceChange){
 				ChangesProcessor.getDeletedParameters(deleteParameters, operations, diff, minorVersion);				
 				ChangesProcessor.getAddedParameters(addParameters, operations, diff, mayorVersion);				
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
