@@ -371,7 +371,7 @@ public class ChangesProcessor {
 		}
 	}
 
-	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangeOperation> deleteOperations, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
+	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- ModifyParameterSchemaType");
 		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
 		
@@ -401,7 +401,7 @@ public class ChangesProcessor {
 			    		    		String relativePath = path.getRelativePath();
 			    		    		
 			    		    		boolean isDeleted = false;
-			    		    		for (ChangeOperation oper : deleteOperations){			    		    			
+			    		    		for (ChangePath oper : deletePaths){			    		    			
 			    		    			if (relativePath.equals(oper.getPath())){
 			    		    				isDeleted = true;
 			    		    				break;
