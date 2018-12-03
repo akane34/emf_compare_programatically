@@ -20,7 +20,66 @@
 					<source>1.8</source>
 					<target>1.8</target> 
 				</configuration>
+			</plugin>					
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-resources-plugin</artifactId>
+			   <executions>
+			       <execution>
+			           <id>copy-folder</id>
+			           <phase>install</phase>
+			           <goals>
+			               <goal>copy-resources</goal>
+			           </goals>
+			           <configuration>
+			               <outputDirectory>${project.basedir}/target/classes</outputDirectory>
+			               <resources>
+			                   <resource>
+			                    	<filtering>false</filtering>
+			                    	<directory>${project.basedir}/bin</directory>
+			                   </resource>
+			                   <resource>
+			                    	<filtering>false</filtering>
+			                    	<directory>${project.basedir}/transformations/m2t</directory>
+			                   </resource>
+			                   <resource>
+			                    	<filtering>false</filtering>
+			                    	<directory>${project.basedir}/metamodels</directory>
+			                   </resource>
+			               </resources>
+			           </configuration>
+			    </execution>
+			   </executions>
 			</plugin>
+			<plugin> 
+		        <groupId>org.apache.maven.plugins</groupId> 
+		        <artifactId>maven-war-plugin</artifactId> 
+		        <version>2.0.2</version> 
+		        <configuration> 
+		          <webResources> 
+		            <resource> 
+		              <directory>${project.basedir}/lib</directory> 
+		              <targetPath>WEB-INF/lib</targetPath> 
+		            </resource>
+		            <resource> 
+		              <directory>${project.basedir}/transformations/m2t</directory> 
+		              <targetPath>WEB-INF/classes</targetPath> 
+		            </resource> 
+		            <resource> 
+		              <directory>${project.basedir}/metamodels</directory> 
+		              <targetPath>WEB-INF/classes</targetPath> 
+		            </resource>
+		            <resource> 
+		              <directory>${project.basedir}/bin</directory> 
+		              <targetPath>WEB-INF/classes</targetPath> 
+		            </resource>
+		            <resource> 
+		              <directory>${project.basedir}/assets</directory> 
+		              <targetPath>/</targetPath> 
+		            </resource>		 		            
+		          </webResources> 
+		        </configuration> 
+			</plugin> 			
 		</plugins>
 	</build> 
          	
