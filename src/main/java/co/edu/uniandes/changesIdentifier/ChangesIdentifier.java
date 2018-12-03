@@ -64,10 +64,11 @@ public class ChangesIdentifier {
 		List<ChangePath> deletePaths = new ArrayList<ChangePath>();
 		List<ChangeOperation> changeOperations = new ArrayList<ChangeOperation>();
 		
-		for (Diff diff : diffs){			
+		for (Diff diff : diffs){	
+			
 			if (diff instanceof ReferenceChange){
 				ChangesProcessor.getDeletedParameters(deleteParameters, operations, diff, minorVersion);				
-				ChangesProcessor.getAddedParameters(addParameters, operations, diff, mayorVersion);				
+				ChangesProcessor.getAddedParameters(addParameters, operations, diff, mayorVersion);			
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
 				ChangesProcessor.getDeletedResponse(deleteResponse, diff, minorVersion);				
 				ChangesProcessor.getAddedResponse(addResponse, diff, mayorVersion);
@@ -79,7 +80,8 @@ public class ChangesIdentifier {
 				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
-			}			
+			}
+			
 		}
 		co.edu.uniandes.metamodels.Diff.Diff diff = ChangesProcessor.processVersion(diffModelTransformation, mayorVersion, minorVersion);
 		ChangesProcessor.processRelocateSameParameter(diffModelTransformation, changeParameters, diff.getChange());
