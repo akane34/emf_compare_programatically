@@ -592,9 +592,11 @@ public class ChangesProcessor {
 			diff.getSource() == DifferenceSource.LEFT){
 			Operation oldOperation = (Operation)((ReferenceChange)diff).getValue();
 			
-			if (diff.getMatch().getLeft() != null && diff.getMatch().getLeft() instanceof PathImpl){						
+			if (diff.getMatch().getLeft() != null && diff.getMatch().getLeft() instanceof PathImpl && diff.getMatch().getRight() != null && diff.getMatch().getRight() instanceof PathImpl){						
 				PathImpl newPath = (PathImpl)diff.getMatch().getRight();
 				PathImpl oldPath = (PathImpl)diff.getMatch().getLeft();				
+				
+				if (!newPath.getRelativePath().equals(oldPath.getRelativePath())) return;
 				
 				ChangeOperation operation = new ChangeOperation();
 				operation.setVersion(newVersion);
@@ -751,11 +753,20 @@ public class ChangesProcessor {
 				updated.setUri(EcoreUtil.getURI(schemaUpdated));
 				updated.setDifferenceKind(diff.getKind());
 				updated.setDiff(diff);
-								
+//				
+//				for(Setting setting : getUsages(schemaUpdated)){
+//					EObject object = setting.getEObject();
+//			    	if (object instanceof OperationImpl){
+//			    		PathImpl pathOldParam = ((PathImpl)((OperationImpl)object).eContainer());    		    		
+//			    		
+//			    	}
+//			    }
+				
 				addAndDeletedSchemas.add(updated);
 				if (diff.getKind() == DifferenceKind.CHANGE)
 					changeSchemas.add(updated);
 			}
+			
 		}
 	}
 	
