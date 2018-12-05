@@ -20,7 +20,24 @@
 					<source>1.8</source>
 					<target>1.8</target> 
 				</configuration>
-			</plugin>					
+			</plugin>	
+			<plugin>
+			  <artifactId>maven-antrun-plugin</artifactId>
+			  <executions>
+			    <execution>
+			      <id>generate-sources</id>
+			      <phase>install</phase>
+			      <configuration>
+			        <tasks>
+			          <mkdir dir="${project.basedir}/target/classes/bin"/>			          
+			        </tasks>
+			      </configuration>
+			      <goals>
+			        <goal>run</goal>
+			      </goals>
+			    </execution>
+			  </executions>
+			</plugin>				
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-resources-plugin</artifactId>
@@ -32,7 +49,7 @@
 			               <goal>copy-resources</goal>
 			           </goals>
 			           <configuration>
-			               <outputDirectory>${project.basedir}/target/classes</outputDirectory>
+			               <outputDirectory>${project.basedir}/target/classes/bin</outputDirectory>
 			               <resources>
 			                   <resource>
 			                    	<filtering>false</filtering>
@@ -63,15 +80,15 @@
 		            </resource>
 		            <resource> 
 		              <directory>${project.basedir}/transformations/m2t</directory> 
-		              <targetPath>WEB-INF/classes</targetPath> 
+		              <targetPath>WEB-INF/classes/bin</targetPath> 
 		            </resource> 
 		            <resource> 
 		              <directory>${project.basedir}/metamodels</directory> 
-		              <targetPath>WEB-INF/classes</targetPath> 
+		              <targetPath>WEB-INF/classes/bin</targetPath> 
 		            </resource>
 		            <resource> 
 		              <directory>${project.basedir}/bin</directory> 
-		              <targetPath>WEB-INF/classes</targetPath> 
+		              <targetPath>WEB-INF/classes/bin</targetPath> 
 		            </resource>
 		            <resource> 
 		              <directory>${project.basedir}/assets</directory> 
@@ -248,7 +265,7 @@
 		    <artifactId>launcher</artifactId>
 		    <version>1.0.0</version>
 		    <scope>system</scope>
-		    <systemPath>${project.basedir}/lib/MTCLauncherJava.jar</systemPath>
+		    <systemPath>${project.basedir}/lib/MTCLauncher.jar</systemPath>
 		</dependency>
 		
 		<!-- ********************************* JERSEY DEPENDENCIES ************************************ -->
