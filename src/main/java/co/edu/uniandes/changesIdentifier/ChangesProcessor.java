@@ -34,6 +34,7 @@ import edu.uoc.som.openapi.impl.ParameterImpl;
 import edu.uoc.som.openapi.impl.PathImpl;
 import edu.uoc.som.openapi.impl.ResponseImpl;
 import edu.uoc.som.openapi.impl.SchemaImpl;
+import sun.awt.SunGraphicsCallback.PaintHeavyweightComponentsCallback;
 
 public class ChangesProcessor {
 
@@ -374,6 +375,7 @@ public class ChangesProcessor {
 	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- ModifyParameterSchemaType");
 		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
+		boolean schemaFound=false;
 		
 		for (ChangeSchema addAndDeletedSchema : addAndDeletedSchemas){			
 			SchemaImpl schema = (SchemaImpl)mayorVersionModel.getEObject(addAndDeletedSchema.getUri(), true);
@@ -381,60 +383,53 @@ public class ChangesProcessor {
 		    Collection<String> schemaIds = new ArrayList<String>();
 		    Collection<String> parameterIds = new ArrayList<String>();
 		    
-		    Collection<ParameterImpl> parameters = getParametersRecursively(schemasUsages, schemaIds, parameterIds);		    
-		    if (!parameters.isEmpty()){		    	
-			    for (ParameterImpl parameter : parameters)
-			    {			    				    	
-			    	for (ChangeSchema changeSchema : changedSchemas){			    		
-			    		String uriParamSchema = EcoreUtil.getURI(parameter.getSchema()).toString();
-			    		String uriChangeSchema = EcoreUtil.getURI(changeSchema.getSchema()).toString();
-			    		
-			    		if (uriParamSchema.equals(uriChangeSchema)){			    			
-			    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();
-			    			
-			    			for(Setting setting : getUsages(parameter)){
-			    				EObject object = setting.getEObject();
-			    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
-			    		    		operations.add((OperationImpl)object);
-			    		    		
-			    		    		Path path = (PathImpl)((OperationImpl)object).eContainer();
+		    Collection<ParameterImpl> parameters = getParametersRecursively(schemasUsages, schemaIds, parameterIds);	
+		    if(parameters.isEmpty())
+		    	continue;
+		    
+		    for (ParameterImpl parameter : parameters)
+		    {	
+		    	schemaFound=false;
+		    	for (ChangeSchema changeSchema : changedSchemas){			    		
+		    		String uriParamSchema = EcoreUtil.getURI(parameter.getSchema()).toString();
+		    		String uriChangeSchema = EcoreUtil.getURI(changeSchema.getSchema()).toString();
+		    		
+		    		if (uriParamSchema.equals(uriChangeSchema)){
+		    			schemaFound= true;
+		    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();
+		    			
+		    			for(Setting setting : getUsages(parameter)){
+		    				EObject object = setting.getEObject();
+		    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
+		    		    		operations.add((OperationImpl)object);
+		    		    		
+		    		    		if(!pathWasDeleted(deletePaths, object)) {
+		    		    			Path path = (PathImpl)((OperationImpl)object).eContainer();
 			    		    		String relativePath = path.getRelativePath();
-			    		    		
-			    		    		boolean isDeleted = false;
-			    		    		for (ChangePath oper : deletePaths){			    		    			
-			    		    			if (relativePath.equals(oper.getPath())){
-			    		    				isDeleted = true;
-			    		    				break;
-			    		    			}
-			    		    		}
-			    			    				  
-			    		    		if (isDeleted)
-			    		    			continue;
-			    		    		
-			    		    		ModifyParameterSchema m = new ModifyParameterSchema();
-		    		    			m.setParameter(parameter);
-		    		    			m.setPath(path);
-		    		    			m.setSchema(addAndDeletedSchema.getSchema());
-		    		    			m.setOperation((OperationImpl)object);
-		    		    			
-			    		    		if (modifyParameters.get(relativePath) == null){
-			    		    			List<ModifyParameterSchema> list = new ArrayList<ModifyParameterSchema>();			    		    			
-			    		    			list.add(m);			    		    			
-			    		    			
-			    		    			modifyParameters.put(relativePath, list);
-			    		    		}
-			    		    		else{
-			    		    			if(!modifyParameters.get(relativePath).contains(m))
-			    		    				modifyParameters.get(relativePath).add(m);
-			    		    		}	
-			    			    	
-			    		    	}
-			    			}			    			
-			    		}
-				    	
-			    	}
-			    }
+		    		    			addToModifiedParams(modifyParameters, addAndDeletedSchema, parameter, object, path, relativePath);
+		    		    		}
+		    		    	}
+		    			}			    			
+		    		}
+		    	}
+		    	//kind ADD means, the schema was removed from the old version	
+		    	if(!schemaFound && addAndDeletedSchema.getDifferenceKind().equals(DifferenceKind.ADD)) {
+	    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();
+		    		for(Setting setting : getUsages(parameter)){
+	    				EObject object = setting.getEObject();
+	    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
+	    		    		operations.add((OperationImpl)object);
+	    		    		
+	    		    		if(!pathWasDeleted(deletePaths, object)) {
+	    		    			Path path = (PathImpl)((OperationImpl)object).eContainer();
+		    		    		String relativePath = path.getRelativePath();
+	    		    			addToModifiedParams(modifyParameters, addAndDeletedSchema, parameter, object, path, relativePath);
+	    		    		}
+	    		    	}
+	    			}		
+		    	}
 		    }
+		    
 		}
 		
 		for (Map.Entry<String, List<ModifyParameterSchema>> entry : modifyParameters.entrySet())
@@ -449,6 +444,41 @@ public class ChangesProcessor {
     	    
 		    diffMetamodel.createModifyParameterSchemaTypeInstance(path, parameter, entry.getValue(), changes);
 		}	
+	}
+
+	private static boolean pathWasDeleted(List<ChangePath> deletePaths,EObject object) {
+		
+		Path path = (PathImpl)((OperationImpl)object).eContainer();
+		String relativePath = path.getRelativePath();
+		
+		boolean isDeleted = false;
+		for (ChangePath oper : deletePaths){			    		    			
+			if (relativePath.equals(oper.getPath())){
+				isDeleted = true;
+				break;
+			}
+		}
+
+		return isDeleted;
+	}
+	private static void addToModifiedParams(Map<String, List<ModifyParameterSchema>> modifyParameters,
+			ChangeSchema addAndDeletedSchema, ParameterImpl parameter, EObject object, Path path, String relativePath) {
+		ModifyParameterSchema m = new ModifyParameterSchema();
+		m.setParameter(parameter);
+		m.setPath(path);
+		m.setSchema(addAndDeletedSchema.getSchema());
+		m.setOperation((OperationImpl)object);
+		
+		if (modifyParameters.get(relativePath) == null){
+			List<ModifyParameterSchema> list = new ArrayList<ModifyParameterSchema>();			    		    			
+			list.add(m);			    		    			
+			
+			modifyParameters.put(relativePath, list);
+		}
+		else{
+			if(!modifyParameters.get(relativePath).contains(m))
+				modifyParameters.get(relativePath).add(m);
+		}
 	}		
 	
 	public static void processExposeData(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
@@ -768,18 +798,13 @@ public class ChangesProcessor {
 				updated.setUri(EcoreUtil.getURI(schemaUpdated));
 				updated.setDifferenceKind(diff.getKind());
 				updated.setDiff(diff);
-//				
-//				for(Setting setting : getUsages(schemaUpdated)){
-//					EObject object = setting.getEObject();
-//			    	if (object instanceof OperationImpl){
-//			    		PathImpl pathOldParam = ((PathImpl)((OperationImpl)object).eContainer());    		    		
-//			    		
-//			    	}
-//			    }
-				
 				addAndDeletedSchemas.add(updated);
-				if (diff.getKind() == DifferenceKind.CHANGE)
+				if (diff.getKind() == DifferenceKind.CHANGE) {
+					System.out.println("schema update: "+updated.getSchema().getName()+ " -> " +updated.getUri());
 					changeSchemas.add(updated);
+				}else
+					System.out.println("schema add/delete: "+updated.getSchema().getName() + " -> " +updated.getUri() );
+				
 			}
 			
 		}
@@ -999,7 +1024,8 @@ public class ChangesProcessor {
 		  if (resourceSet == null)		      
 		    usages = UsageCrossReferencer.find(eobject, resource);		      
 		  else		      
-		    usages = UsageCrossReferencer.find(eobject, resourceSet);		      
+		    usages = UsageCrossReferencer.find(eobject, resourceSet);		    
+		 
 		}
 		return usages;
 	}
