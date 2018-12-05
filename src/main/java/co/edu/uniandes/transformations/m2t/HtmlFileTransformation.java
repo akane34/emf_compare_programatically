@@ -8,8 +8,11 @@ public class HtmlFileTransformation {
 	public void transformation(String htmlModelPath){
 		
 		try {
+			
+			String path = this.getClass().getClassLoader().getResource("").getPath();
+
 			Launcher launcher = new Launcher();		
-			launcher.runAcceleo("metamodels/html.ecore", "Html", htmlModelPath, "transformations/M2T/generateHTML.mtl", "WebContent/");
+			launcher.runAcceleo(path + "/html.ecore", "Html", htmlModelPath, path + "/generateHTML.mtl", "/");
 			
 		} catch (AcceleoLauncherException e) {
 			System.out.println(e.getMessage());
