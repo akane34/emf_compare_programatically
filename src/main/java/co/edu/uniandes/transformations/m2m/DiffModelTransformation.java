@@ -22,12 +22,14 @@ import co.edu.uniandes.changesIdentifier.ChangePath;
 import co.edu.uniandes.changesIdentifier.ChangeResponse;
 import co.edu.uniandes.changesIdentifier.ChangeSchema;
 import co.edu.uniandes.changesIdentifier.ModifyParameterSchema;
+import co.edu.uniandes.changesIdentifier.ModifyReturnSchema;
 import co.edu.uniandes.metamodels.Diff.APIElementType;
 import co.edu.uniandes.metamodels.Diff.Add;
 import co.edu.uniandes.metamodels.Diff.AddParameter;
 import co.edu.uniandes.metamodels.Diff.AddRestriction;
 import co.edu.uniandes.metamodels.Diff.AddStatusCode;
 import co.edu.uniandes.metamodels.Diff.Change;
+import co.edu.uniandes.metamodels.Diff.ChangeFormatReturnValue;
 import co.edu.uniandes.metamodels.Diff.ConsumeType;
 import co.edu.uniandes.metamodels.Diff.DefaultValue;
 import co.edu.uniandes.metamodels.Diff.Delete;
@@ -53,8 +55,10 @@ import co.edu.uniandes.metamodels.Diff.SameParameter;
 import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
 import co.edu.uniandes.metamodels.Diff.UpperBondary;
 import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
+import co.edu.uniandes.metamodels.Diff.impl.ReturnTypeImpl;
 import edu.uoc.som.openapi.JSONDataType;
 import edu.uoc.som.openapi.Parameter;
+import edu.uoc.som.openapi.Response;
 
 public class DiffModelTransformation {
 
@@ -482,6 +486,24 @@ public class DiffModelTransformation {
 		modifyParameter.setNew(newElementReference);
 		
 		changes.add(modifyParameter);
+	}
+	
+	
+	public void createModifyReturnSchemaTypeInstance(String path, Response response, List<Change> changes){		
+		ElementReference newElementReference = diffFactory.createElementReference();
+		newElementReference.setEObject(EcoreUtil.getURI(response).toString());
+		newElementReference.setValue(response.getSchema().getName());
+		newElementReference.setPath(path);
+		
+		ReturnType modifyResponse = diffFactory.createReturnType();		
+		modifyResponse.setChangeElement(APIElementType.RETURN_TYPE);		
+		modifyResponse.setNew(newElementReference);
+		
+		ChangeFormatReturnValue returnValue = diffFactory.createChangeFormatReturnValue();
+		returnValue.setChangeElement(APIElementType.RETURN_TYPE);
+		returnValue.getSimpleDiffs().add(modifyResponse);
+		changes.add(modifyResponse);
+		changes.add(returnValue);
 	}
 	
 	public void createRemoveRestrictedAccessToTheAPIInstance(ChangeResponse changeResponse, List<Change> changes) {

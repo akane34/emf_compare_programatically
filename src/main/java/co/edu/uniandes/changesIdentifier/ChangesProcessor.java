@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.compare.AttributeChange;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.DifferenceKind;
@@ -34,7 +33,6 @@ import edu.uoc.som.openapi.impl.ParameterImpl;
 import edu.uoc.som.openapi.impl.PathImpl;
 import edu.uoc.som.openapi.impl.ResponseImpl;
 import edu.uoc.som.openapi.impl.SchemaImpl;
-import sun.awt.SunGraphicsCallback.PaintHeavyweightComponentsCallback;
 
 public class ChangesProcessor {
 
@@ -173,7 +171,7 @@ public class ChangesProcessor {
 			if(p.getPath().equals(changeParameter.getPath()) && p.getNewParameter().getName().equals(changeParameter.getNewParameter().getName())){
 				for(OperationWrapper operation : changeParameter.getOperations()) {
 					//belongs the same method
-					if(p.getMethod().equals(operation.getMethod())) {// keyMap.endsWith(operation.getMethod())){
+					if(p.getMethod().equals(operation.getMethod())) {
 						exist = true;
 						break;
 					}
@@ -371,6 +369,82 @@ public class ChangesProcessor {
 			diffMetamodel.createDeletedPathInstance(path, changes);			
 		}
 	}
+	
+	public static void processModifyReturnSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, EList<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
+		System.out.println("-------------------- ModifyReturnSchemaType");
+		Map<String, List<ModifyReturnSchema>> modifyResponses = new HashMap<String, List<ModifyReturnSchema>>();
+		boolean schemaFound=false;
+		
+		for (ChangeSchema addAndDeletedSchema : addAndDeletedSchemas){			
+			SchemaImpl schema = (SchemaImpl)minorVersionModel.getEObject(addAndDeletedSchema.getUri(), true);
+		    Collection<Setting> schemasUsages = getUsages(schema);
+		    Collection<String> schemaIds = new ArrayList<String>();
+		    Collection<String> responsesId = new ArrayList<String>();
+		    
+		    Collection<ResponseImpl> responses = getResponsesRecursively(schemasUsages, schemaIds, responsesId);	
+		    if(responses.isEmpty())
+		    	continue;
+		    
+		    for (ResponseImpl response : responses)
+		    {	
+		    	schemaFound=false;
+		    	for (ChangeSchema changeSchema : changedSchemas){			    		
+		    		String uriResponseSchema = EcoreUtil.getURI(response.getSchema()).toString();
+		    		String uriChangeSchema = EcoreUtil.getURI(changeSchema.getSchema()).toString();
+		    		
+		    		if (uriResponseSchema.equals(uriChangeSchema)){
+		    			schemaFound= true;
+		    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();	
+		    			
+		    			for(Setting setting : getUsages(response)){
+		    				EObject object = setting.getEObject();
+		    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
+		    		    		operations.add((OperationImpl)object);
+		    		    		
+		    		    		if(!pathWasDeleted(deletePaths, object)) {
+		    		    			Path path = (PathImpl)((OperationImpl)object).eContainer();
+			    		    		String relativePath = path.getRelativePath();
+			    		    		addToModifiedResponses(modifyResponses, addAndDeletedSchema, response, object, path, relativePath);
+		    		    		}
+		    		    	}
+		    			}			    			
+		    		}
+		    	}
+		    	//kind ADD means, the schema was removed from the old version	
+		    	if(!schemaFound && addAndDeletedSchema.getDifferenceKind().equals(DifferenceKind.ADD)) {
+	    			Collection<OperationImpl> operations = new ArrayList<OperationImpl>();
+		    		for(Setting setting : getUsages(response)){
+	    				EObject object = setting.getEObject();
+	    		    	if (object instanceof OperationImpl && !operations.contains((OperationImpl)object)){
+	    		    		operations.add((OperationImpl)object);
+	    		    		
+	    		    		if(!pathWasDeleted(deletePaths, object)) {
+	    		    			Path path = (PathImpl)((OperationImpl)object).eContainer();
+		    		    		String relativePath = path.getRelativePath();
+	    		    			addToModifiedResponses(modifyResponses, addAndDeletedSchema, response, object, path, relativePath);
+	    		    		}
+	    		    	}
+	    			}		
+		    	}
+		    }
+		    
+		}
+		
+		for (Map.Entry<String, List<ModifyReturnSchema>> entry : modifyResponses.entrySet())
+		{		    		    	
+			Response response = null;
+			String path = entry.getKey();
+			System.out.println("\n Path: " + path);
+		    for (ModifyReturnSchema p : entry.getValue()){
+		    	response = p.getResponse();		    	
+		    	System.out.println("\t Response: " + p.getResponse().getCode() + " schema:" + p.getSchema().getName() + " uri: " + EcoreUtil.getURI(p.getSchema()).toString());		    	
+		    }
+    	    
+		    if(response.getSchema() != null)
+		    	diffMetamodel.createModifyReturnSchemaTypeInstance(path, response, changes);
+		}
+		
+	}
 
 	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- ModifyParameterSchemaType");
@@ -480,6 +554,25 @@ public class ChangesProcessor {
 				modifyParameters.get(relativePath).add(m);
 		}
 	}		
+	
+	private static void addToModifiedResponses(Map<String, List<ModifyReturnSchema>> modifyResponses, ChangeSchema addAndDeletedSchema, ResponseImpl response, EObject object, Path path, String relativePath) {
+		ModifyReturnSchema m = new ModifyReturnSchema();
+		m.setResponse(response);
+		m.setPath(path);
+		m.setSchema(addAndDeletedSchema.getSchema());
+		m.setOperation((OperationImpl)object);
+			
+		if (modifyResponses.get(relativePath) == null){
+			List<ModifyReturnSchema> list = new ArrayList<ModifyReturnSchema>();			    		    			
+			list.add(m);			    		    			
+			
+			modifyResponses.put(relativePath, list);
+		}
+		else{
+			if(!modifyResponses.get(relativePath).contains(m))
+				modifyResponses.get(relativePath).add(m);
+		}
+	}
 	
 	public static void processExposeData(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
 		System.out.println("-------------------- ExposeData");	
@@ -806,7 +899,6 @@ public class ChangesProcessor {
 					System.out.println("schema add/delete: "+updated.getSchema().getName() + " -> " +updated.getUri() );
 				
 			}
-			
 		}
 	}
 	
@@ -814,7 +906,6 @@ public class ChangesProcessor {
 		EAttribute att = null;
 		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && (diff.getKind() == DifferenceKind.DELETE || diff.getKind() == DifferenceKind.ADD)){
 			att = (EAttributeImpl)((AttributeChange)diff).getAttribute();
-		
 		EObject left = (((AttributeChange)diff).getMatch().getLeft());
 		EObject right = (((AttributeChange)diff).getMatch().getRight());
 		 if (left instanceof OperationImpl && right instanceof OperationImpl) {
@@ -1047,4 +1138,23 @@ public class ChangesProcessor {
 		
 		return parameters;
 	}
+
+	private static Collection<ResponseImpl> getResponsesRecursively(Collection<Setting> usages, Collection<String> schemaIds, Collection<String> responsesIds){
+		Collection<ResponseImpl> responses = new ArrayList<ResponseImpl>();
+		for (Setting usage : usages)
+	    {			
+	    	EObject parent = usage.getEObject();
+	    	if (parent instanceof SchemaImpl && !schemaIds.contains(EcoreUtil.getURI((SchemaImpl)parent).toString())){
+	    		schemaIds.add(EcoreUtil.getURI((SchemaImpl)parent).toString());	    		
+	    		responses.addAll(getResponsesRecursively(getUsages(parent), schemaIds, responsesIds));	    				    		
+	    	}
+	    	else if (parent instanceof ResponseImpl && !responsesIds.contains(EcoreUtil.getURI((ResponseImpl)parent).toString())){
+	    		responsesIds.add(EcoreUtil.getURI((ResponseImpl)parent).toString());	  
+	    		responses.add((ResponseImpl)parent);
+	    	}
+	    }
+		
+		return responses;
+	}
+	
 }

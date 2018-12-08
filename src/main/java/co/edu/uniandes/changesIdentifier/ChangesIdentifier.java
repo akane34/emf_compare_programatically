@@ -83,6 +83,7 @@ public class ChangesIdentifier {
 			}
 			
 		}
+		
 		co.edu.uniandes.metamodels.Diff.Diff diff = ChangesProcessor.processVersion(diffModelTransformation, mayorVersion, minorVersion);
 		ChangesProcessor.processRelocateSameParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processRelocateMultipleParametersInOneParameter(diffModelTransformation, changeParameters, operations, diff.getChange());
@@ -102,7 +103,8 @@ public class ChangesIdentifier {
 		ChangesProcessor.processExposeData(diffModelTransformation, contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processAddRestrictedAccess(diffModelTransformation, addResponse, diff.getChange());
 		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffModelTransformation, addResponse, diff.getChange());
-		ChangesProcessor.processModifyParameterSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, deletePaths, diff.getChange(), minorVersionModel, mayorVersionModel);		
+		ChangesProcessor.processModifyParameterSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, deletePaths, diff.getChange(), minorVersionModel, mayorVersionModel);
+		ChangesProcessor.processModifyReturnSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, deletePaths, diff.getChange(), minorVersionModel, mayorVersionModel);
 		
 		diffModelTransformation.saveInstance();		
 		
