@@ -280,7 +280,7 @@ public class ChangesProcessor {
 		return exist;
 	}
 
-	public static void processBoundariesParamsUpdated(DiffModelTransformation diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
+	private static void processBoundariesParamsUpdated(DiffModelTransformation diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
 		for(ChangeBoundaryParameter boundaryUpdated: changesBoundaryParameters) {
 			switch (boundaryUpdated.getBoundary()) {
 			case LOWER:
@@ -336,7 +336,8 @@ public class ChangesProcessor {
 	}
 	
 	public static void processChangeDefaultValueOfParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
-		System.out.println("-------------------- ChangeDefaultValueOfParameter");		
+		System.out.println("-------------------- ChangeDefaultValueOfParameter");	
+		List<ChangeParameter> parametersChangeDefault = new ArrayList<>();
 		for (ChangeParameter p : changeParameters){
 			if (p.getOldParameter() != null &&	p.getNewParameter() != null){				
 				String newDefault = p.getNewParameter().getDefault();
@@ -353,11 +354,93 @@ public class ChangesProcessor {
 					System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getDefault() + " 2:" + p.getNewParameter().getLocation());
 					System.out.println("\n ");
 					
-					diffMetamodel.createChangeDefaultValueOfParameterInstance(p, changes);
+					if(!existChangeDefaultParameter(p,parametersChangeDefault))
+						parametersChangeDefault.add(p);
 				}
 			}
-		}			
+		}
+		
+		for(ChangeParameter p: parametersChangeDefault) {
+			diffMetamodel.createChangeDefaultValueOfParameterInstance(p, changes);
+		}
 	}	
+	
+	private static boolean existChangeDefaultParameter(ChangeParameter parameter,List<ChangeParameter> parameters) {
+		boolean exist = false;
+		for(ChangeParameter defaultParamter: parameters) {
+			if(defaultParamter.getPath().equals(parameter.getPath()) && defaultParamter.getNewParameter().getName().equals(parameter.getNewParameter().getName())) {
+				exist=true;
+				break;
+			}
+		}
+		return exist;
+	}
+	
+	public static void processChangeBoundariesOfParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+		System.out.println("-------------------- ChangeDefaultValueOfParameter");	
+		List<ChangeBoundaryParameter> parameters = new ArrayList<ChangeBoundaryParameter>();
+		for (ChangeParameter p : changeParameters){
+			if (p.getOldParameter() != null &&	p.getNewParameter() != null){				
+				processChangeMaxValueParam(diffMetamodel,changes,p,parameters);
+				processChangeMinValueParam(diffMetamodel,changes,p,parameters);
+			}
+		}
+		
+		processBoundariesParamsUpdated(diffMetamodel, parameters, changes);
+	}	
+
+	private static void processChangeMaxValueParam(DiffModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
+	
+		Double oldMax = parameter.getOldParameter().getMaximum();
+		Double newMax = parameter.getNewParameter().getMaximum();
+		
+		if(oldMax==newMax)
+			return; 
+		
+		ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
+		changeBoundaryParam.setOldParam(parameter.getOldParameter());
+		changeBoundaryParam.setOldUri(EcoreUtil.getURI(parameter.getOldParameter()).toString());
+		changeBoundaryParam.setPath(parameter.getPath());
+		
+		changeBoundaryParam.setNewParam(parameter.getNewParameter());
+		changeBoundaryParam.setNewUri(EcoreUtil.getURI(parameter.getNewParameter()).toString());
+		changeBoundaryParam.setBoundary(Boundary.UPPER);				
+		if(!existChangeBoundaryParameter(parameter, parameters, Boundary.UPPER)) {
+			parameters.add(changeBoundaryParam);
+		}
+	}
+
+	private static void processChangeMinValueParam(DiffModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
+		
+		Double oldMin = parameter.getOldParameter().getMinimum();
+		Double newMin = parameter.getNewParameter().getMinimum();
+		
+		if(oldMin==newMin)
+			return; 
+		
+		ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
+		changeBoundaryParam.setOldParam(parameter.getOldParameter());
+		changeBoundaryParam.setOldUri(EcoreUtil.getURI(parameter.getOldParameter()).toString());
+		changeBoundaryParam.setPath(parameter.getPath());
+		
+		changeBoundaryParam.setNewParam(parameter.getNewParameter());
+		changeBoundaryParam.setNewUri(EcoreUtil.getURI(parameter.getNewParameter()).toString());
+		changeBoundaryParam.setBoundary(Boundary.LOWER);				
+		if(!existChangeBoundaryParameter(parameter, parameters, Boundary.LOWER)) {
+			parameters.add(changeBoundaryParam);
+		}
+	}
+	
+	private static boolean existChangeBoundaryParameter(ChangeParameter parameter,List<ChangeBoundaryParameter> parameters, Boundary boundary) {
+		boolean exist = false;
+		for(ChangeBoundaryParameter boundaryParamter: parameters) {
+			if(boundaryParamter.getPath().equals(parameter.getPath()) && boundaryParamter.getNewParam().getName().equals(parameter.getNewParameter().getName()) && boundary.equals(boundaryParamter.getBoundary())) {
+				exist=true;
+				break;
+			}
+		}
+		return exist;
+	}
 	
 	public static void processDeletePaths(DiffModelTransformation diffMetamodel, List<ChangePath> deletePaths, List<Change> changes) {
 		System.out.println("-------------------- DeletePaths");
@@ -801,40 +884,7 @@ public class ChangesProcessor {
 			}			
 		}
 	}
-	
-	public static void getChangeBoundaryParameters(List<ChangeBoundaryParameter> changesBoundaryParameters,  Diff diff) {
-		EAttributeImpl att = null;
-		if (((AttributeChange)diff).getAttribute() instanceof EAttributeImpl && diff.getKind() == DifferenceKind.CHANGE){
-			att = (EAttributeImpl)((AttributeChange)diff).getAttribute();
-		}
-		EObject left = ((AttributeChange)diff).getMatch().getLeft();
-		EObject right = ((AttributeChange)diff).getMatch().getRight();
-		if (left != null && left instanceof ParameterImpl && right != null && right instanceof ParameterImpl && att != null) {
-			ParameterImpl oldParameter = (ParameterImpl)(left);
-			ParameterImpl newParameter = (ParameterImpl)(right);
-			
-			if (oldParameter.eContainer() instanceof PathImpl && newParameter.eContainer() instanceof PathImpl){
-				PathImpl path = (PathImpl)oldParameter.eContainer();
-				
-				ChangeBoundaryParameter changeBoundaryParam = new ChangeBoundaryParameter();
-				changeBoundaryParam.setOldParam(oldParameter);
-				changeBoundaryParam.setOldUri(EcoreUtil.getURI(oldParameter).toString());
-				changeBoundaryParam.setPath(path.getRelativePath());
-				
-				changeBoundaryParam.setNewParam(newParameter);
-				changeBoundaryParam.setNewUri(EcoreUtil.getURI(newParameter).toString());
-												
-				if(att.getName().equals("maximum")) {
-					changeBoundaryParam.setBoundary(Boundary.UPPER);
-					changesBoundaryParameters.add(changeBoundaryParam);
-				}
-				else if(att.getName().equals("minimum")) {
-					changeBoundaryParam.setBoundary(Boundary.LOWER);
-					changesBoundaryParameters.add(changeBoundaryParam);
-				}			
-			}
-		}		
-	}
+
 	
 	public static void getAddedResponse(List<ChangeResponse> addResponses, Diff diff, String newVersion) {		
 		if (((ReferenceChange)diff).getValue() instanceof ResponseImpl && diff.getKind() == DifferenceKind.DELETE){

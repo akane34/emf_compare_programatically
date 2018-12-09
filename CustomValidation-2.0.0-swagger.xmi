@@ -118,6 +118,8 @@
       required="true"/>
   <paramters
       schema="//@schemas.2"
+      type="string"
+      default=""
       name="newPassword"
       location="body"/>
   <paramters

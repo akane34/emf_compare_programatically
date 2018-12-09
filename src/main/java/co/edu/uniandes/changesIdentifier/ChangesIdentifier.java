@@ -54,7 +54,6 @@ public class ChangesIdentifier {
 		List<ChangeParameter> addParameters = new ArrayList<ChangeParameter>();
 		List<ChangeParameter> changeParameters = new ArrayList<ChangeParameter>();
 		Map<String, List<ChangeParameter>> operations = new HashMap<String, List<ChangeParameter>>();
-		List<ChangeBoundaryParameter> changesBoundaryParameters = new ArrayList<ChangeBoundaryParameter>();
 		List<ChangeResponse> deleteResponse = new ArrayList<ChangeResponse>();
 		List<ChangeResponse> addResponse = new ArrayList<ChangeResponse>();
 		List<ChangeSchema> addAndDeletedSchemas = new ArrayList<ChangeSchema>();
@@ -77,7 +76,6 @@ public class ChangesIdentifier {
 				ChangesProcessor.getDeletedPaths(deletePaths, diff, minorVersion, mayorVersion);
 				ChangesProcessor.getChangedOperations(changeOperations, diff, minorVersion, mayorVersion);
 			}else if (diff instanceof AttributeChange) {
-				ChangesProcessor.getChangeBoundaryParameters(changesBoundaryParameters, diff);
 				ChangesProcessor.getContentTypesUpdated(contentTypesUpdated, diff);
 				ChangesProcessor.getChangedParameters(changeParameters, diff, minorVersion, mayorVersion);
 			}
@@ -95,7 +93,7 @@ public class ChangesIdentifier {
 		ChangesProcessor.processRenameParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processDeletedResponses(diffModelTransformation, deleteResponse, addResponse, diff.getChange());
 		ChangesProcessor.processAddedResponses(diffModelTransformation, addResponse,deleteResponse, diff.getChange());
-		ChangesProcessor.processBoundariesParamsUpdated(diffModelTransformation,changesBoundaryParameters, diff.getChange());
+		ChangesProcessor.processChangeBoundariesOfParameter(diffModelTransformation,changeParameters, diff.getChange());
 		ChangesProcessor.processSchemasUpdated(diffModelTransformation, addAndDeletedSchemas, diff.getChange());
 		ChangesProcessor.processContentTypesUpdates(diffModelTransformation,contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processUnsupportRequestMethods(diffModelTransformation, deleteOperations, diff.getChange());
