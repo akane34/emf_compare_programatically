@@ -24,7 +24,7 @@
           summary="update  the user age"
           description="By passing new user age will be updated &#xA;"
           operationId="updaUserAge"
-          responses="//@responses.0">
+          responses="//@responses.4">
         <tagReferences>user</tagReferences>
         <consumes>application/json</consumes>
         <produces>application/json</produces>
@@ -95,13 +95,19 @@
         <produces>application/xml</produces>
       </get>
       <post
-          parameters="//@paramters.11"
+          parameters="//@paramters.12"
           summary="save user"
           description="save user&#xA;"
           operationId="saveUser"
-          responses="//@responses.7">
+          responses="//@responses.6">
         <tagReferences>user</tagReferences>
         <consumes>application/xml</consumes>
+      </post>
+    </paths>
+    <paths relativePath="Devices">
+      <post
+          parameters="//@paramters.11">
+        <schemes>http</schemes>
       </post>
     </paths>
     <tags name="admins"
@@ -128,6 +134,7 @@
   <paramters
       type="string"
       description="new password"
+      default="test"
       name="newPassword"
       location="query"/>
   <paramters
@@ -169,10 +176,17 @@
       location="query"
       required="true"/>
   <paramters
+      type="string"
+      name="deviceName"
+      location="query"
+      referenceName=""/>
+  <paramters
       schema="//@schemas.1"
+      type="object"
       description="save user"
       name="user"
-      location="body"/>
+      location="body"
+      referenceName=""/>
   <schemas type="object"
       name="Setting"
       properties="//@schemas.2 //@schemas.3"
@@ -213,14 +227,14 @@
       code="200"/>
   <responses
       schema="//@schemas.0"
-      description="ok"
+      description="ok22"
       code="200"/>
   <responses
       description="ok"
       code="200"/>
   <responses
       schema="//@schemas.1"
-      description="ok"
+      description="okUser"
       code="200"/>
   <responses
       description="ok"

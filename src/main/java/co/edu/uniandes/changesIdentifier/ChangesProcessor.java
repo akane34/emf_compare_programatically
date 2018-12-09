@@ -40,6 +40,7 @@ public class ChangesProcessor {
 
 	public static void processRelocateSameParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- RelocateSameParameter");
+		List<ChangeParameter> parameters = new ArrayList<>();
 		for (ChangeParameter p : changeParameters){			
 			if (p.getOldParameter() != null &&
 				p.getNewParameter() != null &&
@@ -49,9 +50,13 @@ public class ChangesProcessor {
 				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
 				System.out.println("\n ");
 				
-				diffMetamodel.createRelocateSameParameterInstance(p, changes);
+				if(!existInTempChangeParameterList(p,parameters))
+					parameters.add(p);
 			}
-		}		
+		}
+		for (ChangeParameter p : parameters) {
+			diffMetamodel.createRelocateSameParameterInstance(p, changes);
+		}
 	}
 	
 	public static void processRelocateMultipleParametersInOneParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
@@ -354,7 +359,7 @@ public class ChangesProcessor {
 					System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getDefault() + " 2:" + p.getNewParameter().getLocation());
 					System.out.println("\n ");
 					
-					if(!existChangeDefaultParameter(p,parametersChangeDefault))
+					if(!existInTempChangeParameterList(p,parametersChangeDefault))
 						parametersChangeDefault.add(p);
 				}
 			}
@@ -365,12 +370,18 @@ public class ChangesProcessor {
 		}
 	}	
 	
-	private static boolean existChangeDefaultParameter(ChangeParameter parameter,List<ChangeParameter> parameters) {
+	private static boolean existInTempChangeParameterList(ChangeParameter parameter,List<ChangeParameter> parameters) {
 		boolean exist = false;
 		for(ChangeParameter defaultParamter: parameters) {
 			if(defaultParamter.getPath().equals(parameter.getPath()) && defaultParamter.getNewParameter().getName().equals(parameter.getNewParameter().getName())) {
-				exist=true;
-				break;
+				for(OperationWrapper operation : defaultParamter.getOperations()) {
+					//belongs the same method
+					if(defaultParamter.getMethod().equals(operation.getMethod())) {
+						exist = true;
+						break;
+					}
+				}
+				if(exist) break;
 			}
 		}
 		return exist;
@@ -700,19 +711,18 @@ public class ChangesProcessor {
 				diffMetamodel.createAddRestriction(changeResponse,changes);
 			}
 		}
-		
 	}
 	
-	public static void processRemoveRestrictedAccessToTheAPI(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<Change> changes) {
+	public static void processRemoveRestrictedAccessToTheAPI(DiffModelTransformation diffMetamodel, List<ChangeResponse> removeResponses, List<Change> changes) {
 		System.out.println("-------------------- RemoveRestrictedAccessToTheAPI");	
-		for(ChangeResponse addRes: addResponse) {
-			if (addRes.getDifferenceKind() == DifferenceKind.ADD &&
-				("401".equals(addRes.getResponse().getCode()) ||
-				 "403".equals(addRes.getResponse().getCode()))){
+		for(ChangeResponse removeRes: removeResponses) {
+			if (removeRes.getDifferenceKind() == DifferenceKind.DELETE &&
+				("401".equals(removeRes.getResponse().getCode()) ||
+				 "403".equals(removeRes.getResponse().getCode()))){
 				
-				System.out.println(addRes.getPath() + " " + addRes.getResponse().getCode() + " Remove");		  
+				System.out.println(removeRes.getPath() + " " + removeRes.getResponse().getCode() + " Remove");		  
 				System.out.println("\n ");
-				diffMetamodel.createRemoveRestrictedAccessToTheAPIInstance(addRes, changes);
+				diffMetamodel.createRemoveRestrictedAccessToTheAPIInstance(removeRes, changes);
 			}
 		}
 	}

@@ -100,7 +100,7 @@ public class ChangesIdentifier {
 		ChangesProcessor.processChangeDefaultValueOfParameter(diffModelTransformation, changeParameters, diff.getChange());
 		ChangesProcessor.processExposeData(diffModelTransformation, contentTypesUpdated, diff.getChange());
 		ChangesProcessor.processAddRestrictedAccess(diffModelTransformation, addResponse, diff.getChange());
-		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffModelTransformation, addResponse, diff.getChange());
+		ChangesProcessor.processRemoveRestrictedAccessToTheAPI(diffModelTransformation, deleteResponse, diff.getChange());
 		ChangesProcessor.processModifyParameterSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, deletePaths, diff.getChange(), minorVersionModel, mayorVersionModel);
 		ChangesProcessor.processModifyReturnSchemaType(diffModelTransformation, addAndDeletedSchemas, changedSchemas, deletePaths, diff.getChange(), minorVersionModel, mayorVersionModel);
 		
