@@ -9,9 +9,12 @@ public class Main {
 	static String minorVersion = "1.0";
 	static String mayorVersion = "2.0";
 	
-	public static void main(String[] args) {		
-		String minorModelPath = "thingsboardV1.xmi";
-		String mayorModelPath = "thingsboardV2.xmi";		
+	public static void main(String[] args) {	
+		String minorModelPath = "CustomValidation-1.0.0-swagger.xmi";
+		String mayorModelPath = "CustomValidation-2.0.0-swagger.xmi";
+//		String minorModelPath = "thingsboardV1.xmi";
+//		String mayorModelPath = "thingsboardV2.xmi";	
+		
 		
 		CompareVersionInput compareVersionInput = new CompareVersionInput();
 		compareVersionInput.setInputType("filePath");
