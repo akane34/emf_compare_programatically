@@ -10,8 +10,8 @@ import co.edu.uniandes.pojos.CompareVersionInput;
 import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelPathOutput;
 import co.edu.uniandes.pojos.TransformationChainOutput;
-import co.edu.uniandes.transformations.m2m.HtmlModelTransformation;
-import co.edu.uniandes.transformations.m2t.HtmlFileTransformation;
+import co.edu.uniandes.transformations.m2m.HtmlToModelTransformation;
+import co.edu.uniandes.transformations.m2t.HtmlToFileTransformation;
 import co.edu.uniandes.util.Tools;
 
 public class TransformationChain {
@@ -43,11 +43,11 @@ public class TransformationChain {
 			
 			//M2M
 			ModelPathOutput htmlModelPath = Tools.getHtmlModelPath();
-			HtmlModelTransformation htmlModelTransformation = new HtmlModelTransformation(htmlModelPath.getPath());
+			HtmlToModelTransformation htmlModelTransformation = new HtmlToModelTransformation(htmlModelPath.getPath());
 			htmlModelTransformation.transformation(identifyOutput.getOutputModel(), minorVersionModel, mayorVersionModel);
 			
 			//M2T
-			HtmlFileTransformation htmlFileTransformation = new HtmlFileTransformation();
+			HtmlToFileTransformation htmlFileTransformation = new HtmlToFileTransformation();
 			htmlFileTransformation.transformation(htmlModelPath.getPath());
 			
 			output.setSuccess(true);

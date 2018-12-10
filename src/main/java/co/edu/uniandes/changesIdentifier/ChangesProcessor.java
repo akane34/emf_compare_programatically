@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.UsageCrossReferencer;
 
 import co.edu.uniandes.metamodels.Diff.Change;
-import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
+import co.edu.uniandes.transformations.m2m.DiffToModelTransformation;
 import edu.uoc.som.openapi.Operation;
 import edu.uoc.som.openapi.Parameter;
 import edu.uoc.som.openapi.Path;
@@ -38,7 +38,7 @@ public class ChangesProcessor {
 
 	/************************************ PROCESS METHODS ************************************************************/
 
-	public static void processRelocateSameParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+	public static void processRelocateSameParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- RelocateSameParameter");
 		List<ChangeParameter> parameters = new ArrayList<>();
 		for (ChangeParameter p : changeParameters){			
@@ -59,7 +59,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processRelocateMultipleParametersInOneParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
+	public static void processRelocateMultipleParametersInOneParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, Map<String, List<ChangeParameter>> operations, List<Change> changes) {
 		System.out.println("-------------------- RelocateMultipleParametersInOneParameter");		
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
 		{			
@@ -98,7 +98,7 @@ public class ChangesProcessor {
 		}	
 	}
 	
-	public static void processChangeTypeParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> deleteParameters,
+	public static void processChangeTypeParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> deleteParameters,
 			List<ChangeParameter> addParameters, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- ChangeTypeParameter");
 		for (ChangeParameter dp : deleteParameters){
@@ -145,7 +145,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processIncreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, List<ChangeParameter> deleteParameters, String oldVersion, List<Change> changes) {
+	public static void processIncreaseNumberOfParameters(DiffToModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations, List<ChangeParameter> deleteParameters, String oldVersion, List<Change> changes) {
 		System.out.println("-------------------- IncreaseNumberOfParameters");
 		int countAdded = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
@@ -187,7 +187,7 @@ public class ChangesProcessor {
 		return exist;
 	}
 
-	public static void processDecreaseNumberOfParameters(DiffModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations,List<ChangeParameter> addParameters, String oldVersion, List<Change> changes) {
+	public static void processDecreaseNumberOfParameters(DiffToModelTransformation diffMetamodel, Map<String, List<ChangeParameter>> operations,List<ChangeParameter> addParameters, String oldVersion, List<Change> changes) {
 		System.out.println("-------------------- DecreaseNumberOfParameters");
 		int countDeleted = 0;
 		for (Map.Entry<String, List<ChangeParameter>> entry : operations.entrySet())
@@ -211,7 +211,7 @@ public class ChangesProcessor {
 		}				
 	}
 	
-	public static void processRenameParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+	public static void processRenameParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- RenameParameter");		
 		for (ChangeParameter p : changeParameters){
 			if (p.getOldParameter() != null &&
@@ -227,7 +227,7 @@ public class ChangesProcessor {
 		}			
 	}
 	
-	public static void processChangeTypeOfReturnValue(DiffModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse,
+	public static void processChangeTypeOfReturnValue(DiffToModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse,
 			List<ChangeResponse> addResponse, List<Change> changes) {
 		System.out.println("-------------------- ChangeTypeOfReturnValue");
 		for (ChangeResponse dr : deleteResponse){
@@ -256,18 +256,18 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static co.edu.uniandes.metamodels.Diff.Diff processVersion(DiffModelTransformation diffMetamodel, String newVersion, String oldVersion) {
+	public static co.edu.uniandes.metamodels.Diff.Diff processVersion(DiffToModelTransformation diffMetamodel, String newVersion, String oldVersion) {
 		return diffMetamodel.createDiffModel(oldVersion, newVersion);
 	}
 	
-	public static void processDeletedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse, List<ChangeResponse> addResponse, List<Change> changes) {
+	public static void processDeletedResponses(DiffToModelTransformation diffMetamodel, List<ChangeResponse> deleteResponse, List<ChangeResponse> addResponse, List<Change> changes) {
 		for(ChangeResponse delRes: deleteResponse) {
 			if(!existInList(delRes, addResponse))
 				diffMetamodel.createDeleteStatusCode(delRes, changes);
 		}
 	}
 	
-	public static void processAddedResponses(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<ChangeResponse> deletedResponse, List<Change> changes) {
+	public static void processAddedResponses(DiffToModelTransformation diffMetamodel, List<ChangeResponse> addResponse, List<ChangeResponse> deletedResponse, List<Change> changes) {
 		for(ChangeResponse addRes: addResponse) {
 			if(!existInList(addRes, deletedResponse))
 				diffMetamodel.createAddedStatusCode(addRes, changes);
@@ -285,7 +285,7 @@ public class ChangesProcessor {
 		return exist;
 	}
 
-	private static void processBoundariesParamsUpdated(DiffModelTransformation diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
+	private static void processBoundariesParamsUpdated(DiffToModelTransformation diffMetamodel, List<ChangeBoundaryParameter> changesBoundaryParameters, List<Change> changes) {
 		for(ChangeBoundaryParameter boundaryUpdated: changesBoundaryParameters) {
 			switch (boundaryUpdated.getBoundary()) {
 			case LOWER:
@@ -300,7 +300,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processSchemasUpdated(DiffModelTransformation diffMetamodel, List<ChangeSchema> schemasUpdated, List<Change> changes) {
+	public static void processSchemasUpdated(DiffToModelTransformation diffMetamodel, List<ChangeSchema> schemasUpdated, List<Change> changes) {
 		for(ChangeSchema schemaUpdated : schemasUpdated) {
 			switch (schemaUpdated.getDifferenceKind()) {
 			case ADD:
@@ -316,7 +316,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processContentTypesUpdates(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
+	public static void processContentTypesUpdates(DiffToModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, EList<Change> changes) {
 		for(ChangeContentType contentTypeUpdated : contentTypesUpdated) {
 			if (contentTypeUpdated.getAttr().getName().equals("produces") &&
 				!contentTypeUpdated.getOldValueProduces().equals(contentTypeUpdated.getNewValueProduces()) &&
@@ -330,7 +330,7 @@ public class ChangesProcessor {
 		}		
 	}
 	
-	public static void processUnsupportRequestMethods(DiffModelTransformation diffMetamodel, List<ChangeOperation> deleteOperations, List<Change> changes) {
+	public static void processUnsupportRequestMethods(DiffToModelTransformation diffMetamodel, List<ChangeOperation> deleteOperations, List<Change> changes) {
 		System.out.println("-------------------- UnsupportRequestMethods");
 		for (ChangeOperation co : deleteOperations){						
 			System.out.println(co.getPath() + "  v2:" + co.getMethod() + " unsupported");			
@@ -340,7 +340,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processChangeDefaultValueOfParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+	public static void processChangeDefaultValueOfParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- ChangeDefaultValueOfParameter");	
 		List<ChangeParameter> parametersChangeDefault = new ArrayList<>();
 		for (ChangeParameter p : changeParameters){
@@ -387,7 +387,7 @@ public class ChangesProcessor {
 		return exist;
 	}
 	
-	public static void processChangeBoundariesOfParameter(DiffModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
+	public static void processChangeBoundariesOfParameter(DiffToModelTransformation diffMetamodel, List<ChangeParameter> changeParameters, List<Change> changes) {
 		System.out.println("-------------------- ChangeDefaultValueOfParameter");	
 		List<ChangeBoundaryParameter> parameters = new ArrayList<ChangeBoundaryParameter>();
 		for (ChangeParameter p : changeParameters){
@@ -400,7 +400,7 @@ public class ChangesProcessor {
 		processBoundariesParamsUpdated(diffMetamodel, parameters, changes);
 	}	
 
-	private static void processChangeMaxValueParam(DiffModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
+	private static void processChangeMaxValueParam(DiffToModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
 	
 		Double oldMax = parameter.getOldParameter().getMaximum();
 		Double newMax = parameter.getNewParameter().getMaximum();
@@ -421,7 +421,7 @@ public class ChangesProcessor {
 		}
 	}
 
-	private static void processChangeMinValueParam(DiffModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
+	private static void processChangeMinValueParam(DiffToModelTransformation diffMetamodel, List<Change> changes, ChangeParameter parameter,List<ChangeBoundaryParameter> parameters) {
 		
 		Double oldMin = parameter.getOldParameter().getMinimum();
 		Double newMin = parameter.getNewParameter().getMinimum();
@@ -453,7 +453,7 @@ public class ChangesProcessor {
 		return exist;
 	}
 	
-	public static void processDeletePaths(DiffModelTransformation diffMetamodel, List<ChangePath> deletePaths, List<Change> changes) {
+	public static void processDeletePaths(DiffToModelTransformation diffMetamodel, List<ChangePath> deletePaths, List<Change> changes) {
 		System.out.println("-------------------- DeletePaths");
 		
 		for (ChangePath path : deletePaths){
@@ -464,7 +464,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processModifyReturnSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, EList<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
+	public static void processModifyReturnSchemaType(DiffToModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, EList<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- ModifyReturnSchemaType");
 		Map<String, List<ModifyReturnSchema>> modifyResponses = new HashMap<String, List<ModifyReturnSchema>>();
 		boolean schemaFound=false;
@@ -540,7 +540,7 @@ public class ChangesProcessor {
 		
 	}
 
-	public static void processModifyParameterSchemaType(DiffModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
+	public static void processModifyParameterSchemaType(DiffToModelTransformation diffMetamodel, List<ChangeSchema> addAndDeletedSchemas, List<ChangeSchema> changedSchemas, List<ChangePath> deletePaths, List<Change> changes, ResourceSet minorVersionModel, ResourceSet mayorVersionModel) {
 		System.out.println("-------------------- ModifyParameterSchemaType");
 		Map<String, List<ModifyParameterSchema>> modifyParameters = new HashMap<String, List<ModifyParameterSchema>>();
 		boolean schemaFound=false;
@@ -668,7 +668,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processExposeData(DiffModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
+	public static void processExposeData(DiffToModelTransformation diffMetamodel, List<ChangeContentType> contentTypesUpdated, List<Change> changes) {
 		System.out.println("-------------------- ExposeData");	
 		
 		Map<String, List<ChangeContentType>> operations = new HashMap<String, List<ChangeContentType>>();
@@ -705,7 +705,7 @@ public class ChangesProcessor {
 		}
 	}	
 	
-	public static void processAddRestrictedAccess(DiffModelTransformation diffMetamodel, List<ChangeResponse> addResponses, EList<Change> changes) {
+	public static void processAddRestrictedAccess(DiffToModelTransformation diffMetamodel, List<ChangeResponse> addResponses, EList<Change> changes) {
 		for(ChangeResponse changeResponse :  addResponses) {
 			if(changeResponse.getResponse().getCode().equals("403") || changeResponse.getResponse().getCode().equals("401")) {
 				diffMetamodel.createAddRestriction(changeResponse,changes);
@@ -713,7 +713,7 @@ public class ChangesProcessor {
 		}
 	}
 	
-	public static void processRemoveRestrictedAccessToTheAPI(DiffModelTransformation diffMetamodel, List<ChangeResponse> removeResponses, List<Change> changes) {
+	public static void processRemoveRestrictedAccessToTheAPI(DiffToModelTransformation diffMetamodel, List<ChangeResponse> removeResponses, List<Change> changes) {
 		System.out.println("-------------------- RemoveRestrictedAccessToTheAPI");	
 		for(ChangeResponse removeRes: removeResponses) {
 			if (removeRes.getDifferenceKind() == DifferenceKind.DELETE &&

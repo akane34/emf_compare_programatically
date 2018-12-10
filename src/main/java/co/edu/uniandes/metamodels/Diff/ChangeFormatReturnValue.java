@@ -13,5 +13,5 @@ package co.edu.uniandes.metamodels.Diff;
  * @model
  * @generated
  */
-public interface ChangeFormatReturnValue extends Complex {
+public interface ChangeFormatReturnValue extends Modify {
 } // ChangeFormatReturnValue

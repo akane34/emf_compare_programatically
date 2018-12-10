@@ -299,7 +299,8 @@ public class DiffSwitch<T> extends Switch<T> {
 			case DiffPackage.CHANGE_FORMAT_RETURN_VALUE: {
 				ChangeFormatReturnValue changeFormatReturnValue = (ChangeFormatReturnValue)theEObject;
 				T result = caseChangeFormatReturnValue(changeFormatReturnValue);
-				if (result == null) result = caseComplex(changeFormatReturnValue);
+				if (result == null) result = caseModify(changeFormatReturnValue);
+				if (result == null) result = caseSimple(changeFormatReturnValue);
 				if (result == null) result = caseChange(changeFormatReturnValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

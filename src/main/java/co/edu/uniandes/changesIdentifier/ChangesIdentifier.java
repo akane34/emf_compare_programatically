@@ -19,7 +19,7 @@ import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.pojos.CompareVersionInput;
 import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelOutputType;
-import co.edu.uniandes.transformations.m2m.DiffModelTransformation;
+import co.edu.uniandes.transformations.m2m.DiffToModelTransformation;
 import co.edu.uniandes.util.Tools;
 import edu.uoc.som.openapi.impl.PathImpl;
 
@@ -48,7 +48,7 @@ public class ChangesIdentifier {
 		String minorVersion = compareVersionInput.getMinorVersionNumber();
 		String mayorVersion = compareVersionInput.getMinorVersionNumber();
 		
-		DiffModelTransformation diffModelTransformation = new DiffModelTransformation(outputDiffModelPath);		
+		DiffToModelTransformation diffModelTransformation = new DiffToModelTransformation(outputDiffModelPath);		
 		
 		List<ChangeParameter> deleteParameters = new ArrayList<ChangeParameter>();
 		List<ChangeParameter> addParameters = new ArrayList<ChangeParameter>();

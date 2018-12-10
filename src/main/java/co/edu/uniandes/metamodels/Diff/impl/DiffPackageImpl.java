@@ -1033,7 +1033,7 @@ public class DiffPackageImpl extends EPackageImpl implements DiffPackage {
 		exposeDataEClass.getESuperTypes().add(this.getComplex());
 		complexEClass.getESuperTypes().add(this.getChange());
 		removeRestrictionEClass.getESuperTypes().add(this.getComplex());
-		changeFormatReturnValueEClass.getESuperTypes().add(this.getComplex());
+		changeFormatReturnValueEClass.getESuperTypes().add(this.getModify());
 		renameMethodEClass.getESuperTypes().add(this.getComplex());
 		combineMethodsEClass.getESuperTypes().add(this.getComplex());
 		splitMethodEClass.getESuperTypes().add(this.getComplex());

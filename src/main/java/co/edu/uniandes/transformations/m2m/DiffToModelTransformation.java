@@ -22,7 +22,6 @@ import co.edu.uniandes.changesIdentifier.ChangePath;
 import co.edu.uniandes.changesIdentifier.ChangeResponse;
 import co.edu.uniandes.changesIdentifier.ChangeSchema;
 import co.edu.uniandes.changesIdentifier.ModifyParameterSchema;
-import co.edu.uniandes.changesIdentifier.ModifyReturnSchema;
 import co.edu.uniandes.metamodels.Diff.APIElementType;
 import co.edu.uniandes.metamodels.Diff.Add;
 import co.edu.uniandes.metamodels.Diff.AddParameter;
@@ -55,18 +54,17 @@ import co.edu.uniandes.metamodels.Diff.SameParameter;
 import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
 import co.edu.uniandes.metamodels.Diff.UpperBondary;
 import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
-import co.edu.uniandes.metamodels.Diff.impl.ReturnTypeImpl;
 import edu.uoc.som.openapi.JSONDataType;
 import edu.uoc.som.openapi.Parameter;
 import edu.uoc.som.openapi.Response;
 
-public class DiffModelTransformation {
+public class DiffToModelTransformation {
 
 	private DiffPackage diffPackage;	
 	private DiffFactory diffFactory;
 	private Resource xmiResource;
 	
-	public DiffModelTransformation(String outputFilePath){
+	public DiffToModelTransformation(String outputFilePath){
 		diffPackage = DiffPackage.eINSTANCE;		
 		EPackage.Registry.INSTANCE.put(diffPackage.getNsURI(), diffPackage);		
 		
@@ -493,16 +491,12 @@ public class DiffModelTransformation {
 		ElementReference newElementReference = diffFactory.createElementReference();
 		newElementReference.setEObject(EcoreUtil.getURI(response).toString());
 		newElementReference.setValue(response.getSchema().getName());
-		newElementReference.setPath(path);
-		
-		ReturnType modifyResponse = diffFactory.createReturnType();		
-		modifyResponse.setChangeElement(APIElementType.RETURN_TYPE);		
-		modifyResponse.setNew(newElementReference);
+		newElementReference.setPath(path);		
 		
 		ChangeFormatReturnValue returnValue = diffFactory.createChangeFormatReturnValue();
 		returnValue.setChangeElement(APIElementType.RETURN_TYPE);
-		returnValue.getSimpleDiffs().add(modifyResponse);
-		changes.add(modifyResponse);
+		returnValue.setNew(newElementReference);
+
 		changes.add(returnValue);
 	}
 	

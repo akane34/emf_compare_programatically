@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ChangeFormatReturnValueImpl extends ComplexImpl implements ChangeFormatReturnValue {
+public class ChangeFormatReturnValueImpl extends ModifyImpl implements ChangeFormatReturnValue {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

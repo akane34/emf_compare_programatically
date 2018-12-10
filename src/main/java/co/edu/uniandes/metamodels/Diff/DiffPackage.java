@@ -1596,16 +1596,25 @@ public interface DiffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_FORMAT_RETURN_VALUE__CHANGE_ELEMENT = COMPLEX__CHANGE_ELEMENT;
+	int CHANGE_FORMAT_RETURN_VALUE__CHANGE_ELEMENT = MODIFY__CHANGE_ELEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Simple Diffs</b></em>' reference list.
+	 * The feature id for the '<em><b>New</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_FORMAT_RETURN_VALUE__SIMPLE_DIFFS = COMPLEX__SIMPLE_DIFFS;
+	int CHANGE_FORMAT_RETURN_VALUE__NEW = MODIFY__NEW;
+
+	/**
+	 * The feature id for the '<em><b>Old</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_FORMAT_RETURN_VALUE__OLD = MODIFY__OLD;
 
 	/**
 	 * The number of structural features of the '<em>Change Format Return Value</em>' class.
@@ -1614,7 +1623,7 @@ public interface DiffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_FORMAT_RETURN_VALUE_FEATURE_COUNT = COMPLEX_FEATURE_COUNT + 0;
+	int CHANGE_FORMAT_RETURN_VALUE_FEATURE_COUNT = MODIFY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Change Format Return Value</em>' class.
@@ -1623,7 +1632,7 @@ public interface DiffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_FORMAT_RETURN_VALUE_OPERATION_COUNT = COMPLEX_OPERATION_COUNT + 0;
+	int CHANGE_FORMAT_RETURN_VALUE_OPERATION_COUNT = MODIFY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link co.edu.uniandes.metamodels.Diff.impl.RenameMethodImpl <em>Rename Method</em>}' class.

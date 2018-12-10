@@ -23,8 +23,6 @@ import co.edu.uniandes.metamodels.Diff.ConsumeType;
 import co.edu.uniandes.metamodels.Diff.DefaultValue;
 import co.edu.uniandes.metamodels.Diff.Delete;
 import co.edu.uniandes.metamodels.Diff.DeletePath;
-import co.edu.uniandes.metamodels.Diff.DiffFactory;
-import co.edu.uniandes.metamodels.Diff.DiffPackage;
 import co.edu.uniandes.metamodels.Diff.ExposeData;
 import co.edu.uniandes.metamodels.Diff.LowerBondary;
 import co.edu.uniandes.metamodels.Diff.ModifyParameterSchemaType;
@@ -41,7 +39,6 @@ import co.edu.uniandes.metamodels.Diff.Simple;
 import co.edu.uniandes.metamodels.Diff.UnsupportRequestMethod;
 import co.edu.uniandes.metamodels.Diff.UpperBondary;
 import co.edu.uniandes.metamodels.Diff.impl.DiffImpl;
-import co.edu.uniandes.metamodels.Diff.impl.DiffPackageImpl;
 import co.edu.uniandes.metamodels.Html.BODY;
 import co.edu.uniandes.metamodels.Html.HTML;
 import co.edu.uniandes.metamodels.Html.HtmlFactory;
@@ -52,23 +49,14 @@ import co.edu.uniandes.metamodels.Html.TR;
 import co.edu.uniandes.metamodels.Html.impl.HtmlPackageImpl;
 import edu.uoc.som.openapi.Parameter;
 
-public class HtmlModelTransformation {
+public class HtmlToModelTransformation {
 	
-	private DiffPackage diffPackage;	
-	private DiffFactory diffFactory;
 	private HtmlPackage htmlPackage;	
 	private HtmlFactory htmlFactory;
 	private Resource xmiResource;
 	private ResourceSet resourceSet;
 	
-	public HtmlModelTransformation(String outputFilePath){
-		diffPackage = DiffPackage.eINSTANCE;		
-		EPackage.Registry.INSTANCE.put(diffPackage.getNsURI(), diffPackage);		
-		
-		DiffPackage.eINSTANCE.eClass();
-		DiffPackageImpl.init();
-		diffFactory = DiffFactory.eINSTANCE;
-		
+	public HtmlToModelTransformation(String outputFilePath){		
 		htmlPackage = HtmlPackage.eINSTANCE;		
 		EPackage.Registry.INSTANCE.put(htmlPackage.getNsURI(), htmlPackage);		
 		
