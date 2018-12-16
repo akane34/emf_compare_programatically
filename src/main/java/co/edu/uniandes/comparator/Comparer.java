@@ -1,10 +1,5 @@
 package co.edu.uniandes.comparator;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Base64;
 import java.util.Iterator;
 
 import org.eclipse.emf.common.util.EList;
@@ -25,10 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
-import co.edu.uniandes.pojos.CompareVersionInput;
-import co.edu.uniandes.pojos.IdentifyOutput;
-import co.edu.uniandes.pojos.ModelInputType;
-import co.edu.uniandes.pojos.ModelPathOutput;
 import co.edu.uniandes.util.Tools;
 import edu.uoc.som.openapi.OpenAPIPackage;
 

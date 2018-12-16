@@ -15,13 +15,11 @@ import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
-import co.edu.uniandes.metamodels.Diff.Change;
 import co.edu.uniandes.pojos.CompareVersionInput;
 import co.edu.uniandes.pojos.IdentifyOutput;
 import co.edu.uniandes.pojos.ModelOutputType;
 import co.edu.uniandes.transformations.m2m.DiffToModelTransformation;
 import co.edu.uniandes.util.Tools;
-import edu.uoc.som.openapi.impl.PathImpl;
 
 public class ChangesIdentifier {
 

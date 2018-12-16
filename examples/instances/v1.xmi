@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openapi:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:openapi="http://som.uoc.edu/openapi/2.0.0">
+  <api swagger="2.0" host="virtserver.swaggerhub.com" basePath="/thingsboard/2.0.0" definitions="//@schemas.0 //@schemas.1 //@schemas.2 //@schemas.3 //@schemas.4 //@schemas.5 //@schemas.6 //@schemas.7 //@schemas.8 //@schemas.9 //@schemas.10 //@schemas.11 //@schemas.12 //@schemas.13 //@schemas.14 //@schemas.15 //@schemas.16 //@schemas.17 //@schemas.18 //@schemas.19 //@schemas.20 //@schemas.21 //@schemas.22 //@schemas.23 //@schemas.24 //@schemas.25 //@schemas.26 //@schemas.27 //@schemas.28 //@schemas.29">
+    <info title="Thingsboard API" description="This is a thingsboard API" version="1.0.0">
+      <contact email="you@your-company.com"/>
+      <license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+    </info>
+    <schemes>https</schemes>
+    <paths relativePath="/settings">
+      <post parameters="//@paramters.0" summary="save a new setting" description="save a new setting" responses="//@responses.0 //@responses.1">
+        <tagReferences>admin</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/settings/{key}">
+      <get parameters="//@paramters.1" summary="get specific key" description="get specific key" operationId="settings/{key}" responses="//@responses.2 //@responses.3">
+        <tagReferences>admin</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/settings/testMail">
+      <post parameters="//@paramters.2" summary="Test the email" description="Test the email" responses="//@responses.4">
+        <tagReferences>admin</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/auth/user">
+      <get summary="get user" description="get user" responses="//@responses.5">
+        <tagReferences>auth</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/auth/changePassword">
+      <post parameters="//@paramters.3 //@paramters.4" summary="update password" description="update password" responses="//@responses.6">
+        <tagReferences>auth</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/noauth/activate">
+      <get parameters="//@paramters.5" summary="Check activate token" description="Check activate token" responses="//@responses.7">
+        <tagReferences>auth</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.6 //@paramters.7" summary="activate user" description="activate user" responses="//@responses.8">
+        <tagReferences>auth</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/noauth/resetPasswordByEmail">
+      <post parameters="//@paramters.8" summary="reset password by email" description="reset password by email" responses="//@responses.9">
+        <tagReferences>auth</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/noauth/resetPassword">
+      <get parameters="//@paramters.9" summary="Check reset token" description="Check reset token" responses="//@responses.10">
+        <tagReferences>auth</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.10 //@paramters.11" summary="reset password" description="reset password" responses="//@responses.11">
+        <tagReferences>auth</tagReferences>
+      </post>
+    </paths>
+    <paths relativePath="/component/{componentDescriptorClazz:.+}">
+      <get parameters="//@paramters.12" summary="get component descriptor by clazz" description="get component descriptor by clazz" responses="//@responses.12">
+        <tagReferences>component</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/components/{componentType}">
+      <get parameters="//@paramters.13" summary="get component descriptor by type" description="get component descriptor by type" responses="//@responses.13">
+        <tagReferences>component</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/components/actions/{pluginClazz:.+}">
+      <get parameters="//@paramters.14" summary="get component descriptor" description="get component descripto" responses="//@responses.14">
+        <tagReferences>component</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/customer/{customerId}">
+      <get parameters="//@paramters.15" summary="get customer by id" description="get customer by id" responses="//@responses.15">
+        <tagReferences>customer</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.16" summary="delete customer by id" description="delete customer by id" responses="//@responses.16">
+        <tagReferences>customer</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/customer">
+      <post parameters="//@paramters.17" summary="save customer" description="save customer" responses="//@responses.17">
+        <tagReferences>customer</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/customers">
+      <get parameters="//@paramters.18 //@paramters.19 //@paramters.20 //@paramters.21" summary="get customers" description="get customers" responses="//@responses.18">
+        <tagReferences>customer</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/dashboard/{dashboardId}">
+      <get parameters="//@paramters.22" summary="get dashboard by id" description="get dashboard by id" responses="//@responses.19">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.23" summary="delete dashboard information by id" description="delete dashboard information by id" responses="//@responses.20">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/dashboard">
+      <post parameters="//@paramters.24" summary="save dashboard" description="save dashboard" responses="//@responses.21">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/customer/{customerId}/dashboard/{dashboardId}">
+      <post parameters="//@paramters.25 //@paramters.26" summary="assign dashboard to the costumer" description="assign dashboard to the costumer" responses="//@responses.22">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/dashboard/{dashboardId}/customers">
+      <post parameters="//@paramters.27 //@paramters.28" summary="update customer dashboard" description="update customer dashboard" responses="//@responses.23">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/tenant/dashboards">
+      <get parameters="//@paramters.29 //@paramters.30 //@paramters.31 //@paramters.32" summary="get current tenant dashboards" description="get current tenant dashboards" responses="//@responses.24">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/customer/{customerId}/dashboards">
+      <get parameters="//@paramters.33 //@paramters.34 //@paramters.35 //@paramters.36 //@paramters.37" summary="get customers dashboards" description="get customers dashboards" responses="//@responses.25">
+        <tagReferences>dashboard</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/device/{deviceId}">
+      <get parameters="//@paramters.38" summary="get device by id" description="get device by id" responses="//@responses.26">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.39" summary="delete device by id" description="delete device by id" responses="//@responses.27">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/device">
+      <post parameters="//@paramters.40" summary="save device" description="save device" responses="//@responses.28">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/customer/{customerId}/device/{deviceId}">
+      <post parameters="//@paramters.41 //@paramters.42" summary="assign device to customer" description="assign device to customer" responses="//@responses.29">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/customer/device/{deviceId}">
+      <delete parameters="//@paramters.43" summary="unassign device to customer" description="unassign device to customer" responses="//@responses.30">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/device/{deviceId}/credentials">
+      <get parameters="//@paramters.44" summary="get device credentials by device id" description="get device credentials by device id" responses="//@responses.31">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/device/credentials">
+      <post parameters="//@paramters.45" summary="save device credentials" description="save device credentials" responses="//@responses.32">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/tenant/devices">
+      <get parameters="//@paramters.46 //@paramters.47 //@paramters.48 //@paramters.49" summary="get devices of the current tenant" description="get devices of the current tenant" responses="//@responses.33">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/customer/{customerId}/devices">
+      <get parameters="//@paramters.50 //@paramters.51 //@paramters.52 //@paramters.53 //@paramters.54" summary="get customer devices" description="get customer devices" responses="//@responses.34">
+        <tagReferences>device</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/events/{entityType}/{entityId}/{eventType}">
+      <get parameters="//@paramters.55 //@paramters.56 //@paramters.57 //@paramters.58 //@paramters.59 //@paramters.60 //@paramters.61 //@paramters.62 //@paramters.63" summary="get events by type, entity id and entity type" description="get events by type, entity id and entity type" responses="//@responses.35">
+        <tagReferences>event</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/events/{entityType}/{entityId}">
+      <get parameters="//@paramters.64 //@paramters.65 //@paramters.66 //@paramters.67 //@paramters.68 //@paramters.69 //@paramters.70 //@paramters.71" summary="get events by type and entity id" description="get events by type and entity id" responses="//@responses.36">
+        <tagReferences>event</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/rule/{ruleId}">
+      <get parameters="//@paramters.72" summary="get rule by id" description="get rule by id" responses="//@responses.37">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.73" summary="delete rule by id" description="delete rule by id" responses="//@responses.38">
+        <tagReferences>rule</tagReferences>
+      </delete>
+    </paths>
+    <paths relativePath="/rule/token/{pluginToken}">
+      <get parameters="//@paramters.74" summary="get rules by plugin token" description="get rules by plugin token" responses="//@responses.39">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/rule">
+      <get parameters="//@paramters.75 //@paramters.76 //@paramters.77 //@paramters.78" summary="get rules of current tenant" description="get rules of current tenant" responses="//@responses.40">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.79" summary="save rule" description="save rule" responses="//@responses.41">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/rule/{ruleId}/activate">
+      <post parameters="//@paramters.80" summary="activate rule by id" description="activate rule by id" responses="//@responses.42">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/rule/{ruleId}/suspend">
+      <post parameters="//@paramters.81" summary="suspend rule by id" description="suspend rule by id" responses="//@responses.43">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/rule/system">
+      <get parameters="//@paramters.82 //@paramters.83 //@paramters.84 //@paramters.85" summary="get rule  by search" description="get rule by search" responses="//@responses.44">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/rule/tenant/{tenantId}">
+      <get parameters="//@paramters.86 //@paramters.87 //@paramters.88 //@paramters.89 //@paramters.90" summary="get rule  by search" description="get rule by search" responses="//@responses.45">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/rules">
+      <get summary="get all rules" description="get all rules" responses="//@responses.46">
+        <tagReferences>rule</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/tenant/{tenantId}">
+      <get parameters="//@paramters.91" summary="get tenant by id" description="get tenant by id" responses="//@responses.47">
+        <tagReferences>tenant</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.92" summary="delete tenant by id" description="delete tenant by id" responses="//@responses.48">
+        <tagReferences>tenant</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/tenant">
+      <post parameters="//@paramters.93" summary="save tenant" description="save tenant" responses="//@responses.49">
+        <tagReferences>tenant</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/tenants">
+      <get parameters="//@paramters.94 //@paramters.95 //@paramters.96 //@paramters.97" summary="get tenants by search" description="get tenants by search" responses="//@responses.50">
+        <tagReferences>tenant</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/user/{userId}">
+      <get parameters="//@paramters.98" summary="get user by id" description="get user by id" responses="//@responses.51">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.99" summary="delete user by id" description="delete user by id" responses="//@responses.52">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/user">
+      <post parameters="//@paramters.100" summary="save user" description="save user" responses="//@responses.53">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/user/sendActivationMail">
+      <post parameters="//@paramters.101" summary="send activation email" description="send activation email" responses="//@responses.54">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/tenant/{tenantId}/users">
+      <get parameters="//@paramters.102 //@paramters.103 //@paramters.104 //@paramters.105 //@paramters.106" summary="get users by tenant id" description="get users by tenant id" responses="//@responses.55">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/customer/{customerId}/users">
+      <get parameters="//@paramters.107 //@paramters.108 //@paramters.109 //@paramters.110 //@paramters.111" summary="get users by tenant id" description="get users by tenant id" responses="//@responses.56">
+        <tagReferences>user</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/widgetsBundle/{widgetsBundleId}">
+      <get parameters="//@paramters.112" summary="get widget by id" description="get widget by id" responses="//@responses.57">
+        <tagReferences>widgetsBundle</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.113" summary="delete widget by id" description="delete widget by id" responses="//@responses.58">
+        <tagReferences>widgetsBundle</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/widgetsBundle">
+      <post parameters="//@paramters.114" summary="save widget" description="save widget" responses="//@responses.59">
+        <tagReferences>widgetsBundle</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/widgetsBundles">
+      <get parameters="//@paramters.115 //@paramters.116 //@paramters.117 //@paramters.118" summary="get widgets" description="get widgets" responses="//@responses.60">
+        <tagReferences>widgetsBundle</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/widgetsBundles2">
+      <get summary="get widgets without pagination" description="get widgets without pagination" responses="//@responses.61">
+        <tagReferences>widgetsBundle</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <paths relativePath="/widgetType/{widgetTypeId}">
+      <get parameters="//@paramters.119" summary="get widget type by id" description="get widget type by id" responses="//@responses.62">
+        <tagReferences>widgetType</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <delete parameters="//@paramters.120" summary="delete widget type by id" description="delete widget type by id" responses="//@responses.63">
+        <tagReferences>widgetType</tagReferences>
+        <produces>application/json</produces>
+      </delete>
+    </paths>
+    <paths relativePath="/widgetType">
+      <get parameters="//@paramters.121 //@paramters.122 //@paramters.123" summary="get widget type by Type, bundle alias and alias" description="get widget type by Type, bundle alias and alias" responses="//@responses.64">
+        <tagReferences>widgetType</tagReferences>
+        <produces>application/json</produces>
+      </get>
+      <post parameters="//@paramters.124" summary="save widget type" description="save widget type" responses="//@responses.65">
+        <tagReferences>widgetType</tagReferences>
+        <produces>application/json</produces>
+      </post>
+    </paths>
+    <paths relativePath="/widgetTypes">
+      <get parameters="//@paramters.125 //@paramters.126" summary="get list of widget type" description="get list of widget type" responses="//@responses.66">
+        <tagReferences>widgetType</tagReferences>
+        <produces>application/json</produces>
+      </get>
+    </paths>
+    <responses description="bad input parameter" code="Badrequest"/>
+    <tags name="admin" description="Secured Admin-only calls"/>
+    <tags name="auth" description="methods of AuthController"/>
+    <tags name="component" description="methods of ComponentDescriptorController"/>
+    <tags name="customer" description="methods of CustomerController"/>
+    <tags name="dashboard" description="methods of DashboardController"/>
+    <tags name="device" description="methods of DeviceController"/>
+    <tags name="event" description="methods of EventController"/>
+    <tags name="rule" description="methods of RuleController"/>
+    <tags name="tenant" description="methods of TenantController"/>
+    <tags name="user" description="methods of UserController"/>
+    <tags name="widgetsBundle" description="methods of WidgetsBundleController"/>
+    <tags name="widgetType" description="methods of WidgetTypeController"/>
+  </api>
+  <paramters schema="//@schemas.0" description="the setting to add" name="adminSetting" location="body"/>
+  <paramters type="string" name="key" location="path" required="true"/>
+  <paramters schema="//@schemas.0" description="the setting with the email to test" name="adminSetting" location="body"/>
+  <paramters type="string" name="currentPassword" location="query"/>
+  <paramters type="string" name="newPassword" location="query"/>
+  <paramters type="string" name="activateToken" location="query"/>
+  <paramters type="string" name="activateToken" location="query"/>
+  <paramters type="string" name="password" location="query"/>
+  <paramters type="string" name="email" location="query"/>
+  <paramters type="string" name="resetToken" location="query"/>
+  <paramters type="string" name="resetToken" location="query"/>
+  <paramters type="string" name="password" location="query"/>
+  <paramters type="string" name="componentDescriptorClazz:.+" location="path" required="true"/>
+  <paramters type="string" name="componentType" location="path" required="true"/>
+  <paramters type="string" name="pluginClazz:.+" location="path" required="true"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters schema="//@schemas.15" name="customer" location="body"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="dashboardId" location="path" required="true"/>
+  <paramters type="string" name="dashboardId" location="path" required="true"/>
+  <paramters schema="//@schemas.18" name="dashboard" location="body"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="string" name="dashboardId" location="path" required="true"/>
+  <paramters type="string" name="dashboardId" location="path" required="true"/>
+  <paramters schema="//@schemas.118" name="strCustomerIds" location="body" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="deviceId" location="path" required="true"/>
+  <paramters type="string" name="deviceId" location="path" required="true"/>
+  <paramters schema="//@schemas.19" name="device" location="body" required="true"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="string" name="deviceId" location="path" required="true"/>
+  <paramters type="string" name="deviceId" location="path" required="true"/>
+  <paramters type="string" name="deviceId" location="path" required="true"/>
+  <paramters schema="//@schemas.22" name="deviceCredentials" location="body" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="entityType" location="path" required="true"/>
+  <paramters type="string" name="entityId" location="path" required="true"/>
+  <paramters type="string" name="eventType" location="path" required="true"/>
+  <paramters type="string" name="tenantId" location="query" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="number" name="startTime" location="query" required="false"/>
+  <paramters type="number" name="endTime" location="query" required="false"/>
+  <paramters type="boolean" default="false" name="ascOrder" location="query" required="false"/>
+  <paramters type="string" name="offset" location="query" required="false"/>
+  <paramters type="string" name="entityType" location="path" required="true"/>
+  <paramters type="string" name="entityId" location="path" required="true"/>
+  <paramters type="string" name="tenantId" location="query" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="number" name="startTime" location="query" required="false"/>
+  <paramters type="number" name="endTime" location="query" required="false"/>
+  <paramters type="boolean" default="false" name="ascOrder" location="query" required="false"/>
+  <paramters type="string" name="offset" location="query" required="false"/>
+  <paramters type="string" name="ruleId" location="path" required="true"/>
+  <paramters type="string" name="ruleId" location="path" required="true"/>
+  <paramters type="string" name="pluginToken" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters schema="//@schemas.25" name="source" location="body" required="true"/>
+  <paramters type="string" name="ruleId" location="path" required="true"/>
+  <paramters type="string" name="ruleId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="tenantId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="tenantId" location="path" required="true"/>
+  <paramters type="string" name="tenantId" location="path" required="true"/>
+  <paramters schema="//@schemas.26" name="tenant" location="body" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="userId" location="path" required="true"/>
+  <paramters type="string" name="userId" location="path" required="true"/>
+  <paramters schema="//@schemas.10" name="user" location="body" required="true"/>
+  <paramters type="string" name="email" location="query"/>
+  <paramters type="string" name="tenantId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="customerId" location="path" required="true"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="widgetsBundleId" location="path" required="true"/>
+  <paramters type="string" name="widgetsBundleId" location="path" required="true"/>
+  <paramters schema="//@schemas.28" name="widgetsBundle" location="body"/>
+  <paramters type="integer" name="limit" location="query" required="true"/>
+  <paramters type="string" name="textSearch" location="query" required="false"/>
+  <paramters type="string" name="idOffset" location="query" required="false"/>
+  <paramters type="string" name="textOffset" location="query" required="false"/>
+  <paramters type="string" name="widgetTypeId" location="path" required="true"/>
+  <paramters type="string" name="widgetTypeId" location="path" required="true"/>
+  <paramters type="boolean" name="isSystem" location="query" required="true"/>
+  <paramters type="string" name="bundleAlias" location="query" required="true"/>
+  <paramters type="string" name="alias" location="query" required="true"/>
+  <paramters schema="//@schemas.29" name="widgetType" location="body"/>
+  <paramters type="boolean" name="isSystem" location="query" required="true"/>
+  <paramters type="string" name="bundleAlias" location="query" required="true"/>
+  <schemas type="object" name="AdminSettings" properties="//@schemas.30 //@schemas.31" declaringContext="//@api" required="//@schemas.30 //@schemas.31"/>
+  <schemas type="object" name="TenantId" properties="//@schemas.32 //@schemas.33" declaringContext="//@api" required="//@schemas.32 //@schemas.33"/>
+  <schemas type="object" name="CustomerId" properties="//@schemas.34 //@schemas.35" declaringContext="//@api" required="//@schemas.34 //@schemas.35"/>
+  <schemas type="object" name="EntityId" properties="//@schemas.36 //@schemas.37" declaringContext="//@api" required="//@schemas.36 //@schemas.37"/>
+  <schemas type="string" name="EntityType" declaringContext="//@api">
+    <enum>TENANT</enum>
+    <enum>DEVICE</enum>
+    <enum>CUSTOMER</enum>
+    <enum>RULE</enum>
+    <enum>PLUGIN</enum>
+  </schemas>
+  <schemas type="object" name="TimePageLink" properties="//@schemas.38 //@schemas.39 //@schemas.40" declaringContext="//@api"/>
+  <schemas type="object" name="TimePageData" properties="//@schemas.41 //@schemas.43 //@schemas.44" declaringContext="//@api"/>
+  <schemas type="string" name="EntitySearchDirection" declaringContext="//@api">
+    <enum>From</enum>
+    <enum>To</enum>
+  </schemas>
+  <schemas type="object" name="RelationsSearchParameters" properties="//@schemas.45 //@schemas.46 //@schemas.47 //@schemas.48" declaringContext="//@api"/>
+  <schemas type="string" name="Authority" declaringContext="//@api">
+    <enum>SYS_ADMIN</enum>
+    <enum>TENANT_ADMIN</enum>
+    <enum>CUSTOMER_USER</enum>
+    <enum>REFRESH_TOKEN</enum>
+  </schemas>
+  <schemas type="object" name="User" properties="//@schemas.49 //@schemas.50 //@schemas.51 //@schemas.52 //@schemas.53 //@schemas.54 //@schemas.55" declaringContext="//@api"/>
+  <schemas type="object" name="ResponseEntity" properties="//@schemas.56 //@schemas.57 //@schemas.58" declaringContext="//@api"/>
+  <schemas type="string" name="ComponentType" declaringContext="//@api">
+    <enum>FILTER</enum>
+    <enum>PROCESSOR</enum>
+    <enum>ACTION</enum>
+    <enum>PLUGIN</enum>
+  </schemas>
+  <schemas type="string" name="ComponentScope" declaringContext="//@api">
+    <enum>SYSTEM</enum>
+    <enum>TENANT</enum>
+  </schemas>
+  <schemas type="object" name="ComponentDescriptor" properties="//@schemas.59 //@schemas.60 //@schemas.61 //@schemas.62 //@schemas.63 //@schemas.64" declaringContext="//@api"/>
+  <schemas type="object" name="Customer" properties="//@schemas.65 //@schemas.66 //@schemas.67" declaringContext="//@api"/>
+  <schemas type="object" name="TextPageLink" properties="//@schemas.68 //@schemas.69 //@schemas.70" declaringContext="//@api"/>
+  <schemas type="object" name="TextPageData" properties="//@schemas.71 //@schemas.73 //@schemas.74" declaringContext="//@api"/>
+  <schemas type="object" name="Dashboard" properties="//@schemas.75" declaringContext="//@api"/>
+  <schemas type="object" name="Device" properties="//@schemas.76 //@schemas.77 //@schemas.78 //@schemas.79" declaringContext="//@api"/>
+  <schemas type="object" name="DeviceId" properties="//@schemas.80 //@schemas.81" declaringContext="//@api" required="//@schemas.80 //@schemas.81"/>
+  <schemas type="string" name="DeviceCredentialsType" declaringContext="//@api">
+    <enum>ACCESS_TOKEN</enum>
+  </schemas>
+  <schemas type="object" name="DeviceCredentials" properties="//@schemas.82 //@schemas.83 //@schemas.84 //@schemas.85" declaringContext="//@api"/>
+  <schemas type="object" name="Event" properties="//@schemas.86 //@schemas.87 //@schemas.88 //@schemas.89 //@schemas.90" declaringContext="//@api"/>
+  <schemas type="string" name="ComponentLifecycleState" declaringContext="//@api">
+    <enum>ACTIVE</enum>
+    <enum>SUSPENDED</enum>
+  </schemas>
+  <schemas type="object" name="RuleMetaData" properties="//@schemas.91 //@schemas.92 //@schemas.93 //@schemas.94 //@schemas.95 //@schemas.96 //@schemas.97 //@schemas.98 //@schemas.99" declaringContext="//@api"/>
+  <schemas type="object" name="Tenant" properties="//@schemas.100 //@schemas.101 //@schemas.102" declaringContext="//@api"/>
+  <schemas type="object" name="byte" declaringContext="//@api"/>
+  <schemas type="object" name="widgetsBundle" properties="//@schemas.103 //@schemas.104 //@schemas.105 //@schemas.106" declaringContext="//@api"/>
+  <schemas type="object" name="WidgetType" properties="//@schemas.107 //@schemas.108 //@schemas.109 //@schemas.110 //@schemas.111" declaringContext="//@api"/>
+  <schemas type="string" name="key" example="&quot;keyExample&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="object" name="jsonValue" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.0"/>
+  <schemas type="string" format="uuid" name="id" example="&quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;" declaringContext="//@schemas.1"/>
+  <schemas name="entityType" declaringContext="//@schemas.1">
+    <enum>TENANT</enum>
+  </schemas>
+  <schemas type="string" format="uuid" name="id" example="&quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;" declaringContext="//@schemas.2"/>
+  <schemas name="entityType" declaringContext="//@schemas.2">
+    <enum>CUSTOMER</enum>
+  </schemas>
+  <schemas type="string" format="uuid" name="id" example="&quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;" declaringContext="//@schemas.3"/>
+  <schemas name="entityType" declaringContext="//@schemas.3" value="//@schemas.4"/>
+  <schemas type="number" name="startTime" declaringContext="//@schemas.5"/>
+  <schemas type="number" name="endTime" declaringContext="//@schemas.5"/>
+  <schemas type="boolean" name="ascOrder" declaringContext="//@schemas.5"/>
+  <schemas type="array" name="data" items="//@schemas.42" declaringContext="//@schemas.6"/>
+  <schemas/>
+  <schemas type="boolean" name="hasNext" declaringContext="//@schemas.6"/>
+  <schemas name="nextPageLink" declaringContext="//@schemas.6" value="//@schemas.5"/>
+  <schemas type="integer" default="1" name="maxLevel" declaringContext="//@schemas.8"/>
+  <schemas name="rootType" declaringContext="//@schemas.8" value="//@schemas.4"/>
+  <schemas type="string" format="uuid" name="rootId" example="&quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;" declaringContext="//@schemas.8"/>
+  <schemas name="direction" declaringContext="//@schemas.8" value="//@schemas.7"/>
+  <schemas name="tenantId" declaringContext="//@schemas.10" value="//@schemas.1"/>
+  <schemas name="customerId" declaringContext="//@schemas.10" value="//@schemas.2"/>
+  <schemas type="string" name="email" declaringContext="//@schemas.10"/>
+  <schemas name="authority" declaringContext="//@schemas.10" value="//@schemas.9"/>
+  <schemas type="string" name="firstName" declaringContext="//@schemas.10"/>
+  <schemas type="string" name="lastName" declaringContext="//@schemas.10"/>
+  <schemas type="object" name="additionalInfo" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.10"/>
+  <schemas type="object" name="statusCode" declaringContext="//@schemas.11"/>
+  <schemas type="object" name="body" declaringContext="//@schemas.11"/>
+  <schemas type="boolean" name="hasNext" declaringContext="//@schemas.11"/>
+  <schemas name="type" declaringContext="//@schemas.14" value="//@schemas.12"/>
+  <schemas name="scope" declaringContext="//@schemas.14" value="//@schemas.13"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.14"/>
+  <schemas type="string" name="clazz" declaringContext="//@schemas.14"/>
+  <schemas type="object" name="configurationDescriptor" declaringContext="//@schemas.14"/>
+  <schemas type="string" name="actions" declaringContext="//@schemas.14"/>
+  <schemas name="type" declaringContext="//@schemas.15" value="//@schemas.1"/>
+  <schemas type="string" name="title" declaringContext="//@schemas.15"/>
+  <schemas type="object" name="additionalInfo" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.15"/>
+  <schemas type="string" name="textSearch" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="textSearchBound" declaringContext="//@schemas.16"/>
+  <schemas type="string" name="textOffset" declaringContext="//@schemas.16"/>
+  <schemas type="array" name="data" items="//@schemas.72" declaringContext="//@schemas.17"/>
+  <schemas/>
+  <schemas type="boolean" name="hasNext" declaringContext="//@schemas.17"/>
+  <schemas name="nextPageLink" declaringContext="//@schemas.17" value="//@schemas.16"/>
+  <schemas type="object" name="configuration" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.18"/>
+  <schemas name="tenantId" declaringContext="//@schemas.19" value="//@schemas.1"/>
+  <schemas name="customerId" declaringContext="//@schemas.19" value="//@schemas.2"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.19"/>
+  <schemas type="object" name="additionalInfo" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.19"/>
+  <schemas type="string" format="uuid" name="id" example="&quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;" declaringContext="//@schemas.20"/>
+  <schemas name="entityType" declaringContext="//@schemas.20">
+    <enum>DEVICE</enum>
+  </schemas>
+  <schemas name="deviceId" declaringContext="//@schemas.22" value="//@schemas.20"/>
+  <schemas name="credentialsType" declaringContext="//@schemas.22" value="//@schemas.21"/>
+  <schemas type="string" name="credentialsId" declaringContext="//@schemas.22"/>
+  <schemas type="string" name="credentialsValue" declaringContext="//@schemas.22"/>
+  <schemas name="tenantId" declaringContext="//@schemas.23" value="//@schemas.1"/>
+  <schemas type="string" name="type" declaringContext="//@schemas.23"/>
+  <schemas type="string" name="uid" declaringContext="//@schemas.23"/>
+  <schemas name="entityId" declaringContext="//@schemas.23" value="//@schemas.3"/>
+  <schemas type="object" name="body" example="&quot;{'a':'b'q}&quot;" declaringContext="//@schemas.23"/>
+  <schemas name="tenantId" declaringContext="//@schemas.25" value="//@schemas.1"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.25"/>
+  <schemas name="state" declaringContext="//@schemas.25" value="//@schemas.24"/>
+  <schemas type="number" name="weight" declaringContext="//@schemas.25"/>
+  <schemas type="string" name="pluginToken" declaringContext="//@schemas.25"/>
+  <schemas type="object" name="filters" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="object" name="processor" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="object" name="action" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="object" name="additionalInfo" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.25"/>
+  <schemas type="string" name="title" declaringContext="//@schemas.26"/>
+  <schemas type="string" name="region" declaringContext="//@schemas.26"/>
+  <schemas type="object" name="additionalInfo" example="&quot;{'a':'b'}&quot;" declaringContext="//@schemas.26"/>
+  <schemas name="tenantId" declaringContext="//@schemas.28" value="//@schemas.1"/>
+  <schemas type="string" name="alias" declaringContext="//@schemas.28"/>
+  <schemas type="string" name="title" declaringContext="//@schemas.28"/>
+  <schemas type="array" name="image" items="//@schemas.27" declaringContext="//@schemas.28"/>
+  <schemas name="tenantId" declaringContext="//@schemas.29" value="//@schemas.1"/>
+  <schemas type="string" name="bundleAlias" declaringContext="//@schemas.29"/>
+  <schemas type="string" name="alias" declaringContext="//@schemas.29"/>
+  <schemas type="string" name="name" declaringContext="//@schemas.29"/>
+  <schemas type="object" name="descriptor" example="&quot;{'a':'b'q}&quot;" declaringContext="//@schemas.29"/>
+  <schemas type="object" items="//@schemas.0"/>
+  <schemas type="object" items="//@schemas.0"/>
+  <schemas type="object"/>
+  <schemas type="object"/>
+  <schemas type="array" items="//@schemas.14"/>
+  <schemas type="array" items="//@schemas.14"/>
+  <schemas type="array" items="//@schemas.119"/>
+  <schemas type="string"/>
+  <schemas type="array" items="//@schemas.25"/>
+  <schemas type="array" items="//@schemas.25"/>
+  <schemas type="array" items="//@schemas.28"/>
+  <schemas type="array" items="//@schemas.29"/>
+  <responses schema="//@schemas.112" description="OK" code="200"/>
+  <responses description="bad input parameter" code="400"/>
+  <responses schema="//@schemas.113" description="OK" code="200"/>
+  <responses code="400"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.10" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.11" description="OK" code="200"/>
+  <responses schema="//@schemas.114" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.11" description="OK" code="200"/>
+  <responses schema="//@schemas.115" description="OK" code="200"/>
+  <responses schema="//@schemas.14" description="OK" code="200"/>
+  <responses schema="//@schemas.116" description="OK" code="200"/>
+  <responses schema="//@schemas.117" description="OK" code="200"/>
+  <responses schema="//@schemas.15" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.15" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.18" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.18" description="OK" code="200"/>
+  <responses schema="//@schemas.18" description="OK" code="200"/>
+  <responses schema="//@schemas.18" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.6" description="OK" code="200"/>
+  <responses schema="//@schemas.19" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.19" description="OK" code="200"/>
+  <responses schema="//@schemas.19" description="OK" code="200"/>
+  <responses schema="//@schemas.19" description="OK" code="200"/>
+  <responses schema="//@schemas.22" description="OK" code="200"/>
+  <responses schema="//@schemas.22" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.6" description="OK" code="200"/>
+  <responses schema="//@schemas.6" description="OK" code="200"/>
+  <responses schema="//@schemas.25" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.120" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.25" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.121" description="OK" code="200"/>
+  <responses schema="//@schemas.26" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.26" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.10" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.10" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.28" description="OK" code="200"/>
+  <responses schema="//@schemas.28" description="OK" code="200"/>
+  <responses schema="//@schemas.28" description="OK" code="200"/>
+  <responses schema="//@schemas.17" description="OK" code="200"/>
+  <responses schema="//@schemas.122" description="OK" code="200"/>
+  <responses schema="//@schemas.29" description="OK" code="200"/>
+  <responses description="OK" code="200"/>
+  <responses schema="//@schemas.29" description="OK" code="200"/>
+  <responses schema="//@schemas.29" description="OK" code="200"/>
+  <responses schema="//@schemas.123" description="OK" code="200"/>
+</openapi:Root>

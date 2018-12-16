@@ -20,6 +20,7 @@ public class TransformationChain {
 		TransformationChainOutput output = new TransformationChainOutput();
 		
 		try{
+			
 			Tools.registerOpenAPIMetamodel();
 			Tools.registerDiffMetamodel();
 			Tools.registerHtmlMetamodel();
@@ -37,7 +38,10 @@ public class TransformationChain {
 			//identify
 			ModelPathOutput outputDiffModelPath = Tools.getOutputDiffModelPath(compareVersion);
 			ChangesIdentifier identifierChanges = new ChangesIdentifier();
-			IdentifyOutput identifyOutput = identifierChanges.identify(compareVersion, diffs, outputDiffModelPath.getPath(), minorVersionModel, mayorVersionModel);
+			IdentifyOutput identifyOutput = identifierChanges.identify( compareVersion, diffs, 
+																		outputDiffModelPath.getPath(), 
+																		minorVersionModel, 
+																		mayorVersionModel);
 			if(!identifyOutput.isSuccess())
 				throw new Exception(identifyOutput.getError());
 			
@@ -54,6 +58,8 @@ public class TransformationChain {
 			output.setDiffModel(identifyOutput.getDiffModel());
 			output.setError(identifyOutput.getError());
 			output.setOutputType(identifyOutput.getOutputType());
+			
+			
 		}
 		catch(Exception ex){
 			output.setSuccess(false);

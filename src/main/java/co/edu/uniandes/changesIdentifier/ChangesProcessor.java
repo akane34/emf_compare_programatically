@@ -45,7 +45,7 @@ public class ChangesProcessor {
 			if (p.getOldParameter() != null &&
 				p.getNewParameter() != null &&
 				!p.getNewParameter().getLocation().equals(p.getOldParameter().getLocation())){
-				
+
 				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getNewParameter().getName() + " 1:" + p.getNewParameter().getLocation() + " added");
 				System.out.println(p.getPath() + ":" + p.getMethod() + "  p:" + p.getOldParameter().getName() + " 2:" + p.getOldParameter().getLocation());				
 				System.out.println("\n ");

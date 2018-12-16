@@ -12,8 +12,8 @@ public class Main {
 	public static void main(String[] args) {	
 //		String minorModelPath = "CustomValidation-1.0.0-swagger.xmi";
 //		String mayorModelPath = "CustomValidation-2.0.0-swagger.xmi";
-		String minorModelPath = "thingsboardV1.xmi";
-		String mayorModelPath = "thingsboardV2.xmi";	
+		String minorModelPath = "examples\\instances\\thingsboardV1.xmi";
+		String mayorModelPath = "examples\\instances\\thingsboardV2.xmi";	
 		
 		
 		CompareVersionInput compareVersionInput = new CompareVersionInput();

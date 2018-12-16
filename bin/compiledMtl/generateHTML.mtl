@@ -1,0 +1,55 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('http://web.emn.fr/html')]
+[template public generateHTML(aBody : BODY)]
+[comment @main/]
+[file ('changes.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Automatic Detection Tool for Static Changes Between Different API Versions (ADT)</title>   
+	<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Automatic Detection Tool for Static Changes Between Different API Versions (ADT)</h1>
+		<h2>Identified Changes</h2>
+		<div class="accordion">
+	    [for (t : TABLE | aBody.bodyElements )]
+			<div class="accordion-item">
+				<a>[t.title/]</a>
+				<div class="content">
+					<div>[t.value/]</div>
+					[for (tr : TR | t.trs )]
+						<div class="blog-container">						  
+							<div class="blog-header">
+								<div class="blog-author--no-cover">
+									<h3>[tr.title/]</h3>
+								</div>
+							</div>
+							<div class="blog-body">								
+								[for (td : TD | tr.tds )]
+									<div class="blog-title">
+										<h4>[td.title/]</h4>
+									</div>
+									<div class="blog-summary">
+										<p>[td.value/]</p>
+									</div>
+								[/for]
+							</div>
+							<div class="blog-footer">    
+							</div>
+						</div>						
+					[/for]
+				</div>
+			</div>
+		[/for]
+		</div>
+	</div>
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+	<script  src="js/index.js"></script>
+</body>
+</html>
+[/file]
+[/template]

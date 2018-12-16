@@ -78,64 +78,64 @@ public class HtmlToModelTransformation {
 		DiffImpl diffRoot = getDiffRoot(outputModel);
 		if (diffRoot != null){
 			TABLE tableChangeTypeParameter = htmlFactory.createTABLE();			
-			tableChangeTypeParameter.setId(UUID.randomUUID().toString());
+			tableChangeTypeParameter.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableMultipleParametersInOne = htmlFactory.createTABLE();			
-			tableMultipleParametersInOne.setId(UUID.randomUUID().toString());
+			tableMultipleParametersInOne.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableSameParameter = htmlFactory.createTABLE();
-			tableSameParameter.setId(UUID.randomUUID().toString());
+			tableSameParameter.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableAddParameter = htmlFactory.createTABLE();
-			tableAddParameter.setId(UUID.randomUUID().toString());
+			tableAddParameter.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableUnsupportRequestMethod = htmlFactory.createTABLE();
-			tableUnsupportRequestMethod.setId(UUID.randomUUID().toString());
+			tableUnsupportRequestMethod.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableDeletePath = htmlFactory.createTABLE();
-			tableDeletePath.setId(UUID.randomUUID().toString());
+			tableDeletePath.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableRemoveParameter = htmlFactory.createTABLE();
-			tableRemoveParameter.setId(UUID.randomUUID().toString());
+			tableRemoveParameter.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableModifyParameterSchemaType = htmlFactory.createTABLE();
-			tableModifyParameterSchemaType.setId(UUID.randomUUID().toString());
+			tableModifyParameterSchemaType.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableUpperBondary = htmlFactory.createTABLE();
-			tableUpperBondary.setId(UUID.randomUUID().toString());
+			tableUpperBondary.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableLowerBondary = htmlFactory.createTABLE();
-			tableLowerBondary.setId(UUID.randomUUID().toString());
+			tableLowerBondary.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableDefaultValue = htmlFactory.createTABLE();
-			tableDefaultValue.setId(UUID.randomUUID().toString());
+			tableDefaultValue.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableRenameParameter = htmlFactory.createTABLE();
-			tableRenameParameter.setId(UUID.randomUUID().toString());
+			tableRenameParameter.setId(UUID.randomUUID().toString());			
  			
 			TABLE tableConsumeType = htmlFactory.createTABLE();
-			tableConsumeType.setId(UUID.randomUUID().toString());
+			tableConsumeType.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableProduceType = htmlFactory.createTABLE();
-			tableProduceType.setId(UUID.randomUUID().toString());
+			tableProduceType.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableAddStatusCode = htmlFactory.createTABLE();
-			tableAddStatusCode.setId(UUID.randomUUID().toString());
+			tableAddStatusCode.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableRemoveStatusCode = htmlFactory.createTABLE();
-			tableRemoveStatusCode.setId(UUID.randomUUID().toString());
+			tableRemoveStatusCode.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableExposeData = htmlFactory.createTABLE();
-			tableExposeData.setId(UUID.randomUUID().toString());
+			tableExposeData.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableRemoveRestriction = htmlFactory.createTABLE();
-			tableRemoveRestriction.setId(UUID.randomUUID().toString());
+			tableRemoveRestriction.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableAddRestriction = htmlFactory.createTABLE();
 			tableAddRestriction.setId(UUID.randomUUID().toString());			
 			
 			TABLE tableReturnType = htmlFactory.createTABLE();
-			tableReturnType.setId(UUID.randomUUID().toString());			
+			tableReturnType.setId(UUID.randomUUID().toString());					
 			
 			EList<Change> changes =	diffRoot.getChange();			
 			for (Change change : changes){				
@@ -201,26 +201,46 @@ public class HtmlToModelTransformation {
 				}
 			}
 			
-			tableChangeTypeParameter.setTitle("Change Type of Parameter - " + tableChangeTypeParameter.getTrs().size());
-			tableMultipleParametersInOne.setTitle("Relocate Multiple Parameters In One - " + tableMultipleParametersInOne.getTrs().size());			
-			tableSameParameter.setTitle("Relocate Same Parameter - " + tableSameParameter.getTrs().size());			
-			tableAddParameter.setTitle("Increase Number of Parameters - " + tableAddParameter.getTrs().size());			
-			tableUnsupportRequestMethod.setTitle("Unsupport Request Method - " + tableUnsupportRequestMethod.getTrs().size());			
-			tableDeletePath.setTitle("Delete Path - " + tableDeletePath.getTrs().size());			
-			tableRemoveParameter.setTitle("Decrease Number of Parameters - " + tableRemoveParameter.getTrs().size());			
-			tableModifyParameterSchemaType.setTitle("Modify Parameter Schema Type - " + tableModifyParameterSchemaType.getTrs().size());			
-			tableUpperBondary.setTitle("Change Upper Bound of Parameter - " + tableUpperBondary.getTrs().size());			
-			tableLowerBondary.setTitle("Change lower Bound of Parameter - " + tableLowerBondary.getTrs().size());			
-			tableDefaultValue.setTitle("Change Default Value of Parameter - " + tableDefaultValue.getTrs().size());			
-			tableRenameParameter.setTitle("Rename Parameter - " + tableRenameParameter.getTrs().size());			
-			tableConsumeType.setTitle("Modify Content Type Consume - " + tableConsumeType.getTrs().size());			
-			tableProduceType.setTitle("Modify Content Type Produce - " + tableProduceType.getTrs().size());
-			tableAddStatusCode.setTitle("Add Status Code - " + tableAddStatusCode.getTrs().size());
-			tableRemoveStatusCode.setTitle("Remove Status Code - " + tableRemoveStatusCode.getTrs().size());
-			tableExposeData.setTitle("Expose Data - " + tableExposeData.getTrs().size());
-			tableRemoveRestriction.setTitle("Remove restricted access to the API  - " + tableRemoveRestriction.getTrs().size());
-			tableAddRestriction.setTitle("Add restricted access to the API - " + tableAddRestriction.getTrs().size());
-			tableReturnType.setTitle("Change Type of Return Value (class) - " + tableReturnType.getTrs().size());
+			tableChangeTypeParameter.setTitle("Change Type of Parameter - [" + tableChangeTypeParameter.getTrs().size() + " changes] [Type: Simple]");
+			tableChangeTypeParameter.setValue("Change the type of parameter or update the definition of the current type");
+			tableMultipleParametersInOne.setTitle("Relocate Multiple Parameters In One - [" + tableMultipleParametersInOne.getTrs().size() + " changes] [Type: Complex]");
+			tableMultipleParametersInOne.setValue("Relocate Multiple Parameters in One Parameter:The parameters were relocated in different object and in diferent location.");			
+			tableSameParameter.setTitle("Relocate Same Parameter - [" + tableSameParameter.getTrs().size() + " changes] [Type: Complex]");
+			tableSameParameter.setValue("Relocate Same Parameter: The parameter was changed of location, query param to body for example. Same name");			
+			tableAddParameter.setTitle("Increase Number of Parameters - [" + tableAddParameter.getTrs().size() + " changes] [Type: Simple]");
+			tableAddParameter.setValue("The number of parameters required could change. Normally they increased because more functionality has beed added.");			
+			tableUnsupportRequestMethod.setTitle("Unsupport Request Method - [" + tableUnsupportRequestMethod.getTrs().size() + " changes] [Type: Simple]");
+			tableUnsupportRequestMethod.setValue("That happends when a supported HTTP verb was supported but not now.");			
+			tableDeletePath.setTitle("Delete Path - [" + tableDeletePath.getTrs().size() + " changes] [Type: Simple]");
+			tableDeletePath.setValue("Path was removed, not exist any HTTP verb that support a request with the path.");			
+			tableRemoveParameter.setTitle("Decrease Number of Parameters - [" + tableRemoveParameter.getTrs().size() + " changes] [Type: Simple]");
+			tableRemoveParameter.setValue("The number of parameters required could change. Decresed because old features has been deactivared.");			
+			tableModifyParameterSchemaType.setTitle("Modify Parameter Schema Type - [" + tableModifyParameterSchemaType.getTrs().size() + " changes] [Type: Simple]");
+			tableModifyParameterSchemaType.setValue("A parameter type of a method is the same class but the definition of it was updated");			
+			tableUpperBondary.setTitle("Change Upper Bound of Parameter - [" + tableUpperBondary.getTrs().size() + " changes] [Type: Simple]");
+			tableUpperBondary.setValue("Update the maximum value  that a paramater can take");			
+			tableLowerBondary.setTitle("Change lower Bound of Parameter - [" + tableLowerBondary.getTrs().size() + " changes] [Type: Simple]");
+			tableLowerBondary.setValue("Update the minimum value  that a paramater can take");			
+			tableDefaultValue.setTitle("Change Default Value of Parameter - [" + tableDefaultValue.getTrs().size() + " changes] [Type: Simple]");
+			tableDefaultValue.setValue("Default value parameter is added or updated");			
+			tableRenameParameter.setTitle("Rename Parameter - [" + tableRenameParameter.getTrs().size() + " changes] [Type: Simple]");
+			tableRenameParameter.setValue("The main reason is to give self-explanatory names to parameters.");			
+			tableConsumeType.setTitle("Modify Content Type Consume - [" + tableConsumeType.getTrs().size() + " changes] [Type: Simple]");
+			tableConsumeType.setValue("Update the content type that the application consumes.");			
+			tableProduceType.setTitle("Modify Content Type Produce - [" + tableProduceType.getTrs().size() + " changes] [Type: Simple]");
+			tableProduceType.setValue("Update the content type that the application produce.");
+			tableAddStatusCode.setTitle("Add Status Code - [" + tableAddStatusCode.getTrs().size() + " changes] [Type: Simple]");
+			tableAddStatusCode.setValue("Add new status code as response .");
+			tableRemoveStatusCode.setTitle("Remove Status Code - [" + tableRemoveStatusCode.getTrs().size() + " changes] [Type: Simple]");
+			tableRemoveStatusCode.setValue("remove status code as response .");
+			tableExposeData.setTitle("Expose Data - [" + tableExposeData.getTrs().size() + " changes] [Type: Complex]");
+			tableExposeData.setValue("Similar to change Schema. Mismo esquema diferente Content-Type.");
+			tableRemoveRestriction.setTitle("Remove restricted access to the API  - [" + tableRemoveRestriction.getTrs().size() + " changes] [Type: Complex]");
+			tableRemoveRestriction.setValue("Remove a restriction in the API (using the HTTP status code).");
+			tableAddRestriction.setTitle("Add restricted access to the API - [" + tableAddRestriction.getTrs().size() + " changes] [Type: Complex]");
+			tableAddRestriction.setValue("Add new restriction in the API (using the HTTP status code).");
+			tableReturnType.setTitle("Change Type of Return Value (class) - [" + tableReturnType.getTrs().size() + " changes] [Type: Simple]");
+			tableReturnType.setValue("Change the response structure.");
 			
 			body.getBodyElements().add(tableRenameParameter);
 			body.getBodyElements().add(tableMultipleParametersInOne);			

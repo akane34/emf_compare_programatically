@@ -7,18 +7,20 @@
 <html lang="en" >
 <head>
 	<meta charset="UTF-8">
-	<title>Herramienta de detección automática de cambios estáticos en versiones de API</title>   
+	<title>Automatic Detection Tool for Static Changes Between Different API Versions (ADT)</title>   
 	<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
+		<h1>Automatic Detection Tool for Static Changes Between Different API Versions (ADT)</h1>
 		<h2>Identified Changes</h2>
 		<div class="accordion">
 	    [for (t : TABLE | aBody.bodyElements )]
 			<div class="accordion-item">
 				<a>[t.title/]</a>
-				<div class="content">					
+				<div class="content">
+					<div>[t.value/]</div>
 					[for (tr : TR | t.trs )]
 						<div class="blog-container">						  
 							<div class="blog-header">
@@ -26,7 +28,7 @@
 									<h3>[tr.title/]</h3>
 								</div>
 							</div>
-							<div class="blog-body">
+							<div class="blog-body">								
 								[for (td : TD | tr.tds )]
 									<div class="blog-title">
 										<h4>[td.title/]</h4>
